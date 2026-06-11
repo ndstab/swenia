@@ -29,13 +29,24 @@ export default defineConfig({
         ],
       },
       workbox: {
+        // On each new deploy, drop stale precaches and take control immediately
+        // so a half-updated SW can't get wedged (the cause of the "no-response"
+        // digest-load failure after a redeploy).
+        cleanupOutdatedCaches: true,
+        clientsClaim: true,
+        skipWaiting: true,
         // Always try network first for the digest so a fresh day shows up;
-        // fall back to cache offline.
+        // fall back to cache offline. A short timeout + cacheable fallback keeps
+        // a transient network blip from throwing a hard no-response.
         runtimeCaching: [
           {
             urlPattern: /\/latest\.json$/,
             handler: "NetworkFirst",
-            options: { cacheName: "digest" },
+            options: {
+              cacheName: "digest",
+              networkTimeoutSeconds: 5,
+              cacheableResponse: { statuses: [0, 200] },
+            },
           },
         ],
       },
