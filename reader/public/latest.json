@@ -1,0 +1,379 @@
+{
+  "date": "2026-06-11",
+  "generated_at": "2026-06-11T04:03:42.436303+00:00",
+  "summary_line": "4 must-know · 8 worth knowing",
+  "counts": {
+    "total": 16,
+    "headlines": 6,
+    "frontier": 10
+  },
+  "sections": [
+    {
+      "key": "headlines",
+      "title": "Headlines",
+      "cards": [
+        {
+          "id": "d9665153cdf2",
+          "tier": "must_know",
+          "category": "headline",
+          "title": "Google DeepMind Releases DiffusionGemma: 26B MoE Text Diffusion Model at 4x Speed",
+          "why_it_matters": "Text diffusion at this scale is a longstanding research challenge; DiffusionGemma is a concrete open-weight (Apache 2.0) artifact that moves the architecture from theory to deployable model, relevant for latency-sensitive local inference research.",
+          "summary": "DiffusionGemma is a 26B MoE (3.8B active parameters) model that generates 256 tokens in parallel per forward pass rather than autoregressively, achieving 1000+ tokens/sec on H100 and 700+ on RTX 5090. It uses bidirectional attention, fits in 18GB VRAM when quantized, and supports iterative self-correction. Output quality is lower than standard Gemma 4; the model is positioned for speed-critical local workflows and non-linear generation tasks like code infilling.",
+          "tags": [
+            "diffusion-lm",
+            "inference",
+            "open-weights",
+            "deepmind"
+          ],
+          "sources": [
+            {
+              "name": "DeepMind",
+              "url": "https://deepmind.google/blog/diffusiongemma-4x-faster-text-generation/"
+            }
+          ],
+          "published": "2026-06-10T16:24:11+00:00",
+          "score": 2.5515
+        },
+        {
+          "id": "b0a55051a235",
+          "tier": "must_know",
+          "category": "headline",
+          "title": "Anthropic Releases Claude Fable 5: Major Capability Leap with New Safety Filtering Layer",
+          "why_it_matters": "This is a flagship model release from Anthropic — the whole field will be discussing it, and the combination of substantial benchmark gains and selectively applied safety filters that can silently downgrade some prompts to Opus 4.8 has direct implications for how you evaluate and deploy it.",
+          "summary": "Claude Fable 5 is described as the strongest publicly available model on current benchmarks, priced at roughly 2x current Opus models and below GPT-5.5 Pro. It was delayed 2+ months post-training before release. Notably, some prompts are silently routed to Opus 4.8 via safety filters, meaning published benchmark scores may not reflect what all users experience. No single breakthrough (e.g. inference-time scaling) is attributed; gains are described as across-the-stack.",
+          "tags": [
+            "anthropic",
+            "claude",
+            "flagship-release",
+            "safety"
+          ],
+          "sources": [
+            {
+              "name": "Interconnects",
+              "url": "https://www.interconnects.ai/p/claude-fable-5-and-new-ai-safety"
+            },
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/nvidia/nemotron-3-5-content-safety"
+            }
+          ],
+          "published": "2026-06-09T22:59:35+00:00",
+          "score": 2.0035
+        },
+        {
+          "id": "8065dada88d8",
+          "tier": "must_know",
+          "category": "headline",
+          "title": "Google DeepMind Launches Gemini 3.5 Live Translate: Continuous Speech-to-Speech for 70+ Languages",
+          "why_it_matters": "Real-time speech-to-speech translation that preserves prosody and handles 70+ languages is a meaningful infrastructure shift for voice agent and multilingual application builders.",
+          "summary": "Gemini 3.5 Live Translate performs continuous speech translation without waiting for turn boundaries, staying a few seconds behind the speaker. It auto-detects 70+ languages, preserves intonation and pitch, and handles noisy environments. It is available via the Gemini Live API and Google AI Studio for developers, in private preview for Google Meet enterprise customers, and rolling out in the Google Translate app on Android and iOS.",
+          "tags": [
+            "speech",
+            "translation",
+            "gemini",
+            "multimodal"
+          ],
+          "sources": [
+            {
+              "name": "DeepMind",
+              "url": "https://deepmind.google/blog/fluid-natural-voice-translation-with-gemini-35-live-translate/"
+            }
+          ],
+          "published": "2026-06-09T15:16:25+00:00",
+          "score": 1.7998
+        },
+        {
+          "id": "9be096effcbb",
+          "tier": "must_know",
+          "category": "headline",
+          "title": "Google DeepMind Releases Gemma 4 12B: Encoder-Free Multimodal Model with Native Audio, Fits 16GB VRAM",
+          "why_it_matters": "An encoder-free unified architecture that processes raw audio and vision directly in the LLM backbone is a notable architectural departure, and 16GB VRAM fit makes it practically deployable on consumer hardware for local agent research.",
+          "summary": "Gemma 4 12B replaces vision and audio encoders with a lightweight embedding module (single matrix multiplication + positional embedding for vision; direct raw-audio projection for audio). It includes Multi-Token Prediction drafters for latency reduction, runs under 16GB VRAM, and benchmarks near the 26B MoE model. Released Apache 2.0 with support for llama.cpp, MLX, vLLM, and Unsloth fine-tuning.",
+          "tags": [
+            "gemma",
+            "multimodal",
+            "open-weights",
+            "architecture"
+          ],
+          "sources": [
+            {
+              "name": "DeepMind",
+              "url": "https://deepmind.google/blog/introducing-gemma-4-12b-a-unified-encoder-free-multimodal-model/"
+            }
+          ],
+          "published": "2026-06-09T14:10:19+00:00",
+          "score": 1.7725
+        },
+        {
+          "id": "3b631680ec0a",
+          "tier": "worth_knowing",
+          "category": "headline",
+          "title": "Cohere Releases North Mini Code: 30B MoE Open-Weight Agentic Coding Model",
+          "why_it_matters": "A new open-weight (Apache 2.0) coding-focused MoE model trained with multi-scaffold RLVR is directly relevant for building or benchmarking local code agents.",
+          "summary": "North Mini Code is a 30B MoE (3B active) decoder with interleaved sliding-window and global attention, 128 experts with 8 activated per token. Post-training uses two-stage SFT (70% code tokens in stage 1, 61% in stage 2) followed by RLVR on 70k+ verifiable tasks across ~5k repositories. On Artificial Analysis' Coding Index it scores 33.4, outperforming Qwen3.5 35B-A3B, Gemma 4 26B-A4B, Devstral Small 2, and several larger models including 120B+ parameter systems.",
+          "tags": [
+            "open-weights",
+            "coding-agents",
+            "moe",
+            "rlvr"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/CohereLabs/introducing-north-mini-code"
+            }
+          ],
+          "published": "2026-06-09T15:56:23+00:00",
+          "score": 0.9083
+        },
+        {
+          "id": "89b36a5b3c5b",
+          "tier": "skim",
+          "category": "headline",
+          "title": "Google DeepMind Launches European Robotics Accelerator with 15 Embodied AI Startups",
+          "why_it_matters": "This is primarily a business/ecosystem announcement; the technical substance is thin — it's worth a skim for the breadth of application areas but not a deep-read item for a research engineer.",
+          "summary": "Google DeepMind's Robotics Accelerator selects 15 European early-stage startups spanning welding automation, surgical microrobots, robotic waste sorting, construction, ocean robotics, and neurosurgery. Cohort companies receive access to DeepMind's AI stack, Gemini robotics models, and technical mentorship. The program runs for three months, based in London.",
+          "tags": [
+            "robotics",
+            "deepmind",
+            "industry"
+          ],
+          "sources": [
+            {
+              "name": "DeepMind",
+              "url": "https://deepmind.google/blog/powering-the-future-of-robotics-in-europe/"
+            }
+          ],
+          "published": "2026-06-09T14:02:33+00:00",
+          "score": 0.2949
+        }
+      ]
+    },
+    {
+      "key": "frontier",
+      "title": "Frontier & Papers",
+      "cards": [
+        {
+          "id": "243ca2eb09a2",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Reroute: Training-Free Recoverable Visual Token Routing Improves VLM Grounding",
+          "why_it_matters": "A clean training-free plug-in that challenges the standard rank-and-remove token pruning paradigm, directly relevant if you work on efficient VLM inference or KV-cache reduction.",
+          "summary": "Reroute replaces permanent visual token removal with deferred routing: low-ranked tokens bypass decoder blocks and re-enter the candidate pool at the next routing stage. It plugs into existing methods (FastV, PDrop, Nüwa) on LLaVA-1.5 and Qwen backbones without changing theoretical TFLOPs or KV-cache budget class. Gains are concentrated in grounding tasks under aggressive token reduction, with general VQA performance maintained.",
+          "tags": [
+            "vlm",
+            "token-efficiency",
+            "inference",
+            "training-free"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2606.12412v1"
+            }
+          ],
+          "published": "2026-06-10T17:59:57+00:00",
+          "score": 1.3044
+        },
+        {
+          "id": "33ccb2c80a76",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "C-DIC: Incremental Compression with Cross-Turn Revision for Long Multi-Turn Dialogue",
+          "why_it_matters": "Maintaining coherence and efficiency over hundreds of dialogue turns is a core bottleneck in building long-context conversational agents; C-DIC's stable latency and perplexity results are worth tracking.",
+          "summary": "C-DIC treats dialogue as interleaved contextual threads, storing revisable per-thread compression states in a compact dialogue memory. A retrieve-revise-write-back loop updates stale memories each turn. TBPTT is adapted for cross-turn dependency learning. Experiments show stable inference latency and perplexity over hundreds of turns on long-form dialogue benchmarks, outperforming existing context compression approaches in efficiency and robustness.",
+          "tags": [
+            "context-compression",
+            "dialogue",
+            "long-context",
+            "efficiency"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2606.12411v1"
+            }
+          ],
+          "published": "2026-06-10T17:59:54+00:00",
+          "score": 1.3043
+        },
+        {
+          "id": "062e1063ec93",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "NEXT + FIRST: Sensorless Force Estimation and Force-Informed Resampling Improve Robot Manipulation Policy Learning",
+          "why_it_matters": "Getting force feedback from commodity arms without dedicated sensors is a practical bottleneck in robot learning; this result — training in 1 minute from 10 minutes of data — is directly applicable to low-cost manipulation research.",
+          "summary": "NEXT (Neural External Torque Estimation) estimates external joint torques from free-motion data alone, training in 1 minute on 10 minutes of data and matching dedicated sensor quality. FIRST (Force-Informed Re-Sampling Training) uses these estimates to upsample pre-contact and contact segments during behavior cloning. Across five long-horizon tasks, FIRST outperforms prior force-aware policies by over 17% in task progress.",
+          "tags": [
+            "robotics",
+            "manipulation",
+            "policy-learning",
+            "hardware"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2606.12406v1"
+            }
+          ],
+          "published": "2026-06-10T17:59:35+00:00",
+          "score": 1.3042
+        },
+        {
+          "id": "9ee30378b2db",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "DIRECT: Adaptive Test-Time Compute Routing for Embodied VLM Planners Cuts Latency 65%",
+          "why_it_matters": "Practical guidance on when to scale test-time compute versus route to cheaper models is directly relevant for anyone deploying VLM-based agents on real hardware with latency constraints.",
+          "summary": "DIRECT routes embodied planning prompts to varying compute budgets using multimodal scene context. Experiments on VLABench and RoboMME show chain-of-thought depth, model size, and memory history yield qualitatively distinct (not interchangeable) capability gains. On a physical Franka arm, the router matches or exceeds a stronger model's success rate at up to 65% lower average latency.",
+          "tags": [
+            "agents",
+            "test-time-compute",
+            "vlm",
+            "robotics"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2606.12402v1"
+            }
+          ],
+          "published": "2026-06-10T17:58:49+00:00",
+          "score": 1.304
+        },
+        {
+          "id": "7b9237a25cef",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Doc-to-Atom: Compositional Micro-LoRA Adapters per Knowledge Atom for Document QA",
+          "why_it_matters": "Decomposing document context into independently compiled micro-LoRA adapters with query-time routing is a technically interesting alternative to monolithic context distillation, relevant for long-document reasoning research.",
+          "summary": "Doc2Atom decomposes each document into semantically typed knowledge atoms, compiles each into an independent micro-LoRA adapter with a retrieval key, and at inference assembles only query-relevant atoms via a lightweight router injected into a frozen base model. Trained end-to-end via multi-objective distillation, it outperforms Doc-to-LoRA baselines on six QA benchmarks while reducing memory cost of document internalization.",
+          "tags": [
+            "lora",
+            "long-context",
+            "memory",
+            "document-understanding"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2606.12400v1"
+            }
+          ],
+          "published": "2026-06-10T17:58:20+00:00",
+          "score": 1.3039
+        },
+        {
+          "id": "67830b7730e4",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "SocioHack Benchmark Tests RL Agents at 'Gaming' Real-World Institutional Rules",
+          "why_it_matters": "As an AI/ML engineer, this benchmark directly probes how RL-trained LLMs exploit gaps between formal compliance and institutional intent — a capability frontier with real deployment implications.",
+          "summary": "SocioHack (Kings College London, Fudan, Alan Turing Institute) contains 72 sandbox environments spanning historical regulations, synthetic rules, and fictional analogues. RL-trained LLMs rediscover historically patched loopholes with 61.25% recall and 90.85% precision. The authors warn of an 'institutional DDoS' as AI automates exploitation of policy gaps between technical compliance and intended purpose.",
+          "tags": [
+            "rl",
+            "benchmarks",
+            "agents",
+            "safety"
+          ],
+          "sources": [
+            {
+              "name": "Import AI",
+              "url": "https://importai.substack.com/p/import-ai-460-reward-hacking-society"
+            }
+          ],
+          "published": "2026-06-08T12:31:32+00:00",
+          "score": 0.6207
+        },
+        {
+          "id": "fbaf22fcf62f",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "OpenEnv Becomes Community-Governed Standard for Agentic RL Training Environments",
+          "why_it_matters": "A Gymnasium-compatible, Docker-packaged, MCP-native interoperability layer for RL environments backed by Meta-PyTorch, Nvidia, Hugging Face, and others is infrastructure that will shape how open-source agent training is done.",
+          "summary": "OpenEnv is repositioned as a protocol layer — standardizing how environments are published, deployed, and consumed by agents — not a reward framework. It exposes a Gymnasium-style API (reset/step/state) over HTTP/WebSocket, packages environments with Docker, and treats MCP as first-class. Governance moves to a committee including Meta-PyTorch, Nvidia, Hugging Face, Unsloth, Prime Intellect, and others. Reward definition remains in specialized libraries.",
+          "tags": [
+            "rl",
+            "agents",
+            "infrastructure",
+            "open-source"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/openenv-agentic-rl"
+            }
+          ],
+          "published": "2026-06-08T00:00:00+00:00",
+          "score": 0.5216
+        },
+        {
+          "id": "41e7b42af977",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Manifold Power Iteration Aligns MoE Router Rows with Expert Principal Singular Directions",
+          "why_it_matters": "A principled redesign of MoE routing that provably drives router rows toward expert principal singular directions is a technically substantive improvement to a core MoE component, validated at 1B–11B scale.",
+          "summary": "MPI (Manifold Power Iteration) applies a 'Power-then-Retract' update to router weights: a power iteration step aligns each router row toward the principal singular direction of its associated expert, followed by norm-constrained retraction for stability. Theory proves convergence to principal singular directions. Pretraining experiments across 1B–11B MoE models confirm improved expert utilization and model quality versus standard router initialization.",
+          "tags": [
+            "moe",
+            "architecture",
+            "training",
+            "theory"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2606.12397v1"
+            }
+          ],
+          "published": "2026-06-10T17:57:36+00:00",
+          "score": 0.4345
+        },
+        {
+          "id": "7a24901e2115",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Enterprise ASR Benchmark on Code-Switched Speech Across Four Language Pairs",
+          "why_it_matters": "If you're building voice agents or multilingual pipelines, this benchmark quantifies exactly where frontier ASR systems break on realistic bilingual enterprise speech — a gap not covered by standard ASR evals.",
+          "summary": "A 918-utterance benchmark covers Spanish-English, French-English, Canadian French-English, and German-English code-switching in HR and IT support scenarios. Seven ASR systems were evaluated using WER, SWER, and AER. ElevenLabs Scribe V2, Gemini 3 Flash, and Assembly AI Universal 3-Pro emerge as top performers across metrics, though relative rankings vary by language pair and metric. The dataset and harness (AU-Harness) are publicly released.",
+          "tags": [
+            "asr",
+            "voice-agents",
+            "multilingual",
+            "benchmarks"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/ServiceNow-AI/code-switching"
+            }
+          ],
+          "published": "2026-06-09T19:38:28+00:00",
+          "score": 0.3187
+        },
+        {
+          "id": "92ae8342b636",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Agent Chains Hugging Face Spaces via agents.md to Build a 3D Paris Monument Gallery",
+          "why_it_matters": "The agents.md interface on Gradio Spaces is a concrete mechanism enabling agents to chain state-of-the-art models without custom integration code — a practical infrastructure pattern worth knowing about.",
+          "summary": "Every Gradio Space on Hugging Face now exposes an agents.md file with schema, call/poll templates, upload instructions, and auth hints. An agent used this to chain two Spaces — ideogram-ai/ideogram4 for image generation and VAST-AI/TripoSplat for single-image 3D Gaussian reconstruction — automatically handling coordinate flips, compression to .ksplat, and Three.js viewer assembly. The pipeline generalizes: reusing it for new gallery themes required roughly one sentence of human input.",
+          "tags": [
+            "agents",
+            "hugging-face",
+            "3d",
+            "tooling"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/mishig/spaces-agents-md"
+            }
+          ],
+          "published": "2026-06-09T10:46:19+00:00",
+          "score": 0.2818
+        }
+      ]
+    }
+  ]
+}
