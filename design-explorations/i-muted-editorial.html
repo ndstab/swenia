@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>swenia — Muted Editorial</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;450;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    /* Muted editorial palette */
+    --ink:        #1f1d1a;   /* deep warm ink */
+    --ink-soft:   #4a463f;   /* secondary text */
+    --ink-faint:  #87817500; /* (unused placeholder) */
+    --muted:      #8a8478;   /* captions / meta */
+    --rule:       #d9d3c7;   /* hairline rules */
+    --rule-soft:  #e7e1d5;
+    --paper:      #f4f0e7;   /* warm paper backdrop */
+    --card:       #fcfaf4;   /* card surface */
+    --card-2:     #f7f3ea;   /* peeking card */
+    /* the ONE quiet accent — a dusty clay, used only as a thin tint */
+    --clay:       #9c5a44;
+    --clay-tint:  #efe2db;
+    /* a second restrained category tint — desaturated slate-blue */
+    --slate:      #5a6b73;
+    --slate-tint: #e2e7e6;
+
+    --shadow: 0 1px 2px rgba(31,29,26,.04), 0 18px 40px -22px rgba(31,29,26,.30);
+  }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+
+  html,body{ height:100%; }
+  body{
+    font-family:"Inter", system-ui, sans-serif;
+    background:
+      radial-gradient(120% 80% at 50% -10%, #efe9dd 0%, var(--paper) 55%, #ece6d9 100%);
+    color:var(--ink);
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+    min-height:100%;
+    display:flex;
+    justify-content:center;
+    padding:28px 16px 60px;
+  }
+
+  /* ---------- Phone frame ---------- */
+  .phone{
+    width:100%;
+    max-width:412px;
+    background:var(--paper);
+    border-radius:30px;
+    box-shadow:
+      0 0 0 1px rgba(31,29,26,.06),
+      0 50px 90px -40px rgba(31,29,26,.45);
+    overflow:hidden;
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    min-height:840px;
+  }
+
+  /* ---------- Masthead ---------- */
+  .masthead{
+    padding:22px 24px 16px;
+    border-bottom:1px solid var(--rule);
+  }
+  .masthead .toprow{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+  }
+  .wordmark{
+    font-family:"Fraunces", serif;
+    font-weight:600;
+    font-size:30px;
+    letter-spacing:-0.02em;
+    line-height:1;
+    color:var(--ink);
+  }
+  .wordmark .dot{ color:var(--clay); }
+  .date{
+    font-size:11px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--muted);
+    font-weight:500;
+    font-variant-numeric:tabular-nums;
+  }
+  .standfirst{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-top:12px;
+  }
+  .standfirst .label{
+    font-family:"Fraunces", serif;
+    font-style:italic;
+    font-size:14px;
+    color:var(--ink-soft);
+  }
+  .standfirst .count{
+    font-size:11px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--muted);
+    font-weight:500;
+    font-variant-numeric:tabular-nums;
+  }
+  .standfirst .dotsep{ color:var(--rule); }
+
+  /* ---------- Deck area ---------- */
+  .deck{
+    position:relative;
+    flex:1;
+    padding:20px 18px 0;
+  }
+  .deck-stage{
+    position:relative;
+    height:560px;
+  }
+
+  /* peeking cards behind */
+  .peek{
+    position:absolute;
+    left:0; right:0;
+    background:var(--card-2);
+    border:1px solid var(--rule-soft);
+    border-radius:16px;
+  }
+  .peek.b1{
+    top:14px; bottom:-14px;
+    transform:scale(.965);
+    z-index:1;
+    box-shadow:0 12px 30px -22px rgba(31,29,26,.4);
+  }
+  .peek.b2{
+    top:28px; bottom:-28px;
+    transform:scale(.93);
+    background:var(--card-2);
+    opacity:.7;
+    z-index:0;
+  }
+
+  /* ---------- Top card ---------- */
+  .card{
+    position:relative;
+    z-index:2;
+    background:var(--card);
+    border:1px solid var(--rule);
+    border-radius:16px;
+    box-shadow:var(--shadow);
+    height:560px;
+    display:flex;
+    flex-direction:column;
+    overflow:hidden;
+  }
+  .card-body{
+    padding:26px 26px 20px;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    flex:1;
+  }
+
+  /* category + tier header line */
+  .cardhead{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:18px;
+  }
+  .kicker{
+    display:flex;
+    align-items:center;
+    gap:9px;
+    font-size:11px;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-weight:600;
+    color:var(--slate);
+  }
+  /* category tint shown as a thin short rule, never a block */
+  .kicker .tickrule{
+    width:22px; height:2px;
+    background:var(--slate);
+    display:inline-block;
+    border-radius:2px;
+  }
+  .card[data-cat="headline"] .kicker{ color:var(--clay); }
+  .card[data-cat="headline"] .kicker .tickrule{ background:var(--clay); }
+
+  /* tier — restrained: small caps text with a hairline, no loud chip */
+  .tier{
+    font-size:10px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    font-weight:600;
+    color:var(--muted);
+    display:flex;
+    align-items:center;
+    gap:7px;
+  }
+  .tier .pip{
+    width:6px; height:6px;
+    border-radius:50%;
+    background:var(--muted);
+  }
+  .tier.must .pip{ background:var(--clay); }
+  .tier.must{ color:var(--clay); }
+
+  .title{
+    font-family:"Fraunces", serif;
+    font-weight:500;
+    font-size:25px;
+    line-height:1.18;
+    letter-spacing:-0.01em;
+    color:var(--ink);
+    margin-bottom:16px;
+  }
+
+  /* why it matters — set off with an italic serif lede + thin left rule */
+  .why{
+    border-left:2px solid var(--clay-tint);
+    padding-left:14px;
+    margin-bottom:18px;
+  }
+  .why .lab{
+    font-size:10px;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--muted);
+    font-weight:600;
+    display:block;
+    margin-bottom:5px;
+  }
+  .why p{
+    font-family:"Fraunces", serif;
+    font-style:italic;
+    font-weight:400;
+    font-size:15px;
+    line-height:1.5;
+    color:var(--ink-soft);
+  }
+
+  .summary{
+    font-size:14px;
+    line-height:1.62;
+    color:var(--ink-soft);
+    font-weight:400;
+    margin-bottom:auto;
+  }
+
+  /* footer of card: tags + source */
+  .card-foot{
+    border-top:1px solid var(--rule-soft);
+    padding-top:14px;
+    margin-top:18px;
+  }
+  .tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:7px 7px;
+    margin-bottom:12px;
+  }
+  .tag{
+    font-size:11px;
+    letter-spacing:.02em;
+    color:var(--ink-soft);
+    padding:3px 9px;
+    border:1px solid var(--rule);
+    border-radius:100px;
+    background:transparent;
+    font-weight:450;
+  }
+  .source{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    font-size:11.5px;
+    color:var(--muted);
+  }
+  .source .src-name{
+    display:flex; align-items:center; gap:8px;
+    letter-spacing:.04em;
+  }
+  .source .src-name .ico{
+    width:13px; height:13px;
+    border:1px solid var(--muted);
+    border-radius:3px;
+    display:inline-flex;
+    align-items:center; justify-content:center;
+    font-size:8px;
+    color:var(--muted);
+  }
+  .source .swipe-hint{
+    font-family:"Fraunces", serif;
+    font-style:italic;
+    font-size:12px;
+    color:var(--muted);
+  }
+
+  /* ---------- Bottom controls / progress ---------- */
+  .controls{
+    padding:18px 24px 22px;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+  }
+  .progress{
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .progress .ticks{
+    display:flex;
+    gap:5px;
+    flex:1;
+  }
+  .progress .ticks i{
+    height:3px;
+    border-radius:3px;
+    flex:1;
+    background:var(--rule);
+    display:block;
+  }
+  .progress .ticks i.on{ background:var(--clay); }
+  .progress .ticks i.cur{ background:var(--ink); }
+  .progress .pos{
+    font-size:11px;
+    color:var(--muted);
+    font-variant-numeric:tabular-nums;
+    letter-spacing:.08em;
+    font-weight:500;
+  }
+
+  .actions{
+    display:flex;
+    gap:12px;
+  }
+  .btn{
+    flex:1;
+    border:1px solid var(--rule);
+    background:var(--card);
+    border-radius:12px;
+    padding:13px 0;
+    font-family:"Inter", sans-serif;
+    font-size:12px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    font-weight:600;
+    color:var(--ink-soft);
+    cursor:pointer;
+    transition:transform .12s ease, border-color .12s ease, color .12s ease, background .12s ease;
+  }
+  .btn:hover{ border-color:var(--muted); }
+  .btn:active{ transform:scale(.97); }
+  /* one tasteful active state — the "keep / read" primary */
+  .btn.primary{
+    border-color:var(--clay);
+    color:var(--clay);
+    background:var(--card);
+  }
+  .btn.primary:hover{
+    background:var(--clay);
+    color:#fcfaf4;
+    border-color:var(--clay);
+  }
+
+  /* ---------- corner label ---------- */
+  .corner{
+    position:fixed;
+    left:14px; bottom:12px;
+    font-size:10px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--muted);
+    background:rgba(252,250,244,.85);
+    border:1px solid var(--rule);
+    padding:5px 10px;
+    border-radius:100px;
+    backdrop-filter:none;
+    font-weight:600;
+    z-index:50;
+  }
+  .corner b{ color:var(--clay); font-weight:600; }
+</style>
+</head>
+<body>
+
+  <div class="phone">
+
+    <!-- Masthead -->
+    <header class="masthead">
+      <div class="toprow">
+        <div class="wordmark">swenia<span class="dot">.</span></div>
+        <div class="date">Wed · 10 Jun 2026</div>
+      </div>
+      <div class="standfirst">
+        <span class="label">Today’s digest</span>
+        <span class="dotsep">—</span>
+        <span class="count">3 must-know · 7 worth knowing</span>
+      </div>
+    </header>
+
+    <!-- Deck -->
+    <section class="deck">
+      <div class="deck-stage">
+
+        <!-- peeking cards -->
+        <div class="peek b2"></div>
+        <div class="peek b1"></div>
+
+        <!-- TOP CARD -->
+        <article class="card" data-cat="headline">
+          <div class="card-body">
+
+            <div class="cardhead">
+              <span class="kicker"><span class="tickrule"></span>Headline</span>
+              <span class="tier must"><span class="pip"></span>Must know</span>
+            </div>
+
+            <h1 class="title">Claude Fable 5 Released: Anthropic’s Strongest Model Yet, With Significant Safety-Filter Caveats</h1>
+
+            <div class="why">
+              <span class="lab">Why it matters</span>
+              <p>A flagship capability jump from a leading lab — the kind of release the entire field will discuss, with benchmark scores and post-training safety measures that directly affect how researchers and engineers can use the model.</p>
+            </div>
+
+            <p class="summary">Anthropic released Claude Fable 5 publicly, described as a major leap on benchmarks and priced at roughly 2× current Opus models, less than GPT-5.5 Pro. The model was reportedly held back 2+ months post-training. Notably, some prompts are downgraded to Opus 4.8 via safety filters without user disclosure. No single breakthrough is publicly credited; gains attributed to full-stack advances.</p>
+
+            <div class="card-foot">
+              <div class="tags">
+                <span class="tag">anthropic</span>
+                <span class="tag">claude</span>
+                <span class="tag">frontier models</span>
+                <span class="tag">safety</span>
+              </div>
+              <div class="source">
+                <span class="src-name"><span class="ico">↗</span>Interconnects</span>
+                <span class="swipe-hint">swipe to continue →</span>
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Controls -->
+    <footer class="controls">
+      <div class="progress">
+        <div class="ticks">
+          <i class="cur"></i><i></i><i></i><i></i><i></i>
+          <i></i><i></i><i></i><i></i><i></i>
+        </div>
+        <span class="pos">01 / 10</span>
+      </div>
+      <div class="actions">
+        <button class="btn">Skip</button>
+        <button class="btn">Save</button>
+        <button class="btn primary">Read</button>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- ===== Off-deck reference: the other two cards rendered for completeness ===== -->
+  <!-- (kept hidden from layout via display:none placeholders so data is present) -->
+  <div style="display:none" aria-hidden="true" id="other-cards">
+    <article data-cat="headline" data-tier="must_know">
+      <h2>Google DeepMind Releases Gemini 3.5 Live Translate: Continuous Speech-to-Speech for 70+ Languages</h2>
+      <p>Why it matters: A significant multimodal audio model release from DeepMind, relevant both as a frontier capability milestone and as a production-scale deployment signal for real-time speech AI.</p>
+      <p>Gemini 3.5 Live Translate is a streaming speech-to-speech model supporting 70+ languages with automatic language detection. Unlike turn-based systems, it generates translation continuously, staying a few seconds behind the speaker. It preserves intonation, pacing, and pitch. Launching today via Gemini Live API and Google AI Studio for developers, private preview in Google Meet for enterprises, and rolling out in the Google Translate app globally.</p>
+      <p>Tags: google deepmind, gemini, speech, multimodal — Source: DeepMind</p>
+    </article>
+    <article data-cat="frontier" data-tier="worth_knowing">
+      <h2>Phase Diagram Framework Predicts When Cross-Modal Alignment vs. Prediction Helps Multimodal Learning</h2>
+      <p>Why it matters: Practically useful for ML engineers designing multimodal training objectives — offers a theoretically grounded, data-driven method to choose between alignment and prediction before committing to training.</p>
+      <p>Under a spiked signal-plus-noise model with structured cross-modal nuisance correlation, the authors derive separation ratios for cross-modal alignment (CA) and cross-modal prediction (CP). The resulting phase diagram partitions multimodal problems into four regimes: Both, CA only, CP only, and Neither. Validated on synthetic, stereo-vision, image-caption, and astrophysical data.</p>
+      <p>Tags: multimodal learning, representation learning, theory, training — Source: arXiv:cs.LG</p>
+    </article>
+  </div>
+
+  <div class="corner">Direction <b>I · Muted Editorial</b></div>
+
+</body>
+</html>

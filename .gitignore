@@ -1,0 +1,27 @@
+# ── secrets — NEVER commit ─────────────────────────────
+.env
+*.key
+*.pem
+
+# ── python ─────────────────────────────────────────────
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+
+# ── node / reader ──────────────────────────────────────
+reader/node_modules/
+reader/dist/
+reader/.vite/
+
+# ── local state & output ───────────────────────────────
+# These are ignored for local dev. The daily GitHub Action commits the few it
+# needs (output/latest.json, output/archive, data/swenia.db, reader/public/latest.json)
+# with `git add -f`, which overrides these ignores. See .github/workflows/daily.yml.
+data/
+output/
+reader/public/latest.json
+
+# ── os / editor ────────────────────────────────────────
+.DS_Store
+*.swp

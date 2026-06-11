@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>swenia — The Brief</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;450;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    /* Warm paper palette — restrained, editorial */
+    --paper:        #f7f5f0;
+    --card:         #fdfcf9;
+    --ink:          #1c1a17;   /* near-black warm */
+    --ink-soft:     #44403a;
+    --ink-muted:    #837c72;
+    --ink-faint:    #a39b8f;
+    --rule:         #e6e2d8;
+    --rule-soft:    #efece4;
+    /* ONE quiet confident accent — a deep, calm ink-blue/teal that reads as a link */
+    --accent:       #2f5d57;
+    --accent-tint:  #eef2f0;
+
+    --measure: 33rem;
+    --r: 14px;
+
+    /* Type scale — a tuned minor-third-ish rhythm */
+    --t-eyebrow: 0.6875rem;  /* 11px */
+    --t-meta:    0.75rem;    /* 12px */
+    --t-body:    1.0rem;     /* 16px */
+    --t-why:     0.9375rem;  /* 15px */
+    --t-h:       1.5rem;     /* 24px */
+    --t-h-lg:    1.6875rem;  /* 27px */
+  }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+
+  html,body{ height:100%; }
+  body{
+    background:
+      radial-gradient(120% 80% at 50% -10%, #efece4 0%, #e7e3da 55%, #e1ddd2 100%);
+    font-family:'Inter', system-ui, sans-serif;
+    color:var(--ink);
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+    display:flex;
+    justify-content:center;
+    min-height:100vh;
+    padding:28px 16px 48px;
+  }
+
+  /* ---- Phone frame ---- */
+  .phone{
+    width:100%;
+    max-width:412px;
+    background:var(--paper);
+    border-radius:34px;
+    box-shadow:
+      0 1px 0 rgba(255,255,255,.6) inset,
+      0 28px 60px -28px rgba(40,36,30,.45),
+      0 6px 18px -8px rgba(40,36,30,.25);
+    overflow:hidden;
+    position:relative;
+    isolation:isolate;
+  }
+
+  /* ---- Masthead ---- */
+  .masthead{
+    padding:30px 26px 18px;
+    background:var(--paper);
+    border-bottom:1px solid var(--rule);
+    position:relative;
+  }
+  .masthead .top{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+  }
+  .wordmark{
+    font-family:'Newsreader', serif;
+    font-weight:500;
+    font-size:1.875rem;
+    letter-spacing:-0.018em;
+    line-height:1;
+    color:var(--ink);
+  }
+  .wordmark .dot{ color:var(--accent); }
+  .masthead .date{
+    font-size:var(--t-meta);
+    font-weight:500;
+    letter-spacing:.02em;
+    color:var(--ink-muted);
+    font-variant-numeric:tabular-nums;
+  }
+  .masthead .strap{
+    margin-top:9px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:var(--t-meta);
+    color:var(--ink-muted);
+    letter-spacing:.01em;
+  }
+  .masthead .strap b{
+    color:var(--ink-soft);
+    font-weight:600;
+  }
+  .strap .sep{ color:var(--ink-faint); }
+
+  /* progress dots */
+  .progress{
+    margin-top:16px;
+    display:flex;
+    align-items:center;
+    gap:7px;
+  }
+  .progress .seg{
+    height:3px; border-radius:2px;
+    background:var(--rule);
+    flex:1;
+    overflow:hidden;
+  }
+  .progress .seg.done{ background:var(--accent); }
+  .progress .seg.active{ background:var(--rule); position:relative; }
+  .progress .seg.active::after{
+    content:""; position:absolute; inset:0 55% 0 0;
+    background:var(--accent); border-radius:2px;
+  }
+  .progress .count{
+    font-size:var(--t-meta); font-weight:500;
+    color:var(--ink-muted); font-variant-numeric:tabular-nums;
+    margin-left:4px; flex:0 0 auto;
+  }
+
+  /* ---- Deck ---- */
+  .deck{
+    position:relative;
+    padding:22px 16px 30px;
+  }
+
+  /* peeking cards behind */
+  .peek{
+    position:absolute;
+    left:50%; right:auto;
+    transform:translateX(-50%);
+    background:var(--card);
+    border:1px solid var(--rule);
+    border-radius:var(--r);
+    box-shadow:0 10px 24px -18px rgba(40,36,30,.4);
+  }
+  .peek-1{
+    width:90%; height:160px; top:7px;
+    background:#fbfaf6;
+    z-index:1;
+  }
+  .peek-2{
+    width:82%; height:150px; top:0px;
+    background:#f6f4ee;
+    z-index:0;
+  }
+
+  .card{
+    position:relative;
+    z-index:2;
+    background:var(--card);
+    border:1px solid var(--rule);
+    border-radius:var(--r);
+    box-shadow:
+      0 1px 0 rgba(255,255,255,.7) inset,
+      0 18px 40px -22px rgba(40,36,30,.5),
+      0 4px 10px -6px rgba(40,36,30,.18);
+    padding:26px 24px 24px;
+  }
+
+  /* tier + category row */
+  .card .kicker{
+    display:flex; align-items:center; gap:10px;
+    margin-bottom:16px;
+  }
+  .tier{
+    font-size:var(--t-eyebrow);
+    font-weight:600;
+    letter-spacing:.13em;
+    text-transform:uppercase;
+    display:inline-flex; align-items:center; gap:7px;
+  }
+  .tier .tick{
+    width:6px; height:6px; border-radius:50%;
+    display:inline-block;
+  }
+  .tier.must{ color:var(--accent); }
+  .tier.must .tick{ background:var(--accent); }
+  .tier.worth{ color:var(--ink-muted); }
+  .tier.worth .tick{
+    background:transparent;
+    box-shadow:0 0 0 1.5px var(--ink-faint) inset;
+  }
+  .kicker .div{
+    width:1px; height:11px; background:var(--rule);
+  }
+  .category{
+    font-size:var(--t-eyebrow);
+    font-weight:500;
+    letter-spacing:.13em;
+    text-transform:uppercase;
+    color:var(--ink-faint);
+  }
+
+  .card h2{
+    font-family:'Newsreader', serif;
+    font-weight:500;
+    font-size:var(--t-h-lg);
+    line-height:1.22;
+    letter-spacing:-0.012em;
+    color:var(--ink);
+    text-wrap:balance;
+  }
+
+  /* why it matters */
+  .why{
+    margin-top:16px;
+    padding-left:14px;
+    border-left:2px solid var(--accent);
+    color:var(--ink-soft);
+  }
+  .why .lbl{
+    display:block;
+    font-size:var(--t-eyebrow);
+    font-weight:600;
+    letter-spacing:.11em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin-bottom:5px;
+  }
+  .why p{
+    font-family:'Newsreader', serif;
+    font-style:italic;
+    font-size:var(--t-why);
+    line-height:1.5;
+    color:var(--ink-soft);
+  }
+
+  .summary{
+    margin-top:18px;
+    font-family:'Newsreader', serif;
+    font-size:var(--t-body);
+    line-height:1.62;
+    color:var(--ink-soft);
+    max-width:var(--measure);
+  }
+
+  /* footer: tags + source */
+  .card .foot{
+    margin-top:22px;
+    padding-top:16px;
+    border-top:1px solid var(--rule-soft);
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:8px 8px;
+  }
+  .tag{
+    font-size:var(--t-meta);
+    font-weight:450;
+    color:var(--ink-muted);
+    letter-spacing:.005em;
+  }
+  .tag::before{ content:"#"; color:var(--ink-faint); }
+  .foot .spacer{ flex:1 1 auto; }
+  .source{
+    display:inline-flex; align-items:center; gap:6px;
+    font-size:var(--t-meta);
+    font-weight:500;
+    color:var(--accent);
+    letter-spacing:.01em;
+    text-decoration:none;
+    flex:0 0 auto;
+    transition:color .18s ease, transform .18s ease;
+  }
+  .source .arrow{ transition:transform .18s ease; }
+  .source:hover{ color:#244a45; }
+  .source:hover .arrow{ transform:translate(2px,-2px); }
+  .source .src-rule{
+    display:inline-block; width:18px; height:1px;
+    background:currentColor; opacity:.45; margin-right:2px;
+  }
+
+  /* ---- swipe affordance ---- */
+  .swipe-hint{
+    display:flex; align-items:center; justify-content:center;
+    gap:9px;
+    margin-top:20px;
+    color:var(--ink-faint);
+    font-size:var(--t-meta);
+    letter-spacing:.02em;
+  }
+  .swipe-hint .chev{
+    width:7px; height:7px;
+    border-right:1.5px solid var(--ink-faint);
+    border-bottom:1.5px solid var(--ink-faint);
+    transform:rotate(45deg);
+  }
+
+  /* ---- corner label ---- */
+  .corner{
+    position:fixed;
+    right:14px; bottom:14px;
+    font-family:'Inter', sans-serif;
+    font-size:10px;
+    font-weight:600;
+    letter-spacing:.09em;
+    text-transform:uppercase;
+    color:var(--ink-muted);
+    background:rgba(253,252,249,.85);
+    border:1px solid var(--rule);
+    backdrop-filter:saturate(1.1);
+    padding:6px 11px;
+    border-radius:999px;
+    z-index:50;
+  }
+  .corner b{ color:var(--accent); font-weight:600; }
+</style>
+</head>
+<body>
+
+  <div class="phone">
+
+    <!-- MASTHEAD -->
+    <header class="masthead">
+      <div class="top">
+        <div class="wordmark">swenia<span class="dot">.</span></div>
+        <div class="date">Wed, 10 June 2026</div>
+      </div>
+      <div class="strap">
+        <span>The daily brief</span>
+        <span class="sep">·</span>
+        <span><b>3 must-know</b> &nbsp;·&nbsp; 7 worth knowing</span>
+      </div>
+      <div class="progress" aria-label="Reading progress">
+        <span class="seg done"></span>
+        <span class="seg active"></span>
+        <span class="seg"></span>
+        <span class="seg"></span>
+        <span class="seg"></span>
+        <span class="count">02 / 10</span>
+      </div>
+    </header>
+
+    <!-- DECK -->
+    <main class="deck">
+      <div class="peek peek-2" aria-hidden="true"></div>
+      <div class="peek peek-1" aria-hidden="true"></div>
+
+      <!-- TOP CARD -->
+      <article class="card">
+        <div class="kicker">
+          <span class="tier must"><span class="tick"></span>Must know</span>
+          <span class="div"></span>
+          <span class="category">Headline</span>
+        </div>
+
+        <h2>Claude Fable 5 released: Anthropic’s strongest model yet, with significant safety-filter caveats</h2>
+
+        <div class="why">
+          <span class="lbl">Why it matters</span>
+          <p>A flagship capability jump from a leading lab — the kind of release the entire field will discuss, with benchmark scores and post-training safety measures that directly affect how researchers and engineers can use the model.</p>
+        </div>
+
+        <p class="summary">
+          Anthropic released Claude Fable 5 publicly, described as a major leap on benchmarks and priced at roughly 2× current Opus models, less than GPT-5.5 Pro. The model was reportedly held back 2+ months post-training. Notably, some prompts are downgraded to Opus 4.8 via safety filters without user disclosure. No single breakthrough (e.g. inference-time scaling, RL) is publicly credited; gains are attributed to full-stack advances.
+        </p>
+
+        <div class="foot">
+          <span class="tag">anthropic</span>
+          <span class="tag">claude</span>
+          <span class="tag">frontier models</span>
+          <span class="tag">safety</span>
+          <span class="spacer"></span>
+          <a class="source" href="https://www.interconnects.ai/p/claude-fable-5-and-new-ai-safety" target="_blank" rel="noopener">
+            <span class="src-rule"></span>Interconnects<span class="arrow">↗</span>
+          </a>
+        </div>
+      </article>
+
+      <div class="swipe-hint">
+        <span>Swipe for the next brief</span>
+        <span class="chev"></span>
+      </div>
+    </main>
+
+  </div>
+
+  <div class="corner">J&nbsp;·&nbsp;<b>The&nbsp;Brief</b></div>
+
+</body>
+</html>

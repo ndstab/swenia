@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>swenia · Mono-Technical</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  /* ---------- Design tokens ---------- */
+  :root {
+    --paper:        #f6f5f1;   /* warm, very light grey-white backdrop */
+    --card:         #fdfcfa;   /* card surface, a hair brighter than paper */
+    --ink:          #1b1a17;   /* near-black, warm */
+    --ink-2:        #3f3d38;   /* body */
+    --ink-3:        #6f6c64;   /* secondary / labels */
+    --ink-4:        #a3a097;   /* faint, hairlines & ghost text */
+    --rule:         #e4e1d8;   /* hairline */
+    --rule-strong:  #d4d0c5;
+    --accent:       #c0492b;   /* one restrained accent: muted brick red */
+    --accent-soft:  #f3e3de;   /* accent tint for fills */
+    --radius:       14px;
+    --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    background:
+      radial-gradient(120% 80% at 50% -10%, #ffffff 0%, var(--paper) 55%) fixed,
+      var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    min-height: 100%;
+  }
+
+  /* ---------- Phone frame ---------- */
+  .stage {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 16px 96px;
+  }
+
+  .phone {
+    width: 100%;
+    max-width: 414px;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 28px;
+    box-shadow:
+      0 1px 0 rgba(255,255,255,.7) inset,
+      0 24px 60px -28px rgba(33,30,24,.40),
+      0 4px 14px -8px rgba(33,30,24,.22);
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* ---------- Masthead ---------- */
+  .masthead {
+    padding: 26px 22px 18px;
+    border-bottom: 1px solid var(--rule);
+    background: linear-gradient(180deg, #ffffff 0%, var(--paper) 100%);
+  }
+
+  .masthead-top {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+
+  .wordmark {
+    font-family: var(--sans);
+    font-weight: 700;
+    font-size: 27px;
+    letter-spacing: -0.035em;
+    color: var(--ink);
+    line-height: 1;
+  }
+  .wordmark .dot { color: var(--accent); }
+
+  .issue {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    color: var(--ink-3);
+    text-align: right;
+    line-height: 1.5;
+  }
+  .issue .date { color: var(--ink); }
+
+  .masthead-meta {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .digest-line {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.02em;
+    color: var(--ink-3);
+  }
+  .digest-line b {
+    color: var(--ink);
+    font-weight: 600;
+  }
+  .digest-line .accent { color: var(--accent); }
+
+  /* progress indicator */
+  .progress {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--ink-4);
+    letter-spacing: 0.04em;
+  }
+  .pips { display: flex; gap: 5px; }
+  .pip {
+    width: 16px;
+    height: 3px;
+    border-radius: 2px;
+    background: var(--rule-strong);
+  }
+  .pip.on { background: var(--accent); }
+
+  /* ---------- Deck ---------- */
+  .deck {
+    position: relative;
+    padding: 26px 18px 30px;
+  }
+
+  /* peeking cards behind the top card */
+  .deck::before,
+  .deck::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 18px;
+    border-radius: var(--radius);
+    background: var(--card);
+    border: 1px solid var(--rule);
+    z-index: 0;
+  }
+  .deck::before {
+    width: calc(100% - 36px - 14px);
+    height: 80px;
+    transform: translateX(-50%);
+    top: 12px;
+    box-shadow: 0 8px 22px -16px rgba(33,30,24,.30);
+  }
+  .deck::after {
+    width: calc(100% - 36px - 30px);
+    height: 70px;
+    transform: translateX(-50%);
+    top: 6px;
+    background: #f1efe9;
+  }
+
+  /* ---------- Card ---------- */
+  .card {
+    position: relative;
+    z-index: 2;
+    background: var(--card);
+    border: 1px solid var(--rule-strong);
+    border-radius: var(--radius);
+    padding: 22px 22px 20px;
+    box-shadow:
+      0 1px 0 rgba(255,255,255,.9) inset,
+      0 18px 40px -24px rgba(33,30,24,.45),
+      0 3px 10px -6px rgba(33,30,24,.18);
+  }
+
+  /* card header: tier + category + index */
+  .card-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .tier {
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 4px 8px 3px;
+    border-radius: 5px;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .tier::before {
+    content: "";
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .tier.must {
+    color: var(--accent);
+    background: var(--accent-soft);
+  }
+  .tier.must::before { background: var(--accent); }
+  .tier.worth {
+    color: var(--ink-3);
+    background: #eeece5;
+  }
+  .tier.worth::before { background: var(--ink-4); }
+
+  .category {
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    color: var(--ink-4);
+  }
+
+  .card-idx {
+    margin-left: auto;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.04em;
+    color: var(--ink-4);
+  }
+
+  /* title */
+  .title {
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 1.26;
+    letter-spacing: -0.018em;
+    color: var(--ink);
+    text-wrap: balance;
+  }
+
+  /* why it matters */
+  .why {
+    margin-top: 16px;
+    padding-left: 13px;
+    border-left: 2px solid var(--accent);
+    position: relative;
+  }
+  .why-label {
+    font-family: var(--mono);
+    font-size: 9.5px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 5px;
+  }
+  .why-text {
+    font-family: var(--sans);
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: var(--ink-2);
+  }
+
+  /* divider with mono label */
+  .section-rule {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin: 20px 0 11px;
+  }
+  .section-rule .lbl {
+    font-family: var(--mono);
+    font-size: 9.5px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-4);
+    white-space: nowrap;
+  }
+  .section-rule .line {
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+  }
+
+  .summary {
+    font-family: var(--sans);
+    font-size: 14px;
+    line-height: 1.58;
+    color: var(--ink-2);
+  }
+
+  /* tags */
+  .tags {
+    margin-top: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .tag {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: 0.01em;
+    color: var(--ink-3);
+    background: transparent;
+    border: 1px solid var(--rule-strong);
+    border-radius: 5px;
+    padding: 3px 7px 2px;
+    line-height: 1.3;
+  }
+  .tag::before {
+    content: "#";
+    color: var(--ink-4);
+    margin-right: 1px;
+  }
+
+  /* footer: source + swipe affordance */
+  .card-foot {
+    margin-top: 20px;
+    padding-top: 14px;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .source {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: 0.02em;
+    color: var(--ink-3);
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    min-width: 0;
+  }
+  .source .k {
+    color: var(--ink-4);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 9px;
+  }
+  .source .v {
+    color: var(--ink);
+    font-weight: 500;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .source .arrow { color: var(--accent); }
+
+  .swipe-hint {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.04em;
+    color: var(--ink-4);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+  }
+  .swipe-hint .chev { color: var(--accent); letter-spacing: -1px; }
+
+  /* the one tasteful active state */
+  .card.is-top {
+    transition: transform .18s cubic-bezier(.2,.7,.3,1),
+                box-shadow .18s ease,
+                border-color .18s ease;
+  }
+  .card.is-top:active {
+    transform: translateY(-2px) rotate(-0.5deg) scale(1.004);
+    border-color: var(--accent);
+    box-shadow:
+      0 1px 0 rgba(255,255,255,.9) inset,
+      0 26px 52px -22px rgba(33,30,24,.50),
+      0 0 0 3px var(--accent-soft);
+  }
+
+  /* compact "next in deck" preview card */
+  .nextcard {
+    position: relative;
+    z-index: 1;
+    margin-top: 16px;
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    box-shadow: 0 10px 26px -20px rgba(33,30,24,.30);
+    opacity: 0.96;
+  }
+  .nextcard .card-head { margin-bottom: 9px; }
+  .nextcard .title {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.32;
+    color: var(--ink-2);
+  }
+  .nextcard .next-flag {
+    margin-left: auto;
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-4);
+  }
+
+  /* ---------- Fixed corner identity label ---------- */
+  .corner-label {
+    position: fixed;
+    right: 14px;
+    bottom: 14px;
+    z-index: 50;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: var(--ink-3);
+    background: rgba(253,252,250,.92);
+    backdrop-filter: saturate(1.1);
+    border: 1px solid var(--rule-strong);
+    border-radius: 7px;
+    padding: 6px 10px;
+    box-shadow: 0 6px 18px -12px rgba(33,30,24,.4);
+  }
+  .corner-label .g { color: var(--accent); font-weight: 600; }
+
+  @media (max-width: 360px) {
+    .title { font-size: 19px; }
+  }
+</style>
+</head>
+<body>
+  <div class="stage">
+    <div class="phone">
+
+      <!-- Masthead -->
+      <header class="masthead">
+        <div class="masthead-top">
+          <div class="wordmark">swenia<span class="dot">.</span></div>
+          <div class="issue">
+            <div class="date">2026&#8201;&#8211;&#8201;06&#8201;&#8211;&#8201;10</div>
+            <div>DAILY&nbsp;DIGEST</div>
+          </div>
+        </div>
+        <div class="masthead-meta">
+          <div class="digest-line">
+            <b><span class="accent">3</span>&nbsp;must-know</b>
+            &nbsp;&middot;&nbsp; <b>7</b>&nbsp;worth&nbsp;knowing
+          </div>
+          <div class="progress">
+            <span>01/10</span>
+            <span class="pips">
+              <span class="pip on"></span>
+              <span class="pip"></span>
+              <span class="pip"></span>
+            </span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Deck -->
+      <main class="deck">
+
+        <!-- TOP CARD -->
+        <article class="card is-top">
+          <div class="card-head">
+            <span class="tier must">must&#8209;know</span>
+            <span class="category">headline</span>
+            <span class="card-idx">001</span>
+          </div>
+
+          <h1 class="title">Claude Fable 5 Released: Anthropic&rsquo;s Strongest Model Yet, With Significant Safety-Filter Caveats</h1>
+
+          <div class="why">
+            <span class="why-label">Why it matters</span>
+            <p class="why-text">A flagship capability jump from a leading lab &mdash; the kind of release the entire field will discuss, with benchmark scores and post-training safety measures that directly affect how researchers and engineers can use the model.</p>
+          </div>
+
+          <div class="section-rule">
+            <span class="lbl">Summary</span>
+            <span class="line"></span>
+          </div>
+          <p class="summary">Anthropic released Claude Fable 5 publicly, described as a major leap on benchmarks and priced at roughly 2&times; current Opus models, less than GPT-5.5 Pro. The model was reportedly held back 2+ months post-training. Notably, some prompts are downgraded to Opus 4.8 via safety filters without user disclosure. No single breakthrough (e.g., inference-time scaling, RL) is publicly credited; gains attributed to full-stack advances.</p>
+
+          <div class="tags">
+            <span class="tag">anthropic</span>
+            <span class="tag">claude</span>
+            <span class="tag">frontier models</span>
+            <span class="tag">safety</span>
+          </div>
+
+          <div class="card-foot">
+            <span class="source">
+              <span class="k">src</span>
+              <span class="v">Interconnects</span>
+              <span class="arrow">&#8599;</span>
+            </span>
+            <span class="swipe-hint">swipe to advance <span class="chev">&rsaquo;&rsaquo;</span></span>
+          </div>
+        </article>
+
+        <!-- NEXT CARD (peeking, condensed) -->
+        <article class="nextcard">
+          <div class="card-head">
+            <span class="tier must">must&#8209;know</span>
+            <span class="category">headline</span>
+            <span class="next-flag">next &middot; 002</span>
+          </div>
+          <h2 class="title">Google DeepMind Releases Gemini 3.5 Live Translate: Continuous Speech-to-Speech for 70+ Languages</h2>
+        </article>
+
+      </main>
+    </div>
+  </div>
+
+  <div class="corner-label"><span class="g">G</span> &middot; Mono-Technical</div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+# swenia — daily digest pipeline.
+#
+# Runs the Python pipeline on a schedule, then commits the fresh digest AND the
+# updated seen-state back to the repo. Committing latest.json into reader/public/
+# triggers Vercel to redeploy the reader with the new digest. Committing the
+# seen-state DB makes "everything since last open" survive across runs (the
+# Actions runner is ephemeral, so without this it would forget every night).
+#
+# SETUP (do this once, from your personal laptop / GitHub UI):
+#   1. Push this repo to your personal GitHub.
+#   2. Settings → Secrets and variables → Actions → New repository secret:
+#        ANTHROPIC_API_KEY = sk-ant-api03-...
+#   3. Settings → Actions → General → Workflow permissions →
+#        "Read and write permissions" (so the workflow can commit back).
+#   4. Connect the repo to Vercel (see DEPLOY.md) with root directory = reader/.
+#
+# Trigger: daily at 06:30 UTC, or manually via the Actions tab ("Run workflow").
+
+name: daily-digest
+
+on:
+  schedule:
+    - cron: "30 0 * * *" # 00:30 UTC daily = 06:00 AM IST
+  workflow_dispatch: {} # allow manual runs from the Actions tab
+
+# allow the job to push commits back to the repo
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-digest
+  cancel-in-progress: false
+
+jobs:
+  build-digest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run pipeline (Batch API)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python -m swenia --batch
+
+      - name: Stage digest for the reader
+        run: |
+          mkdir -p reader/public
+          cp output/latest.json reader/public/latest.json
+
+      - name: Commit digest + seen-state
+        run: |
+          git config user.name  "swenia-bot"
+          git config user.email "swenia-bot@users.noreply.github.com"
+          git add -f output/latest.json output/archive reader/public/latest.json data/swenia.db
+          if git diff --cached --quiet; then
+            echo "No changes (caught up — nothing new today)."
+          else
+            git commit -m "digest: $(date -u +%Y-%m-%d)"
+            git push
+          fi

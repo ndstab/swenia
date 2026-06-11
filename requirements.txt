@@ -1,0 +1,7 @@
+anthropic>=0.40
+feedparser>=6.0
+httpx>=0.27
+rich>=13.0
+fastembed>=0.4
+trafilatura>=2.0
+numpy>=1.26

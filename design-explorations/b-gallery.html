@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>swenia · B · The Gallery</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    /* Near-white gallery canvas */
+    --canvas: #f4f2ee;
+    --paper:  #fcfbf9;
+    --ink:    #1a1916;
+    --ink-soft:#4a4843;
+    --ink-faint:#908c84;
+    --hairline: #e4e0d8;
+    /* single restrained accent — a deep, museum vermilion */
+    --accent: #c2410c;
+    --shadow: 28px 40px 80px -40px rgba(40,34,24,.34), 4px 8px 24px -16px rgba(40,34,24,.22);
+  }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+
+  html,body{ height:100%; }
+
+  body{
+    font-family:"Inter", system-ui, sans-serif;
+    background:
+      radial-gradient(120% 80% at 50% -10%, #ffffff 0%, var(--canvas) 60%, #ebe8e1 100%);
+    color:var(--ink);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    padding:34px 18px 60px;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+
+  /* ---------- Phone frame ---------- */
+  .phone{
+    width:100%;
+    max-width:412px;
+    background:var(--canvas);
+    border-radius:38px;
+    padding:14px 12px 18px;
+    position:relative;
+    box-shadow:
+      0 1px 0 rgba(255,255,255,.7) inset,
+      0 50px 90px -50px rgba(30,26,18,.45);
+  }
+
+  /* ---------- Masthead ---------- */
+  .masthead{
+    padding:14px 16px 18px;
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+  }
+  .mast-left{ display:flex; flex-direction:column; gap:6px; }
+  .wordmark{
+    font-family:"Fraunces", serif;
+    font-optical-sizing:auto;
+    font-weight:380;
+    font-size:30px;
+    letter-spacing:.01em;
+    line-height:1;
+    color:var(--ink);
+  }
+  .wordmark .dot{ color:var(--accent); }
+  .date{
+    font-size:10.5px;
+    letter-spacing:.26em;
+    text-transform:uppercase;
+    color:var(--ink-faint);
+    font-weight:500;
+  }
+  .summary-line{
+    text-align:right;
+    font-size:10.5px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    font-weight:500;
+    line-height:1.7;
+    padding-top:5px;
+  }
+  .summary-line b{ color:var(--accent); font-weight:600; }
+  .summary-line .sep{ color:var(--hairline); margin:0 4px; }
+
+  .mast-rule{
+    height:1px;
+    background:var(--hairline);
+    margin:2px 18px 0;
+  }
+
+  /* ---------- Deck ---------- */
+  .deck{
+    position:relative;
+    padding:26px 14px 12px;
+    min-height:560px;
+  }
+
+  /* peeking cards behind */
+  .peek{
+    position:absolute;
+    left:14px; right:14px;
+    background:var(--paper);
+    border-radius:20px;
+    border:1px solid var(--hairline);
+  }
+  .peek-1{
+    top:42px;
+    height:520px;
+    transform:scale(.955);
+    box-shadow:0 30px 50px -40px rgba(40,34,24,.4);
+    opacity:.92;
+  }
+  .peek-2{
+    top:54px;
+    height:520px;
+    transform:scale(.91);
+    opacity:.7;
+    box-shadow:none;
+  }
+
+  /* ---------- Top card ---------- */
+  .card{
+    position:relative;
+    background:var(--paper);
+    border-radius:22px;
+    border:1px solid #efece4;
+    box-shadow:var(--shadow);
+    padding:30px 28px 26px;
+    transition:transform .45s cubic-bezier(.2,.8,.2,1), box-shadow .45s ease;
+    cursor:grab;
+  }
+  .card:hover{
+    transform:translateY(-4px) rotate(-.5deg);
+    box-shadow:
+      34px 50px 96px -40px rgba(40,34,24,.42),
+      4px 8px 28px -16px rgba(40,34,24,.28);
+  }
+  .card:active{ cursor:grabbing; transform:scale(.992); }
+
+  /* placard meta row */
+  .placard{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:24px;
+  }
+  .tier{
+    font-size:9px;
+    letter-spacing:.24em;
+    text-transform:uppercase;
+    font-weight:600;
+    padding:5px 10px 4px;
+    border-radius:2px;
+    line-height:1;
+    white-space:nowrap;
+  }
+  .tier.must{
+    color:var(--paper);
+    background:var(--accent);
+  }
+  .tier.worth{
+    color:var(--ink-soft);
+    background:transparent;
+    border:1px solid var(--hairline);
+  }
+  .category{
+    font-size:10px;
+    letter-spacing:.34em;
+    text-transform:uppercase;
+    color:var(--ink-faint);
+    font-weight:500;
+  }
+  .placard .accession{
+    margin-left:auto;
+    font-size:10px;
+    letter-spacing:.14em;
+    color:var(--ink-faint);
+    font-variant-numeric:tabular-nums;
+  }
+
+  .title{
+    font-family:"Fraunces", serif;
+    font-optical-sizing:auto;
+    font-weight:380;
+    font-size:27px;
+    line-height:1.18;
+    letter-spacing:-.005em;
+    color:var(--ink);
+    margin-bottom:22px;
+  }
+
+  /* why it matters — the curatorial note */
+  .why{
+    position:relative;
+    padding-left:18px;
+    margin-bottom:22px;
+  }
+  .why::before{
+    content:"";
+    position:absolute;
+    left:0; top:3px; bottom:3px;
+    width:2px;
+    background:var(--accent);
+    border-radius:2px;
+  }
+  .why-label{
+    display:block;
+    font-size:9px;
+    letter-spacing:.26em;
+    text-transform:uppercase;
+    color:var(--accent);
+    font-weight:600;
+    margin-bottom:7px;
+  }
+  .why-text{
+    font-family:"Fraunces", serif;
+    font-style:italic;
+    font-weight:340;
+    font-size:15px;
+    line-height:1.5;
+    color:var(--ink-soft);
+  }
+
+  .summary{
+    font-size:13.5px;
+    line-height:1.62;
+    color:var(--ink-soft);
+    font-weight:380;
+    margin-bottom:24px;
+  }
+
+  .hairline{
+    height:1px;
+    background:var(--hairline);
+    margin:0 0 18px;
+  }
+
+  /* tags */
+  .tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:7px 7px;
+    margin-bottom:20px;
+  }
+  .tag{
+    font-size:10.5px;
+    letter-spacing:.04em;
+    color:var(--ink-faint);
+    border:1px solid var(--hairline);
+    border-radius:100px;
+    padding:5px 11px 4px;
+    background:transparent;
+    transition:color .2s ease, border-color .2s ease;
+  }
+  .tag::before{ content:"#"; color:var(--accent); opacity:.55; margin-right:1px; }
+  .card:hover .tag{ border-color:#ddd9cf; }
+
+  /* source / footer of placard */
+  .source{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
+  }
+  .source-name{
+    display:flex;
+    align-items:center;
+    gap:9px;
+    font-size:11px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    font-weight:500;
+  }
+  .source-name .glyph{
+    width:5px; height:5px; border-radius:50%;
+    background:var(--accent);
+    display:inline-block;
+  }
+  .read{
+    font-size:10px;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:var(--ink-faint);
+    font-weight:500;
+  }
+  .read .arrow{ color:var(--accent); }
+
+  /* ---------- Progress dots ---------- */
+  .progress{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:9px;
+    padding:26px 0 6px;
+  }
+  .progress .pip{
+    height:5px; width:5px; border-radius:50%;
+    background:#d6d1c7;
+    transition:all .3s ease;
+  }
+  .progress .pip.active{
+    width:22px; border-radius:100px;
+    background:var(--accent);
+  }
+  .progress .pip.done{ background:#bdb8ac; }
+  .progress .count{
+    margin-left:6px;
+    font-size:10px;
+    letter-spacing:.16em;
+    color:var(--ink-faint);
+    font-variant-numeric:tabular-nums;
+  }
+
+  /* ---------- corner identity label ---------- */
+  .id-label{
+    position:fixed;
+    left:16px; bottom:16px;
+    font-family:"Inter", sans-serif;
+    font-size:10px;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:var(--ink-faint);
+    background:rgba(252,251,249,.82);
+    backdrop-filter:blur(6px);
+    border:1px solid var(--hairline);
+    border-radius:100px;
+    padding:7px 13px 6px;
+    z-index:50;
+  }
+  .id-label b{ color:var(--accent); font-weight:600; }
+</style>
+</head>
+<body>
+
+  <div class="phone">
+
+    <!-- Masthead -->
+    <header class="masthead">
+      <div class="mast-left">
+        <div class="wordmark">swenia<span class="dot">.</span></div>
+        <div class="date">10 June 2026</div>
+      </div>
+      <div class="summary-line">
+        <b>3</b> must-know<span class="sep">/</span><br />
+        <b>7</b> worth knowing
+      </div>
+    </header>
+    <div class="mast-rule"></div>
+
+    <!-- Deck -->
+    <section class="deck">
+
+      <!-- peeking cards -->
+      <div class="peek peek-2" aria-hidden="true"></div>
+      <div class="peek peek-1" aria-hidden="true"></div>
+
+      <!-- top card -->
+      <article class="card">
+
+        <div class="placard">
+          <span class="tier must">Must&nbsp;Know</span>
+          <span class="category">Headline</span>
+          <span class="accession">No. 01</span>
+        </div>
+
+        <h1 class="title">Claude Fable&nbsp;5 Released: Anthropic's Strongest Model Yet, With Significant Safety-Filter Caveats</h1>
+
+        <div class="why">
+          <span class="why-label">Why it matters</span>
+          <p class="why-text">A flagship capability jump from a leading lab — the kind of release the entire field will discuss, with benchmark scores and post-training safety measures that directly affect how researchers and engineers can use the model.</p>
+        </div>
+
+        <p class="summary">Anthropic released Claude Fable&nbsp;5 publicly, described as a major leap on benchmarks and priced at roughly 2x current Opus models, less than GPT-5.5 Pro. The model was reportedly held back 2+ months post-training. Notably, some prompts are downgraded to Opus&nbsp;4.8 via safety filters without user disclosure. No single breakthrough (e.g., inference-time scaling, RL) is publicly credited; gains attributed to full-stack advances.</p>
+
+        <div class="hairline"></div>
+
+        <div class="tags">
+          <span class="tag">anthropic</span>
+          <span class="tag">claude</span>
+          <span class="tag">frontier models</span>
+          <span class="tag">safety</span>
+        </div>
+
+        <div class="source">
+          <span class="source-name"><span class="glyph"></span>Interconnects</span>
+          <span class="read">Read <span class="arrow">&rarr;</span></span>
+        </div>
+
+      </article>
+
+      <!-- Progress -->
+      <div class="progress">
+        <span class="pip active"></span>
+        <span class="pip"></span>
+        <span class="pip"></span>
+        <span class="pip"></span>
+        <span class="pip"></span>
+        <span class="pip"></span>
+        <span class="pip"></span>
+        <span class="pip"></span>
+        <span class="pip"></span>
+        <span class="pip"></span>
+        <span class="count">01 / 10</span>
+      </div>
+
+    </section>
+  </div>
+
+  <div class="id-label"><b>B</b> &middot; The Gallery</div>
+
+</body>
+</html>

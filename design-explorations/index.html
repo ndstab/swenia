@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>swenia — design directions</title>
+<style>
+  :root {
+    --bg: #ececee;
+    --card: #ffffff;
+    --ink: #1c1c1f;
+    --muted: #6b6b73;
+    --line: #dcdce0;
+    --accent: #3a3a40;
+    --phone-w: 430px;
+    --phone-h: 820px;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+  }
+  header.page {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 48px 32px 8px;
+  }
+  header.page h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+  header.page p.intro {
+    margin: 8px 0 0;
+    color: var(--muted);
+    font-size: 15px;
+    max-width: 68ch;
+  }
+
+  .batch {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+  .batch-head {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin: 40px 0 4px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--line);
+  }
+  .batch-head .label {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: var(--ink);
+  }
+  .batch-head .sub {
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  .gallery {
+    padding: 24px 0 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 18px 18px 20px;
+    width: 466px;
+    max-width: 100%;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+  }
+  .card-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 4px;
+  }
+  .card h2 {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: -0.005em;
+  }
+  .open-link {
+    flex: none;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--accent);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .open-link:hover { text-decoration: underline; }
+  .card p.desc {
+    margin: 4px 0 14px;
+    color: var(--muted);
+    font-size: 13.5px;
+    line-height: 1.45;
+  }
+  .frame-wrap {
+    position: relative;
+    width: var(--phone-w);
+    max-width: 100%;
+    height: var(--phone-h);
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06), inset 0 0 0 1px rgba(255,255,255,0.4);
+    background: #f4f4f6;
+  }
+  .frame-wrap a.cover {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: block;
+  }
+  iframe {
+    width: var(--phone-w);
+    height: var(--phone-h);
+    border: 0;
+    display: block;
+    background: #fff;
+  }
+  footer.page {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 48px 32px 56px;
+    color: var(--muted);
+    font-size: 12.5px;
+  }
+  @media (max-width: 560px) {
+    header.page { padding: 32px 18px 8px; }
+    .batch { padding: 0 18px; }
+    .gallery { padding: 16px 0 8px; gap: 20px; }
+    .card { width: 100%; }
+    :root { --phone-w: 100%; }
+    iframe { width: 100%; }
+    footer.page { padding: 40px 18px 48px; }
+  }
+</style>
+</head>
+<body>
+  <header class="page">
+    <h1>swenia — design directions</h1>
+    <p class="intro">Eleven self-contained design explorations for the swenia digest, labelled A–K — choosing one. Each phone-sized preview is live below; click any preview or “open full ↗” to view it on its own. Directions A–E are the first batch; F–K are the new, refined lane.</p>
+  </header>
+
+  <!-- FIRST BATCH: A–E -->
+  <section class="batch">
+    <div class="batch-head">
+      <span class="label">First batch</span>
+      <span class="sub">A–E · initial explorations</span>
+    </div>
+    <div class="gallery">
+
+      <article class="card">
+        <div class="card-head">
+          <h2>A · The Broadsheet</h2>
+          <a class="open-link" href="a-broadsheet.html" target="_blank" rel="noopener">open full ↗</a>
+        </div>
+        <p class="desc">FT/Economist typeset daily; serif, debossed tier labels, oxblood.</p>
+        <div class="frame-wrap">
+          <a class="cover" href="a-broadsheet.html" target="_blank" rel="noopener" title="Open A · The Broadsheet"></a>
+          <iframe src="a-broadsheet.html" title="A · The Broadsheet" loading="lazy"></iframe>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <h2>B · The Gallery</h2>
+          <a class="open-link" href="b-gallery.html" target="_blank" rel="noopener">open full ↗</a>
+        </div>
+        <p class="desc">Museum-placard; vermilion accent, lots of whitespace, cataloguing.</p>
+        <div class="frame-wrap">
+          <a class="cover" href="b-gallery.html" target="_blank" rel="noopener" title="Open B · The Gallery"></a>
+          <iframe src="b-gallery.html" title="B · The Gallery" loading="lazy"></iframe>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <h2>C · Dark Luxe</h2>
+          <a class="open-link" href="c-dark-luxe.html" target="_blank" rel="noopener">open full ↗</a>
+        </div>
+        <p class="desc">Warm charcoal + muted gold + ivory serif; leather-bound night read.</p>
+        <div class="frame-wrap">
+          <a class="cover" href="c-dark-luxe.html" target="_blank" rel="noopener" title="Open C · Dark Luxe"></a>
+          <iframe src="c-dark-luxe.html" title="C · Dark Luxe" loading="lazy"></iframe>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <h2>D · The Magazine</h2>
+          <a class="open-link" href="d-magazine.html" target="_blank" rel="noopener">open full ↗</a>
+        </div>
+        <p class="desc">Bold Businessweek spread; big headline, band, drop-cap.</p>
+        <div class="frame-wrap">
+          <a class="cover" href="d-magazine.html" target="_blank" rel="noopener" title="Open D · The Magazine"></a>
+          <iframe src="d-magazine.html" title="D · The Magazine" loading="lazy"></iframe>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <h2>E · Quiet Serif</h2>
+          <a class="open-link" href="e-serif-minimal.html" target="_blank" rel="noopener">open full ↗</a>
+        </div>
+        <p class="desc">Understated all-Newsreader literary calm.</p>
+        <div class="frame-wrap">
+          <a class="cover" href="e-serif-minimal.html" target="_blank" rel="noopener" title="Open E · Quiet Serif"></a>
+          <iframe src="e-serif-minimal.html" title="E · Quiet Serif" loading="lazy"></iframe>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- NEW: F–K refined lane -->
+  <section class="batch">
+    <div class="batch-head">
+      <span class="label">New · refined lane</span>
+      <span class="sub">F–K · typography-led restraint</span>
+    </div>
+    <div class="gallery">
+
+      <article class="card">
+        <div class="card-head">
+          <h2>F · Swiss Grid</h2>
+          <a class="open-link" href="f-swiss-grid.html" target="_blank" rel="noopener">open full ↗</a>
+        </div>
+        <p class="desc">Strict Archivo-grotesk system on near-monochrome paper; one hairline grid origin and a single micro-accent vermilion dot/rule — engineered restraint, not decoration.</p>
+        <div class="frame-wrap">
+          <a class="cover" href="f-swiss-grid.html" target="_blank" rel="noopener" title="Open F · Swiss Grid"></a>
+          <iframe src="f-swiss-grid.html" title="F · Swiss Grid" loading="lazy"></iframe>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <h2>G · Mono-Technical</h2>
+          <a class="open-link" href="g-mono-technical.html" target="_blank" rel="noopener">open full ↗</a>
+        </div>
+        <p class="desc">IBM Plex Mono metadata, labels and tier on warm-white paper with one muted brick-red accent — a refined technical journal, not a dark hacker terminal.</p>
+        <div class="frame-wrap">
+          <a class="cover" href="g-mono-technical.html" target="_blank" rel="noopener" title="Open G · Mono-Technical"></a>
+          <iframe src="g-mono-technical.html" title="G · Mono-Technical" loading="lazy"></iframe>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <h2>H · Muji Quiet</h2>
+          <a class="open-link" href="h-muji-quiet.html" target="_blank" rel="noopener">open full ↗</a>
+        </div>
+        <p class="desc">Deck as paper, not UI: a single Newsreader title in enormous oatmeal space, tier reduced to one near-invisible terracotta dot, hairlines the only chrome.</p>
+        <div class="frame-wrap">
+          <a class="cover" href="h-muji-quiet.html" target="_blank" rel="noopener" title="Open H · Muji Quiet"></a>
+          <iframe src="h-muji-quiet.html" title="H · Muji Quiet" loading="lazy"></iframe>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <h2>I · Muted Editorial</h2>
+          <a class="open-link" href="i-muted-editorial.html" target="_blank" rel="noopener">open full ↗</a>
+        </div>
+        <p class="desc">Warm-paper, typography-led: a characterful Fraunces title and italic “why it matters” lede, with a single dusty-clay accent as quiet punctuation — never a block.</p>
+        <div class="frame-wrap">
+          <a class="cover" href="i-muted-editorial.html" target="_blank" rel="noopener" title="Open I · Muted Editorial"></a>
+          <iframe src="i-muted-editorial.html" title="I · Muted Editorial" loading="lazy"></iframe>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <h2>J · The Brief</h2>
+          <a class="open-link" href="j-the-brief.html" target="_blank" rel="noopener">open full ↗</a>
+        </div>
+        <p class="desc">Warm-paper editorial surface in Newsreader for title, why-it-matters and body, with Inter for quiet metadata; one calm deep-teal accent used sparingly.</p>
+        <div class="frame-wrap">
+          <a class="cover" href="j-the-brief.html" target="_blank" rel="noopener" title="Open J · The Brief"></a>
+          <iframe src="j-the-brief.html" title="J · The Brief" loading="lazy"></iframe>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <h2>K · Warm Modern</h2>
+          <a class="open-link" href="k-warm-modern.html" target="_blank" rel="noopener">open full ↗</a>
+        </div>
+        <p class="desc">Warm-neutral bone/sand/soft-ink palette; Newsreader serif masthead against Inter body with one quiet terracotta accent and soft layered shadows.</p>
+        <div class="frame-wrap">
+          <a class="cover" href="k-warm-modern.html" target="_blank" rel="noopener" title="Open K · Warm Modern"></a>
+          <iframe src="k-warm-modern.html" title="K · Warm Modern" loading="lazy"></iframe>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <footer class="page">
+    swenia · design explorations · 11 directions (A–K)
+  </footer>
+</body>
+</html>

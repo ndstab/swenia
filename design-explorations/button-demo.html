@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>swenia — tactile button study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --paper: #f6f3ec;
+    --ink: #1c1b19;
+    --muted: #6b6862;
+    --line: #e3ded3;
+    --accent: #2f4f8f;      /* the blue from your reference */
+    --accent-deep: #1e3563; /* the darker offset-shadow blue */
+    --clay: #b4633f;        /* an alt warm accent to compare */
+    --clay-deep: #7d3f24;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Inter", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    padding: 40px 20px 80px;
+    display: flex; flex-direction: column; align-items: center; gap: 40px;
+  }
+  h1 { font-family: "Space Grotesk", sans-serif; font-size: 22px; font-weight: 700; }
+  .sub { color: var(--muted); font-size: 14px; max-width: 420px; text-align: center; line-height: 1.5; }
+  .panel {
+    width: 100%; max-width: 440px;
+    background: #fffdf8; border: 1px solid var(--line); border-radius: 16px;
+    padding: 28px 24px; display: flex; flex-direction: column; gap: 18px;
+  }
+  .panel h2 { font-family:"Space Grotesk",sans-serif; font-size: 14px; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+  .row { display: flex; gap: 18px; flex-wrap: wrap; align-items: center; }
+
+  /* ─── THE TACTILE "HARD SHADOW" BUTTON (your reference) ─── */
+  .hard {
+    position: relative;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 600; font-size: 16px;
+    color: var(--accent);
+    background: #ffffff;
+    border: 2.5px solid var(--accent);
+    border-radius: 4px;
+    padding: 12px 26px;
+    cursor: pointer;
+    /* the solid offset block behind it */
+    box-shadow: 6px 6px 0 0 var(--accent-deep);
+    transition: transform .08s ease, box-shadow .08s ease;
+  }
+  .hard:hover { box-shadow: 8px 8px 0 0 var(--accent-deep); transform: translate(-1px,-1px); }
+  /* press: the button slides into where its shadow was → physical key feel */
+  .hard:active { transform: translate(6px, 6px); box-shadow: 0 0 0 0 var(--accent-deep); }
+
+  /* clay variant — same mechanic, warmer palette to suit swenia */
+  .hard.clay { color: var(--clay); border-color: var(--clay); box-shadow: 6px 6px 0 0 var(--clay-deep); }
+  .hard.clay:hover { box-shadow: 8px 8px 0 0 var(--clay-deep); }
+  .hard.clay:active { box-shadow: 0 0 0 0 var(--clay-deep); }
+
+  /* ink variant — monochrome, fits the restrained lane */
+  .hard.ink { color: var(--ink); border-color: var(--ink); box-shadow: 5px 5px 0 0 var(--ink); }
+  .hard.ink:hover { box-shadow: 7px 7px 0 0 var(--ink); }
+  .hard.ink:active { box-shadow: 0 0 0 0 var(--ink); }
+
+  /* filled variant */
+  .hard.filled { background: var(--accent); color:#fff; border-color: var(--accent-deep); }
+
+  /* a softer, smaller "pill" version for the swipe-card actions */
+  .pill-row { display:flex; gap:14px; }
+  .pill {
+    font-family:"Space Grotesk",sans-serif; font-weight:600; font-size:14px;
+    background:#fff; color:var(--ink); border:2px solid var(--ink);
+    border-radius:999px; padding:10px 22px; cursor:pointer;
+    box-shadow: 3px 3px 0 0 var(--ink);
+    transition: transform .07s ease, box-shadow .07s ease;
+  }
+  .pill:active { transform: translate(3px,3px); box-shadow: 0 0 0 0 var(--ink); }
+
+  /* applied to a swenia card so you see it in context */
+  .card {
+    width:100%; max-width:440px; background:#fffdf8; border:2px solid var(--ink);
+    border-radius:10px; padding:22px; box-shadow: 7px 7px 0 0 var(--ink);
+    display:flex; flex-direction:column; gap:12px;
+    transition: transform .09s ease, box-shadow .09s ease; cursor:grab;
+  }
+  .card:active { transform: translate(3px,3px); box-shadow: 4px 4px 0 0 var(--ink); }
+  .tier { font-family:"Space Grotesk",sans-serif; font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--clay); }
+  .card h3 { font-family:"Newsreader",serif; font-size:22px; font-weight:500; line-height:1.25; }
+  .why { font-family:"Newsreader",serif; font-style:italic; color:var(--muted); font-size:15px; line-height:1.4; }
+  .sum { font-size:14.5px; line-height:1.55; color:#33312d; }
+  .meta { display:flex; justify-content:space-between; align-items:center; font-size:12px; color:var(--muted); margin-top:4px; }
+  .tag { font-family:"Space Grotesk",sans-serif; }
+  .hint { font-size:12px; color:var(--muted); text-align:center; }
+</style>
+</head>
+<body>
+  <h1>swenia · tactile button study</h1>
+  <p class="sub">The "hard shadow" press you liked. Click/tap any of these — the button slides into where its shadow was, like a physical key. (Hold to feel the press.)</p>
+
+  <div class="panel">
+    <h2>The exact reference (blue)</h2>
+    <div class="row">
+      <button class="hard">Search</button>
+      <button class="hard filled">Search</button>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2>Tuned for swenia's warm palette</h2>
+    <div class="row">
+      <button class="hard clay">Read more</button>
+      <button class="hard ink">Skip</button>
+      <button class="hard ink">Save</button>
+    </div>
+    <p class="hint">Same satisfying mechanic, restrained palette — fits the B/E/H lane you liked.</p>
+  </div>
+
+  <div class="panel">
+    <h2>Pill version (for swipe-card actions)</h2>
+    <div class="pill-row">
+      <button class="pill">↺ Skip</button>
+      <button class="pill">✦ Save</button>
+      <button class="pill">Read ↗</button>
+    </div>
+  </div>
+
+  <h2 style="font-family:'Space Grotesk';font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-top:8px;">The whole card, tactile — press it</h2>
+  <div class="card">
+    <span class="tier">● Must know · Headline</span>
+    <h3>Claude Fable&nbsp;5 Released: Anthropic's Strongest Model Yet</h3>
+    <p class="why">A flagship capability jump from a leading lab — the kind of release the entire field will discuss.</p>
+    <p class="sum">Anthropic released Claude Fable&nbsp;5 publicly, a major leap on benchmarks, priced ~2× current Opus models. Reportedly held back 2+ months post-training; some prompts are quietly downgraded to Opus 4.8 via safety filters.</p>
+    <div class="meta"><span class="tag">#anthropic · #claude · #safety</span><span>Interconnects ↗</span></div>
+  </div>
+  <p class="hint">↑ tap-and-hold the card to feel the press · swipe in the real app</p>
+</body>
+</html>
