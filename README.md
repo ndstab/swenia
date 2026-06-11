@@ -47,8 +47,8 @@ export ANTHROPIC_API_KEY=sk-ant-api03-...   # see .env.example
 Flags: `--batch` (Batch API, half price, async) · `--no-store` (don't record seen-state,
 re-runnable while testing).
 
-**Tune what you see** by editing the two knobs at the top of `swenia/config.py`:
-`TASTE_PROFILE` (what's interesting to you) and `SOURCES` (which feeds).
+**Tune what you see** by editing the two knobs at the top of `swenia/config.py` —
+see [Make it yours](#make-it-yours) below.
 
 ### 2. Reader (shows the digest)
 
@@ -61,6 +61,42 @@ npm run dev      # → http://localhost:5173
 
 On your phone, open the URL and **"Add to Home Screen"** to install it as an app.
 Swipe through cards, tap to expand, hit "caught up." Tap **"Aa"** to change the font.
+
+---
+
+## Make it yours
+
+swenia is built around *your* interests, not a generic feed. Everything about **what
+gets surfaced** lives in two knobs at the very top of **`swenia/config.py`** — edit
+them, re-run, and the digest reshapes to you. No other code needs touching.
+
+**1. `TASTE_PROFILE`** — a plain-English description of what you care about. This is the
+heart of the curation; the filter model reads it to decide what's a must-know, what's
+worth knowing, and what to drop. It's organised as three buckets — *always must-know*,
+*also interested in*, and *not interested in (drop)* — written as ordinary prose.
+Rewrite it in your own words. A few examples:
+
+- *Robotics engineer* → must-know: humanoid/manipulation releases, new control
+  policies, sim-to-real; drop: pure-LLM chatbot news.
+- *Biotech / bioinformatics* → must-know: protein/structure models, lab-automation;
+  also: new datasets, benchmarks; drop: consumer gadgets.
+- *Indie web dev* → must-know: framework releases, browser APIs; drop: academic
+  preprints, hardware.
+
+**2. `SOURCES`** — where raw items come from:
+
+| Setting | What it is |
+|---|---|
+| `RSS_FEEDS` | `(name, url)` pairs — any blog, newsletter, or journal that has an RSS feed |
+| `ARXIV_CATEGORIES` | arXiv category codes, e.g. `cs.LG`, `cs.CL`, `quant-ph`, `q-bio` |
+| `HN_QUERIES` | Hacker News search terms (only stories above `HN_MIN_POINTS` are pulled) |
+
+After editing, **re-run** `.venv/bin/python -m swenia` to preview your new digest. If
+you've deployed (below), just commit + push — the next daily run picks up your changes.
+
+> Optional dials further down in `config.py`: `MAX_CARDS` (digest size), `RECENCY_DAYS`
+> (how far back to look), `DECAY_TAU_DAYS` (how fast old news fades). The defaults are
+> sensible — start with the two knobs above.
 
 ---
 
@@ -99,15 +135,17 @@ Each **card**:
 
 ## Deploying
 
-The intended home is **your personal GitHub**: a daily GitHub Actions cron runs the
-pipeline and commits a fresh `latest.json` (+ seen-state) back to the repo; the reader
-auto-deploys on Vercel. Step-by-step in **[DEPLOY.md](./DEPLOY.md)**.
+The intended home is **your personal GitHub**: the included GitHub Actions workflow
+(`.github/workflows/daily.yml`) runs the pipeline on a daily cron and commits a fresh
+`latest.json` (+ seen-state) back to the repo; point **Vercel** at the `reader/`
+directory and it auto-deploys on every push. You only need to add your
+`ANTHROPIC_API_KEY` as a repo **Actions secret** and enable read/write workflow
+permissions.
 
 ## Project docs
 
 - **[CLAUDE.md](./CLAUDE.md)** — full context for AI coding agents (architecture,
   decisions, gotchas). Auto-loads in Claude Code.
-- **[DEPLOY.md](./DEPLOY.md)** — deployment walkthrough.
 
 ## Status
 
