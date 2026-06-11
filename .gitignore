@@ -22,6 +22,17 @@ data/
 output/
 reader/public/latest.json
 
+# ── dev / scaffolding — not part of the final build ────
+design-explorations/
+DEPLOY.md
+START_HERE.md
+verify_phase1.py
+spike.py
+check_key.py
+make-bundle.sh
+reader/scripts/font-compare.mjs
+reader/tsconfig.tsbuildinfo
+
 # ── os / editor ────────────────────────────────────────
 .DS_Store
 *.swp
