@@ -146,6 +146,11 @@
   user-select: none;
   touch-action: pan-y;
   cursor: grab;
+  /* promote to its own GPU layer so drag/exit transforms stay smooth on mobile */
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 .card:active {
   cursor: grabbing;
@@ -206,7 +211,7 @@
 .card-title {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 23px;
+  font-size: 24px;
   line-height: 1.16;
   letter-spacing: -0.012em;
   color: var(--ink);
@@ -238,7 +243,7 @@
   margin-bottom: 5px;
 }
 .why p {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.5;
   color: var(--ink);
   font-weight: 450;
@@ -251,7 +256,7 @@
   margin-bottom: 16px;
 }
 .summary {
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.55;
   color: var(--ink-2);
   font-weight: 400;
