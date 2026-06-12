@@ -14,15 +14,18 @@
 #        "Read and write permissions" (so the workflow can commit back).
 #   4. Connect the repo to Vercel (see DEPLOY.md) with root directory = reader/.
 #
-# Trigger: daily at 00:00 UTC (~05:30 IST), or manually via the Actions tab ("Run workflow").
+# Trigger: daily at 00:07 UTC (~05:37 IST), or manually via the Actions tab ("Run workflow").
 
 name: daily-digest
 
 on:
   schedule:
-    # 00:00 UTC = 05:30 AM IST. Scheduled a bit early so GitHub's own cron lag
-    # (often 5-30 min) still lands a finished digest before 6:00 AM IST.
-    - cron: "0 0 * * *"
+    # 00:07 UTC = 05:37 AM IST. Deliberately an odd, off-peak minute: GitHub's
+    # shared cron is busiest at :00 and :30, so those slots get queued/delayed
+    # the most. Scheduling early + off-peak gives the best shot at a finished
+    # digest before 6:00 AM IST. (GitHub cron is best-effort, not guaranteed to
+    # the minute — use "Run workflow" in the Actions tab to force it on demand.)
+    - cron: "7 0 * * *"
   workflow_dispatch: {} # allow manual runs from the Actions tab
 
 # allow the job to push commits back to the repo
