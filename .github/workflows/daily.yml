@@ -14,13 +14,15 @@
 #        "Read and write permissions" (so the workflow can commit back).
 #   4. Connect the repo to Vercel (see DEPLOY.md) with root directory = reader/.
 #
-# Trigger: daily at 06:30 UTC, or manually via the Actions tab ("Run workflow").
+# Trigger: daily at 00:00 UTC (~05:30 IST), or manually via the Actions tab ("Run workflow").
 
 name: daily-digest
 
 on:
   schedule:
-    - cron: "30 0 * * *" # 00:30 UTC daily = 06:00 AM IST
+    # 00:00 UTC = 05:30 AM IST. Scheduled a bit early so GitHub's own cron lag
+    # (often 5-30 min) still lands a finished digest before 6:00 AM IST.
+    - cron: "0 0 * * *"
   workflow_dispatch: {} # allow manual runs from the Actions tab
 
 # allow the job to push commits back to the repo
@@ -47,10 +49,10 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Run pipeline (Batch API)
+      - name: Run pipeline (synchronous — finishes in ~1-2 min for predictable timing)
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: python -m swenia --batch
+        run: python -m swenia
 
       - name: Stage digest for the reader
         run: |
