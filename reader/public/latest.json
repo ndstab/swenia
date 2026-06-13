@@ -1,220 +1,65 @@
 {
-  "date": "2026-06-12",
-  "generated_at": "2026-06-12T05:15:43.107255+00:00",
-  "summary_line": "1 must-know · 5 worth knowing",
+  "date": "2026-06-13",
+  "generated_at": "2026-06-13T04:43:40.864216+00:00",
+  "summary_line": "1 worth knowing",
   "counts": {
-    "total": 9,
-    "headlines": 2,
-    "frontier": 7
+    "total": 2,
+    "headlines": 0,
+    "frontier": 2
   },
   "sections": [
     {
       "key": "headlines",
       "title": "Headlines",
-      "cards": [
-        {
-          "id": "90b62352ebbd",
-          "tier": "must_know",
-          "category": "headline",
-          "title": "Google DeepMind Launches $10M Multi-Agent AI Safety Research Funding Call",
-          "why_it_matters": "As multi-agent systems become infrastructure, this funding call shapes what safety frameworks get built — knowing its four priority areas (sandboxes, agent network science, infrastructure stress-testing, oversight) is useful for orienting your own research or proposals.",
-          "summary": "Google DeepMind, Schmidt Sciences, Cooperative AI Foundation, ARIA, and Google.org are jointly funding up to $10M for multi-agent safety research. Four priority areas: sandboxes/testbeds, science of agent networks (emergent collective behaviors), agent infrastructure stress-testing (identity, reputation, commitment protocols), and oversight/control of deployed agent populations.",
-          "tags": [
-            "multi-agent",
-            "ai-safety",
-            "research-funding",
-            "emergent-behavior"
-          ],
-          "sources": [
-            {
-              "name": "DeepMind",
-              "url": "https://deepmind.google/blog/investing-in-multi-agent-ai-safety-research/"
-            }
-          ],
-          "published": "2026-06-10T10:21:19+00:00",
-          "score": 1.6532
-        },
-        {
-          "id": "e28e77d243e8",
-          "tier": "skim",
-          "category": "headline",
-          "title": "Gemini Guided Learning Yields +0.258 SD Math Gains in Sierra Leone RCT (1,763 Students)",
-          "why_it_matters": "This is a pre-registered RCT with 1,763 students — unusually rigorous for AI-in-education claims — providing concrete evidence on whether LLM tutoring genuinely builds understanding vs. answer-seeking, which matters for anyone thinking about AI deployment in high-stakes learning contexts.",
-          "summary": "An 8-week RCT across 12 schools in Sierra Leone tested Gemini Guided Learning on 1,763 junior secondary math students. Treatment group gained +0.258 SD over controls (~1.2–1.7 years of typical progress). High-usage classrooms saw ~1.8–2.5 years of equivalent progress. In 113,000+ interactions, Gemini provided direct solutions only 2% of the time; student skill-building queries rose from 68% to 90% over the trial.",
-          "tags": [
-            "ai-education",
-            "gemini",
-            "evaluation",
-            "rct"
-          ],
-          "sources": [
-            {
-              "name": "DeepMind",
-              "url": "https://deepmind.google/blog/measuring-the-impact-of-learning-with-ai-in-sierra-leone-and-beyond/"
-            }
-          ],
-          "published": "2026-06-08T13:04:59+00:00",
-          "score": 0.1469
-        }
-      ]
+      "cards": []
     },
     {
       "key": "frontier",
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "4c42d0c2e794",
+          "id": "80b8efd89b1a",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "EvoArena Benchmark: LLM Agents Average 39.6% on Dynamic, Evolving Environments",
-          "why_it_matters": "Most agent evals assume static environments; this benchmark exposes a concrete gap — and the proposed memory fix also improves GAIA and LoCoMo — directly relevant if you work on agent evaluation or memory systems.",
-          "summary": "EvoArena models environments as progressive update sequences across terminal, software, and social domains. Current agents average 39.6% accuracy. The proposed EvoMem patch-based memory records structured update histories; it yields +1.5% on EvoArena, +6.1% on GAIA, +4.8% on LoCoMo, and +3.7% chain-level accuracy on sequential subtasks.",
+          "title": "Allen AI Releases olmo-eval: An Evaluation Workbench Built for the Model Development Loop",
+          "why_it_matters": "If you're iterating on model training — adjusting data, architecture, or scale — this is purpose-built tooling for your exact workflow, not just final-model benchmarking.",
+          "summary": "olmo-eval extends OLMES (Allen AI's open benchmarking standard) into a full development workbench. It supports checkpoint-by-checkpoint evaluation, agentic and multi-turn evals as first-class cases, modular runtime configuration (lightweight direct runs by default, containers only when needed), and statistical tools to distinguish real gains from noise — all designed for the iteration speed of active model development.",
           "tags": [
-            "agents",
-            "benchmarks",
-            "memory",
-            "rl"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2606.13681v1"
-            }
-          ],
-          "published": "2026-06-11T17:59:59+00:00",
-          "score": 1.2828
-        },
-        {
-          "id": "6e6f34ced249",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "RA-RFT: Reasoning-Aware Retrieval Boosts Math RL Fine-Tuning by up to 7.1 Points on AIME 2025",
-          "why_it_matters": "This is a clean orthogonal improvement to reward design and training curricula in RL fine-tuning — directly relevant if you work on post-training, reasoning models, or retrieval-augmented methods.",
-          "summary": "Retrieval-Augmented Reinforcement Fine-Tuning (RA-RFT) trains a retriever via gold-relevance distillation to rank contexts by reasoning benefit rather than semantic similarity, then fine-tunes via RL with retrieved analogous demonstrations. On AIME 2025 average@32, it improves over GRPO by 7.1 points for Qwen3-1.7B and 2.8 points for Qwen3-4B.",
-          "tags": [
-            "reinforcement-learning",
-            "reasoning",
-            "retrieval-augmented",
-            "post-training"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2606.13680v1"
-            }
-          ],
-          "published": "2026-06-11T17:59:52+00:00",
-          "score": 1.2828
-        },
-        {
-          "id": "d30f0b654e2f",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "Mana: Sim-to-Real Dexterous Manipulation of Articulated Tools via Coarse-to-Fine RL",
-          "why_it_matters": "Reframing dexterous manipulation as an animation problem — with procedurally generated keyframes and RL-refined trajectories — is a novel sim-to-real approach worth tracking if you follow robotics, RL for physical systems, or agent action spaces.",
-          "summary": "Mana (Manipulation Animator) treats dexterous tool use as animation: procedurally generated grasp keyframes are refined into manipulation trajectories via motion planning and RL. Data generation requires under one minute per tool to specify affordances. Tested on four articulated tools of varying scale and joint types, achieving zero-shot sim-to-real transfer for grasping and in-hand manipulation.",
-          "tags": [
-            "robotics",
-            "sim-to-real",
-            "reinforcement-learning",
-            "dexterous-manipulation"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2606.13677v1"
-            }
-          ],
-          "published": "2026-06-11T17:59:49+00:00",
-          "score": 1.2828
-        },
-        {
-          "id": "9f15c759b81f",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "SpatialClaw: Stateful Code Execution Interface Hits 59.9% Across 20 Spatial Reasoning Benchmarks",
-          "why_it_matters": "The +11.2-point gain over prior spatial agents — achieved training-free across six VLM backbones — makes the action-interface design choice a concrete lever for anyone building VLM-based agents for 3D/4D reasoning tasks.",
-          "summary": "SpatialClaw wraps a VLM agent around a stateful Python kernel pre-loaded with frames and perception/geometry primitives. The agent writes one executable cell per step conditioned on all prior outputs. Evaluated across 20 static and dynamic 3D/4D spatial benchmarks, it achieves 59.9% average accuracy, +11.2 points over the prior spatial agent, with consistent gains across six VLMs from two families without benchmark-specific tuning.",
-          "tags": [
-            "vision-language-models",
-            "spatial-reasoning",
-            "agents",
-            "code-execution"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2606.13673v1"
-            }
-          ],
-          "published": "2026-06-11T17:59:36+00:00",
-          "score": 1.2827
-        },
-        {
-          "id": "47d05adaf3b5",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "PyTorch Profiling Deep Dive: From nn.Linear to a Fused MLP",
-          "why_it_matters": "If you train or optimize models on GPU, understanding how nn.Linear dispatches, why transpose is zero-cost, and how epilogues eliminate extra memory round-trips directly improves your ability to read profiler traces and reason about kernel efficiency.",
-          "summary": "Part 2 of a HuggingFace profiling series builds on matmul-add profiling to examine nn.Linear and a stacked MLP on an A100. Key findings: aten::t (transpose) rewrites only tensor metadata with no GPU kernel; bias addition is folded into the GEMM kernel as an epilogue, avoiding a second HBM read/write. Scripts and Perfetto traces provided.",
-          "tags": [
-            "pytorch",
-            "gpu-profiling",
-            "kernels",
-            "mlp"
+            "evals",
+            "llm-development",
+            "open-source",
+            "benchmarking"
           ],
           "sources": [
             {
               "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/torch-mlp-fusion"
+              "url": "https://huggingface.co/blog/allenai/olmo-eval"
             }
           ],
-          "published": "2026-06-11T00:00:00+00:00",
-          "score": 0.999
+          "published": "2026-06-12T15:56:10+00:00",
+          "score": 1.2558
         },
         {
-          "id": "6bd33a0d68b1",
+          "id": "eb987eaf1883",
           "tier": "skim",
           "category": "frontier",
-          "title": "Truncated Positional Encodings Break Theoretical Equivalence in GNNs",
-          "why_it_matters": "If you use graph neural networks with spectral or walk-based PEs in practice, this result directly challenges the assumption that truncated variants preserve the same expressive power — truncated spectral PEs fall below the 1-WL test.",
-          "summary": "Full spectral and walk-based positional encodings are theoretically equivalent in expressive power (between 1-WL and 3-WL). This paper shows that under truncation — using only k eigenspaces or k powers of the adjacency matrix — these families diverge significantly. Truncated spectral PEs lose even 1-WL-level expressivity. Experiments show mixing truncated PE families outperforms any single family on real-world datasets.",
+          "title": "Hugging Face Jobs Can Now Serve as GitHub Actions Self-Hosted Runners, with GPU Support",
+          "why_it_matters": "For ML engineers running GPU CI without dedicated infrastructure, this offers a practical path to real CUDA hardware in standard GitHub Actions workflows without maintaining always-on runners.",
+          "summary": "Hugging Face's jobs-actions bridge routes GitHub Actions jobs to HF Jobs via a dispatcher Space and ephemeral self-hosted runners. Trackio reports ~30% faster CPU CI and a new GPU test suite as a result. The setup uses a GitHub App webhook, a dispatcher HF Space, and short-lived runner registration tokens — GPU flavors like t4-small or a10g-small selectable via runs-on labels.",
           "tags": [
-            "graph-neural-networks",
-            "positional-encoding",
-            "expressivity",
-            "theory"
+            "mlops",
+            "ci-cd",
+            "infrastructure",
+            "hugging-face"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2606.13671v1"
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/github-ci-hf-jobs"
             }
           ],
-          "published": "2026-06-11T17:58:56+00:00",
-          "score": 0.4275
-        },
-        {
-          "id": "846763a3fc7d",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "LLMs Match or Exceed Human Reanalysts on Reproducibility Assessment Across 76 Social Science Studies",
-          "why_it_matters": "LLMs recovering original effect sizes in 41% of studies vs. 34% for humans — and matching qualitative conclusions in 96% vs. 74% — suggests a scalable automated auditing pipeline that could be useful for evaluating empirical claims in AI research itself.",
-          "summary": "Tested on 76 pre-defined claims from behavioral/social science studies, an LLM pipeline recovered original effect sizes (±0.05 Cohen's d) in 41% of cases and reached the same qualitative conclusion as the original study in 96% of cases. Human reanalysts scored 34% and 74% respectively. Seven studies yielded no viable LLM effect size estimate.",
-          "tags": [
-            "reproducibility",
-            "llm-evaluation",
-            "scientific-auditing",
-            "benchmarks"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2606.13670v1"
-            }
-          ],
-          "published": "2026-06-11T17:58:36+00:00",
-          "score": 0.4275
+          "published": "2026-06-09T00:00:00+00:00",
+          "score": 0.1234
         }
       ]
     }
