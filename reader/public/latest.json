@@ -1,65 +1,154 @@
 {
-  "date": "2026-06-13",
-  "generated_at": "2026-06-13T04:43:40.864216+00:00",
-  "summary_line": "1 worth knowing",
+  "date": "2026-06-15",
+  "generated_at": "2026-06-15T05:22:08.780223+00:00",
+  "summary_line": "4 worth knowing",
   "counts": {
-    "total": 2,
-    "headlines": 0,
-    "frontier": 2
+    "total": 6,
+    "headlines": 1,
+    "frontier": 5
   },
   "sections": [
     {
       "key": "headlines",
       "title": "Headlines",
-      "cards": []
+      "cards": [
+        {
+          "id": "116d0b188a77",
+          "tier": "skim",
+          "category": "headline",
+          "title": "US Government Forces Anthropic to Suspend Claude 5 Fable/Mythos Access for Foreign Users",
+          "why_it_matters": "This is the most significant AI governance event yet for frontier labs — directly affects how models you work with are developed, released, and accessed globally.",
+          "summary": "The White House, tipped off by Amazon, pressured Anthropic to suspend access to its Claude 5 Fable/Mythos models for foreign nationals and overseas users. A jailbreak vulnerability was cited as a cybersecurity concern. The author argues export bans on model weights are bad long-term policy, that Anthropic's nuclear-weapons rhetoric accelerated the crackdown, and that banning foreign nationals from frontier AI contradicts U.S. economic interests in the sector.",
+          "tags": [
+            "ai governance",
+            "anthropic",
+            "claude",
+            "export controls"
+          ],
+          "sources": [
+            {
+              "name": "Interconnects",
+              "url": "https://www.interconnects.ai/p/welcome-to-the-agi-era-of-ai-governance"
+            }
+          ],
+          "published": "2026-06-14T17:43:42+00:00",
+          "score": 0.4254
+        }
+      ]
     },
     {
       "key": "frontier",
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "80b8efd89b1a",
+          "id": "f2e02b3b9558",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Allen AI Releases olmo-eval: An Evaluation Workbench Built for the Model Development Loop",
-          "why_it_matters": "If you're iterating on model training — adjusting data, architecture, or scale — this is purpose-built tooling for your exact workflow, not just final-model benchmarking.",
-          "summary": "olmo-eval extends OLMES (Allen AI's open benchmarking standard) into a full development workbench. It supports checkpoint-by-checkpoint evaluation, agentic and multi-turn evals as first-class cases, modular runtime configuration (lightweight direct runs by default, containers only when needed), and statistical tools to distinguish real gains from noise — all designed for the iteration speed of active model development.",
+          "title": "'Gaze Heads': A Small Set of Attention Heads Controls Where VLMs Look While Describing Images",
+          "why_it_matters": "This is a clean mechanistic interpretability result showing inference-time steering of multimodal models without retraining — directly relevant if you work on VLMs, agents, or interpretability.",
+          "summary": "Researchers identify 'gaze heads' — fewer than 9% of all attention heads in a VLM's language backbone — whose attention tracks the image region currently being described. Masking these heads redirects the model's output to a chosen region at 83.1% accuracy; intervening on random heads fails; intervening on all heads destroys generation. The mechanism generalizes from comic strips to COCO images and across 2B–32B model sizes.",
           "tags": [
-            "evals",
-            "llm-development",
-            "open-source",
-            "benchmarking"
+            "interpretability",
+            "vision-language models",
+            "attention",
+            "mechanistic analysis"
           ],
           "sources": [
             {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/allenai/olmo-eval"
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2606.14703v1"
             }
           ],
-          "published": "2026-06-12T15:56:10+00:00",
-          "score": 1.2558
+          "published": "2026-06-12T17:59:57+00:00",
+          "score": 0.6576
         },
         {
-          "id": "eb987eaf1883",
-          "tier": "skim",
+          "id": "fd01f1ae013d",
+          "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Hugging Face Jobs Can Now Serve as GitHub Actions Self-Hosted Runners, with GPU Support",
-          "why_it_matters": "For ML engineers running GPU CI without dedicated infrastructure, this offers a practical path to real CUDA hardware in standard GitHub Actions workflows without maintaining always-on runners.",
-          "summary": "Hugging Face's jobs-actions bridge routes GitHub Actions jobs to HF Jobs via a dispatcher Space and ephemeral self-hosted runners. Trackio reports ~30% faster CPU CI and a new GPU test suite as a result. The setup uses a GitHub App webhook, a dispatcher HF Space, and short-lived runner registration tokens — GPU flavors like t4-small or a10g-small selectable via runs-on labels.",
+          "title": "ClinHallu Benchmark Localizes Hallucinations to Specific Reasoning Stages in Medical MLLMs",
+          "why_it_matters": "Stage-wise hallucination diagnosis is a technically sharper eval methodology than standard benchmarks — useful if you care about reasoning reliability or medical AI evals.",
+          "summary": "ClinHallu provides 7,031 validated instances, each annotated with a structured reasoning trace split into Visual Recognition, Knowledge Recall, and Reasoning Integration stages. Stage-replacement interventions measure how fixing each stage affects final answers, enabling source-level hallucination attribution. The paper also shows that trace-supervised fine-tuning reduces stage-wise hallucinations.",
           "tags": [
-            "mlops",
-            "ci-cd",
-            "infrastructure",
-            "hugging-face"
+            "hallucination",
+            "medical ai",
+            "evals",
+            "multimodal llms"
           ],
           "sources": [
             {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/github-ci-hf-jobs"
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2606.14697v1"
             }
           ],
-          "published": "2026-06-09T00:00:00+00:00",
-          "score": 0.1234
+          "published": "2026-06-12T17:58:38+00:00",
+          "score": 0.6574
+        },
+        {
+          "id": "c924e8e67c8f",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Persona-Pruner Sculpts Persona-Specific Sub-Networks, Cutting Role-Playing Performance Drop by 93.8%",
+          "why_it_matters": "Sparse, persona-specific sub-networks are a practically interesting efficiency angle if you work on agent ecosystems, NPC systems, or structured pruning.",
+          "summary": "Persona-Pruner isolates persona-specific sub-networks from a single character description rather than pruning generically. On RoleBench, it reduces the performance drop from the dense model by up to 93.8% over the strongest baseline in LLM-as-a-judge scoring, while preserving general LLM capabilities. The motivation is deployments requiring many simultaneous persona-specialized models, such as NPC ecosystems.",
+          "tags": [
+            "model pruning",
+            "role-playing",
+            "efficiency",
+            "llm"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2606.14695v1"
+            }
+          ],
+          "published": "2026-06-12T17:58:08+00:00",
+          "score": 0.6574
+        },
+        {
+          "id": "5cc60a4c233e",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "AdaSR Enables Adaptive Streaming Reasoning with Hierarchical RL Policy Optimization",
+          "why_it_matters": "Dynamic, partial-observation reasoning with RL-trained allocation of compute is a frontier problem for agents operating on audio/video streams — technically relevant to real-time agent work.",
+          "summary": "AdaSR lets models reason during input streaming and deliberate once the stream completes, learning when and how much to think at each stage. HRPO decomposes policy optimization into streaming and deep reasoning phases with fine-grained per-phase advantage assignment, integrating format, accuracy, and adaptive-thinking rewards. Experiments show improved balance among accuracy, efficiency, and latency versus supervised fine-tuning baselines.",
+          "tags": [
+            "streaming reasoning",
+            "reinforcement learning",
+            "agents",
+            "efficiency"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2606.14694v1"
+            }
+          ],
+          "published": "2026-06-12T17:56:25+00:00",
+          "score": 0.6571
+        },
+        {
+          "id": "dab3195e0b97",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "PCMA Learns Coordinated Agent-Specific Preferences for Multi-Objective Multi-Agent RL",
+          "why_it_matters": "Theoretically grounded preference diversity for cooperative MOMARL is a niche but technically solid result relevant to multi-agent systems and RL research.",
+          "summary": "PCMA formulates cooperative MOMARL as a team-optimal game and shows that preference diversity among agents can induce team improvement via a first-order improvement decomposition. It learns agent-specific preferences enabling complementary trade-offs. Experiments span cooperative MOMA environments and a traffic-control scenario, showing gains in both performance and trade-off coordination.",
+          "tags": [
+            "multi-agent rl",
+            "multi-objective optimization",
+            "reinforcement learning",
+            "cooperative ai"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2606.14693v1"
+            }
+          ],
+          "published": "2026-06-12T17:55:28+00:00",
+          "score": 0.219
         }
       ]
     }
