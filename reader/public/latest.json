@@ -1,154 +1,153 @@
 {
-  "date": "2026-06-15",
-  "generated_at": "2026-06-15T05:22:08.780223+00:00",
-  "summary_line": "4 worth knowing",
+  "date": "2026-06-16",
+  "generated_at": "2026-06-16T05:25:20.474286+00:00",
+  "summary_line": "5 worth knowing",
   "counts": {
     "total": 6,
-    "headlines": 1,
-    "frontier": 5
+    "headlines": 0,
+    "frontier": 6
   },
   "sections": [
     {
       "key": "headlines",
       "title": "Headlines",
-      "cards": [
-        {
-          "id": "116d0b188a77",
-          "tier": "skim",
-          "category": "headline",
-          "title": "US Government Forces Anthropic to Suspend Claude 5 Fable/Mythos Access for Foreign Users",
-          "why_it_matters": "This is the most significant AI governance event yet for frontier labs — directly affects how models you work with are developed, released, and accessed globally.",
-          "summary": "The White House, tipped off by Amazon, pressured Anthropic to suspend access to its Claude 5 Fable/Mythos models for foreign nationals and overseas users. A jailbreak vulnerability was cited as a cybersecurity concern. The author argues export bans on model weights are bad long-term policy, that Anthropic's nuclear-weapons rhetoric accelerated the crackdown, and that banning foreign nationals from frontier AI contradicts U.S. economic interests in the sector.",
-          "tags": [
-            "ai governance",
-            "anthropic",
-            "claude",
-            "export controls"
-          ],
-          "sources": [
-            {
-              "name": "Interconnects",
-              "url": "https://www.interconnects.ai/p/welcome-to-the-agi-era-of-ai-governance"
-            }
-          ],
-          "published": "2026-06-14T17:43:42+00:00",
-          "score": 0.4254
-        }
-      ]
+      "cards": []
     },
     {
       "key": "frontier",
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "f2e02b3b9558",
+          "id": "94b123e0324c",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "'Gaze Heads': A Small Set of Attention Heads Controls Where VLMs Look While Describing Images",
-          "why_it_matters": "This is a clean mechanistic interpretability result showing inference-time steering of multimodal models without retraining — directly relevant if you work on VLMs, agents, or interpretability.",
-          "summary": "Researchers identify 'gaze heads' — fewer than 9% of all attention heads in a VLM's language backbone — whose attention tracks the image region currently being described. Masking these heads redirects the model's output to a chosen region at 83.1% accuracy; intervening on random heads fails; intervening on all heads destroys generation. The mechanism generalizes from comic strips to COCO images and across 2B–32B model sizes.",
+          "title": "Qwen3-8B Encodes a Linear 'Value Axis' That Controls Confidence and Backtracking",
+          "why_it_matters": "This is a direct interpretability result on a widely-used open model, showing that internal representations linearly encode expected goal success — with causal steering implications relevant to alignment, RLHF, and agent design.",
+          "summary": "Using synthetic in-context RL data, researchers construct a 'value' axis in Qwen3-8B's activations that distinguishes high vs. low verbalized confidence, correct vs. corrupted code, and rollouts with/without backtracking. Steering toward high value suppresses self-correction; steering low induces exploration. DPO shifts internal value of rewarded behaviors, and post-training assigns low value to politically sensitive queries.",
           "tags": [
             "interpretability",
-            "vision-language models",
-            "attention",
-            "mechanistic analysis"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2606.14703v1"
-            }
-          ],
-          "published": "2026-06-12T17:59:57+00:00",
-          "score": 0.6576
-        },
-        {
-          "id": "fd01f1ae013d",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "ClinHallu Benchmark Localizes Hallucinations to Specific Reasoning Stages in Medical MLLMs",
-          "why_it_matters": "Stage-wise hallucination diagnosis is a technically sharper eval methodology than standard benchmarks — useful if you care about reasoning reliability or medical AI evals.",
-          "summary": "ClinHallu provides 7,031 validated instances, each annotated with a structured reasoning trace split into Visual Recognition, Knowledge Recall, and Reasoning Integration stages. Stage-replacement interventions measure how fixing each stage affects final answers, enabling source-level hallucination attribution. The paper also shows that trace-supervised fine-tuning reduces stage-wise hallucinations.",
-          "tags": [
-            "hallucination",
-            "medical ai",
-            "evals",
-            "multimodal llms"
+            "rlhf",
+            "reasoning",
+            "qwen"
           ],
           "sources": [
             {
               "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2606.14697v1"
+              "url": "https://arxiv.org/abs/2606.17056v1"
             }
           ],
-          "published": "2026-06-12T17:58:38+00:00",
-          "score": 0.6574
+          "published": "2026-06-15T17:59:58+00:00",
+          "score": 1.2799
         },
         {
-          "id": "c924e8e67c8f",
+          "id": "908b85a09f24",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Persona-Pruner Sculpts Persona-Specific Sub-Networks, Cutting Role-Playing Performance Drop by 93.8%",
-          "why_it_matters": "Sparse, persona-specific sub-networks are a practically interesting efficiency angle if you work on agent ecosystems, NPC systems, or structured pruning.",
-          "summary": "Persona-Pruner isolates persona-specific sub-networks from a single character description rather than pruning generically. On RoleBench, it reduces the performance drop from the dense model by up to 93.8% over the strongest baseline in LLM-as-a-judge scoring, while preserving general LLM capabilities. The motivation is deployments requiring many simultaneous persona-specialized models, such as NPC ecosystems.",
+          "title": "ContextRL: Contrastive Context-Selection Objective Boosts Agentic and Multimodal LLM Reasoning",
+          "why_it_matters": "The indirect auxiliary objective — rewarding correct context selection rather than only final answers — is a clean RL training innovation applicable to both code agents and multimodal models, directly relevant to anyone working on RL fine-tuning or grounding.",
+          "summary": "ContextRL adds a contrastive context-selection objective to GRPO: given a query-answer pair and two similar contexts, the model is rewarded for picking the supporting one. This encourages fine-grained grounding without directly supervising answers. Gains average +2.2% over standard GRPO on 5 long-horizon benchmarks and +1.8% across 12 VQA benchmarks; data-augmentation baselines using the same contrastive data show little improvement, isolating the objective as the source of gains.",
           "tags": [
-            "model pruning",
-            "role-playing",
-            "efficiency",
-            "llm"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2606.14695v1"
-            }
-          ],
-          "published": "2026-06-12T17:58:08+00:00",
-          "score": 0.6574
-        },
-        {
-          "id": "5cc60a4c233e",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "AdaSR Enables Adaptive Streaming Reasoning with Hierarchical RL Policy Optimization",
-          "why_it_matters": "Dynamic, partial-observation reasoning with RL-trained allocation of compute is a frontier problem for agents operating on audio/video streams — technically relevant to real-time agent work.",
-          "summary": "AdaSR lets models reason during input streaming and deliberate once the stream completes, learning when and how much to think at each stage. HRPO decomposes policy optimization into streaming and deep reasoning phases with fine-grained per-phase advantage assignment, integrating format, accuracy, and adaptive-thinking rewards. Experiments show improved balance among accuracy, efficiency, and latency versus supervised fine-tuning baselines.",
-          "tags": [
-            "streaming reasoning",
-            "reinforcement learning",
+            "reinforcement-learning",
+            "multimodal",
             "agents",
-            "efficiency"
+            "grounding"
           ],
           "sources": [
             {
               "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2606.14694v1"
+              "url": "https://arxiv.org/abs/2606.17053v1"
             }
           ],
-          "published": "2026-06-12T17:56:25+00:00",
-          "score": 0.6571
+          "published": "2026-06-15T17:59:28+00:00",
+          "score": 1.2798
         },
         {
-          "id": "dab3195e0b97",
+          "id": "c07edc7b1742",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "EPS Derives Exact Posterior Score for Diffusion Models on Linear Inverse Problems",
+          "why_it_matters": "Exact closed-form posterior scoring without approximate corrections or likelihood gradients is a meaningful theoretical advance in diffusion-based inverse problem solving, with practical speedups relevant to generative modeling and image restoration research.",
+          "summary": "The authors derive the exact posterior score in closed form for linear Gaussian inverse problems under general Gaussian interpolants, showing posterior sampling reduces to a denoising problem at an operator-dependent shifted pivot under anisotropic noise. The resulting EPS training objective preserves standard denoiser input/output structure and can be trained from scratch or fine-tuned. On five inverse problems across FFHQ and ImageNet, EPS outperforms training-free and training-based baselines while using roughly an order of magnitude fewer denoiser evaluations than gradient-based samplers.",
+          "tags": [
+            "diffusion-models",
+            "inverse-problems",
+            "generative-modeling",
+            "theory"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2606.17048v1"
+            }
+          ],
+          "published": "2026-06-15T17:58:22+00:00",
+          "score": 1.2795
+        },
+        {
+          "id": "62e77f0835cf",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Geometric Action Model (GAM) Uses a Split Pretrained GFM for 3D-Aware Robot Manipulation",
+          "why_it_matters": "Splitting a pretrained geometric foundation model to handle both perception and causal future prediction is an architecturally novel approach to VLA design, directly addressing the 2D-latent-space limitation of current robot policy models.",
+          "summary": "GAM splits a pretrained geometric foundation model (GFM) at an intermediate layer: shallow layers encode observations, a causal future predictor inserted at the split forecasts future latent tokens conditioned on language, proprioception, and action history, and the remaining GFM blocks decode geometry and actions. This adds language-conditioned temporal world modeling with minimal architectural change while preserving geometric priors. GAM outperforms foundation-model-scale baselines on simulation and real-robot benchmarks in accuracy, robustness, speed, and model size.",
+          "tags": [
+            "robotics",
+            "world-models",
+            "vision-language-action",
+            "3d-geometry"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2606.17046v1"
+            }
+          ],
+          "published": "2026-06-15T17:58:03+00:00",
+          "score": 1.2794
+        },
+        {
+          "id": "465714cbe71e",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "MetaSyn: 442-Entry Benchmark Exposes Critical Screening Bottleneck in LLM Meta-Analysis Pipelines",
+          "why_it_matters": "A rigorously structured scientific reasoning benchmark with verified ground truth across retrieval, screening, and synthesis is directly useful for evaluating and improving LLM agents on systematic evidence tasks.",
+          "summary": "MetaSyn comprises 442 expert-curated meta-analyses from Nature Portfolio, each pairing a research question with PI/ECO criteria, a 140k-article PubMed retrieval corpus, verified positive studies, and hard topically-similar negatives. Benchmarking 12 pipeline configurations (nine RAG variants plus a protocol-driven agent) shows a retrieval ceiling of 90.9% recall at K=200, yet no system recovers more than 52.7% of ground-truth included literature — pointing to PI/ECO-guided screening as the critical failure point.",
+          "tags": [
+            "benchmarks",
+            "agents",
+            "rag",
+            "scientific-reasoning"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2606.17041v1"
+            }
+          ],
+          "published": "2026-06-15T17:56:41+00:00",
+          "score": 1.279
+        },
+        {
+          "id": "4a969dde7b02",
           "tier": "skim",
           "category": "frontier",
-          "title": "PCMA Learns Coordinated Agent-Specific Preferences for Multi-Objective Multi-Agent RL",
-          "why_it_matters": "Theoretically grounded preference diversity for cooperative MOMARL is a niche but technically solid result relevant to multi-agent systems and RL research.",
-          "summary": "PCMA formulates cooperative MOMARL as a team-optimal game and shows that preference diversity among agents can induce team improvement via a first-order improvement decomposition. It learns agent-specific preferences enabling complementary trade-offs. Experiments span cooperative MOMA environments and a traffic-control scenario, showing gains in both performance and trade-off coordination.",
+          "title": "HABC Separates Viability and Efficiency Critics for Sparse-Reward VLA Fine-Tuning",
+          "why_it_matters": "Hierarchical advantage decomposition with intervention-aware credit assignment is a practically important technique for anyone fine-tuning robot policies with online RL under sparse binary outcomes and human intervention.",
+          "summary": "HABC trains separate critic heads for viability (can the task succeed?) and efficiency (how fast?), merging them via a state-adaptive gate that prioritizes viability when success is uncertain and shifts to efficiency once viability is high. Intervention-aware credit assignment restricts outcome labels to segments executed by the current policy. On three contact-rich bimanual real-robot tasks, HABC raises success rates from SFT baselines of 36%, 44%, and 12% to 92%, 88%, and 38% respectively.",
           "tags": [
-            "multi-agent rl",
-            "multi-objective optimization",
-            "reinforcement learning",
-            "cooperative ai"
+            "reinforcement-learning",
+            "robotics",
+            "vla",
+            "credit-assignment"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2606.14693v1"
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2606.17043v1"
             }
           ],
-          "published": "2026-06-12T17:55:28+00:00",
-          "score": 0.219
+          "published": "2026-06-15T17:57:14+00:00",
+          "score": 0.4264
         }
       ]
     }
