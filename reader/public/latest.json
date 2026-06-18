@@ -1,153 +1,220 @@
 {
-  "date": "2026-06-16",
-  "generated_at": "2026-06-16T05:25:20.474286+00:00",
-  "summary_line": "5 worth knowing",
+  "date": "2026-06-18",
+  "generated_at": "2026-06-18T04:55:16.937849+00:00",
+  "summary_line": "1 must-know · 4 worth knowing",
   "counts": {
-    "total": 6,
-    "headlines": 0,
-    "frontier": 6
+    "total": 9,
+    "headlines": 2,
+    "frontier": 7
   },
   "sections": [
     {
       "key": "headlines",
       "title": "Headlines",
-      "cards": []
+      "cards": [
+        {
+          "id": "64d6b4cbeaac",
+          "tier": "must_know",
+          "category": "headline",
+          "title": "GLM-5.2: MIT-Licensed Open Model with 1M Context, IndexShare Architecture, and Frontier Long-Horizon Coding Results",
+          "why_it_matters": "A fully open (MIT, no regional limits) model that rivals Claude Opus 4.x on long-horizon coding benchmarks is directly relevant as a base or comparison point for research and production use.",
+          "summary": "GLM-5.2 introduces IndexShare — sharing one sparse-attention indexer across every four transformer layers, cutting per-token FLOPs by 2.9× at 1M context — and improves its MTP layer for speculative decoding, raising acceptance length by up to 20%. On FrontierSWE it trails Opus 4.8 by 1% while beating GPT-5.5 by 1% and Opus 4.7 by 11%. On PostTrainBench it ranks second (behind Opus 4.8). On Terminal-Bench 2.1 it scores 81.0 vs. Claude Opus 4.8's 85.0. It is the top-ranked open-source model across all three long-horizon benchmarks tested. MIT license, no regional restrictions.",
+          "tags": [
+            "open-weights",
+            "long-context",
+            "coding-agents",
+            "architecture"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/zai-org/glm-52-blog"
+            }
+          ],
+          "published": "2026-06-17T09:01:25+00:00",
+          "score": 2.2756
+        },
+        {
+          "id": "12ceb5f0dc7b",
+          "tier": "skim",
+          "category": "headline",
+          "title": "Google DeepMind + UK Government Build Gemini-Powered Planning Officer Assistant",
+          "why_it_matters": "A concrete government-scale deployment of Gemini for structured document reasoning and report drafting — a useful real-world benchmark for what frontier LLMs can do in high-stakes, auditable workflows.",
+          "summary": "DeepMind, Google Cloud, and UK government's i.AI are co-developing an AI planning prototype targeting a 50% reduction in householder planning application decision times. Piloted in Barnet, Camden, and Dorset councils, it handles data extraction, policy citation, consultation summarization, and draft report generation, with planning officers retaining final authority. National rollout to all councils planned for 2027. Companion tool Extract — converting legacy PDFs to structured data — is already live across England, saving ~255 hours per council annually.",
+          "tags": [
+            "gemini",
+            "government-ai",
+            "document-understanding",
+            "deployment"
+          ],
+          "sources": [
+            {
+              "name": "DeepMind",
+              "url": "https://deepmind.google/blog/unlocking-uk-house-building-with-ai-accelerated-planning/"
+            }
+          ],
+          "published": "2026-06-16T21:29:50+00:00",
+          "score": 0.3232
+        }
+      ]
     },
     {
       "key": "frontier",
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "94b123e0324c",
+          "id": "476c85408df4",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Qwen3-8B Encodes a Linear 'Value Axis' That Controls Confidence and Backtracking",
-          "why_it_matters": "This is a direct interpretability result on a widely-used open model, showing that internal representations linearly encode expected goal success — with causal steering implications relevant to alignment, RLHF, and agent design.",
-          "summary": "Using synthetic in-context RL data, researchers construct a 'value' axis in Qwen3-8B's activations that distinguishes high vs. low verbalized confidence, correct vs. corrupted code, and rollouts with/without backtracking. Steering toward high value suppresses self-correction; steering low induces exploration. DPO shifts internal value of rewarded behaviors, and post-training assigns low value to politically sensitive queries.",
+          "title": "OmniAgent: POMDP-Based Active Perception Beats 72B Model at Long-Video Understanding with 7B Parameters",
+          "why_it_matters": "The POMDP framing, TAURA credit assignment, and positive test-time scaling results are technically substantive and relevant to anyone working on video agents or RL-based reasoning systems.",
+          "summary": "OmniAgent frames video understanding as a POMDP iterative Observation-Thought-Action cycle, selectively distilling audio-visual cues into persistent textual memory so reasoning complexity doesn't scale with video length. Training uses Agentic SFT (best-of-N trajectory synthesis with dual-stage quality control) and Agentic RL with TAURA (turn-aware adaptive uncertainty rescaled advantage) for credit assignment at pivotal turns. On LVBench, the 7B model scores 50.5% vs. 47.3% for Qwen2.5-VL-72B. State-of-the-art among open-source models across ten benchmarks including VideoMME.",
           "tags": [
-            "interpretability",
-            "rlhf",
-            "reasoning",
-            "qwen"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2606.17056v1"
-            }
-          ],
-          "published": "2026-06-15T17:59:58+00:00",
-          "score": 1.2799
-        },
-        {
-          "id": "908b85a09f24",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "ContextRL: Contrastive Context-Selection Objective Boosts Agentic and Multimodal LLM Reasoning",
-          "why_it_matters": "The indirect auxiliary objective — rewarding correct context selection rather than only final answers — is a clean RL training innovation applicable to both code agents and multimodal models, directly relevant to anyone working on RL fine-tuning or grounding.",
-          "summary": "ContextRL adds a contrastive context-selection objective to GRPO: given a query-answer pair and two similar contexts, the model is rewarded for picking the supporting one. This encourages fine-grained grounding without directly supervising answers. Gains average +2.2% over standard GRPO on 5 long-horizon benchmarks and +1.8% across 12 VQA benchmarks; data-augmentation baselines using the same contrastive data show little improvement, isolating the objective as the source of gains.",
-          "tags": [
-            "reinforcement-learning",
-            "multimodal",
+            "video-understanding",
+            "rl",
             "agents",
-            "grounding"
+            "reasoning"
           ],
           "sources": [
             {
               "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2606.17053v1"
+              "url": "https://arxiv.org/abs/2606.19341v1"
             }
           ],
-          "published": "2026-06-15T17:59:28+00:00",
-          "score": 1.2798
+          "published": "2026-06-17T17:59:56+00:00",
+          "score": 1.2889
         },
         {
-          "id": "c07edc7b1742",
+          "id": "509b0ddc3fa0",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "EPS Derives Exact Posterior Score for Diffusion Models on Linear Inverse Problems",
-          "why_it_matters": "Exact closed-form posterior scoring without approximate corrections or likelihood gradients is a meaningful theoretical advance in diffusion-based inverse problem solving, with practical speedups relevant to generative modeling and image restoration research.",
-          "summary": "The authors derive the exact posterior score in closed form for linear Gaussian inverse problems under general Gaussian interpolants, showing posterior sampling reduces to a denoising problem at an operator-dependent shifted pivot under anisotropic noise. The resulting EPS training objective preserves standard denoiser input/output structure and can be trained from scratch or fine-tuned. On five inverse problems across FFHQ and ImageNet, EPS outperforms training-free and training-based baselines while using roughly an order of magnitude fewer denoiser evaluations than gradient-based samplers.",
+          "title": "Turing-RL: Training User Simulators via Indistinguishability Rewards Rather Than Response Matching",
+          "why_it_matters": "Replacing log-prob or similarity reward with a discriminative Turing reward is a clean RL formulation worth knowing if you work on RLHF data generation, evaluation, or synthetic user modeling.",
+          "summary": "Turing-RL trains user simulator LLMs using a Turing-Test-based RL reward: an LLM judge scores how indistinguishable generated responses are from real user responses given user history. This replaces standard log-prob maximization or similarity rewards. Evaluated on conversational chat and Reddit forum domains, Turing-RL consistently outperforms baselines on both LLM and human evaluation metrics.",
           "tags": [
-            "diffusion-models",
-            "inverse-problems",
-            "generative-modeling",
-            "theory"
+            "rl",
+            "user-simulation",
+            "rlhf",
+            "evaluation"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2606.17048v1"
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2606.19336v1"
             }
           ],
-          "published": "2026-06-15T17:58:22+00:00",
-          "score": 1.2795
+          "published": "2026-06-17T17:58:48+00:00",
+          "score": 1.2885
         },
         {
-          "id": "62e77f0835cf",
+          "id": "07c125a38d88",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Geometric Action Model (GAM) Uses a Split Pretrained GFM for 3D-Aware Robot Manipulation",
-          "why_it_matters": "Splitting a pretrained geometric foundation model to handle both perception and causal future prediction is an architecturally novel approach to VLA design, directly addressing the 2D-latent-space limitation of current robot policy models.",
-          "summary": "GAM splits a pretrained geometric foundation model (GFM) at an intermediate layer: shallow layers encode observations, a causal future predictor inserted at the split forecasts future latent tokens conditioned on language, proprioception, and action history, and the remaining GFM blocks decode geometry and actions. This adds language-conditioned temporal world modeling with minimal architectural change while preserving geometric priors. GAM outperforms foundation-model-scale baselines on simulation and real-robot benchmarks in accuracy, robustness, speed, and model size.",
+          "title": "MolmoMotion: Language-Guided 3D Motion Forecasting with 1M-Trajectory Dataset",
+          "why_it_matters": "Predicting future 3D trajectories from language instructions is a direct bottleneck for robot policy learning and controllable video generation — two areas you likely work in or adjacent to.",
+          "summary": "MolmoMotion uses Molmo 2 as a backbone to predict future 3D point trajectories from a video frame, query points, and an action description. Two variants released: autoregressive (MolmoMotion-AR) and a second. Accompanying releases: MolmoMotion-1M (1.16M videos with 3D trajectory + action-description pairs) and PointMotionBench (2.7K human-validated clips). Weights, dataset, and benchmark are all open.",
           "tags": [
             "robotics",
-            "world-models",
-            "vision-language-action",
-            "3d-geometry"
+            "video-generation",
+            "3d-understanding",
+            "multimodal"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2606.17046v1"
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/allenai/molmomotion"
             }
           ],
-          "published": "2026-06-15T17:58:03+00:00",
-          "score": 1.2794
+          "published": "2026-06-17T15:26:44+00:00",
+          "score": 1.244
         },
         {
-          "id": "465714cbe71e",
+          "id": "c7b6e0d15e34",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "MetaSyn: 442-Entry Benchmark Exposes Critical Screening Bottleneck in LLM Meta-Analysis Pipelines",
-          "why_it_matters": "A rigorously structured scientific reasoning benchmark with verified ground truth across retrieval, screening, and synthesis is directly useful for evaluating and improving LLM agents on systematic evidence tasks.",
-          "summary": "MetaSyn comprises 442 expert-curated meta-analyses from Nature Portfolio, each pairing a research question with PI/ECO criteria, a 140k-article PubMed retrieval corpus, verified positive studies, and hard topically-similar negatives. Benchmarking 12 pipeline configurations (nine RAG variants plus a protocol-driven agent) shows a retrieval ceiling of 90.9% recall at K=200, yet no system recovers more than 52.7% of ground-truth included literature — pointing to PI/ECO-guided screening as the critical failure point.",
+          "title": "AWS Strands Robots SDK Unifies LeRobot Stack into a Single Agent Workflow",
+          "why_it_matters": "Bridging sim-to-real and fleet orchestration through a unified agent interface — relevant if you work on robotics ML pipelines or care about how open robotics tooling is converging.",
+          "summary": "Strands Robots (Apache 2.0, from AWS) wraps LeRobot's hardware recording, training, simulation, and deployment as composable AgentTools. Robot('so100') defaults to MuJoCo sim; mode='real' switches to hardware with identical agent code. DatasetRecorder writes the same LeRobotDataset format in both modes. A Zenoh peer mesh enables multi-robot fleet coordination. GR00T and MolmoAct2 checkpoints are served through a common LerobotLocal policy interface.",
           "tags": [
-            "benchmarks",
+            "robotics",
             "agents",
-            "rag",
-            "scientific-reasoning"
+            "lerobots",
+            "sim-to-real"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2606.17041v1"
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/amazon/strands-lerobot-hub-to-hardware"
             }
           ],
-          "published": "2026-06-15T17:56:41+00:00",
-          "score": 1.279
+          "published": "2026-06-17T10:18:05+00:00",
+          "score": 1.1582
         },
         {
-          "id": "4a969dde7b02",
+          "id": "ace95a57ed2c",
           "tier": "skim",
           "category": "frontier",
-          "title": "HABC Separates Viability and Efficiency Critics for Sparse-Reward VLA Fine-Tuning",
-          "why_it_matters": "Hierarchical advantage decomposition with intervention-aware credit assignment is a practically important technique for anyone fine-tuning robot policies with online RL under sparse binary outcomes and human intervention.",
-          "summary": "HABC trains separate critic heads for viability (can the task succeed?) and efficiency (how fast?), merging them via a state-adaptive gate that prioritizes viability when success is uncertain and shifts to efficiency once viability is high. Intervention-aware credit assignment restricts outcome labels to segments executed by the current policy. On three contact-rich bimanual real-robot tasks, HABC raises success rates from SFT baselines of 36%, 44%, and 12% to 92%, 88%, and 38% respectively.",
+          "title": "LOCUS: 9,239-Jurisdiction U.S. Local Ordinance Corpus with ModernBERT Classifiers",
+          "why_it_matters": "Large-scale legal corpora with trained classifiers enable serious legal NLP and policy analysis research — relevant if you work on domain-specific LLM training or evaluation data.",
+          "summary": "LOCUS provides machine-readable U.S. municipal and county ordinance codes from 9,239 jurisdictions, with a county-harmonized access layer covering 2,309 of 3,144 U.S. counties by population. OCR handles diverse document formats. The release includes ModernBERT-based classifiers and scorers trained to analyze ordinances along dimensions such as opacity and paternalism — dimensions not previously studied at this scale.",
           "tags": [
-            "reinforcement-learning",
-            "robotics",
-            "vla",
-            "credit-assignment"
+            "legal-ai",
+            "datasets",
+            "nlp",
+            "document-understanding"
           ],
           "sources": [
             {
               "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2606.17043v1"
+              "url": "https://arxiv.org/abs/2606.19334v1"
             }
           ],
-          "published": "2026-06-15T17:57:14+00:00",
-          "score": 0.4264
+          "published": "2026-06-17T17:58:22+00:00",
+          "score": 0.4295
+        },
+        {
+          "id": "da3c81662bdd",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Agentic Resource Discovery (ARD): Open Spec for Runtime Tool and Agent Discovery Across Federated Registries",
+          "why_it_matters": "If you build or deploy multi-agent systems, ARD defines how agents will dynamically discover MCP servers, skills, and other agents at runtime — a foundational infrastructure spec worth understanding early.",
+          "summary": "ARD is a draft open specification (contributors: Microsoft, Google, GoDaddy, Hugging Face, others) defining how agents discover capabilities at runtime via federated registries rather than pre-installed configs. It specifies a static ai-catalog.json manifest format and a dynamic POST /search REST endpoint returning ranked results. Hugging Face's reference implementation indexes Spaces as ARD entries across three media types: application/ai-skill, application/mcp-server+json, and raw Space metadata.",
+          "tags": [
+            "agents",
+            "mcp",
+            "infrastructure",
+            "standards"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/agentic-resource-discovery-launch"
+            }
+          ],
+          "published": "2026-06-17T00:00:00+00:00",
+          "score": 0.3346
+        },
+        {
+          "id": "e158e347b6a0",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Deep Dive: How Frontier Post-Training Recipes Evolved from InstructGPT to 2026's MOPD Pattern",
+          "why_it_matters": "A structured technical recap of the SFT→RM→RL lineage through to MOPD (Multi-teacher On-Policy Distillation) — directly useful if you're designing or reading post-training pipelines.",
+          "summary": "Interconnects podcast with Finbarr Timbers traces post-training recipe evolution: InstructGPT's three-step SFT→RM→PPO, Llama 2/3's iterative RLHF, Tülu 3's RLVR, DeepSeek R1's large-scale RL centerpiece, to the 2026 pattern of MOPD (Multi-teacher On-Policy Distillation). MOPD trains N domain-specialist teachers (SFT then RL per domain), then trains one student via on-policy rollouts minimizing reverse-KL to the relevant teacher token-by-token. MiMo Flash V2 introduced it; DeepSeek V4 and Nemotron 3 Ultra scale it to 10+ teachers.",
+          "tags": [
+            "post-training",
+            "rlhf",
+            "distillation",
+            "llm"
+          ],
+          "sources": [
+            {
+              "name": "Interconnects",
+              "url": "https://www.interconnects.ai/p/frontier-post-training-recipe-review"
+            }
+          ],
+          "published": "2026-06-16T13:29:30+00:00",
+          "score": 0.2892
         }
       ]
     }
