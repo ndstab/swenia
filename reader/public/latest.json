@@ -1,11 +1,11 @@
 {
-  "date": "2026-06-18",
-  "generated_at": "2026-06-18T04:55:16.937849+00:00",
-  "summary_line": "1 must-know · 4 worth knowing",
+  "date": "2026-06-19",
+  "generated_at": "2026-06-19T05:18:59.713744+00:00",
+  "summary_line": "4 worth knowing",
   "counts": {
-    "total": 9,
-    "headlines": 2,
-    "frontier": 7
+    "total": 10,
+    "headlines": 1,
+    "frontier": 9
   },
   "sections": [
     {
@@ -13,48 +13,26 @@
       "title": "Headlines",
       "cards": [
         {
-          "id": "64d6b4cbeaac",
-          "tier": "must_know",
+          "id": "ae74216dee38",
+          "tier": "worth_knowing",
           "category": "headline",
-          "title": "GLM-5.2: MIT-Licensed Open Model with 1M Context, IndexShare Architecture, and Frontier Long-Horizon Coding Results",
-          "why_it_matters": "A fully open (MIT, no regional limits) model that rivals Claude Opus 4.x on long-horizon coding benchmarks is directly relevant as a base or comparison point for research and production use.",
-          "summary": "GLM-5.2 introduces IndexShare — sharing one sparse-attention indexer across every four transformer layers, cutting per-token FLOPs by 2.9× at 1M context — and improves its MTP layer for speculative decoding, raising acceptance length by up to 20%. On FrontierSWE it trails Opus 4.8 by 1% while beating GPT-5.5 by 1% and Opus 4.7 by 11%. On PostTrainBench it ranks second (behind Opus 4.8). On Terminal-Bench 2.1 it scores 81.0 vs. Claude Opus 4.8's 85.0. It is the top-ranked open-source model across all three long-horizon benchmarks tested. MIT license, no regional restrictions.",
+          "title": "Google DeepMind Publishes AI Control Roadmap for Securing Internal Agents Against Misalignment",
+          "why_it_matters": "This is a concrete system-level security framework from a leading lab for operationalizing control of capable agents — directly relevant to alignment and deployment research.",
+          "summary": "DeepMind's AI Control Roadmap treats internal agents as potential insider threats, layering cybersecurity practices (built on MITRE ATT&CK) atop model alignment. Trusted AI supervisors monitor agent reasoning and actions; detected misalignment triggers blocking before harm occurs. The roadmap scales security protocols to capability milestones, including handling agents that may develop oversight awareness or opaque reasoning that defeats chain-of-thought monitoring.",
           "tags": [
-            "open-weights",
-            "long-context",
-            "coding-agents",
-            "architecture"
-          ],
-          "sources": [
-            {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/zai-org/glm-52-blog"
-            }
-          ],
-          "published": "2026-06-17T09:01:25+00:00",
-          "score": 2.2756
-        },
-        {
-          "id": "12ceb5f0dc7b",
-          "tier": "skim",
-          "category": "headline",
-          "title": "Google DeepMind + UK Government Build Gemini-Powered Planning Officer Assistant",
-          "why_it_matters": "A concrete government-scale deployment of Gemini for structured document reasoning and report drafting — a useful real-world benchmark for what frontier LLMs can do in high-stakes, auditable workflows.",
-          "summary": "DeepMind, Google Cloud, and UK government's i.AI are co-developing an AI planning prototype targeting a 50% reduction in householder planning application decision times. Piloted in Barnet, Camden, and Dorset councils, it handles data extraction, policy citation, consultation summarization, and draft report generation, with planning officers retaining final authority. National rollout to all councils planned for 2027. Companion tool Extract — converting legacy PDFs to structured data — is already live across England, saving ~255 hours per council annually.",
-          "tags": [
-            "gemini",
-            "government-ai",
-            "document-understanding",
-            "deployment"
+            "ai-safety",
+            "agents",
+            "alignment",
+            "security"
           ],
           "sources": [
             {
               "name": "DeepMind",
-              "url": "https://deepmind.google/blog/unlocking-uk-house-building-with-ai-accelerated-planning/"
+              "url": "https://deepmind.google/blog/securing-the-future-of-ai-agents/"
             }
           ],
-          "published": "2026-06-16T21:29:50+00:00",
-          "score": 0.3232
+          "published": "2026-06-16T15:46:31+00:00",
+          "score": 0.6381
         }
       ]
     },
@@ -63,158 +41,202 @@
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "476c85408df4",
+          "id": "e9b8182dcfcc",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "OmniAgent: POMDP-Based Active Perception Beats 72B Model at Long-Video Understanding with 7B Parameters",
-          "why_it_matters": "The POMDP framing, TAURA credit assignment, and positive test-time scaling results are technically substantive and relevant to anyone working on video agents or RL-based reasoning systems.",
-          "summary": "OmniAgent frames video understanding as a POMDP iterative Observation-Thought-Action cycle, selectively distilling audio-visual cues into persistent textual memory so reasoning complexity doesn't scale with video length. Training uses Agentic SFT (best-of-N trajectory synthesis with dual-stage quality control) and Agentic RL with TAURA (turn-aware adaptive uncertainty rescaled advantage) for credit assignment at pivotal turns. On LVBench, the 7B model scores 50.5% vs. 47.3% for Qwen2.5-VL-72B. State-of-the-art among open-source models across ten benchmarks including VideoMME.",
+          "title": "MosaicLeaks: RL Training Method Cuts Agent Privacy Leakage from 34% to 9.9%",
+          "why_it_matters": "If you build or deploy research agents over enterprise data, this directly quantifies the privacy risk and offers a concrete RL-based mitigation you can apply.",
+          "summary": "MosaicLeaks is a 1,001-chain benchmark where agents interleave private local documents with web retrieval, exposing a mosaic-effect leakage risk. Standard task-performance training worsens leakage. The proposed Privacy-Aware Deep Research (PA-DR) RL method raises strict chain success from 48.7% to 58.7% while cutting answer/full-information leakage from 34.0% to 9.9%.",
           "tags": [
-            "video-understanding",
-            "rl",
             "agents",
-            "reasoning"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2606.19341v1"
-            }
-          ],
-          "published": "2026-06-17T17:59:56+00:00",
-          "score": 1.2889
-        },
-        {
-          "id": "509b0ddc3fa0",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "Turing-RL: Training User Simulators via Indistinguishability Rewards Rather Than Response Matching",
-          "why_it_matters": "Replacing log-prob or similarity reward with a discriminative Turing reward is a clean RL formulation worth knowing if you work on RLHF data generation, evaluation, or synthetic user modeling.",
-          "summary": "Turing-RL trains user simulator LLMs using a Turing-Test-based RL reward: an LLM judge scores how indistinguishable generated responses are from real user responses given user history. This replaces standard log-prob maximization or similarity rewards. Evaluated on conversational chat and Reddit forum domains, Turing-RL consistently outperforms baselines on both LLM and human evaluation metrics.",
-          "tags": [
+            "privacy",
             "rl",
-            "user-simulation",
-            "rlhf",
-            "evaluation"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2606.19336v1"
-            }
-          ],
-          "published": "2026-06-17T17:58:48+00:00",
-          "score": 1.2885
-        },
-        {
-          "id": "07c125a38d88",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "MolmoMotion: Language-Guided 3D Motion Forecasting with 1M-Trajectory Dataset",
-          "why_it_matters": "Predicting future 3D trajectories from language instructions is a direct bottleneck for robot policy learning and controllable video generation — two areas you likely work in or adjacent to.",
-          "summary": "MolmoMotion uses Molmo 2 as a backbone to predict future 3D point trajectories from a video frame, query points, and an action description. Two variants released: autoregressive (MolmoMotion-AR) and a second. Accompanying releases: MolmoMotion-1M (1.16M videos with 3D trajectory + action-description pairs) and PointMotionBench (2.7K human-validated clips). Weights, dataset, and benchmark are all open.",
-          "tags": [
-            "robotics",
-            "video-generation",
-            "3d-understanding",
-            "multimodal"
+            "benchmarks"
           ],
           "sources": [
             {
               "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/allenai/molmomotion"
+              "url": "https://huggingface.co/blog/ServiceNow/mosaicleaks"
             }
           ],
-          "published": "2026-06-17T15:26:44+00:00",
-          "score": 1.244
+          "published": "2026-06-18T18:13:13+00:00",
+          "score": 1.2858
         },
         {
-          "id": "c7b6e0d15e34",
+          "id": "41c69ff75bb2",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "AWS Strands Robots SDK Unifies LeRobot Stack into a Single Agent Workflow",
-          "why_it_matters": "Bridging sim-to-real and fleet orchestration through a unified agent interface — relevant if you work on robotics ML pipelines or care about how open robotics tooling is converging.",
-          "summary": "Strands Robots (Apache 2.0, from AWS) wraps LeRobot's hardware recording, training, simulation, and deployment as composable AgentTools. Robot('so100') defaults to MuJoCo sim; mode='real' switches to hardware with identical agent code. DatasetRecorder writes the same LeRobotDataset format in both modes. A Zenoh peer mesh enables multi-robot fleet coordination. GR00T and MolmoAct2 checkpoints are served through a common LerobotLocal policy interface.",
+          "title": "DiffusionGemma Interpretability: Token Bottleneck Reduces Opaque Serial Depth to 1.1× Gemma 4",
+          "why_it_matters": "As diffusion LMs become serious competitors to autoregressive models, understanding their transparency properties is essential for deployment safety and interpretability research.",
+          "summary": "DiffusionGemma's continuous latent computation initially appears 28.6× more opaque than autoregressive Gemma 4. The authors show that mapping information between denoising steps through an interpretable token bottleneck — with no downstream performance drop — reduces opaque serial depth to 1.1× Gemma 4. Case studies reveal diffusion-specific phenomena: non-chronological reasoning, token/sequence smearing, and intermediate-context reasoning. Monitorability is found comparable to Gemma 4.",
           "tags": [
-            "robotics",
-            "agents",
-            "lerobots",
-            "sim-to-real"
-          ],
-          "sources": [
-            {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/amazon/strands-lerobot-hub-to-hardware"
-            }
-          ],
-          "published": "2026-06-17T10:18:05+00:00",
-          "score": 1.1582
-        },
-        {
-          "id": "ace95a57ed2c",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "LOCUS: 9,239-Jurisdiction U.S. Local Ordinance Corpus with ModernBERT Classifiers",
-          "why_it_matters": "Large-scale legal corpora with trained classifiers enable serious legal NLP and policy analysis research — relevant if you work on domain-specific LLM training or evaluation data.",
-          "summary": "LOCUS provides machine-readable U.S. municipal and county ordinance codes from 9,239 jurisdictions, with a county-harmonized access layer covering 2,309 of 3,144 U.S. counties by population. OCR handles diverse document formats. The release includes ModernBERT-based classifiers and scorers trained to analyze ordinances along dimensions such as opacity and paternalism — dimensions not previously studied at this scale.",
-          "tags": [
-            "legal-ai",
-            "datasets",
-            "nlp",
-            "document-understanding"
+            "interpretability",
+            "diffusion-models",
+            "transparency",
+            "gemma"
           ],
           "sources": [
             {
               "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2606.19334v1"
+              "url": "https://arxiv.org/abs/2606.20560v1"
             }
           ],
-          "published": "2026-06-17T17:58:22+00:00",
-          "score": 0.4295
+          "published": "2026-06-18T17:59:46+00:00",
+          "score": 1.2818
         },
         {
-          "id": "da3c81662bdd",
+          "id": "e340dd751a91",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Deterministic Predictor Achieves Minimax-Optimal Sample Complexity for Multicalibration",
+          "why_it_matters": "Resolves a concrete open problem in algorithmic fairness theory — deterministic optimal multicalibration was previously unknown, with implications for trustworthy ML guarantees.",
+          "summary": "All previously known minimax-optimal multicalibration algorithms (achieving Õ(ε⁻³) sample complexity for ε-multicalibration) required randomization. This paper presents the first deterministic predictor matching that rate, resolving an open problem. The approach generalizes to outcome indistinguishability with finite or finitely covered test collections, yielding deterministic omnipredictors and panpredictors with optimal sample complexity.",
+          "tags": [
+            "fairness",
+            "theory",
+            "calibration",
+            "statistical-learning"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2606.20557v1"
+            }
+          ],
+          "published": "2026-06-18T17:59:31+00:00",
+          "score": 1.2817
+        },
+        {
+          "id": "66ab3002622f",
           "tier": "skim",
           "category": "frontier",
-          "title": "Agentic Resource Discovery (ARD): Open Spec for Runtime Tool and Agent Discovery Across Federated Registries",
-          "why_it_matters": "If you build or deploy multi-agent systems, ARD defines how agents will dynamically discover MCP servers, skills, and other agents at runtime — a foundational infrastructure spec worth understanding early.",
-          "summary": "ARD is a draft open specification (contributors: Microsoft, Google, GoDaddy, Hugging Face, others) defining how agents discover capabilities at runtime via federated registries rather than pre-installed configs. It specifies a static ai-catalog.json manifest format and a dynamic POST /search REST endpoint returning ranked results. Hugging Face's reference implementation indexes Spaces as ARD entries across three media types: application/ai-skill, application/mcp-server+json, and raw Space metadata.",
+          "title": "UNIEGO: Hierarchical Multi-Teacher Distillation Unifies Nine Teachers for Egocentric Video",
+          "why_it_matters": "The proxy-mediated distillation approach — resolving conflicting gradients from heterogeneous teachers — is a technically interesting training method applicable beyond egocentric video.",
+          "summary": "UNIEGO trains a single egocentric encoder by distilling from nine teachers spanning ego-exo viewpoints, RGB/depth/skeleton modalities, and four foundation models. Proxy models first translate heterogeneous teacher features into a homogeneous space; Selective Proxy Distillation (SPD) then picks only correct, confident proxies per sample. UNIEGO achieves state-of-the-art on action recognition, retrieval, and segmentation across three ego-exo benchmarks.",
           "tags": [
-            "agents",
-            "mcp",
-            "infrastructure",
-            "standards"
+            "distillation",
+            "video-understanding",
+            "multimodal",
+            "representation-learning"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2606.20559v1"
+            }
+          ],
+          "published": "2026-06-18T17:59:45+00:00",
+          "score": 0.4273
+        },
+        {
+          "id": "94f1dd6ff1f6",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "G2Rec Unifies Graph Co-Engagement and Semantic Tokenization for Industrial Generative Recommendation",
+          "why_it_matters": "Scalable unification of graph-based and semantic signals for sequential recommendation is a meaningful systems contribution for ML engineers working on large-scale recommenders.",
+          "summary": "G2Rec addresses two limitations in generative recommendation: graph serialization/GNN methods that either don't scale or use only local graph info, and semantic tokenization methods lacking explicit supervision. It combines holistic graph-based user co-engagement modeling with semantic tokenization, enabling models to capture user interest prototypes without ground-truth labels. Online deployment and public dataset experiments show improvements over existing methods.",
+          "tags": [
+            "recommendation-systems",
+            "generative-models",
+            "graph-learning",
+            "industry"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2606.20554v1"
+            }
+          ],
+          "published": "2026-06-18T17:58:32+00:00",
+          "score": 0.4271
+        },
+        {
+          "id": "71aec3b65674",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Noisy Quantum Ground-State Prep: Cooling Algorithm Outperforms Adiabatic in Topological Phase",
+          "why_it_matters": "Concrete analytical scaling results for noisy ground-state preparation algorithms are directly useful for anyone assessing near-term quantum algorithm viability.",
+          "summary": "Using exactly solvable quadratic fermionic Hamiltonians under depolarizing noise, the authors derive scaling of achievable relative energy for cooling, adiabatic, and QAOA algorithms. In the trivial phase, adiabatic evolution is favorable; in the topological phase (where gap-closing limits adiabatic protocols), a multi-frequency cooling algorithm is competitive or superior. The cooling protocol also shows enhanced robustness to parameter imperfections across both phases.",
+          "tags": [
+            "quantum-computing",
+            "ground-state-preparation",
+            "algorithms",
+            "noise"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2606.20551v1"
+            }
+          ],
+          "published": "2026-06-18T17:57:56+00:00",
+          "score": 0.4271
+        },
+        {
+          "id": "3bac8ce3b3d5",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Space-Group Codes: Topological Quantum Error Correction Beyond Translation Invariance",
+          "why_it_matters": "Extending topological codes to space groups opens new design possibilities for hardware co-design, potentially enabling more local check operators than translation-invariant codes.",
+          "summary": "Most topological stabilizer codes assume translation invariance. This work introduces space-group CSS codes, where check operators are built from group-algebra templates over space groups combining translations with point-group operations. Analysis via ring-modules and invariant theory shows these codes can exhibit greater locality than purely translation-based codes, broadening the design space for co-designing topological codes with quantum hardware.",
+          "tags": [
+            "quantum-error-correction",
+            "topological-codes",
+            "quantum-computing",
+            "theory"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2606.20548v1"
+            }
+          ],
+          "published": "2026-06-18T17:56:41+00:00",
+          "score": 0.4269
+        },
+        {
+          "id": "dc672d008682",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Hugging Face Benchmarks LoRA vs. Other PEFT Techniques: Is 98.4% Market Share Earned?",
+          "why_it_matters": "As a practitioner who fine-tunes models, this directly challenges whether defaulting to LoRA is leaving accuracy or efficiency on the table.",
+          "summary": "Analysis of 20,834 Hugging Face model cards shows LoRA accounts for 98.4% of PEFT mentions. Hugging Face's PEFT library implements many alternatives, but LoRA's dominance may be self-reinforcing via tutorials and ecosystem support rather than pure performance superiority. The post argues that paper benchmarks comparing PEFT methods have methodological issues and encourages empirical evaluation of alternatives for specific use cases.",
+          "tags": [
+            "fine-tuning",
+            "peft",
+            "lora",
+            "training"
           ],
           "sources": [
             {
               "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/agentic-resource-discovery-launch"
+              "url": "https://huggingface.co/blog/peft-beyond-lora"
             }
           ],
-          "published": "2026-06-17T00:00:00+00:00",
-          "score": 0.3346
+          "published": "2026-06-18T00:00:00+00:00",
+          "score": 0.3328
         },
         {
-          "id": "e158e347b6a0",
+          "id": "d44bbcfdf323",
           "tier": "skim",
           "category": "frontier",
-          "title": "Deep Dive: How Frontier Post-Training Recipes Evolved from InstructGPT to 2026's MOPD Pattern",
-          "why_it_matters": "A structured technical recap of the SFT→RM→RL lineage through to MOPD (Multi-teacher On-Policy Distillation) — directly useful if you're designing or reading post-training pipelines.",
-          "summary": "Interconnects podcast with Finbarr Timbers traces post-training recipe evolution: InstructGPT's three-step SFT→RM→PPO, Llama 2/3's iterative RLHF, Tülu 3's RLVR, DeepSeek R1's large-scale RL centerpiece, to the 2026 pattern of MOPD (Multi-teacher On-Policy Distillation). MOPD trains N domain-specialist teachers (SFT then RL per domain), then trains one student via on-policy rollouts minimizing reverse-KL to the relevant teacher token-by-token. MiMo Flash V2 introduced it; DeepSeek V4 and Nemotron 3 Ultra scale it to 10+ teachers.",
+          "title": "Hugging Face Builds Agent-Focused Benchmark to Measure How Well Open Models Use Library APIs",
+          "why_it_matters": "This reframes library design as an engineering problem with measurable agent-efficiency metrics — practically useful if you build tooling that agents interact with.",
+          "summary": "Hugging Face benchmarks open models using a coding-agent harness across multiple transformers library revisions and tasks, measuring not just final correctness but token cost and path efficiency. The study found that agent-optimized interfaces (CLI, self-contained examples) cut tokens by 1.3–1.8× (up to 6×) in prior hf CLI work, motivating whether similar wins apply to transformers. All runs use identical hardware via Hugging Face Jobs.",
           "tags": [
-            "post-training",
-            "rlhf",
-            "distillation",
-            "llm"
+            "agents",
+            "benchmarks",
+            "coding-agents",
+            "tooling"
           ],
           "sources": [
             {
-              "name": "Interconnects",
-              "url": "https://www.interconnects.ai/p/frontier-post-training-recipe-review"
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/is-it-agentic-enough"
             }
           ],
-          "published": "2026-06-16T13:29:30+00:00",
-          "score": 0.2892
+          "published": "2026-06-18T00:00:00+00:00",
+          "score": 0.3328
         }
       ]
     }
