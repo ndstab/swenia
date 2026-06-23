@@ -1,11 +1,11 @@
 {
-  "date": "2026-06-19",
-  "generated_at": "2026-06-19T05:18:59.713744+00:00",
-  "summary_line": "4 worth knowing",
+  "date": "2026-06-23",
+  "generated_at": "2026-06-23T04:17:37.572461+00:00",
+  "summary_line": "1 must-know · 4 worth knowing",
   "counts": {
-    "total": 10,
+    "total": 8,
     "headlines": 1,
-    "frontier": 9
+    "frontier": 7
   },
   "sections": [
     {
@@ -13,26 +13,26 @@
       "title": "Headlines",
       "cards": [
         {
-          "id": "ae74216dee38",
-          "tier": "worth_knowing",
+          "id": "b291141d2bb4",
+          "tier": "must_know",
           "category": "headline",
-          "title": "Google DeepMind Publishes AI Control Roadmap for Securing Internal Agents Against Misalignment",
-          "why_it_matters": "This is a concrete system-level security framework from a leading lab for operationalizing control of capable agents — directly relevant to alignment and deployment research.",
-          "summary": "DeepMind's AI Control Roadmap treats internal agents as potential insider threats, layering cybersecurity practices (built on MITRE ATT&CK) atop model alignment. Trusted AI supervisors monitor agent reasoning and actions; detected misalignment triggers blocking before harm occurs. The roadmap scales security protocols to capability milestones, including handling agents that may develop oversight awareness or opaque reasoning that defeats chain-of-thought monitoring.",
+          "title": "GLM-5.2: Z.ai's Open-Weight Model Breaks Into Top-Tier Agent Benchmarks",
+          "why_it_matters": "As a researcher tracking open-weight frontier models, GLM-5.2 is the most significant open-model release since DeepSeek R1 and directly challenges the closed-model dominance in agentic coding workflows you likely rely on.",
+          "summary": "Z.ai released GLM-5.2 (MIT license) on June 16, appearing on Arena's agent leaderboard as the only open model competing with OpenAI and Anthropic's latest — reportedly matching Opus 4.8 no-thinking vs. GLM-5.2 max-thinking. It also topped Design Arena over Claude Fable. Z.ai uses the RLSLIME training framework. Community reception rivals DeepSeek R1's impact.",
           "tags": [
-            "ai-safety",
+            "open-weight",
             "agents",
-            "alignment",
-            "security"
+            "rl",
+            "model-release"
           ],
           "sources": [
             {
-              "name": "DeepMind",
-              "url": "https://deepmind.google/blog/securing-the-future-of-ai-agents/"
+              "name": "Interconnects",
+              "url": "https://www.interconnects.ai/p/glm-52-is-the-step-change-for-open"
             }
           ],
-          "published": "2026-06-16T15:46:31+00:00",
-          "score": 0.6381
+          "published": "2026-06-22T14:52:45+00:00",
+          "score": 2.49
         }
       ]
     },
@@ -41,202 +41,158 @@
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "e9b8182dcfcc",
+          "id": "493a508e4cea",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "MosaicLeaks: RL Training Method Cuts Agent Privacy Leakage from 34% to 9.9%",
-          "why_it_matters": "If you build or deploy research agents over enterprise data, this directly quantifies the privacy risk and offers a concrete RL-based mitigation you can apply.",
-          "summary": "MosaicLeaks is a 1,001-chain benchmark where agents interleave private local documents with web retrieval, exposing a mosaic-effect leakage risk. Standard task-performance training worsens leakage. The proposed Privacy-Aware Deep Research (PA-DR) RL method raises strict chain success from 48.7% to 58.7% while cutting answer/full-information leakage from 34.0% to 9.9%.",
+          "title": "PP-OCRv6: PaddleOCR Releases 1.5M–34.5M Parameter 50-Language OCR Family",
+          "why_it_matters": "For researchers building document-parsing or multimodal pipelines, this is a practical, lightweight OCR option with meaningful accuracy gains over prior generations and flexible deployment backends.",
+          "summary": "PP-OCRv6 scales from 1.5M (tiny) to 34.5M (medium) parameters across three tiers, supporting 50 languages. The medium model scores 86.2% detection Hmean and 83.2% recognition accuracy on PaddleOCR's benchmarks — +4.6pp detection and +5.1pp recognition vs. PP-OCRv5_server. Architecture uses PPLCNetV4 backbone, RepLKFPN for detection, and EncoderWithLightSVTR for recognition. Supports PaddlePaddle, Transformers, and ONNX Runtime backends.",
           "tags": [
-            "agents",
-            "privacy",
-            "rl",
-            "benchmarks"
+            "ocr",
+            "multimodal",
+            "infrastructure",
+            "open-source"
           ],
           "sources": [
             {
               "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/ServiceNow/mosaicleaks"
+              "url": "https://huggingface.co/blog/PaddlePaddle/pp-ocrv6"
             }
           ],
-          "published": "2026-06-18T18:13:13+00:00",
-          "score": 1.2858
+          "published": "2026-06-22T13:18:56+00:00",
+          "score": 1.2183
         },
         {
-          "id": "41c69ff75bb2",
+          "id": "77052f135911",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "DiffusionGemma Interpretability: Token Bottleneck Reduces Opaque Serial Depth to 1.1× Gemma 4",
-          "why_it_matters": "As diffusion LMs become serious competitors to autoregressive models, understanding their transparency properties is essential for deployment safety and interpretability research.",
-          "summary": "DiffusionGemma's continuous latent computation initially appears 28.6× more opaque than autoregressive Gemma 4. The authors show that mapping information between denoising steps through an interpretable token bottleneck — with no downstream performance drop — reduces opaque serial depth to 1.1× Gemma 4. Case studies reveal diffusion-specific phenomena: non-chronological reasoning, token/sequence smearing, and intermediate-context reasoning. Monitorability is found comparable to Gemma 4.",
+          "title": "Fine-Tuned 0.5B Qwen2.5 Beats GPT and Claude Zero-Shot on Relation Extraction",
+          "why_it_matters": "Directly relevant to researchers evaluating when task-adapted small models can replace frontier API calls — with concrete F1 numbers across nine benchmarks in general and literary domains.",
+          "summary": "Fine-tuned Qwen2.5-0.5B on pooled general-domain data achieves general-domain positive-class micro-F1 of 0.83 vs. 0.69 for GPT-5.4 and 0.66 for Claude Sonnet 4.6 zero-shot. On literary RE, tuned SLMs reach 0.92 vs. 0.83 for GPT-5.4 on the Biographical benchmark. A RoBERTa baseline also exceeds frontier models, indicating the gain stems from task adaptation. Domain-adaptive pretraining yielded no meaningful improvement over supervised fine-tuning.",
           "tags": [
-            "interpretability",
-            "diffusion-models",
-            "transparency",
-            "gemma"
+            "small-language-models",
+            "fine-tuning",
+            "relation-extraction",
+            "evals"
           ],
           "sources": [
             {
               "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2606.20560v1"
+              "url": "https://arxiv.org/abs/2606.22606v1"
             }
           ],
-          "published": "2026-06-18T17:59:46+00:00",
-          "score": 1.2818
+          "published": "2026-06-21T17:24:31+00:00",
+          "score": 0.924
         },
         {
-          "id": "e340dd751a91",
+          "id": "ca2d87715138",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Deterministic Predictor Achieves Minimax-Optimal Sample Complexity for Multicalibration",
-          "why_it_matters": "Resolves a concrete open problem in algorithmic fairness theory — deterministic optimal multicalibration was previously unknown, with implications for trustworthy ML guarantees.",
-          "summary": "All previously known minimax-optimal multicalibration algorithms (achieving Õ(ε⁻³) sample complexity for ε-multicalibration) required randomization. This paper presents the first deterministic predictor matching that rate, resolving an open problem. The approach generalizes to outcome indistinguishability with finite or finitely covered test collections, yielding deterministic omnipredictors and panpredictors with optimal sample complexity.",
+          "title": "Position Bias in On-Policy Distillation: Early Tokens Dominate, Later Tokens Are Noise",
+          "why_it_matters": "Directly relevant to anyone doing RL-based distillation or post-training: the finding that the first 30% of tokens match full-sequence performance while the last 30% barely trains has immediate practical implications for training efficiency.",
+          "summary": "In On-Policy Distillation (OPD), student rollouts increasingly diverge from the teacher distribution at later token positions, degrading supervision quality. Using only the first 30% of tokens matches full-sequence performance; the last 30% alone barely learns. The authors derive Importance-Weighted OPD (IW-OPD), which weights tokens by accumulated student–teacher distribution discrepancy. IW-OPD improves convergence speed and achieves up to 6.9 points better performance on AIME-2025 over standard OPD.",
           "tags": [
-            "fairness",
-            "theory",
-            "calibration",
-            "statistical-learning"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2606.20557v1"
-            }
-          ],
-          "published": "2026-06-18T17:59:31+00:00",
-          "score": 1.2817
-        },
-        {
-          "id": "66ab3002622f",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "UNIEGO: Hierarchical Multi-Teacher Distillation Unifies Nine Teachers for Egocentric Video",
-          "why_it_matters": "The proxy-mediated distillation approach — resolving conflicting gradients from heterogeneous teachers — is a technically interesting training method applicable beyond egocentric video.",
-          "summary": "UNIEGO trains a single egocentric encoder by distilling from nine teachers spanning ego-exo viewpoints, RGB/depth/skeleton modalities, and four foundation models. Proxy models first translate heterogeneous teacher features into a homogeneous space; Selective Proxy Distillation (SPD) then picks only correct, confident proxies per sample. UNIEGO achieves state-of-the-art on action recognition, retrieval, and segmentation across three ego-exo benchmarks.",
-          "tags": [
+            "rl",
+            "post-training",
             "distillation",
-            "video-understanding",
-            "multimodal",
-            "representation-learning"
+            "reasoning"
           ],
           "sources": [
             {
               "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2606.20559v1"
+              "url": "https://arxiv.org/abs/2606.22600v1"
             }
           ],
-          "published": "2026-06-18T17:59:45+00:00",
-          "score": 0.4273
+          "published": "2026-06-21T17:20:21+00:00",
+          "score": 0.9231
         },
         {
-          "id": "94f1dd6ff1f6",
-          "tier": "skim",
+          "id": "91942df1a22c",
+          "tier": "worth_knowing",
           "category": "frontier",
-          "title": "G2Rec Unifies Graph Co-Engagement and Semantic Tokenization for Industrial Generative Recommendation",
-          "why_it_matters": "Scalable unification of graph-based and semantic signals for sequential recommendation is a meaningful systems contribution for ML engineers working on large-scale recommenders.",
-          "summary": "G2Rec addresses two limitations in generative recommendation: graph serialization/GNN methods that either don't scale or use only local graph info, and semantic tokenization methods lacking explicit supervision. It combines holistic graph-based user co-engagement modeling with semantic tokenization, enabling models to capture user interest prototypes without ground-truth labels. Online deployment and public dataset experiments show improvements over existing methods.",
+          "title": "SiM: Training-Free Task Routing for Model Merging via SVD Manifold Projection",
+          "why_it_matters": "Useful for researchers working on model merging or multi-task inference — SiM removes the need for labeled routing data or task IDs at inference while narrowing the gap to individual expert performance.",
+          "summary": "SiM formulates multi-task model merging routing as training-free task classification using SVD-based low-rank manifold approximations per task. At inference, a test input's feature is projected onto each task manifold; the residual projection score determines routing. Task manifolds are precomputed offline from a small per-task support set (e.g., 32 examples). SiM integrates with subspace- and mask-based merging methods and demonstrates consistent improvement over prior merged-model baselines on CV and NLP benchmarks.",
           "tags": [
-            "recommendation-systems",
-            "generative-models",
-            "graph-learning",
-            "industry"
+            "model-merging",
+            "multi-task",
+            "inference",
+            "svd"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2606.20554v1"
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2606.22589v1"
             }
           ],
-          "published": "2026-06-18T17:58:32+00:00",
-          "score": 0.4271
+          "published": "2026-06-21T16:51:29+00:00",
+          "score": 0.917
         },
         {
-          "id": "71aec3b65674",
+          "id": "3c688e8f7d87",
           "tier": "skim",
           "category": "frontier",
-          "title": "Noisy Quantum Ground-State Prep: Cooling Algorithm Outperforms Adiabatic in Topological Phase",
-          "why_it_matters": "Concrete analytical scaling results for noisy ground-state preparation algorithms are directly useful for anyone assessing near-term quantum algorithm viability.",
-          "summary": "Using exactly solvable quadratic fermionic Hamiltonians under depolarizing noise, the authors derive scaling of achievable relative energy for cooling, adiabatic, and QAOA algorithms. In the trivial phase, adiabatic evolution is favorable; in the topological phase (where gap-closing limits adiabatic protocols), a multi-frequency cooling algorithm is competitive or superior. The cooling protocol also shows enhanced robustness to parameter imperfections across both phases.",
+          "title": "Deformable DETR Pipeline Produces 2.9M Sign Detections Across 87K Cuneiform Tablets",
+          "why_it_matters": "A niche but technically notable application of modern object detection to a massive low-resource corpus — relevant for researchers interested in CV applied to historical documents and large-scale annotation pipelines.",
+          "summary": "Researchers built an end-to-end cuneiform OCR pipeline using a Deformable DETR model evaluated at 173 and 106 class granularities, achieving 28–37% improvement over prior work on COCO-style detection metrics. Applied to 87,668 tablet fragments from the Electronic Babylonian Library, it generated nearly 2.9 million sign detections. The system includes automatic tablet-side extraction, heuristic line grouping, and n-gram textual similarity evaluation, operating without linguistic priors.",
           "tags": [
-            "quantum-computing",
-            "ground-state-preparation",
-            "algorithms",
-            "noise"
+            "computer-vision",
+            "object-detection",
+            "ocr",
+            "low-resource"
           ],
           "sources": [
             {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2606.20551v1"
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2606.22608v1"
             }
           ],
-          "published": "2026-06-18T17:57:56+00:00",
-          "score": 0.4271
+          "published": "2026-06-21T17:31:05+00:00",
+          "score": 0.3085
         },
         {
-          "id": "3bac8ce3b3d5",
+          "id": "4e036959ff6d",
           "tier": "skim",
           "category": "frontier",
-          "title": "Space-Group Codes: Topological Quantum Error Correction Beyond Translation Invariance",
-          "why_it_matters": "Extending topological codes to space groups opens new design possibilities for hardware co-design, potentially enabling more local check operators than translation-invariant codes.",
-          "summary": "Most topological stabilizer codes assume translation invariance. This work introduces space-group CSS codes, where check operators are built from group-algebra templates over space groups combining translations with point-group operations. Analysis via ring-modules and invariant theory shows these codes can exhibit greater locality than purely translation-based codes, broadening the design space for co-designing topological codes with quantum hardware.",
+          "title": "VAE Surrogate Bypasses Cubic GP Cost for Scalable Stellar Flare Detection",
+          "why_it_matters": "Technically interesting for ML researchers: the VAE-as-amortized-GP-surrogate trick is a broadly applicable inference speedup pattern, not just an astronomy tool.",
+          "summary": "A Variational Autoencoder is trained to approximate Celerite GP priors by mapping correlated stochastic dependencies to a low-dimensional isotropic manifold, replacing expensive covariance operations with a neural forward pass. The VAE is embedded in an additive model alongside a Hidden Markov Model for stellar flare detection, evaluated against exact Celerite+HMM on astrophysical time series, demonstrating significant computational speedups while preserving structural fidelity.",
           "tags": [
-            "quantum-error-correction",
-            "topological-codes",
-            "quantum-computing",
+            "gaussian-processes",
+            "variational-inference",
+            "time-series",
+            "bayesian-methods"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2606.22601v1"
+            }
+          ],
+          "published": "2026-06-21T17:20:26+00:00",
+          "score": 0.3077
+        },
+        {
+          "id": "2ac219a964f1",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Stationary Robust Mean-Field Game Framework for MARL Under Model Mismatch",
+          "why_it_matters": "For researchers working on multi-agent RL deployment, this provides the first algorithm with convergence guarantees for distributionally robust mean-field equilibria, with explicit finite-population error bounds.",
+          "summary": "The paper develops an infinite-horizon stationary mean-field game (MFG) framework incorporating distributional model uncertainty via uncertainty sets over transition models. A contractive Bellman operator is established, and existence of a stationary robust mean-field equilibrium is proven via fixed-point arguments. The first algorithm with convergence guarantees for this setting is presented, along with non-asymptotic error bounds connecting mean-field equilibria to finite-population robust games.",
+          "tags": [
+            "multi-agent-rl",
+            "robustness",
+            "mean-field-games",
             "theory"
           ],
           "sources": [
             {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2606.20548v1"
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2606.22579v1"
             }
           ],
-          "published": "2026-06-18T17:56:41+00:00",
-          "score": 0.4269
-        },
-        {
-          "id": "dc672d008682",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "Hugging Face Benchmarks LoRA vs. Other PEFT Techniques: Is 98.4% Market Share Earned?",
-          "why_it_matters": "As a practitioner who fine-tunes models, this directly challenges whether defaulting to LoRA is leaving accuracy or efficiency on the table.",
-          "summary": "Analysis of 20,834 Hugging Face model cards shows LoRA accounts for 98.4% of PEFT mentions. Hugging Face's PEFT library implements many alternatives, but LoRA's dominance may be self-reinforcing via tutorials and ecosystem support rather than pure performance superiority. The post argues that paper benchmarks comparing PEFT methods have methodological issues and encourages empirical evaluation of alternatives for specific use cases.",
-          "tags": [
-            "fine-tuning",
-            "peft",
-            "lora",
-            "training"
-          ],
-          "sources": [
-            {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/peft-beyond-lora"
-            }
-          ],
-          "published": "2026-06-18T00:00:00+00:00",
-          "score": 0.3328
-        },
-        {
-          "id": "d44bbcfdf323",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "Hugging Face Builds Agent-Focused Benchmark to Measure How Well Open Models Use Library APIs",
-          "why_it_matters": "This reframes library design as an engineering problem with measurable agent-efficiency metrics — practically useful if you build tooling that agents interact with.",
-          "summary": "Hugging Face benchmarks open models using a coding-agent harness across multiple transformers library revisions and tasks, measuring not just final correctness but token cost and path efficiency. The study found that agent-optimized interfaces (CLI, self-contained examples) cut tokens by 1.3–1.8× (up to 6×) in prior hf CLI work, motivating whether similar wins apply to transformers. All runs use identical hardware via Hugging Face Jobs.",
-          "tags": [
-            "agents",
-            "benchmarks",
-            "coding-agents",
-            "tooling"
-          ],
-          "sources": [
-            {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/is-it-agentic-enough"
-            }
-          ],
-          "published": "2026-06-18T00:00:00+00:00",
-          "score": 0.3328
+          "published": "2026-06-21T16:29:25+00:00",
+          "score": 0.3041
         }
       ]
     }
