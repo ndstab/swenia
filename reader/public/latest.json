@@ -1,11 +1,11 @@
 {
-  "date": "2026-06-24",
-  "generated_at": "2026-06-24T04:19:59.516814+00:00",
-  "summary_line": "1 must-know · 4 worth knowing",
+  "date": "2026-06-25",
+  "generated_at": "2026-06-25T04:19:29.725499+00:00",
+  "summary_line": "1 must-know · 5 worth knowing",
   "counts": {
-    "total": 9,
-    "headlines": 2,
-    "frontier": 7
+    "total": 8,
+    "headlines": 4,
+    "frontier": 4
   },
   "sections": [
     {
@@ -13,48 +13,91 @@
       "title": "Headlines",
       "cards": [
         {
-          "id": "49c160394cb9",
-          "tier": "skim",
+          "id": "0ce8c6adc247",
+          "tier": "must_know",
           "category": "headline",
-          "title": "Hugging Face Ships huggingface_hub Weekly Using Open-Weight Models and GitHub Actions",
-          "why_it_matters": "As an engineer who likely depends on huggingface_hub as infrastructure, understanding their open, reproducible AI-assisted release pipeline is directly applicable to your own library maintenance workflows.",
-          "summary": "Hugging Face moved huggingface_hub from 4–6 week manual releases to weekly automated ones via a single GitHub Actions workflow. Mechanical steps (version bumping, tagging, downstream test branches, PyPI publish) are fully automated. Release notes drafting uses open-weight LLMs as a first pass, with a deterministic validation script and mandatory human review before shipping. The entire stack uses open tools with no proprietary vendor lock-in.",
-          "tags": [
-            "mlops",
-            "open-source",
-            "release-automation",
-            "hugging-face"
-          ],
-          "sources": [
-            {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/huggingface-hub-release-ci"
-            }
-          ],
-          "published": "2026-06-23T00:00:00+00:00",
-          "score": 0.3373
-        },
-        {
-          "id": "d1c7fe87ce16",
-          "tier": "skim",
-          "category": "headline",
-          "title": "Local Gemma and Qwen3 Models Used for Real-Time Repo Issue Triage via Restricted-Shell Agent Harness",
-          "why_it_matters": "This is a concrete, security-conscious deployment pattern—using a read-only shell sandbox to prevent prompt-injection abuse of local models in high-throughput agentic classification—directly applicable to anyone building local-model agent pipelines.",
-          "summary": "To triage OpenClaw repo issues in real time without closed-model API quotas, the authors ran gemma-4-26b-a4b and qwen3.6-35b-a3b locally on an NVIDIA GB10 (128 GB unified memory) inside the Pi agent harness. The agent receives PR title, body, and a diff excerpt, then can call a restricted 'reposhell' (read-only: ls, find, cat, grep, git) or a final_json tool. Structured outputs assign labels from a predefined enum. Prompt-injection risk is mitigated by blocking write operations.",
+          "title": "Google Integrates Computer Use Natively into Gemini 3.5 Flash",
+          "why_it_matters": "Gemini 3.5 Flash is now a single API endpoint for function calling, search grounding, and full computer use — a meaningful consolidation for anyone building multi-step agents.",
+          "summary": "Computer use — previously a standalone Gemini 2.5 model — is now a built-in tool in Gemini 3.5 Flash, accessible via the Gemini API and Gemini Enterprise Agent Platform. Safety mitigations include adversarial training against prompt injection, optional user-confirmation gates for irreversible actions, and automatic task-stop on detected indirect injection. Targets browser, mobile, and desktop automation for long-horizon enterprise tasks.",
           "tags": [
             "agents",
-            "local-inference",
-            "open-weight-models",
-            "security"
+            "computer-use",
+            "gemini",
+            "google-deepmind"
+          ],
+          "sources": [
+            {
+              "name": "DeepMind",
+              "url": "https://deepmind.google/blog/introducing-computer-use-in-gemini-3-5-flash/"
+            }
+          ],
+          "published": "2026-06-24T16:30:01+00:00",
+          "score": 2.5456
+        },
+        {
+          "id": "9662972e681e",
+          "tier": "worth_knowing",
+          "category": "headline",
+          "title": "NVIDIA NeMo AutoModel Delivers 3.4–3.7x MoE Fine-Tuning Throughput Over Native Transformers v5",
+          "why_it_matters": "If you fine-tune MoE models, this is a drop-in upgrade — one import swap gives you Expert Parallelism, DeepEP fused all-to-all dispatch, and TransformerEngine kernels with no other code changes.",
+          "summary": "NeMo AutoModel subclasses HuggingFace AutoModelForCausalLM and layers Expert Parallelism, DeepEP fused all-to-all communication-compute overlap, and TransformerEngine kernels on top of Transformers v5. Measured gains vs. native v5: 3.4–3.7x training throughput and 29–32% less GPU memory for MoE fine-tuning. Tested from single-node Qwen3-30B-A3B up to 16-node Nemotron Ultra 550B. Checkpoints remain standard HF format, compatible with vLLM and SGLang.",
+          "tags": [
+            "moe",
+            "fine-tuning",
+            "distributed-training",
+            "nvidia"
           ],
           "sources": [
             {
               "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/local-models-pr-triage"
+              "url": "https://huggingface.co/blog/nvidia/accelerating-fine-tuning-nvidia-nemo-automodel"
             }
           ],
-          "published": "2026-06-22T00:00:00+00:00",
-          "score": 0.2417
+          "published": "2026-06-24T16:00:13+00:00",
+          "score": 1.2641
+        },
+        {
+          "id": "c8f3104266f9",
+          "tier": "worth_knowing",
+          "category": "headline",
+          "title": "FFASR Leaderboard: First Open Far-Field ASR Benchmark Exposes Large Real-World Performance Gap",
+          "why_it_matters": "If you deploy speech models in any non-headset environment — robots, conference rooms, in-car — this benchmark directly quantifies the degradation you'll encounter and lets you compare models on Pareto WER vs. real-time-factor tradeoffs.",
+          "summary": "Treble Technologies and Hugging Face launched the Far-Field ASR leaderboard, evaluating models across four primary conditions: near-field dry, far-field high SNR (>14 dB), mid SNR (8–12 dB), and low SNR (<6 dB) — simulated across 14 rooms validated against real measurements. Submitted models show far-field WER at low SNR consistently several times higher than near-field WER. Roadmap includes multi-talker, microphone arrays, and echo cancellation.",
+          "tags": [
+            "asr",
+            "speech",
+            "benchmarks",
+            "evaluation"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/ffasr-leaderboard"
+            }
+          ],
+          "published": "2026-06-24T00:00:00+00:00",
+          "score": 1.0121
+        },
+        {
+          "id": "02394854355d",
+          "tier": "skim",
+          "category": "headline",
+          "title": "Op-Ed: Why Banning Open-Source AI Would Harm Education, Competition, and Innovation",
+          "why_it_matters": "As U.S. policy moves toward broader AI regulation — including an executive order reviewing AI models and restrictions on foreign nationals accessing frontier models — this piece articulates the technical-community case for keeping open-source AI legal.",
+          "summary": "Co-authored by Nathan Lambert and Kevin Xu, the op-ed argues that open-source AI regulation would undermine three decades of education, innovation, and competition enabled by open software. It cites open source underpinning over 90% of global software and generating over $8 trillion in economic value. Written for a general audience after being rejected by mainstream outlets; authors are self-publishing to reach undecided readers.",
+          "tags": [
+            "policy",
+            "open-source",
+            "ai-regulation"
+          ],
+          "sources": [
+            {
+              "name": "Interconnects",
+              "url": "https://www.interconnects.ai/p/banning-open-source-ai-would-be-a"
+            }
+          ],
+          "published": "2026-06-19T13:02:47+00:00",
+          "score": 0.0764
         }
       ]
     },
@@ -63,158 +106,92 @@
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "0358b20fda03",
-          "tier": "must_know",
+          "id": "dd418ddeb612",
+          "tier": "worth_knowing",
           "category": "frontier",
-          "title": "OpenThoughts-Agent: 100K-Example Open Dataset and Pipeline for Training Broadly Capable Agentic Models",
-          "why_it_matters": "This is a directly relevant open research contribution for anyone working on post-training or data curation for agents—it systematically ablates pipeline stages and releases all data, models, and code, unlike prior efforts targeting single benchmarks.",
-          "summary": "OT-Agent addresses the lack of open, general-purpose training data for agentic LLMs. Over 100 ablation experiments examine task sources and diversity across pipeline stages. A 100K-example dataset fine-tunes Qwen3-32B to 44.8% average accuracy across seven agentic benchmarks, a 3.9 percentage point gain over Nemotron-Terminal-32B (40.9%). Training data shows consistent scaling advantages over alternative open datasets at all compute-controlled sizes. All datasets, pipelines, and models are publicly released.",
+          "title": "Pretraining VLA Action Modules on Motion Priors Improves Cross-Embodiment Robot Policies",
+          "why_it_matters": "For researchers working on robot learning or VLA architectures, this two-stage flow-matching pretraining approach directly addresses the cold-start problem for action modules and shows scaling the action pretraining data improves downstream VLA performance.",
+          "summary": "The paper proposes pretraining a flow-matching encoder-decoder action module on unconditioned action trajectories before VLA training, then transferring it via decoder reuse and early-stage latent distillation. The pretrained encoder also compresses state-action history into a single temporal context token. Validated on 13 cross-embodiment tasks in simulation and real-world settings; gains are especially pronounced in data-scarce real-world conditions.",
           "tags": [
-            "agents",
-            "post-training",
-            "data-curation",
-            "open-source"
+            "robotics",
+            "vla",
+            "cross-embodiment",
+            "flow-matching"
           ],
           "sources": [
             {
               "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2606.24855v1"
+              "url": "https://arxiv.org/abs/2606.26095v1"
             }
           ],
-          "published": "2026-06-23T17:34:29+00:00",
-          "score": 2.5836
+          "published": "2026-06-24T17:59:56+00:00",
+          "score": 1.2996
         },
         {
-          "id": "fda740ab268a",
+          "id": "ce21544309fe",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "InSight: VLAs Autonomously Acquire New Manipulation Skills via Primitive Decomposition and a Data Flywheel",
-          "why_it_matters": "This directly addresses the closed-loop skill ceiling of VLA policies—a core frontier problem in robot learning—by showing continual skill acquisition without human demonstrations, which is highly relevant to agents and world model research.",
-          "summary": "InSight enables vision-language-action models to self-extend beyond their training distribution. Stage 1 segments demonstrations into labeled primitives using VLM plan decomposition and end-effector poses. Stage 2 runs a VLM-guided data flywheel: identify missing primitives, autonomously attempt them with VLM-proposed low-level control, auto-label successes, and retrain. Evaluated on block flipping, drawer closing, sweeping, twisting, and pouring—all without human demonstrations of target skills.",
+          "title": "RevengeBench: Can LLMs Reverse-Engineer Hidden Agent Policies from Behavioral Traces?",
+          "why_it_matters": "This benchmark formalizes policy interpretability as a code-reconstruction inverse problem — relevant for anyone working on opponent modeling, agent interpretability, or using LLMs as scientific reasoners.",
+          "summary": "RevengeBench contains 75 Elo-calibrated LLM-generated policies across five game environments from CodeClash tournaments. A learner observes behavioral traces, designs probing opponent policies, then submits executable code hypotheses evaluated via continuous action-distance metrics. Across 12 frontier LLMs, recovery quality ranges from 34% to 72% of initial action distance closed. Recovered policies show measurable competitive advantage, especially for weaker baseline models.",
           "tags": [
-            "robotics",
-            "vla",
-            "skill-acquisition",
-            "agents"
+            "benchmarks",
+            "interpretability",
+            "agent-modeling",
+            "llm-evaluation"
           ],
           "sources": [
             {
               "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2606.24884v1"
+              "url": "https://arxiv.org/abs/2606.26094v1"
             }
           ],
-          "published": "2026-06-23T17:59:01+00:00",
-          "score": 1.2992
+          "published": "2026-06-24T17:59:46+00:00",
+          "score": 1.2995
         },
         {
-          "id": "8d6b61640393",
+          "id": "23881388d0d2",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "FLUX3D: Image-to-3D Gaussian Splatting via Diffusion-Aligned Sparse Representation",
-          "why_it_matters": "FLUX3D introduces two targeted architectural fixes—DA-SLAT for representation and SMDiT+MARoPE for 2D-3D alignment—that address known structural bottlenecks in sparse-voxel 3DGS generation, relevant to generative 3D and multimodal research.",
-          "summary": "FLUX3D targets two bottlenecks in sparse-voxel image-to-3DGS pipelines: discriminative 2D features that suppress reconstructive cues, and poor 2D-3D token alignment in diffusion transformers. It introduces Diffusion-Aligned Structured Latents (DA-SLAT) with a decoder-only architecture, plus Sparse-structure Multimodal Diffusion Transformer (SMDiT) and Modal-Aware Rotary Positional Embedding (MARoPE). Benchmark results show improved appearance fidelity over prior SOTA methods.",
+          "title": "On-Policy Self-Distillation Trades Output Diversity for Pass@1 Accuracy — Hurting Pass@k and OOD Robustness",
+          "why_it_matters": "If you're using self-distillation with sampled demonstrations as an alternative to RL for post-training, this paper shows it silently collapses output diversity, which matters for best-of-N inference, ensembling, or any setting requiring diverse reasoning strategies.",
+          "summary": "Self-distillation where the teacher is conditioned on a correct demonstration tilts the learned distribution by a pointwise conditional mutual information score, amplifying probability gaps between rollouts rather than preserving them as on-policy RL does. Empirically, self-distilled models match or exceed RL on average accuracy but show substantially lower functional and semantic diversity, with flattened pass@k curves and failures on OOD tasks requiring diverse strategies.",
           "tags": [
-            "3d-generation",
-            "gaussian-splatting",
-            "diffusion-models",
-            "multimodal"
+            "post-training",
+            "self-distillation",
+            "rl",
+            "diversity"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2606.24874v1"
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2606.26091v1"
             }
           ],
-          "published": "2026-06-23T17:52:21+00:00",
-          "score": 1.2972
+          "published": "2026-06-24T17:59:02+00:00",
+          "score": 1.2993
         },
         {
-          "id": "a353833fed64",
-          "tier": "worth_knowing",
+          "id": "a87cd338058b",
+          "tier": "skim",
           "category": "frontier",
-          "title": "Optical Cavity Enables Sub-100 µs Mid-Circuit Measurement and Feedforward in Neutral Atom Arrays",
-          "why_it_matters": "Mid-circuit measurement speed is a key bottleneck for fault-tolerant quantum computing; dropping cycle time from >1 ms to <100 µs with <2% coherence loss on unmeasured qubits is a meaningful hardware milestone for quantum information research.",
-          "summary": "Researchers demonstrate mid-circuit measurement and real-time feedforward in neutral-atom qubit arrays coupled to a high-finesse optical cavity. Local light shifts detune data qubits to protect coherence while a selected qubit is measured via Purcell-enhanced emission. Measuring four qubits with sub-percent infidelity degrades coherence of an unmeasured fifth qubit by less than 2%. Full measurement-and-feedforward cycle time is reduced to below 100 µs, down from the typical >1 ms.",
+          "title": "Quantum Gibbs Samplers Achieve System-Size-Independent Spectral Gap for All-to-All k-Local Hamiltonians at High Temperature",
+          "why_it_matters": "This extends quantum fast-mixing guarantees beyond geometrically-local lattice systems to arbitrary all-to-all connected Hamiltonians — a meaningful theoretical step for quantum ML and quantum simulation applications involving non-local interactions.",
+          "summary": "The paper proves that quantum k-local Hamiltonians with bounded-strength interactions admit a quantum Gibbs sampler with a spectral gap independent of system size at sufficiently high temperatures, generalizing prior fast-mixing results from geometrically-local to all-to-all settings. As a corollary, such systems have fully-polynomial time quantum approximation algorithms for partition functions and global expectation values.",
           "tags": [
             "quantum-computing",
-            "neutral-atoms",
-            "mid-circuit-measurement",
-            "hardware"
+            "quantum-ml",
+            "theoretical-cs",
+            "gibbs-sampling"
           ],
           "sources": [
             {
               "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2606.24869v1"
+              "url": "https://arxiv.org/abs/2606.26090v1"
             }
           ],
-          "published": "2026-06-23T17:48:08+00:00",
-          "score": 1.2959
-        },
-        {
-          "id": "f0c4ab467506",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "IBM's CUGA: Open-Source Enterprise Agent Harness with 24 Working Example Apps",
-          "why_it_matters": "As an AI/ML engineer building agentic systems, CUGA's pre-assembled orchestration loop—planning, CodeAct execution, reflection, variable tracking—lets you skip the plumbing and evaluate whether a lighter open-weight model can replace frontier API calls in production.",
-          "summary": "IBM's CUGA (Configurable Generalist Agent) open-source harness handles planning, tool execution, state management, and reflection so developers only define tools and prompts. A gallery of 24 single-file FastAPI apps demonstrates its use. Supports OpenAI, watsonx, Ollama; tools bind via OpenAPI, MCP, or LangChain. Claims top scores on AppWorld and WebArena benchmarks. Runs on gpt-oss-120b rather than frontier models.",
-          "tags": [
-            "agents",
-            "open-source",
-            "enterprise",
-            "tool-use"
-          ],
-          "sources": [
-            {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/ibm-research/cuga-apps"
-            }
-          ],
-          "published": "2026-06-23T12:51:55+00:00",
-          "score": 1.21
-        },
-        {
-          "id": "861a94f76f29",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "Last Iterate of Stochastic Subgradient Method Is Suboptimal Without i.i.d. Noise—Open Problem Resolved",
-          "why_it_matters": "This resolves a specific open problem in optimization theory relevant to understanding convergence behavior of gradient-based training, with a clean separation between i.i.d. and non-i.i.d. noise regimes.",
-          "summary": "For fixed stepsize η=Θ(1/√n) stochastic subgradient method on 1D convex Lipschitz objectives, the last iterate achieves O(1/√n) error under i.i.d. noise with bounded variance—removing the log(n) factor in existing bounds. Without the i.i.d. assumption, the authors construct a case where error is Ω(log(n)/√n), showing the last iterate is suboptimal under bounded variance alone. This negatively resolves the open problem from Koren and Segal, COLT 2020.",
-          "tags": [
-            "optimization",
-            "convergence-theory",
-            "stochastic-gradient",
-            "theory"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2606.24879v1"
-            }
-          ],
-          "published": "2026-06-23T17:55:18+00:00",
-          "score": 0.4327
-        },
-        {
-          "id": "dba1e8f05869",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "Transformers.js Tests Proposed Cross-Origin Storage API to Eliminate Redundant Model Downloads Across Web Apps",
-          "why_it_matters": "If you build or care about browser-based ML inference, this proposes a structural fix to the major practical barrier—multi-hundred-MB redundant downloads per origin—that currently makes production Transformers.js deployments wasteful.",
-          "summary": "Transformers.js currently re-downloads and re-caches models per browser origin due to Cache API isolation. A 177 MB model used by two apps from different origins results in 354 MB stored. Even shared WebAssembly runtimes (e.g., a 4.7 MB ONNX Runtime Wasm file) are duplicated per origin. The post experiments with a proposed Cross-Origin Storage API that would allow safe sharing of model and Wasm resources across origins.",
-          "tags": [
-            "transformers-js",
-            "browser-ml",
-            "web-standards",
-            "inference"
-          ],
-          "sources": [
-            {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/cross-origin-storage"
-            }
-          ],
-          "published": "2026-06-23T00:00:00+00:00",
-          "score": 0.3373
+          "published": "2026-06-24T17:58:01+00:00",
+          "score": 0.433
         }
       ]
     }
