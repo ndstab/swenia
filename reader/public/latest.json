@@ -1,11 +1,11 @@
 {
-  "date": "2026-06-25",
-  "generated_at": "2026-06-25T04:19:29.725499+00:00",
-  "summary_line": "1 must-know · 5 worth knowing",
+  "date": "2026-06-26",
+  "generated_at": "2026-06-26T04:25:55.172494+00:00",
+  "summary_line": "5 worth knowing",
   "counts": {
     "total": 8,
-    "headlines": 4,
-    "frontier": 4
+    "headlines": 2,
+    "frontier": 6
   },
   "sections": [
     {
@@ -13,91 +13,48 @@
       "title": "Headlines",
       "cards": [
         {
-          "id": "0ce8c6adc247",
-          "tier": "must_know",
-          "category": "headline",
-          "title": "Google Integrates Computer Use Natively into Gemini 3.5 Flash",
-          "why_it_matters": "Gemini 3.5 Flash is now a single API endpoint for function calling, search grounding, and full computer use — a meaningful consolidation for anyone building multi-step agents.",
-          "summary": "Computer use — previously a standalone Gemini 2.5 model — is now a built-in tool in Gemini 3.5 Flash, accessible via the Gemini API and Gemini Enterprise Agent Platform. Safety mitigations include adversarial training against prompt injection, optional user-confirmation gates for irreversible actions, and automatic task-stop on detected indirect injection. Targets browser, mobile, and desktop automation for long-horizon enterprise tasks.",
-          "tags": [
-            "agents",
-            "computer-use",
-            "gemini",
-            "google-deepmind"
-          ],
-          "sources": [
-            {
-              "name": "DeepMind",
-              "url": "https://deepmind.google/blog/introducing-computer-use-in-gemini-3-5-flash/"
-            }
-          ],
-          "published": "2026-06-24T16:30:01+00:00",
-          "score": 2.5456
-        },
-        {
-          "id": "9662972e681e",
-          "tier": "worth_knowing",
-          "category": "headline",
-          "title": "NVIDIA NeMo AutoModel Delivers 3.4–3.7x MoE Fine-Tuning Throughput Over Native Transformers v5",
-          "why_it_matters": "If you fine-tune MoE models, this is a drop-in upgrade — one import swap gives you Expert Parallelism, DeepEP fused all-to-all dispatch, and TransformerEngine kernels with no other code changes.",
-          "summary": "NeMo AutoModel subclasses HuggingFace AutoModelForCausalLM and layers Expert Parallelism, DeepEP fused all-to-all communication-compute overlap, and TransformerEngine kernels on top of Transformers v5. Measured gains vs. native v5: 3.4–3.7x training throughput and 29–32% less GPU memory for MoE fine-tuning. Tested from single-node Qwen3-30B-A3B up to 16-node Nemotron Ultra 550B. Checkpoints remain standard HF format, compatible with vLLM and SGLang.",
-          "tags": [
-            "moe",
-            "fine-tuning",
-            "distributed-training",
-            "nvidia"
-          ],
-          "sources": [
-            {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/nvidia/accelerating-fine-tuning-nvidia-nemo-automodel"
-            }
-          ],
-          "published": "2026-06-24T16:00:13+00:00",
-          "score": 1.2641
-        },
-        {
-          "id": "c8f3104266f9",
-          "tier": "worth_knowing",
-          "category": "headline",
-          "title": "FFASR Leaderboard: First Open Far-Field ASR Benchmark Exposes Large Real-World Performance Gap",
-          "why_it_matters": "If you deploy speech models in any non-headset environment — robots, conference rooms, in-car — this benchmark directly quantifies the degradation you'll encounter and lets you compare models on Pareto WER vs. real-time-factor tradeoffs.",
-          "summary": "Treble Technologies and Hugging Face launched the Far-Field ASR leaderboard, evaluating models across four primary conditions: near-field dry, far-field high SNR (>14 dB), mid SNR (8–12 dB), and low SNR (<6 dB) — simulated across 14 rooms validated against real measurements. Submitted models show far-field WER at low SNR consistently several times higher than near-field WER. Roadmap includes multi-talker, microphone arrays, and echo cancellation.",
-          "tags": [
-            "asr",
-            "speech",
-            "benchmarks",
-            "evaluation"
-          ],
-          "sources": [
-            {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/ffasr-leaderboard"
-            }
-          ],
-          "published": "2026-06-24T00:00:00+00:00",
-          "score": 1.0121
-        },
-        {
-          "id": "02394854355d",
+          "id": "7f1a19cb8458",
           "tier": "skim",
           "category": "headline",
-          "title": "Op-Ed: Why Banning Open-Source AI Would Harm Education, Competition, and Innovation",
-          "why_it_matters": "As U.S. policy moves toward broader AI regulation — including an executive order reviewing AI models and restrictions on foreign nationals accessing frontier models — this piece articulates the technical-community case for keeping open-source AI legal.",
-          "summary": "Co-authored by Nathan Lambert and Kevin Xu, the op-ed argues that open-source AI regulation would undermine three decades of education, innovation, and competition enabled by open software. It cites open source underpinning over 90% of global software and generating over $8 trillion in economic value. Written for a general audience after being rejected by mainstream outlets; authors are self-publishing to reach undecided readers.",
+          "title": "HF Jobs: One-Command vLLM Server on HF Infrastructure",
+          "why_it_matters": "If you run evals or batch inference regularly, this gives you a reproducible, token-gated OpenAI-compatible endpoint on demand without managing your own GPU infra.",
+          "summary": "A single `hf jobs run` command launches a vLLM OpenAI-compatible server on HF-managed GPUs (e.g., a10g-large at $1.50/hr). The exposed port is proxied through HF's jobs proxy, gated by HF token. Scales to multi-GPU with `--tensor-parallel-size`; cancel explicitly to avoid billing.",
           "tags": [
-            "policy",
-            "open-source",
-            "ai-regulation"
+            "inference",
+            "vllm",
+            "hugging-face",
+            "mlops"
           ],
           "sources": [
             {
-              "name": "Interconnects",
-              "url": "https://www.interconnects.ai/p/banning-open-source-ai-would-be-a"
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/vllm-jobs"
             }
           ],
-          "published": "2026-06-19T13:02:47+00:00",
-          "score": 0.0764
+          "published": "2026-06-26T00:00:00+00:00",
+          "score": 0.4702
+        },
+        {
+          "id": "04bd48744b58",
+          "tier": "skim",
+          "category": "headline",
+          "title": "OLMo Hybrid vs. OLMo 3: Token-Level Analysis Reveals Where Recurrence Beats Attention",
+          "why_it_matters": "This controlled architectural comparison (matched data, tokenizer, training recipe) gives concrete, token-level signal on exactly where hybrid recurrent-attention models outperform pure transformers — directly relevant to architecture decisions.",
+          "summary": "Comparing 7B OLMo 3 (pure transformer) and OLMo Hybrid (attention + recurrent layers) at token level, HF researchers find the hybrid outperforms on semantically meaningful tokens (nouns, verbs, adjectives) and coreference-dependent tokens. The transformer's advantage emerges on verbatim-copy tokens where exact recall from context is sufficient.",
+          "tags": [
+            "hybrid-models",
+            "transformers",
+            "architecture",
+            "olmo"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/allenai/hybrid-token-prediction"
+            }
+          ],
+          "published": "2026-06-25T16:11:42+00:00",
+          "score": 0.4219
         }
       ]
     },
@@ -106,92 +63,136 @@
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "dd418ddeb612",
+          "id": "fb0521b984d0",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Pretraining VLA Action Modules on Motion Priors Improves Cross-Embodiment Robot Policies",
-          "why_it_matters": "For researchers working on robot learning or VLA architectures, this two-stage flow-matching pretraining approach directly addresses the cold-start problem for action modules and shows scaling the action pretraining data improves downstream VLA performance.",
-          "summary": "The paper proposes pretraining a flow-matching encoder-decoder action module on unconditioned action trajectories before VLA training, then transferring it via decoder reuse and early-stage latent distillation. The pretrained encoder also compresses state-action history into a single temporal context token. Validated on 13 cross-embodiment tasks in simulation and real-world settings; gains are especially pronounced in data-scarce real-world conditions.",
+          "title": "DanceOPD: On-Policy Generative Field Distillation for Composing Image Generation Capabilities",
+          "why_it_matters": "Composing conflicting capabilities (T2I, local edit, global edit) in a single flow-matching model is a core training challenge; this paper offers a practical distillation framework for it.",
+          "summary": "DanceOPD routes each training sample to one capability field, queries a low-noise student-induced state, and trains with a velocity MSE objective within a flow-matching framework. Each capability is a velocity field over shared flow state space; the student learns on its own rollout states. The framework also absorbs operator-defined fields such as classifier-free guidance.",
           "tags": [
-            "robotics",
-            "vla",
-            "cross-embodiment",
-            "flow-matching"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2606.26095v1"
-            }
-          ],
-          "published": "2026-06-24T17:59:56+00:00",
-          "score": 1.2996
-        },
-        {
-          "id": "ce21544309fe",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "RevengeBench: Can LLMs Reverse-Engineer Hidden Agent Policies from Behavioral Traces?",
-          "why_it_matters": "This benchmark formalizes policy interpretability as a code-reconstruction inverse problem — relevant for anyone working on opponent modeling, agent interpretability, or using LLMs as scientific reasoners.",
-          "summary": "RevengeBench contains 75 Elo-calibrated LLM-generated policies across five game environments from CodeClash tournaments. A learner observes behavioral traces, designs probing opponent policies, then submits executable code hypotheses evaluated via continuous action-distance metrics. Across 12 frontier LLMs, recovery quality ranges from 34% to 72% of initial action distance closed. Recovered policies show measurable competitive advantage, especially for weaker baseline models.",
-          "tags": [
-            "benchmarks",
-            "interpretability",
-            "agent-modeling",
-            "llm-evaluation"
+            "generative-models",
+            "distillation",
+            "flow-matching",
+            "image-generation"
           ],
           "sources": [
             {
               "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2606.26094v1"
+              "url": "https://arxiv.org/abs/2606.27377v1"
             }
           ],
-          "published": "2026-06-24T17:59:46+00:00",
-          "score": 1.2995
+          "published": "2026-06-25T17:59:58+00:00",
+          "score": 1.2977
         },
         {
-          "id": "23881388d0d2",
+          "id": "4aba859fe3c5",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "On-Policy Self-Distillation Trades Output Diversity for Pass@1 Accuracy — Hurting Pass@k and OOD Robustness",
-          "why_it_matters": "If you're using self-distillation with sampled demonstrations as an alternative to RL for post-training, this paper shows it silently collapses output diversity, which matters for best-of-N inference, ensembling, or any setting requiring diverse reasoning strategies.",
-          "summary": "Self-distillation where the teacher is conditioned on a correct demonstration tilts the learned distribution by a pointwise conditional mutual information score, amplifying probability gaps between rollouts rather than preserving them as on-policy RL does. Empirically, self-distilled models match or exceed RL on average accuracy but show substantially lower functional and semantic diversity, with flattened pass@k curves and failures on OOD tasks requiring diverse strategies.",
+          "title": "RiVER: RL Training Without Ground-Truth Solutions Generalizes Coding Ability",
+          "why_it_matters": "Extending RLVR beyond ground-truth-labeled tasks is a key frontier problem; RiVER's transfer from heuristic optimization tasks to exact-solution benchmarks is a meaningful empirical result.",
+          "summary": "RiVER applies group-relative RL to score-based optimization tasks (AtCoder Heuristic Contest) using deterministic execution feedback without ground-truth answers. It addresses scale dominance and frequency dominance via instance-wise reward calibration. Trained only on heuristic tasks, it improves Qwen3-8B by 8.9% and GLM-Z1-9B-0414 by 9.4% on ALE rating rank, and also gains 2.4% and 3.5% on LiveCodeBench and USACO respectively.",
           "tags": [
-            "post-training",
-            "self-distillation",
-            "rl",
-            "diversity"
+            "reinforcement-learning",
+            "rlvr",
+            "coding",
+            "post-training"
           ],
           "sources": [
             {
               "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2606.26091v1"
+              "url": "https://arxiv.org/abs/2606.27369v1"
             }
           ],
-          "published": "2026-06-24T17:59:02+00:00",
-          "score": 1.2993
+          "published": "2026-06-25T17:59:36+00:00",
+          "score": 1.2976
         },
         {
-          "id": "a87cd338058b",
+          "id": "43937f4801e6",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Autoregressive Boltzmann Generators: LLM-Style Architectures for Molecular Equilibrium Sampling",
+          "why_it_matters": "Applying autoregressive LLM architectures to physics sampling problems is a meaningful cross-domain transfer; the 60%+ zero-shot energy error reduction on 8-residue systems is a notable benchmark result.",
+          "summary": "ArBG replaces normalizing flows in Boltzmann Generators with autoregressive models, bypassing topological constraints and enabling sequential inference-time interventions. A 132M parameter transferable model (Robin) reduces zero-shot energy error (E-W2) on 8-residue peptide systems by over 60% versus prior SOTA. Gains are especially large on the 10-residue Chignolin benchmark.",
+          "tags": [
+            "molecular-simulation",
+            "generative-models",
+            "autoregressive",
+            "scientific-ml"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2606.27361v1"
+            }
+          ],
+          "published": "2026-06-25T17:58:21+00:00",
+          "score": 1.2972
+        },
+        {
+          "id": "de015799898c",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Sequence Probability Predicts Correctness Across Prompts But Not Across Decoding Choices",
+          "why_it_matters": "This clarifies when decoding tricks that push toward higher-probability outputs actually help — directly relevant to anyone designing inference pipelines, self-consistency schemes, or verifier-free self-improvement.",
+          "summary": "Across decoding methods, hyperparameters, models, and benchmarks, higher sequence probability is predictive of correctness when comparing different prompt-answer pairs within a dataset. However, increasing sequence probability by changing decoding hyperparameters or methods does not reliably improve accuracy, and probability is a poor indicator of correctness across repeated responses to the same prompt.",
+          "tags": [
+            "decoding",
+            "inference",
+            "llm-evaluation",
+            "reasoning"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2606.27359v1"
+            }
+          ],
+          "published": "2026-06-25T17:58:02+00:00",
+          "score": 1.2971
+        },
+        {
+          "id": "063e02b01980",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Error-Conditioned Neural Solvers Feed PDE Residual Directly as Input for Iterative Self-Correction",
+          "why_it_matters": "The finding that residual minimization is an unreliable proxy for reconstruction accuracy in ill-conditioned PDEs, plus a 10× gain on turbulent Kolmogorov flow, matters for anyone working on neural PDE surrogates or physics-informed ML.",
+          "summary": "ENS passes the PDE residual field as a direct input to the network at each iteration, letting it learn an update policy rather than optimizing residual as a loss. Across four PDE families it achieves highest accuracy in most settings, with up to 10× improvement on turbulent Kolmogorov flow. The correction policy generalizes zero-shot under distribution shift and cross-equation transfer, with the largest advantage in ill-conditioned regimes.",
+          "tags": [
+            "scientific-ml",
+            "pde",
+            "neural-solvers",
+            "physics-informed"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2606.27354v1"
+            }
+          ],
+          "published": "2026-06-25T17:56:27+00:00",
+          "score": 1.2966
+        },
+        {
+          "id": "394735703159",
           "tier": "skim",
           "category": "frontier",
-          "title": "Quantum Gibbs Samplers Achieve System-Size-Independent Spectral Gap for All-to-All k-Local Hamiltonians at High Temperature",
-          "why_it_matters": "This extends quantum fast-mixing guarantees beyond geometrically-local lattice systems to arbitrary all-to-all connected Hamiltonians — a meaningful theoretical step for quantum ML and quantum simulation applications involving non-local interactions.",
-          "summary": "The paper proves that quantum k-local Hamiltonians with bounded-strength interactions admit a quantum Gibbs sampler with a spectral gap independent of system size at sufficiently high temperatures, generalizing prior fast-mixing results from geometrically-local to all-to-all settings. As a corollary, such systems have fully-polynomial time quantum approximation algorithms for partition functions and global expectation values.",
+          "title": "Surface-Code Catalyst States Enable Exact Fine Dyadic Phase Gates with Constant Online Depth",
+          "why_it_matters": "Removing approximation error from non-Clifford gates while keeping online non-Clifford depth constant is a key milestone for fault-tolerant quantum computing; this protocol achieves both with a single verification round.",
+          "summary": "A new surface-code cultivation protocol creates reusable logical catalyst states implementing exact Z^{2^-b} phase gates via phase kickback, eliminating Clifford+T synthesis approximation error. A sqrt(T) = Z^{1/8} demonstration uses a nine-qubit brickwork Clifford circuit. At physical error rate p=10^-3, the postselected catalyst reaches distance-7 surface-code blocks with logical leakage ~10^-6 in ~7 attempts.",
           "tags": [
             "quantum-computing",
-            "quantum-ml",
-            "theoretical-cs",
-            "gibbs-sampling"
+            "fault-tolerance",
+            "surface-codes",
+            "quantum-error-correction"
           ],
           "sources": [
             {
               "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2606.26090v1"
+              "url": "https://arxiv.org/abs/2606.27358v1"
             }
           ],
-          "published": "2026-06-24T17:58:01+00:00",
-          "score": 0.433
+          "published": "2026-06-25T17:58:01+00:00",
+          "score": 0.4324
         }
       ]
     }
