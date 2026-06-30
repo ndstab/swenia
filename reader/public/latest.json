@@ -1,174 +1,175 @@
 {
-  "date": "2026-06-29",
-  "generated_at": "2026-06-29T04:54:14.098592+00:00",
-  "summary_line": "3 worth knowing",
+  "date": "2026-06-30",
+  "generated_at": "2026-06-30T04:20:47.224866+00:00",
+  "summary_line": "4 worth knowing",
   "counts": {
     "total": 7,
-    "headlines": 1,
-    "frontier": 6
+    "headlines": 0,
+    "frontier": 7
   },
   "sections": [
     {
       "key": "headlines",
       "title": "Headlines",
-      "cards": [
-        {
-          "id": "faa66b8b23af",
-          "tier": "worth_knowing",
-          "category": "headline",
-          "title": "Open Model Ecosystem Diversifies: NVIDIA Nemotron-550B and Cohere Command A+ Go Apache 2.0",
-          "why_it_matters": "Tracks the structural shift in who is releasing open weights and why — directly relevant for choosing models and understanding supply-chain dependencies in your research stack.",
-          "summary": "A taxonomy of open-model motivations (pure model makers, Big Tech, product companies) frames recent releases: NVIDIA's Nemotron-Ultra-550B-A55B uses LatentMoE and adopts the OpenMDW license; Cohere's Command A+ (218B-A25B MoE) flips from non-commercial to Apache 2.0 and handles multimodal, multilingual, and agentic tasks on a single B200 at 4-bit.",
-          "tags": [
-            "open-weights",
-            "model-releases",
-            "moe",
-            "licensing"
-          ],
-          "sources": [
-            {
-              "name": "Interconnects",
-              "url": "https://www.interconnects.ai/p/artifacts-22-zyphra-cohere-and-poolside"
-            }
-          ],
-          "published": "2026-06-28T17:03:07+00:00",
-          "score": 1.2723
-        }
-      ]
+      "cards": []
     },
     {
       "key": "frontier",
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "8ede95cf71be",
+          "id": "91d16542fa1f",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "DexCompose: Role-Aware Residual Framework Composes Dexterous Manipulation Policies at 77.4% Success",
-          "why_it_matters": "Finger-level action ownership is a concrete structural inductive bias for multi-task RL in robotics — relevant if you follow compositional policy learning or dexterous manipulation research.",
-          "summary": "DexCompose reuses pretrained full-hand policies by identifying via release tests which fingers must be preserved for an existing skill, then trains two asymmetric residual modules: a bounded stabilizer for the first task and a context-aware residual constrained to fingers assigned to the new task. Evaluated on 16 composite tasks across four object-retention and four downstream interactions, it achieves 77.4% average composite success rate.",
+          "title": "DiScoFormer: One Transformer Estimates Both Density and Score Across Distributions Without Retraining",
+          "why_it_matters": "As a research engineer working with generative models, score estimation, or Bayesian sampling, DiScoFormer offers a single in-context model replacing per-distribution retraining while provably generalizing KDE.",
+          "summary": "DiScoFormer uses a cross-attention transformer to jointly estimate probability density and score (gradient of log-density) from a finite sample in one forward pass. A shared backbone with two heads enforces a label-free consistency loss between outputs. The authors prove a single attention head subsumes KDE as a special case. Trained on Gaussian Mixture Models with closed-form targets, the model adapts to out-of-distribution inputs at inference via gradient steps on the consistency loss.",
           "tags": [
-            "robotics",
-            "reinforcement-learning",
-            "policy-composition",
-            "dexterous-manipulation"
+            "density estimation",
+            "score matching",
+            "transformers",
+            "generative models"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2606.28323v1"
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/allenai/discoformer"
             }
           ],
-          "published": "2026-06-26T17:59:57+00:00",
-          "score": 0.6619
+          "published": "2026-06-29T18:02:48+00:00",
+          "score": 1.3001
         },
         {
-          "id": "6b66560fc88c",
+          "id": "72aa1d5b4761",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "MDM-VGB: Backtracking Markov Chain Sampler Gives Quadratic Complexity for Reward-Guided Masked Diffusion",
-          "why_it_matters": "Addresses inference-time scaling for discrete diffusion with a principled complexity guarantee — relevant if you work on constrained generation, scientific ML, or test-time compute methods.",
-          "summary": "MDM-VGB augments masked diffusion model generation with a backtracking random walk extended from a prefix tree to a masked-state graph, allowing tokens to unmask and remask at arbitrary positions to favor higher-reward partial configurations. The method is proven robust to process-verifier noise and achieves quadratic complexity, versus potential exponential complexity for best-of-N due to error accumulation. Strong results reported on Sudoku and QM9 benchmarks.",
+          "title": "VLK: 48K Synthetic Trajectories Enable Sim-to-Real Humanoid Loco-Manipulation via 3D Gaussian Splatting",
+          "why_it_matters": "For robotics-adjacent ML engineers, this pipeline demonstrates a scalable route to vision-language-kinematics supervision without human annotation, addressing a core data bottleneck in embodied agents.",
+          "summary": "VLK addresses the lack of synchronized egocentric images, language commands, and robot-compatible kinematic data by generating 48,000 paired trajectories synthetically. 3D Gaussian Splatting reconstructs metric-scale indoor scenes; navigation and object-interaction trajectories are synthesized using privileged scene information; egocentric observations are rendered post-hoc. A VLK policy predicts short-horizon whole-body kinematics, converted to actions via a whole-body tracker, and evaluated on a physical Unitree G1.",
           "tags": [
-            "diffusion-models",
-            "inference-time-scaling",
-            "discrete-generation",
-            "reward-optimization"
+            "humanoid robotics",
+            "sim-to-real",
+            "embodied agents",
+            "synthetic data"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2606.28301v1"
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2606.30645v1"
             }
           ],
-          "published": "2026-06-26T17:47:09+00:00",
-          "score": 0.6599
+          "published": "2026-06-29T17:59:55+00:00",
+          "score": 1.2992
         },
         {
-          "id": "3901b43a7a20",
-          "tier": "skim",
+          "id": "99d15d8140a7",
+          "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Diameter-Truncated Operator Evolution: Leaner Quantum Simulation via Spatial Support Cutoff",
-          "why_it_matters": "Offers a physically motivated alternative truncation scheme to weight-based methods for quantum dynamics simulation — relevant if you track quantum computing or quantum ML infrastructure.",
-          "summary": "Instead of truncating Pauli-string expansions by operator weight (number of non-trivial terms), this method truncates by operator diameter — the spatial extent of support on the lattice. Applied to the kicked Ising and Heisenberg XXZ models, the approach accurately recovers local correlation functions and transport properties while remaining computationally tractable, with existing circuit-complexity arguments supporting the truncation's validity.",
+          "title": "WorldEvolver: Self-Evolving World Models Improve LLM Agent Planning via Test-Time Memory Revision",
+          "why_it_matters": "Directly relevant to researchers building LLM agents: WorldEvolver shows test-time context revision—without touching model weights—can meaningfully improve both world model accuracy and downstream planning success.",
+          "summary": "WorldEvolver revises a world model's deployment-time context while keeping the downstream agent and all parameters frozen. Three modules work together: Episodic Memory (retrieval-based simulation of real transitions), Semantic Memory (heuristic rules extracted from prediction-observation mismatches), and Selective Foresight (filtering low-confidence predictions before injecting them into agent context). Evaluated on ALFWorld and ScienceWorld, WorldEvolver achieves the highest prediction accuracy across three backbones and leads other world model baselines on downstream agent success rate.",
           "tags": [
-            "quantum-computing",
-            "quantum-simulation",
-            "operator-dynamics"
+            "llm agents",
+            "world models",
+            "planning",
+            "test-time adaptation"
           ],
           "sources": [
             {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2606.28313v1"
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2606.30639v1"
             }
           ],
-          "published": "2026-06-26T17:56:45+00:00",
-          "score": 0.2205
+          "published": "2026-06-29T17:58:43+00:00",
+          "score": 1.2988
         },
         {
-          "id": "d7c117b70215",
-          "tier": "skim",
+          "id": "8f19f4d4d740",
+          "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Proper Positive-Only PAC Learning Characterized by VC Dimension Plus 'Uniform Exterior Separability'",
-          "why_it_matters": "Settles a decades-open question in learning theory with separations — proper vs. improper, randomized vs. deterministic — that reframe fundamental assumptions underlying ML theory.",
-          "summary": "For binary classification from positive-only samples (Natarajan 1987), this work proves a concept class is properly learnable if and only if it has finite VC dimension and satisfies a new condition called uniform exterior separability. Multiple separation results follow: proper and improper learning differ, randomized and deterministic proper learning differ, ERM can fail, and finite VC dimension does not guarantee non-uniform learning.",
+          "title": "Muon Optimizer Enables Stable Asynchronous Pipeline-Parallel LLM Pretraining Up to 10B Parameters",
+          "why_it_matters": "Any engineer running large-scale LLM pretraining should know that optimizer choice—not asynchrony itself—determines whether pipeline bubbles can be eliminated without accuracy loss.",
+          "summary": "PipeDream-2BW's constant one-step gradient delay was believed to cause instability, limiting adoption of asynchronous pipeline parallelism. This paper shows the degradation is optimizer-dependent: AdamW suffers severe degradation under one-step delay, while Muon is robustly stable. An optimizer-agnostic Error Feedback-inspired correction further mitigates delay effects, with convergence proofs provided for Muon. Experiments on models up to 10B parameters confirm the approach matches synchronous training performance.",
           "tags": [
-            "learning-theory",
-            "pac-learning",
-            "combinatorics"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2606.28309v1"
-            }
-          ],
-          "published": "2026-06-26T17:54:13+00:00",
-          "score": 0.2203
-        },
-        {
-          "id": "8b6f7eb9f199",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "Nash Equilibrium Selection Is Algorithm-Dependent: Regularized Methods Converge to Max-Entropy Member",
-          "why_it_matters": "Clarifies that treating CFR and regularized methods as interchangeable solvers is wrong — with measurable downstream consequences — relevant for multi-agent RL and game-theoretic AI research.",
-          "summary": "On six exactly solvable zero-sum games with known Nash polytopes, selection is determined by algorithm family, not random seed. Regularized last-iterate methods (R-NaD, magnetic mirror descent) converge to the maximum-entropy Nash member — R-NaD hits it in 100% of a 180-game ensemble — while regret-averaging methods (CFR, CFR+, fictitious play) drift to lower-entropy boundary faces (CFR+ strictly below max-entropy in 94% of games, p<10⁻²⁷). In Kuhn poker, the max-entropy member is a strictly better hedge against sub-optimal opponents.",
-          "tags": [
-            "game-theory",
-            "multi-agent",
-            "reinforcement-learning",
+            "llm training",
+            "pipeline parallelism",
+            "distributed training",
             "optimization"
           ],
           "sources": [
             {
               "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2606.28308v1"
+              "url": "https://arxiv.org/abs/2606.30634v1"
             }
           ],
-          "published": "2026-06-26T17:53:30+00:00",
-          "score": 0.2203
+          "published": "2026-06-29T17:57:50+00:00",
+          "score": 1.2986
         },
         {
-          "id": "49bc2ef4ff9a",
+          "id": "4c5e5cca9291",
           "tier": "skim",
           "category": "frontier",
-          "title": "Bregman ADMM Achieves Almost-Sure Second-Order KKT Stationarity Under Non-Lipschitz Objectives",
-          "why_it_matters": "Extends strict-saddle avoidance theory to non-Lipschitz polynomial objectives (matrix/tensor models) without global gradient bounds — useful for researchers working on distributed or structured nonconvex optimization.",
-          "summary": "Under two-sided relative smoothness (Hessian comparison to a Bregman kernel rather than global Lipschitz gradient bounds), one iteration of Bregman ADMM defines a smooth primal-dual fixed-point map whose strict-saddle KKT points are unstable. Random initialization therefore avoids saddles with probability zero, yielding almost-sure second-order stationarity. The analysis extends to multi-block star consensus for distributed optimization; experiments cover distributed matrix factorization and symmetric tensor factorization.",
+          "title": "LeVo 2: Hybrid LLM-Diffusion Framework Approaches Commercial Systems on Full-Length Song Generation",
+          "why_it_matters": "The hierarchical modeling and staged post-training strategy (SFT → offline DPO → semi-online DPO) is directly applicable to any researcher working on controllable generation or preference alignment pipelines.",
+          "summary": "LeVo 2 combines a language model (LeLM) with a diffusion-based Music Codec for full-length song generation. LeLM first predicts mixed tokens for semantic planning, then predicts vocal and accompaniment tokens in parallel. An aesthetics-guided pre-training assigns musicality-tier conditions to large-scale data; progressive post-training applies SFT, large-scale offline DPO, and closed-loop semi-online DPO sequentially. Expert listening tests show LeVo 2 outperforms open-source baselines on six subjective dimensions and approaches leading commercial systems on several metrics.",
           "tags": [
-            "optimization",
-            "nonconvex",
-            "distributed-learning",
-            "theory"
+            "audio generation",
+            "rlhf",
+            "diffusion",
+            "controllable generation"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2606.28307v1"
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2606.30642v1"
             }
           ],
-          "published": "2026-06-26T17:52:39+00:00",
-          "score": 0.2203
+          "published": "2026-06-29T17:59:20+00:00",
+          "score": 0.433
+        },
+        {
+          "id": "ac8b44e02d82",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Survey: Authentication Protocols for Quantum Networks—Candidates, Trade-offs, and QKD Integration",
+          "why_it_matters": "For researchers building or analyzing quantum ML or quantum communication systems, this review clarifies which authentication schemes are composable and scalable, a prerequisite often glossed over in protocol papers.",
+          "summary": "This review distinguishes three authentication flavors—classical message authentication, quantum message authentication, and entity authentication—comparing representative protocols on security assumptions, composability, and scalability. Hardware-assisted approaches are also covered. A detailed QKD case study anchors the discussion, with extensions to protocols beyond QKD where authentication roles are more complex. The authors argue authentication is not an intrinsic bottleneck but must be matched explicitly to functionality and deployment assumptions.",
+          "tags": [
+            "quantum networks",
+            "cryptography",
+            "quantum key distribution",
+            "authentication"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2606.30636v1"
+            }
+          ],
+          "published": "2026-06-29T17:58:16+00:00",
+          "score": 0.4329
+        },
+        {
+          "id": "00683ca8032d",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "First Proof of Random-Matrix Spectral Ramp in a Static, Geometrically Local Many-Body Hamiltonian",
+          "why_it_matters": "A landmark theoretical result in quantum chaos: proving the spectral form factor ramp in a time-independent local Hamiltonian closes a long-standing gap left by the Bertini-Kos-Prosen result restricted to Floquet systems.",
+          "summary": "Building on the Bertini-Kos-Prosen (BKP) result for dual-unitary Floquet circuits and a Feynman-Kitaev clock construction, the authors embed the Floquet quasienergy spectrum of a dual-unitary circuit into the energy spectrum of a static local Hamiltonian. They prove the static Hamiltonian's connected spectral form factor inherits the BKP linear-growth ramp within a symmetry sector. This is claimed as the first proof of a spectral ramp in a time-independent, geometrically local many-body system with finite local Hilbert space dimension.",
+          "tags": [
+            "quantum chaos",
+            "many-body physics",
+            "spectral form factor",
+            "quantum computing"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2606.30635v1"
+            }
+          ],
+          "published": "2026-06-29T17:57:57+00:00",
+          "score": 0.4329
         }
       ]
     }
