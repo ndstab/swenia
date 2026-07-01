@@ -1,175 +1,202 @@
 {
-  "date": "2026-06-30",
-  "generated_at": "2026-06-30T04:20:47.224866+00:00",
-  "summary_line": "4 worth knowing",
+  "date": "2026-07-01",
+  "generated_at": "2026-07-01T04:48:53.511820+00:00",
+  "summary_line": "1 must-know · 4 worth knowing",
   "counts": {
-    "total": 7,
-    "headlines": 0,
-    "frontier": 7
+    "total": 8,
+    "headlines": 4,
+    "frontier": 4
   },
   "sections": [
     {
       "key": "headlines",
       "title": "Headlines",
-      "cards": []
+      "cards": [
+        {
+          "id": "adbaffb551ff",
+          "tier": "must_know",
+          "category": "headline",
+          "title": "Google DeepMind Releases Imagen 3 Flash Lite Image Model and Makes Veo 2 Flash Available to Developers",
+          "why_it_matters": "As an AI/ML engineer tracking Google DeepMind's generative media stack, these two releases expand the developer-accessible model lineup with concrete latency and cost figures you can evaluate for production pipelines.",
+          "summary": "Google releases two models: a fast image model (gemini-3.1-flash-lite-image, 4-second text-to-image latency, $0.034 per 1K images) positioned as the replacement for the legacy gemini-2.5-flash-image, and Veo 2 Flash (for video generation and conversational editing), now available in Google AI Studio and Gemini API for the first time. Both target high-throughput, cost-sensitive developer workflows.",
+          "tags": [
+            "google deepmind",
+            "generative media",
+            "image generation",
+            "video generation"
+          ],
+          "sources": [
+            {
+              "name": "DeepMind",
+              "url": "https://deepmind.google/blog/start-building-with-nano-banana-2-lite-and-gemini-omni-flash/"
+            }
+          ],
+          "published": "2026-06-30T16:02:40+00:00",
+          "score": 2.5124
+        },
+        {
+          "id": "8654826289ec",
+          "tier": "skim",
+          "category": "headline",
+          "title": "ScarfBench: New Benchmark Reveals AI Agents Struggle with Enterprise Java Framework Migration",
+          "why_it_matters": "If you work on coding agents or software engineering benchmarks, ScarfBench exposes a critical gap: build-success metrics dramatically overstate real migration quality, which matters for evaluating and improving agent reliability on real-world codebases.",
+          "summary": "ScarfBench evaluates AI agents on cross-framework Java migration (Spring, Jakarta EE, Quarkus) using build, deploy, and behavioral validation — not reference-code matching. Frontier agents underperform: compile success consistently exceeds deploy success, which exceeds behavioral success. Claude Code self-reported 29/30 successful builds; only 22 actually built. Jakarta EE migrations proved hardest; whole-application tasks remain especially challenging.",
+          "tags": [
+            "coding agents",
+            "software engineering",
+            "benchmarks",
+            "java"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/ibm-research/scarfbench"
+            }
+          ],
+          "published": "2026-06-30T18:32:50+00:00",
+          "score": 0.4335
+        },
+        {
+          "id": "d7f8db1c666b",
+          "tier": "skim",
+          "category": "headline",
+          "title": "LeCun Co-Authors Paper Arguing Universal AI Generality Is Practically Impossible via No-Free-Lunch and Biology",
+          "why_it_matters": "LeCun's name attached to a formal convergence argument for specialization — drawing on No-Free-Lunch theorems, evolutionary biology, and organizational economics — makes this worth tracking as a potential influence on how the field frames generalist vs. specialist model development.",
+          "summary": "A 2026 paper by Goldfeder, Wyder, LeCun, and Shwartz-Ziv argues specialization is structurally inevitable across optimization theory (Wolpert & Macready 1997 No-Free-Lunch), evolutionary biology, and competitive markets. The core claim: under finite resources, performance advantage requires concentration on a target distribution; universal generality is mathematically non-advantageous and practically unachievable.",
+          "tags": [
+            "specialization",
+            "no-free-lunch",
+            "lecun",
+            "theory"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/Dharma-AI/why-specialization-is-inevitable"
+            }
+          ],
+          "published": "2026-06-30T14:39:11+00:00",
+          "score": 0.4107
+        },
+        {
+          "id": "3f0a56fa7011",
+          "tier": "skim",
+          "category": "headline",
+          "title": "Hugging Face and EvalEval Coalition Launch Unified Eval Reporting Schema with 229K Results Across 22K Models",
+          "why_it_matters": "Inconsistent eval reporting (e.g., LLaMA 65B scoring both 63.7 and 48.8 on MMLU) directly affects how you compare models; this infrastructure — a common JSON schema plus Hub integration — is now the practical standard for reproducible benchmark reporting.",
+          "summary": "The EEE (Every Eval Ever) schema from the EvalEval Coalition provides a single JSON format capturing evaluator identity, model access method, generation settings, and per-sample outputs. A converter writes Hugging Face Community Evals YAML from EEE records automatically. The datastore now holds ~229,000 results across 22,000+ models and 2,200 benchmarks sourced from 31 reporting formats; organization-submitted results receive a verified checkmark on EvalEval.",
+          "tags": [
+            "evaluation",
+            "benchmarks",
+            "reproducibility",
+            "hugging face"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/eee-community-evals"
+            }
+          ],
+          "published": "2026-06-30T00:00:00+00:00",
+          "score": 0.3351
+        }
+      ]
     },
     {
       "key": "frontier",
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "91d16542fa1f",
+          "id": "aaf8e1d194bd",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "DiScoFormer: One Transformer Estimates Both Density and Score Across Distributions Without Retraining",
-          "why_it_matters": "As a research engineer working with generative models, score estimation, or Bayesian sampling, DiScoFormer offers a single in-context model replacing per-distribution retraining while provably generalizing KDE.",
-          "summary": "DiScoFormer uses a cross-attention transformer to jointly estimate probability density and score (gradient of log-density) from a finite sample in one forward pass. A shared backbone with two heads enforces a label-free consistency loss between outputs. The authors prove a single attention head subsumes KDE as a special case. Trained on Gaussian Mixture Models with closed-form targets, the model adapts to out-of-distribution inputs at inference via gradient steps on the consistency loss.",
+          "title": "Fixed Counterfactual Explanation Datasets Can Produce Faithful LM Self-Reports Despite Behavioral Drift",
+          "why_it_matters": "For researchers working on interpretability and post-training, this result challenges the assumption that explanation supervision must be updated as model behavior shifts — with implications for scalable introspection pipelines.",
+          "summary": "LMs trained to explain which input features drive their predictions using fixed counterfactual supervision — derived from earlier checkpoints or behaviorally similar models — often produce explanations more faithful to their current behavior than to the training target. This 'introspective coupling' persists across sycophancy and refusal tasks, is robust to label noise, and tracks behavior shifts when explanation training runs concurrently with other post-training objectives.",
           "tags": [
-            "density estimation",
-            "score matching",
-            "transformers",
-            "generative models"
-          ],
-          "sources": [
-            {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/allenai/discoformer"
-            }
-          ],
-          "published": "2026-06-29T18:02:48+00:00",
-          "score": 1.3001
-        },
-        {
-          "id": "72aa1d5b4761",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "VLK: 48K Synthetic Trajectories Enable Sim-to-Real Humanoid Loco-Manipulation via 3D Gaussian Splatting",
-          "why_it_matters": "For robotics-adjacent ML engineers, this pipeline demonstrates a scalable route to vision-language-kinematics supervision without human annotation, addressing a core data bottleneck in embodied agents.",
-          "summary": "VLK addresses the lack of synchronized egocentric images, language commands, and robot-compatible kinematic data by generating 48,000 paired trajectories synthetically. 3D Gaussian Splatting reconstructs metric-scale indoor scenes; navigation and object-interaction trajectories are synthesized using privileged scene information; egocentric observations are rendered post-hoc. A VLK policy predicts short-horizon whole-body kinematics, converted to actions via a whole-body tracker, and evaluated on a physical Unitree G1.",
-          "tags": [
-            "humanoid robotics",
-            "sim-to-real",
-            "embodied agents",
-            "synthetic data"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2606.30645v1"
-            }
-          ],
-          "published": "2026-06-29T17:59:55+00:00",
-          "score": 1.2992
-        },
-        {
-          "id": "99d15d8140a7",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "WorldEvolver: Self-Evolving World Models Improve LLM Agent Planning via Test-Time Memory Revision",
-          "why_it_matters": "Directly relevant to researchers building LLM agents: WorldEvolver shows test-time context revision—without touching model weights—can meaningfully improve both world model accuracy and downstream planning success.",
-          "summary": "WorldEvolver revises a world model's deployment-time context while keeping the downstream agent and all parameters frozen. Three modules work together: Episodic Memory (retrieval-based simulation of real transitions), Semantic Memory (heuristic rules extracted from prediction-observation mismatches), and Selective Foresight (filtering low-confidence predictions before injecting them into agent context). Evaluated on ALFWorld and ScienceWorld, WorldEvolver achieves the highest prediction accuracy across three backbones and leads other world model baselines on downstream agent success rate.",
-          "tags": [
-            "llm agents",
-            "world models",
-            "planning",
-            "test-time adaptation"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2606.30639v1"
-            }
-          ],
-          "published": "2026-06-29T17:58:43+00:00",
-          "score": 1.2988
-        },
-        {
-          "id": "8f19f4d4d740",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "Muon Optimizer Enables Stable Asynchronous Pipeline-Parallel LLM Pretraining Up to 10B Parameters",
-          "why_it_matters": "Any engineer running large-scale LLM pretraining should know that optimizer choice—not asynchrony itself—determines whether pipeline bubbles can be eliminated without accuracy loss.",
-          "summary": "PipeDream-2BW's constant one-step gradient delay was believed to cause instability, limiting adoption of asynchronous pipeline parallelism. This paper shows the degradation is optimizer-dependent: AdamW suffers severe degradation under one-step delay, while Muon is robustly stable. An optimizer-agnostic Error Feedback-inspired correction further mitigates delay effects, with convergence proofs provided for Muon. Experiments on models up to 10B parameters confirm the approach matches synchronous training performance.",
-          "tags": [
-            "llm training",
-            "pipeline parallelism",
-            "distributed training",
-            "optimization"
+            "interpretability",
+            "post-training",
+            "introspection",
+            "language models"
           ],
           "sources": [
             {
               "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2606.30634v1"
+              "url": "https://arxiv.org/abs/2606.32038v1"
+            },
+            {
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2606.32032v1"
             }
           ],
-          "published": "2026-06-29T17:57:50+00:00",
-          "score": 1.2986
+          "published": "2026-06-30T17:59:32+00:00",
+          "score": 1.2907
         },
         {
-          "id": "4c5e5cca9291",
-          "tier": "skim",
+          "id": "ce118bf98cdb",
+          "tier": "worth_knowing",
           "category": "frontier",
-          "title": "LeVo 2: Hybrid LLM-Diffusion Framework Approaches Commercial Systems on Full-Length Song Generation",
-          "why_it_matters": "The hierarchical modeling and staged post-training strategy (SFT → offline DPO → semi-online DPO) is directly applicable to any researcher working on controllable generation or preference alignment pipelines.",
-          "summary": "LeVo 2 combines a language model (LeLM) with a diffusion-based Music Codec for full-length song generation. LeLM first predicts mixed tokens for semantic planning, then predicts vocal and accompaniment tokens in parallel. An aesthetics-guided pre-training assigns musicality-tier conditions to large-scale data; progressive post-training applies SFT, large-scale offline DPO, and closed-loop semi-online DPO sequentially. Expert listening tests show LeVo 2 outperforms open-source baselines on six subjective dimensions and approaches leading commercial systems on several metrics.",
+          "title": "QVal: Training-Free Testbed for Comparing Dense Supervision Signals in Long-Horizon LLM Agents",
+          "why_it_matters": "If you work on RL or agent training, QVal directly addresses the expensive and confounded evaluation problem for dense reward signals, and its finding that simple prompting baselines beat recent literature methods is a result worth knowing.",
+          "summary": "QVal evaluates dense supervision signals by measuring Q-alignment — whether a method's scores rank actions consistently with Q-values from a strong reference policy — without any training run. QVal-v1.0 benchmarks 21 methods across 4 environments, 7 methodological families, and 6 model backbones (1,200+ experiments). Key finding: simple prompting baselines consistently outperform recent dense supervision methods; performance clusters strongly by family across model sizes and modalities.",
           "tags": [
-            "audio generation",
-            "rlhf",
-            "diffusion",
-            "controllable generation"
+            "reinforcement learning",
+            "agents",
+            "dense rewards",
+            "evaluation"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2606.30642v1"
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2606.32034v1"
             }
           ],
-          "published": "2026-06-29T17:59:20+00:00",
-          "score": 0.433
+          "published": "2026-06-30T17:58:23+00:00",
+          "score": 1.2903
         },
         {
-          "id": "ac8b44e02d82",
-          "tier": "skim",
+          "id": "a1c151ba22c4",
+          "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Survey: Authentication Protocols for Quantum Networks—Candidates, Trade-offs, and QKD Integration",
-          "why_it_matters": "For researchers building or analyzing quantum ML or quantum communication systems, this review clarifies which authentication schemes are composable and scalable, a prerequisite often glossed over in protocol papers.",
-          "summary": "This review distinguishes three authentication flavors—classical message authentication, quantum message authentication, and entity authentication—comparing representative protocols on security assumptions, composability, and scalability. Hardware-assisted approaches are also covered. A detailed QKD case study anchors the discussion, with extensions to protocols beyond QKD where authentication roles are more complex. The authors argue authentication is not an intrinsic bottleneck but must be matched explicitly to functionality and deployment assumptions.",
+          "title": "Data Referencing Errors in LLM Table Reasoning Are Pervasive and Detectable with a Lightweight 4B Critic",
+          "why_it_matters": "For engineers building LLM pipelines over structured data, this is a concrete failure mode — models misquoting table values even when they understand table structure — with a practical mitigation that boosts answer accuracy.",
+          "summary": "Across models from 1.7B to 20B parameters, data referencing errors (incorrectly citing or omitting table values) occur consistently on tabular tasks. Adding a data-referencing critic via filtering and rejection sampling improves answer accuracy by up to 12.0%. A trained 4B critic model achieves 78.2% average F1 on detecting both in-distribution and out-of-distribution errors and assists inference for larger models.",
           "tags": [
-            "quantum networks",
-            "cryptography",
-            "quantum key distribution",
-            "authentication"
+            "table reasoning",
+            "language models",
+            "error detection",
+            "structured data"
           ],
           "sources": [
             {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2606.30636v1"
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2606.32029v1"
             }
           ],
-          "published": "2026-06-29T17:58:16+00:00",
-          "score": 0.4329
+          "published": "2026-06-30T17:54:50+00:00",
+          "score": 1.2893
         },
         {
-          "id": "00683ca8032d",
-          "tier": "skim",
+          "id": "36533d4bae06",
+          "tier": "worth_knowing",
           "category": "frontier",
-          "title": "First Proof of Random-Matrix Spectral Ramp in a Static, Geometrically Local Many-Body Hamiltonian",
-          "why_it_matters": "A landmark theoretical result in quantum chaos: proving the spectral form factor ramp in a time-independent local Hamiltonian closes a long-standing gap left by the Bertini-Kos-Prosen result restricted to Floquet systems.",
-          "summary": "Building on the Bertini-Kos-Prosen (BKP) result for dual-unitary Floquet circuits and a Feynman-Kitaev clock construction, the authors embed the Floquet quasienergy spectrum of a dual-unitary circuit into the energy spectrum of a static local Hamiltonian. They prove the static Hamiltonian's connected spectral form factor inherits the BKP linear-growth ramp within a symmetry sector. This is claimed as the first proof of a spectral ramp in a time-independent, geometrically local many-body system with finite local Hilbert space dimension.",
+          "title": "Freeform Preference Learning Lets Annotators Define Named Axes for Robot Reward, Beats Binary Preferences by 38pp",
+          "why_it_matters": "For researchers in RL and robot learning, FPL's axis-decomposed preference model addresses the signal collapse problem in binary preference learning and demonstrates compositionality — generalizing to behavior combinations absent from training data.",
+          "summary": "Freeform Preference Learning (FPL) has annotators define natural-language preference axes (e.g., speed, safety, placement quality) and provide pairwise preferences per axis, training a language-conditioned reward model that maps trajectory and axis label to a scalar reward. Evaluated on 4 real-world and 2 simulated long-horizon manipulation tasks, FPL outperforms sparse-reward and binary-preference baselines by 38 percentage points, learns dense progress signals without subtask segmentation, and supports test-time behavior steering without retraining.",
           "tags": [
-            "quantum chaos",
-            "many-body physics",
-            "spectral form factor",
-            "quantum computing"
+            "robot learning",
+            "reinforcement learning",
+            "reward learning",
+            "preference learning"
           ],
           "sources": [
             {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2606.30635v1"
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2606.32027v1"
             }
           ],
-          "published": "2026-06-29T17:57:57+00:00",
-          "score": 0.4329
+          "published": "2026-06-30T17:54:02+00:00",
+          "score": 1.289
         }
       ]
     }
