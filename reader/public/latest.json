@@ -1,7 +1,7 @@
 {
-  "date": "2026-07-04",
-  "generated_at": "2026-07-04T03:55:39.966684+00:00",
-  "summary_line": "1 items to skim.",
+  "date": "2026-07-06",
+  "generated_at": "2026-07-06T04:22:36.516041+00:00",
+  "summary_line": "1 worth knowing",
   "counts": {
     "total": 1,
     "headlines": 1,
@@ -13,26 +13,26 @@
       "title": "Headlines",
       "cards": [
         {
-          "id": "e29a8bbb0a77",
-          "tier": "skim",
+          "id": "c57690ad336e",
+          "tier": "worth_knowing",
           "category": "headline",
-          "title": "Google DeepMind and A24 Form Multi-Project R&D Partnership with Google Investment",
-          "why_it_matters": "A leading AI lab embedding researchers directly inside a major film studio's creative workflow is a novel real-world testbed for generative media tools — worth watching for how creative feedback loops shape future model development.",
-          "summary": "Google DeepMind and A24 are launching a research collaboration spanning multiple projects, embedding DeepMind's innovations directly into A24's filmmaking process. Filmmakers will provide feedback to shape tool development, while Google is also making a financial investment in A24. Specific technical outputs and milestones are not yet defined.",
+          "title": "Hugging Face Kernels Gets Dedicated Repo Type, Trusted Publishers & Code Signing",
+          "why_it_matters": "If you're deploying or consuming custom GPU kernels, these security and discoverability upgrades directly affect your supply-chain trust model and workflow.",
+          "summary": "HF Kernels now has a first-class 'kernel' repository type on the Hub with accelerator/OS/backend metadata. Security hardened via trusted-publisher allowlist (opt-in trust_remote_code for others), Sigstore cosign ephemeral-key signing tied to trusted GitHub workflows, and Nix-based reproducible builds with embedded source Git SHA1. Signature verification on load is not yet enforced pending further testing.",
           "tags": [
-            "generative media",
-            "research partnership",
-            "google deepmind",
-            "creative ai"
+            "infrastructure",
+            "gpu kernels",
+            "security",
+            "hugging face"
           ],
           "sources": [
             {
-              "name": "DeepMind",
-              "url": "https://deepmind.google/blog/google-deepmind-and-a24-announce-first-of-its-kind-research-partnership/"
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/revamped-kernels"
             }
           ],
-          "published": "2026-07-03T14:25:43+00:00",
-          "score": 0.4145
+          "published": "2026-07-06T00:00:00+00:00",
+          "score": 1.4115
         }
       ]
     },
