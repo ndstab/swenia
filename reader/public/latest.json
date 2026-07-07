@@ -1,11 +1,11 @@
 {
-  "date": "2026-07-06",
-  "generated_at": "2026-07-06T04:22:36.516041+00:00",
-  "summary_line": "1 worth knowing",
+  "date": "2026-07-07",
+  "generated_at": "2026-07-07T04:12:19.670914+00:00",
+  "summary_line": "4 worth knowing",
   "counts": {
-    "total": 1,
+    "total": 7,
     "headlines": 1,
-    "frontier": 0
+    "frontier": 6
   },
   "sections": [
     {
@@ -13,33 +13,166 @@
       "title": "Headlines",
       "cards": [
         {
-          "id": "c57690ad336e",
-          "tier": "worth_knowing",
+          "id": "088a18b234ed",
+          "tier": "skim",
           "category": "headline",
-          "title": "Hugging Face Kernels Gets Dedicated Repo Type, Trusted Publishers & Code Signing",
-          "why_it_matters": "If you're deploying or consuming custom GPU kernels, these security and discoverability upgrades directly affect your supply-chain trust model and workflow.",
-          "summary": "HF Kernels now has a first-class 'kernel' repository type on the Hub with accelerator/OS/backend metadata. Security hardened via trusted-publisher allowlist (opt-in trust_remote_code for others), Sigstore cosign ephemeral-key signing tied to trusted GitHub workflows, and Nix-based reproducible builds with embedded source Git SHA1. Signature verification on load is not yet enforced pending further testing.",
+          "title": "PRX Pre-Training Data Strategy: Lance for Curation, MDS for Streaming, Long VLM Captions",
+          "why_it_matters": "Understanding how a 7B image-generation model's training corpus is assembled—especially the philosophy around caption length, light filtering, and format choices—is directly relevant if you design pre-training pipelines.",
+          "summary": "PRX's pre-training data mixes public and internal datasets, deliberately avoiding heavy aesthetic filtering to maximize diversity and concept coverage. Images are re-captioned with a VLM using long, faithful captions so that 'noisy' content (logos, screenshots) becomes controllable via prompting rather than being discarded. Lance (columnar, predicate-pushdown) handles curation and feature engineering; Mosaic MDS handles distributed streaming training from object storage.",
           "tags": [
-            "infrastructure",
-            "gpu kernels",
-            "security",
-            "hugging face"
+            "data-pipeline",
+            "image-generation",
+            "pre-training",
+            "infrastructure"
           ],
           "sources": [
             {
               "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/revamped-kernels"
+              "url": "https://huggingface.co/blog/Photoroom/prx-part4-data"
             }
           ],
-          "published": "2026-07-06T00:00:00+00:00",
-          "score": 1.4115
+          "published": "2026-07-06T15:30:55+00:00",
+          "score": 0.4192
         }
       ]
     },
     {
       "key": "frontier",
       "title": "Frontier & Papers",
-      "cards": []
+      "cards": [
+        {
+          "id": "0a1d2bd6cc12",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "LeRobot v0.6.0 Ships World Model Policies, Six New VLAs, and a Unified Eval CLI",
+          "why_it_matters": "If you work on robot learning, this release directly affects your toolchain: world model policies (VLA-JEPA, FastWAM, LingBot-VA), GR00T N1.7 integration, reward model APIs, and a unified benchmark CLI are all production-ready now.",
+          "summary": "LeRobot v0.6.0 adds three world-model policies—VLA-JEPA (latent-space future prediction with zero inference overhead), LingBot-VA (autoregressive video-action with grounded rollouts), and FastWAM (video-generation expert paired with compact action expert). New VLAs include GR00T N1.7 (Cosmos-Reason2-2B backbone), MolmoAct2, EO-1, EVO1, and Multitask DiT. Reward model API, six new simulation benchmarks under lerobot-eval, DAgger-style human-in-the-loop CLI, FSDP training, and 2x faster data loading also ship.",
+          "tags": [
+            "robotics",
+            "vla",
+            "world-models",
+            "open-source"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/lerobot-release-v060"
+            }
+          ],
+          "published": "2026-07-07T00:00:00+00:00",
+          "score": 1.4149
+        },
+        {
+          "id": "2900b8d7d3d9",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "CamVLA: Calibration-Free VLA Policy That Estimates Its Own Camera Geometry",
+          "why_it_matters": "Camera recalibration is a major deployment headache in real-world robotics; a policy that self-computes camera-to-base geometry from a single monocular RGB image could meaningfully simplify robot deployment pipelines.",
+          "summary": "CamVLA decouples manipulation control from camera geometry by jointly predicting a camera-centric end-effector action (in the local camera frame) and a 6-DoF hand-eye matrix. A deterministic geometric transform composes both into a robot base-frame action. The policy requires only a single monocular RGB image—no depth, no provided extrinsics—and shows improved success rates across diverse unseen viewpoints in simulation and real-world evaluations.",
+          "tags": [
+            "robotics",
+            "vla",
+            "computer-vision",
+            "generalization"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2607.05396v1"
+            }
+          ],
+          "published": "2026-07-06T17:59:59+00:00",
+          "score": 1.3018
+        },
+        {
+          "id": "d7fc2c3c0378",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Direct-OPD: Transfer RL Policy Shifts from Weak to Strong Models as Implicit Rewards",
+          "why_it_matters": "Running RLVR on large models is increasingly expensive; this paper offers a concrete, fast alternative—run RL on a small model, then distill the policy *shift* rather than the policy itself into a stronger model.",
+          "summary": "Direct On-Policy Distillation (Direct-OPD) avoids re-running RL on large models by treating the log-ratio between a post-RL weak teacher and its pre-RL reference as a dense implicit reward for a stronger student. Applied on the student's own on-policy states, no explicit reward model is needed. It boosts Qwen3-1.7B from 48.3% to 62.4% on AIME 2024 in 4 hours on 8 A100s, outperforming step-matched direct RL and supporting sequential composition of multiple policy shifts.",
+          "tags": [
+            "rlvr",
+            "weak-to-strong",
+            "reasoning",
+            "post-training"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2607.05394v1"
+            }
+          ],
+          "published": "2026-07-06T17:59:58+00:00",
+          "score": 1.3018
+        },
+        {
+          "id": "770c3187aee4",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "LLM-as-a-Verifier: Continuous Logit-Based Scoring Scales Verification Accuracy",
+          "why_it_matters": "Verification quality directly gates agentic system performance and RL reward density; this training-free framework reaching SOTA on SWE-Bench Verified (78.2%) and Terminal-Bench V2 (86.5%) is immediately applicable to agent pipelines.",
+          "summary": "LLM-as-a-Verifier replaces discrete judge scores with continuous scores computed as the expectation over scoring-token logit distributions. Verification scales along three axes: score granularity, repeated evaluation, and criteria decomposition. It achieves 86.5% on Terminal-Bench V2, 78.2% on SWE-Bench Verified, 87.4% on RoboRewardBench, and 73.3% on MedAgentBench. The framework also provides dense RL feedback, improving SAC and GRPO sample efficiency, and ships an extension for monitoring Claude Code agentic pipelines.",
+          "tags": [
+            "agents",
+            "verification",
+            "rl",
+            "evals"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2607.05391v1"
+            }
+          ],
+          "published": "2026-07-06T17:59:35+00:00",
+          "score": 1.3016
+        },
+        {
+          "id": "805f6c4382d5",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Injection-Driven Real-Bogus Classification for Astronomical Surveys Without Human Labels",
+          "why_it_matters": "Weakly supervised co-teaching with calibrated uncertainty is a transferable technique for any high-throughput detection pipeline, though the domain here is astronomical transient classification rather than ML systems directly.",
+          "summary": "A dual-network model trained with asymmetric co-teaching classifies real vs. bogus transient candidates using simulated injections instead of human labels, tolerating strong class contamination. A hybrid MC-dropout/dual-network UQ strategy achieves calibrated uncertainty competitive with more expensive deep ensembles. Latent-space analyses show uncertainty concentrates near decision boundaries and reveal substructure in the bogus class. The pipeline is designed for transfer to new surveys via re-running injection-based training.",
+          "tags": [
+            "weak-supervision",
+            "uncertainty-quantification",
+            "astronomy",
+            "classification"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2607.05393v1"
+            }
+          ],
+          "published": "2026-07-06T17:59:58+00:00",
+          "score": 0.4339
+        },
+        {
+          "id": "c79cebbc155e",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Logical Spectroscopy: Explicit Addressable Logical Bases for Abelian Lifted-Product qLDPC Codes",
+          "why_it_matters": "Abelian lifted-product codes offer better encoding rates than hypergraph-product codes but lack the explicit logical-operator structure needed for fault-tolerant operations; this construction closes that gap.",
+          "summary": "Logical spectroscopy uses the Chinese Remainder Theorem to decompose an Abelian lift group's group algebra into Frobenius character packets. Within each packet, kernels, quotients, and product-complex homology are computed over finite fields; CRT idempotents lift representatives back and pair X/Z logicals via trace-dual packets. This yields complete, addressable conjugate logical bases for LP(A,B) codes, certified basis-width upper bounds, and packet-attributed erasure diagnostics—giving Abelian lifted-product families an HGP-like feature.",
+          "tags": [
+            "quantum-error-correction",
+            "qldpc",
+            "quantum-computing",
+            "coding-theory"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2607.05386v1"
+            }
+          ],
+          "published": "2026-07-06T17:56:55+00:00",
+          "score": 0.4336
+        }
+      ]
     }
   ]
 }
