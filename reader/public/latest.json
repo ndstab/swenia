@@ -1,11 +1,11 @@
 {
-  "date": "2026-07-07",
-  "generated_at": "2026-07-07T04:12:19.670914+00:00",
-  "summary_line": "4 worth knowing",
+  "date": "2026-07-08",
+  "generated_at": "2026-07-08T03:37:08.294640+00:00",
+  "summary_line": "3 worth knowing",
   "counts": {
-    "total": 7,
-    "headlines": 1,
-    "frontier": 6
+    "total": 9,
+    "headlines": 4,
+    "frontier": 5
   },
   "sections": [
     {
@@ -13,26 +13,92 @@
       "title": "Headlines",
       "cards": [
         {
-          "id": "088a18b234ed",
+          "id": "a00b3f14f5f7",
+          "tier": "worth_knowing",
+          "category": "headline",
+          "title": "BAIR Perspective: Near-Zero Inference Costs Demand a Rethink of Data Systems for Agent Swarms",
+          "why_it_matters": "The framing of agent-first data systems — speculative query reuse, structured memory, agent-synthesized custom backends — directly shapes how AI engineers will design infrastructure for agentic applications.",
+          "summary": "GPT-4-class inference has dropped from ~$30 to under $1 per million tokens, with a median ~50x annual decline. BAIR's Parameswaran group argues this creates three challenges: redesigning databases for agentic speculation (80–90% of sub-queries are duplicate across multi-agent tasks), building reliable state/coordination substrates for agent swarms, and verifying agent-synthesized data systems. The post blends landscape survey with the authors' own ongoing research.",
+          "tags": [
+            "agents",
+            "data-systems",
+            "inference-cost",
+            "agentic-ai"
+          ],
+          "sources": [
+            {
+              "name": "BAIR (Berkeley)",
+              "url": "http://bair.berkeley.edu/blog/2026/07/07/intelligence-is-free-now-what/"
+            }
+          ],
+          "published": "2026-07-07T09:00:00+00:00",
+          "score": 1.1582
+        },
+        {
+          "id": "ca9a2a21da07",
           "tier": "skim",
           "category": "headline",
-          "title": "PRX Pre-Training Data Strategy: Lance for Curation, MDS for Streaming, Long VLM Captions",
-          "why_it_matters": "Understanding how a 7B image-generation model's training corpus is assembled—especially the philosophy around caption length, light filtering, and format choices—is directly relevant if you design pre-training pipelines.",
-          "summary": "PRX's pre-training data mixes public and internal datasets, deliberately avoiding heavy aesthetic filtering to maximize diversity and concept coverage. Images are re-captioned with a VLM using long, faithful captions so that 'noisy' content (logos, screenshots) becomes controllable via prompting rather than being discarded. Lance (columnar, predicate-pushdown) handles curation and feature engineering; Mosaic MDS handles distributed streaming training from object storage.",
+          "title": "HuggingFace Adds One-Click Deploy & Fine-Tune to Amazon SageMaker Studio",
+          "why_it_matters": "As an AI engineer, this removes the IAM/quota friction that previously slowed moving from model discovery to GPU experimentation on AWS.",
+          "summary": "Clicking 'Deploy on SageMaker AI' or 'Customize on SageMaker AI' on a supported HuggingFace model page now auto-provisions a SageMaker Studio domain with pre-configured IAM permissions, including a new managed policy covering SFT, DPO, RLVR, and RLAIF jobs. GPU quota availability for G5/G6 instances is surfaced inline during instance selection, eliminating separate Service Quotas navigation.",
           "tags": [
-            "data-pipeline",
-            "image-generation",
-            "pre-training",
-            "infrastructure"
+            "mlops",
+            "aws",
+            "deployment",
+            "fine-tuning"
           ],
           "sources": [
             {
               "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/Photoroom/prx-part4-data"
+              "url": "https://huggingface.co/blog/amazon/one-click-to-sagemaker-studio"
             }
           ],
-          "published": "2026-07-06T15:30:55+00:00",
-          "score": 0.4192
+          "published": "2026-07-07T21:15:33+00:00",
+          "score": 0.4577
+        },
+        {
+          "id": "024a3808c07a",
+          "tier": "skim",
+          "category": "headline",
+          "title": "Microsoft Foundry Adds HuggingFace Models via Managed Compute GPU PaaS",
+          "why_it_matters": "For engineers building mixed open/closed-model pipelines, Foundry Managed Compute lets you deploy HuggingFace open-weight models through the same endpoint, SDK, and auth as frontier models like GPT-4 or Claude.",
+          "summary": "Microsoft Foundry's Managed Compute option — a managed GPU PaaS supporting vLLM, SGLang, TensorRT-LLM, NIM, TEI, and llama.cpp — now integrates 3M+ HuggingFace models. Deployments are specified by parameter count, context length, and latency/throughput preference; GPU topology is abstracted away. Container updates and security patches apply automatically without model redeployment. Open-source models share the same endpoint, SDKs, auth, and billing as pay-per-token and provisioned-throughput options.",
+          "tags": [
+            "deployment",
+            "open-weights",
+            "mlops",
+            "inference-infrastructure"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/microsoft/foundry-managed-compute"
+            }
+          ],
+          "published": "2026-07-07T15:20:06+00:00",
+          "score": 0.4216
+        },
+        {
+          "id": "b29a21395768",
+          "tier": "skim",
+          "category": "headline",
+          "title": "SkyPilot + HuggingFace Hub: Zero-Egress Multi-Cloud Storage via hf:// FUSE Mounts",
+          "why_it_matters": "Eliminates per-cloud data copy costs and simplifies multi-cloud training pipelines for engineers who already store models and datasets on the Hub.",
+          "summary": "SkyPilot now supports HuggingFace Storage as a first-class backend (store: hf) via an hf:// URL scheme, covering Buckets (read-write) and model/dataset repos (read-only). FUSE-based MOUNT streams bytes lazily via the Xet backend with on-disk caching, keeping GPUs busy before full downloads complete. HuggingFace charges no egress fees regardless of which of SkyPilot's 20+ clouds, Kubernetes clusters, or Slurm environments the job lands on. Xet deduplication means incremental checkpoints only transfer changed chunks.",
+          "tags": [
+            "mlops",
+            "storage",
+            "multi-cloud",
+            "training-infrastructure"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/skypilot-hf-storage"
+            }
+          ],
+          "published": "2026-07-07T00:00:00+00:00",
+          "score": 0.3407
         }
       ]
     },
@@ -41,136 +107,113 @@
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "0a1d2bd6cc12",
+          "id": "1b16588baa24",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "LeRobot v0.6.0 Ships World Model Policies, Six New VLAs, and a Unified Eval CLI",
-          "why_it_matters": "If you work on robot learning, this release directly affects your toolchain: world model policies (VLA-JEPA, FastWAM, LingBot-VA), GR00T N1.7 integration, reward model APIs, and a unified benchmark CLI are all production-ready now.",
-          "summary": "LeRobot v0.6.0 adds three world-model policies—VLA-JEPA (latent-space future prediction with zero inference overhead), LingBot-VA (autoregressive video-action with grounded rollouts), and FastWAM (video-generation expert paired with compact action expert). New VLAs include GR00T N1.7 (Cosmos-Reason2-2B backbone), MolmoAct2, EO-1, EVO1, and Multitask DiT. Reward model API, six new simulation benchmarks under lerobot-eval, DAgger-style human-in-the-loop CLI, FSDP training, and 2x faster data loading also ship.",
+          "title": "ELSA3D: Sparse Cross-Modal Anchor Tokens Halve FLOPs on Unified 3D Generation and Captioning",
+          "why_it_matters": "The elastic routing mechanism — concentrating cross-modal compute only where text-geometry alignment is needed — is a transferable architectural idea relevant to any multimodal model design work.",
+          "summary": "ELSA3D uses a scale-aware octree tokenizer and sparse 'Anchor Tokens' that select semantic cues, route them to the relevant 3D geometric scale, and write fused signals back into a unified representation. A per-block router dynamically decides which text tokens instantiate anchors. The approach achieves SOTA on image-to-3D, text-to-3D generation, and 3D captioning while roughly halving FLOPs and inference latency versus the non-elastic version of the same model.",
           "tags": [
-            "robotics",
-            "vla",
-            "world-models",
-            "open-source"
-          ],
-          "sources": [
-            {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/lerobot-release-v060"
-            }
-          ],
-          "published": "2026-07-07T00:00:00+00:00",
-          "score": 1.4149
-        },
-        {
-          "id": "2900b8d7d3d9",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "CamVLA: Calibration-Free VLA Policy That Estimates Its Own Camera Geometry",
-          "why_it_matters": "Camera recalibration is a major deployment headache in real-world robotics; a policy that self-computes camera-to-base geometry from a single monocular RGB image could meaningfully simplify robot deployment pipelines.",
-          "summary": "CamVLA decouples manipulation control from camera geometry by jointly predicting a camera-centric end-effector action (in the local camera frame) and a 6-DoF hand-eye matrix. A deterministic geometric transform composes both into a robot base-frame action. The policy requires only a single monocular RGB image—no depth, no provided extrinsics—and shows improved success rates across diverse unseen viewpoints in simulation and real-world evaluations.",
-          "tags": [
-            "robotics",
-            "vla",
-            "computer-vision",
-            "generalization"
+            "3d-generation",
+            "multimodal",
+            "architecture",
+            "efficient-inference"
           ],
           "sources": [
             {
               "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2607.05396v1"
+              "url": "https://arxiv.org/abs/2607.06565v1"
             }
           ],
-          "published": "2026-07-06T17:59:59+00:00",
-          "score": 1.3018
+          "published": "2026-07-07T17:59:50+00:00",
+          "score": 1.3124
         },
         {
-          "id": "d7fc2c3c0378",
+          "id": "3fd2f3b905cf",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Direct-OPD: Transfer RL Policy Shifts from Weak to Strong Models as Implicit Rewards",
-          "why_it_matters": "Running RLVR on large models is increasingly expensive; this paper offers a concrete, fast alternative—run RL on a small model, then distill the policy *shift* rather than the policy itself into a stronger model.",
-          "summary": "Direct On-Policy Distillation (Direct-OPD) avoids re-running RL on large models by treating the log-ratio between a post-RL weak teacher and its pre-RL reference as a dense implicit reward for a stronger student. Applied on the student's own on-policy states, no explicit reward model is needed. It boosts Qwen3-1.7B from 48.3% to 62.4% on AIME 2024 in 4 hours on 8 A100s, outperforming step-matched direct RL and supporting sequential composition of multiple policy shifts.",
+          "title": "Graph Convolutional Attention (GCA): Spectral Denoising Fix for Graph Diffusion Models",
+          "why_it_matters": "For researchers working on graph generative models or graph transformers, GCA's theoretical grounding of why linear attention fails at denoising — and its practical fix via graph-filtered queries/keys — is directly actionable.",
+          "summary": "The paper proves linear attention in graph transformers can only learn an average spectral denoising filter, creating a fundamental limitation when graphs vary spectrally across a distribution. Spectral Attention directly uses input graph spectrum and provably outperforms linear attention by a margin tied to spectral diversity. GCA implements this via graph-filtered queries and keys, is permutation-equivariant, and provably matches idealized Spectral Attention on stochastic block models. In DiGress, GCA combined with PEARL positional encodings avoids explicit eigendecomposition, achieving faster inference without quality loss.",
           "tags": [
-            "rlvr",
-            "weak-to-strong",
-            "reasoning",
-            "post-training"
+            "graph-learning",
+            "diffusion-models",
+            "graph-transformers",
+            "theory"
           ],
           "sources": [
             {
               "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2607.05394v1"
+              "url": "https://arxiv.org/abs/2607.06546v1"
             }
           ],
-          "published": "2026-07-06T17:59:58+00:00",
-          "score": 1.3018
+          "published": "2026-07-07T17:52:17+00:00",
+          "score": 1.3101
         },
         {
-          "id": "770c3187aee4",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "LLM-as-a-Verifier: Continuous Logit-Based Scoring Scales Verification Accuracy",
-          "why_it_matters": "Verification quality directly gates agentic system performance and RL reward density; this training-free framework reaching SOTA on SWE-Bench Verified (78.2%) and Terminal-Bench V2 (86.5%) is immediately applicable to agent pipelines.",
-          "summary": "LLM-as-a-Verifier replaces discrete judge scores with continuous scores computed as the expectation over scoring-token logit distributions. Verification scales along three axes: score granularity, repeated evaluation, and criteria decomposition. It achieves 86.5% on Terminal-Bench V2, 78.2% on SWE-Bench Verified, 87.4% on RoboRewardBench, and 73.3% on MedAgentBench. The framework also provides dense RL feedback, improving SAC and GRPO sample efficiency, and ships an extension for monitoring Claude Code agentic pipelines.",
-          "tags": [
-            "agents",
-            "verification",
-            "rl",
-            "evals"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2607.05391v1"
-            }
-          ],
-          "published": "2026-07-06T17:59:35+00:00",
-          "score": 1.3016
-        },
-        {
-          "id": "805f6c4382d5",
+          "id": "32353a398787",
           "tier": "skim",
           "category": "frontier",
-          "title": "Injection-Driven Real-Bogus Classification for Astronomical Surveys Without Human Labels",
-          "why_it_matters": "Weakly supervised co-teaching with calibrated uncertainty is a transferable technique for any high-throughput detection pipeline, though the domain here is astronomical transient classification rather than ML systems directly.",
-          "summary": "A dual-network model trained with asymmetric co-teaching classifies real vs. bogus transient candidates using simulated injections instead of human labels, tolerating strong class contamination. A hybrid MC-dropout/dual-network UQ strategy achieves calibrated uncertainty competitive with more expensive deep ensembles. Latent-space analyses show uncertainty concentrates near decision boundaries and reveal substructure in the bogus class. The pipeline is designed for transfer to new surveys via re-running injection-based training.",
+          "title": "Quantum Channel Polynomial Processing: NISQ-to-Fault-Tolerant Framework via Probabilistic Unitary Mixtures",
+          "why_it_matters": "The explicit sample/query complexity tradeoff and lower circuit complexity vs. QSVT with LCU block encoding makes this worth tracking for anyone following quantum ML algorithms.",
+          "summary": "The proposed framework uses probabilistic mixtures of unitary channels to apply arbitrary polynomials of Hermitian operators to arbitrary states, similar in scope to quantum singular value transformation (QSVT). It offers a tunable tradeoff: optimal query complexity (logarithmic in error) with exponential sample complexity at one extreme, and sub-polynomial query complexity with polynomial sample complexity at the other. Authors claim considerably lower quantum circuit complexity than QSVT with linear combination of unitaries block encoding, and argue the framework scales from NISQ to fault-tolerant regimes.",
           "tags": [
-            "weak-supervision",
-            "uncertainty-quantification",
-            "astronomy",
-            "classification"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2607.05393v1"
-            }
-          ],
-          "published": "2026-07-06T17:59:58+00:00",
-          "score": 0.4339
-        },
-        {
-          "id": "c79cebbc155e",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "Logical Spectroscopy: Explicit Addressable Logical Bases for Abelian Lifted-Product qLDPC Codes",
-          "why_it_matters": "Abelian lifted-product codes offer better encoding rates than hypergraph-product codes but lack the explicit logical-operator structure needed for fault-tolerant operations; this construction closes that gap.",
-          "summary": "Logical spectroscopy uses the Chinese Remainder Theorem to decompose an Abelian lift group's group algebra into Frobenius character packets. Within each packet, kernels, quotients, and product-complex homology are computed over finite fields; CRT idempotents lift representatives back and pair X/Z logicals via trace-dual packets. This yields complete, addressable conjugate logical bases for LP(A,B) codes, certified basis-width upper bounds, and packet-attributed erasure diagnostics—giving Abelian lifted-product families an HGP-like feature.",
-          "tags": [
-            "quantum-error-correction",
-            "qldpc",
             "quantum-computing",
-            "coding-theory"
+            "quantum-algorithms",
+            "quantum-ml"
           ],
           "sources": [
             {
               "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2607.05386v1"
+              "url": "https://arxiv.org/abs/2607.06557v1"
             }
           ],
-          "published": "2026-07-06T17:56:55+00:00",
-          "score": 0.4336
+          "published": "2026-07-07T17:57:48+00:00",
+          "score": 0.4372
+        },
+        {
+          "id": "f284b3748a60",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Waveguide QED Proposal: Continuous Superradiant Laser via Selective Partial Pumping",
+          "why_it_matters": "The selective sub-ensemble pumping mechanism enabling chip-scale optical frequency references is relevant for quantum computing researchers tracking precision metrology and atomic clock integration with photonic devices.",
+          "summary": "The paper proposes using all-to-all dipole-dipole interactions mediated by a nanophotonic waveguide to achieve continuous superradiant emission. Selectively pumping only a sub-ensemble of emitters — letting unpumped emitters provide narrowband frequency selection and effective feedback — yields directional, narrow-spectrum emission near the bare atomic resonance. The second-order intensity correlation g⁽²⁾(0) ≈ 1 indicates reduced equal-time intensity fluctuations, suggesting a route to chip-scale optical frequency references with small clock-atom ensembles.",
+          "tags": [
+            "quantum-computing",
+            "photonics",
+            "metrology",
+            "quantum-hardware"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2607.06556v1"
+            }
+          ],
+          "published": "2026-07-07T17:57:44+00:00",
+          "score": 0.4372
+        },
+        {
+          "id": "176be12ea4e1",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Survey: Structural Challenges and Research Roadmap for Indic NLP and Foundation Models",
+          "why_it_matters": "For researchers building multilingual or low-resource models, this survey's characterization of Indic-specific challenges — rich morphology, diglossia, dialectal variation — and the proposed 'Culture Sensing' direction provides useful framing.",
+          "summary": "The paper surveys the historical development of Indic NLP, covering methodological shifts and resource creation, then analyzes structural challenges: rich morphology, complex scripts, diglossia, and large dialectal variation. It reviews current Indic foundation models and their coverage gaps, then proposes 'Culture Sensing' — a research direction grounded in hermeneutic reasoning — to address equitable performance across low-resource languages and culturally meaningful outputs.",
+          "tags": [
+            "nlp",
+            "multilingual",
+            "low-resource",
+            "indic-languages"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2607.06544v1"
+            }
+          ],
+          "published": "2026-07-07T17:51:10+00:00",
+          "score": 0.4366
         }
       ]
     }
