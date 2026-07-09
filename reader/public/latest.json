@@ -1,11 +1,11 @@
 {
-  "date": "2026-07-08",
-  "generated_at": "2026-07-08T03:37:08.294640+00:00",
-  "summary_line": "3 worth knowing",
+  "date": "2026-07-09",
+  "generated_at": "2026-07-09T04:06:55.076187+00:00",
+  "summary_line": "5 worth knowing",
   "counts": {
-    "total": 9,
-    "headlines": 4,
-    "frontier": 5
+    "total": 7,
+    "headlines": 3,
+    "frontier": 4
   },
   "sections": [
     {
@@ -13,92 +13,70 @@
       "title": "Headlines",
       "cards": [
         {
-          "id": "a00b3f14f5f7",
+          "id": "5535aeb9eb9d",
           "tier": "worth_knowing",
           "category": "headline",
-          "title": "BAIR Perspective: Near-Zero Inference Costs Demand a Rethink of Data Systems for Agent Swarms",
-          "why_it_matters": "The framing of agent-first data systems — speculative query reuse, structured memory, agent-synthesized custom backends — directly shapes how AI engineers will design infrastructure for agentic applications.",
-          "summary": "GPT-4-class inference has dropped from ~$30 to under $1 per million tokens, with a median ~50x annual decline. BAIR's Parameswaran group argues this creates three challenges: redesigning databases for agentic speculation (80–90% of sub-queries are duplicate across multi-agent tasks), building reliable state/coordination substrates for agent swarms, and verifying agent-synthesized data systems. The post blends landscape survey with the authors' own ongoing research.",
+          "title": "NVIDIA Nemotron Post-Training v3 Prompt Atlas: Interactive Map of 10T+ Agent Training Tokens",
+          "why_it_matters": "As an AI/research engineer building or evaluating agents, this gives you a visual, filterable lens into the exact prompt mixtures and curation choices behind a major open post-training dataset — directly actionable for data selection, eval design, and understanding model behavior.",
+          "summary": "NVIDIA's Nemotron open data release covers 10+ trillion pre-training tokens and millions of post-training samples. The new Prompt Atlas is an interactive semantic map where each point is a post-training prompt, volume-sampled to reflect true data mixture proportions, with filters by dataset, pipeline stage, domain, and tool-use. Nearly 145 ICML papers cite Nemotron models or datasets.",
           "tags": [
             "agents",
-            "data-systems",
-            "inference-cost",
-            "agentic-ai"
-          ],
-          "sources": [
-            {
-              "name": "BAIR (Berkeley)",
-              "url": "http://bair.berkeley.edu/blog/2026/07/07/intelligence-is-free-now-what/"
-            }
-          ],
-          "published": "2026-07-07T09:00:00+00:00",
-          "score": 1.1582
-        },
-        {
-          "id": "ca9a2a21da07",
-          "tier": "skim",
-          "category": "headline",
-          "title": "HuggingFace Adds One-Click Deploy & Fine-Tune to Amazon SageMaker Studio",
-          "why_it_matters": "As an AI engineer, this removes the IAM/quota friction that previously slowed moving from model discovery to GPU experimentation on AWS.",
-          "summary": "Clicking 'Deploy on SageMaker AI' or 'Customize on SageMaker AI' on a supported HuggingFace model page now auto-provisions a SageMaker Studio domain with pre-configured IAM permissions, including a new managed policy covering SFT, DPO, RLVR, and RLAIF jobs. GPU quota availability for G5/G6 instances is surfaced inline during instance selection, eliminating separate Service Quotas navigation.",
-          "tags": [
-            "mlops",
-            "aws",
-            "deployment",
-            "fine-tuning"
+            "synthetic-data",
+            "open-datasets",
+            "post-training"
           ],
           "sources": [
             {
               "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/amazon/one-click-to-sagemaker-studio"
+              "url": "https://huggingface.co/blog/nvidia/open-data-for-agents"
             }
           ],
-          "published": "2026-07-07T21:15:33+00:00",
-          "score": 0.4577
+          "published": "2026-07-08T17:16:05+00:00",
+          "score": 1.2902
         },
         {
-          "id": "024a3808c07a",
+          "id": "3203b0893ebc",
           "tier": "skim",
           "category": "headline",
-          "title": "Microsoft Foundry Adds HuggingFace Models via Managed Compute GPU PaaS",
-          "why_it_matters": "For engineers building mixed open/closed-model pipelines, Foundry Managed Compute lets you deploy HuggingFace open-weight models through the same endpoint, SDK, and auth as frontier models like GPT-4 or Claude.",
-          "summary": "Microsoft Foundry's Managed Compute option — a managed GPU PaaS supporting vLLM, SGLang, TensorRT-LLM, NIM, TEI, and llama.cpp — now integrates 3M+ HuggingFace models. Deployments are specified by parameter count, context length, and latency/throughput preference; GPU topology is abstracted away. Container updates and security patches apply automatically without model redeployment. Open-source models share the same endpoint, SDKs, auth, and billing as pay-per-token and provisioned-throughput options.",
+          "title": "Jailbreak: LLM-Synthesized Storage Readers Bypass Database Engines, Achieve Up to 27× Speedup",
+          "why_it_matters": "An AI infrastructure engineer will find this directly relevant as a concrete demonstration of agentic code synthesis for systems-level performance — LLMs reading format specs to generate Arrow-compatible readers that replace JDBC/ODBC entirely.",
+          "summary": "Jailbreak uses LLMs to synthesize storage-format-specific readers from database source code and documentation, bypassing query engines entirely and materializing data as Apache Arrow columnar buffers. Evaluated on PostgreSQL and MySQL with TPC-H benchmarks, generated readers are validated for correctness against JDBC/ODBC baselines and achieve up to 27× speedup in analytical throughput, compatible with DuckDB, Spark, cuDF, and Spark RAPIDS.",
           "tags": [
-            "deployment",
-            "open-weights",
-            "mlops",
-            "inference-infrastructure"
+            "agents",
+            "code-synthesis",
+            "infrastructure",
+            "data-engineering"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2607.07696v1"
+            }
+          ],
+          "published": "2026-07-08T17:55:00+00:00",
+          "score": 0.434
+        },
+        {
+          "id": "f2a3364a10eb",
+          "tier": "skim",
+          "category": "headline",
+          "title": "Hugging Face's Transformers Backend for vLLM Now Matches Native Speed via torch.fx Graph Rewriting",
+          "why_it_matters": "For an ML engineer deploying models in production, this means any Hugging Face model — including Qwen3 MoE at 235B FP8 — can run in vLLM at near-native speed with a single flag, eliminating the need to write custom vLLM ports.",
+          "summary": "The updated transformers modeling backend for vLLM uses torch.fx for static graph analysis and AST rewriting to apply layer fusions and optimized kernels at runtime, closing the performance gap with hand-written vLLM implementations. Benchmarks cover Qwen3-4B (single GPU), 32B (tensor parallel), and 235B-A22B-FP8 MoE (data+expert parallel on 8×H100). Activated via --model-impl transformers.",
+          "tags": [
+            "inference",
+            "vllm",
+            "serving",
+            "transformers"
           ],
           "sources": [
             {
               "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/microsoft/foundry-managed-compute"
+              "url": "https://huggingface.co/blog/native-speed-vllm-transformers-backend"
             }
           ],
-          "published": "2026-07-07T15:20:06+00:00",
-          "score": 0.4216
-        },
-        {
-          "id": "b29a21395768",
-          "tier": "skim",
-          "category": "headline",
-          "title": "SkyPilot + HuggingFace Hub: Zero-Egress Multi-Cloud Storage via hf:// FUSE Mounts",
-          "why_it_matters": "Eliminates per-cloud data copy costs and simplifies multi-cloud training pipelines for engineers who already store models and datasets on the Hub.",
-          "summary": "SkyPilot now supports HuggingFace Storage as a first-class backend (store: hf) via an hf:// URL scheme, covering Buckets (read-write) and model/dataset repos (read-only). FUSE-based MOUNT streams bytes lazily via the Xet backend with on-disk caching, keeping GPUs busy before full downloads complete. HuggingFace charges no egress fees regardless of which of SkyPilot's 20+ clouds, Kubernetes clusters, or Slurm environments the job lands on. Xet deduplication means incremental checkpoints only transfer changed chunks.",
-          "tags": [
-            "mlops",
-            "storage",
-            "multi-cloud",
-            "training-infrastructure"
-          ],
-          "sources": [
-            {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/skypilot-hf-storage"
-            }
-          ],
-          "published": "2026-07-07T00:00:00+00:00",
-          "score": 0.3407
+          "published": "2026-07-08T00:00:00+00:00",
+          "score": 0.3384
         }
       ]
     },
@@ -107,113 +85,92 @@
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "1b16588baa24",
+          "id": "6dcaed6fe13a",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "ELSA3D: Sparse Cross-Modal Anchor Tokens Halve FLOPs on Unified 3D Generation and Captioning",
-          "why_it_matters": "The elastic routing mechanism — concentrating cross-modal compute only where text-geometry alignment is needed — is a transferable architectural idea relevant to any multimodal model design work.",
-          "summary": "ELSA3D uses a scale-aware octree tokenizer and sparse 'Anchor Tokens' that select semantic cues, route them to the relevant 3D geometric scale, and write fused signals back into a unified representation. A per-block router dynamically decides which text tokens instantiate anchors. The approach achieves SOTA on image-to-3D, text-to-3D generation, and 3D captioning while roughly halving FLOPs and inference latency versus the non-elastic version of the same model.",
+          "title": "SciReasoner: Multimodal Foundation Model Achieves SOTA on 67 of 86 Structure-Property Benchmarks",
+          "why_it_matters": "A researcher interested in multimodal architectures and interpretable reasoning will want to study how SciReasoner's structure-aware tokenization and chain-of-thought traces achieve both SOTA accuracy and expert-preferred explanations across proteins, molecules, and crystals.",
+          "summary": "SciReasoner discretizes protein coordinates, molecular topologies, and crystal connectivities into a unified structure-aware vocabulary, enabling inspectable reasoning. It improves GO Cellular Component F-max from 0.42 to 0.55 for low-homology proteins and single-step retrosynthesis accuracy from 0.63 to 0.72. Across 86 benchmarks it reaches SOTA on 67; expert evaluators preferred or found comparable its reasoning traces in 98% of double-blind cases.",
           "tags": [
-            "3d-generation",
+            "scientific-ml",
             "multimodal",
-            "architecture",
-            "efficient-inference"
+            "reasoning",
+            "interpretability"
           ],
           "sources": [
             {
               "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2607.06565v1"
+              "url": "https://arxiv.org/abs/2607.07708v1"
             }
           ],
-          "published": "2026-07-07T17:59:50+00:00",
-          "score": 1.3124
+          "published": "2026-07-08T17:59:59+00:00",
+          "score": 1.3034
         },
         {
-          "id": "3fd2f3b905cf",
+          "id": "df0e004ce730",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Graph Convolutional Attention (GCA): Spectral Denoising Fix for Graph Diffusion Models",
-          "why_it_matters": "For researchers working on graph generative models or graph transformers, GCA's theoretical grounding of why linear attention fails at denoising — and its practical fix via graph-filtered queries/keys — is directly actionable.",
-          "summary": "The paper proves linear attention in graph transformers can only learn an average spectral denoising filter, creating a fundamental limitation when graphs vary spectrally across a distribution. Spectral Attention directly uses input graph spectrum and provably outperforms linear attention by a margin tied to spectral diversity. GCA implements this via graph-filtered queries and keys, is permutation-equivariant, and provably matches idealized Spectral Attention on stochastic block models. In DiGress, GCA combined with PEARL positional encodings avoids explicit eigendecomposition, achieving faster inference without quality loss.",
+          "title": "CO-LMLM: Continuous-Query Limited Memory LM Beats Models Trained on 40x More Data at 360M Scale",
+          "why_it_matters": "This is a technically distinct pretraining paradigm — externalizing factual knowledge to a KB with continuous vector keys — that achieves strong factual precision without scaling parameters, relevant to anyone working on retrieval-augmented or knowledge-controlled LMs.",
+          "summary": "CO-LMLM pairs continuous vector keys with textual KB values, generating flexible queries at low cost while keeping retrieved knowledge human-readable. An annotation pipeline tags factual spans in arbitrary text, removing prior Wikipedia-only restrictions. At 360M parameters, it achieves lower perplexity than models pretrained on 40x more data and SimpleQA performance comparable to gpt-4o-mini and above Claude Sonnet 4.5.",
           "tags": [
-            "graph-learning",
-            "diffusion-models",
-            "graph-transformers",
-            "theory"
+            "retrieval-augmented",
+            "pretraining",
+            "knowledge-base",
+            "factual-precision"
           ],
           "sources": [
             {
               "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2607.06546v1"
+              "url": "https://arxiv.org/abs/2607.07707v1"
             }
           ],
-          "published": "2026-07-07T17:52:17+00:00",
-          "score": 1.3101
+          "published": "2026-07-08T17:59:45+00:00",
+          "score": 1.3033
         },
         {
-          "id": "32353a398787",
-          "tier": "skim",
+          "id": "4be2136f844b",
+          "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Quantum Channel Polynomial Processing: NISQ-to-Fault-Tolerant Framework via Probabilistic Unitary Mixtures",
-          "why_it_matters": "The explicit sample/query complexity tradeoff and lower circuit complexity vs. QSVT with LCU block encoding makes this worth tracking for anyone following quantum ML algorithms.",
-          "summary": "The proposed framework uses probabilistic mixtures of unitary channels to apply arbitrary polynomials of Hermitian operators to arbitrary states, similar in scope to quantum singular value transformation (QSVT). It offers a tunable tradeoff: optimal query complexity (logarithmic in error) with exponential sample complexity at one extreme, and sub-polynomial query complexity with polynomial sample complexity at the other. Authors claim considerably lower quantum circuit complexity than QSVT with linear combination of unitaries block encoding, and argue the framework scales from NISQ to fault-tolerant regimes.",
+          "title": "Analysis-Driven Transformer Linearization Scales to 32B: Sink Tokens and Cache Routing Close the Gap",
+          "why_it_matters": "Researchers working on efficient long-context inference will find the theoretical dissection of why delta-style state updates outperform gated accumulation, plus the structural interventions, directly useful for designing or evaluating linear attention replacements.",
+          "summary": "In a frozen-backbone linearization regime, the paper shows softmax attention relies on key-dependent rank-1 orthogonal projections, explaining delta-style networks' advantage over purely gated accumulation. Structural interventions — sink tokens, short convolutions, and fixed-budget cache routing — reduce approximation errors. Applied to LLaMA and Qwen models up to 32B, the approach outperforms prior post-hoc linearization baselines on MMLU and matches complex adaptive-caching frameworks on long-context retrieval.",
           "tags": [
-            "quantum-computing",
-            "quantum-algorithms",
-            "quantum-ml"
+            "linear-attention",
+            "long-context",
+            "efficient-inference",
+            "architecture"
           ],
           "sources": [
             {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2607.06557v1"
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2607.07706v1"
             }
           ],
-          "published": "2026-07-07T17:57:48+00:00",
-          "score": 0.4372
+          "published": "2026-07-08T17:59:09+00:00",
+          "score": 1.3031
         },
         {
-          "id": "f284b3748a60",
-          "tier": "skim",
+          "id": "7f2f393f535e",
+          "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Waveguide QED Proposal: Continuous Superradiant Laser via Selective Partial Pumping",
-          "why_it_matters": "The selective sub-ensemble pumping mechanism enabling chip-scale optical frequency references is relevant for quantum computing researchers tracking precision metrology and atomic clock integration with photonic devices.",
-          "summary": "The paper proposes using all-to-all dipole-dipole interactions mediated by a nanophotonic waveguide to achieve continuous superradiant emission. Selectively pumping only a sub-ensemble of emitters — letting unpumped emitters provide narrowband frequency selection and effective feedback — yields directional, narrow-spectrum emission near the bare atomic resonance. The second-order intensity correlation g⁽²⁾(0) ≈ 1 indicates reduced equal-time intensity fluctuations, suggesting a route to chip-scale optical frequency references with small clock-atom ensembles.",
+          "title": "STRACE: Causal Trajectory Filtering for Agent Optimization Boosts Formal Verification Success 42.5%→58.5%",
+          "why_it_matters": "For engineers working on LLM-based agent optimization and reflection loops, STRACE directly addresses the noisy-trace problem by combining batch-level failure pattern mining with within-trace causal localization — a practical system with strong empirical gains.",
+          "summary": "STRACE builds a textual dependency graph over agent execution traces, using causal localization to strip non-causal steps and identify root-cause modules, while at batch level mining failure patterns to filter redundant traces. On the VeruSAGE-Bench formal verification task, it improves success rate from 42.5% to 58.5% (1.4× improvement) over human-expert designed agents, outperforming standard context-filtering baselines.",
           "tags": [
-            "quantum-computing",
-            "photonics",
-            "metrology",
-            "quantum-hardware"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2607.06556v1"
-            }
-          ],
-          "published": "2026-07-07T17:57:44+00:00",
-          "score": 0.4372
-        },
-        {
-          "id": "176be12ea4e1",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "Survey: Structural Challenges and Research Roadmap for Indic NLP and Foundation Models",
-          "why_it_matters": "For researchers building multilingual or low-resource models, this survey's characterization of Indic-specific challenges — rich morphology, diglossia, dialectal variation — and the proposed 'Culture Sensing' direction provides useful framing.",
-          "summary": "The paper surveys the historical development of Indic NLP, covering methodological shifts and resource creation, then analyzes structural challenges: rich morphology, complex scripts, diglossia, and large dialectal variation. It reviews current Indic foundation models and their coverage gaps, then proposes 'Culture Sensing' — a research direction grounded in hermeneutic reasoning — to address equitable performance across low-resource languages and culturally meaningful outputs.",
-          "tags": [
-            "nlp",
-            "multilingual",
-            "low-resource",
-            "indic-languages"
+            "agents",
+            "rl",
+            "optimization",
+            "reasoning"
           ],
           "sources": [
             {
               "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2607.06544v1"
+              "url": "https://arxiv.org/abs/2607.07702v1"
             }
           ],
-          "published": "2026-07-07T17:51:10+00:00",
-          "score": 0.4366
+          "published": "2026-07-08T17:57:27+00:00",
+          "score": 1.3026
         }
       ]
     }
