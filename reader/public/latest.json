@@ -1,176 +1,131 @@
 {
-  "date": "2026-07-09",
-  "generated_at": "2026-07-09T04:06:55.076187+00:00",
-  "summary_line": "5 worth knowing",
+  "date": "2026-07-10",
+  "generated_at": "2026-07-10T04:06:33.140950+00:00",
+  "summary_line": "3 worth knowing",
   "counts": {
-    "total": 7,
-    "headlines": 3,
-    "frontier": 4
+    "total": 5,
+    "headlines": 0,
+    "frontier": 5
   },
   "sections": [
     {
       "key": "headlines",
       "title": "Headlines",
-      "cards": [
-        {
-          "id": "5535aeb9eb9d",
-          "tier": "worth_knowing",
-          "category": "headline",
-          "title": "NVIDIA Nemotron Post-Training v3 Prompt Atlas: Interactive Map of 10T+ Agent Training Tokens",
-          "why_it_matters": "As an AI/research engineer building or evaluating agents, this gives you a visual, filterable lens into the exact prompt mixtures and curation choices behind a major open post-training dataset — directly actionable for data selection, eval design, and understanding model behavior.",
-          "summary": "NVIDIA's Nemotron open data release covers 10+ trillion pre-training tokens and millions of post-training samples. The new Prompt Atlas is an interactive semantic map where each point is a post-training prompt, volume-sampled to reflect true data mixture proportions, with filters by dataset, pipeline stage, domain, and tool-use. Nearly 145 ICML papers cite Nemotron models or datasets.",
-          "tags": [
-            "agents",
-            "synthetic-data",
-            "open-datasets",
-            "post-training"
-          ],
-          "sources": [
-            {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/nvidia/open-data-for-agents"
-            }
-          ],
-          "published": "2026-07-08T17:16:05+00:00",
-          "score": 1.2902
-        },
-        {
-          "id": "3203b0893ebc",
-          "tier": "skim",
-          "category": "headline",
-          "title": "Jailbreak: LLM-Synthesized Storage Readers Bypass Database Engines, Achieve Up to 27× Speedup",
-          "why_it_matters": "An AI infrastructure engineer will find this directly relevant as a concrete demonstration of agentic code synthesis for systems-level performance — LLMs reading format specs to generate Arrow-compatible readers that replace JDBC/ODBC entirely.",
-          "summary": "Jailbreak uses LLMs to synthesize storage-format-specific readers from database source code and documentation, bypassing query engines entirely and materializing data as Apache Arrow columnar buffers. Evaluated on PostgreSQL and MySQL with TPC-H benchmarks, generated readers are validated for correctness against JDBC/ODBC baselines and achieve up to 27× speedup in analytical throughput, compatible with DuckDB, Spark, cuDF, and Spark RAPIDS.",
-          "tags": [
-            "agents",
-            "code-synthesis",
-            "infrastructure",
-            "data-engineering"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2607.07696v1"
-            }
-          ],
-          "published": "2026-07-08T17:55:00+00:00",
-          "score": 0.434
-        },
-        {
-          "id": "f2a3364a10eb",
-          "tier": "skim",
-          "category": "headline",
-          "title": "Hugging Face's Transformers Backend for vLLM Now Matches Native Speed via torch.fx Graph Rewriting",
-          "why_it_matters": "For an ML engineer deploying models in production, this means any Hugging Face model — including Qwen3 MoE at 235B FP8 — can run in vLLM at near-native speed with a single flag, eliminating the need to write custom vLLM ports.",
-          "summary": "The updated transformers modeling backend for vLLM uses torch.fx for static graph analysis and AST rewriting to apply layer fusions and optimized kernels at runtime, closing the performance gap with hand-written vLLM implementations. Benchmarks cover Qwen3-4B (single GPU), 32B (tensor parallel), and 235B-A22B-FP8 MoE (data+expert parallel on 8×H100). Activated via --model-impl transformers.",
-          "tags": [
-            "inference",
-            "vllm",
-            "serving",
-            "transformers"
-          ],
-          "sources": [
-            {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/native-speed-vllm-transformers-backend"
-            }
-          ],
-          "published": "2026-07-08T00:00:00+00:00",
-          "score": 0.3384
-        }
-      ]
+      "cards": []
     },
     {
       "key": "frontier",
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "6dcaed6fe13a",
+          "id": "06a3358d5480",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "SciReasoner: Multimodal Foundation Model Achieves SOTA on 67 of 86 Structure-Property Benchmarks",
-          "why_it_matters": "A researcher interested in multimodal architectures and interpretable reasoning will want to study how SciReasoner's structure-aware tokenization and chain-of-thought traces achieve both SOTA accuracy and expert-preferred explanations across proteins, molecules, and crystals.",
-          "summary": "SciReasoner discretizes protein coordinates, molecular topologies, and crystal connectivities into a unified structure-aware vocabulary, enabling inspectable reasoning. It improves GO Cellular Component F-max from 0.42 to 0.55 for low-homology proteins and single-step retrosynthesis accuracy from 0.63 to 0.72. Across 86 benchmarks it reaches SOTA on 67; expert evaluators preferred or found comparable its reasoning traces in 98% of double-blind cases.",
-          "tags": [
-            "scientific-ml",
-            "multimodal",
-            "reasoning",
-            "interpretability"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2607.07708v1"
-            }
-          ],
-          "published": "2026-07-08T17:59:59+00:00",
-          "score": 1.3034
-        },
-        {
-          "id": "df0e004ce730",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "CO-LMLM: Continuous-Query Limited Memory LM Beats Models Trained on 40x More Data at 360M Scale",
-          "why_it_matters": "This is a technically distinct pretraining paradigm — externalizing factual knowledge to a KB with continuous vector keys — that achieves strong factual precision without scaling parameters, relevant to anyone working on retrieval-augmented or knowledge-controlled LMs.",
-          "summary": "CO-LMLM pairs continuous vector keys with textual KB values, generating flexible queries at low cost while keeping retrieved knowledge human-readable. An annotation pipeline tags factual spans in arbitrary text, removing prior Wikipedia-only restrictions. At 360M parameters, it achieves lower perplexity than models pretrained on 40x more data and SimpleQA performance comparable to gpt-4o-mini and above Claude Sonnet 4.5.",
-          "tags": [
-            "retrieval-augmented",
-            "pretraining",
-            "knowledge-base",
-            "factual-precision"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2607.07707v1"
-            }
-          ],
-          "published": "2026-07-08T17:59:45+00:00",
-          "score": 1.3033
-        },
-        {
-          "id": "4be2136f844b",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "Analysis-Driven Transformer Linearization Scales to 32B: Sink Tokens and Cache Routing Close the Gap",
-          "why_it_matters": "Researchers working on efficient long-context inference will find the theoretical dissection of why delta-style state updates outperform gated accumulation, plus the structural interventions, directly useful for designing or evaluating linear attention replacements.",
-          "summary": "In a frozen-backbone linearization regime, the paper shows softmax attention relies on key-dependent rank-1 orthogonal projections, explaining delta-style networks' advantage over purely gated accumulation. Structural interventions — sink tokens, short convolutions, and fixed-budget cache routing — reduce approximation errors. Applied to LLaMA and Qwen models up to 32B, the approach outperforms prior post-hoc linearization baselines on MMLU and matches complex adaptive-caching frameworks on long-context retrieval.",
-          "tags": [
-            "linear-attention",
-            "long-context",
-            "efficient-inference",
-            "architecture"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2607.07706v1"
-            }
-          ],
-          "published": "2026-07-08T17:59:09+00:00",
-          "score": 1.3031
-        },
-        {
-          "id": "7f2f393f535e",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "STRACE: Causal Trajectory Filtering for Agent Optimization Boosts Formal Verification Success 42.5%→58.5%",
-          "why_it_matters": "For engineers working on LLM-based agent optimization and reflection loops, STRACE directly addresses the noisy-trace problem by combining batch-level failure pattern mining with within-trace causal localization — a practical system with strong empirical gains.",
-          "summary": "STRACE builds a textual dependency graph over agent execution traces, using causal localization to strip non-causal steps and identify root-cause modules, while at batch level mining failure patterns to filter redundant traces. On the VeruSAGE-Bench formal verification task, it improves success rate from 42.5% to 58.5% (1.4× improvement) over human-expert designed agents, outperforming standard context-filtering baselines.",
+          "title": "UniClawBench: Capability-Driven Benchmark for Proactive Agents on Real-World Tasks",
+          "why_it_matters": "If you build or evaluate LLM-based agents, UniClawBench offers a more diagnostic alternative to sandbox-based benchmarks by isolating five distinct model capabilities and running live evaluations in Docker containers.",
+          "summary": "UniClawBench introduces 400 bilingual real-world tasks organized around five capabilities: Skill Usage, Exploration, Long-Context Reasoning, Multimodal Understanding, and Cross-Platform Coordination. Evaluation runs in live Docker containers with step-by-step checkpoints and a closed-loop multi-agent setup (executor, hidden supervisor, user agent) to simulate realistic multi-turn feedback without leaking grading criteria. Code and benchmark are public.",
           "tags": [
             "agents",
-            "rl",
-            "optimization",
-            "reasoning"
+            "benchmarks",
+            "llm",
+            "evaluation"
           ],
           "sources": [
             {
               "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2607.07702v1"
+              "url": "https://arxiv.org/abs/2607.08768v1"
             }
           ],
-          "published": "2026-07-08T17:57:27+00:00",
-          "score": 1.3026
+          "published": "2026-07-09T17:59:32+00:00",
+          "score": 1.3034
+        },
+        {
+          "id": "377bc628cd46",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Plaquette: Hardware-Aware Simulation Framework for Fault-Tolerant Quantum Computers",
+          "why_it_matters": "Plaquette directly addresses the gap between idealized Pauli noise models and real device physics — critical for anyone estimating realistic error thresholds or overhead for superconducting, neutral-atom, or trapped-ion fault-tolerant architectures.",
+          "summary": "Plaquette accepts hardware error models as Kraus operators, Hamiltonian-Lindblad dynamics, or reconstructed quantum channels, then compiles them into one of four sampler classes: stabilizer (Pauli noise), XPauli (leakage and environment sectors), near-Clifford (coherent errors), and full-state simulation. The XPauli and near-Clifford samplers are validated against full-state simulation and shown to match within statistical uncertainty where Pauli twirling falls short. Demonstrated on leakage in superconducting qubits, intermediate-state scattering in neutral atoms, and heating in trapped ions.",
+          "tags": [
+            "quantum computing",
+            "fault tolerance",
+            "simulation",
+            "hardware"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2607.08767v1"
+            }
+          ],
+          "published": "2026-07-09T17:59:27+00:00",
+          "score": 1.3033
+        },
+        {
+          "id": "b8f60678adbe",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "OpenCoF: Teaching Video Generation Models to Reason Through Temporal Frames",
+          "why_it_matters": "Chain-of-Frame reasoning is a genuinely novel alternative to chain-of-thought for spatial and temporal problems, and OpenCoF's open dataset and fine-tuned model give researchers a concrete testbed for studying it.",
+          "summary": "OpenCoF introduces a 17K-sample reasoning video dataset spanning 11 task families and Wan-CoF, a fine-tuned version of Wan2.2-I2V-A14B, trained on this data. Wan-CoF achieves gains over the baseline across four video reasoning benchmarks. The framework additionally augments the model with visual and textual reasoning tokens to capture low-level visual cues and high-level semantic priors respectively; attention analysis examines their contributions across model depth, denoising steps, space, and time. Dataset, model, and code are open-sourced.",
+          "tags": [
+            "video generation",
+            "reasoning",
+            "multimodal",
+            "chain-of-thought"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2607.08763v1"
+            }
+          ],
+          "published": "2026-07-09T17:58:29+00:00",
+          "score": 1.3031
+        },
+        {
+          "id": "4fdfcb30ee7a",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Analytical Steering Probability for Two-Qubit Werner States Under Random Measurements",
+          "why_it_matters": "Quantifying how generically two-qubit states exhibit steering — rather than just whether a specific state does — is useful context for quantum communication and resource-theory work, especially the finding that steering probability substantially exceeds Bell nonlocality probability.",
+          "summary": "The paper derives analytical expressions for the steering probability of Werner states in two- and three-measurement-setting scenarios (the latter restricted to coplanar projective measurements). Numerical analyses for larger numbers of settings show steering probability increases systematically with measurement count and substantially exceeds corresponding Bell nonlocality probabilities. Random states with minimal environmental coupling approach steering probability of 100% as the number of settings grows.",
+          "tags": [
+            "quantum information",
+            "quantum steering",
+            "entanglement",
+            "two-qubit"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2607.08762v1"
+            }
+          ],
+          "published": "2026-07-09T17:56:34+00:00",
+          "score": 0.4342
+        },
+        {
+          "id": "a219d25a6729",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Geometric Framework for Irreducible Information in Higher-Order Quantum Correlator Families",
+          "why_it_matters": "As programmable quantum simulators produce increasingly complex many-body correlators, this geometric framework offers a principled method to identify which correlators are redundant versus genuinely independent — directly relevant to interpreting experimental data.",
+          "summary": "The framework represents correlator families as geometries in operator space via inner products between operator words. Conditioning subspaces split each geometry into reducible information (explained by a chosen resolved sector) and irreducible information (the residual). Irreducible volume profiles quantify how broadly the unexplained part spans independent geometric directions. Four conditioning modes are introduced: canonical, targeted, Krylov, and cross conditioning, enabling comparison across correlator geometries.",
+          "tags": [
+            "quantum many-body",
+            "correlators",
+            "quantum simulation",
+            "theory"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2607.08761v1"
+            }
+          ],
+          "published": "2026-07-09T17:56:23+00:00",
+          "score": 0.4341
         }
       ]
     }
