@@ -1,11 +1,11 @@
 {
-  "date": "2026-07-10",
-  "generated_at": "2026-07-10T04:06:33.140950+00:00",
-  "summary_line": "3 worth knowing",
+  "date": "2026-07-11",
+  "generated_at": "2026-07-11T03:32:57.905886+00:00",
+  "summary_line": "1 worth knowing",
   "counts": {
-    "total": 5,
+    "total": 2,
     "headlines": 0,
-    "frontier": 5
+    "frontier": 2
   },
   "sections": [
     {
@@ -18,114 +18,48 @@
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "06a3358d5480",
+          "id": "145fbd552c75",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "UniClawBench: Capability-Driven Benchmark for Proactive Agents on Real-World Tasks",
-          "why_it_matters": "If you build or evaluate LLM-based agents, UniClawBench offers a more diagnostic alternative to sandbox-based benchmarks by isolating five distinct model capabilities and running live evaluations in Docker containers.",
-          "summary": "UniClawBench introduces 400 bilingual real-world tasks organized around five capabilities: Skill Usage, Exploration, Long-Context Reasoning, Multimodal Understanding, and Cross-Platform Coordination. Evaluation runs in live Docker containers with step-by-step checkpoints and a closed-loop multi-agent setup (executor, hidden supervisor, user agent) to simulate realistic multi-turn feedback without leaking grading criteria. Code and benchmark are public.",
+          "title": "HuggingFace Blog: Profiling Attention in PyTorch — From Naive to Flash-Style Kernels",
+          "why_it_matters": "If you optimize transformer inference or training, understanding how each attention primitive maps to GPU kernels is directly actionable for your perf work.",
+          "summary": "Part 3 of HuggingFace's PyTorch profiling series walks through naive causal attention (matmul → scale → masked_fill → softmax → matmul), shows how to read CPU and GPU profiler traces, explains an unexpected memory-copy kernel from out-of-place ops, then contrasts in-place ops, scaled dot-product attention (SDPA), and fused kernels. Scripts run on an A100-SXM4-80GB.",
           "tags": [
-            "agents",
-            "benchmarks",
-            "llm",
-            "evaluation"
+            "pytorch",
+            "profiling",
+            "attention",
+            "transformers"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2607.08768v1"
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/torch-attention-profile"
             }
           ],
-          "published": "2026-07-09T17:59:32+00:00",
-          "score": 1.3034
+          "published": "2026-07-10T00:00:00+00:00",
+          "score": 1.0231
         },
         {
-          "id": "377bc628cd46",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "Plaquette: Hardware-Aware Simulation Framework for Fault-Tolerant Quantum Computers",
-          "why_it_matters": "Plaquette directly addresses the gap between idealized Pauli noise models and real device physics — critical for anyone estimating realistic error thresholds or overhead for superconducting, neutral-atom, or trapped-ion fault-tolerant architectures.",
-          "summary": "Plaquette accepts hardware error models as Kraus operators, Hamiltonian-Lindblad dynamics, or reconstructed quantum channels, then compiles them into one of four sampler classes: stabilizer (Pauli noise), XPauli (leakage and environment sectors), near-Clifford (coherent errors), and full-state simulation. The XPauli and near-Clifford samplers are validated against full-state simulation and shown to match within statistical uncertainty where Pauli twirling falls short. Demonstrated on leakage in superconducting qubits, intermediate-state scattering in neutral atoms, and heating in trapped ions.",
-          "tags": [
-            "quantum computing",
-            "fault tolerance",
-            "simulation",
-            "hardware"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2607.08767v1"
-            }
-          ],
-          "published": "2026-07-09T17:59:27+00:00",
-          "score": 1.3033
-        },
-        {
-          "id": "b8f60678adbe",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "OpenCoF: Teaching Video Generation Models to Reason Through Temporal Frames",
-          "why_it_matters": "Chain-of-Frame reasoning is a genuinely novel alternative to chain-of-thought for spatial and temporal problems, and OpenCoF's open dataset and fine-tuned model give researchers a concrete testbed for studying it.",
-          "summary": "OpenCoF introduces a 17K-sample reasoning video dataset spanning 11 task families and Wan-CoF, a fine-tuned version of Wan2.2-I2V-A14B, trained on this data. Wan-CoF achieves gains over the baseline across four video reasoning benchmarks. The framework additionally augments the model with visual and textual reasoning tokens to capture low-level visual cues and high-level semantic priors respectively; attention analysis examines their contributions across model depth, denoising steps, space, and time. Dataset, model, and code are open-sourced.",
-          "tags": [
-            "video generation",
-            "reasoning",
-            "multimodal",
-            "chain-of-thought"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2607.08763v1"
-            }
-          ],
-          "published": "2026-07-09T17:58:29+00:00",
-          "score": 1.3031
-        },
-        {
-          "id": "4fdfcb30ee7a",
+          "id": "be2a19639c20",
           "tier": "skim",
           "category": "frontier",
-          "title": "Analytical Steering Probability for Two-Qubit Werner States Under Random Measurements",
-          "why_it_matters": "Quantifying how generically two-qubit states exhibit steering — rather than just whether a specific state does — is useful context for quantum communication and resource-theory work, especially the finding that steering probability substantially exceeds Bell nonlocality probability.",
-          "summary": "The paper derives analytical expressions for the steering probability of Werner states in two- and three-measurement-setting scenarios (the latter restricted to coplanar projective measurements). Numerical analyses for larger numbers of settings show steering probability increases systematically with measurement count and substantially exceeds corresponding Bell nonlocality probabilities. Random states with minimal environmental coupling approach steering probability of 100% as the number of settings grows.",
+          "title": "Systematic Theory of Hockey Stick f-Divergences Extended to von Neumann Algebras",
+          "why_it_matters": "For ML researchers working on quantum information-theoretic foundations of learning or hypothesis testing, this unifies divergence measures relevant to quantum channel analysis.",
+          "summary": "This paper extends hockey stick f-divergences — built on quantum hockey stick divergences — to non-normalized states, more general integral representations with an additional real parameter, and general von Neumann algebras. Key results: representation via Neyman-Pearson error probabilities, extension of Jenčová's channel-reversibility detection criterion, and a proof that regularized hockey stick Rényi α-divergences coincide with Petz-type divergences for α∈(0,1) and sandwiched divergences for α>1.",
           "tags": [
             "quantum information",
-            "quantum steering",
-            "entanglement",
-            "two-qubit"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2607.08762v1"
-            }
-          ],
-          "published": "2026-07-09T17:56:34+00:00",
-          "score": 0.4342
-        },
-        {
-          "id": "a219d25a6729",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "Geometric Framework for Irreducible Information in Higher-Order Quantum Correlator Families",
-          "why_it_matters": "As programmable quantum simulators produce increasingly complex many-body correlators, this geometric framework offers a principled method to identify which correlators are redundant versus genuinely independent — directly relevant to interpreting experimental data.",
-          "summary": "The framework represents correlator families as geometries in operator space via inner products between operator words. Conditioning subspaces split each geometry into reducible information (explained by a chosen resolved sector) and irreducible information (the residual). Irreducible volume profiles quantify how broadly the unexplained part spans independent geometric directions. Four conditioning modes are introduced: canonical, targeted, Krylov, and cross conditioning, enabling comparison across correlator geometries.",
-          "tags": [
-            "quantum many-body",
-            "correlators",
-            "quantum simulation",
+            "divergences",
+            "quantum ml",
             "theory"
           ],
           "sources": [
             {
               "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2607.08761v1"
+              "url": "https://arxiv.org/abs/2607.08760v1"
             }
           ],
-          "published": "2026-07-09T17:56:23+00:00",
-          "score": 0.4341
+          "published": "2026-07-09T17:56:17+00:00",
+          "score": 0.3135
         }
       ]
     }
