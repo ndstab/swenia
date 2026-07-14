@@ -1,132 +1,130 @@
 {
-  "date": "2026-07-13",
-  "generated_at": "2026-07-13T03:48:31.994850+00:00",
-  "summary_line": "3 worth knowing",
+  "date": "2026-07-14",
+  "generated_at": "2026-07-14T03:22:04.829482+00:00",
+  "summary_line": "4 worth knowing",
   "counts": {
     "total": 5,
-    "headlines": 1,
-    "frontier": 4
+    "headlines": 0,
+    "frontier": 5
   },
   "sections": [
     {
       "key": "headlines",
       "title": "Headlines",
-      "cards": [
-        {
-          "id": "ab23329c09eb",
-          "tier": "worth_knowing",
-          "category": "headline",
-          "title": "White House May Restrict Frontier Open-Weight Models Within 6 Months",
-          "why_it_matters": "As an AI/ML engineer who depends on open-weight models for research and deployment, incoming executive action could permanently cap what open-weights you're legally allowed to use or build on.",
-          "summary": "White House discussions are reportedly underway on an executive order targeting open-weight models, likely focusing first on Chinese-origin models and government use. The anticipated capability threshold for regulatory review aligns with models near GPT-5.5/Claude Opus 4.8 levels. Distillation restrictions are also on the table, framed as regulatory capture benefiting closed-model incumbents like Anthropic. No official action yet, but the policy momentum is real.",
-          "tags": [
-            "open-source ai",
-            "ai policy",
-            "regulation",
-            "open-weights"
-          ],
-          "sources": [
-            {
-              "name": "Interconnects",
-              "url": "https://www.interconnects.ai/p/6-months-to-live-for-open-models"
-            }
-          ],
-          "published": "2026-07-12T16:47:42+00:00",
-          "score": 1.2872
-        }
-      ]
+      "cards": []
     },
     {
       "key": "frontier",
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "b138d134c48a",
+          "id": "637cf9e3d125",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Visual Pretraining on Raw Document Images Outperforms Text-Only LM Pretraining",
-          "why_it_matters": "If visual pretraining consistently beats text-only pretraining across backbones and benchmarks, it challenges a core assumption in how foundation models are trained — directly relevant to your work on model architecture and training pipelines.",
-          "summary": "This paper argues that converting documents to plain text discards rich visual information — figures, equations, layouts — and that pretraining language models directly on visual document representations is a scalable alternative. Across multiple backbones and benchmarks, visual pretraining on the same underlying corpora consistently outperforms text-only pretraining. The study uses unsupervised visual pretraining paradigms without text extraction.",
+          "title": "Requential Coding Achieves SOTA Generalization Bounds for Billion-Parameter LLMs",
+          "why_it_matters": "As an AI/ML engineer tracking scaling theory and generalization, this directly addresses why large models generalize despite overparameterization and yields the tightest known PAC-Bayes bounds for LLMs.",
+          "summary": "Requential coding compresses models by having a teacher sample from the student's own distribution; the student's code records only disagreements, making code length independent of parameter count and data entropy. Applied to billion-parameter LLMs, it yields state-of-the-art PAC-Bayes generalization bounds that tighten with scale in the compute-optimal regime, outperforming aggressive quantization-based bounds. It also detects overfitting across epochs and separates learnable from random content in datasets.",
           "tags": [
-            "pretraining",
-            "vision-language",
-            "foundation models",
-            "multimodal"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2607.09657v1"
-            }
-          ],
-          "published": "2026-07-10T17:57:03+00:00",
-          "score": 0.6716
-        },
-        {
-          "id": "a54ad17c052e",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "MLLMs Match Top-Human Scene Description Accuracy; Spatial Dependence Errors Persist",
-          "why_it_matters": "Understanding where current VLMs still fail — and which error types most degrade output quality — is directly useful for benchmarking and evaluating vision-language components in your research systems.",
-          "summary": "A new Complex Social Behavior (CSB) dataset of 100 complex social-interaction images benchmarks VLMs from 2017–2025. Pre-MLLM models scored far below human baselines; modern MLLMs reach accuracy comparable to top-ranked human descriptions. MLLMs have nearly eliminated detection, recognition, and hallucination errors, but spatial dependence errors persist. Detection, recognition, and hallucination errors were found to have the highest impact on accuracy.",
-          "tags": [
-            "vision-language models",
-            "benchmarks",
-            "evaluation",
-            "vlm errors"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2607.09654v1"
-            }
-          ],
-          "published": "2026-07-10T17:53:37+00:00",
-          "score": 0.671
-        },
-        {
-          "id": "a29f9ec805fc",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "PHINN-EEG: Topological Persistent Homology Applied to Dream-State EEG Classification",
-          "why_it_matters": "The use of Vietoris-Rips filtrations and Dynamic Betti Curves on EEG is a methodologically novel approach to neural time-series that could generalize to other BCI and neural signal domains you might encounter.",
-          "summary": "PHINN-EEG applies Takens delay embeddings and persistent homology to multichannel pre-awakening EEG, extracting Dynamic Betti Curves as topological features. The framework analytically targets AUC 0.82–0.90 on the 1,462-awakening DREAM dataset subset, versus the current ~0.70 PSD baseline. A topology-conditioned rectified flow model for EEG synthesis is also proposed. Results are projected, not yet empirically validated.",
-          "tags": [
-            "eeg",
-            "topological data analysis",
-            "bci",
-            "neural signals"
+            "generalization",
+            "compression",
+            "scaling",
+            "pac-bayes"
           ],
           "sources": [
             {
               "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2607.09662v1"
+              "url": "https://arxiv.org/abs/2607.11883v1"
             }
           ],
-          "published": "2026-07-10T17:59:45+00:00",
-          "score": 0.224
+          "published": "2026-07-13T17:58:50+00:00",
+          "score": 1.3166
         },
         {
-          "id": "c812d2afe057",
-          "tier": "skim",
+          "id": "3a873f2d2eb7",
+          "tier": "worth_knowing",
           "category": "frontier",
-          "title": "LLM Multi-Agent Framework Achieves 95% IoT Vulnerability Exploitation Rate",
-          "why_it_matters": "High autonomous exploitation success rates in controlled environments signal that LLM agents are crossing a practical threshold for offensive security automation — relevant context for anyone building or evaluating AI agent systems.",
-          "summary": "VEXAIoT pairs a vulnerability detection agent with an attack execution agent using LLM-based reasoning to perform reconnaissance and exploit IoT services. Evaluated across 260 attack executions in IoTGoat and Metasploitable2 environments against OWASP IoT vulnerabilities, it achieved 95.0% overall success — 94.5% on IoTGoat and 96.7% on Metasploitable2 — with most attacks completing in under two minutes.",
+          "title": "First Comprehensive Survey of Metacognition in LLMs: Methods, Benchmarks, and Open Problems",
+          "why_it_matters": "For an AI/research engineer building reliable LLM-based systems, understanding the current state of metacognitive capabilities—calibration, self-monitoring, uncertainty—directly informs design and evaluation choices.",
+          "summary": "This survey taxonomizes metacognition research in LLMs, covering methods to measure, elicit, and improve metacognitive abilities alongside relevant benchmarks. It reviews findings on when and how LLMs exhibit self-monitoring and uncertainty awareness, discusses applications to reliability and transparency, and identifies open challenges. Positioned as the first comprehensive overview of this emerging subfield.",
           "tags": [
-            "llm agents",
-            "security",
-            "iot",
-            "autonomous systems"
+            "llm",
+            "metacognition",
+            "survey",
+            "reliability"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2607.09653v1"
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2607.11881v1"
             }
           ],
-          "published": "2026-07-10T17:52:29+00:00",
-          "score": 0.2236
+          "published": "2026-07-13T17:58:37+00:00",
+          "score": 1.3166
+        },
+        {
+          "id": "20bdda93ef46",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Low-Dimensional Invariant Manifold Theory Explains Inductive Reasoning in Transformers",
+          "why_it_matters": "This theoretical result is directly relevant to mechanistic interpretability and circuit analysis work, offering a principled, low-dimensional framework to predict how attention heads form circuits during training.",
+          "summary": "The paper proves that transformer training dynamics for a generalized class of inductive tasks—unifying in-context n-grams and multi-hop reasoning—are confined to a low-dimensional invariant manifold. A handful of interpretable coordinates capture learning dynamics rather than millions of parameters. The framework characterizes in-context vs. in-weights learning competition, how initialization selects circuits, and enables automatic circuit detection in trained models.",
+          "tags": [
+            "transformers",
+            "learning dynamics",
+            "mechanistic interpretability",
+            "theory"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2607.11875v1"
+            }
+          ],
+          "published": "2026-07-13T17:56:11+00:00",
+          "score": 1.3158
+        },
+        {
+          "id": "0a441b05c2de",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "REGRIND: Single-Demo Retargeting-Guided RL Achieves Zero-Shot Sim-to-Real Dexterous Manipulation",
+          "why_it_matters": "Robotics and RL researchers will find this directly relevant as it extends the retargeting-plus-RL recipe proven in humanoid locomotion to contact-rich dexterous manipulation with zero-shot hardware transfer.",
+          "summary": "REGRIND retargets a single human hand-object demonstration to a robot reference preserving hand-object spatial and contact relationships, trains a residual RL policy to track object-centric keypoints in simulation, then transfers zero-shot to hardware via system identification. Demonstrated on two multi-fingered hands for scissors operation and screwdriver turning. The paper systematically analyzes key factors governing sim-to-real transfer in contact-rich settings.",
+          "tags": [
+            "reinforcement learning",
+            "dexterous manipulation",
+            "sim-to-real",
+            "robotics"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2607.11874v1"
+            }
+          ],
+          "published": "2026-07-13T17:56:08+00:00",
+          "score": 1.3158
+        },
+        {
+          "id": "56220108c5a3",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Pruned Shadow Hamiltonian Simulation Cuts Qubit Register Size for Real-Time Dynamics",
+          "why_it_matters": "Quantum ML researchers and those tracking quantum computing infrastructure will want to know about this efficiency advance in Hamiltonian simulation, which directly reduces qubit resource requirements.",
+          "summary": "The algorithm approximates real-time observable dynamics under time-independent Hamiltonians by working in the operator algebra generated by commutators, then pruning it to only the elements most relevant to target observables. Two pruning schemes are proposed—predefined operator basis and Krylov basis—plus a hybrid. Benchmarked on 1D and 2D lattice spin systems for one- and higher-point correlators.",
+          "tags": [
+            "quantum computing",
+            "hamiltonian simulation",
+            "quantum algorithms"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2607.11882v1"
+            }
+          ],
+          "published": "2026-07-13T17:58:38+00:00",
+          "score": 0.4389
         }
       ]
     }
