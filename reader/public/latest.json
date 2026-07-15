@@ -1,11 +1,11 @@
 {
-  "date": "2026-07-14",
-  "generated_at": "2026-07-14T03:22:04.829482+00:00",
+  "date": "2026-07-15",
+  "generated_at": "2026-07-15T03:22:07.863479+00:00",
   "summary_line": "4 worth knowing",
   "counts": {
-    "total": 5,
+    "total": 6,
     "headlines": 0,
-    "frontier": 5
+    "frontier": 6
   },
   "sections": [
     {
@@ -18,113 +18,136 @@
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "637cf9e3d125",
+          "id": "e48ef37c9983",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Requential Coding Achieves SOTA Generalization Bounds for Billion-Parameter LLMs",
-          "why_it_matters": "As an AI/ML engineer tracking scaling theory and generalization, this directly addresses why large models generalize despite overparameterization and yields the tightest known PAC-Bayes bounds for LLMs.",
-          "summary": "Requential coding compresses models by having a teacher sample from the student's own distribution; the student's code records only disagreements, making code length independent of parameter count and data entropy. Applied to billion-parameter LLMs, it yields state-of-the-art PAC-Bayes generalization bounds that tighten with scale in the compute-optimal regime, outperforming aggressive quantization-based bounds. It also detects overfitting across epochs and separates learnable from random content in datasets.",
+          "title": "E3 Framework Cuts LLM Agent Token Use by 91% via Complexity-Aware Execution",
+          "why_it_matters": "As an AI/research engineer building or evaluating LLM agents, this directly addresses the compute waste from over-reading context, with concrete metrics and a released benchmark to evaluate against.",
+          "summary": "E3 (Estimate, Execute, Expand) gives LLM agents a complexity-awareness step before acting: estimate minimum required scope, execute that path, expand only on failure. On MSE-Bench (121 deterministic edits), E3 matches 100% task success while cutting cost 85%, tokens 91%, and inspected files 92% vs. strongest baselines. Validated on a live GPT-4o agent editing real open-source code via pytest.",
           "tags": [
-            "generalization",
-            "compression",
-            "scaling",
-            "pac-bayes"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2607.11883v1"
-            }
-          ],
-          "published": "2026-07-13T17:58:50+00:00",
-          "score": 1.3166
-        },
-        {
-          "id": "3a873f2d2eb7",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "First Comprehensive Survey of Metacognition in LLMs: Methods, Benchmarks, and Open Problems",
-          "why_it_matters": "For an AI/research engineer building reliable LLM-based systems, understanding the current state of metacognitive capabilities—calibration, self-monitoring, uncertainty—directly informs design and evaluation choices.",
-          "summary": "This survey taxonomizes metacognition research in LLMs, covering methods to measure, elicit, and improve metacognitive abilities alongside relevant benchmarks. It reviews findings on when and how LLMs exhibit self-monitoring and uncertainty awareness, discusses applications to reliability and transparency, and identifies open challenges. Positioned as the first comprehensive overview of this emerging subfield.",
-          "tags": [
-            "llm",
-            "metacognition",
-            "survey",
-            "reliability"
+            "llm-agents",
+            "efficiency",
+            "code-editing",
+            "benchmarks"
           ],
           "sources": [
             {
               "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2607.11881v1"
+              "url": "https://arxiv.org/abs/2607.13034v1"
             }
           ],
-          "published": "2026-07-13T17:58:37+00:00",
-          "score": 1.3166
+          "published": "2026-07-14T17:59:31+00:00",
+          "score": 1.3168
         },
         {
-          "id": "20bdda93ef46",
+          "id": "132dd57a5b5d",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Low-Dimensional Invariant Manifold Theory Explains Inductive Reasoning in Transformers",
-          "why_it_matters": "This theoretical result is directly relevant to mechanistic interpretability and circuit analysis work, offering a principled, low-dimensional framework to predict how attention heads form circuits during training.",
-          "summary": "The paper proves that transformer training dynamics for a generalized class of inductive tasks—unifying in-context n-grams and multi-hop reasoning—are confined to a low-dimensional invariant manifold. A handful of interpretable coordinates capture learning dynamics rather than millions of parameters. The framework characterizes in-context vs. in-weights learning competition, how initialization selects circuits, and enables automatic circuit detection in trained models.",
+          "title": "Seriality Gap: Video Diffusion Models Structurally Can't Scale Serial Computation for Causal Chains",
+          "why_it_matters": "If you work on world models or video generation for simulation/reasoning, this is a fundamental architectural finding showing that adding denoising steps does not provide the serial compute needed for dependent-event reasoning.",
+          "summary": "Controlled experiments on multi-ball hard-sphere dynamics show bidirectional video diffusion degrades as causal chains lengthen, but not in length-matched single-ball controls, isolating dependent-event structure as the cause. The authors prove that denoising steps add no serial computation beyond the backbone. Autoregressive/blockwise generation and greater architectural depth improve performance, pointing toward serial-compute-aware architectures.",
           "tags": [
-            "transformers",
-            "learning dynamics",
-            "mechanistic interpretability",
-            "theory"
+            "video-diffusion",
+            "world-models",
+            "reasoning",
+            "architectures"
           ],
           "sources": [
             {
               "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2607.11875v1"
+              "url": "https://arxiv.org/abs/2607.13031v1"
             }
           ],
-          "published": "2026-07-13T17:56:11+00:00",
-          "score": 1.3158
+          "published": "2026-07-14T17:59:22+00:00",
+          "score": 1.3168
         },
         {
-          "id": "0a441b05c2de",
+          "id": "0f00e678420b",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "REGRIND: Single-Demo Retargeting-Guided RL Achieves Zero-Shot Sim-to-Real Dexterous Manipulation",
-          "why_it_matters": "Robotics and RL researchers will find this directly relevant as it extends the retargeting-plus-RL recipe proven in humanoid locomotion to contact-rich dexterous manipulation with zero-shot hardware transfer.",
-          "summary": "REGRIND retargets a single human hand-object demonstration to a robot reference preserving hand-object spatial and contact relationships, trains a residual RL policy to track object-centric keypoints in simulation, then transfers zero-shot to hardware via system identification. Demonstrated on two multi-fingered hands for scissors operation and screwdriver turning. The paper systematically analyzes key factors governing sim-to-real transfer in contact-rich settings.",
+          "title": "TerraZero: RL-Only Autonomous Driving Agent Tops InterPlan Benchmark at 1.3M Steps/Second",
+          "why_it_matters": "For researchers working on RL, agents, or simulation infrastructure, this is a strong result showing zero-demonstration RL generalizing across cities and reaching SOTA on a long-tail driving benchmark without a fallback planner.",
+          "summary": "TerraZero is a procedural driving simulator and self-play RL stack achieving 1.3M agent-steps/second on a single server GPU via a zero-copy CPU/GPU path. Policies train from scratch with no human demonstrations and zero-shot generalize across cities, including emergent left-hand traffic. First fully learned policy to top the InterPlan long-tail benchmark; posts best collision and time-to-collision scores on val14; competitive with reference-anchored self-play on Waymo realism.",
           "tags": [
-            "reinforcement learning",
-            "dexterous manipulation",
-            "sim-to-real",
-            "robotics"
+            "reinforcement-learning",
+            "autonomous-driving",
+            "simulation",
+            "self-play"
           ],
           "sources": [
             {
               "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2607.11874v1"
+              "url": "https://arxiv.org/abs/2607.13028v1"
             }
           ],
-          "published": "2026-07-13T17:56:08+00:00",
-          "score": 1.3158
+          "published": "2026-07-14T17:59:02+00:00",
+          "score": 1.3167
         },
         {
-          "id": "56220108c5a3",
+          "id": "25aaab559992",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Discrete-Diffusion ASR: Frozen DiffusionGemma 26B MoE Reaches 6.6% WER on LibriSpeech in ~8 Parallel Steps",
+          "why_it_matters": "For researchers in speech, diffusion LMs, or efficient inference, this demonstrates that a frozen discrete-diffusion backbone can be audio-adapted with only 0.16% of parameters trained, and that a CTC loss is necessary to ground audio in the attention pathway.",
+          "summary": "A frozen Whisper encoder feeds into a lightweight projector and LoRA adapters (~42M trainable parameters, 0.16% of backbone) to give DiffusionGemma—a 26B MoE discrete-diffusion LM using uniform random-token diffusion—ASR capability. Standard training objectives fail because audio gradients don't reach the projector; a CTC loss applied through the frozen output head fixes this. Achieves 6.6% WER on LibriSpeech test-clean in roughly eight parallel denoising steps across utterance lengths.",
+          "tags": [
+            "speech-recognition",
+            "diffusion-lm",
+            "efficient-inference",
+            "multimodal"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2607.13013v1"
+            }
+          ],
+          "published": "2026-07-14T17:53:22+00:00",
+          "score": 1.315
+        },
+        {
+          "id": "5f0f3e0a2345",
           "tier": "skim",
           "category": "frontier",
-          "title": "Pruned Shadow Hamiltonian Simulation Cuts Qubit Register Size for Real-Time Dynamics",
-          "why_it_matters": "Quantum ML researchers and those tracking quantum computing infrastructure will want to know about this efficiency advance in Hamiltonian simulation, which directly reduces qubit resource requirements.",
-          "summary": "The algorithm approximates real-time observable dynamics under time-independent Hamiltonians by working in the operator algebra generated by commutators, then pruning it to only the elements most relevant to target observables. Two pruning schemes are proposed—predefined operator basis and Krylov basis—plus a hybrid. Benchmarked on 1D and 2D lattice spin systems for one- and higher-point correlators.",
+          "title": "PalmClaw: On-Device Native LLM Agent Framework for Mobile Phones with 11.5% Task Success Gain",
+          "why_it_matters": "For engineers building agentic systems, this shows a concrete alternative to GUI-scraping mobile agents by exposing device capabilities as structured tools with explicit execution boundaries, with strong benchmarked improvements.",
+          "summary": "PalmClaw is an open-source agent framework running natively on mobile, managing sessions, memory, skills, and tool calls directly on-device. It exposes device capabilities as structured tools with explicit arguments and defined execution boundaries rather than GUI action sequences. Experiments show 11.5% relative improvement in task success and 94.9% reduction in completion time over the strongest baseline.",
           "tags": [
-            "quantum computing",
-            "hamiltonian simulation",
-            "quantum algorithms"
+            "llm-agents",
+            "mobile",
+            "on-device",
+            "tool-use"
           ],
           "sources": [
             {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2607.11882v1"
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2607.13027v1"
             }
           ],
-          "published": "2026-07-13T17:58:38+00:00",
+          "published": "2026-07-14T17:58:57+00:00",
           "score": 0.4389
+        },
+        {
+          "id": "96f733206f61",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "GyroFlow: Flow Matching Bypasses Transient Simulation to Directly Sample Gyrokinetic Turbulence",
+          "why_it_matters": "Researchers interested in generative models for physical simulation will find this relevant as a principled application of latent flow matching to a 5D physics problem, with a new distributional evaluation metric and warm-start use case.",
+          "summary": "GyroFlow is a latent generative model that directly samples steady-state gyrokinetic turbulence statistics in 5D phase space under an ergodicity assumption, bypassing full transient simulation entirely. It outperforms autoregressive, reduced-order, and other generative baselines and can warm-start the numerical solver. Authors also introduce FGyD, a distributional quality metric in the latent space of a pretrained gyrokinetic model, correlated with downstream flux accuracy.",
+          "tags": [
+            "generative-models",
+            "scientific-ml",
+            "simulation",
+            "flow-matching"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2607.13022v1"
+            }
+          ],
+          "published": "2026-07-14T17:58:13+00:00",
+          "score": 0.4388
         }
       ]
     }
