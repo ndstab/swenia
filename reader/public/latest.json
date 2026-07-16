@@ -1,153 +1,197 @@
 {
-  "date": "2026-07-15",
-  "generated_at": "2026-07-15T03:22:07.863479+00:00",
-  "summary_line": "4 worth knowing",
+  "date": "2026-07-16",
+  "generated_at": "2026-07-16T03:29:23.993358+00:00",
+  "summary_line": "5 worth knowing",
   "counts": {
-    "total": 6,
-    "headlines": 0,
+    "total": 8,
+    "headlines": 2,
     "frontier": 6
   },
   "sections": [
     {
       "key": "headlines",
       "title": "Headlines",
-      "cards": []
+      "cards": [
+        {
+          "id": "210f6726bf4a",
+          "tier": "worth_knowing",
+          "category": "headline",
+          "title": "Thinking Machines Releases Inkling: ~1T-Parameter Multimodal MoE with 1M Context",
+          "why_it_matters": "A flagship open-weight release from a notable new lab—975B total / 41B active parameters with native image, audio, and text input and 1M context—is a major event the whole field will discuss, especially given its novel architectural choices.",
+          "summary": "Inkling is a decoder-only MoE model with 975B total and 41B active parameters, trained on 45 trillion tokens of text, images, audio, and video. It uses relative attention (not RoPE), hybrid global/sliding-window attention (5:1 ratio), short 1D convolutions over hidden states, and 256 routed experts plus 2 always-active shared experts. Modality towers are lightweight hierarchical MLP patchifiers. Ships in BF16 and NVFP4, with speculative MTP layers and day-0 support in transformers, SGLang, and llama.cpp.",
+          "tags": [
+            "multimodal",
+            "mixture-of-experts",
+            "open-weights",
+            "architecture"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/thinkingmachines-inkling"
+            }
+          ],
+          "published": "2026-07-15T00:00:00+00:00",
+          "score": 1.0239
+        },
+        {
+          "id": "5d7569c2afe3",
+          "tier": "skim",
+          "category": "headline",
+          "title": "Real World VoiceEQ: Human-Rated Benchmark Across 40+ Voice Models on 60+ Metrics",
+          "why_it_matters": "A large-scale, human-preference voice benchmark (1M+ ratings) covering ASR, TTS, and speech-to-speech is a useful calibration tool for anyone building or evaluating voice AI systems.",
+          "summary": "Real World VoiceEQ evaluates 40+ proprietary and open-source voice models across 15+ dimensions and 60+ metrics, grounded in over 1 million human ratings (785,000 TTS, 48,000 speech-to-speech). Key finding: no TTS system ranked in the top five across all eight capability groups, and speech-to-speech models showed the widest performance variation. Some systems were transcript-driven, ignoring paralinguistic cues like tone, pacing, and hesitation that humans use to infer confidence and emotion.",
+          "tags": [
+            "voice-ai",
+            "benchmarks",
+            "tts",
+            "speech-evaluation"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/real-world-voiceeq"
+            }
+          ],
+          "published": "2026-07-15T00:00:00+00:00",
+          "score": 0.3413
+        }
+      ]
     },
     {
       "key": "frontier",
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "e48ef37c9983",
+          "id": "cfc87b4f7206",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "E3 Framework Cuts LLM Agent Token Use by 91% via Complexity-Aware Execution",
-          "why_it_matters": "As an AI/research engineer building or evaluating LLM agents, this directly addresses the compute waste from over-reading context, with concrete metrics and a released benchmark to evaluate against.",
-          "summary": "E3 (Estimate, Execute, Expand) gives LLM agents a complexity-awareness step before acting: estimate minimum required scope, execute that path, expand only on failure. On MSE-Bench (121 deterministic edits), E3 matches 100% task success while cutting cost 85%, tokens 91%, and inspected files 92% vs. strongest baselines. Validated on a live GPT-4o agent editing real open-source code via pytest.",
+          "title": "MOJO: Semi-Supervised Spike-Tokenizing Framework Improves Neural Decoding with Unlabeled Data",
+          "why_it_matters": "For researchers working on BCI or neuro-foundation models, MOJO offers a practical SSL recipe that improves decoding under label scarcity—a pervasive real-world constraint in neural data collection.",
+          "summary": "MOJO combines masked autoencoding (SSL) with supervised objectives for spike-tokenizing neural decoders. Evaluated on monkey motor cortex reaching tasks and multi-regional mouse recordings (vision and decision-making), it outperforms purely supervised baselines, with gains most pronounced in few-shot finetuning scenarios. SSL also improves brain region classification and spike-statistics prediction without explicit optimization. MOJO extends to human electrocorticography during speech, reaching performance comparable to neuro-foundation models designed for continuous signals.",
           "tags": [
-            "llm-agents",
-            "efficiency",
-            "code-editing",
-            "benchmarks"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2607.13034v1"
-            }
-          ],
-          "published": "2026-07-14T17:59:31+00:00",
-          "score": 1.3168
-        },
-        {
-          "id": "132dd57a5b5d",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "Seriality Gap: Video Diffusion Models Structurally Can't Scale Serial Computation for Causal Chains",
-          "why_it_matters": "If you work on world models or video generation for simulation/reasoning, this is a fundamental architectural finding showing that adding denoising steps does not provide the serial compute needed for dependent-event reasoning.",
-          "summary": "Controlled experiments on multi-ball hard-sphere dynamics show bidirectional video diffusion degrades as causal chains lengthen, but not in length-matched single-ball controls, isolating dependent-event structure as the cause. The authors prove that denoising steps add no serial computation beyond the backbone. Autoregressive/blockwise generation and greater architectural depth improve performance, pointing toward serial-compute-aware architectures.",
-          "tags": [
-            "video-diffusion",
-            "world-models",
-            "reasoning",
-            "architectures"
+            "brain-computer-interfaces",
+            "self-supervised-learning",
+            "neural-decoding",
+            "neuroscience"
           ],
           "sources": [
             {
               "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2607.13031v1"
+              "url": "https://arxiv.org/abs/2607.14086v1"
             }
           ],
-          "published": "2026-07-14T17:59:22+00:00",
-          "score": 1.3168
+          "published": "2026-07-15T17:58:00+00:00",
+          "score": 1.3142
         },
         {
-          "id": "0f00e678420b",
+          "id": "06408ced5ea0",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "TerraZero: RL-Only Autonomous Driving Agent Tops InterPlan Benchmark at 1.3M Steps/Second",
-          "why_it_matters": "For researchers working on RL, agents, or simulation infrastructure, this is a strong result showing zero-demonstration RL generalizing across cities and reaching SOTA on a long-tail driving benchmark without a fallback planner.",
-          "summary": "TerraZero is a procedural driving simulator and self-play RL stack achieving 1.3M agent-steps/second on a single server GPU via a zero-copy CPU/GPU path. Policies train from scratch with no human demonstrations and zero-shot generalize across cities, including emergent left-hand traffic. First fully learned policy to top the InterPlan long-tail benchmark; posts best collision and time-to-collision scores on val14; competitive with reference-anchored self-play on Waymo realism.",
+          "title": "Shor's Algorithm Formalized in Lean via Agentic AI, Including RSA-2048 and P-256 Resource Estimates",
+          "why_it_matters": "Machine-checked quantum cryptanalysis of RSA-2048 and P-256 via LLM-assisted Lean formalization is both a frontier result in formal verification and a concrete signal for post-quantum security timelines.",
+          "summary": "Software agents analyzed sources, wrote Lean code, and repaired proofs—with human review of scientific claims and machine-checking of formal proofs—to formalize Shor's algorithm and variants. The formalization covers quantum order-finding, reversible circuits for modular and elliptic-curve arithmetic, and logical resource estimates for breaking RSA-2048 (based on Quantum 5, 433) and P-256 (based on ASIACRYPT 2017), plus additional classical operation estimates.",
           "tags": [
-            "reinforcement-learning",
-            "autonomous-driving",
-            "simulation",
-            "self-play"
+            "formal-verification",
+            "quantum-computing",
+            "cryptography",
+            "ai-assisted-proofs"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2607.13028v1"
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2607.14082v1"
             }
           ],
-          "published": "2026-07-14T17:59:02+00:00",
-          "score": 1.3167
+          "published": "2026-07-15T17:56:58+00:00",
+          "score": 1.3138
         },
         {
-          "id": "25aaab559992",
+          "id": "53e3149d2cc1",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Discrete-Diffusion ASR: Frozen DiffusionGemma 26B MoE Reaches 6.6% WER on LibriSpeech in ~8 Parallel Steps",
-          "why_it_matters": "For researchers in speech, diffusion LMs, or efficient inference, this demonstrates that a frozen discrete-diffusion backbone can be audio-adapted with only 0.16% of parameters trained, and that a CTC loss is necessary to ground audio in the attention pathway.",
-          "summary": "A frozen Whisper encoder feeds into a lightweight projector and LoRA adapters (~42M trainable parameters, 0.16% of backbone) to give DiffusionGemma—a 26B MoE discrete-diffusion LM using uniform random-token diffusion—ASR capability. Standard training objectives fail because audio gradients don't reach the projector; a CTC loss applied through the frozen output head fixes this. Achieves 6.6% WER on LibriSpeech test-clean in roughly eight parallel denoising steps across utterance lengths.",
+          "title": "How Skylight Built Shippy: A Reliable AI Agent for Maritime Domain Awareness",
+          "why_it_matters": "A detailed, practitioner-level case study on production agent design—soul/skills/config decomposition, deterministic tool design, and auditability—directly applicable to any agentic system you might build or evaluate.",
+          "summary": "Shippy is Skylight's maritime AI agent built on Claude Opus 4.6 via the OpenClaw framework. Its architecture splits into soul (system prompt with explicit behavioral limits), skills (markdown spec files for API queries, EEZ/MPA lookups, vessel track interpretation, and map link generation), and config (swappable at runtime). Key reliability principles: tools are deterministic even when the model is not; the agent refuses legal determinations and speculation beyond data; all answers include source attribution and deep map links for human verification.",
           "tags": [
-            "speech-recognition",
-            "diffusion-lm",
-            "efficient-inference",
-            "multimodal"
+            "agents",
+            "production-ml",
+            "llm-engineering",
+            "reliability"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2607.13013v1"
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/allenai/shippy-tech-blog"
             }
           ],
-          "published": "2026-07-14T17:53:22+00:00",
-          "score": 1.315
+          "published": "2026-07-15T17:29:41+00:00",
+          "score": 1.3056
         },
         {
-          "id": "5f0f3e0a2345",
+          "id": "5c8332d4091e",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Model Routing Is a Systems Optimization Problem: Lessons from AppWorld Benchmarking",
+          "why_it_matters": "Concrete empirical data on how caching, infrastructure, and multi-objective tradeoffs break naive model-routing assumptions—directly relevant if you're building or evaluating agentic pipelines with multiple LLM backends.",
+          "summary": "Across 417 AppWorld tasks with a CodeAct agent, Claude Sonnet 4.6 cost $79 total ($0.19/task) vs. GPT-4.1 at $155 ($0.37/task), despite GPT-4.1 having lower per-token sticker prices. The gap traced to cache-read pricing: agent workloads reuse context heavily, so Sonnet's lower cache-read cost dominated. The post also argues task difficulty is opaque at routing time and that latency depends more on serving infrastructure than model size, motivating treating routing as a multi-objective optimization rather than classification.",
+          "tags": [
+            "llm-routing",
+            "agents",
+            "inference-cost",
+            "systems"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/ibm-research/model-routing-is-simple-until-it-isnt"
+            }
+          ],
+          "published": "2026-07-15T17:27:01+00:00",
+          "score": 1.3048
+        },
+        {
+          "id": "d14f7240212b",
           "tier": "skim",
           "category": "frontier",
-          "title": "PalmClaw: On-Device Native LLM Agent Framework for Mobile Phones with 11.5% Task Success Gain",
-          "why_it_matters": "For engineers building agentic systems, this shows a concrete alternative to GUI-scraping mobile agents by exposing device capabilities as structured tools with explicit execution boundaries, with strong benchmarked improvements.",
-          "summary": "PalmClaw is an open-source agent framework running natively on mobile, managing sessions, memory, skills, and tool calls directly on-device. It exposes device capabilities as structured tools with explicit arguments and defined execution boundaries rather than GUI action sequences. Experiments show 11.5% relative improvement in task success and 94.9% reduction in completion time over the strongest baseline.",
+          "title": "CPM-Based Quantum LDPC Codes via Pair-Partition Constructions Reach Rate 0.44",
+          "why_it_matters": "New explicit quantum LDPC code constructions with concrete parameters are useful reference points for anyone tracking quantum error correction progress toward fault-tolerant systems.",
+          "summary": "The paper constructs CSS quantum LDPC codes from circulant permutation matrices (CPMs) parameterized by column weight J, row weight L, and prime lift size P. Key finite examples: a [[372,130,16]] code at rate 0.349 and a [[518,228,16]] code at rate 0.440, both (J,L)=(4,12) and (4,14)-regular girth-six respectively. Also reports [[472,122,14]] and [[488,126,14]] at (J,L)=(3,8). Distances verified by exhaustive low-weight exclusion plus explicit non-stabilizer witnesses.",
           "tags": [
-            "llm-agents",
-            "mobile",
-            "on-device",
-            "tool-use"
+            "quantum-error-correction",
+            "quantum-ldpc",
+            "css-codes"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2607.13027v1"
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2607.14091v1"
             }
           ],
-          "published": "2026-07-14T17:58:57+00:00",
-          "score": 0.4389
+          "published": "2026-07-15T17:59:52+00:00",
+          "score": 0.4382
         },
         {
-          "id": "96f733206f61",
+          "id": "acc449653412",
           "tier": "skim",
           "category": "frontier",
-          "title": "GyroFlow: Flow Matching Bypasses Transient Simulation to Directly Sample Gyrokinetic Turbulence",
-          "why_it_matters": "Researchers interested in generative models for physical simulation will find this relevant as a principled application of latent flow matching to a 5D physics problem, with a new distributional evaluation metric and warm-start use case.",
-          "summary": "GyroFlow is a latent generative model that directly samples steady-state gyrokinetic turbulence statistics in 5D phase space under an ergodicity assumption, bypassing full transient simulation entirely. It outperforms autoregressive, reduced-order, and other generative baselines and can warm-start the numerical solver. Authors also introduce FGyD, a distributional quality metric in the latent space of a pretrained gyrokinetic model, correlated with downstream flux accuracy.",
+          "title": "Trigonometric CV Gates Benchmarked on Trapped-Ion Hardware for Bosonic Simulation",
+          "why_it_matters": "Experimental gate-level characterization of a new CV primitive on real trapped-ion hardware is a concrete step toward fault-tolerant bosonic simulation—relevant for those tracking quantum hardware progress.",
+          "summary": "The paper experimentally demonstrates and benchmarks cosine gates on the QSCOUT trapped-ion platform using 3- and 4-ion Yb-171 chains. One-qumode cosine gates and two-qumode mode-resolved marginal benchmarks are characterized via Fock-space transition probabilities as a function of gate parameters and Trotter step count. Results are compared against simulations incorporating thermal initialization and motional dephasing, establishing these trigonometric CV gates as reusable primitives for bosonic Hamiltonian simulation and hybrid quantum algorithms.",
           "tags": [
-            "generative-models",
-            "scientific-ml",
-            "simulation",
-            "flow-matching"
+            "quantum-computing",
+            "trapped-ions",
+            "bosonic-simulation",
+            "cv-gates"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2607.13022v1"
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2607.14085v1"
             }
           ],
-          "published": "2026-07-14T17:58:13+00:00",
-          "score": 0.4388
+          "published": "2026-07-15T17:57:48+00:00",
+          "score": 0.438
         }
       ]
     }
