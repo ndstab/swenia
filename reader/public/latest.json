@@ -1,10 +1,10 @@
 {
-  "date": "2026-07-16",
-  "generated_at": "2026-07-16T03:29:23.993358+00:00",
-  "summary_line": "5 worth knowing",
+  "date": "2026-07-17",
+  "generated_at": "2026-07-17T03:31:32.861357+00:00",
+  "summary_line": "1 must-know · 4 worth knowing",
   "counts": {
-    "total": 8,
-    "headlines": 2,
+    "total": 10,
+    "headlines": 4,
     "frontier": 6
   },
   "sections": [
@@ -13,48 +13,92 @@
       "title": "Headlines",
       "cards": [
         {
-          "id": "210f6726bf4a",
+          "id": "ff8c14b3821e",
           "tier": "worth_knowing",
           "category": "headline",
-          "title": "Thinking Machines Releases Inkling: ~1T-Parameter Multimodal MoE with 1M Context",
-          "why_it_matters": "A flagship open-weight release from a notable new lab—975B total / 41B active parameters with native image, audio, and text input and 1M context—is a major event the whole field will discuss, especially given its novel architectural choices.",
-          "summary": "Inkling is a decoder-only MoE model with 975B total and 41B active parameters, trained on 45 trillion tokens of text, images, audio, and video. It uses relative attention (not RoPE), hybrid global/sliding-window attention (5:1 ratio), short 1D convolutions over hidden states, and 256 routed experts plus 2 always-active shared experts. Modality towers are lightweight hierarchical MLP patchifiers. Ships in BF16 and NVFP4, with speculative MTP layers and day-0 support in transformers, SGLang, and llama.cpp.",
+          "title": "NVIDIA Nemotron 3 Embed 8B Takes #1 on RTEB Leaderboard with 32k-Context, NVFP4 Deployment",
+          "why_it_matters": "As an AI/ML engineer working with RAG or agentic systems, this is a direct SOTA embedding model drop with open weights, production-ready tooling, and a concrete agentic efficiency argument worth benchmarking against.",
+          "summary": "NVIDIA releases Nemotron 3 Embed: an 8B model scoring 78.5% on RTEB (ranked #1) and 75.5% on MMTEB Retrieval, plus 1B variants. The 1B BF16 cuts error rate 27–28% over its predecessor. Features include 32k context, multilingual/code retrieval, NVFP4 Blackwell quantization, and NeMo fine-tuning recipes. Stronger retrieval shown to reduce downstream agentic token cost.",
           "tags": [
-            "multimodal",
-            "mixture-of-experts",
-            "open-weights",
-            "architecture"
+            "embeddings",
+            "rag",
+            "retrieval",
+            "nvidia"
           ],
           "sources": [
             {
               "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/thinkingmachines-inkling"
+              "url": "https://huggingface.co/blog/nvidia/nemotron-3-embed-wins-rteb"
             }
           ],
-          "published": "2026-07-15T00:00:00+00:00",
-          "score": 1.0239
+          "published": "2026-07-16T16:01:21+00:00",
+          "score": 1.2785
         },
         {
-          "id": "5d7569c2afe3",
+          "id": "287800377f1b",
+          "tier": "worth_knowing",
+          "category": "headline",
+          "title": "Google DeepMind & Isomorphic Labs Publish Joint Bioresilience AI Strategy",
+          "why_it_matters": "This outlines how frontier lab tooling — AlphaFold, AlphaGenome, AlphaEvolve, IsoDDE — is being operationalized for biosecurity, signaling a major applied direction for DeepMind's model stack.",
+          "summary": "Google DeepMind and Isomorphic Labs detail a bioresilience program spanning prevention, detection, and response. Efforts include adapting SynthID watermarking to screen AI-generated biological sequences, using AlphaEvolve to optimize metagenomic sequencing pipelines, and granting trusted researchers access to AI systems for vaccine/countermeasure design. Over 15 government and biosecurity partnerships established in the past 12 months.",
+          "tags": [
+            "biosecurity",
+            "deepmind",
+            "applied-ai",
+            "alphafold"
+          ],
+          "sources": [
+            {
+              "name": "DeepMind",
+              "url": "https://deepmind.google/blog/our-approach-to-bioresilience/"
+            }
+          ],
+          "published": "2026-07-16T09:30:42+00:00",
+          "score": 1.168
+        },
+        {
+          "id": "4babaf3e269b",
           "tier": "skim",
           "category": "headline",
-          "title": "Real World VoiceEQ: Human-Rated Benchmark Across 40+ Voice Models on 60+ Metrics",
-          "why_it_matters": "A large-scale, human-preference voice benchmark (1M+ ratings) covering ASR, TTS, and speech-to-speech is a useful calibration tool for anyone building or evaluating voice AI systems.",
-          "summary": "Real World VoiceEQ evaluates 40+ proprietary and open-source voice models across 15+ dimensions and 60+ metrics, grounded in over 1 million human ratings (785,000 TTS, 48,000 speech-to-speech). Key finding: no TTS system ranked in the top five across all eight capability groups, and speech-to-speech models showed the widest performance variation. Some systems were transcript-driven, ignoring paralinguistic cues like tone, pacing, and hesitation that humans use to infer confidence and emotion.",
+          "title": "DharmaOCR Beats Mistral OCR4 on Brazilian Portuguese via SFT + DPO Specialization",
+          "why_it_matters": "A clean case study of domain-specialized training outperforming larger general models — the SFT+DPO recipe and the neuron superposition / parameter allocation argument are applicable to any targeted fine-tuning decision.",
+          "summary": "DharmaOCR, fine-tuned specifically for Brazilian Portuguese OCR, outperforms Mistral OCR4 and Unlimited-OCR on a Portuguese-focused benchmark. Training used two stages: supervised fine-tuning on Portuguese documents for domain alignment, then Direct Preference Optimization to suppress degeneration and improve inference stability. The authors argue full parameter concentration on a restricted domain structurally advantages specialization over multilingual generalist models.",
           "tags": [
-            "voice-ai",
-            "benchmarks",
-            "tts",
-            "speech-evaluation"
+            "ocr",
+            "fine-tuning",
+            "dpo",
+            "domain-specialization"
           ],
           "sources": [
             {
               "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/real-world-voiceeq"
+              "url": "https://huggingface.co/blog/Dharma-AI/newer-models-same-advantages"
             }
           ],
-          "published": "2026-07-15T00:00:00+00:00",
-          "score": 0.3413
+          "published": "2026-07-16T11:49:48+00:00",
+          "score": 0.4021
+        },
+        {
+          "id": "4a75b17c5fee",
+          "tier": "skim",
+          "category": "headline",
+          "title": "Thinking Machines Lab Releases Inkling: 975B MoE Open-Weights Multimodal Model with 1M Context",
+          "why_it_matters": "This is a notable open-weights release from a newer lab — a 975B total / 41B active MoE pretrained on 45T tokens of text, image, audio, and video, positioned as a fine-tunable base, which the field will be evaluating.",
+          "summary": "Thinking Machines Lab releases Inkling, a Mixture-of-Experts model with 975B total and 41B active parameters, 1M-token context, pretrained on 45T multimodal tokens. A smaller Inkling-Small (12B active) is previewed. The model is designed for customization via their Tinker platform and ranks among strong open-weights models on agentic benchmarks including Design Arena. Not claimed as the strongest overall model.",
+          "tags": [
+            "open-weights",
+            "mixture-of-experts",
+            "multimodal",
+            "model-release"
+          ],
+          "sources": [
+            {
+              "name": "HN (1183pts)",
+              "url": "https://thinkingmachines.ai/news/introducing-inkling/"
+            }
+          ],
+          "published": "2026-07-15T18:12:45+00:00",
+          "score": 0.3148
         }
       ]
     },
@@ -63,135 +107,136 @@
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "cfc87b4f7206",
-          "tier": "worth_knowing",
+          "id": "745c16e5b4b2",
+          "tier": "must_know",
           "category": "frontier",
-          "title": "MOJO: Semi-Supervised Spike-Tokenizing Framework Improves Neural Decoding with Unlabeled Data",
-          "why_it_matters": "For researchers working on BCI or neuro-foundation models, MOJO offers a practical SSL recipe that improves decoding under label scarcity—a pervasive real-world constraint in neural data collection.",
-          "summary": "MOJO combines masked autoencoding (SSL) with supervised objectives for spike-tokenizing neural decoders. Evaluated on monkey motor cortex reaching tasks and multi-regional mouse recordings (vision and decision-making), it outperforms purely supervised baselines, with gains most pronounced in few-shot finetuning scenarios. SSL also improves brain region classification and spike-statistics prediction without explicit optimization. MOJO extends to human electrocorticography during speech, reaching performance comparable to neuro-foundation models designed for continuous signals.",
+          "title": "RoboTTT Scales Robot Policy Context to 8K Timesteps via Test-Time Training, +87% Over Single-Step Baseline",
+          "why_it_matters": "Test-Time Training as a mechanism for compressing long visuomotor histories into fast weights is a technically novel scaling axis for robot foundation models — directly relevant to researchers working on long-horizon agents or VLA policies.",
+          "summary": "RoboTTT integrates Test-Time Training into Vision-Language-Action robot policies, scaling visuomotor context to 8K timesteps without increasing inference latency. The recurrent state consists of fast weights updated by gradient descent during training and inference. On real-robot manipulation, it achieves 87% improvement over single-step context baselines and completes a ten-stage, five-minute assembly task that no baseline completes. Models pretrained at 8K context outperform 1K-context pretraining by 62%.",
           "tags": [
-            "brain-computer-interfaces",
-            "self-supervised-learning",
-            "neural-decoding",
-            "neuroscience"
+            "robotics",
+            "test-time-training",
+            "vla",
+            "long-context"
           ],
           "sources": [
             {
               "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2607.14086v1"
+              "url": "https://arxiv.org/abs/2607.15275v1"
             }
           ],
-          "published": "2026-07-15T17:58:00+00:00",
-          "score": 1.3142
+          "published": "2026-07-16T17:59:06+00:00",
+          "score": 2.6277
         },
         {
-          "id": "06408ced5ea0",
+          "id": "d6b85acf6315",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Shor's Algorithm Formalized in Lean via Agentic AI, Including RSA-2048 and P-256 Resource Estimates",
-          "why_it_matters": "Machine-checked quantum cryptanalysis of RSA-2048 and P-256 via LLM-assisted Lean formalization is both a frontier result in formal verification and a concrete signal for post-quantum security timelines.",
-          "summary": "Software agents analyzed sources, wrote Lean code, and repaired proofs—with human review of scientific claims and machine-checking of formal proofs—to formalize Shor's algorithm and variants. The formalization covers quantum order-finding, reversible circuits for modular and elliptic-curve arithmetic, and logical resource estimates for breaking RSA-2048 (based on Quantum 5, 433) and P-256 (based on ASIACRYPT 2017), plus additional classical operation estimates.",
+          "title": "LLMs Systematically Violate the Law of Total Probability: The 'Macro Fallacy'",
+          "why_it_matters": "This paper introduces a reference-free consistency criterion that exposes a fundamental probabilistic failure mode in frontier models — directly relevant to anyone building systems that rely on LLM probability estimates or population-level inference.",
+          "summary": "Researchers test whether LLM conditional estimates satisfy the law of total probability by recursively partitioning populations and aggregating subpopulation estimates. Across frontier models and problem domains, they find widespread violations. A key finding — the 'macro fallacy' — shows fine-grained subpopulation aggregates are often better-calibrated than direct population-level estimates, suggesting models hold relevant subpopulation knowledge but fail to propagate it upward.",
           "tags": [
-            "formal-verification",
-            "quantum-computing",
-            "cryptography",
-            "ai-assisted-proofs"
+            "llm-evaluation",
+            "calibration",
+            "consistency",
+            "in-context-learning"
           ],
           "sources": [
             {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2607.14082v1"
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2607.15277v1"
             }
           ],
-          "published": "2026-07-15T17:56:58+00:00",
-          "score": 1.3138
+          "published": "2026-07-16T17:59:31+00:00",
+          "score": 1.314
         },
         {
-          "id": "53e3149d2cc1",
+          "id": "2064eae62cca",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "How Skylight Built Shippy: A Reliable AI Agent for Maritime Domain Awareness",
-          "why_it_matters": "A detailed, practitioner-level case study on production agent design—soul/skills/config decomposition, deterministic tool design, and auditability—directly applicable to any agentic system you might build or evaluate.",
-          "summary": "Shippy is Skylight's maritime AI agent built on Claude Opus 4.6 via the OpenClaw framework. Its architecture splits into soul (system prompt with explicit behavioral limits), skills (markdown spec files for API queries, EEZ/MPA lookups, vessel track interpretation, and map link generation), and config (swappable at runtime). Key reliability principles: tools are deterministic even when the model is not; the agent refuses legal determinations and speculation beyond data; all answers include source attribution and deep map links for human verification.",
+          "title": "Decoupled Periodic TTT Updates Enable Real-Time Dynamic Novel View Synthesis with Long-Horizon Memory",
+          "why_it_matters": "The decoupled update-vs-apply frequency idea for TTT is a practically important efficiency insight applicable beyond NVS to any streaming scenario where gradient-based memory updates are too costly per frame.",
+          "summary": "The paper addresses the compute cost of per-frame Test-Time Training updates for online novel view synthesis from multi-view video. The proposed method decouples update frequency from application frequency: memory is updated periodically but applied per-frame via cross-view attention. An auxiliary Memory Loss prevents forgetting and a Memory Caching strategy regularizes weights against drift. The approach achieves real-time performance with state-of-the-art quality on dynamic human motion scenes.",
           "tags": [
-            "agents",
-            "production-ml",
-            "llm-engineering",
-            "reliability"
+            "novel-view-synthesis",
+            "test-time-training",
+            "video",
+            "3d-reconstruction"
           ],
           "sources": [
             {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/allenai/shippy-tech-blog"
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2607.15271v1"
             }
           ],
-          "published": "2026-07-15T17:29:41+00:00",
-          "score": 1.3056
+          "published": "2026-07-16T17:58:18+00:00",
+          "score": 1.3136
         },
         {
-          "id": "5c8332d4091e",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "Model Routing Is a Systems Optimization Problem: Lessons from AppWorld Benchmarking",
-          "why_it_matters": "Concrete empirical data on how caching, infrastructure, and multi-objective tradeoffs break naive model-routing assumptions—directly relevant if you're building or evaluating agentic pipelines with multiple LLM backends.",
-          "summary": "Across 417 AppWorld tasks with a CodeAct agent, Claude Sonnet 4.6 cost $79 total ($0.19/task) vs. GPT-4.1 at $155 ($0.37/task), despite GPT-4.1 having lower per-token sticker prices. The gap traced to cache-read pricing: agent workloads reuse context heavily, so Sonnet's lower cache-read cost dominated. The post also argues task difficulty is opaque at routing time and that latency depends more on serving infrastructure than model size, motivating treating routing as a multi-objective optimization rather than classification.",
-          "tags": [
-            "llm-routing",
-            "agents",
-            "inference-cost",
-            "systems"
-          ],
-          "sources": [
-            {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/ibm-research/model-routing-is-simple-until-it-isnt"
-            }
-          ],
-          "published": "2026-07-15T17:27:01+00:00",
-          "score": 1.3048
-        },
-        {
-          "id": "d14f7240212b",
+          "id": "d3b910111c21",
           "tier": "skim",
           "category": "frontier",
-          "title": "CPM-Based Quantum LDPC Codes via Pair-Partition Constructions Reach Rate 0.44",
-          "why_it_matters": "New explicit quantum LDPC code constructions with concrete parameters are useful reference points for anyone tracking quantum error correction progress toward fault-tolerant systems.",
-          "summary": "The paper constructs CSS quantum LDPC codes from circulant permutation matrices (CPMs) parameterized by column weight J, row weight L, and prime lift size P. Key finite examples: a [[372,130,16]] code at rate 0.349 and a [[518,228,16]] code at rate 0.440, both (J,L)=(4,12) and (4,14)-regular girth-six respectively. Also reports [[472,122,14]] and [[488,126,14]] at (J,L)=(3,8). Distances verified by exhaustive low-weight exclusion plus explicit non-stabilizer witnesses.",
-          "tags": [
-            "quantum-error-correction",
-            "quantum-ldpc",
-            "css-codes"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2607.14091v1"
-            }
-          ],
-          "published": "2026-07-15T17:59:52+00:00",
-          "score": 0.4382
-        },
-        {
-          "id": "acc449653412",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "Trigonometric CV Gates Benchmarked on Trapped-Ion Hardware for Bosonic Simulation",
-          "why_it_matters": "Experimental gate-level characterization of a new CV primitive on real trapped-ion hardware is a concrete step toward fault-tolerant bosonic simulation—relevant for those tracking quantum hardware progress.",
-          "summary": "The paper experimentally demonstrates and benchmarks cosine gates on the QSCOUT trapped-ion platform using 3- and 4-ion Yb-171 chains. One-qumode cosine gates and two-qumode mode-resolved marginal benchmarks are characterized via Fock-space transition probabilities as a function of gate parameters and Trotter step count. Results are compared against simulations incorporating thermal initialization and motional dephasing, establishing these trigonometric CV gates as reusable primitives for bosonic Hamiltonian simulation and hybrid quantum algorithms.",
+          "title": "Deep Thermalisation Locality Bounded by Entanglement Teleportation, Timescale Scales Logarithmically",
+          "why_it_matters": "For researchers at the intersection of quantum computing and quantum information, this establishes a rigorous geometric bound connecting two quantum phenomena with implications for quantum circuit design and measurement-induced phase transitions.",
+          "summary": "The paper studies deep thermalisation — emergence of universal quantum state ensembles from projective measurements — in a bipartite geometry with causally disconnected subregions. It proves the onset is fundamentally bounded by measurement-induced entanglement teleportation. For generic locally interacting systems, both timescales scale logarithmically with subregion separation. Special circuits where measurement randomness is perfectly transmitted exhibit finite-time deep thermalisation and genuine non-locality.",
           "tags": [
             "quantum-computing",
-            "trapped-ions",
-            "bosonic-simulation",
-            "cv-gates"
+            "quantum-information",
+            "entanglement",
+            "thermalisation"
           ],
           "sources": [
             {
               "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2607.14085v1"
+              "url": "https://arxiv.org/abs/2607.15276v1"
             }
           ],
-          "published": "2026-07-15T17:57:48+00:00",
+          "published": "2026-07-16T17:59:16+00:00",
           "score": 0.438
+        },
+        {
+          "id": "7844e4e43637",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "MeanFlowNFT: Forward-Process RL Fine-Tuning for Few-Step Flow Generators with Policy-Improvement Guarantee",
+          "why_it_matters": "This extends RL alignment (via DiffusionNFT's forward-process objective) to MeanFlow generators, with a formal guarantee and strong empirical results — relevant to researchers working on efficient generative model post-training.",
+          "summary": "MeanFlowNFT adapts the DiffusionNFT forward-process RL framework to MeanFlow models by constructing an instantaneous-velocity predictor from the MeanFlow identity, enabling reward optimization while preserving few-step sampling. It inherits DiffusionNFT's strict policy-improvement guarantee. On SD3.5-M, MeanFlowNFT outperforms prior SOTA RL-tuned few-step generators on 6 of 8 metrics. On Wan 2.1, 4-step MeanFlowNFT reaches VBench score 84.33, surpassing 50-step LongCat-Video RL (82.57).",
+          "tags": [
+            "flow-matching",
+            "reinforcement-learning",
+            "generative-models",
+            "post-training"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2607.15273v1"
+            }
+          ],
+          "published": "2026-07-16T17:59:02+00:00",
+          "score": 0.4379
+        },
+        {
+          "id": "98d3509e5d83",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "SciDiagramEdit: Benchmark for Instruction-Driven Figure Editing Mined from arXiv Revision Histories",
+          "why_it_matters": "Mining real author revision pairs from arXiv version histories is a clever self-supervised signal for scientific figure editing — relevant to researchers building multimodal agents or document AI tools.",
+          "summary": "SciDiagramEdit presents a benchmark and agentic learning framework for editing scientific figures under natural-language instructions. Training data is mined from before/after figure pairs in arXiv version histories. The agent operates on editable vector sources and uses a skill-evolution loop where an agentic proposer iteratively refines skill specifications from execution traces. Progressive skill refinement improves edit accuracy on a held-out validation set.",
+          "tags": [
+            "scientific-ai",
+            "multimodal-agents",
+            "benchmarks",
+            "document-ai"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2607.15272v1"
+            }
+          ],
+          "published": "2026-07-16T17:58:36+00:00",
+          "score": 0.4379
         }
       ]
     }
