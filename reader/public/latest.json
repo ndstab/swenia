@@ -1,11 +1,11 @@
 {
-  "date": "2026-07-17",
-  "generated_at": "2026-07-17T03:31:32.861357+00:00",
-  "summary_line": "1 must-know · 4 worth knowing",
+  "date": "2026-07-18",
+  "generated_at": "2026-07-18T03:20:13.989207+00:00",
+  "summary_line": "1 worth knowing",
   "counts": {
-    "total": 10,
-    "headlines": 4,
-    "frontier": 6
+    "total": 2,
+    "headlines": 1,
+    "frontier": 1
   },
   "sections": [
     {
@@ -13,92 +13,26 @@
       "title": "Headlines",
       "cards": [
         {
-          "id": "ff8c14b3821e",
-          "tier": "worth_knowing",
+          "id": "d8ed319939f5",
+          "tier": "skim",
           "category": "headline",
-          "title": "NVIDIA Nemotron 3 Embed 8B Takes #1 on RTEB Leaderboard with 32k-Context, NVFP4 Deployment",
-          "why_it_matters": "As an AI/ML engineer working with RAG or agentic systems, this is a direct SOTA embedding model drop with open weights, production-ready tooling, and a concrete agentic efficiency argument worth benchmarking against.",
-          "summary": "NVIDIA releases Nemotron 3 Embed: an 8B model scoring 78.5% on RTEB (ranked #1) and 75.5% on MMTEB Retrieval, plus 1B variants. The 1B BF16 cuts error rate 27–28% over its predecessor. Features include 32k context, multilingual/code retrieval, NVFP4 Blackwell quantization, and NeMo fine-tuning recipes. Stronger retrieval shown to reduce downstream agentic token cost.",
+          "title": "Hugging Face Discloses Agentic AI-Driven Intrusion via Malicious Dataset Loader",
+          "why_it_matters": "This is the first publicly disclosed breach where an autonomous LLM-based attacker framework executed tens of thousands of actions against a major AI platform, with direct implications for how you think about dataset supply-chain security and agentic threat models.",
+          "summary": "An attacker exploited two dataset-processing code-execution paths (a remote-code loader and a template-injection flaw) to reach node-level access, harvest credentials, and move laterally across internal clusters. The campaign used an autonomous agent framework running thousands of actions across short-lived sandboxes. Hugging Face used open-weight model GLM 5.2 on-prem for forensic log analysis after frontier API providers blocked attack-payload submissions via safety guardrails. No public models, datasets, or Spaces were tampered with; affected credentials were rotated.",
           "tags": [
-            "embeddings",
-            "rag",
-            "retrieval",
-            "nvidia"
+            "security",
+            "agentic ai",
+            "supply chain",
+            "hugging face"
           ],
           "sources": [
             {
               "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/nvidia/nemotron-3-embed-wins-rteb"
+              "url": "https://huggingface.co/blog/security-incident-july-2026"
             }
           ],
-          "published": "2026-07-16T16:01:21+00:00",
-          "score": 1.2785
-        },
-        {
-          "id": "287800377f1b",
-          "tier": "worth_knowing",
-          "category": "headline",
-          "title": "Google DeepMind & Isomorphic Labs Publish Joint Bioresilience AI Strategy",
-          "why_it_matters": "This outlines how frontier lab tooling — AlphaFold, AlphaGenome, AlphaEvolve, IsoDDE — is being operationalized for biosecurity, signaling a major applied direction for DeepMind's model stack.",
-          "summary": "Google DeepMind and Isomorphic Labs detail a bioresilience program spanning prevention, detection, and response. Efforts include adapting SynthID watermarking to screen AI-generated biological sequences, using AlphaEvolve to optimize metagenomic sequencing pipelines, and granting trusted researchers access to AI systems for vaccine/countermeasure design. Over 15 government and biosecurity partnerships established in the past 12 months.",
-          "tags": [
-            "biosecurity",
-            "deepmind",
-            "applied-ai",
-            "alphafold"
-          ],
-          "sources": [
-            {
-              "name": "DeepMind",
-              "url": "https://deepmind.google/blog/our-approach-to-bioresilience/"
-            }
-          ],
-          "published": "2026-07-16T09:30:42+00:00",
-          "score": 1.168
-        },
-        {
-          "id": "4babaf3e269b",
-          "tier": "skim",
-          "category": "headline",
-          "title": "DharmaOCR Beats Mistral OCR4 on Brazilian Portuguese via SFT + DPO Specialization",
-          "why_it_matters": "A clean case study of domain-specialized training outperforming larger general models — the SFT+DPO recipe and the neuron superposition / parameter allocation argument are applicable to any targeted fine-tuning decision.",
-          "summary": "DharmaOCR, fine-tuned specifically for Brazilian Portuguese OCR, outperforms Mistral OCR4 and Unlimited-OCR on a Portuguese-focused benchmark. Training used two stages: supervised fine-tuning on Portuguese documents for domain alignment, then Direct Preference Optimization to suppress degeneration and improve inference stability. The authors argue full parameter concentration on a restricted domain structurally advantages specialization over multilingual generalist models.",
-          "tags": [
-            "ocr",
-            "fine-tuning",
-            "dpo",
-            "domain-specialization"
-          ],
-          "sources": [
-            {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/Dharma-AI/newer-models-same-advantages"
-            }
-          ],
-          "published": "2026-07-16T11:49:48+00:00",
-          "score": 0.4021
-        },
-        {
-          "id": "4a75b17c5fee",
-          "tier": "skim",
-          "category": "headline",
-          "title": "Thinking Machines Lab Releases Inkling: 975B MoE Open-Weights Multimodal Model with 1M Context",
-          "why_it_matters": "This is a notable open-weights release from a newer lab — a 975B total / 41B active MoE pretrained on 45T tokens of text, image, audio, and video, positioned as a fine-tunable base, which the field will be evaluating.",
-          "summary": "Thinking Machines Lab releases Inkling, a Mixture-of-Experts model with 975B total and 41B active parameters, 1M-token context, pretrained on 45T multimodal tokens. A smaller Inkling-Small (12B active) is previewed. The model is designed for customization via their Tinker platform and ranks among strong open-weights models on agentic benchmarks including Design Arena. Not claimed as the strongest overall model.",
-          "tags": [
-            "open-weights",
-            "mixture-of-experts",
-            "multimodal",
-            "model-release"
-          ],
-          "sources": [
-            {
-              "name": "HN (1183pts)",
-              "url": "https://thinkingmachines.ai/news/introducing-inkling/"
-            }
-          ],
-          "published": "2026-07-15T18:12:45+00:00",
-          "score": 0.3148
+          "published": "2026-07-16T00:00:00+00:00",
+          "score": 0.2451
         }
       ]
     },
@@ -107,136 +41,26 @@
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "745c16e5b4b2",
-          "tier": "must_know",
-          "category": "frontier",
-          "title": "RoboTTT Scales Robot Policy Context to 8K Timesteps via Test-Time Training, +87% Over Single-Step Baseline",
-          "why_it_matters": "Test-Time Training as a mechanism for compressing long visuomotor histories into fast weights is a technically novel scaling axis for robot foundation models — directly relevant to researchers working on long-horizon agents or VLA policies.",
-          "summary": "RoboTTT integrates Test-Time Training into Vision-Language-Action robot policies, scaling visuomotor context to 8K timesteps without increasing inference latency. The recurrent state consists of fast weights updated by gradient descent during training and inference. On real-robot manipulation, it achieves 87% improvement over single-step context baselines and completes a ten-stage, five-minute assembly task that no baseline completes. Models pretrained at 8K context outperform 1K-context pretraining by 62%.",
-          "tags": [
-            "robotics",
-            "test-time-training",
-            "vla",
-            "long-context"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2607.15275v1"
-            }
-          ],
-          "published": "2026-07-16T17:59:06+00:00",
-          "score": 2.6277
-        },
-        {
-          "id": "d6b85acf6315",
+          "id": "a0bbc2c6e6f2",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "LLMs Systematically Violate the Law of Total Probability: The 'Macro Fallacy'",
-          "why_it_matters": "This paper introduces a reference-free consistency criterion that exposes a fundamental probabilistic failure mode in frontier models — directly relevant to anyone building systems that rely on LLM probability estimates or population-level inference.",
-          "summary": "Researchers test whether LLM conditional estimates satisfy the law of total probability by recursively partitioning populations and aggregating subpopulation estimates. Across frontier models and problem domains, they find widespread violations. A key finding — the 'macro fallacy' — shows fine-grained subpopulation aggregates are often better-calibrated than direct population-level estimates, suggesting models hold relevant subpopulation knowledge but fail to propagate it upward.",
+          "title": "NVIDIA NeMo Automodel + Hugging Face Diffusers: Distributed Diffusion Fine-Tuning at Any Scale",
+          "why_it_matters": "As an AI/ML engineer working with diffusion models, this gives you a production-grade, Apache 2.0 training stack that scales from one GPU to hundreds without checkpoint conversion or model rewrites.",
+          "summary": "NVIDIA and Hugging Face have integrated NeMo Automodel — a PyTorch DTensor-native library — with the Diffusers ecosystem. It supports FSDP2, tensor, context, and pipeline parallelism via YAML config, not code rewrites. Both full fine-tuning and LoRA PEFT are supported. Flow-matching models (FLUX.1-dev, Wan 2.1, HunyuanVideo) are included; checkpoints round-trip cleanly back into DiffusionPipeline.",
           "tags": [
-            "llm-evaluation",
-            "calibration",
-            "consistency",
-            "in-context-learning"
+            "diffusion models",
+            "fine-tuning",
+            "distributed training",
+            "nvidia"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2607.15277v1"
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/nvidia/scale-diffusers-finetuning-nemo-automodel"
             }
           ],
-          "published": "2026-07-16T17:59:31+00:00",
-          "score": 1.314
-        },
-        {
-          "id": "2064eae62cca",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "Decoupled Periodic TTT Updates Enable Real-Time Dynamic Novel View Synthesis with Long-Horizon Memory",
-          "why_it_matters": "The decoupled update-vs-apply frequency idea for TTT is a practically important efficiency insight applicable beyond NVS to any streaming scenario where gradient-based memory updates are too costly per frame.",
-          "summary": "The paper addresses the compute cost of per-frame Test-Time Training updates for online novel view synthesis from multi-view video. The proposed method decouples update frequency from application frequency: memory is updated periodically but applied per-frame via cross-view attention. An auxiliary Memory Loss prevents forgetting and a Memory Caching strategy regularizes weights against drift. The approach achieves real-time performance with state-of-the-art quality on dynamic human motion scenes.",
-          "tags": [
-            "novel-view-synthesis",
-            "test-time-training",
-            "video",
-            "3d-reconstruction"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2607.15271v1"
-            }
-          ],
-          "published": "2026-07-16T17:58:18+00:00",
-          "score": 1.3136
-        },
-        {
-          "id": "d3b910111c21",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "Deep Thermalisation Locality Bounded by Entanglement Teleportation, Timescale Scales Logarithmically",
-          "why_it_matters": "For researchers at the intersection of quantum computing and quantum information, this establishes a rigorous geometric bound connecting two quantum phenomena with implications for quantum circuit design and measurement-induced phase transitions.",
-          "summary": "The paper studies deep thermalisation — emergence of universal quantum state ensembles from projective measurements — in a bipartite geometry with causally disconnected subregions. It proves the onset is fundamentally bounded by measurement-induced entanglement teleportation. For generic locally interacting systems, both timescales scale logarithmically with subregion separation. Special circuits where measurement randomness is perfectly transmitted exhibit finite-time deep thermalisation and genuine non-locality.",
-          "tags": [
-            "quantum-computing",
-            "quantum-information",
-            "entanglement",
-            "thermalisation"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2607.15276v1"
-            }
-          ],
-          "published": "2026-07-16T17:59:16+00:00",
-          "score": 0.438
-        },
-        {
-          "id": "7844e4e43637",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "MeanFlowNFT: Forward-Process RL Fine-Tuning for Few-Step Flow Generators with Policy-Improvement Guarantee",
-          "why_it_matters": "This extends RL alignment (via DiffusionNFT's forward-process objective) to MeanFlow generators, with a formal guarantee and strong empirical results — relevant to researchers working on efficient generative model post-training.",
-          "summary": "MeanFlowNFT adapts the DiffusionNFT forward-process RL framework to MeanFlow models by constructing an instantaneous-velocity predictor from the MeanFlow identity, enabling reward optimization while preserving few-step sampling. It inherits DiffusionNFT's strict policy-improvement guarantee. On SD3.5-M, MeanFlowNFT outperforms prior SOTA RL-tuned few-step generators on 6 of 8 metrics. On Wan 2.1, 4-step MeanFlowNFT reaches VBench score 84.33, surpassing 50-step LongCat-Video RL (82.57).",
-          "tags": [
-            "flow-matching",
-            "reinforcement-learning",
-            "generative-models",
-            "post-training"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2607.15273v1"
-            }
-          ],
-          "published": "2026-07-16T17:59:02+00:00",
-          "score": 0.4379
-        },
-        {
-          "id": "98d3509e5d83",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "SciDiagramEdit: Benchmark for Instruction-Driven Figure Editing Mined from arXiv Revision Histories",
-          "why_it_matters": "Mining real author revision pairs from arXiv version histories is a clever self-supervised signal for scientific figure editing — relevant to researchers building multimodal agents or document AI tools.",
-          "summary": "SciDiagramEdit presents a benchmark and agentic learning framework for editing scientific figures under natural-language instructions. Training data is mined from before/after figure pairs in arXiv version histories. The agent operates on editable vector sources and uses a skill-evolution loop where an agentic proposer iteratively refines skill specifications from execution traces. Progressive skill refinement improves edit accuracy on a held-out validation set.",
-          "tags": [
-            "scientific-ai",
-            "multimodal-agents",
-            "benchmarks",
-            "document-ai"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2607.15272v1"
-            }
-          ],
-          "published": "2026-07-16T17:58:36+00:00",
-          "score": 0.4379
+          "published": "2026-07-17T15:57:54+00:00",
+          "score": 1.2808
         }
       ]
     }
