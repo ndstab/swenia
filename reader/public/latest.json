@@ -1,11 +1,11 @@
 {
-  "date": "2026-07-18",
-  "generated_at": "2026-07-18T03:20:13.989207+00:00",
-  "summary_line": "1 worth knowing",
+  "date": "2026-07-19",
+  "generated_at": "2026-07-19T03:40:34.722295+00:00",
+  "summary_line": "1 items to skim.",
   "counts": {
-    "total": 2,
+    "total": 1,
     "headlines": 1,
-    "frontier": 1
+    "frontier": 0
   },
   "sections": [
     {
@@ -13,56 +13,33 @@
       "title": "Headlines",
       "cards": [
         {
-          "id": "d8ed319939f5",
+          "id": "66188580349f",
           "tier": "skim",
           "category": "headline",
-          "title": "Hugging Face Discloses Agentic AI-Driven Intrusion via Malicious Dataset Loader",
-          "why_it_matters": "This is the first publicly disclosed breach where an autonomous LLM-based attacker framework executed tens of thousands of actions against a major AI platform, with direct implications for how you think about dataset supply-chain security and agentic threat models.",
-          "summary": "An attacker exploited two dataset-processing code-execution paths (a remote-code loader and a template-injection flaw) to reach node-level access, harvest credentials, and move laterally across internal clusters. The campaign used an autonomous agent framework running thousands of actions across short-lived sandboxes. Hugging Face used open-weight model GLM 5.2 on-prem for forensic log analysis after frontier API providers blocked attack-payload submissions via safety guardrails. No public models, datasets, or Spaces were tampered with; affected credentials were rotated.",
+          "title": "Google DeepMind Launches ATL Saathi: Gemini-Powered Teaching Assistant for India's 1.1 Crore Students",
+          "why_it_matters": "Shows how a frontier lab (DeepMind/Google) is deploying Gemini in a large-scale, curriculum-grounded, multilingual educational context — a concrete production case study in responsible AI deployment and teacher-in-the-loop design.",
+          "summary": "Google DeepMind has launched ATL Saathi, a Gemini-powered web app giving India's Atal Tinkering Lab educators a 24/7 planning and training assistant. It covers 12 ATL curriculum modules via micro-learning (summaries, AI infographics, quizzes), supports push/pull project generation for 10 modules, and offers multilingual interaction starting with 8 languages. Content is maintained in NotebookLM.",
           "tags": [
-            "security",
-            "agentic ai",
-            "supply chain",
-            "hugging face"
+            "google deepmind",
+            "gemini",
+            "education",
+            "deployment"
           ],
           "sources": [
             {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/security-incident-july-2026"
+              "name": "DeepMind",
+              "url": "https://deepmind.google/blog/empowering-indias-next-generation-of-innovators-with-atl-saathi/"
             }
           ],
-          "published": "2026-07-16T00:00:00+00:00",
-          "score": 0.2451
+          "published": "2026-07-13T12:37:28+00:00",
+          "score": 0.0766
         }
       ]
     },
     {
       "key": "frontier",
       "title": "Frontier & Papers",
-      "cards": [
-        {
-          "id": "a0bbc2c6e6f2",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "NVIDIA NeMo Automodel + Hugging Face Diffusers: Distributed Diffusion Fine-Tuning at Any Scale",
-          "why_it_matters": "As an AI/ML engineer working with diffusion models, this gives you a production-grade, Apache 2.0 training stack that scales from one GPU to hundreds without checkpoint conversion or model rewrites.",
-          "summary": "NVIDIA and Hugging Face have integrated NeMo Automodel — a PyTorch DTensor-native library — with the Diffusers ecosystem. It supports FSDP2, tensor, context, and pipeline parallelism via YAML config, not code rewrites. Both full fine-tuning and LoRA PEFT are supported. Flow-matching models (FLUX.1-dev, Wan 2.1, HunyuanVideo) are included; checkpoints round-trip cleanly back into DiffusionPipeline.",
-          "tags": [
-            "diffusion models",
-            "fine-tuning",
-            "distributed training",
-            "nvidia"
-          ],
-          "sources": [
-            {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/nvidia/scale-diffusers-finetuning-nemo-automodel"
-            }
-          ],
-          "published": "2026-07-17T15:57:54+00:00",
-          "score": 1.2808
-        }
-      ]
+      "cards": []
     }
   ]
 }
