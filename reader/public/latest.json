@@ -1,45 +1,137 @@
 {
-  "date": "2026-07-19",
-  "generated_at": "2026-07-19T03:40:34.722295+00:00",
-  "summary_line": "1 items to skim.",
+  "date": "2026-07-20",
+  "generated_at": "2026-07-20T03:54:52.229046+00:00",
+  "summary_line": "3 worth knowing",
   "counts": {
-    "total": 1,
-    "headlines": 1,
-    "frontier": 0
+    "total": 5,
+    "headlines": 0,
+    "frontier": 5
   },
   "sections": [
     {
       "key": "headlines",
       "title": "Headlines",
-      "cards": [
-        {
-          "id": "66188580349f",
-          "tier": "skim",
-          "category": "headline",
-          "title": "Google DeepMind Launches ATL Saathi: Gemini-Powered Teaching Assistant for India's 1.1 Crore Students",
-          "why_it_matters": "Shows how a frontier lab (DeepMind/Google) is deploying Gemini in a large-scale, curriculum-grounded, multilingual educational context — a concrete production case study in responsible AI deployment and teacher-in-the-loop design.",
-          "summary": "Google DeepMind has launched ATL Saathi, a Gemini-powered web app giving India's Atal Tinkering Lab educators a 24/7 planning and training assistant. It covers 12 ATL curriculum modules via micro-learning (summaries, AI infographics, quizzes), supports push/pull project generation for 10 modules, and offers multilingual interaction starting with 8 languages. Content is maintained in NotebookLM.",
-          "tags": [
-            "google deepmind",
-            "gemini",
-            "education",
-            "deployment"
-          ],
-          "sources": [
-            {
-              "name": "DeepMind",
-              "url": "https://deepmind.google/blog/empowering-indias-next-generation-of-innovators-with-atl-saathi/"
-            }
-          ],
-          "published": "2026-07-13T12:37:28+00:00",
-          "score": 0.0766
-        }
-      ]
+      "cards": []
     },
     {
       "key": "frontier",
       "title": "Frontier & Papers",
-      "cards": []
+      "cards": [
+        {
+          "id": "0e344837e25e",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "PagedWeight: Dynamic Runtime Quantization Balances MoE Weights Against KV Cache",
+          "why_it_matters": "If you serve MoE models at scale, memory contention between expert weights and KV cache is a real bottleneck — this directly addresses that tradeoff with concrete throughput numbers.",
+          "summary": "PagedWeight dynamically quantizes MoE expert weights at runtime to free GPU memory for KV cache. It achieves FP16-equivalent accuracy with up to 72% GPU memory savings and 1.94× throughput improvement, and improves quality over static quantization baselines by up to 39.3% at similar memory budgets with at most 4.1% throughput loss.",
+          "tags": [
+            "moe",
+            "quantization",
+            "llm serving",
+            "inference efficiency"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2607.16184v1"
+            }
+          ],
+          "published": "2026-07-17T17:58:29+00:00",
+          "score": 0.6708
+        },
+        {
+          "id": "ad3c7a1086f8",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Thermodynamic Computing Blueprint Uses Superconducting Analog Circuits for Energy-Efficient ML",
+          "why_it_matters": "As a frontier AI/hardware watcher, this outlines a physically grounded alternative compute paradigm — Langevin-dynamics-based analog hardware — with preliminary superconducting circuit experiments rather than pure theory.",
+          "summary": "The paper proposes a thermodynamic computing stack using stochastic analog hardware governed by Langevin dynamics with tunable energy potentials, framing popular ML models as probabilistic graphical models trainable on this substrate. A preliminary experimental realization uses stochastic analog superconducting circuits driven by thermal noise, with runtime and energy analysis included.",
+          "tags": [
+            "thermodynamic computing",
+            "energy-based models",
+            "hardware",
+            "analog ml"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2607.16183v1"
+            }
+          ],
+          "published": "2026-07-17T17:57:49+00:00",
+          "score": 0.6707
+        },
+        {
+          "id": "170f4aad620a",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "PEARL Fuses Adjoint-Based Optimal Control with RL for High-Dimensional Dynamical Systems",
+          "why_it_matters": "Scaling RL to high-dimensional continuous control without low-dimensional state reductions is a core research challenge — PEARL's actor-adjoint algorithm offers a physics-grounded path forward.",
+          "summary": "PEARL (Physics-EnhAnced Reinforcement Learning) combines an actor network with adjoint-based policy gradient computation over short horizons and neural-network-approximated future-return sensitivities, exploiting differentiable physics to cut environment interactions. Tested on parametric navigation in unsteady flows, it outperforms standard RL baselines, generalizes across parameter regimes, and scales to high-dimensional state-action spaces.",
+          "tags": [
+            "reinforcement learning",
+            "optimal control",
+            "physics-informed ml",
+            "differentiable simulation"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2607.16177v1"
+            },
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2607.16169v1"
+            }
+          ],
+          "published": "2026-07-17T17:56:05+00:00",
+          "score": 0.6704
+        },
+        {
+          "id": "e6d35841eb76",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Laplacian Optimal Transport Enables Cluster-Aware Point Cloud Matching",
+          "why_it_matters": "Optimal transport with structure-preserving regularization is directly relevant to researchers working on distribution alignment, domain adaptation, or geometric deep learning.",
+          "summary": "LapOT regularizes the optimal transport problem with quadratic Laplacian terms built from similarity graphs, encouraging couplings that respect cluster structure in both point sets. A companion method, Refined Simultaneous Clustering (RSC), uses the LapOT coupling to produce consistent cross-set partitions, overcoming instabilities from independent clustering.",
+          "tags": [
+            "optimal transport",
+            "clustering",
+            "point clouds",
+            "geometric ml"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2607.16178v1"
+            }
+          ],
+          "published": "2026-07-17T17:56:51+00:00",
+          "score": 0.2235
+        },
+        {
+          "id": "0ca3d29c063c",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Open-Weight LLMs Evaluated for Auto-Generating STIX Threat Intelligence from CVE Descriptions",
+          "why_it_matters": "Benchmarking 11 open-weight models (4B–120B) on structured security output generation is useful context for anyone building agentic or domain-specific NLP pipelines over technical corpora.",
+          "summary": "The CAV-STIXGen dataset maps autonomous vehicle CVE descriptions to STIX domain objects, relationship objects, CWE, and MITRE ATT&CK entries. Single-model F1 scores reach 0.94 for SDOs and 0.99 for CWE mapping, but only 0.63 for SROs; MITRE ATT&CK mapping remains difficult. A Gemma-4-31B and Codestral-22B multi-agent setup achieves 0.91 SDO F1 and 0.43 SRO F1.",
+          "tags": [
+            "llm evaluation",
+            "structured output",
+            "cybersecurity",
+            "open-weight models"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2607.16175v1"
+            }
+          ],
+          "published": "2026-07-17T17:55:19+00:00",
+          "score": 0.2234
+        }
+      ]
     }
   ]
 }
