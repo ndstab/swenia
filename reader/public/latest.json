@@ -1,135 +1,198 @@
 {
-  "date": "2026-07-20",
-  "generated_at": "2026-07-20T03:54:52.229046+00:00",
-  "summary_line": "3 worth knowing",
+  "date": "2026-07-21",
+  "generated_at": "2026-07-21T03:35:06.362583+00:00",
+  "summary_line": "2 must-know · 3 worth knowing",
   "counts": {
-    "total": 5,
-    "headlines": 0,
-    "frontier": 5
+    "total": 8,
+    "headlines": 2,
+    "frontier": 6
   },
   "sections": [
     {
       "key": "headlines",
       "title": "Headlines",
-      "cards": []
+      "cards": [
+        {
+          "id": "8030c8e0dc09",
+          "tier": "must_know",
+          "category": "headline",
+          "title": "NVIDIA Cosmos 3 Edge: 4B-Parameter On-Device World Model for Robotics",
+          "why_it_matters": "A compact open world-action model achieving real-time robot control at 15 Hz on Jetson hardware is directly relevant for anyone working on embodied AI or edge inference pipelines.",
+          "summary": "NVIDIA's Cosmos 3 Edge is a 4B-parameter open model combining autoregressive and diffusion transformer towers with shared multimodal attention, targeting edge deployment on Jetson, RTX, and DGX hardware. It runs at robot-control resolution (640×360), generates 32 actions per inference, achieves 15 Hz control on Jetson Thor, and ranks #1 on VANTAGE-Bench among 4B-scale models.",
+          "tags": [
+            "robotics",
+            "edge-inference",
+            "world-models",
+            "nvidia"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/nvidia/cosmos3edge"
+            }
+          ],
+          "published": "2026-07-20T15:58:51+00:00",
+          "score": 2.5534
+        },
+        {
+          "id": "56771b83d103",
+          "tier": "must_know",
+          "category": "headline",
+          "title": "Kimi K3: Moonshot AI's 2.8T MoE Flagship Challenges OpenAI and Anthropic at Open Weights",
+          "why_it_matters": "This is the most significant open-weights frontier model release since DeepSeek R1 — the weights drop July 27th and every researcher needs to know where the open-weights frontier now sits.",
+          "summary": "Moonshot AI's Kimi K3 is a 2.8T parameter MoE model ranking #2 on Vals AI index, #3 on Artificial Analysis Intelligence Index (behind only Claude Fable and GPT-5.6 Sol), and #1 in Frontend Code Arena. The open-to-closed frontier gap is now estimated at 3–5 months, down from 6–9. Weights release scheduled July 27th.",
+          "tags": [
+            "open-weights",
+            "frontier-models",
+            "chinese-ai",
+            "moe"
+          ],
+          "sources": [
+            {
+              "name": "Interconnects",
+              "url": "https://www.interconnects.ai/p/kimi-k3-the-open-weights-escalation"
+            }
+          ],
+          "published": "2026-07-20T15:48:28+00:00",
+          "score": 2.5473
+        }
+      ]
     },
     {
       "key": "frontier",
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "0e344837e25e",
+          "id": "1f9c39a456e1",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "PagedWeight: Dynamic Runtime Quantization Balances MoE Weights Against KV Cache",
-          "why_it_matters": "If you serve MoE models at scale, memory contention between expert weights and KV cache is a real bottleneck — this directly addresses that tradeoff with concrete throughput numbers.",
-          "summary": "PagedWeight dynamically quantizes MoE expert weights at runtime to free GPU memory for KV cache. It achieves FP16-equivalent accuracy with up to 72% GPU memory savings and 1.94× throughput improvement, and improves quality over static quantization baselines by up to 39.3% at similar memory budgets with at most 4.1% throughput loss.",
+          "title": "TPIPS: Text-Prompted Perceptual Similarity Metric Conditioned on Semantic Aspects",
+          "why_it_matters": "Current perceptual metrics collapse multi-dimensional similarity into a scalar — this work directly addresses that limitation with a fine-tuned VLM metric useful for evaluating generative models more precisely.",
+          "summary": "Existing perceptual similarity metrics output a single scalar, ignoring context-specific dimensions like shape vs. color. The authors build a large-scale dataset of human triplet judgments annotated across free-form semantic aspects, then fine-tune a VLM into TPIPS. It outperforms frontier VLMs on human alignment and enables text-guided retrieval, compositional search, and fine-grained generative model evaluation.",
           "tags": [
-            "moe",
-            "quantization",
-            "llm serving",
-            "inference efficiency"
+            "perceptual-metrics",
+            "vlm",
+            "generative-evaluation",
+            "datasets"
           ],
           "sources": [
             {
               "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2607.16184v1"
+              "url": "https://arxiv.org/abs/2607.18237v1"
             }
           ],
-          "published": "2026-07-17T17:58:29+00:00",
-          "score": 0.6708
+          "published": "2026-07-20T17:59:51+00:00",
+          "score": 1.313
         },
         {
-          "id": "ad3c7a1086f8",
+          "id": "71c8c53bf0ca",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Thermodynamic Computing Blueprint Uses Superconducting Analog Circuits for Energy-Efficient ML",
-          "why_it_matters": "As a frontier AI/hardware watcher, this outlines a physically grounded alternative compute paradigm — Langevin-dynamics-based analog hardware — with preliminary superconducting circuit experiments rather than pure theory.",
-          "summary": "The paper proposes a thermodynamic computing stack using stochastic analog hardware governed by Langevin dynamics with tunable energy potentials, framing popular ML models as probabilistic graphical models trainable on this substrate. A preliminary experimental realization uses stochastic analog superconducting circuits driven by thermal noise, with runtime and energy analysis included.",
+          "title": "Patch Policy: Dense ViT Patch Tokens Boost Robot Control with 0.7% of VLA Parameters",
+          "why_it_matters": "Achieving 40% improvement over global-pooled policies and 18% over fine-tuned OpenVLA-OFT at a fraction of the parameter count is a strong efficiency result for anyone building or evaluating robot learning systems.",
+          "summary": "Patch Policy introduces a block-causal attention mask that lets transformer-based policies consume dense pre-trained ViT patch tokens without a full VLM backbone. Evaluated across four simulated and three real-world suites, it achieves a 40% relative improvement over state-of-the-art global-pooled baselines and surpasses fine-tuned OpenVLA-OFT by 18% using roughly 0.7% of its parameters.",
           "tags": [
-            "thermodynamic computing",
-            "energy-based models",
-            "hardware",
-            "analog ml"
+            "robotics",
+            "robot-learning",
+            "vision-transformers",
+            "embodied-ai"
           ],
           "sources": [
             {
               "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2607.16183v1"
+              "url": "https://arxiv.org/abs/2607.18236v1"
             }
           ],
-          "published": "2026-07-17T17:57:49+00:00",
-          "score": 0.6707
+          "published": "2026-07-20T17:59:41+00:00",
+          "score": 1.3129
         },
         {
-          "id": "170f4aad620a",
+          "id": "f18b88ddc406",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "PEARL Fuses Adjoint-Based Optimal Control with RL for High-Dimensional Dynamical Systems",
-          "why_it_matters": "Scaling RL to high-dimensional continuous control without low-dimensional state reductions is a core research challenge — PEARL's actor-adjoint algorithm offers a physics-grounded path forward.",
-          "summary": "PEARL (Physics-EnhAnced Reinforcement Learning) combines an actor network with adjoint-based policy gradient computation over short horizons and neural-network-approximated future-return sensitivities, exploiting differentiable physics to cut environment interactions. Tested on parametric navigation in unsteady flows, it outperforms standard RL baselines, generalizes across parameter regimes, and scales to high-dimensional state-action spaces.",
+          "title": "Linguistic Framing of User Beliefs Systematically Shifts LLM Context vs. Prior Knowledge Balance",
+          "why_it_matters": "Understanding how linguistic form — not just content — controls whether a model follows context or prior knowledge has direct implications for prompt engineering robustness and model evaluation.",
+          "summary": "A typology of 17 expression-of-belief types spanning form, evidentiality, epistemic stance, and tone was used to benchmark 16 LLMs. Larger and instruction-tuned models tend to be less context-following than smaller or base models. Specific linguistic framings statistically significantly persuade models more than others, revealing exploitable systematic biases independent of factual content.",
           "tags": [
-            "reinforcement learning",
-            "optimal control",
-            "physics-informed ml",
-            "differentiable simulation"
+            "llm-robustness",
+            "prompt-engineering",
+            "evaluation",
+            "linguistics"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2607.16177v1"
-            },
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2607.16169v1"
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2607.18232v1"
             }
           ],
-          "published": "2026-07-17T17:56:05+00:00",
-          "score": 0.6704
+          "published": "2026-07-20T17:58:31+00:00",
+          "score": 1.3126
         },
         {
-          "id": "e6d35841eb76",
+          "id": "05fcc563a479",
           "tier": "skim",
           "category": "frontier",
-          "title": "Laplacian Optimal Transport Enables Cluster-Aware Point Cloud Matching",
-          "why_it_matters": "Optimal transport with structure-preserving regularization is directly relevant to researchers working on distribution alignment, domain adaptation, or geometric deep learning.",
-          "summary": "LapOT regularizes the optimal transport problem with quadratic Laplacian terms built from similarity graphs, encouraging couplings that respect cluster structure in both point sets. A companion method, Refined Simultaneous Clustering (RSC), uses the LapOT coupling to produce consistent cross-set partitions, overcoming instabilities from independent clustering.",
+          "title": "No Universal LLM Discovery Harness: OpenEvolve-Style Search Often Loses to Simpler Alternatives",
+          "why_it_matters": "Anyone using or designing autonomous LLM-driven discovery or code-search systems needs to know that fixed harness choices behave like untuned hyperparameters, not universal recipes.",
+          "summary": "Across 30 budget-matched harnesses evaluated on 12 model-problem pairs using over 3.1 million LLM rollouts, no single harness reliably dominates. OpenEvolve-style variants generally underperform simpler alternatives. Early discovery progress predicts final performance; an adaptive allocation strategy that prunes weak runs and reallocates compute outperforms both fixed and non-adaptive ensemble baselines.",
           "tags": [
-            "optimal transport",
-            "clustering",
-            "point clouds",
-            "geometric ml"
+            "llm-agents",
+            "automated-discovery",
+            "search",
+            "evaluation"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2607.16178v1"
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2607.18235v1"
             }
           ],
-          "published": "2026-07-17T17:56:51+00:00",
-          "score": 0.2235
+          "published": "2026-07-20T17:59:37+00:00",
+          "score": 0.4376
         },
         {
-          "id": "0ca3d29c063c",
+          "id": "b4d53286f55a",
           "tier": "skim",
           "category": "frontier",
-          "title": "Open-Weight LLMs Evaluated for Auto-Generating STIX Threat Intelligence from CVE Descriptions",
-          "why_it_matters": "Benchmarking 11 open-weight models (4B–120B) on structured security output generation is useful context for anyone building agentic or domain-specific NLP pipelines over technical corpora.",
-          "summary": "The CAV-STIXGen dataset maps autonomous vehicle CVE descriptions to STIX domain objects, relationship objects, CWE, and MITRE ATT&CK entries. Single-model F1 scores reach 0.94 for SDOs and 0.99 for CWE mapping, but only 0.63 for SROs; MITRE ATT&CK mapping remains difficult. A Gemma-4-31B and Codestral-22B multi-agent setup achieves 0.91 SDO F1 and 0.43 SRO F1.",
+          "title": "Simple Training Recipe Beats PIXAR by 26% on Pixel-Level AI Image Tampering Detection OOD",
+          "why_it_matters": "As VLM-generated image manipulation becomes trivially accessible, robust detection methods that generalize across unseen generation models matter for anyone building content integrity or evaluation pipelines.",
+          "summary": "The proposed framework uses two strategies: balanced minibatch sampling to prevent optimization bias toward artifacts or clean priors, and late-injection of small amounts of new-domain data after stable convergence. Evaluated on GPT-Images-2.0, Gemini-3.1, FLUX.2, and Seedream 4.5, it outperforms prior SOTA PIXAR by 26.1% relative in average gIoU and 26.8% in cIoU across OOD VLM distributions.",
           "tags": [
-            "llm evaluation",
-            "structured output",
-            "cybersecurity",
-            "open-weight models"
+            "image-forensics",
+            "domain-generalization",
+            "vlm",
+            "detection"
           ],
           "sources": [
             {
               "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2607.16175v1"
+              "url": "https://arxiv.org/abs/2607.18230v1"
             }
           ],
-          "published": "2026-07-17T17:55:19+00:00",
-          "score": 0.2234
+          "published": "2026-07-20T17:58:13+00:00",
+          "score": 0.4375
+        },
+        {
+          "id": "77f47c87d6cf",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Learned Soft Prefixes Override Correct Syllogistic Reasoning in LLMs with Up to 90% Flip Rate",
+          "why_it_matters": "Showing that opaque continuous-vector prefixes can redirect correct logical judgments across unseen prompt variations exposes a fundamental fragility in reasoning stability relevant to anyone working on LLM robustness or interpretability.",
+          "summary": "Soft prefixes — opaque continuous vectors prepended at inference — were optimized to flip correct syllogistic answers on Qwen3.6-35B MoE, Qwen3-8B, and Gemma 4 31B. Flip rates reached 72–90% on Qwen3.6 MoE across wording and prompt changes; Gemma validity prefixes retained 54–56% flip rates vs. under 1% for random controls. The dominant effect is a broad answer-preference shift, not symbolic forcing.",
+          "tags": [
+            "llm-robustness",
+            "logical-reasoning",
+            "interpretability",
+            "adversarial"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2607.18228v1"
+            }
+          ],
+          "published": "2026-07-20T17:58:05+00:00",
+          "score": 0.4375
         }
       ]
     }
