@@ -1,11 +1,11 @@
 {
-  "date": "2026-07-21",
-  "generated_at": "2026-07-21T03:35:06.362583+00:00",
-  "summary_line": "2 must-know · 3 worth knowing",
+  "date": "2026-07-22",
+  "generated_at": "2026-07-22T03:34:33.475882+00:00",
+  "summary_line": "1 must-know · 5 worth knowing",
   "counts": {
-    "total": 8,
-    "headlines": 2,
-    "frontier": 6
+    "total": 9,
+    "headlines": 1,
+    "frontier": 8
   },
   "sections": [
     {
@@ -13,48 +13,30 @@
       "title": "Headlines",
       "cards": [
         {
-          "id": "8030c8e0dc09",
+          "id": "8985407e5ef9",
           "tier": "must_know",
           "category": "headline",
-          "title": "NVIDIA Cosmos 3 Edge: 4B-Parameter On-Device World Model for Robotics",
-          "why_it_matters": "A compact open world-action model achieving real-time robot control at 15 Hz on Jetson hardware is directly relevant for anyone working on embodied AI or edge inference pipelines.",
-          "summary": "NVIDIA's Cosmos 3 Edge is a 4B-parameter open model combining autoregressive and diffusion transformer towers with shared multimodal attention, targeting edge deployment on Jetson, RTX, and DGX hardware. It runs at robot-control resolution (640×360), generates 32 actions per inference, achieves 15 Hz control on Jetson Thor, and ranks #1 on VANTAGE-Bench among 4B-scale models.",
+          "title": "Google DeepMind Releases Gemini 3.6 Flash, 3.5 Flash-Lite, and Cyber-Specialized 3.5 Flash",
+          "why_it_matters": "These are production-grade flagship model releases from Google DeepMind targeting agentic workflows — directly relevant to building and deploying AI systems at scale, with concrete benchmark and cost figures.",
+          "summary": "Gemini 3.6 Flash improves on 3.5 Flash with 17% fewer output tokens (Artificial Analysis Index), better coding (DeepSWE: 49% vs. 37%), ML research (MLE Bench: 63.9% vs. 49.7%), and computer use (OSWorld-Verified: 83.0% vs. 78.4%), priced at $1.50/$7.50 per 1M input/output tokens. 3.5 Flash-Lite hits 350 output tokens/second. A specialized cyber model paired with CodeMender agent targets security workflows. Gemini 4 pre-training has begun.",
           "tags": [
-            "robotics",
-            "edge-inference",
-            "world-models",
-            "nvidia"
+            "gemini",
+            "google-deepmind",
+            "agents",
+            "model-release"
           ],
           "sources": [
             {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/nvidia/cosmos3edge"
-            }
-          ],
-          "published": "2026-07-20T15:58:51+00:00",
-          "score": 2.5534
-        },
-        {
-          "id": "56771b83d103",
-          "tier": "must_know",
-          "category": "headline",
-          "title": "Kimi K3: Moonshot AI's 2.8T MoE Flagship Challenges OpenAI and Anthropic at Open Weights",
-          "why_it_matters": "This is the most significant open-weights frontier model release since DeepSeek R1 — the weights drop July 27th and every researcher needs to know where the open-weights frontier now sits.",
-          "summary": "Moonshot AI's Kimi K3 is a 2.8T parameter MoE model ranking #2 on Vals AI index, #3 on Artificial Analysis Intelligence Index (behind only Claude Fable and GPT-5.6 Sol), and #1 in Frontend Code Arena. The open-to-closed frontier gap is now estimated at 3–5 months, down from 6–9. Weights release scheduled July 27th.",
-          "tags": [
-            "open-weights",
-            "frontier-models",
-            "chinese-ai",
-            "moe"
-          ],
-          "sources": [
+              "name": "DeepMind",
+              "url": "https://deepmind.google/blog/introducing-gemini-36-flash-35-flash-lite-and-35-flash-cyber/"
+            },
             {
-              "name": "Interconnects",
-              "url": "https://www.interconnects.ai/p/kimi-k3-the-open-weights-escalation"
+              "name": "DeepMind",
+              "url": "https://deepmind.google/blog/introducing-gemini-3-5-flash-cyber/"
             }
           ],
-          "published": "2026-07-20T15:48:28+00:00",
-          "score": 2.5473
+          "published": "2026-07-21T15:16:30+00:00",
+          "score": 2.5289
         }
       ]
     },
@@ -63,136 +45,180 @@
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "1f9c39a456e1",
+          "id": "eed16821fcdd",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "TPIPS: Text-Prompted Perceptual Similarity Metric Conditioned on Semantic Aspects",
-          "why_it_matters": "Current perceptual metrics collapse multi-dimensional similarity into a scalar — this work directly addresses that limitation with a fine-tuned VLM metric useful for evaluating generative models more precisely.",
-          "summary": "Existing perceptual similarity metrics output a single scalar, ignoring context-specific dimensions like shape vs. color. The authors build a large-scale dataset of human triplet judgments annotated across free-form semantic aspects, then fine-tune a VLM into TPIPS. It outperforms frontier VLMs on human alignment and enables text-guided retrieval, compositional search, and fine-grained generative model evaluation.",
-          "tags": [
-            "perceptual-metrics",
-            "vlm",
-            "generative-evaluation",
-            "datasets"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2607.18237v1"
-            }
-          ],
-          "published": "2026-07-20T17:59:51+00:00",
-          "score": 1.313
-        },
-        {
-          "id": "71c8c53bf0ca",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "Patch Policy: Dense ViT Patch Tokens Boost Robot Control with 0.7% of VLA Parameters",
-          "why_it_matters": "Achieving 40% improvement over global-pooled policies and 18% over fine-tuned OpenVLA-OFT at a fraction of the parameter count is a strong efficiency result for anyone building or evaluating robot learning systems.",
-          "summary": "Patch Policy introduces a block-causal attention mask that lets transformer-based policies consume dense pre-trained ViT patch tokens without a full VLM backbone. Evaluated across four simulated and three real-world suites, it achieves a 40% relative improvement over state-of-the-art global-pooled baselines and surpasses fine-tuned OpenVLA-OFT by 18% using roughly 0.7% of its parameters.",
+          "title": "Survey: Simulation Engines for Physical AI and Robotics Training",
+          "why_it_matters": "Physical AI and robot learning are increasingly dependent on simulation infrastructure — this overview maps the landscape of engines, use cases, and the three-computer paradigm that frames modern training pipelines.",
+          "summary": "A detailed overview of why simulation has become central to physical AI development, covering GPU-parallelized data generation, synthetic perception datasets, RL policy training, and adversarial benchmarking. Introduces a three-computer paradigm (training cluster, simulation workstation, on-robot edge device). Covers popular engines including Isaac Sim/Lab, MuJoCo, PyBullet, Drake, and Genesis, categorized by robot domain and acceleration profile.",
           "tags": [
             "robotics",
-            "robot-learning",
-            "vision-transformers",
-            "embodied-ai"
+            "simulation",
+            "reinforcement-learning",
+            "physical-ai"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2607.18236v1"
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/nvidia/state-of-simulation-for-physical-ai"
             }
           ],
-          "published": "2026-07-20T17:59:41+00:00",
-          "score": 1.3129
+          "published": "2026-07-21T20:00:27+00:00",
+          "score": 1.3503
         },
         {
-          "id": "f18b88ddc406",
+          "id": "d72529776569",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Linguistic Framing of User Beliefs Systematically Shifts LLM Context vs. Prior Knowledge Balance",
-          "why_it_matters": "Understanding how linguistic form — not just content — controls whether a model follows context or prior knowledge has direct implications for prompt engineering robustness and model evaluation.",
-          "summary": "A typology of 17 expression-of-belief types spanning form, evidentiality, epistemic stance, and tone was used to benchmark 16 LLMs. Larger and instruction-tuned models tend to be less context-following than smaller or base models. Specific linguistic framings statistically significantly persuade models more than others, revealing exploitable systematic biases independent of factual content.",
+          "title": "GEAR: RL Reward Shaping to Cure Repetitive Copying in Long-Context Reasoning",
+          "why_it_matters": "Repetitive copying is a concrete, underdiagnosed failure mode in long-context reasoning models that degrades performance — this paper diagnoses it and proposes a targeted RL fix with measured gains.",
+          "summary": "Frontier LLMs trained with chain-of-thought reasoning copy large swaths of input text into reasoning traces rather than reasoning productively, a problem that worsens with context length. GEAR (Grounding Evidence-Aware Reward) augments standard accuracy-based RL rewards with a grounding reward for overlap with key evidence and a penalty for distractor overlap. Validated across model scales and benchmarks, yielding up to +4.6 average points over standard RL, with larger gains at longer contexts.",
           "tags": [
-            "llm-robustness",
-            "prompt-engineering",
-            "evaluation",
-            "linguistics"
+            "reinforcement-learning",
+            "long-context",
+            "reasoning",
+            "post-training"
           ],
           "sources": [
             {
               "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2607.18232v1"
+              "url": "https://arxiv.org/abs/2607.19345v1"
             }
           ],
-          "published": "2026-07-20T17:58:31+00:00",
-          "score": 1.3126
+          "published": "2026-07-21T17:59:21+00:00",
+          "score": 1.313
         },
         {
-          "id": "05fcc563a479",
-          "tier": "skim",
+          "id": "e4b0224aced5",
+          "tier": "worth_knowing",
           "category": "frontier",
-          "title": "No Universal LLM Discovery Harness: OpenEvolve-Style Search Often Loses to Simpler Alternatives",
-          "why_it_matters": "Anyone using or designing autonomous LLM-driven discovery or code-search systems needs to know that fixed harness choices behave like untuned hyperparameters, not universal recipes.",
-          "summary": "Across 30 budget-matched harnesses evaluated on 12 model-problem pairs using over 3.1 million LLM rollouts, no single harness reliably dominates. OpenEvolve-style variants generally underperform simpler alternatives. Early discovery progress predicts final performance; an adaptive allocation strategy that prunes weak runs and reallocates compute outperforms both fixed and non-adaptive ensemble baselines.",
+          "title": "Appearance Pointers: Modality-Agnostic Regional Control for Diffusion Transformers",
+          "why_it_matters": "Precise spatial and appearance control in DiTs is an open research problem; this paper introduces a lightweight, training-free-base-model approach that matches or beats modality-specific SOTA.",
+          "summary": "Appearance pointers are compact tokens produced by a region correspondence network and refined via spatial aggregation, guiding Diffusion Transformers to apply text or image appearance cues at user-specified mask regions. The approach is modality-agnostic, requires no retraining of the base DiT, and handles multiple regional descriptions without significantly increasing token load. Reaches or surpasses modality-specific SOTA across evaluated metrics.",
           "tags": [
-            "llm-agents",
-            "automated-discovery",
-            "search",
+            "diffusion-models",
+            "controllable-generation",
+            "image-synthesis",
+            "multimodal"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2607.19344v1"
+            }
+          ],
+          "published": "2026-07-21T17:59:12+00:00",
+          "score": 1.313
+        },
+        {
+          "id": "411e0b27152f",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "CodeRescue: Conformal Risk Control for Budget-Aware Recovery Routing in Coding Agents",
+          "why_it_matters": "Practical coding agent deployment requires principled cost-quality tradeoffs beyond simple model cascades — this paper formalizes post-failure recovery routing with statistical cost guarantees.",
+          "summary": "CodeRescue frames post-failure decisions in coding agents as a routing problem: when to retry with a cheap model using execution feedback vs. escalate to a stronger model. A supervised router trained on execution rollouts is paired with a Conformal Risk Control (CRC) layer that calibrates cost-penalty thresholds at deployment time without retraining. On held-out failures from five benchmarks, one CRC-calibrated point exceeds always-escalate solve rate at 35% of its mean recovery cost.",
+          "tags": [
+            "agents",
+            "coding",
+            "inference-efficiency",
+            "reinforcement-learning"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2607.19338v1"
+            }
+          ],
+          "published": "2026-07-21T17:56:49+00:00",
+          "score": 1.3122
+        },
+        {
+          "id": "aea2318845ae",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Tutorial Survey: Design Patterns and Failure Modes for Production LLM Agents",
+          "why_it_matters": "As agentic systems move from benchmarks to production, understanding deployment-validated design patterns and failure mitigations is directly actionable for AI engineers building real systems.",
+          "summary": "A tutorial bridging academic agent research and production deployment, covering reasoning/planning advances, multi-agent coordination, and evaluation methodology. Uses applied case studies in pharmaceutical discovery and financial systems to identify common design patterns and failure modes. Discusses concrete mitigations: verification pipelines, fallback mechanisms, and human-in-the-loop supervision. Includes evaluation checklists and deployment templates.",
+          "tags": [
+            "agents",
+            "deployment",
+            "multi-agent",
             "evaluation"
           ],
           "sources": [
             {
               "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2607.18235v1"
+              "url": "https://arxiv.org/abs/2607.19336v1"
             }
           ],
-          "published": "2026-07-20T17:59:37+00:00",
-          "score": 0.4376
+          "published": "2026-07-21T17:55:10+00:00",
+          "score": 1.3117
         },
         {
-          "id": "b4d53286f55a",
+          "id": "a03766e12d51",
           "tier": "skim",
           "category": "frontier",
-          "title": "Simple Training Recipe Beats PIXAR by 26% on Pixel-Level AI Image Tampering Detection OOD",
-          "why_it_matters": "As VLM-generated image manipulation becomes trivially accessible, robust detection methods that generalize across unseen generation models matter for anyone building content integrity or evaluation pipelines.",
-          "summary": "The proposed framework uses two strategies: balanced minibatch sampling to prevent optimization bias toward artifacts or clean priors, and late-injection of small amounts of new-domain data after stable convergence. Evaluated on GPT-Images-2.0, Gemini-3.1, FLUX.2, and Seedream 4.5, it outperforms prior SOTA PIXAR by 26.1% relative in average gIoU and 26.8% in cIoU across OOD VLM distributions.",
+          "title": "1-Lipschitz Neural Networks on Hadamard Manifolds via Busemann Gradient Flows",
+          "why_it_matters": "Extending robustness-promoting Lipschitz constraints to non-Euclidean geometry is a niche but technically meaningful frontier for researchers working with hyperbolic or SPD-matrix-valued data.",
+          "summary": "Constructs 1-Lipschitz neural network layers on Hadamard manifolds (including hyperbolic space and symmetric positive definite matrices) using Busemann functions and their gradient flows, yielding quasi-α-firmly nonexpansive layers. Demonstrated on robust classification on the Poincaré disk and masked-Wishart covariance reconstruction on the SPD manifold, outperforming Log-Euclidean and static denoising baselines.",
           "tags": [
-            "image-forensics",
-            "domain-generalization",
-            "vlm",
-            "detection"
+            "robustness",
+            "geometry",
+            "neural-networks",
+            "theory"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2607.18230v1"
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2607.19335v1"
             }
           ],
-          "published": "2026-07-20T17:58:13+00:00",
-          "score": 0.4375
+          "published": "2026-07-21T17:54:34+00:00",
+          "score": 0.4372
         },
         {
-          "id": "77f47c87d6cf",
+          "id": "0c1999446429",
           "tier": "skim",
           "category": "frontier",
-          "title": "Learned Soft Prefixes Override Correct Syllogistic Reasoning in LLMs with Up to 90% Flip Rate",
-          "why_it_matters": "Showing that opaque continuous-vector prefixes can redirect correct logical judgments across unseen prompt variations exposes a fundamental fragility in reasoning stability relevant to anyone working on LLM robustness or interpretability.",
-          "summary": "Soft prefixes — opaque continuous vectors prepended at inference — were optimized to flip correct syllogistic answers on Qwen3.6-35B MoE, Qwen3-8B, and Gemma 4 31B. Flip rates reached 72–90% on Qwen3.6 MoE across wording and prompt changes; Gemma validity prefixes retained 54–56% flip rates vs. under 1% for random controls. The dominant effect is a broad answer-preference shift, not symbolic forcing.",
+          "title": "Fundamental Limits of K-Class Classification from O(log K) Binary Classifiers",
+          "why_it_matters": "Understanding the theoretical performance limits of distributed classification with binary sub-classifiers is relevant to researchers designing hierarchical or ensemble classifiers with constrained communication.",
+          "summary": "Studies the fundamental performance limits of building a K-class classifier from O(log K) binary hyperplane classifiers in a distributed setting. For a Gaussian model with K class centers as independent Gaussian points in ℝᵈ and Gaussian observation noise, derives explicit performance bounds across multiple decoding and dimensional regimes, validated by simulation experiments.",
           "tags": [
-            "llm-robustness",
-            "logical-reasoning",
-            "interpretability",
-            "adversarial"
+            "theory",
+            "classification",
+            "distributed-learning",
+            "information-theory"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2607.18228v1"
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2607.19334v1"
             }
           ],
-          "published": "2026-07-20T17:58:05+00:00",
-          "score": 0.4375
+          "published": "2026-07-21T17:53:44+00:00",
+          "score": 0.4371
+        },
+        {
+          "id": "f07ea0986edc",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Grabette: Open-Source Handheld Gripper for Low-Cost Robot Manipulation Data Collection",
+          "why_it_matters": "Data scarcity is the core bottleneck in robot learning — Grabette offers a concrete, open-hardware path to scalable real-world manipulation dataset collection without requiring a robot arm.",
+          "summary": "Grabette is an open-source handheld gripper (~490€ BOM) carrying a fisheye camera and RGBD camera to capture 6-DoF manipulation demonstrations via SLAM, without needing a robot. Paired with Gripette (~120€), a motorized gripper twin for policy execution. Integrates with LeRobot datasets and Hugging Face Hub. Directly inspired by Stanford's UMI gripper. Goal is to enable crowd-sourced, large-scale open manipulation datasets.",
+          "tags": [
+            "robotics",
+            "data-collection",
+            "open-source",
+            "manipulation"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/grabette"
+            }
+          ],
+          "published": "2026-07-21T00:00:00+00:00",
+          "score": 0.3409
         }
       ]
     }
