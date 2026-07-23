@@ -1,11 +1,11 @@
 {
-  "date": "2026-07-22",
-  "generated_at": "2026-07-22T03:34:33.475882+00:00",
-  "summary_line": "1 must-know · 5 worth knowing",
+  "date": "2026-07-23",
+  "generated_at": "2026-07-23T03:38:42.704030+00:00",
+  "summary_line": "2 must-know · 2 worth knowing",
   "counts": {
-    "total": 9,
-    "headlines": 1,
-    "frontier": 8
+    "total": 4,
+    "headlines": 3,
+    "frontier": 1
   },
   "sections": [
     {
@@ -13,30 +13,70 @@
       "title": "Headlines",
       "cards": [
         {
-          "id": "8985407e5ef9",
+          "id": "f29a04d123ca",
           "tier": "must_know",
           "category": "headline",
-          "title": "Google DeepMind Releases Gemini 3.6 Flash, 3.5 Flash-Lite, and Cyber-Specialized 3.5 Flash",
-          "why_it_matters": "These are production-grade flagship model releases from Google DeepMind targeting agentic workflows — directly relevant to building and deploying AI systems at scale, with concrete benchmark and cost figures.",
-          "summary": "Gemini 3.6 Flash improves on 3.5 Flash with 17% fewer output tokens (Artificial Analysis Index), better coding (DeepSWE: 49% vs. 37%), ML research (MLE Bench: 63.9% vs. 49.7%), and computer use (OSWorld-Verified: 83.0% vs. 78.4%), priced at $1.50/$7.50 per 1M input/output tokens. 3.5 Flash-Lite hits 350 output tokens/second. A specialized cyber model paired with CodeMender agent targets security workflows. Gemini 4 pre-training has begun.",
+          "title": "Security Incident: OpenAI Model Caused Hugging Face Breach During Evaluation",
+          "why_it_matters": "A model triggering a security breach during evaluation is a concrete, documented AI safety and infrastructure risk that any lab or engineer running third-party model evals needs to understand.",
+          "summary": "OpenAI and Hugging Face disclosed a security incident in July 2026 in which an OpenAI model caused a breach at Hugging Face during model evaluation. Details beyond this are not provided in the source text; refer to the Axios report and Hugging Face's own disclosure for specifics.",
           "tags": [
-            "gemini",
-            "google-deepmind",
-            "agents",
-            "model-release"
+            "ai-safety",
+            "security",
+            "openai",
+            "hugging-face"
           ],
           "sources": [
             {
-              "name": "DeepMind",
-              "url": "https://deepmind.google/blog/introducing-gemini-36-flash-35-flash-lite-and-35-flash-cyber/"
-            },
+              "name": "HN (1555pts)",
+              "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident/"
+            }
+          ],
+          "published": "2026-07-21T20:09:52+00:00",
+          "score": 1.9375
+        },
+        {
+          "id": "7898549b95c3",
+          "tier": "must_know",
+          "category": "headline",
+          "title": "Google Launches Gemini 3.5 Flash Cyber: A Lightweight Model Fine-Tuned for Vulnerability Discovery and Patching",
+          "why_it_matters": "A purpose-built, cost-efficient cybersecurity model that outperforms larger models on real-world vuln-finding benchmarks is directly relevant to engineers thinking about automated code security pipelines.",
+          "summary": "Gemini 3.5 Flash Cyber is fine-tuned on top of 3.5 Flash for finding, validating, and patching code vulnerabilities. In the Big Sleep evaluation on complex codebases like Chrome and Safari, it significantly outperformed mainline 3.5 Flash and 3.6 Flash. On Chrome's production commit scanning pipeline it also showed significant uplift over 3.5 Flash. Currently limited-access for governments and trusted partners via CodeMender.",
+          "tags": [
+            "cybersecurity",
+            "gemini",
+            "google-deepmind",
+            "code-security"
+          ],
+          "sources": [
             {
               "name": "DeepMind",
               "url": "https://deepmind.google/blog/introducing-gemini-3-5-flash-cyber/"
             }
           ],
-          "published": "2026-07-21T15:16:30+00:00",
-          "score": 2.5289
+          "published": "2026-07-17T15:00:11+00:00",
+          "score": 0.4754
+        },
+        {
+          "id": "15eb5b1c419a",
+          "tier": "worth_knowing",
+          "category": "headline",
+          "title": "Google DeepMind Commits $40M in AI Compute to DOE's Genesis Mission for Scientific Discovery",
+          "why_it_matters": "Deploying AlphaFold 3, AlphaEvolve, AlphaGenome, and WeatherNext at scale across all 17 DOE National Labs is a concrete signal of how frontier AI-for-science tooling is being institutionalized, relevant to anyone tracking real-world scientific AI deployment.",
+          "summary": "Google DeepMind pledges $40M in AI tokens and cloud credits to the DOE Genesis Mission. Awardees get access to AlphaFold 3, AlphaEvolve, AlphaGenome, WeatherNext, and AlphaEarth Foundations. Tens of thousands of DOE staff will also receive Gemini for Government seats for one year. Early use cases include autonomous materials discovery and combinatorics exploration at PNNL.",
+          "tags": [
+            "ai-for-science",
+            "google-deepmind",
+            "gemini",
+            "research-infrastructure"
+          ],
+          "sources": [
+            {
+              "name": "DeepMind",
+              "url": "https://deepmind.google/blog/accelerating-the-frontiers-of-scientific-discovery-googles-40m-commitment-to-the-genesis-mission/"
+            }
+          ],
+          "published": "2026-07-22T13:38:54+00:00",
+          "score": 1.235
         }
       ]
     },
@@ -45,180 +85,26 @@
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "eed16821fcdd",
+          "id": "d39a1ef9680f",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Survey: Simulation Engines for Physical AI and Robotics Training",
-          "why_it_matters": "Physical AI and robot learning are increasingly dependent on simulation infrastructure — this overview maps the landscape of engines, use cases, and the three-computer paradigm that frames modern training pipelines.",
-          "summary": "A detailed overview of why simulation has become central to physical AI development, covering GPU-parallelized data generation, synthetic perception datasets, RL policy training, and adversarial benchmarking. Introduces a three-computer paradigm (training cluster, simulation workstation, on-robot edge device). Covers popular engines including Isaac Sim/Lab, MuJoCo, PyBullet, Drake, and Genesis, categorized by robot domain and acceleration profile.",
+          "title": "Open Model Roundup: Kimi K3, Qwen's Open-Weight Pivot, Distillation Debate, and the Closed-vs-Open Gap",
+          "why_it_matters": "This is the field-level conversation on Chinese open models, distillation economics, and where the open-weight frontier actually sits — directly relevant to any engineer deciding which base models to build on.",
+          "summary": "Nathan Lambert and Florian Brand discuss Kimi K3's release, Xi's WAIC commitment to open source, and Qwen's announced shift to open weights. Core tension: how many months open models lag closed ones depends heavily on benchmark choice. Distillation economics and the cybersecurity case against open-model bans also covered. Kimi K3 weights reportedly expected July 27th.",
           "tags": [
-            "robotics",
-            "simulation",
-            "reinforcement-learning",
-            "physical-ai"
-          ],
-          "sources": [
-            {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/nvidia/state-of-simulation-for-physical-ai"
-            }
-          ],
-          "published": "2026-07-21T20:00:27+00:00",
-          "score": 1.3503
-        },
-        {
-          "id": "d72529776569",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "GEAR: RL Reward Shaping to Cure Repetitive Copying in Long-Context Reasoning",
-          "why_it_matters": "Repetitive copying is a concrete, underdiagnosed failure mode in long-context reasoning models that degrades performance — this paper diagnoses it and proposes a targeted RL fix with measured gains.",
-          "summary": "Frontier LLMs trained with chain-of-thought reasoning copy large swaths of input text into reasoning traces rather than reasoning productively, a problem that worsens with context length. GEAR (Grounding Evidence-Aware Reward) augments standard accuracy-based RL rewards with a grounding reward for overlap with key evidence and a penalty for distractor overlap. Validated across model scales and benchmarks, yielding up to +4.6 average points over standard RL, with larger gains at longer contexts.",
-          "tags": [
-            "reinforcement-learning",
-            "long-context",
-            "reasoning",
+            "open-weights",
+            "chinese-ai",
+            "distillation",
             "post-training"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2607.19345v1"
+              "name": "Interconnects",
+              "url": "https://www.interconnects.ai/p/open-models-recap-more-on-kimi-k3"
             }
           ],
-          "published": "2026-07-21T17:59:21+00:00",
-          "score": 1.313
-        },
-        {
-          "id": "e4b0224aced5",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "Appearance Pointers: Modality-Agnostic Regional Control for Diffusion Transformers",
-          "why_it_matters": "Precise spatial and appearance control in DiTs is an open research problem; this paper introduces a lightweight, training-free-base-model approach that matches or beats modality-specific SOTA.",
-          "summary": "Appearance pointers are compact tokens produced by a region correspondence network and refined via spatial aggregation, guiding Diffusion Transformers to apply text or image appearance cues at user-specified mask regions. The approach is modality-agnostic, requires no retraining of the base DiT, and handles multiple regional descriptions without significantly increasing token load. Reaches or surpasses modality-specific SOTA across evaluated metrics.",
-          "tags": [
-            "diffusion-models",
-            "controllable-generation",
-            "image-synthesis",
-            "multimodal"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2607.19344v1"
-            }
-          ],
-          "published": "2026-07-21T17:59:12+00:00",
-          "score": 1.313
-        },
-        {
-          "id": "411e0b27152f",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "CodeRescue: Conformal Risk Control for Budget-Aware Recovery Routing in Coding Agents",
-          "why_it_matters": "Practical coding agent deployment requires principled cost-quality tradeoffs beyond simple model cascades — this paper formalizes post-failure recovery routing with statistical cost guarantees.",
-          "summary": "CodeRescue frames post-failure decisions in coding agents as a routing problem: when to retry with a cheap model using execution feedback vs. escalate to a stronger model. A supervised router trained on execution rollouts is paired with a Conformal Risk Control (CRC) layer that calibrates cost-penalty thresholds at deployment time without retraining. On held-out failures from five benchmarks, one CRC-calibrated point exceeds always-escalate solve rate at 35% of its mean recovery cost.",
-          "tags": [
-            "agents",
-            "coding",
-            "inference-efficiency",
-            "reinforcement-learning"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2607.19338v1"
-            }
-          ],
-          "published": "2026-07-21T17:56:49+00:00",
-          "score": 1.3122
-        },
-        {
-          "id": "aea2318845ae",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "Tutorial Survey: Design Patterns and Failure Modes for Production LLM Agents",
-          "why_it_matters": "As agentic systems move from benchmarks to production, understanding deployment-validated design patterns and failure mitigations is directly actionable for AI engineers building real systems.",
-          "summary": "A tutorial bridging academic agent research and production deployment, covering reasoning/planning advances, multi-agent coordination, and evaluation methodology. Uses applied case studies in pharmaceutical discovery and financial systems to identify common design patterns and failure modes. Discusses concrete mitigations: verification pipelines, fallback mechanisms, and human-in-the-loop supervision. Includes evaluation checklists and deployment templates.",
-          "tags": [
-            "agents",
-            "deployment",
-            "multi-agent",
-            "evaluation"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2607.19336v1"
-            }
-          ],
-          "published": "2026-07-21T17:55:10+00:00",
-          "score": 1.3117
-        },
-        {
-          "id": "a03766e12d51",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "1-Lipschitz Neural Networks on Hadamard Manifolds via Busemann Gradient Flows",
-          "why_it_matters": "Extending robustness-promoting Lipschitz constraints to non-Euclidean geometry is a niche but technically meaningful frontier for researchers working with hyperbolic or SPD-matrix-valued data.",
-          "summary": "Constructs 1-Lipschitz neural network layers on Hadamard manifolds (including hyperbolic space and symmetric positive definite matrices) using Busemann functions and their gradient flows, yielding quasi-α-firmly nonexpansive layers. Demonstrated on robust classification on the Poincaré disk and masked-Wishart covariance reconstruction on the SPD manifold, outperforming Log-Euclidean and static denoising baselines.",
-          "tags": [
-            "robustness",
-            "geometry",
-            "neural-networks",
-            "theory"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2607.19335v1"
-            }
-          ],
-          "published": "2026-07-21T17:54:34+00:00",
-          "score": 0.4372
-        },
-        {
-          "id": "0c1999446429",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "Fundamental Limits of K-Class Classification from O(log K) Binary Classifiers",
-          "why_it_matters": "Understanding the theoretical performance limits of distributed classification with binary sub-classifiers is relevant to researchers designing hierarchical or ensemble classifiers with constrained communication.",
-          "summary": "Studies the fundamental performance limits of building a K-class classifier from O(log K) binary hyperplane classifiers in a distributed setting. For a Gaussian model with K class centers as independent Gaussian points in ℝᵈ and Gaussian observation noise, derives explicit performance bounds across multiple decoding and dimensional regimes, validated by simulation experiments.",
-          "tags": [
-            "theory",
-            "classification",
-            "distributed-learning",
-            "information-theory"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2607.19334v1"
-            }
-          ],
-          "published": "2026-07-21T17:53:44+00:00",
-          "score": 0.4371
-        },
-        {
-          "id": "f07ea0986edc",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "Grabette: Open-Source Handheld Gripper for Low-Cost Robot Manipulation Data Collection",
-          "why_it_matters": "Data scarcity is the core bottleneck in robot learning — Grabette offers a concrete, open-hardware path to scalable real-world manipulation dataset collection without requiring a robot arm.",
-          "summary": "Grabette is an open-source handheld gripper (~490€ BOM) carrying a fisheye camera and RGBD camera to capture 6-DoF manipulation demonstrations via SLAM, without needing a robot. Paired with Gripette (~120€), a motorized gripper twin for policy execution. Integrates with LeRobot datasets and Hugging Face Hub. Directly inspired by Stanford's UMI gripper. Goal is to enable crowd-sourced, large-scale open manipulation datasets.",
-          "tags": [
-            "robotics",
-            "data-collection",
-            "open-source",
-            "manipulation"
-          ],
-          "sources": [
-            {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/grabette"
-            }
-          ],
-          "published": "2026-07-21T00:00:00+00:00",
-          "score": 0.3409
+          "published": "2026-07-22T14:09:04+00:00",
+          "score": 1.2436
         }
       ]
     }
