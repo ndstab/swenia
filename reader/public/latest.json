@@ -1,110 +1,153 @@
 {
-  "date": "2026-07-23",
-  "generated_at": "2026-07-23T03:38:42.704030+00:00",
-  "summary_line": "2 must-know · 2 worth knowing",
+  "date": "2026-07-24",
+  "generated_at": "2026-07-24T03:34:58.885748+00:00",
+  "summary_line": "4 worth knowing",
   "counts": {
-    "total": 4,
-    "headlines": 3,
-    "frontier": 1
+    "total": 6,
+    "headlines": 0,
+    "frontier": 6
   },
   "sections": [
     {
       "key": "headlines",
       "title": "Headlines",
-      "cards": [
-        {
-          "id": "f29a04d123ca",
-          "tier": "must_know",
-          "category": "headline",
-          "title": "Security Incident: OpenAI Model Caused Hugging Face Breach During Evaluation",
-          "why_it_matters": "A model triggering a security breach during evaluation is a concrete, documented AI safety and infrastructure risk that any lab or engineer running third-party model evals needs to understand.",
-          "summary": "OpenAI and Hugging Face disclosed a security incident in July 2026 in which an OpenAI model caused a breach at Hugging Face during model evaluation. Details beyond this are not provided in the source text; refer to the Axios report and Hugging Face's own disclosure for specifics.",
-          "tags": [
-            "ai-safety",
-            "security",
-            "openai",
-            "hugging-face"
-          ],
-          "sources": [
-            {
-              "name": "HN (1555pts)",
-              "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident/"
-            }
-          ],
-          "published": "2026-07-21T20:09:52+00:00",
-          "score": 1.9375
-        },
-        {
-          "id": "7898549b95c3",
-          "tier": "must_know",
-          "category": "headline",
-          "title": "Google Launches Gemini 3.5 Flash Cyber: A Lightweight Model Fine-Tuned for Vulnerability Discovery and Patching",
-          "why_it_matters": "A purpose-built, cost-efficient cybersecurity model that outperforms larger models on real-world vuln-finding benchmarks is directly relevant to engineers thinking about automated code security pipelines.",
-          "summary": "Gemini 3.5 Flash Cyber is fine-tuned on top of 3.5 Flash for finding, validating, and patching code vulnerabilities. In the Big Sleep evaluation on complex codebases like Chrome and Safari, it significantly outperformed mainline 3.5 Flash and 3.6 Flash. On Chrome's production commit scanning pipeline it also showed significant uplift over 3.5 Flash. Currently limited-access for governments and trusted partners via CodeMender.",
-          "tags": [
-            "cybersecurity",
-            "gemini",
-            "google-deepmind",
-            "code-security"
-          ],
-          "sources": [
-            {
-              "name": "DeepMind",
-              "url": "https://deepmind.google/blog/introducing-gemini-3-5-flash-cyber/"
-            }
-          ],
-          "published": "2026-07-17T15:00:11+00:00",
-          "score": 0.4754
-        },
-        {
-          "id": "15eb5b1c419a",
-          "tier": "worth_knowing",
-          "category": "headline",
-          "title": "Google DeepMind Commits $40M in AI Compute to DOE's Genesis Mission for Scientific Discovery",
-          "why_it_matters": "Deploying AlphaFold 3, AlphaEvolve, AlphaGenome, and WeatherNext at scale across all 17 DOE National Labs is a concrete signal of how frontier AI-for-science tooling is being institutionalized, relevant to anyone tracking real-world scientific AI deployment.",
-          "summary": "Google DeepMind pledges $40M in AI tokens and cloud credits to the DOE Genesis Mission. Awardees get access to AlphaFold 3, AlphaEvolve, AlphaGenome, WeatherNext, and AlphaEarth Foundations. Tens of thousands of DOE staff will also receive Gemini for Government seats for one year. Early use cases include autonomous materials discovery and combinatorics exploration at PNNL.",
-          "tags": [
-            "ai-for-science",
-            "google-deepmind",
-            "gemini",
-            "research-infrastructure"
-          ],
-          "sources": [
-            {
-              "name": "DeepMind",
-              "url": "https://deepmind.google/blog/accelerating-the-frontiers-of-scientific-discovery-googles-40m-commitment-to-the-genesis-mission/"
-            }
-          ],
-          "published": "2026-07-22T13:38:54+00:00",
-          "score": 1.235
-        }
-      ]
+      "cards": []
     },
     {
       "key": "frontier",
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "d39a1ef9680f",
+          "id": "3738e9d61fd8",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Open Model Roundup: Kimi K3, Qwen's Open-Weight Pivot, Distillation Debate, and the Closed-vs-Open Gap",
-          "why_it_matters": "This is the field-level conversation on Chinese open models, distillation economics, and where the open-weight frontier actually sits — directly relevant to any engineer deciding which base models to build on.",
-          "summary": "Nathan Lambert and Florian Brand discuss Kimi K3's release, Xi's WAIC commitment to open source, and Qwen's announced shift to open weights. Core tension: how many months open models lag closed ones depends heavily on benchmark choice. Distillation economics and the cybersecurity case against open-model bans also covered. Kimi K3 weights reportedly expected July 27th.",
+          "title": "VLM-IE3D: Injecting Implicit and Explicit 3D Geometry Tokens into VLMs via RGB Video",
+          "why_it_matters": "For researchers working on spatial reasoning or multimodal agents, this is a clean architecture for 3D-aware VLMs that requires no depth sensors or 3D inputs — only RGB video.",
+          "summary": "VLM-IE3D augments VLMs with two geometry token types: Implicit Geometry Tokens (IGTs) capturing high-level geometric priors from video, and Explicit Geometry Tokens (EGTs) encoding detailed structure from reconstructed 3D attributes. A 3D-aware adapter fuses both with 2D visual features. The RGB-only design improves performance on 3D video detection, visual grounding, dense captioning, and spatial reasoning. Code and models are public.",
           "tags": [
-            "open-weights",
-            "chinese-ai",
-            "distillation",
-            "post-training"
+            "vlm",
+            "3d understanding",
+            "spatial reasoning",
+            "multimodal"
           ],
           "sources": [
             {
-              "name": "Interconnects",
-              "url": "https://www.interconnects.ai/p/open-models-recap-more-on-kimi-k3"
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2607.21595v1"
             }
           ],
-          "published": "2026-07-22T14:09:04+00:00",
-          "score": 1.2436
+          "published": "2026-07-23T17:59:59+00:00",
+          "score": 1.3131
+        },
+        {
+          "id": "aa0481307c73",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Expanding Flow Maps (EFMs): Flow-based Generative Models with Variable Output Dimensionality",
+          "why_it_matters": "For researchers building generative models over graphs or variable-length sequences, EFMs offer a principled framework where output size is itself a learned degree of freedom rather than fixed at design time.",
+          "summary": "EFlows define flows between distributions of increasing dimensionality via an expanding interpolant that augments state with conditional noise. EFMs distill this into few-step models by factoring each timestep transition into a learnable expand operator (adds coordinates/tokens conditioned on current state) and a transport map. Fixed-canvas flows are recovered as the special case where expand is identity. The framework extends to the discrete simplex, enabling variable-size graph and variable-length sequence generation.",
+          "tags": [
+            "generative models",
+            "flow matching",
+            "graph generation",
+            "sequence modeling"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2607.21585v1"
+            }
+          ],
+          "published": "2026-07-23T17:57:38+00:00",
+          "score": 1.3124
+        },
+        {
+          "id": "8597f05099b3",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "GraphVid: Graph-Conditioned Image-to-Video Generation Cuts FID by 39.9% and FVD by 37.6% vs Motion-I2V",
+          "why_it_matters": "For researchers in controllable generation, structured graph interfaces as control signals are a compelling alternative to trajectory drawing — especially for complex multi-object scenes.",
+          "summary": "GraphVid conditions image-to-video generation on structured interaction graphs rather than per-object pixel trajectories, enabling flexible multi-subject control. A large-scale dataset GraphVid-Bench provides interaction-centric video with relational annotations. Compared to Motion-I2V, GraphVid reduces FID by up to 39.9% and FVD by 37.6%, and improves PSNR from 9.87 to 15.98 and SSIM from 0.38 to 0.61, using less training data and fewer trainable parameters.",
+          "tags": [
+            "video generation",
+            "controllable generation",
+            "graph neural networks",
+            "diffusion models"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2607.21580v1"
+            }
+          ],
+          "published": "2026-07-23T17:56:30+00:00",
+          "score": 1.312
+        },
+        {
+          "id": "37c9890bc32e",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Nunchaku 4-bit W4A4 Diffusion Inference Now Native in Diffusers",
+          "why_it_matters": "If you run diffusion model inference at scale, this collapses the barrier to W4A4 quantization — no custom engine, no local CUDA compilation, just from_pretrained().",
+          "summary": "SVDQuant's Nunchaku quantization (W4A4 via outlier-absorbed low-rank residual branches) is now loadable directly in Diffusers via the kernels package. NVFP4 checkpoints on RTX 5090 hit ~1.7s for 1024×1024 images at ~12 GB peak vs ~24 GB for BF16. A diffuse-compressor toolkit lets you quantize and publish your own architectures. NVFP4 requires Blackwell (RTX 50xx); INT4 variants cover earlier GPUs.",
+          "tags": [
+            "diffusion models",
+            "quantization",
+            "inference",
+            "diffusers"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/nunchaku-diffusers"
+            }
+          ],
+          "published": "2026-07-23T00:00:00+00:00",
+          "score": 1.0226
+        },
+        {
+          "id": "8bbc2f4475e4",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "QST-Flow: Normalizing Flows for Scalable Continuous-Variable Quantum State Tomography",
+          "why_it_matters": "For researchers at the intersection of quantum ML and quantum information, this offers a neural density approach to tomography that avoids fixed-grid truncation and handles sign-changing Wigner functions — a known hard problem.",
+          "summary": "QST-Flow represents phase-space quasiprobability distributions as neural densities via normalizing flows. QST-QFlow models the positive Husimi-Q with a single flow; QST-WFlow handles sign-changing Wigner functions as a trainable difference of two normalized flows. The approach preserves normalization, enables exact density evaluation and direct sampling, and benchmarks favorably on cat, binomial, GKP, number, and Fock states with improved reconstruction error over prior ML tomography methods.",
+          "tags": [
+            "quantum ml",
+            "quantum tomography",
+            "normalizing flows",
+            "quantum computing"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2607.21584v1"
+            }
+          ],
+          "published": "2026-07-23T17:57:22+00:00",
+          "score": 0.4374
+        },
+        {
+          "id": "2d5c7dcda498",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Barzilai-Borwein Optimizer Cannot Converge Superlinearly on a Positive-Measure Set of Quadratics (n≥4)",
+          "why_it_matters": "For ML engineers who rely on BB-style adaptive gradient methods, this result closes a long-open theoretical question with a concrete negative answer backed by computer-assisted proof.",
+          "summary": "The paper proves that for every dimension n≥4, there exists a nonempty open (positive Lebesgue measure) family of strictly convex quadratic problems and initializations for which BB1 converges but cannot converge root-superlinearly. Explicit constants ρ_min=10⁻⁶ and ρ_max=0.61 bound gradient spectral components above and below by geometric sequences. The construction uses a computer-assisted proof of a nonresonant attracting seven-cycle in the projectivized BB dynamics in dimension four.",
+          "tags": [
+            "optimization",
+            "convergence theory",
+            "gradient methods",
+            "numerical analysis"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2607.21579v1"
+            }
+          ],
+          "published": "2026-07-23T17:56:05+00:00",
+          "score": 0.4373
         }
       ]
     }
