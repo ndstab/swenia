@@ -1,11 +1,11 @@
 {
-  "date": "2026-07-25",
-  "generated_at": "2026-07-25T03:31:48.298331+00:00",
-  "summary_line": "1 items to skim.",
+  "date": "2026-07-27",
+  "generated_at": "2026-07-27T03:56:17.253447+00:00",
+  "summary_line": "3 worth knowing",
   "counts": {
-    "total": 1,
+    "total": 6,
     "headlines": 0,
-    "frontier": 1
+    "frontier": 6
   },
   "sections": [
     {
@@ -18,26 +18,136 @@
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "c916ce5579ee",
-          "tier": "skim",
+          "id": "0e3fc748cb48",
+          "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Krylov Complexity Phase Transition Found in Dicke Light-Matter Model",
-          "why_it_matters": "Complexity measures like Krylov complexity are becoming important evals for quantum chaos and thermalization — this result showing a sharp transition in complexity phase diagrams is directly relevant if you track quantum ML or quantum computing foundations.",
-          "summary": "Researchers map the Krylov complexity phase diagram of the Dicke model (two-level atoms coupled to a cavity photon mode). Varying coupling strength g triggers a sharp transition: the slope of Krylov complexity C_K changes suddenly, coinciding with a jump in Krylov entropy. Wave-packet dynamics in Krylov space reveal confinement vs. deconfinement regimes, analogized to gravitational spaghettification.",
+          "title": "ABBEL: Supervising Belief-State Contents to Fix Long-Horizon LLM Context Compression",
+          "why_it_matters": "If you're building long-horizon agents or coding assistants, this directly addresses why context compaction degrades performance and offers a principled, RL-compatible fix.",
+          "summary": "ABBEL reformulates context summaries as natural-language belief states updated periodically, then supervises their information content via an auxiliary RL 'belief grading' signal—inspired by autoencoding and recursive Bayesian estimation. A Combination Lock benchmark shows summary-based policies improve with RL training but never close the gap to full-context policies; ABBEL targets this gap by isolating and rewarding summary quality separately from task performance.",
           "tags": [
-            "quantum computing",
-            "krylov complexity",
-            "quantum chaos",
-            "many-body physics"
+            "long-horizon agents",
+            "context compression",
+            "rl fine-tuning",
+            "belief states"
           ],
           "sources": [
             {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2607.21583v1"
+              "name": "BAIR (Berkeley)",
+              "url": "http://bair.berkeley.edu/blog/2026/07/26/abbel/"
             }
           ],
-          "published": "2026-07-23T17:57:15+00:00",
-          "score": 0.3136
+          "published": "2026-07-26T09:00:00+00:00",
+          "score": 1.1531
+        },
+        {
+          "id": "e4535427f152",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Skill Self-Play: Co-Evolving Proposer, Solver, and Skill Library for Open-Ended LLM Training",
+          "why_it_matters": "Directly relevant to post-training and self-improvement research—Skill-SP offers a concrete mechanism to get verifiable RL rewards without domain restriction, a key tension in open-ended agent training.",
+          "summary": "Skill Self-Play (Skill-SP) introduces a three-component co-evolutionary loop: a proposer generates tasks conditioned on dynamically sampled skills, a solver explores solutions, and a skill controller updates an expanding skill library from execution feedback—all orchestrated via RL. The approach aims to reconcile task diversity (open-ended self-generation) with verification reliability (skill-scoped feedback). Evals on tool-use and reasoning benchmarks show consistent performance gains, including turnarounds for initially misaligned models.",
+          "tags": [
+            "self-play",
+            "post-training",
+            "rl",
+            "agents"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2607.22529v1"
+            }
+          ],
+          "published": "2026-07-24T17:59:22+00:00",
+          "score": 0.6707
+        },
+        {
+          "id": "b55e67229887",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "The Regression Tax: Procedural Skills in LLM Agents Regress More Than They Gain",
+          "why_it_matters": "Essential reading if you build or evaluate tool-augmented agents—reveals that aggregate success-rate metrics mask substantial skill-induced regressions and reframes what 'good' skill design actually requires.",
+          "summary": "Across ~6,000 runs on two office-automation benchmarks with three model harness stacks, agents with procedural skills are compared to skill-free baselines. Top-performing skill sets win primarily by regressing less, not gaining more. Three regression causes are identified: skill description osmosis (context pollution even when skills are unused), grounding displacement (procedure overrides input interpretation), and verification displacement (procedure suppresses output checking). Grounding and verification failures dominate persistent errors more than procedural skill choice.",
+          "tags": [
+            "llm agents",
+            "evaluation",
+            "tool use",
+            "regression analysis"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2607.22520v1"
+            }
+          ],
+          "published": "2026-07-24T17:50:03+00:00",
+          "score": 0.6693
+        },
+        {
+          "id": "277dc7086781",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "SM4RT: SE(3)-Structured Motion Decomposition for Monocular 4D Reconstruction",
+          "why_it_matters": "For researchers working on world models or video understanding, replacing unstructured point-wise flow with rigid-body motion bases is a meaningful architectural shift with practical geometry benefits.",
+          "summary": "SM4RT decomposes scene dynamics into a compact set of motion bases, each a temporal sequence of 6D twists in SE(3), with dense motion recovered via sparse per-pixel assignment weights over those bases. A parallel encoder-decoder jointly infers 3D geometry, world-coordinate motion, and kinematic structure in a single forward pass from monocular RGB video, enforcing that co-moving points share a common rigid-body trajectory.",
+          "tags": [
+            "4d reconstruction",
+            "motion geometry",
+            "world models",
+            "computer vision"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2607.22534v1"
+            }
+          ],
+          "published": "2026-07-24T17:59:51+00:00",
+          "score": 0.2236
+        },
+        {
+          "id": "0bb1123138ac",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Saliency-Map Explainability Applied to RL Agents in Air Traffic Control",
+          "why_it_matters": "Niche but relevant if you work on interpretability or human-AI collaboration in safety-critical RL deployments; demonstrates a concrete, if preliminary, XAI approach for sequential decision-making.",
+          "summary": "An RL agent is trained in a simplified Air Traffic Control environment to route aircraft around no-fly zones. Saliency maps are applied as a preliminary explainability technique to identify which input features most influence the agent's routing decisions. The work is framed as an early-stage exploration of XAI for safety-critical RL, with limited scope and no large-scale benchmark comparisons reported.",
+          "tags": [
+            "explainability",
+            "reinforcement learning",
+            "safety-critical ai",
+            "air traffic control"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2607.22525v1"
+            }
+          ],
+          "published": "2026-07-24T17:56:38+00:00",
+          "score": 0.2234
+        },
+        {
+          "id": "99f2c5c5495d",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Quantum Spectral Models: Input-Conditioned Frequency Representations for QML on Matrix Data",
+          "why_it_matters": "For researchers tracking quantum ML architectures, QSMs offer a rare example of a principled inductive-bias argument grounded in spectral theory rather than ad-hoc circuit design.",
+          "summary": "Quantum Spectral Models (QSMs) construct the data-encoding unitary's generator directly from each input matrix, yielding truncated Fourier representations where input-dependent spectral gaps supply phase carriers and spectral subspaces shape coefficients. Three variants (symmetric, global block, patch-local block Hamiltonians) are evaluated on Pendigits matrix representations and controlled spectral synthetic tasks. At the largest evaluated circuit depth, QSM variants lead tested quantum models in mean test accuracy across all four benchmarks, with patch-local QSM leading on Pendigits and global block QSM leading on spectral tasks.",
+          "tags": [
+            "quantum machine learning",
+            "spectral methods",
+            "inductive bias",
+            "circuit design"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2607.22516v1"
+            }
+          ],
+          "published": "2026-07-24T17:39:14+00:00",
+          "score": 0.2225
         }
       ]
     }
