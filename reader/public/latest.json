@@ -1,153 +1,158 @@
 {
-  "date": "2026-07-27",
-  "generated_at": "2026-07-27T03:56:17.253447+00:00",
-  "summary_line": "3 worth knowing",
+  "date": "2026-07-28",
+  "generated_at": "2026-07-28T03:27:27.478135+00:00",
+  "summary_line": "1 must-know · 2 worth knowing",
   "counts": {
     "total": 6,
-    "headlines": 0,
-    "frontier": 6
+    "headlines": 2,
+    "frontier": 4
   },
   "sections": [
     {
       "key": "headlines",
       "title": "Headlines",
-      "cards": []
+      "cards": [
+        {
+          "id": "edd884e3eb65",
+          "tier": "must_know",
+          "category": "headline",
+          "title": "Google DeepMind Releases Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber; Gemini 4 Pre-Training Underway",
+          "why_it_matters": "Major flagship releases from Google DeepMind that the whole field will benchmark against, with concrete efficiency and coding gains relevant to anyone building agentic systems.",
+          "summary": "Gemini 3.6 Flash improves over 3.5 Flash with 17% fewer output tokens (Artificial Analysis Index), DeepSWE score 49% vs. 37%, MLE Bench 63.9% vs. 49.7%, and OSWorld-Verified 83.0% vs. 78.4%, priced at $1.50/$7.50 per 1M input/output tokens. 3.5 Flash-Lite hits 350 output tokens/second. A new cyber-specialized 3.5 Flash Cyber model pairs with the CodeMender agent. Gemini 4 pre-training has begun.",
+          "tags": [
+            "gemini",
+            "google deepmind",
+            "agentic ai",
+            "model release"
+          ],
+          "sources": [
+            {
+              "name": "DeepMind",
+              "url": "https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/"
+            }
+          ],
+          "published": "2026-07-21T15:16:30+00:00",
+          "score": 0.3428
+        },
+        {
+          "id": "9101339b1ac2",
+          "tier": "worth_knowing",
+          "category": "headline",
+          "title": "NVIDIA Cosmos-H-Dreams: Real-Time Generative Simulator for Surgical Robotics",
+          "why_it_matters": "Bridges world models and interactive RL environments — a concrete example of distilling a large video world model into a real-time causal student for closed-loop policy evaluation without physical hardware.",
+          "summary": "Cosmos-H-Dreams distills NVIDIA's Cosmos-H-Surgical-Simulator (built on Cosmos-Predict2.5-2B) into a causal, few-step student model served via FlashDreams on a single RTX PRO 6000 GPU. It takes an RGB frame plus live robot kinematics and autoregressively generates future surgical video, enabling real-time closed-loop policy evaluation. Trained on dVRK tabletop suturing including failure episodes; also demonstrated on the Versius surgical platform.",
+          "tags": [
+            "world models",
+            "robotics",
+            "video generation",
+            "simulation"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/nvidia/cosmos-h-dreams"
+            }
+          ],
+          "published": "2026-07-27T09:32:20+00:00",
+          "score": 1.1695
+        }
+      ]
     },
     {
       "key": "frontier",
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "0e3fc748cb48",
+          "id": "2502596a9800",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "ABBEL: Supervising Belief-State Contents to Fix Long-Horizon LLM Context Compression",
-          "why_it_matters": "If you're building long-horizon agents or coding assistants, this directly addresses why context compaction degrades performance and offers a principled, RL-compatible fix.",
-          "summary": "ABBEL reformulates context summaries as natural-language belief states updated periodically, then supervises their information content via an auxiliary RL 'belief grading' signal—inspired by autoencoding and recursive Bayesian estimation. A Combination Lock benchmark shows summary-based policies improve with RL training but never close the gap to full-context policies; ABBEL targets this gap by isolating and rewarding summary quality separately from task performance.",
+          "title": "Negative Branch Asymmetry in On-Policy Diffusion Distillation Under CFG: Diagnosis and Fix via Positive-Direction Matching",
+          "why_it_matters": "Identifies and resolves a concrete failure mode in CFG-guided on-policy distillation — directly relevant to anyone working on diffusion distillation or video generation fine-tuning pipelines.",
+          "summary": "On-policy distillation that naively matches CFG-composed teacher/student velocities is under-identified: positive- and negative-branch errors can trade off. When the teacher's negative branch holds privileged information unavailable to the student, this causes Negative Branch Asymmetry (NBA), increasing negative-branch error while reducing positive-branch error. The proposed Positive-Direction Matching (PDM) separately constrains the positive prediction and CFG conditional direction, yielding more robust distillation in dense-to-sparse video control experiments.",
           "tags": [
-            "long-horizon agents",
-            "context compression",
-            "rl fine-tuning",
-            "belief states"
-          ],
-          "sources": [
-            {
-              "name": "BAIR (Berkeley)",
-              "url": "http://bair.berkeley.edu/blog/2026/07/26/abbel/"
-            }
-          ],
-          "published": "2026-07-26T09:00:00+00:00",
-          "score": 1.1531
-        },
-        {
-          "id": "e4535427f152",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "Skill Self-Play: Co-Evolving Proposer, Solver, and Skill Library for Open-Ended LLM Training",
-          "why_it_matters": "Directly relevant to post-training and self-improvement research—Skill-SP offers a concrete mechanism to get verifiable RL rewards without domain restriction, a key tension in open-ended agent training.",
-          "summary": "Skill Self-Play (Skill-SP) introduces a three-component co-evolutionary loop: a proposer generates tasks conditioned on dynamically sampled skills, a solver explores solutions, and a skill controller updates an expanding skill library from execution feedback—all orchestrated via RL. The approach aims to reconcile task diversity (open-ended self-generation) with verification reliability (skill-scoped feedback). Evals on tool-use and reasoning benchmarks show consistent performance gains, including turnarounds for initially misaligned models.",
-          "tags": [
-            "self-play",
-            "post-training",
-            "rl",
-            "agents"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2607.22529v1"
-            }
-          ],
-          "published": "2026-07-24T17:59:22+00:00",
-          "score": 0.6707
-        },
-        {
-          "id": "b55e67229887",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "The Regression Tax: Procedural Skills in LLM Agents Regress More Than They Gain",
-          "why_it_matters": "Essential reading if you build or evaluate tool-augmented agents—reveals that aggregate success-rate metrics mask substantial skill-induced regressions and reframes what 'good' skill design actually requires.",
-          "summary": "Across ~6,000 runs on two office-automation benchmarks with three model harness stacks, agents with procedural skills are compared to skill-free baselines. Top-performing skill sets win primarily by regressing less, not gaining more. Three regression causes are identified: skill description osmosis (context pollution even when skills are unused), grounding displacement (procedure overrides input interpretation), and verification displacement (procedure suppresses output checking). Grounding and verification failures dominate persistent errors more than procedural skill choice.",
-          "tags": [
-            "llm agents",
-            "evaluation",
-            "tool use",
-            "regression analysis"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2607.22520v1"
-            }
-          ],
-          "published": "2026-07-24T17:50:03+00:00",
-          "score": 0.6693
-        },
-        {
-          "id": "277dc7086781",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "SM4RT: SE(3)-Structured Motion Decomposition for Monocular 4D Reconstruction",
-          "why_it_matters": "For researchers working on world models or video understanding, replacing unstructured point-wise flow with rigid-body motion bases is a meaningful architectural shift with practical geometry benefits.",
-          "summary": "SM4RT decomposes scene dynamics into a compact set of motion bases, each a temporal sequence of 6D twists in SE(3), with dense motion recovered via sparse per-pixel assignment weights over those bases. A parallel encoder-decoder jointly infers 3D geometry, world-coordinate motion, and kinematic structure in a single forward pass from monocular RGB video, enforcing that co-moving points share a common rigid-body trajectory.",
-          "tags": [
-            "4d reconstruction",
-            "motion geometry",
-            "world models",
-            "computer vision"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2607.22534v1"
-            }
-          ],
-          "published": "2026-07-24T17:59:51+00:00",
-          "score": 0.2236
-        },
-        {
-          "id": "0bb1123138ac",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "Saliency-Map Explainability Applied to RL Agents in Air Traffic Control",
-          "why_it_matters": "Niche but relevant if you work on interpretability or human-AI collaboration in safety-critical RL deployments; demonstrates a concrete, if preliminary, XAI approach for sequential decision-making.",
-          "summary": "An RL agent is trained in a simplified Air Traffic Control environment to route aircraft around no-fly zones. Saliency maps are applied as a preliminary explainability technique to identify which input features most influence the agent's routing decisions. The work is framed as an early-stage exploration of XAI for safety-critical RL, with limited scope and no large-scale benchmark comparisons reported.",
-          "tags": [
-            "explainability",
-            "reinforcement learning",
-            "safety-critical ai",
-            "air traffic control"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2607.22525v1"
-            }
-          ],
-          "published": "2026-07-24T17:56:38+00:00",
-          "score": 0.2234
-        },
-        {
-          "id": "99f2c5c5495d",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "Quantum Spectral Models: Input-Conditioned Frequency Representations for QML on Matrix Data",
-          "why_it_matters": "For researchers tracking quantum ML architectures, QSMs offer a rare example of a principled inductive-bias argument grounded in spectral theory rather than ad-hoc circuit design.",
-          "summary": "Quantum Spectral Models (QSMs) construct the data-encoding unitary's generator directly from each input matrix, yielding truncated Fourier representations where input-dependent spectral gaps supply phase carriers and spectral subspaces shape coefficients. Three variants (symmetric, global block, patch-local block Hamiltonians) are evaluated on Pendigits matrix representations and controlled spectral synthetic tasks. At the largest evaluated circuit depth, QSM variants lead tested quantum models in mean test accuracy across all four benchmarks, with patch-local QSM leading on Pendigits and global block QSM leading on spectral tasks.",
-          "tags": [
-            "quantum machine learning",
-            "spectral methods",
-            "inductive bias",
-            "circuit design"
+            "diffusion models",
+            "distillation",
+            "classifier-free guidance",
+            "video generation"
           ],
           "sources": [
             {
               "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2607.22516v1"
+              "url": "https://arxiv.org/abs/2607.24731v1"
             }
           ],
-          "published": "2026-07-24T17:39:14+00:00",
-          "score": 0.2225
+          "published": "2026-07-27T17:57:02+00:00",
+          "score": 1.3145
+        },
+        {
+          "id": "5c64f3103589",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "ClinFusion: Medical MLLM with Cascaded 2D/3D Vision Encoder Beats GPT-5.2 and Gemini-3-Flash on Most Benchmarks",
+          "why_it_matters": "Demonstrates a novel cascaded encoder architecture unifying 2D and native 3D medical imaging, relevant to anyone working on multimodal architectures or medical AI evals.",
+          "summary": "ClinFusion introduces a cascaded Spatial-Aware Locality Fusion encoder unifying 2D and 3D medical image understanding. It achieves SOTA on 20 of 24 benchmarks vs. open-source medical MLLMs and outperforms GPT-5.2 and Gemini-3-Flash on 13 of 16 multimodal benchmarks. New eval tools include MedIF-Bench and an ROI-grounded report evaluation metric validated by board-certified radiologists.",
+          "tags": [
+            "multimodal llm",
+            "medical ai",
+            "vision encoder",
+            "evals"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2607.24743v1"
+            },
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2607.24730v1"
+            }
+          ],
+          "published": "2026-07-27T17:59:49+00:00",
+          "score": 0.4384
+        },
+        {
+          "id": "afeffa6cd896",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "TemporalSinkhorn: Parallel-in-Time Entropic Optimal Transport with Certified Accuracy for Flow Matching",
+          "why_it_matters": "Directly accelerates the entropic OT solves inside Flow Matching training pipelines with provable correctness guarantees — a niche but practically useful result for researchers training flow-based generative models.",
+          "summary": "TemporalSinkhorn parallelizes Sinkhorn iterations across time using a certified safe-prefix mechanism that guarantees output accuracy is never speculative. On 4 A100s with n=2048, it achieves 1.42x–3.55x wall-time speedup over sequential warm-start across synthetic streams and 3.054x–3.632x on Flow Matching minibatch streams, with zero marginal-tolerance violations. A separate RTX 4060 test yields 4.315x geometric-mean speedup.",
+          "tags": [
+            "optimal transport",
+            "flow matching",
+            "parallelism",
+            "generative models"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2607.24741v1"
+            }
+          ],
+          "published": "2026-07-27T17:59:36+00:00",
+          "score": 0.4384
+        },
+        {
+          "id": "af6e03843f6e",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "PAC Learning from Conditional Samples Across Heterogeneous Data Providers: Sample Complexity Ranges from Linear to Quadratic",
+          "why_it_matters": "Provides theoretical grounding for when distributed or federated learning from restricted conditional queries is sample-efficient — relevant background for anyone designing multi-provider data pipelines or studying learning theory.",
+          "summary": "Studies distribution learning where queries return conditional samples from sets in a fixed family. Learnability depends on the co-occurrence graph: PAC learning requires a complete co-occurrence graph, with worst-case complexity Õ(n²/ε²). A hierarchical comparability condition on the query family yields near-linear Õ(n/ε²) complexity. Every polynomial rate between linear and quadratic is achievable for some query family.",
+          "tags": [
+            "learning theory",
+            "distribution learning",
+            "sample complexity",
+            "federated learning"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2607.24732v1"
+            }
+          ],
+          "published": "2026-07-27T17:57:16+00:00",
+          "score": 0.4382
         }
       ]
     }
