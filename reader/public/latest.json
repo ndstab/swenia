@@ -1,11 +1,11 @@
 {
-  "date": "2026-07-28",
-  "generated_at": "2026-07-28T03:27:27.478135+00:00",
-  "summary_line": "1 must-know · 2 worth knowing",
+  "date": "2026-07-29",
+  "generated_at": "2026-07-29T03:29:24.829932+00:00",
+  "summary_line": "5 worth knowing",
   "counts": {
-    "total": 6,
+    "total": 7,
     "headlines": 2,
-    "frontier": 4
+    "frontier": 5
   },
   "sections": [
     {
@@ -13,48 +13,48 @@
       "title": "Headlines",
       "cards": [
         {
-          "id": "edd884e3eb65",
-          "tier": "must_know",
-          "category": "headline",
-          "title": "Google DeepMind Releases Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber; Gemini 4 Pre-Training Underway",
-          "why_it_matters": "Major flagship releases from Google DeepMind that the whole field will benchmark against, with concrete efficiency and coding gains relevant to anyone building agentic systems.",
-          "summary": "Gemini 3.6 Flash improves over 3.5 Flash with 17% fewer output tokens (Artificial Analysis Index), DeepSWE score 49% vs. 37%, MLE Bench 63.9% vs. 49.7%, and OSWorld-Verified 83.0% vs. 78.4%, priced at $1.50/$7.50 per 1M input/output tokens. 3.5 Flash-Lite hits 350 output tokens/second. A new cyber-specialized 3.5 Flash Cyber model pairs with the CodeMender agent. Gemini 4 pre-training has begun.",
-          "tags": [
-            "gemini",
-            "google deepmind",
-            "agentic ai",
-            "model release"
-          ],
-          "sources": [
-            {
-              "name": "DeepMind",
-              "url": "https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/"
-            }
-          ],
-          "published": "2026-07-21T15:16:30+00:00",
-          "score": 0.3428
-        },
-        {
-          "id": "9101339b1ac2",
+          "id": "92e866603de3",
           "tier": "worth_knowing",
           "category": "headline",
-          "title": "NVIDIA Cosmos-H-Dreams: Real-Time Generative Simulator for Surgical Robotics",
-          "why_it_matters": "Bridges world models and interactive RL environments — a concrete example of distilling a large video world model into a real-time causal student for closed-loop policy evaluation without physical hardware.",
-          "summary": "Cosmos-H-Dreams distills NVIDIA's Cosmos-H-Surgical-Simulator (built on Cosmos-Predict2.5-2B) into a causal, few-step student model served via FlashDreams on a single RTX PRO 6000 GPU. It takes an RGB frame plus live robot kinematics and autoregressively generates future surgical video, enabling real-time closed-loop policy evaluation. Trained on dVRK tabletop suturing including failure episodes; also demonstrated on the Versius surgical platform.",
+          "title": "Ai2 Launches OlmoEarth Platform for Continent-Scale Satellite Inference",
+          "why_it_matters": "If you work on geospatial ML or large-scale distributed inference, this is a detailed engineering walkthrough of a production system processing terabytes of satellite imagery at fractions of a penny per square kilometer.",
+          "summary": "Ai2's OlmoEarth Platform wraps their Earth observation foundation models (pretrained on ~10TB of multimodal satellite data) in end-to-end inference infrastructure. It splits jobs into CPU-bound data acquisition/preprocessing, GPU inference, and CPU postprocessing stages. The system covers continent-scale areas in roughly a day, handling multi-provider imagery alignment, projection normalization, and distributed failure recovery.",
           "tags": [
-            "world models",
-            "robotics",
-            "video generation",
-            "simulation"
+            "earth observation",
+            "geospatial ml",
+            "distributed inference",
+            "foundation models"
           ],
           "sources": [
             {
               "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/nvidia/cosmos-h-dreams"
+              "url": "https://huggingface.co/blog/allenai/olmoearth-infrastructure"
             }
           ],
-          "published": "2026-07-27T09:32:20+00:00",
-          "score": 1.1695
+          "published": "2026-07-28T16:27:42+00:00",
+          "score": 1.287
+        },
+        {
+          "id": "85dd02699b25",
+          "tier": "skim",
+          "category": "headline",
+          "title": "LFM2.5-Encoders: 3.7× Faster Than ModernBERT-base at 8,192-Token CPU Inference",
+          "why_it_matters": "For production NLP pipelines running classifiers or intent routers on CPU with long contexts, this is a concrete, benchmarked alternative to ModernBERT with significantly better long-context latency.",
+          "summary": "LFM2.5-Encoder-230M and -350M are initialized from LFM2 causal decoder backbones, converted to bidirectional encoders via symmetric attention masks and non-causal convolutions, then trained with 30% MLM masking in two stages (1K then 8,192-token context). At 8,192 tokens on CPU, LFM2.5-Encoder-230M takes ~28s versus ~90s for ModernBERT-base (~3.7× faster). Encoder-350M ranks fourth across 14 models on 17 GLUE/SuperGLUE/multilingual tasks; the three ahead are all larger.",
+          "tags": [
+            "encoders",
+            "long-context",
+            "nlp",
+            "inference"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/LiquidAI/lfm2-5-encoders"
+            }
+          ],
+          "published": "2026-07-28T15:01:45+00:00",
+          "score": 0.4205
         }
       ]
     },
@@ -63,96 +63,114 @@
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "2502596a9800",
+          "id": "d3d3959cb5cf",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Negative Branch Asymmetry in On-Policy Diffusion Distillation Under CFG: Diagnosis and Fix via Positive-Direction Matching",
-          "why_it_matters": "Identifies and resolves a concrete failure mode in CFG-guided on-policy distillation — directly relevant to anyone working on diffusion distillation or video generation fine-tuning pipelines.",
-          "summary": "On-policy distillation that naively matches CFG-composed teacher/student velocities is under-identified: positive- and negative-branch errors can trade off. When the teacher's negative branch holds privileged information unavailable to the student, this causes Negative Branch Asymmetry (NBA), increasing negative-branch error while reducing positive-branch error. The proposed Positive-Direction Matching (PDM) separately constrains the positive prediction and CFG conditional direction, yielding more robust distillation in dense-to-sparse video control experiments.",
+          "title": "Relay-OPD Fixes Prefix Failure in On-Policy Distillation, +5.73% Over Standard OPD",
+          "why_it_matters": "This directly addresses a known failure mode in on-policy distillation — prefix compounding errors — with a label-free fix that also cuts training trajectory length in half, relevant if you work on small-model reasoning or post-training.",
+          "summary": "Relay-OPD detects divergence between teacher and student continuations on failed prefixes as a handoff trigger, letting the teacher briefly take over to produce a corrected 'relay' trajectory before the student resumes. Using Qwen3-4B-Instruct-2507 as teacher and Qwen3-0.6B/1.7B non-thinking students on eight math benchmarks, it beats standard OPD by +5.73% and FastOPD by +1.49% (1.7B average), while reducing training trajectory length by over 50%.",
           "tags": [
-            "diffusion models",
             "distillation",
-            "classifier-free guidance",
-            "video generation"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2607.24731v1"
-            }
-          ],
-          "published": "2026-07-27T17:57:02+00:00",
-          "score": 1.3145
-        },
-        {
-          "id": "5c64f3103589",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "ClinFusion: Medical MLLM with Cascaded 2D/3D Vision Encoder Beats GPT-5.2 and Gemini-3-Flash on Most Benchmarks",
-          "why_it_matters": "Demonstrates a novel cascaded encoder architecture unifying 2D and native 3D medical imaging, relevant to anyone working on multimodal architectures or medical AI evals.",
-          "summary": "ClinFusion introduces a cascaded Spatial-Aware Locality Fusion encoder unifying 2D and 3D medical image understanding. It achieves SOTA on 20 of 24 benchmarks vs. open-source medical MLLMs and outperforms GPT-5.2 and Gemini-3-Flash on 13 of 16 multimodal benchmarks. New eval tools include MedIF-Bench and an ROI-grounded report evaluation metric validated by board-certified radiologists.",
-          "tags": [
-            "multimodal llm",
-            "medical ai",
-            "vision encoder",
-            "evals"
+            "reasoning",
+            "rl",
+            "post-training"
           ],
           "sources": [
             {
               "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2607.24743v1"
-            },
+              "url": "https://arxiv.org/abs/2607.26057v1"
+            }
+          ],
+          "published": "2026-07-28T17:59:46+00:00",
+          "score": 1.3147
+        },
+        {
+          "id": "83b67ae1bd30",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "πR²: Reactive Real-Time Flow Policies Replan at ~25Hz Using Asynchronous Fast/Slow Channels",
+          "why_it_matters": "Closing the reactivity-latency gap in chunked action diffusion policies is a key open problem for robot manipulation; this shows a concrete working solution on real hardware with measurable success rate gains.",
+          "summary": "πR² addresses the open-loop latency problem in action-chunking flow policies by splitting conditioning into a fast proprioception channel (updated every tick) and a slow asynchronously updated vision-language channel. Built on diffusion forcing's per-position noise schedule, it treats in-flight actions as inpainting conditioning and emits actions in one denoising step per call. Finetuned from GR00T-N1.7 on a real xArm6+XHand, it replans at ~25Hz (every 40ms), improving success rates by up to 23% in simulation and 30% in real-world tasks over the strongest baseline.",
+          "tags": [
+            "robotics",
+            "diffusion policy",
+            "real-time",
+            "agents"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2607.26055v1"
+            }
+          ],
+          "published": "2026-07-28T17:59:31+00:00",
+          "score": 1.3146
+        },
+        {
+          "id": "e7f0b97bead2",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "CARE: Nucleus-Style Confidence-Adaptive Expert Routing Beats Fixed Top-k MoE-LoRA",
+          "why_it_matters": "A drop-in, no-extra-parameters routing rule for MoE-LoRA that improves performance at matched compute is directly useful if you work with parameter-efficient fine-tuning or mixture-of-experts architectures.",
+          "summary": "CARE uses the router's output distribution as a per-token uncertainty signal: experts are activated in decreasing weight order until cumulative mass hits a threshold (nucleus-style), with a small extension when admitted experts disagree. A budget thermostat keeps average active experts at any target. Evaluated on LLaMA-3.1-8B and Qwen2.5-7B across commonsense, math, code, and knowledge tasks, CARE outperforms fixed top-k MoE-LoRA at matched compute and matches fixed k=4 while activating fewer experts. The same signals improve OOD detection over MSP and entropy baselines.",
+          "tags": [
+            "mixture-of-experts",
+            "lora",
+            "peft",
+            "uncertainty"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2607.26052v1"
+            }
+          ],
+          "published": "2026-07-28T17:59:16+00:00",
+          "score": 1.3145
+        },
+        {
+          "id": "7982643b785e",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Desktop-Delta Bench: New 2,013-Instance Diagnostic for GUI Transition Understanding in Computer-Use Agents",
+          "why_it_matters": "As agent evals mature, step-level causal verification benchmarks like this expose failure modes invisible to end-task-success metrics — important context for anyone building or evaluating desktop CUAs.",
+          "summary": "DDB introduces 2,013 human-verified instances from multi-app Linux trajectories (~15 apps, 50 task domains) targeting three failure dimensions: state verification, source tracking, and context-aware control. It includes 463 temporal-ordering instances (105 with cross-trajectory decoys) and 1,550 before-after action pairs. Across 8 model families, best non-decoy and decoy ordering exact-match rates are 65.1% and 65.7%. Click F1 reaches 0.96 versus 0.76 for drag; action family inference is harder than localization.",
+          "tags": [
+            "agents",
+            "benchmarks",
+            "computer-use",
+            "gui"
+          ],
+          "sources": [
             {
               "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2607.24730v1"
+              "url": "https://arxiv.org/abs/2607.26041v1"
             }
           ],
-          "published": "2026-07-27T17:59:49+00:00",
-          "score": 0.4384
+          "published": "2026-07-28T17:49:51+00:00",
+          "score": 1.3117
         },
         {
-          "id": "afeffa6cd896",
+          "id": "313444f5f10b",
           "tier": "skim",
           "category": "frontier",
-          "title": "TemporalSinkhorn: Parallel-in-Time Entropic Optimal Transport with Certified Accuracy for Flow Matching",
-          "why_it_matters": "Directly accelerates the entropic OT solves inside Flow Matching training pipelines with provable correctness guarantees — a niche but practically useful result for researchers training flow-based generative models.",
-          "summary": "TemporalSinkhorn parallelizes Sinkhorn iterations across time using a certified safe-prefix mechanism that guarantees output accuracy is never speculative. On 4 A100s with n=2048, it achieves 1.42x–3.55x wall-time speedup over sequential warm-start across synthetic streams and 3.054x–3.632x on Flow Matching minibatch streams, with zero marginal-tolerance violations. A separate RTX 4060 test yields 4.315x geometric-mean speedup.",
+          "title": "VetClaw: Edge-Cloud Agentic System for Veterinary Disease Screening via VLM Zero-Shot Classification",
+          "why_it_matters": "A working multimodal agentic pipeline separating edge orchestration (OpenClaw) from server-side workflow (LangGraph) is a concrete architecture reference for production agent deployments, even outside the veterinary domain.",
+          "summary": "VetClaw pairs a camera edge device running OpenClaw (scheduling, tool access, notifications) with a server-hosted vision-language model orchestrated via LangGraph for stateful workflow management including input validation, safety checks, conditional routing, and failure handling. Results show image-only VLM prediction is limited, while symptom-guided and multimodal inputs improve zero-shot classification performance. The system demonstrates deterministic safety rules and escalation for uncertain cases.",
           "tags": [
-            "optimal transport",
-            "flow matching",
-            "parallelism",
-            "generative models"
+            "agents",
+            "multimodal",
+            "edge-cloud",
+            "vlm"
           ],
           "sources": [
             {
               "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2607.24741v1"
+              "url": "https://arxiv.org/abs/2607.26042v1"
             }
           ],
-          "published": "2026-07-27T17:59:36+00:00",
-          "score": 0.4384
-        },
-        {
-          "id": "af6e03843f6e",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "PAC Learning from Conditional Samples Across Heterogeneous Data Providers: Sample Complexity Ranges from Linear to Quadratic",
-          "why_it_matters": "Provides theoretical grounding for when distributed or federated learning from restricted conditional queries is sample-efficient — relevant background for anyone designing multi-provider data pipelines or studying learning theory.",
-          "summary": "Studies distribution learning where queries return conditional samples from sets in a fixed family. Learnability depends on the co-occurrence graph: PAC learning requires a complete co-occurrence graph, with worst-case complexity Õ(n²/ε²). A hierarchical comparability condition on the query family yields near-linear Õ(n/ε²) complexity. Every polynomial rate between linear and quadratic is achievable for some query family.",
-          "tags": [
-            "learning theory",
-            "distribution learning",
-            "sample complexity",
-            "federated learning"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2607.24732v1"
-            }
-          ],
-          "published": "2026-07-27T17:57:16+00:00",
-          "score": 0.4382
+          "published": "2026-07-28T17:50:25+00:00",
+          "score": 0.4373
         }
       ]
     }
