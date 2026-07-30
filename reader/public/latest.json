@@ -1,11 +1,11 @@
 {
-  "date": "2026-07-29",
-  "generated_at": "2026-07-29T03:29:24.829932+00:00",
-  "summary_line": "5 worth knowing",
+  "date": "2026-07-30",
+  "generated_at": "2026-07-30T03:17:06.087516+00:00",
+  "summary_line": "1 must-know · 4 worth knowing",
   "counts": {
-    "total": 7,
-    "headlines": 2,
-    "frontier": 5
+    "total": 8,
+    "headlines": 1,
+    "frontier": 7
   },
   "sections": [
     {
@@ -13,48 +13,25 @@
       "title": "Headlines",
       "cards": [
         {
-          "id": "92e866603de3",
-          "tier": "worth_knowing",
+          "id": "705bd6c095e8",
+          "tier": "must_know",
           "category": "headline",
-          "title": "Ai2 Launches OlmoEarth Platform for Continent-Scale Satellite Inference",
-          "why_it_matters": "If you work on geospatial ML or large-scale distributed inference, this is a detailed engineering walkthrough of a production system processing terabytes of satellite imagery at fractions of a penny per square kilometer.",
-          "summary": "Ai2's OlmoEarth Platform wraps their Earth observation foundation models (pretrained on ~10TB of multimodal satellite data) in end-to-end inference infrastructure. It splits jobs into CPU-bound data acquisition/preprocessing, GPU inference, and CPU postprocessing stages. The system covers continent-scale areas in roughly a day, handling multi-provider imagery alignment, projection normalization, and distributed failure recovery.",
+          "title": "Google DeepMind Launches Lyria 3.5 in Flow Music with Improved Vocals and Creative Controls",
+          "why_it_matters": "DeepMind's music generation capability advances are worth tracking as generative audio is a fast-moving frontier adjacent to multimodal AI research.",
+          "summary": "Lyria 3.5, DeepMind's latest music generation model, is now live in Google Flow Music. Improvements include more complex melodic structures, higher-quality lyrics with better prompt adherence and structural awareness, more emotionally expressive vocals with improved pronunciation, and added tempo and duration controls.",
           "tags": [
-            "earth observation",
-            "geospatial ml",
-            "distributed inference",
-            "foundation models"
+            "generative audio",
+            "deepmind",
+            "multimodal"
           ],
           "sources": [
             {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/allenai/olmoearth-infrastructure"
+              "name": "DeepMind",
+              "url": "https://deepmind.google/blog/were-launching-lyria-35-in-google-flow-music-with-advances-across-musicality-lyrics-vocals-and-creative-control/"
             }
           ],
-          "published": "2026-07-28T16:27:42+00:00",
-          "score": 1.287
-        },
-        {
-          "id": "85dd02699b25",
-          "tier": "skim",
-          "category": "headline",
-          "title": "LFM2.5-Encoders: 3.7× Faster Than ModernBERT-base at 8,192-Token CPU Inference",
-          "why_it_matters": "For production NLP pipelines running classifiers or intent routers on CPU with long contexts, this is a concrete, benchmarked alternative to ModernBERT with significantly better long-context latency.",
-          "summary": "LFM2.5-Encoder-230M and -350M are initialized from LFM2 causal decoder backbones, converted to bidirectional encoders via symmetric attention masks and non-causal convolutions, then trained with 30% MLM masking in two stages (1K then 8,192-token context). At 8,192 tokens on CPU, LFM2.5-Encoder-230M takes ~28s versus ~90s for ModernBERT-base (~3.7× faster). Encoder-350M ranks fourth across 14 models on 17 GLUE/SuperGLUE/multilingual tasks; the three ahead are all larger.",
-          "tags": [
-            "encoders",
-            "long-context",
-            "nlp",
-            "inference"
-          ],
-          "sources": [
-            {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/LiquidAI/lfm2-5-encoders"
-            }
-          ],
-          "published": "2026-07-28T15:01:45+00:00",
-          "score": 0.4205
+          "published": "2026-07-29T16:02:10+00:00",
+          "score": 2.5661
         }
       ]
     },
@@ -63,114 +40,158 @@
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "d3d3959cb5cf",
+          "id": "09742fdf22c2",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Relay-OPD Fixes Prefix Failure in On-Policy Distillation, +5.73% Over Standard OPD",
-          "why_it_matters": "This directly addresses a known failure mode in on-policy distillation — prefix compounding errors — with a label-free fix that also cuts training trajectory length in half, relevant if you work on small-model reasoning or post-training.",
-          "summary": "Relay-OPD detects divergence between teacher and student continuations on failed prefixes as a handoff trigger, letting the teacher briefly take over to produce a corrected 'relay' trajectory before the student resumes. Using Qwen3-4B-Instruct-2507 as teacher and Qwen3-0.6B/1.7B non-thinking students on eight math benchmarks, it beats standard OPD by +5.73% and FastOPD by +1.49% (1.7B average), while reducing training trajectory length by over 50%.",
+          "title": "Quantum TDA as Practical Feature Extraction: Circuit Results on IonQ-Style Hardware",
+          "why_it_matters": "For an AI/ML engineer tracking quantum ML intersections, this paper reframes quantum TDA as a usable feature extractor for real downstream tasks rather than a theoretical Betti number estimator.",
+          "summary": "Rather than exact Betti number computation, this paper extracts low-order spectral moments of the combinatorial Laplacian as topological features. These features improve classification in fMRI-based neurodegenerative disease detection and financial market instability identification. The authors provide circuit constructions, resource estimates, crossover projections, and experimental results on a Barium development system comparable to the forthcoming IonQ Tempo line.",
           "tags": [
-            "distillation",
-            "reasoning",
-            "rl",
-            "post-training"
+            "quantum ml",
+            "topological data analysis",
+            "quantum computing",
+            "feature extraction"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2607.27206v1"
+            }
+          ],
+          "published": "2026-07-29T17:59:59+00:00",
+          "score": 1.3185
+        },
+        {
+          "id": "e8d323d48d52",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Pre-Training Q-Functions for Online RL Fine-Tuning Rarely Helps — IPE Offers a Better Alternative",
+          "why_it_matters": "Directly relevant to RL research and post-training pipelines; challenges a common assumption about offline-to-online RL fine-tuning with a clean mechanistic explanation and a practical fix.",
+          "summary": "Systematic experiments show that naively pre-training the Q-function on offline data provides little benefit over random initialization when fine-tuning a pre-trained policy online. The gap persists because pre-training targets the offline policy's Q-function, not the online fine-tuning target. The proposed method, Initialization via Policy Ensemble (IPE), trains multiple diverse policies and pools their rollouts to bootstrap Q-learning, achieving an average 1.26x improvement over naive Q-function pre-training on continuous control benchmarks.",
+          "tags": [
+            "reinforcement learning",
+            "offline-to-online rl",
+            "fine-tuning",
+            "q-learning"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2607.27203v1"
+            }
+          ],
+          "published": "2026-07-29T17:59:51+00:00",
+          "score": 1.3185
+        },
+        {
+          "id": "6ce029e27667",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Mental World Modeling: A Framework for Tracking Beliefs and Intentions Alongside Physical State",
+          "why_it_matters": "Directly relevant to AI agents and world model research; formalizes mental state tracking as a first-class component rather than a post-hoc rationale, with benchmarks across text, image, and video.",
+          "summary": "Mental World Modeling (MWM) extends physical world models to maintain a coupled physical-mental state, including beliefs, desires, intentions, and social norms. The authors instantiate it as MENTIS, a training-free baseline decomposing into state parsing, target-observation generation, and coupled transition simulation. Experiments on 8 LLM-based models across a new situated decision dataset (text, image, sounding-video) show explicit mental modeling is essential for predicting human decisions.",
+          "tags": [
+            "world models",
+            "agents",
+            "theory of mind",
+            "reasoning"
           ],
           "sources": [
             {
               "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2607.26057v1"
+              "url": "https://arxiv.org/abs/2607.27201v1"
             }
           ],
-          "published": "2026-07-28T17:59:46+00:00",
-          "score": 1.3147
+          "published": "2026-07-29T17:59:39+00:00",
+          "score": 1.3184
         },
         {
-          "id": "83b67ae1bd30",
+          "id": "9939bfd922ed",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "πR²: Reactive Real-Time Flow Policies Replan at ~25Hz Using Asynchronous Fast/Slow Channels",
-          "why_it_matters": "Closing the reactivity-latency gap in chunked action diffusion policies is a key open problem for robot manipulation; this shows a concrete working solution on real hardware with measurable success rate gains.",
-          "summary": "πR² addresses the open-loop latency problem in action-chunking flow policies by splitting conditioning into a fast proprioception channel (updated every tick) and a slow asynchronously updated vision-language channel. Built on diffusion forcing's per-position noise schedule, it treats in-flight actions as inpainting conditioning and emits actions in one denoising step per call. Finetuned from GR00T-N1.7 on a real xArm6+XHand, it replans at ~25Hz (every 40ms), improving success rates by up to 23% in simulation and 30% in real-world tasks over the strongest baseline.",
+          "title": "K-Search Automatically Transfers CUDA Kernel Expertise to Apple Silicon via MLX",
+          "why_it_matters": "As an AI/ML engineer, you likely run or deploy models on Apple Silicon; this directly addresses the performance gap between CUDA-optimized kernels and MLX, with concrete speedup numbers.",
+          "summary": "Berkeley's K-Search evolutionary framework now includes an MLX backend and a structured CUDA-to-MLX translation layer. Using Gemini 2.5 Pro as both reasoner and code writer, it achieves 0.97x speedup vs. native MLX Attention and up to 20x prefill speedup over community mlx-lm on the Mamba SSM kernel. The approach generalizes beyond MLX to any ecosystem where CUDA expertise is transferable.",
           "tags": [
-            "robotics",
-            "diffusion policy",
-            "real-time",
-            "agents"
+            "apple silicon",
+            "gpu kernels",
+            "mlx",
+            "inference optimization"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2607.26055v1"
+              "name": "BAIR (Berkeley)",
+              "url": "http://bair.berkeley.edu/blog/2026/07/29/cuda-to-mlx-k-search/"
             }
           ],
-          "published": "2026-07-28T17:59:31+00:00",
-          "score": 1.3146
+          "published": "2026-07-29T09:00:00+00:00",
+          "score": 1.1636
         },
         {
-          "id": "e7f0b97bead2",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "CARE: Nucleus-Style Confidence-Adaptive Expert Routing Beats Fixed Top-k MoE-LoRA",
-          "why_it_matters": "A drop-in, no-extra-parameters routing rule for MoE-LoRA that improves performance at matched compute is directly useful if you work with parameter-efficient fine-tuning or mixture-of-experts architectures.",
-          "summary": "CARE uses the router's output distribution as a per-token uncertainty signal: experts are activated in decreasing weight order until cumulative mass hits a threshold (nucleus-style), with a small extension when admitted experts disagree. A budget thermostat keeps average active experts at any target. Evaluated on LLaMA-3.1-8B and Qwen2.5-7B across commonsense, math, code, and knowledge tasks, CARE outperforms fixed top-k MoE-LoRA at matched compute and matches fixed k=4 while activating fewer experts. The same signals improve OOD detection over MSP and entropy baselines.",
-          "tags": [
-            "mixture-of-experts",
-            "lora",
-            "peft",
-            "uncertainty"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2607.26052v1"
-            }
-          ],
-          "published": "2026-07-28T17:59:16+00:00",
-          "score": 1.3145
-        },
-        {
-          "id": "7982643b785e",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "Desktop-Delta Bench: New 2,013-Instance Diagnostic for GUI Transition Understanding in Computer-Use Agents",
-          "why_it_matters": "As agent evals mature, step-level causal verification benchmarks like this expose failure modes invisible to end-task-success metrics — important context for anyone building or evaluating desktop CUAs.",
-          "summary": "DDB introduces 2,013 human-verified instances from multi-app Linux trajectories (~15 apps, 50 task domains) targeting three failure dimensions: state verification, source tracking, and context-aware control. It includes 463 temporal-ordering instances (105 with cross-trajectory decoys) and 1,550 before-after action pairs. Across 8 model families, best non-decoy and decoy ordering exact-match rates are 65.1% and 65.7%. Click F1 reaches 0.96 versus 0.76 for drag; action family inference is harder than localization.",
-          "tags": [
-            "agents",
-            "benchmarks",
-            "computer-use",
-            "gui"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2607.26041v1"
-            }
-          ],
-          "published": "2026-07-28T17:49:51+00:00",
-          "score": 1.3117
-        },
-        {
-          "id": "313444f5f10b",
+          "id": "010d6c35b982",
           "tier": "skim",
           "category": "frontier",
-          "title": "VetClaw: Edge-Cloud Agentic System for Veterinary Disease Screening via VLM Zero-Shot Classification",
-          "why_it_matters": "A working multimodal agentic pipeline separating edge orchestration (OpenClaw) from server-side workflow (LangGraph) is a concrete architecture reference for production agent deployments, even outside the veterinary domain.",
-          "summary": "VetClaw pairs a camera edge device running OpenClaw (scheduling, tool access, notifications) with a server-hosted vision-language model orchestrated via LangGraph for stateful workflow management including input validation, safety checks, conditional routing, and failure handling. Results show image-only VLM prediction is limited, while symptom-guided and multimodal inputs improve zero-shot classification performance. The system demonstrates deterministic safety rules and escalation for uncertain cases.",
+          "title": "Modular Quantum Architectures Can Tolerate Interface Noise an Order of Magnitude Above Intra-QPU Noise",
+          "why_it_matters": "For researchers tracking scalable quantum computing infrastructure, this gives concrete fault-tolerance thresholds for the modular QPU paradigm that dominates near-term scaling roadmaps.",
+          "summary": "Circuit-level simulations of lattice-surgery-based nonlocal CNOT gates across QPUs connected by noisy Bell pairs show interfaces can tolerate noise roughly an order of magnitude higher than intra-QPU noise with only minor threshold reduction. The authors also present a distributed logical GHZ state preparation protocol that reduces ancilla, time, and Bell-pair overhead, framing ancilla minimization as a vertex-cover problem solvable in polynomial time via a heuristic.",
           "tags": [
-            "agents",
-            "multimodal",
-            "edge-cloud",
-            "vlm"
+            "quantum error correction",
+            "modular quantum computing",
+            "fault tolerance",
+            "surface code"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2607.27204v1"
+            }
+          ],
+          "published": "2026-07-29T17:59:57+00:00",
+          "score": 0.4395
+        },
+        {
+          "id": "cf72508a26fb",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Fruitfly-Inspired Local-Pattern Framework Applies Classification Mechanisms to Regression",
+          "why_it_matters": "Mildly interesting niche result; the biologically-motivated framework for data-driven regression offers a lightweight alternative to global surrogates, but impact on mainstream ML practice is unclear.",
+          "summary": "Motivated by fruitfly sensory mechanisms, this framework replaces global surrogate models with a library of local representative patterns. Predictions are formed by measuring query-pattern similarity and aggregating associated responses. Applied to nonlinear dynamical systems, data-driven regression, and physics-informed learning, the offline-online workflow claims reduced computation and memory with explicit accuracy-storage-inference tradeoff control.",
+          "tags": [
+            "regression",
+            "scientific ml",
+            "biologically inspired",
+            "dynamical systems"
           ],
           "sources": [
             {
               "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2607.26042v1"
+              "url": "https://arxiv.org/abs/2607.27196v1"
             }
           ],
-          "published": "2026-07-28T17:50:25+00:00",
-          "score": 0.4373
+          "published": "2026-07-29T17:58:05+00:00",
+          "score": 0.4393
+        },
+        {
+          "id": "9e3b8f2607c1",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Quantum Entanglement Irreversibility Proven Exponentially Strong, Resolving a Nat. Phys. Conjecture",
+          "why_it_matters": "A foundational quantum information theory result; any researcher working at the interface of quantum ML or quantum computing should note this resolved conjecture strengthens the known limits of entanglement manipulation.",
+          "summary": "The paper proves a strict separation between exponential strong-converse distillable entanglement and exponential strong-converse entanglement cost, showing irreversibility of entanglement manipulation persists even when error is allowed to grow polynomially in the number of copies. This resolves a conjecture by Lami and Regula (Nat. Phys. 2023). A semidefinite-programming lower bound on exponential strong-converse cost under non-entangling operations is derived, and analytically solvable antisymmetric state families are constructed for PPT-preserving operations.",
+          "tags": [
+            "quantum information",
+            "entanglement theory",
+            "quantum computing",
+            "information theory"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2607.27195v1"
+            }
+          ],
+          "published": "2026-07-29T17:58:04+00:00",
+          "score": 0.4393
         }
       ]
     }
