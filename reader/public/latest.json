@@ -1,11 +1,11 @@
 {
-  "date": "2026-07-30",
-  "generated_at": "2026-07-30T03:17:06.087516+00:00",
+  "date": "2026-07-31",
+  "generated_at": "2026-07-31T03:44:24.546923+00:00",
   "summary_line": "1 must-know · 4 worth knowing",
   "counts": {
     "total": 8,
-    "headlines": 1,
-    "frontier": 7
+    "headlines": 2,
+    "frontier": 6
   },
   "sections": [
     {
@@ -13,25 +13,52 @@
       "title": "Headlines",
       "cards": [
         {
-          "id": "705bd6c095e8",
+          "id": "06b8d0ad6f63",
           "tier": "must_know",
           "category": "headline",
-          "title": "Google DeepMind Launches Lyria 3.5 in Flow Music with Improved Vocals and Creative Controls",
-          "why_it_matters": "DeepMind's music generation capability advances are worth tracking as generative audio is a fast-moving frontier adjacent to multimodal AI research.",
-          "summary": "Lyria 3.5, DeepMind's latest music generation model, is now live in Google Flow Music. Improvements include more complex melodic structures, higher-quality lyrics with better prompt adherence and structural awareness, more emotionally expressive vocals with improved pronunciation, and added tempo and duration controls.",
+          "title": "Google DeepMind Launches Gemini Robotics ER 2: Video-Aware High-Level Brain for Robots",
+          "why_it_matters": "This is a flagship DeepMind robotics release — a major capability jump in embodied AI that the whole field will be tracking, directly relevant to your interest in agents, world models, and physical AI.",
+          "summary": "Gemini Robotics ER 2 is a high-level orchestration model that watches continuous video feeds, tracks task progress, and hands off motor execution to any VLA model. It introduces multi-robot collaboration, native tool-calling (e.g., Google Search), and integrates with Gemini Live API for low-latency streaming. It outperforms ER 1.6 across real VLA, sim VLA, and human tele-op control modes. Available now via Gemini API and Google AI Studio.",
           "tags": [
-            "generative audio",
-            "deepmind",
-            "multimodal"
+            "robotics",
+            "gemini",
+            "embodied-ai",
+            "agents"
           ],
           "sources": [
             {
               "name": "DeepMind",
-              "url": "https://deepmind.google/blog/were-launching-lyria-35-in-google-flow-music-with-advances-across-musicality-lyrics-vocals-and-creative-control/"
+              "url": "https://deepmind.google/blog/gemini-robotics-er-2-powering-robotics-with-video-understanding-task-orchestration-and-multi-robot-collaboration/"
+            },
+            {
+              "name": "DeepMind",
+              "url": "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/"
             }
           ],
-          "published": "2026-07-29T16:02:10+00:00",
-          "score": 2.5661
+          "published": "2026-07-30T15:00:59+00:00",
+          "score": 2.514
+        },
+        {
+          "id": "f684c3a66a25",
+          "tier": "skim",
+          "category": "headline",
+          "title": "GPU Utilization as the Next Strategic Constraint in Enterprise AI",
+          "why_it_matters": "Framing GPU utilization — not raw GPU count — as the primary competitive differentiator is a structural insight relevant to anyone building or scaling AI infrastructure.",
+          "summary": "The article argues that GPU idle time is the dominant efficiency constraint in enterprise AI, analogous to aircraft ground time in aviation. Like airline utilization, GPU utilization sits downstream of nearly every infrastructure decision. As evidence of compute scarcity even at the frontier: Anthropic spread simultaneous multi-gigawatt commitments across four hardware vendors (Amazon, Google, Microsoft, AMD), while Meta signed a comparable multi-gigawatt deal.",
+          "tags": [
+            "infrastructure",
+            "gpu",
+            "compute",
+            "mlops"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/Dharma-AI/gpu-management"
+            }
+          ],
+          "published": "2026-07-30T15:09:09+00:00",
+          "score": 0.4198
         }
       ]
     },
@@ -40,158 +67,136 @@
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "09742fdf22c2",
+          "id": "b5690a5f7360",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Quantum TDA as Practical Feature Extraction: Circuit Results on IonQ-Style Hardware",
-          "why_it_matters": "For an AI/ML engineer tracking quantum ML intersections, this paper reframes quantum TDA as a usable feature extractor for real downstream tasks rather than a theoretical Betti number estimator.",
-          "summary": "Rather than exact Betti number computation, this paper extracts low-order spectral moments of the combinatorial Laplacian as topological features. These features improve classification in fMRI-based neurodegenerative disease detection and financial market instability identification. The authors provide circuit constructions, resource estimates, crossover projections, and experimental results on a Barium development system comparable to the forthcoming IonQ Tempo line.",
+          "title": "ReToken: Single Learnable Embedding Boosts Long-Context Visual Retrieval by 13+ Points",
+          "why_it_matters": "Efficient long-context visual token selection is a live bottleneck in multimodal systems; this lightweight, single-token approach delivers large gains on both image and video benchmarks with a practical single-GPU training footprint.",
+          "summary": "ReToken is a single learnable embedding that selects sparse query-relevant visual tokens from a pre-filled KV cache, avoiding full-context recomputation. Trained on a small image-QA dataset, it improves Qwen3VL-8B by 13.4 points and InternVL3.5 by 12.4 points on Visual Haystacks, and transfers zero-shot to long video with an 8.0-point gain on LVBench. Training and inference fit on a single H100.",
           "tags": [
-            "quantum ml",
-            "topological data analysis",
-            "quantum computing",
-            "feature extraction"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2607.27206v1"
-            }
-          ],
-          "published": "2026-07-29T17:59:59+00:00",
-          "score": 1.3185
-        },
-        {
-          "id": "e8d323d48d52",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "Pre-Training Q-Functions for Online RL Fine-Tuning Rarely Helps — IPE Offers a Better Alternative",
-          "why_it_matters": "Directly relevant to RL research and post-training pipelines; challenges a common assumption about offline-to-online RL fine-tuning with a clean mechanistic explanation and a practical fix.",
-          "summary": "Systematic experiments show that naively pre-training the Q-function on offline data provides little benefit over random initialization when fine-tuning a pre-trained policy online. The gap persists because pre-training targets the offline policy's Q-function, not the online fine-tuning target. The proposed method, Initialization via Policy Ensemble (IPE), trains multiple diverse policies and pools their rollouts to bootstrap Q-learning, achieving an average 1.26x improvement over naive Q-function pre-training on continuous control benchmarks.",
-          "tags": [
-            "reinforcement learning",
-            "offline-to-online rl",
-            "fine-tuning",
-            "q-learning"
+            "vision-language",
+            "long-context",
+            "token-efficiency",
+            "retrieval"
           ],
           "sources": [
             {
               "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2607.27203v1"
+              "url": "https://arxiv.org/abs/2607.28627v1"
             }
           ],
-          "published": "2026-07-29T17:59:51+00:00",
-          "score": 1.3185
+          "published": "2026-07-30T17:59:56+00:00",
+          "score": 1.3102
         },
         {
-          "id": "6ce029e27667",
+          "id": "ca679b7835c3",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Mental World Modeling: A Framework for Tracking Beliefs and Intentions Alongside Physical State",
-          "why_it_matters": "Directly relevant to AI agents and world model research; formalizes mental state tracking as a first-class component rather than a post-hoc rationale, with benchmarks across text, image, and video.",
-          "summary": "Mental World Modeling (MWM) extends physical world models to maintain a coupled physical-mental state, including beliefs, desires, intentions, and social norms. The authors instantiate it as MENTIS, a training-free baseline decomposing into state parsing, target-observation generation, and coupled transition simulation. Experiments on 8 LLM-based models across a new situated decision dataset (text, image, sounding-video) show explicit mental modeling is essential for predicting human decisions.",
+          "title": "PAC-MAN: CBF-Reinforcement Learning Enables 95% Dodge Success on Unitree G1 Humanoid",
+          "why_it_matters": "Combines control-barrier functions with RL and realistic onboard perception for whole-body safety — a technically substantive result in robot learning and safe RL with real hardware validation.",
+          "summary": "PAC-MAN couples control-barrier function (CBF) safety constraints with RL and an adversarial motion prior for humanoid dodgeball evasion. The deployed policy uses only segmentation-masked depth from a head-mounted camera. On a controlled benchmark, it approaches oracle performance; on real Unitree G1 hardware it achieves 95% dodge success zero-shot, using semantic segmentation. Joint-CBF performs best with accurate ball state but degrades under fixed-camera observations without a gimbal or privileged filter.",
           "tags": [
-            "world models",
+            "reinforcement-learning",
+            "safe-rl",
+            "robotics",
+            "control"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2607.28623v1"
+            }
+          ],
+          "published": "2026-07-30T17:59:35+00:00",
+          "score": 1.3101
+        },
+        {
+          "id": "b7c55e14e657",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "New Group-Extension Construction Yields LP Quantum Error-Correcting Codes with Better Parameters",
+          "why_it_matters": "Lifted product codes are a leading class of qLDPC codes for fault-tolerant quantum computing; a systematic construction that improves code parameters and reduces surgery overhead is directly relevant to quantum ML and quantum computing infrastructure.",
+          "summary": "The paper introduces a systematic construction of lifted product (LP) code families via group extensions and graph lifts, preserving Tanner graph local structure while increasing code size. Code parameters, logical operators, and fault-tolerant gadgets relate across families via chain and cochain maps. Results include LP codes with better parameters than previously known, lower-overhead code-surgery gadgets, parallel product surgery for lifted clustered cyclic codes, and finite-size coherent-information crossings suggesting thermodynamic family structure.",
+          "tags": [
+            "quantum-error-correction",
+            "qldpc",
+            "fault-tolerant-qc",
+            "quantum-computing"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2607.28621v1"
+            }
+          ],
+          "published": "2026-07-30T17:59:18+00:00",
+          "score": 1.31
+        },
+        {
+          "id": "f2552ca7b9a2",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "AskChem: Claim-Level Retrieval Infrastructure Indexes 2.4M Chemistry Claims Across 147K Papers",
+          "why_it_matters": "Claim-centered retrieval with provenance grounding is a meaningful architectural shift for AI agents doing scientific literature synthesis — directly relevant to agentic RAG pipelines and scientific AI tooling.",
+          "summary": "AskChem decomposes chemistry papers into atomic, typed, provenance-carrying claims (source DOI plus verbatim quote), indexed across 2.4M claims from 147K papers. It exposes a faceted taxonomy, evidence graph, and exploratory living taxonomy. On AskChem-Bench, grounding a GPT-5.5 reader in AskChem yields 100% resolvable DOIs versus 88.3% without retrieval and the highest citation density among five tested systems. REST, SDK, and MCP access available.",
+          "tags": [
+            "rag",
+            "scientific-ai",
             "agents",
-            "theory of mind",
-            "reasoning"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2607.27201v1"
-            }
-          ],
-          "published": "2026-07-29T17:59:39+00:00",
-          "score": 1.3184
-        },
-        {
-          "id": "9939bfd922ed",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "K-Search Automatically Transfers CUDA Kernel Expertise to Apple Silicon via MLX",
-          "why_it_matters": "As an AI/ML engineer, you likely run or deploy models on Apple Silicon; this directly addresses the performance gap between CUDA-optimized kernels and MLX, with concrete speedup numbers.",
-          "summary": "Berkeley's K-Search evolutionary framework now includes an MLX backend and a structured CUDA-to-MLX translation layer. Using Gemini 2.5 Pro as both reasoner and code writer, it achieves 0.97x speedup vs. native MLX Attention and up to 20x prefill speedup over community mlx-lm on the Mamba SSM kernel. The approach generalizes beyond MLX to any ecosystem where CUDA expertise is transferable.",
-          "tags": [
-            "apple silicon",
-            "gpu kernels",
-            "mlx",
-            "inference optimization"
-          ],
-          "sources": [
-            {
-              "name": "BAIR (Berkeley)",
-              "url": "http://bair.berkeley.edu/blog/2026/07/29/cuda-to-mlx-k-search/"
-            }
-          ],
-          "published": "2026-07-29T09:00:00+00:00",
-          "score": 1.1636
-        },
-        {
-          "id": "010d6c35b982",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "Modular Quantum Architectures Can Tolerate Interface Noise an Order of Magnitude Above Intra-QPU Noise",
-          "why_it_matters": "For researchers tracking scalable quantum computing infrastructure, this gives concrete fault-tolerance thresholds for the modular QPU paradigm that dominates near-term scaling roadmaps.",
-          "summary": "Circuit-level simulations of lattice-surgery-based nonlocal CNOT gates across QPUs connected by noisy Bell pairs show interfaces can tolerate noise roughly an order of magnitude higher than intra-QPU noise with only minor threshold reduction. The authors also present a distributed logical GHZ state preparation protocol that reduces ancilla, time, and Bell-pair overhead, framing ancilla minimization as a vertex-cover problem solvable in polynomial time via a heuristic.",
-          "tags": [
-            "quantum error correction",
-            "modular quantum computing",
-            "fault tolerance",
-            "surface code"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2607.27204v1"
-            }
-          ],
-          "published": "2026-07-29T17:59:57+00:00",
-          "score": 0.4395
-        },
-        {
-          "id": "cf72508a26fb",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "Fruitfly-Inspired Local-Pattern Framework Applies Classification Mechanisms to Regression",
-          "why_it_matters": "Mildly interesting niche result; the biologically-motivated framework for data-driven regression offers a lightweight alternative to global surrogates, but impact on mainstream ML practice is unclear.",
-          "summary": "Motivated by fruitfly sensory mechanisms, this framework replaces global surrogate models with a library of local representative patterns. Predictions are formed by measuring query-pattern similarity and aggregating associated responses. Applied to nonlinear dynamical systems, data-driven regression, and physics-informed learning, the offline-online workflow claims reduced computation and memory with explicit accuracy-storage-inference tradeoff control.",
-          "tags": [
-            "regression",
-            "scientific ml",
-            "biologically inspired",
-            "dynamical systems"
+            "nlp"
           ],
           "sources": [
             {
               "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2607.27196v1"
+              "url": "https://arxiv.org/abs/2607.28618v1"
             }
           ],
-          "published": "2026-07-29T17:58:05+00:00",
-          "score": 0.4393
+          "published": "2026-07-30T17:59:11+00:00",
+          "score": 1.31
         },
         {
-          "id": "9e3b8f2607c1",
+          "id": "46f9e08e55aa",
           "tier": "skim",
           "category": "frontier",
-          "title": "Quantum Entanglement Irreversibility Proven Exponentially Strong, Resolving a Nat. Phys. Conjecture",
-          "why_it_matters": "A foundational quantum information theory result; any researcher working at the interface of quantum ML or quantum computing should note this resolved conjecture strengthens the known limits of entanglement manipulation.",
-          "summary": "The paper proves a strict separation between exponential strong-converse distillable entanglement and exponential strong-converse entanglement cost, showing irreversibility of entanglement manipulation persists even when error is allowed to grow polynomially in the number of copies. This resolves a conjecture by Lami and Regula (Nat. Phys. 2023). A semidefinite-programming lower bound on exponential strong-converse cost under non-entangling operations is derived, and analytically solvable antisymmetric state families are constructed for PPT-preserving operations.",
+          "title": "ML Outperforms Deterministic Algorithms for Identifying Seiberg Dualities in Quiver Gauge Theories",
+          "why_it_matters": "Proposes quiver duality identification as a frontier AI benchmark for theoretical physics — relevant to researchers interested in applying transformers and MLPs to formal mathematics and complexity-theoretic questions.",
+          "summary": "The paper applies transformers and MLPs to detect Seiberg dualities in supersymmetric quiver gauge theories, framed mathematically as quiver mutations. For quivers with ~10 nodes, both architectures outperform deterministic algorithms; augmenting networks with pathfinder algorithms further improves efficiency and accuracy. The authors propose this class of problems as a useful benchmark for frontier AI models applied to theoretical physics.",
           "tags": [
-            "quantum information",
-            "entanglement theory",
-            "quantum computing",
-            "information theory"
+            "ml-for-science",
+            "transformers",
+            "theoretical-physics",
+            "benchmarks"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2607.28628v1"
+            }
+          ],
+          "published": "2026-07-30T17:59:56+00:00",
+          "score": 0.4367
+        },
+        {
+          "id": "b533e18de26d",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Geometric Transport Framework Aligns Squeezed-State Ellipses for Optimal Quantum Metrology",
+          "why_it_matters": "Geometric phase control of squeezed states is a foundational technique for quantum sensing; this framework is technically relevant if you track quantum metrology or quantum optics hardware.",
+          "summary": "The paper presents a geometric framework for rotating a squeezed-state ellipse from a misaligned input to a measurement-optimal orientation in SU(2)-symmetric systems. The ellipse rotation depends on the solid angle enclosed by the trajectory on the unit sphere, linking it to geometric phase. The framework applies across physical platforms; polarization-squeezed light with a continuously varying birefringent element is given as a concrete example.",
+          "tags": [
+            "quantum-metrology",
+            "squeezed-states",
+            "quantum-sensing",
+            "geometric-phase"
           ],
           "sources": [
             {
               "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2607.27195v1"
+              "url": "https://arxiv.org/abs/2607.28620v1"
             }
           ],
-          "published": "2026-07-29T17:58:04+00:00",
-          "score": 0.4393
+          "published": "2026-07-30T17:59:17+00:00",
+          "score": 0.4367
         }
       ]
     }
