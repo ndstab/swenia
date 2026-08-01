@@ -1,11 +1,11 @@
 {
-  "date": "2026-07-31",
-  "generated_at": "2026-07-31T03:44:24.546923+00:00",
-  "summary_line": "1 must-know · 4 worth knowing",
+  "date": "2026-08-01",
+  "generated_at": "2026-08-01T03:42:25.102943+00:00",
+  "summary_line": "1 must-know",
   "counts": {
-    "total": 8,
-    "headlines": 2,
-    "frontier": 6
+    "total": 1,
+    "headlines": 1,
+    "frontier": 0
   },
   "sections": [
     {
@@ -13,192 +13,33 @@
       "title": "Headlines",
       "cards": [
         {
-          "id": "06b8d0ad6f63",
+          "id": "7909c613945e",
           "tier": "must_know",
           "category": "headline",
-          "title": "Google DeepMind Launches Gemini Robotics ER 2: Video-Aware High-Level Brain for Robots",
-          "why_it_matters": "This is a flagship DeepMind robotics release — a major capability jump in embodied AI that the whole field will be tracking, directly relevant to your interest in agents, world models, and physical AI.",
-          "summary": "Gemini Robotics ER 2 is a high-level orchestration model that watches continuous video feeds, tracks task progress, and hands off motor execution to any VLA model. It introduces multi-robot collaboration, native tool-calling (e.g., Google Search), and integrates with Gemini Live API for low-latency streaming. It outperforms ER 1.6 across real VLA, sim VLA, and human tele-op control modes. Available now via Gemini API and Google AI Studio.",
+          "title": "Google DeepMind Launches Gemini Robotics 2: Whole-Body Control, Dexterity, and Multi-Robot Collaboration",
+          "why_it_matters": "As an AI/ML engineer, this is a flagship DeepMind release combining VLA models, embodied reasoning, and on-device adaptation — directly advancing the state of physical AI and robotics research.",
+          "summary": "DeepMind introduces three models: Gemini Robotics 2 (VLA for full humanoid control including legs and dexterous hands/grippers), Gemini Robotics ER 2 (VLM for multi-step planning and multi-robot teamwork), and Gemini Robotics On-Device 2 (efficient VLA with fast adaptation to new robot bodies in a few hours of data). ER 2 is available on Google AI Studio; VLA models are in early-access partner preview.",
           "tags": [
             "robotics",
-            "gemini",
-            "embodied-ai",
-            "agents"
+            "vla",
+            "deepmind",
+            "physical-ai"
           ],
           "sources": [
-            {
-              "name": "DeepMind",
-              "url": "https://deepmind.google/blog/gemini-robotics-er-2-powering-robotics-with-video-understanding-task-orchestration-and-multi-robot-collaboration/"
-            },
             {
               "name": "DeepMind",
               "url": "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/"
             }
           ],
-          "published": "2026-07-30T15:00:59+00:00",
-          "score": 2.514
-        },
-        {
-          "id": "f684c3a66a25",
-          "tier": "skim",
-          "category": "headline",
-          "title": "GPU Utilization as the Next Strategic Constraint in Enterprise AI",
-          "why_it_matters": "Framing GPU utilization — not raw GPU count — as the primary competitive differentiator is a structural insight relevant to anyone building or scaling AI infrastructure.",
-          "summary": "The article argues that GPU idle time is the dominant efficiency constraint in enterprise AI, analogous to aircraft ground time in aviation. Like airline utilization, GPU utilization sits downstream of nearly every infrastructure decision. As evidence of compute scarcity even at the frontier: Anthropic spread simultaneous multi-gigawatt commitments across four hardware vendors (Amazon, Google, Microsoft, AMD), while Meta signed a comparable multi-gigawatt deal.",
-          "tags": [
-            "infrastructure",
-            "gpu",
-            "compute",
-            "mlops"
-          ],
-          "sources": [
-            {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/Dharma-AI/gpu-management"
-            }
-          ],
-          "published": "2026-07-30T15:09:09+00:00",
-          "score": 0.4198
+          "published": "2026-07-28T13:21:37+00:00",
+          "score": 0.9043
         }
       ]
     },
     {
       "key": "frontier",
       "title": "Frontier & Papers",
-      "cards": [
-        {
-          "id": "b5690a5f7360",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "ReToken: Single Learnable Embedding Boosts Long-Context Visual Retrieval by 13+ Points",
-          "why_it_matters": "Efficient long-context visual token selection is a live bottleneck in multimodal systems; this lightweight, single-token approach delivers large gains on both image and video benchmarks with a practical single-GPU training footprint.",
-          "summary": "ReToken is a single learnable embedding that selects sparse query-relevant visual tokens from a pre-filled KV cache, avoiding full-context recomputation. Trained on a small image-QA dataset, it improves Qwen3VL-8B by 13.4 points and InternVL3.5 by 12.4 points on Visual Haystacks, and transfers zero-shot to long video with an 8.0-point gain on LVBench. Training and inference fit on a single H100.",
-          "tags": [
-            "vision-language",
-            "long-context",
-            "token-efficiency",
-            "retrieval"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2607.28627v1"
-            }
-          ],
-          "published": "2026-07-30T17:59:56+00:00",
-          "score": 1.3102
-        },
-        {
-          "id": "ca679b7835c3",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "PAC-MAN: CBF-Reinforcement Learning Enables 95% Dodge Success on Unitree G1 Humanoid",
-          "why_it_matters": "Combines control-barrier functions with RL and realistic onboard perception for whole-body safety — a technically substantive result in robot learning and safe RL with real hardware validation.",
-          "summary": "PAC-MAN couples control-barrier function (CBF) safety constraints with RL and an adversarial motion prior for humanoid dodgeball evasion. The deployed policy uses only segmentation-masked depth from a head-mounted camera. On a controlled benchmark, it approaches oracle performance; on real Unitree G1 hardware it achieves 95% dodge success zero-shot, using semantic segmentation. Joint-CBF performs best with accurate ball state but degrades under fixed-camera observations without a gimbal or privileged filter.",
-          "tags": [
-            "reinforcement-learning",
-            "safe-rl",
-            "robotics",
-            "control"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2607.28623v1"
-            }
-          ],
-          "published": "2026-07-30T17:59:35+00:00",
-          "score": 1.3101
-        },
-        {
-          "id": "b7c55e14e657",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "New Group-Extension Construction Yields LP Quantum Error-Correcting Codes with Better Parameters",
-          "why_it_matters": "Lifted product codes are a leading class of qLDPC codes for fault-tolerant quantum computing; a systematic construction that improves code parameters and reduces surgery overhead is directly relevant to quantum ML and quantum computing infrastructure.",
-          "summary": "The paper introduces a systematic construction of lifted product (LP) code families via group extensions and graph lifts, preserving Tanner graph local structure while increasing code size. Code parameters, logical operators, and fault-tolerant gadgets relate across families via chain and cochain maps. Results include LP codes with better parameters than previously known, lower-overhead code-surgery gadgets, parallel product surgery for lifted clustered cyclic codes, and finite-size coherent-information crossings suggesting thermodynamic family structure.",
-          "tags": [
-            "quantum-error-correction",
-            "qldpc",
-            "fault-tolerant-qc",
-            "quantum-computing"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2607.28621v1"
-            }
-          ],
-          "published": "2026-07-30T17:59:18+00:00",
-          "score": 1.31
-        },
-        {
-          "id": "f2552ca7b9a2",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "AskChem: Claim-Level Retrieval Infrastructure Indexes 2.4M Chemistry Claims Across 147K Papers",
-          "why_it_matters": "Claim-centered retrieval with provenance grounding is a meaningful architectural shift for AI agents doing scientific literature synthesis — directly relevant to agentic RAG pipelines and scientific AI tooling.",
-          "summary": "AskChem decomposes chemistry papers into atomic, typed, provenance-carrying claims (source DOI plus verbatim quote), indexed across 2.4M claims from 147K papers. It exposes a faceted taxonomy, evidence graph, and exploratory living taxonomy. On AskChem-Bench, grounding a GPT-5.5 reader in AskChem yields 100% resolvable DOIs versus 88.3% without retrieval and the highest citation density among five tested systems. REST, SDK, and MCP access available.",
-          "tags": [
-            "rag",
-            "scientific-ai",
-            "agents",
-            "nlp"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2607.28618v1"
-            }
-          ],
-          "published": "2026-07-30T17:59:11+00:00",
-          "score": 1.31
-        },
-        {
-          "id": "46f9e08e55aa",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "ML Outperforms Deterministic Algorithms for Identifying Seiberg Dualities in Quiver Gauge Theories",
-          "why_it_matters": "Proposes quiver duality identification as a frontier AI benchmark for theoretical physics — relevant to researchers interested in applying transformers and MLPs to formal mathematics and complexity-theoretic questions.",
-          "summary": "The paper applies transformers and MLPs to detect Seiberg dualities in supersymmetric quiver gauge theories, framed mathematically as quiver mutations. For quivers with ~10 nodes, both architectures outperform deterministic algorithms; augmenting networks with pathfinder algorithms further improves efficiency and accuracy. The authors propose this class of problems as a useful benchmark for frontier AI models applied to theoretical physics.",
-          "tags": [
-            "ml-for-science",
-            "transformers",
-            "theoretical-physics",
-            "benchmarks"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2607.28628v1"
-            }
-          ],
-          "published": "2026-07-30T17:59:56+00:00",
-          "score": 0.4367
-        },
-        {
-          "id": "b533e18de26d",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "Geometric Transport Framework Aligns Squeezed-State Ellipses for Optimal Quantum Metrology",
-          "why_it_matters": "Geometric phase control of squeezed states is a foundational technique for quantum sensing; this framework is technically relevant if you track quantum metrology or quantum optics hardware.",
-          "summary": "The paper presents a geometric framework for rotating a squeezed-state ellipse from a misaligned input to a measurement-optimal orientation in SU(2)-symmetric systems. The ellipse rotation depends on the solid angle enclosed by the trajectory on the unit sphere, linking it to geometric phase. The framework applies across physical platforms; polarization-squeezed light with a continuously varying birefringent element is given as a concrete example.",
-          "tags": [
-            "quantum-metrology",
-            "squeezed-states",
-            "quantum-sensing",
-            "geometric-phase"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2607.28620v1"
-            }
-          ],
-          "published": "2026-07-30T17:59:17+00:00",
-          "score": 0.4367
-        }
-      ]
+      "cards": []
     }
   ]
 }
