@@ -1,11 +1,11 @@
 {
-  "date": "2026-08-01",
-  "generated_at": "2026-08-01T03:42:25.102943+00:00",
-  "summary_line": "1 must-know",
+  "date": "2026-08-03",
+  "generated_at": "2026-08-03T03:46:12.182169+00:00",
+  "summary_line": "3 worth knowing",
   "counts": {
-    "total": 1,
+    "total": 6,
     "headlines": 1,
-    "frontier": 0
+    "frontier": 5
   },
   "sections": [
     {
@@ -13,33 +13,148 @@
       "title": "Headlines",
       "cards": [
         {
-          "id": "7909c613945e",
-          "tier": "must_know",
+          "id": "266ea9598655",
+          "tier": "worth_knowing",
           "category": "headline",
-          "title": "Google DeepMind Launches Gemini Robotics 2: Whole-Body Control, Dexterity, and Multi-Robot Collaboration",
-          "why_it_matters": "As an AI/ML engineer, this is a flagship DeepMind release combining VLA models, embodied reasoning, and on-device adaptation — directly advancing the state of physical AI and robotics research.",
-          "summary": "DeepMind introduces three models: Gemini Robotics 2 (VLA for full humanoid control including legs and dexterous hands/grippers), Gemini Robotics ER 2 (VLM for multi-step planning and multi-robot teamwork), and Gemini Robotics On-Device 2 (efficient VLA with fast adaptation to new robot bodies in a few hours of data). ER 2 is available on Google AI Studio; VLA models are in early-access partner preview.",
+          "title": "Open-weight frontier heats up: Inkling (975B MoE), Tencent Hy3, Poolside Laguna S2.1, and DeepSeek V4 Flash update drop simultaneously",
+          "why_it_matters": "As an AI/ML engineer tracking open-weight model capabilities, this roundup covers four significant releases spanning MoE architectures, new permissive licenses, and Pareto-frontier efficiency gains you'll need to benchmark against.",
+          "summary": "Thinking Machines releases Inkling, a 975B-A41B multimodal MoE (text/image/audio in, text out) plus a 276B-A12B variant. Tencent's Hy3 (295B-A21B) switches to Apache 2. Poolside's Laguna S2.1 (118B-A8B) adopts OpenMDW license and fits a DGX Spark. DeepSeek V4 Flash gets a 0731 update, beating prior Pareto-frontier models.",
           "tags": [
-            "robotics",
-            "vla",
-            "deepmind",
-            "physical-ai"
+            "open-weights",
+            "moe",
+            "model-releases",
+            "frontier-models"
           ],
           "sources": [
             {
-              "name": "DeepMind",
-              "url": "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/"
+              "name": "Interconnects",
+              "url": "https://www.interconnects.ai/p/latest-open-artifacts-23-laguna-s21"
             }
           ],
-          "published": "2026-07-28T13:21:37+00:00",
-          "score": 0.9043
+          "published": "2026-08-02T13:01:40+00:00",
+          "score": 1.2223
         }
       ]
     },
     {
       "key": "frontier",
       "title": "Frontier & Papers",
-      "cards": []
+      "cards": [
+        {
+          "id": "00ed1767f9c5",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "TokTier: Stateful GPU Tokenization Cuts LLM Agent Time-to-First-Token by Up to 34%",
+          "why_it_matters": "If you're building or optimizing LLM serving infrastructure for agentic workloads, tokenization is a surprisingly large bottleneck—TokTier's exact-match stateful approach offers concrete, measured gains at production scale.",
+          "summary": "In high-cache agentic serving, tokenization can consume up to 64% of time-to-first-token. TokTier maintains session state, re-tokenizing only a small window on appends with a stable-boundary check, and runs exact BPE on GPU for full requests. Incremental repair runs 0.5–1.1 ms for 100K–3M characters (up to 437× faster than HuggingFace). With vLLM, median TTFT drops 16–34% and P99 drops 23%. Zero divergence across 1.5×10¹⁰ split checks.",
+          "tags": [
+            "llm-serving",
+            "inference",
+            "agents",
+            "tokenization"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2607.29678v1"
+            }
+          ],
+          "published": "2026-07-31T17:56:30+00:00",
+          "score": 0.6719
+        },
+        {
+          "id": "e36c30b898bc",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "ExtractBench: First Benchmark Scoring Accuracy, Completeness, Grounding, and Cost for Enterprise Document Extraction",
+          "why_it_matters": "Researchers and engineers building document-processing agents now have a rigorous multi-metric benchmark covering real enterprise document diversity, grounding traceability, and cost—gaps absent from prior extraction evals.",
+          "summary": "ExtractBench covers 4,869 pages across 370 enterprise documents, 8 domains, and 67 document types. It jointly scores value F1, record completeness, and word/page-level grounding F1 alongside cost. Commercial VLMs truncate long record lists; coding agents maintain accuracy at higher cost. LlamaExtract Agentic Plus ranks first on all three metrics with coding-agent accuracy at lower cost.",
+          "tags": [
+            "agents",
+            "benchmarks",
+            "document-extraction",
+            "enterprise-ai"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2607.29677v1"
+            }
+          ],
+          "published": "2026-07-31T17:55:58+00:00",
+          "score": 0.6718
+        },
+        {
+          "id": "285973c0fa95",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Online Shadow Tomography Now Matches Classical Adaptive Data Analysis Bounds",
+          "why_it_matters": "For researchers working on quantum ML or quantum computing, this closes a long-standing complexity gap and provides new tools for efficient quantum state estimation that could influence quantum algorithm design.",
+          "summary": "Prior online shadow tomography algorithms were suboptimal in all three parameters (m, d, ε). This work presents two algorithms matching the best classical rates for adaptive data analysis. The first achieves o(log²m)-dependence with poly(log(d)/ε) sample complexity; the second improves the prior best by a √m·log m factor. Key technical contribution is a quantum Efron–Stein decomposition framework for quantifying post-measurement damage.",
+          "tags": [
+            "quantum-computing",
+            "shadow-tomography",
+            "sample-complexity",
+            "quantum-ml"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2607.29686v1"
+            },
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2607.29680v1"
+            }
+          ],
+          "published": "2026-07-31T17:59:54+00:00",
+          "score": 0.2241
+        },
+        {
+          "id": "a60424cbbcc8",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "DP-GRAMS: Near-Optimal Differentially Private Mode Estimation via Noisy Mean-Shift Ascent",
+          "why_it_matters": "Researchers working on privacy-preserving ML will find this the first rigorous treatment of differentially private density mode recovery, with near-minimax-optimal rates and extensions to regression and clustering.",
+          "summary": "DP-GRAMS applies noisy gradient ascent on a differentially private score estimator using higher-order bias-reducing kernels, gradient clipping, and calibrated Gaussian noise. Assuming Hölder smoothness β>2, it recovers all population modes with high probability and achieves rates O((log n/n)^(2(β-1)/(d+2β))) plus a privacy-dependent term. Minimax lower bounds confirm near-optimality up to logarithmic factors. Extensions DP-PMS and DP-GRAMS-C handle modal regression and clustering.",
+          "tags": [
+            "differential-privacy",
+            "density-estimation",
+            "nonparametric",
+            "clustering"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2607.29675v1"
+            }
+          ],
+          "published": "2026-07-31T17:55:02+00:00",
+          "score": 0.2239
+        },
+        {
+          "id": "6ac06aeca3df",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "SignMuon: One-Bit Compression of Muon Optimizer Diverges in Theory but Wins in Practice",
+          "why_it_matters": "For researchers studying distributed training and gradient compression, this paper's rigorous separation between provably convergent and empirically superior compressed optimizers is an important cautionary result about error feedback with matrix-aware optimizers.",
+          "summary": "SignMuon compresses the Muon update to one bit per parameter (elementwise sign) and outperforms SignSGD empirically, but is proven to ascend even on linear functions. Signing before the LMO (MuonUSign, MuonSign) also diverges. Error feedback applied to Muon's output fails for every smoothness/step-size/momentum; applied to the gradient, EF21-MuonUSign and EF21-MuonSign achieve O(T^{-1/2}) rate. Yet on CIFAR-10 and nanoGPT, the provably divergent sign-after-LMO variant consistently outperforms the convergent ones.",
+          "tags": [
+            "optimization",
+            "distributed-training",
+            "gradient-compression",
+            "muon-optimizer"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2607.29674v1"
+            }
+          ],
+          "published": "2026-07-31T17:54:46+00:00",
+          "score": 0.2239
+        }
+      ]
     }
   ]
 }
