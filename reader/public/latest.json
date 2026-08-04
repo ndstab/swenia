@@ -1,7 +1,7 @@
 {
-  "date": "2026-08-03",
-  "generated_at": "2026-08-03T03:46:12.182169+00:00",
-  "summary_line": "3 worth knowing",
+  "date": "2026-08-04",
+  "generated_at": "2026-08-04T03:29:58.310472+00:00",
+  "summary_line": "1 must-know · 2 worth knowing",
   "counts": {
     "total": 6,
     "headlines": 1,
@@ -13,26 +13,26 @@
       "title": "Headlines",
       "cards": [
         {
-          "id": "266ea9598655",
-          "tier": "worth_knowing",
+          "id": "9df97dd7eca5",
+          "tier": "skim",
           "category": "headline",
-          "title": "Open-weight frontier heats up: Inkling (975B MoE), Tencent Hy3, Poolside Laguna S2.1, and DeepSeek V4 Flash update drop simultaneously",
-          "why_it_matters": "As an AI/ML engineer tracking open-weight model capabilities, this roundup covers four significant releases spanning MoE architectures, new permissive licenses, and Pareto-frontier efficiency gains you'll need to benchmark against.",
-          "summary": "Thinking Machines releases Inkling, a 975B-A41B multimodal MoE (text/image/audio in, text out) plus a 276B-A12B variant. Tencent's Hy3 (295B-A21B) switches to Apache 2. Poolside's Laguna S2.1 (118B-A8B) adopts OpenMDW license and fits a DGX Spark. DeepSeek V4 Flash gets a 0731 update, beating prior Pareto-frontier models.",
+          "title": "Interconnects Launches Artifacts Hub and Adoption Dashboard for Open Model Ecosystem",
+          "why_it_matters": "Gives you a single curated view of 792 open models with normalized adoption metrics, frontier intelligence scores, and a daily-updating US-vs-China download gap — directly useful for tracking the open ecosystem you work in.",
+          "summary": "Interconnects released two free tools: the Artifacts Hub (covering 792 models from the last two years, integrating Hugging Face data, OpenRouter inference tokens, Artificial Analysis intelligence scores, and a relative adoption metric) and an Adoption Dashboard showing daily-updated download and derivative counts by geography and organization, including the US-China gap first highlighted in their ATOM Project report.",
           "tags": [
-            "open-weights",
-            "moe",
-            "model-releases",
-            "frontier-models"
+            "open models",
+            "ecosystem",
+            "hugging face",
+            "model adoption"
           ],
           "sources": [
             {
               "name": "Interconnects",
-              "url": "https://www.interconnects.ai/p/latest-open-artifacts-23-laguna-s21"
+              "url": "https://www.interconnects.ai/p/introducing-our-artifacts-hub-and"
             }
           ],
-          "published": "2026-08-02T13:01:40+00:00",
-          "score": 1.2223
+          "published": "2026-08-03T14:03:08+00:00",
+          "score": 0.4148
         }
       ]
     },
@@ -41,118 +41,118 @@
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "00ed1767f9c5",
-          "tier": "worth_knowing",
+          "id": "f1218d476e20",
+          "tier": "must_know",
           "category": "frontier",
-          "title": "TokTier: Stateful GPU Tokenization Cuts LLM Agent Time-to-First-Token by Up to 34%",
-          "why_it_matters": "If you're building or optimizing LLM serving infrastructure for agentic workloads, tokenization is a surprisingly large bottleneck—TokTier's exact-match stateful approach offers concrete, measured gains at production scale.",
-          "summary": "In high-cache agentic serving, tokenization can consume up to 64% of time-to-first-token. TokTier maintains session state, re-tokenizing only a small window on appends with a stable-boundary check, and runs exact BPE on GPU for full requests. Incremental repair runs 0.5–1.1 ms for 100K–3M characters (up to 437× faster than HuggingFace). With vLLM, median TTFT drops 16–34% and P99 drops 23%. Zero divergence across 1.5×10¹⁰ split checks.",
+          "title": "AURORA-LM: Continuous-Latent Diffusion LM Achieves SOTA on OpenWebText and XSum",
+          "why_it_matters": "Continuous-latent diffusion for text remains an open architecture frontier; AURORA-LM's block-causal flow-matching approach and self-trajectory consistency trick are technically concrete advances worth tracking for anyone working on non-autoregressive generation.",
+          "summary": "AURORA-LM separates text representation (a Query-based Encoder-Decoder producing prefix-aligned latents) from distribution modeling (a Block-causal Diffusion Transformer using flow matching, generating left-to-right while denoising in parallel within blocks). Key innovations include restricting only the noisy-input pathway, noise-level calibration to latent width, and self-trajectory consistency. At 1B parameters it tops evaluated continuous and diffusion LMs on OpenWebText free generation and XSum summarization.",
           "tags": [
-            "llm-serving",
-            "inference",
-            "agents",
-            "tokenization"
+            "diffusion language models",
+            "continuous latents",
+            "architecture",
+            "nlg"
           ],
           "sources": [
             {
               "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2607.29678v1"
+              "url": "https://arxiv.org/abs/2608.02602v1"
             }
           ],
-          "published": "2026-07-31T17:56:30+00:00",
-          "score": 0.6719
+          "published": "2026-08-03T17:59:50+00:00",
+          "score": 2.6291
         },
         {
-          "id": "e36c30b898bc",
+          "id": "ac8c18d0f1b8",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "ExtractBench: First Benchmark Scoring Accuracy, Completeness, Grounding, and Cost for Enterprise Document Extraction",
-          "why_it_matters": "Researchers and engineers building document-processing agents now have a rigorous multi-metric benchmark covering real enterprise document diversity, grounding traceability, and cost—gaps absent from prior extraction evals.",
-          "summary": "ExtractBench covers 4,869 pages across 370 enterprise documents, 8 domains, and 67 document types. It jointly scores value F1, record completeness, and word/page-level grounding F1 alongside cost. Commercial VLMs truncate long record lists; coding agents maintain accuracy at higher cost. LlamaExtract Agentic Plus ranks first on all three metrics with coding-agent accuracy at lower cost.",
+          "title": "Tight Lower Bounds Proved for Estimating Uhlmann Fidelity, Trace Distance, and von Neumann Entropy",
+          "why_it_matters": "If you follow quantum ML or quantum information theory, this settles the dimension dependence in finite quantum de Finetti bounds left open since a 2007 CMP paper, with a proof technique — de Finetti as sum-of-squares rounding — that bridges quantum information and theoretical CS.",
+          "summary": "The paper proves optimal finite quantum de Finetti upper bounds for bosonic states, establishing that the trace-norm deviation scales as √(d−1)/(N−1) for two-copy marginals, and O(d/N) for arbitrary exchangeable states via purification. This resolves the dimension dependence left open by Christandl, König, Mitchison, and Renner (CMP 2007), with the proof framing de Finetti approximation as sum-of-squares rounding.",
           "tags": [
-            "agents",
+            "quantum information",
+            "de finetti",
+            "sum-of-squares",
+            "lower bounds"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2608.02600v1"
+            },
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2608.02590v1"
+            }
+          ],
+          "published": "2026-08-03T17:59:11+00:00",
+          "score": 1.3143
+        },
+        {
+          "id": "cd1ac3786b10",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "onepot-Bench 0: Proprietary Benchmark for LLMs on Wet-Lab Synthetic Chemistry",
+          "why_it_matters": "LLM evals for real laboratory science are sparse; this benchmark's use of private experimental data (avoiding training-corpus contamination) and its safety/refusal characterization component make it methodologically notable for anyone working on scientific agents or evals.",
+          "summary": "onepot-Bench 0 comprises three evaluations: ChemAbacus tests tool-free cheminformatics literacy and numerical reasoning; SynthRefusal probes safety and refusal across benign, controlled, and designer-drug targets; SynthBench evaluates reaction-outcome prediction and catalyst selection using private lab-generated data. The suite targets capabilities needed for reliable wet-lab AI agents and deliberately avoids publicly available data to reduce training-corpus contamination risk.",
+          "tags": [
             "benchmarks",
-            "document-extraction",
-            "enterprise-ai"
+            "chemistry",
+            "llm evals",
+            "scientific agents"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2608.02595v1"
+            }
+          ],
+          "published": "2026-08-03T17:58:27+00:00",
+          "score": 1.3141
+        },
+        {
+          "id": "22d5ad6db3ff",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Open Jupyter Framework Bridges AI and Power Systems Education with 590+ Live Attendees",
+          "why_it_matters": "Peripheral to core ML research, but the survey finding that 92% of practitioners hit barriers before running an AI model — and the traction (590+ live attendees) — signals a real gap between ML capability and domain deployment you may encounter in applied contexts.",
+          "summary": "The paper presents an open, executable module library of Jupyter notebooks covering DNNs for load-curve fitting, a CNN power-flow surrogate for a 5-bus system, DNN-assisted optimization, deep RL for battery storage, and PINNs for the swing equation. Motivated by a survey showing 92% of respondents face barriers and 94% want domain-specific courses, the IEEE PES webinar drew 590+ live attendees and the repo saw 344 visits within two weeks.",
+          "tags": [
+            "ai education",
+            "power systems",
+            "applied ml",
+            "open source"
           ],
           "sources": [
             {
               "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2607.29677v1"
+              "url": "https://arxiv.org/abs/2608.02599v1"
             }
           ],
-          "published": "2026-07-31T17:55:58+00:00",
-          "score": 0.6718
+          "published": "2026-08-03T17:59:09+00:00",
+          "score": 0.4381
         },
         {
-          "id": "285973c0fa95",
+          "id": "9e325f193918",
           "tier": "skim",
           "category": "frontier",
-          "title": "Online Shadow Tomography Now Matches Classical Adaptive Data Analysis Bounds",
-          "why_it_matters": "For researchers working on quantum ML or quantum computing, this closes a long-standing complexity gap and provides new tools for efficient quantum state estimation that could influence quantum algorithm design.",
-          "summary": "Prior online shadow tomography algorithms were suboptimal in all three parameters (m, d, ε). This work presents two algorithms matching the best classical rates for adaptive data analysis. The first achieves o(log²m)-dependence with poly(log(d)/ε) sample complexity; the second improves the prior best by a √m·log m factor. Key technical contribution is a quantum Efron–Stein decomposition framework for quantifying post-measurement damage.",
+          "title": "Argmax Principle Unifies Sum-of-Squares Convergence Analyses for Sphere Optimization",
+          "why_it_matters": "If you track theoretical ML or quantum complexity, this paper unifies SoS convergence proofs across Best Separable State, matrix 2→4 norm, and polynomial optimization under one framework, yielding sharper bounds and simpler proofs than prior separate analyses.",
+          "summary": "The paper introduces an argmax principle: given a feasible pseudo-expectation, maximize a high-order pseudo-moment polynomial over the sphere; its maximizers are rounding candidates whose optimality conditions govern SoS convergence. Results include a degree-O(√(n/ε)) SoS analysis for Best Separable State (improving Barak-Kothari-Steurer STOC'17), a multiplicative (1+ε) approximation for the matrix 2→4 norm, and a rederivation of Bhattiprolu et al. (FOCS'17) polynomial optimization convergence with a shorter proof.",
           "tags": [
-            "quantum-computing",
-            "shadow-tomography",
-            "sample-complexity",
-            "quantum-ml"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2607.29686v1"
-            },
-            {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2607.29680v1"
-            }
-          ],
-          "published": "2026-07-31T17:59:54+00:00",
-          "score": 0.2241
-        },
-        {
-          "id": "a60424cbbcc8",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "DP-GRAMS: Near-Optimal Differentially Private Mode Estimation via Noisy Mean-Shift Ascent",
-          "why_it_matters": "Researchers working on privacy-preserving ML will find this the first rigorous treatment of differentially private density mode recovery, with near-minimax-optimal rates and extensions to regression and clustering.",
-          "summary": "DP-GRAMS applies noisy gradient ascent on a differentially private score estimator using higher-order bias-reducing kernels, gradient clipping, and calibrated Gaussian noise. Assuming Hölder smoothness β>2, it recovers all population modes with high probability and achieves rates O((log n/n)^(2(β-1)/(d+2β))) plus a privacy-dependent term. Minimax lower bounds confirm near-optimality up to logarithmic factors. Extensions DP-PMS and DP-GRAMS-C handle modal regression and clustering.",
-          "tags": [
-            "differential-privacy",
-            "density-estimation",
-            "nonparametric",
-            "clustering"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2607.29675v1"
-            }
-          ],
-          "published": "2026-07-31T17:55:02+00:00",
-          "score": 0.2239
-        },
-        {
-          "id": "6ac06aeca3df",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "SignMuon: One-Bit Compression of Muon Optimizer Diverges in Theory but Wins in Practice",
-          "why_it_matters": "For researchers studying distributed training and gradient compression, this paper's rigorous separation between provably convergent and empirically superior compressed optimizers is an important cautionary result about error feedback with matrix-aware optimizers.",
-          "summary": "SignMuon compresses the Muon update to one bit per parameter (elementwise sign) and outperforms SignSGD empirically, but is proven to ascend even on linear functions. Signing before the LMO (MuonUSign, MuonSign) also diverges. Error feedback applied to Muon's output fails for every smoothness/step-size/momentum; applied to the gradient, EF21-MuonUSign and EF21-MuonSign achieve O(T^{-1/2}) rate. Yet on CIFAR-10 and nanoGPT, the provably divergent sign-after-LMO variant consistently outperforms the convergent ones.",
-          "tags": [
+            "sum-of-squares",
             "optimization",
-            "distributed-training",
-            "gradient-compression",
-            "muon-optimizer"
+            "quantum complexity",
+            "theoretical ml"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2607.29674v1"
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2608.02594v1"
             }
           ],
-          "published": "2026-07-31T17:54:46+00:00",
-          "score": 0.2239
+          "published": "2026-08-03T17:58:00+00:00",
+          "score": 0.438
         }
       ]
     }
