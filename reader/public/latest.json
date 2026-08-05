@@ -1,11 +1,11 @@
 {
-  "date": "2026-08-04",
-  "generated_at": "2026-08-04T03:29:58.310472+00:00",
-  "summary_line": "1 must-know · 2 worth knowing",
+  "date": "2026-08-05",
+  "generated_at": "2026-08-05T03:25:02.915055+00:00",
+  "summary_line": "2 must-know · 4 worth knowing",
   "counts": {
-    "total": 6,
+    "total": 7,
     "headlines": 1,
-    "frontier": 5
+    "frontier": 6
   },
   "sections": [
     {
@@ -13,25 +13,25 @@
       "title": "Headlines",
       "cards": [
         {
-          "id": "9df97dd7eca5",
+          "id": "ea7f6df3de1a",
           "tier": "skim",
           "category": "headline",
-          "title": "Interconnects Launches Artifacts Hub and Adoption Dashboard for Open Model Ecosystem",
-          "why_it_matters": "Gives you a single curated view of 792 open models with normalized adoption metrics, frontier intelligence scores, and a daily-updating US-vs-China download gap — directly useful for tracking the open ecosystem you work in.",
-          "summary": "Interconnects released two free tools: the Artifacts Hub (covering 792 models from the last two years, integrating Hugging Face data, OpenRouter inference tokens, Artificial Analysis intelligence scores, and a relative adoption metric) and an Adoption Dashboard showing daily-updated download and derivative counts by geography and organization, including the US-China gap first highlighted in their ATOM Project report.",
+          "title": "LFM2.5-2.6B: Liquid AI Launches Edge-Optimized Agentic Model Beating Models 4× Its Size",
+          "why_it_matters": "If you're building or evaluating on-device AI agents, this is a concrete new option: a sub-2.5GB model that tops instruction-following and most tool-use benchmarks against models up to ~10B parameters.",
+          "summary": "LFM2.5-2.6B is pretrained on ~34T tokens with 128K context and a four-stage post-training pipeline: two rounds of SFT, per-domain teacher specialization, multi-domain on-policy distillation, and agentic RL inside real harnesses. It achieves 220 tok/s on Apple M5 Max and 113 tok/s on AMD Ryzen CPU, under 2.5GB RAM. Leads all tested instruction-following and nearly all tool-use benchmarks; coding remains a weak point.",
           "tags": [
-            "open models",
-            "ecosystem",
-            "hugging face",
-            "model adoption"
+            "edge-ai",
+            "agents",
+            "model-release",
+            "reinforcement-learning"
           ],
           "sources": [
             {
-              "name": "Interconnects",
-              "url": "https://www.interconnects.ai/p/introducing-our-artifacts-hub-and"
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/LiquidAI/lfm2-5-2-6b"
             }
           ],
-          "published": "2026-08-03T14:03:08+00:00",
+          "published": "2026-08-04T13:58:29+00:00",
           "score": 0.4148
         }
       ]
@@ -41,118 +41,136 @@
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "f1218d476e20",
+          "id": "4c9e04fa69cd",
           "tier": "must_know",
           "category": "frontier",
-          "title": "AURORA-LM: Continuous-Latent Diffusion LM Achieves SOTA on OpenWebText and XSum",
-          "why_it_matters": "Continuous-latent diffusion for text remains an open architecture frontier; AURORA-LM's block-causal flow-matching approach and self-trajectory consistency trick are technically concrete advances worth tracking for anyone working on non-autoregressive generation.",
-          "summary": "AURORA-LM separates text representation (a Query-based Encoder-Decoder producing prefix-aligned latents) from distribution modeling (a Block-causal Diffusion Transformer using flow matching, generating left-to-right while denoising in parallel within blocks). Key innovations include restricting only the noisy-input pathway, noise-level calibration to latent width, and self-trajectory consistency. At 1B parameters it tops evaluated continuous and diffusion LMs on OpenWebText free generation and XSum summarization.",
+          "title": "WorldCup Arena: 4,494 Leakage-Free Predictions From 6 Frontier LLMs Across 2026 FIFA World Cup",
+          "why_it_matters": "A rare prospective, leakage-free evaluation design — no answer existed at query time — offering clean behavioral signal on frontier LLM forecasting that complements retrospective benchmarks.",
+          "summary": "Six frontier LLMs with extended thinking and web search each predicted seven markets per match across 104 World Cup matches before kickoff, yielding 4,494 scored predictions. Average match-outcome accuracy was 63.9%, matching a naive bookmaker-favorite heuristic. Models over-agreed with each other, under-committed to draws and goals, and were less accurate in close matches despite richer briefings. Inter-model rankings were narrow and unstable in the middle.",
           "tags": [
-            "diffusion language models",
-            "continuous latents",
-            "architecture",
-            "nlg"
+            "benchmarks",
+            "llm-evaluation",
+            "forecasting",
+            "frontier-models"
           ],
           "sources": [
             {
               "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2608.02602v1"
+              "url": "https://arxiv.org/abs/2608.04008v1"
             }
           ],
-          "published": "2026-08-03T17:59:50+00:00",
-          "score": 2.6291
+          "published": "2026-08-04T17:59:55+00:00",
+          "score": 2.6321
         },
         {
-          "id": "ac8c18d0f1b8",
-          "tier": "worth_knowing",
+          "id": "8c30a3a81cd4",
+          "tier": "must_know",
           "category": "frontier",
-          "title": "Tight Lower Bounds Proved for Estimating Uhlmann Fidelity, Trace Distance, and von Neumann Entropy",
-          "why_it_matters": "If you follow quantum ML or quantum information theory, this settles the dimension dependence in finite quantum de Finetti bounds left open since a 2007 CMP paper, with a proof technique — de Finetti as sum-of-squares rounding — that bridges quantum information and theoretical CS.",
-          "summary": "The paper proves optimal finite quantum de Finetti upper bounds for bosonic states, establishing that the trace-norm deviation scales as √(d−1)/(N−1) for two-copy marginals, and O(d/N) for arbitrary exchangeable states via purification. This resolves the dimension dependence left open by Christandl, König, Mitchison, and Renner (CMP 2007), with the proof framing de Finetti approximation as sum-of-squares rounding.",
+          "title": "Systematic Taxonomy of Test-Time Scaling: Three Structural Regimes, Evaluation Principles, and 2B+ Reasoning Traces",
+          "why_it_matters": "Test-time scaling is central to modern reasoning LLMs; this paper gives a formal framework distinguishing the structurally different algorithms often conflated under one label, directly useful for designing and reporting your own TTS experiments.",
+          "summary": "The paper formalizes test-time scaling as budgeted inference over the prefix tree of an autoregressive model, distinguishing three regimes: single-trajectory sequential scaling, leaf-level scaling with terminal reduction, and prefix-level scaling. It proposes evaluation profiles separating end-to-end system performance from candidate-bank diagnostics, defines reproducibility requirements for inference protocols, and releases over 2 billion reasoning traces with verifier and token-level signals.",
           "tags": [
-            "quantum information",
-            "de finetti",
-            "sum-of-squares",
-            "lower bounds"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2608.02600v1"
-            },
-            {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2608.02590v1"
-            }
-          ],
-          "published": "2026-08-03T17:59:11+00:00",
-          "score": 1.3143
-        },
-        {
-          "id": "cd1ac3786b10",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "onepot-Bench 0: Proprietary Benchmark for LLMs on Wet-Lab Synthetic Chemistry",
-          "why_it_matters": "LLM evals for real laboratory science are sparse; this benchmark's use of private experimental data (avoiding training-corpus contamination) and its safety/refusal characterization component make it methodologically notable for anyone working on scientific agents or evals.",
-          "summary": "onepot-Bench 0 comprises three evaluations: ChemAbacus tests tool-free cheminformatics literacy and numerical reasoning; SynthRefusal probes safety and refusal across benign, controlled, and designer-drug targets; SynthBench evaluates reaction-outcome prediction and catalyst selection using private lab-generated data. The suite targets capabilities needed for reliable wet-lab AI agents and deliberately avoids publicly available data to reduce training-corpus contamination risk.",
-          "tags": [
-            "benchmarks",
-            "chemistry",
-            "llm evals",
-            "scientific agents"
+            "test-time-scaling",
+            "reasoning",
+            "evaluation",
+            "inference"
           ],
           "sources": [
             {
               "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2608.02595v1"
+              "url": "https://arxiv.org/abs/2608.04001v1"
             }
           ],
-          "published": "2026-08-03T17:58:27+00:00",
-          "score": 1.3141
+          "published": "2026-08-04T17:57:20+00:00",
+          "score": 2.6306
         },
         {
-          "id": "22d5ad6db3ff",
-          "tier": "skim",
+          "id": "003d0e5b0c7d",
+          "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Open Jupyter Framework Bridges AI and Power Systems Education with 590+ Live Attendees",
-          "why_it_matters": "Peripheral to core ML research, but the survey finding that 92% of practitioners hit barriers before running an AI model — and the traction (590+ live attendees) — signals a real gap between ML capability and domain deployment you may encounter in applied contexts.",
-          "summary": "The paper presents an open, executable module library of Jupyter notebooks covering DNNs for load-curve fitting, a CNN power-flow surrogate for a 5-bus system, DNN-assisted optimization, deep RL for battery storage, and PINNs for the swing equation. Motivated by a survey showing 92% of respondents face barriers and 94% want domain-specific courses, the IEEE PES webinar drew 590+ live attendees and the repo saw 344 visits within two weeks.",
+          "title": "ParVL: Parallel Branch Scaling for Multimodal LLMs Without Adding Parameters",
+          "why_it_matters": "As an ML engineer working with VLMs, this offers a parameter-efficient alternative to scaling model size, with task-specific compute allocation between vision and language components.",
+          "summary": "ParVL reuses shared ViT and LLM backbone parameters across multiple parallel vision and language branches, adding only branch-specific prefix parameters. Trained end-to-end on ~13B tokens via full-parameter SFT, it improves multimodal performance over single-branch baselines. The optimal vision-language compute allocation is shown to vary by task, motivating dynamic allocation strategies.",
           "tags": [
-            "ai education",
-            "power systems",
-            "applied ml",
-            "open source"
+            "multimodal",
+            "vlm",
+            "scaling",
+            "architecture"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2608.02599v1"
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2608.04010v1"
             }
           ],
-          "published": "2026-08-03T17:59:09+00:00",
-          "score": 0.4381
+          "published": "2026-08-04T17:59:58+00:00",
+          "score": 1.3161
         },
         {
-          "id": "9e325f193918",
-          "tier": "skim",
+          "id": "aba305b51f30",
+          "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Argmax Principle Unifies Sum-of-Squares Convergence Analyses for Sphere Optimization",
-          "why_it_matters": "If you track theoretical ML or quantum complexity, this paper unifies SoS convergence proofs across Best Separable State, matrix 2→4 norm, and polynomial optimization under one framework, yielding sharper bounds and simpler proofs than prior separate analyses.",
-          "summary": "The paper introduces an argmax principle: given a feasible pseudo-expectation, maximize a high-order pseudo-moment polynomial over the sphere; its maximizers are rounding candidates whose optimality conditions govern SoS convergence. Results include a degree-O(√(n/ε)) SoS analysis for Best Separable State (improving Barak-Kothari-Steurer STOC'17), a multiplicative (1+ε) approximation for the matrix 2→4 norm, and a rederivation of Bhattiprolu et al. (FOCS'17) polynomial optimization convergence with a shorter proof.",
+          "title": "SocietyBench: New Benchmark Tests LLMs on Counterfactual Social-Event Forecasting",
+          "why_it_matters": "As an AI researcher, this reveals a concrete gap in frontier LLM capabilities — social forecasting — distinct from task completion, with a leakage-resistant counterfactual design worth studying for eval methodology.",
+          "summary": "SocietyBench converts real social-event timelines into counterfactual worlds by anonymizing entities and shifting dates, then scores forecasts on two independent 100-point axes: probability calibration and temporal accuracy. Across five events and 125 prediction points, the best of six frontier LLMs scores 75.0/100 against a 50-point trivial anchor. Three agent frameworks built on the same base model failed to improve over it.",
           "tags": [
-            "sum-of-squares",
-            "optimization",
-            "quantum complexity",
-            "theoretical ml"
+            "benchmarks",
+            "llm-evaluation",
+            "agents",
+            "forecasting"
           ],
           "sources": [
             {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2608.02594v1"
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2608.04009v1"
             }
           ],
-          "published": "2026-08-03T17:58:00+00:00",
-          "score": 0.438
+          "published": "2026-08-04T17:59:56+00:00",
+          "score": 1.3161
+        },
+        {
+          "id": "be42337ebe50",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "TurnSight: Turn-Level Hindsight Self-Distillation Improves Tool-Integrated Reasoning RL",
+          "why_it_matters": "For researchers working on RL-trained reasoning agents, TurnSight addresses the credit-assignment problem in multi-turn tool use without requiring ground-truth answer leakage into supervision.",
+          "summary": "TurnSight replaces trajectory-level RL supervision with turn-level hindsight derived directly from execution state, constructing multiple hindsight views at different lookahead horizons and selecting supervision via cross-horizon directional agreement. The resulting signal normalizes across sibling rollouts and modulates RL advantages while preserving optimization direction. Evaluated on three benchmarks; code is released.",
+          "tags": [
+            "reinforcement-learning",
+            "tool-use",
+            "reasoning",
+            "rl-training"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2608.04007v1"
+            }
+          ],
+          "published": "2026-08-04T17:59:21+00:00",
+          "score": 1.3159
+        },
+        {
+          "id": "6a95ac2c4a8a",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "PAST-Bench: First Systematic Benchmark for Recursive Self-Improvement in Personal AI Agents",
+          "why_it_matters": "RSI in persistent agents is a key open problem in agentic AI; PAST-Bench provides a reproducible evaluation framework isolating whether retained experience actually improves behavior, not just whether agents remember things.",
+          "summary": "PAST-Bench tests 26 scenarios and 204 episodes across memory, procedural reuse, information gathering, and update, toggling retained experience on and off under matched conditions. Across seven base models and four agent frameworks, improvement from retained experience is real but uneven. The paper also introduces Hermes+, an extended agent that raises average gain from retained experience, with strongest gains on tasks requiring replacement of outdated state.",
+          "tags": [
+            "agents",
+            "benchmarks",
+            "recursive-self-improvement",
+            "memory"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2608.04003v1"
+            }
+          ],
+          "published": "2026-08-04T17:58:05+00:00",
+          "score": 1.3155
         }
       ]
     }
