@@ -1,176 +1,135 @@
 {
-  "date": "2026-08-05",
-  "generated_at": "2026-08-05T03:25:02.915055+00:00",
-  "summary_line": "2 must-know · 4 worth knowing",
+  "date": "2026-08-06",
+  "generated_at": "2026-08-06T03:28:17.001794+00:00",
+  "summary_line": "4 worth knowing",
   "counts": {
-    "total": 7,
-    "headlines": 1,
-    "frontier": 6
+    "total": 5,
+    "headlines": 0,
+    "frontier": 5
   },
   "sections": [
     {
       "key": "headlines",
       "title": "Headlines",
-      "cards": [
-        {
-          "id": "ea7f6df3de1a",
-          "tier": "skim",
-          "category": "headline",
-          "title": "LFM2.5-2.6B: Liquid AI Launches Edge-Optimized Agentic Model Beating Models 4× Its Size",
-          "why_it_matters": "If you're building or evaluating on-device AI agents, this is a concrete new option: a sub-2.5GB model that tops instruction-following and most tool-use benchmarks against models up to ~10B parameters.",
-          "summary": "LFM2.5-2.6B is pretrained on ~34T tokens with 128K context and a four-stage post-training pipeline: two rounds of SFT, per-domain teacher specialization, multi-domain on-policy distillation, and agentic RL inside real harnesses. It achieves 220 tok/s on Apple M5 Max and 113 tok/s on AMD Ryzen CPU, under 2.5GB RAM. Leads all tested instruction-following and nearly all tool-use benchmarks; coding remains a weak point.",
-          "tags": [
-            "edge-ai",
-            "agents",
-            "model-release",
-            "reinforcement-learning"
-          ],
-          "sources": [
-            {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/LiquidAI/lfm2-5-2-6b"
-            }
-          ],
-          "published": "2026-08-04T13:58:29+00:00",
-          "score": 0.4148
-        }
-      ]
+      "cards": []
     },
     {
       "key": "frontier",
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "4c9e04fa69cd",
-          "tier": "must_know",
+          "id": "dfcceb4e3e4a",
+          "tier": "worth_knowing",
           "category": "frontier",
-          "title": "WorldCup Arena: 4,494 Leakage-Free Predictions From 6 Frontier LLMs Across 2026 FIFA World Cup",
-          "why_it_matters": "A rare prospective, leakage-free evaluation design — no answer existed at query time — offering clean behavioral signal on frontier LLM forecasting that complements retrospective benchmarks.",
-          "summary": "Six frontier LLMs with extended thinking and web search each predicted seven markets per match across 104 World Cup matches before kickoff, yielding 4,494 scored predictions. Average match-outcome accuracy was 63.9%, matching a naive bookmaker-favorite heuristic. Models over-agreed with each other, under-committed to draws and goals, and were less accurate in close matches despite richer briefings. Inter-model rankings were narrow and unstable in the middle.",
+          "title": "Reasoning Core: 50 Procedural Generators for Completion-Supervised Reasoning Fine-Tuning",
+          "why_it_matters": "If you're building or evaluating post-training pipelines, this benchmarks procedural data quality in a way that directly informs dataset design decisions.",
+          "summary": "Reasoning Core offers 50 procedural generators across math, logic, planning, formal languages, games, and code, with semantic scorers and difficulty controls. In a 3B-parameter comparison it outperforms Procedural Warmup, Reasoning Gym, and SynLogic on DROP, LogiQA, and ARC-Challenge. Audits reveal subtle generation-rendering-scoring mismatches across all collections, flagging compact targets and calibrated difficulty as key design factors.",
           "tags": [
-            "benchmarks",
-            "llm-evaluation",
-            "forecasting",
-            "frontier-models"
+            "post-training",
+            "reasoning",
+            "synthetic-data",
+            "fine-tuning"
           ],
           "sources": [
             {
               "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2608.04008v1"
+              "url": "https://arxiv.org/abs/2608.05148v1"
+            },
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2608.05139v1"
             }
           ],
-          "published": "2026-08-04T17:59:55+00:00",
-          "score": 2.6321
+          "published": "2026-08-05T17:59:44+00:00",
+          "score": 1.315
         },
         {
-          "id": "8c30a3a81cd4",
-          "tier": "must_know",
+          "id": "d916e323cc99",
+          "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Systematic Taxonomy of Test-Time Scaling: Three Structural Regimes, Evaluation Principles, and 2B+ Reasoning Traces",
-          "why_it_matters": "Test-time scaling is central to modern reasoning LLMs; this paper gives a formal framework distinguishing the structurally different algorithms often conflated under one label, directly useful for designing and reporting your own TTS experiments.",
-          "summary": "The paper formalizes test-time scaling as budgeted inference over the prefix tree of an autoregressive model, distinguishing three regimes: single-trajectory sequential scaling, leaf-level scaling with terminal reduction, and prefix-level scaling. It proposes evaluation profiles separating end-to-end system performance from candidate-bank diagnostics, defines reproducibility requirements for inference protocols, and releases over 2 billion reasoning traces with verifier and token-level signals.",
+          "title": "Cavity-Free Quantum Interconnect Using Rydberg Neutral Atoms Hits >3×10⁵ s⁻¹ Entanglement Rate",
+          "why_it_matters": "For researchers tracking quantum networking hardware, this cavity-free architecture achieves entanglement rates approaching two-qubit gate speeds on current neutral-atom processors, a critical scalability threshold.",
+          "summary": "The proposed interconnect exploits Rydberg-state dipole-dipole interactions in ytterbium atoms to entangle stationary qubits with propagating photons without an optical cavity. Theoretical analysis shows entanglement-generation rates above 3×10⁵ s⁻¹ are achievable, approaching rates compatible with native two-qubit gates on neutral-atom processors, with inherent design flexibility for distributed quantum networks.",
           "tags": [
-            "test-time-scaling",
-            "reasoning",
-            "evaluation",
-            "inference"
+            "quantum-computing",
+            "neutral-atoms",
+            "quantum-networking",
+            "rydberg"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2608.05147v1"
+            }
+          ],
+          "published": "2026-08-05T17:59:38+00:00",
+          "score": 1.315
+        },
+        {
+          "id": "2b4a8fbd8f76",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Argus Agentic Runtime Hits 78% on SWE-Bench Pro with Fixed-Weight Self-Evolution via Verified State",
+          "why_it_matters": "A working researcher building or evaluating AI agents will want to study how Argus's verification-gated self-evolution achieves efficiency gains and recovery without any weight updates.",
+          "summary": "Argus uses Manager, Planner, Engineer, and Reviewer roles over durable project state, admitting memories and skills only after role-owned review. On GPT-5.5, it scores ~78% on SWE-Bench Pro vs. 59% for Direct Copilot using 1.41× tokens; after self-evolution, mature waves use 21% fewer solve-input tokens and 15% less active workflow time, with 34 verifier recoveries and 22 review-loop rescues recorded.",
+          "tags": [
+            "agents",
+            "long-horizon-reasoning",
+            "self-evolution",
+            "benchmarks"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2608.05144v1"
+            }
+          ],
+          "published": "2026-08-05T17:58:58+00:00",
+          "score": 1.3148
+        },
+        {
+          "id": "608c2f43528a",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "OctoLong: Cross-Repository Code Contexts via AST+LSP Pipeline Boosts Long-Context LM Performance",
+          "why_it_matters": "For engineers training or evaluating long-context code models, the finding that replacing just 12% of standard training data with dependency-rich cross-repo contexts yields substantial gains is immediately actionable.",
+          "summary": "OctoLong uses an AST parser, language server, and package manager to recursively retrieve code references, generating millions-of-token dependency-rich contexts. Models from 600M to 14B parameters are mid-trained on ~50B tokens (including ~6.2B OctoLong tokens) then instruction-tuned on ~10B tokens. Replacing 12% of traditional context-extension data with OctoLong data improves long-range retrieval, state tracking, repo-level understanding, and agentic tasks versus 18 open-weight baselines.",
+          "tags": [
+            "long-context",
+            "code-models",
+            "mid-training",
+            "context-engineering"
           ],
           "sources": [
             {
               "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2608.04001v1"
+              "url": "https://arxiv.org/abs/2608.05141v1"
             }
           ],
-          "published": "2026-08-04T17:57:20+00:00",
-          "score": 2.6306
+          "published": "2026-08-05T17:58:15+00:00",
+          "score": 1.3146
         },
         {
-          "id": "003d0e5b0c7d",
-          "tier": "worth_knowing",
+          "id": "d012b425430e",
+          "tier": "skim",
           "category": "frontier",
-          "title": "ParVL: Parallel Branch Scaling for Multimodal LLMs Without Adding Parameters",
-          "why_it_matters": "As an ML engineer working with VLMs, this offers a parameter-efficient alternative to scaling model size, with task-specific compute allocation between vision and language components.",
-          "summary": "ParVL reuses shared ViT and LLM backbone parameters across multiple parallel vision and language branches, adding only branch-specific prefix parameters. Trained end-to-end on ~13B tokens via full-parameter SFT, it improves multimodal performance over single-branch baselines. The optimal vision-language compute allocation is shown to vary by task, motivating dynamic allocation strategies.",
+          "title": "Constant-Depth Circuits Prepare Non-Abelian Fractional Quantum Hall States on 156-Qubit IBM Heron",
+          "why_it_matters": "For researchers at the quantum ML and quantum hardware frontier, the counterintuitive result that exotic non-Abelian FQH states are cheaper to prepare than Abelian ones has direct implications for topological quantum computation strategies.",
+          "summary": "A systematic framework prepares 18 families of FQH states on quantum circuits with two-qubit depth independent of system size for clustered non-Abelian states, while the Abelian Laughlin state requires linear-depth sequential circuits. The parafermionic Read–Rezayi Z₃ state is held at depth 3 from 8 to 118 qubits; a 154-qubit, 104-electron Read–Rezayi Z₄ state is demonstrated. Experiments on IBM Heron recover expected fractional quasihole charges and non-Abelian e/4 quasihole braiding data.",
           "tags": [
-            "multimodal",
-            "vlm",
-            "scaling",
-            "architecture"
+            "quantum-computing",
+            "topological-matter",
+            "quantum-hardware",
+            "non-abelian-anyons"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2608.04010v1"
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2608.05140v1"
             }
           ],
-          "published": "2026-08-04T17:59:58+00:00",
-          "score": 1.3161
-        },
-        {
-          "id": "aba305b51f30",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "SocietyBench: New Benchmark Tests LLMs on Counterfactual Social-Event Forecasting",
-          "why_it_matters": "As an AI researcher, this reveals a concrete gap in frontier LLM capabilities — social forecasting — distinct from task completion, with a leakage-resistant counterfactual design worth studying for eval methodology.",
-          "summary": "SocietyBench converts real social-event timelines into counterfactual worlds by anonymizing entities and shifting dates, then scores forecasts on two independent 100-point axes: probability calibration and temporal accuracy. Across five events and 125 prediction points, the best of six frontier LLMs scores 75.0/100 against a 50-point trivial anchor. Three agent frameworks built on the same base model failed to improve over it.",
-          "tags": [
-            "benchmarks",
-            "llm-evaluation",
-            "agents",
-            "forecasting"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2608.04009v1"
-            }
-          ],
-          "published": "2026-08-04T17:59:56+00:00",
-          "score": 1.3161
-        },
-        {
-          "id": "be42337ebe50",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "TurnSight: Turn-Level Hindsight Self-Distillation Improves Tool-Integrated Reasoning RL",
-          "why_it_matters": "For researchers working on RL-trained reasoning agents, TurnSight addresses the credit-assignment problem in multi-turn tool use without requiring ground-truth answer leakage into supervision.",
-          "summary": "TurnSight replaces trajectory-level RL supervision with turn-level hindsight derived directly from execution state, constructing multiple hindsight views at different lookahead horizons and selecting supervision via cross-horizon directional agreement. The resulting signal normalizes across sibling rollouts and modulates RL advantages while preserving optimization direction. Evaluated on three benchmarks; code is released.",
-          "tags": [
-            "reinforcement-learning",
-            "tool-use",
-            "reasoning",
-            "rl-training"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2608.04007v1"
-            }
-          ],
-          "published": "2026-08-04T17:59:21+00:00",
-          "score": 1.3159
-        },
-        {
-          "id": "6a95ac2c4a8a",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "PAST-Bench: First Systematic Benchmark for Recursive Self-Improvement in Personal AI Agents",
-          "why_it_matters": "RSI in persistent agents is a key open problem in agentic AI; PAST-Bench provides a reproducible evaluation framework isolating whether retained experience actually improves behavior, not just whether agents remember things.",
-          "summary": "PAST-Bench tests 26 scenarios and 204 episodes across memory, procedural reuse, information gathering, and update, toggling retained experience on and off under matched conditions. Across seven base models and four agent frameworks, improvement from retained experience is real but uneven. The paper also introduces Hermes+, an extended agent that raises average gain from retained experience, with strongest gains on tasks requiring replacement of outdated state.",
-          "tags": [
-            "agents",
-            "benchmarks",
-            "recursive-self-improvement",
-            "memory"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2608.04003v1"
-            }
-          ],
-          "published": "2026-08-04T17:58:05+00:00",
-          "score": 1.3155
+          "published": "2026-08-05T17:57:39+00:00",
+          "score": 0.4381
         }
       ]
     }
