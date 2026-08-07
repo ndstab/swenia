@@ -1,135 +1,88 @@
 {
-  "date": "2026-08-06",
-  "generated_at": "2026-08-06T03:28:17.001794+00:00",
-  "summary_line": "4 worth knowing",
+  "date": "2026-08-07",
+  "generated_at": "2026-08-07T03:12:19.584933+00:00",
+  "summary_line": "1 worth knowing",
   "counts": {
-    "total": 5,
-    "headlines": 0,
-    "frontier": 5
+    "total": 3,
+    "headlines": 2,
+    "frontier": 1
   },
   "sections": [
     {
       "key": "headlines",
       "title": "Headlines",
-      "cards": []
+      "cards": [
+        {
+          "id": "7fa201e30c7e",
+          "tier": "worth_knowing",
+          "category": "headline",
+          "title": "Google DeepMind Open-Sources WeatherNext: Cyclone Forecasting Model That Adds One Day of Predictive Accuracy",
+          "why_it_matters": "A published Nature result with real operational deployment and open-source release is a landmark for ML-in-science; the architecture choices — co-training on 20TB atmospheric data plus IBTrACS, using Functional Generative Networks for ensembles — are technically instructive for applied ML researchers.",
+          "summary": "WeatherNext, published in Nature, achieves state-of-the-art cyclone track, intensity, and wind-structure prediction. Its 3-day forecasts match what prior models achieved at 2 days — roughly a decade of meteorological progress. The model uses Functional Generative Networks (FGNs), trains on ~20TB of atmospheric data and ~5,000 historical storms (IBTrACS), and generates a 15-day forecast in under a minute on a TPU. WeatherNext 2 and WeatherNext Cyclones are now open-sourced.",
+          "tags": [
+            "weather-ai",
+            "open-source",
+            "deepmind",
+            "scientific-ml"
+          ],
+          "sources": [
+            {
+              "name": "DeepMind",
+              "url": "https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/"
+            }
+          ],
+          "published": "2026-08-06T15:06:15+00:00",
+          "score": 1.2679
+        },
+        {
+          "id": "72ea094fa822",
+          "tier": "skim",
+          "category": "headline",
+          "title": "Baseten Joins Hugging Face Inference Providers with Support for DeepSeek, Kimi, GLM Models",
+          "why_it_matters": "Gives you a direct, low-friction path to run frontier open-weight models like DeepSeek V4 Flash via HF's router or your own Baseten key, with zero extra markup on routed requests.",
+          "summary": "Baseten is now a supported Inference Provider on the HF Hub, enabling serverless access to models including Kimi K3, DeepSeek V4 Flash, and GLM-5.2 for conversational and text-generation tasks. Accessible via huggingface_hub (>=1.26.1) and @huggingface/inference JS SDK. Routed requests pass through HF with no added markup; direct requests bill to your Baseten account.",
+          "tags": [
+            "inference",
+            "open-weight",
+            "infrastructure",
+            "hugging-face"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/baseten"
+            }
+          ],
+          "published": "2026-08-06T00:00:00+00:00",
+          "score": 0.3427
+        }
+      ]
     },
     {
       "key": "frontier",
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "dfcceb4e3e4a",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "Reasoning Core: 50 Procedural Generators for Completion-Supervised Reasoning Fine-Tuning",
-          "why_it_matters": "If you're building or evaluating post-training pipelines, this benchmarks procedural data quality in a way that directly informs dataset design decisions.",
-          "summary": "Reasoning Core offers 50 procedural generators across math, logic, planning, formal languages, games, and code, with semantic scorers and difficulty controls. In a 3B-parameter comparison it outperforms Procedural Warmup, Reasoning Gym, and SynLogic on DROP, LogiQA, and ARC-Challenge. Audits reveal subtle generation-rendering-scoring mismatches across all collections, flagging compact targets and calibrated difficulty as key design factors.",
-          "tags": [
-            "post-training",
-            "reasoning",
-            "synthetic-data",
-            "fine-tuning"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2608.05148v1"
-            },
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2608.05139v1"
-            }
-          ],
-          "published": "2026-08-05T17:59:44+00:00",
-          "score": 1.315
-        },
-        {
-          "id": "d916e323cc99",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "Cavity-Free Quantum Interconnect Using Rydberg Neutral Atoms Hits >3×10⁵ s⁻¹ Entanglement Rate",
-          "why_it_matters": "For researchers tracking quantum networking hardware, this cavity-free architecture achieves entanglement rates approaching two-qubit gate speeds on current neutral-atom processors, a critical scalability threshold.",
-          "summary": "The proposed interconnect exploits Rydberg-state dipole-dipole interactions in ytterbium atoms to entangle stationary qubits with propagating photons without an optical cavity. Theoretical analysis shows entanglement-generation rates above 3×10⁵ s⁻¹ are achievable, approaching rates compatible with native two-qubit gates on neutral-atom processors, with inherent design flexibility for distributed quantum networks.",
-          "tags": [
-            "quantum-computing",
-            "neutral-atoms",
-            "quantum-networking",
-            "rydberg"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2608.05147v1"
-            }
-          ],
-          "published": "2026-08-05T17:59:38+00:00",
-          "score": 1.315
-        },
-        {
-          "id": "2b4a8fbd8f76",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "Argus Agentic Runtime Hits 78% on SWE-Bench Pro with Fixed-Weight Self-Evolution via Verified State",
-          "why_it_matters": "A working researcher building or evaluating AI agents will want to study how Argus's verification-gated self-evolution achieves efficiency gains and recovery without any weight updates.",
-          "summary": "Argus uses Manager, Planner, Engineer, and Reviewer roles over durable project state, admitting memories and skills only after role-owned review. On GPT-5.5, it scores ~78% on SWE-Bench Pro vs. 59% for Direct Copilot using 1.41× tokens; after self-evolution, mature waves use 21% fewer solve-input tokens and 15% less active workflow time, with 34 verifier recoveries and 22 review-loop rescues recorded.",
-          "tags": [
-            "agents",
-            "long-horizon-reasoning",
-            "self-evolution",
-            "benchmarks"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2608.05144v1"
-            }
-          ],
-          "published": "2026-08-05T17:58:58+00:00",
-          "score": 1.3148
-        },
-        {
-          "id": "608c2f43528a",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "OctoLong: Cross-Repository Code Contexts via AST+LSP Pipeline Boosts Long-Context LM Performance",
-          "why_it_matters": "For engineers training or evaluating long-context code models, the finding that replacing just 12% of standard training data with dependency-rich cross-repo contexts yields substantial gains is immediately actionable.",
-          "summary": "OctoLong uses an AST parser, language server, and package manager to recursively retrieve code references, generating millions-of-token dependency-rich contexts. Models from 600M to 14B parameters are mid-trained on ~50B tokens (including ~6.2B OctoLong tokens) then instruction-tuned on ~10B tokens. Replacing 12% of traditional context-extension data with OctoLong data improves long-range retrieval, state tracking, repo-level understanding, and agentic tasks versus 18 open-weight baselines.",
-          "tags": [
-            "long-context",
-            "code-models",
-            "mid-training",
-            "context-engineering"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2608.05141v1"
-            }
-          ],
-          "published": "2026-08-05T17:58:15+00:00",
-          "score": 1.3146
-        },
-        {
-          "id": "d012b425430e",
+          "id": "3e9781fff505",
           "tier": "skim",
           "category": "frontier",
-          "title": "Constant-Depth Circuits Prepare Non-Abelian Fractional Quantum Hall States on 156-Qubit IBM Heron",
-          "why_it_matters": "For researchers at the quantum ML and quantum hardware frontier, the counterintuitive result that exotic non-Abelian FQH states are cheaper to prepare than Abelian ones has direct implications for topological quantum computation strategies.",
-          "summary": "A systematic framework prepares 18 families of FQH states on quantum circuits with two-qubit depth independent of system size for clustered non-Abelian states, while the Abelian Laughlin state requires linear-depth sequential circuits. The parafermionic Read–Rezayi Z₃ state is held at depth 3 from 8 to 118 qubits; a 154-qubit, 104-electron Read–Rezayi Z₄ state is demonstrated. Experiments on IBM Heron recover expected fractional quasihole charges and non-Abelian e/4 quasihole braiding data.",
+          "title": "Domain Expertise Is the Key Multiplier When Using LLMs, Not Prompting Tricks",
+          "why_it_matters": "As an AI/research engineer who both builds and uses LLMs, understanding where the human remains the bottleneck — and why — is directly relevant to how you structure your own workflows and evaluate model capability claims.",
+          "summary": "The author argues that LLMs equalize novices but amplify experts: domain knowledge lets users steer models harder, identify wrong outputs, and suggest better directions — illustrated by Terence Tao's ChatGPT session on the Jacobian Conjecture counterexample. The limiting factor for many tasks is the human's ability to specify what a good solution looks like, not the model's knowledge.",
           "tags": [
-            "quantum-computing",
-            "topological-matter",
-            "quantum-hardware",
-            "non-abelian-anyons"
+            "llm-usability",
+            "human-ai-collaboration",
+            "expertise",
+            "prompting"
           ],
           "sources": [
             {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2608.05140v1"
+              "name": "HN (1395pts)",
+              "url": "https://www.seangoedecke.com/llms-reward-expertise/"
             }
           ],
-          "published": "2026-08-05T17:57:39+00:00",
-          "score": 0.4381
+          "published": "2026-08-03T21:13:53+00:00",
+          "score": 0.1693
         }
       ]
     }
