@@ -1,11 +1,11 @@
 {
-  "date": "2026-08-08",
-  "generated_at": "2026-08-08T02:10:46.400910+00:00",
-  "summary_line": "3 worth knowing",
+  "date": "2026-08-09",
+  "generated_at": "2026-08-09T02:22:11.697095+00:00",
+  "summary_line": "1 worth knowing",
   "counts": {
-    "total": 7,
+    "total": 1,
     "headlines": 0,
-    "frontier": 7
+    "frontier": 1
   },
   "sections": [
     {
@@ -18,158 +18,26 @@
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "91ef3aae9d60",
+          "id": "f5a112244833",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "SCOPE: DPO-Based Training for Selective Context Trust in LLMs",
-          "why_it_matters": "Robustness to misleading context is a real deployment failure mode for RAG and agent pipelines; this work provides both a rigorous benchmark (MIST) and a practical DPO-based fix grounded in paired preference data.",
-          "summary": "The paper introduces MIST, a benchmark testing LLMs under clean, misleading, correct-context, and irrelevant-context conditions, plus SC2W, a metric counting how often misleading signals flip correct answers wrong. SCOPE mines these failure cases and applies DPO over balanced matched pairs across all four conditions, substantially reducing susceptibility to misleading context while preserving accuracy on clean and irrelevant contexts.",
+          "title": "Programmatic Tool Calling Beats JSON in 11/14 Models on BFCL v4",
+          "why_it_matters": "If you're building LLM agents with tool use, this is direct empirical guidance on whether to expose tools as typed Python stubs vs. JSON schemas — with real benchmark numbers across 14 models.",
+          "summary": "Across 14 LLMs on BFCL v4, programmatic tool calling (PTC) — exposing tools as typed Python stubs executed in a single agent turn — matches or exceeds native JSON tool calling in 11 of 14 models. GPT family gains 10.6% over JSON baseline. PTC outperforms in 13/14 models under parallel fan-out and remains stable where JSON degrades ~2.3% under context rot.",
           "tags": [
-            "robustness",
-            "rlhf",
-            "dpo",
-            "context-grounding"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2608.06377v1"
-            }
-          ],
-          "published": "2026-08-06T17:59:58+00:00",
-          "score": 0.9594
-        },
-        {
-          "id": "c8b8c6d1cb43",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "Optimal Agnostic PAC Learning Algorithm Settles Sample Complexity Up to Universal Constants",
-          "why_it_matters": "This closes a longstanding open theoretical question in statistical learning—any researcher working on PAC learning, generalization bounds, or learning theory should note this result.",
-          "summary": "The paper constructs a learner for any finite-VC-dimension class that achieves risk bound L* + 7×10⁸(√(L*(d+log(1/δ))/n) + (d+log(1/δ))/n) with probability 1−δ from n i.i.d. samples, matching known lower bounds from Devroye, Györfi, and Lugosi up to universal constants. This settles agnostic PAC sample complexity at every fixed L*.",
-          "tags": [
-            "learning-theory",
-            "pac-learning",
-            "generalization",
-            "statistics"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2608.06363v1"
-            }
-          ],
-          "published": "2026-08-06T17:57:25+00:00",
-          "score": 0.9588
-        },
-        {
-          "id": "109def1169d7",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "AV-AIVAT: Anytime-Valid Stopping Cuts LLM Agent Evaluation Cost by Median 74×",
-          "why_it_matters": "Cheap, statistically valid agent evaluation is a practical bottleneck for anyone running LLM agent benchmarks; a 74× reduction in required games with guaranteed coverage is directly actionable.",
-          "summary": "AV-AIVAT combines AIVAT variance reduction with continuously monitored confidence sequences to enable early stopping in imperfect-information game evaluations. Across 15 LLM agent configurations on 71,439 Heads-Up No-Limit Hold'em hands, AIVAT reduces variance by a median 54×; the anytime-valid combination requires a median 74× fewer hands than raw outcomes to reach ±1 Big Blind precision at 95% confidence under the Asymptotic CS.",
-          "tags": [
-            "evaluation",
+            "tool-use",
             "agents",
-            "statistics",
-            "benchmarks"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2608.06362v1"
-            }
-          ],
-          "published": "2026-08-06T17:57:11+00:00",
-          "score": 0.9587
-        },
-        {
-          "id": "fd5b733b3580",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "TutorMoments: New Benchmark Reveals LLMs Over-Help Students Instead of Promoting Productive Struggle",
-          "why_it_matters": "If you're building or evaluating AI tutoring systems, this gives you a concrete, replay-based eval framework grounded in real classroom data that captures the nuanced pedagogical judgment models currently miss.",
-          "summary": "HuggingFace's TutorMoments uses 462 real one-on-one math tutoring transcripts (grades 2–7) with 1,500+ teacher-annotated decision points to test whether LLMs know when to scaffold vs. push students. Models default to over-helping; explicit prompt guidance narrows but doesn't close the gap to human tutors. Dataset, pipeline code, and replays are released openly.",
-          "tags": [
-            "evaluation",
             "llm",
-            "education",
             "benchmarks"
           ],
           "sources": [
             {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/allenai/tutormoments"
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2608.06370v1"
             }
           ],
-          "published": "2026-08-07T17:53:32+00:00",
-          "score": 0.4456
-        },
-        {
-          "id": "ca8eed3ed6cb",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "Multi-Agent LLM Pipeline Boosts Heart-Failure EHR Phenotyping AUROC from 0.895 to 0.963",
-          "why_it_matters": "Demonstrates a concrete, auditable multi-agent LLM architecture for clinical feature engineering with measurable downstream ML gains—relevant to researchers working on LLM agents in high-stakes structured-data domains.",
-          "summary": "nMAS, a multi-agent system, automates heart-failure feature engineering from EHR data, generating 132 structured and 70 aggregated features verified for provenance and rubric compliance. On 500 dummy patient records, adding aggregated features improved AUROC from 0.895 to 0.963 for HFrEF and 0.870 to 0.910 for HFpEF. Evaluated on a single-institution cohort; external validation pending.",
-          "tags": [
-            "agents",
-            "clinical-ai",
-            "feature-engineering",
-            "llm"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2608.06366v1"
-            }
-          ],
-          "published": "2026-08-06T17:57:37+00:00",
-          "score": 0.3196
-        },
-        {
-          "id": "a6532616d3e4",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "CalibForge: Adversarial Solver Calibration for Synthesizing Effective Agent Training Tasks",
-          "why_it_matters": "Automatically generating appropriately difficult training tasks for terminal agents is a hard open problem; this adversarial calibration approach shows measurable gains on SWE-bench Pro and Doc2Repo.",
-          "summary": "CalibForge synthesizes terminal agent training tasks by revising candidates through adversarial solver calibration—multi-solver calibration targets disagreement across a heterogeneous pool; contrastive calibration targets a strong-pass/weak-fail relation. It produces 5,431 calibrated tasks; models trained on them reach 32.58% and 47.57% on Terminal-Bench 2.0, with largest improvements of 24.71 points on Terminal-Bench 2.0, 27.68 on SWE-bench Pro, and 30.04 on Doc2Repo over base models.",
-          "tags": [
-            "agents",
-            "training-data",
-            "rl",
-            "benchmarks"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2608.06352v1"
-            }
-          ],
-          "published": "2026-08-06T17:53:18+00:00",
-          "score": 0.3193
-        },
-        {
-          "id": "a59eae263843",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "Scalable VARMA Estimation with Per-Iteration Cost Independent of Series Length",
-          "why_it_matters": "For researchers working on time-series modeling or ML on sequential data, this removes the main computational barrier to using VARMA over VAR, with proven near-parametric recovery rates.",
-          "summary": "A new VARMA estimation framework uses partial-autocorrelation reparametrization (guaranteeing stationarity/invertibility), Gaussian priors with separate diagonal/off-diagonal scales, and Parseval-identity sufficient statistics so each optimization iteration is independent of series length T. Two estimators are derived; both recover the infinite-AR representation at near-parametric rates. Empirically, they match or beat VAR, Bayesian-VAR, and sparse-VARMA baselines from d=10 to d=40 on retail, meteorological, and air-quality data.",
-          "tags": [
-            "time-series",
-            "statistics",
-            "scalable-ml",
-            "forecasting"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2608.06340v1"
-            }
-          ],
-          "published": "2026-08-06T17:49:58+00:00",
-          "score": 0.319
+          "published": "2026-08-06T17:58:32+00:00",
+          "score": 0.6854
         }
       ]
     }
