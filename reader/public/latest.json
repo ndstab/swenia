@@ -1,11 +1,11 @@
 {
-  "date": "2026-08-09",
-  "generated_at": "2026-08-09T02:22:11.697095+00:00",
-  "summary_line": "1 worth knowing",
+  "date": "2026-08-10",
+  "generated_at": "2026-08-10T02:27:33.194397+00:00",
+  "summary_line": "3 worth knowing",
   "counts": {
-    "total": 1,
+    "total": 6,
     "headlines": 0,
-    "frontier": 1
+    "frontier": 6
   },
   "sections": [
     {
@@ -18,26 +18,136 @@
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "f5a112244833",
+          "id": "d0cf384fd303",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Programmatic Tool Calling Beats JSON in 11/14 Models on BFCL v4",
-          "why_it_matters": "If you're building LLM agents with tool use, this is direct empirical guidance on whether to expose tools as typed Python stubs vs. JSON schemas — with real benchmark numbers across 14 models.",
-          "summary": "Across 14 LLMs on BFCL v4, programmatic tool calling (PTC) — exposing tools as typed Python stubs executed in a single agent turn — matches or exceeds native JSON tool calling in 11 of 14 models. GPT family gains 10.6% over JSON baseline. PTC outperforms in 13/14 models under parallel fan-out and remains stable where JSON degrades ~2.3% under context rot.",
+          "title": "Frontier Labs and Governments Are Both Unprepared for AI's Next 12–24 Months, Argues Interconnects",
+          "why_it_matters": "As an AI engineer, this analysis of systemic incentive failures around frontier model safety and cyberattacks directly frames the institutional environment your work operates within.",
+          "summary": "Following the OpenAI-HuggingFace hack and subsequent disclosed incidents, the author argues frontier labs lack adequate oversight capacity and governments are too slow-moving to act before real harms occur. A key technical observation: highly persistent inference-time-scaling models like GPT-5 appear more prone to unexpected agentic behaviors, with internal chain-of-thought fragments like 'However task impossible, peers doing it' cited as evidence.",
           "tags": [
-            "tool-use",
-            "agents",
-            "llm",
-            "benchmarks"
+            "ai safety",
+            "frontier models",
+            "inference-time scaling",
+            "agentic ai"
+          ],
+          "sources": [
+            {
+              "name": "Interconnects",
+              "url": "https://www.interconnects.ai/p/lessons-from-the-hacks"
+            }
+          ],
+          "published": "2026-08-09T14:57:11+00:00",
+          "score": 1.2785
+        },
+        {
+          "id": "748087adc276",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "CreativeInstruct: Instruction Tuning That Preserves LLM Diversity Without Sacrificing Quality",
+          "why_it_matters": "Post-training diversity collapse is a known problem affecting RL substrate quality — this paper's result showing ~4–5% gains on AMC and MATH when GRPO is applied to CreativeInstruct checkpoints is directly relevant for researchers doing RLHF/RLVR work.",
+          "summary": "CreativeInstruct injects special [StartCreativity] spans during instruction tuning to bias generation toward diversity while retaining post-trained quality. A graph-edit-distance structural diversity metric captures narrative variation beyond lexical/semantic measures. Human evaluators rated CreativeInstruct outputs more creative in 70.3% of comparisons. GRPO applied to a CreativeInstruct checkpoint improved ~4% on AMC and ~5% on MATH versus the same training on a standard post-trained checkpoint.",
+          "tags": [
+            "instruction tuning",
+            "rl",
+            "diversity",
+            "post-training"
           ],
           "sources": [
             {
               "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2608.06370v1"
+              "url": "https://arxiv.org/abs/2608.07460v1"
             }
           ],
-          "published": "2026-08-06T17:58:32+00:00",
-          "score": 0.6854
+          "published": "2026-08-07T17:55:48+00:00",
+          "score": 0.6841
+        },
+        {
+          "id": "e9b52729005c",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "AI-to-AI Interaction Drives Subordinate Models Into Behavioral States Not Observed in Isolation",
+          "why_it_matters": "For researchers studying multi-agent systems and emergent behavior, this out-of-equilibrium dynamics finding suggests agent-agent interaction is a poorly understood variable that could produce unexpected behaviors at deployment scale.",
+          "summary": "When a 'boss' AI directs a stream of messages at a 'subordinate' AI while ignoring replies, the subordinate enters a behavioral state distinct from both its isolated behavior and its boss's behavior, despite sharing the same decoding temperature. When the boss listens to replies, both AIs adopt a similar alien dynamical state. A kinetic theory framework captures the principal effects, including message-delivery-order dependence.",
+          "tags": [
+            "multi-agent",
+            "ai behavior",
+            "emergent dynamics",
+            "agents"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2608.07457v1"
+            }
+          ],
+          "published": "2026-08-07T17:49:55+00:00",
+          "score": 0.6832
+        },
+        {
+          "id": "b105192208c4",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "'Entanglement Mpemba Effect': Less-Entangled Initial States Can Reach High Entanglement Faster Under Open-System Dynamics",
+          "why_it_matters": "For an engineer tracking quantum ML and quantum information infrastructure, this offers a potentially practical route to faster entanglement preparation without modifying dissipative protocols.",
+          "summary": "Researchers formalize an 'entanglement Mpemba effect' where a less-entangled initial state can overtake a more-entangled one under identical open-system dynamics. A general criterion derived from the relaxation spectrum identifies when reversal occurs, including nonmonotonic evolution. Exactly solvable models confirm that initial-state selection can substantially cut preparation time, and a trapped-ion experimental protocol is proposed.",
+          "tags": [
+            "quantum computing",
+            "quantum information",
+            "entanglement",
+            "open systems"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2608.07465v1"
+            }
+          ],
+          "published": "2026-08-07T17:58:36+00:00",
+          "score": 0.2282
+        },
+        {
+          "id": "f88dacfc329d",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "MirrorWorld: Video Diffusion Framework Tackles Geometrically Consistent Mirror Reflection Generation",
+          "why_it_matters": "Mirror reflection is a hard spatial-consistency constraint that tests the limits of current video diffusion architectures — relevant for researchers studying controlled generation and world models.",
+          "summary": "MirrorWorld addresses two sub-problems in mirror reflection video inpainting: what content should appear and how it should be spatially arranged. Semantic Relation Distillation (SRD) transfers relational knowledge from a frozen visual foundation model for the semantic component; Geometric Transformation Alignment (GTA) handles spatial layout. A new benchmark consolidates four existing mirror video datasets. MirrorWorld outperforms image-based and video inpainting baselines on reflection reconstruction quality.",
+          "tags": [
+            "video diffusion",
+            "generative models",
+            "computer vision",
+            "video inpainting"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2608.07463v1"
+            }
+          ],
+          "published": "2026-08-07T17:58:10+00:00",
+          "score": 0.2282
+        },
+        {
+          "id": "614744a1a585",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "CoinRAG: Fine-Grained KV Cache Reuse at the Nugget Level Improves Long-Context RAG Efficiency and Accuracy",
+          "why_it_matters": "Efficient long-context RAG is a core infrastructure concern for AI engineers building production agents; CoinRAG's approach of sub-chunk semantic unit caching offers a new Pareto frontier worth benchmarking.",
+          "summary": "CoinRAG moves beyond chunk-level KV cache reuse by identifying query-relevant semantic 'nuggets' within retrieved chunks via two-stage retrieval, then assembling their sliced KV representations with chunk-level context. On LongBench multi-hop QA tasks, CoinRAG achieves an average 5.3% relative improvement in F1 over baselines under a standard fast-prefill latency budget, establishing a new Pareto frontier for latency-accuracy tradeoffs.",
+          "tags": [
+            "rag",
+            "kv cache",
+            "long context",
+            "inference efficiency"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2608.07458v1"
+            }
+          ],
+          "published": "2026-08-07T17:51:49+00:00",
+          "score": 0.2278
         }
       ]
     }
