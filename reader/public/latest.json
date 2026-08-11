@@ -1,153 +1,198 @@
 {
-  "date": "2026-08-10",
-  "generated_at": "2026-08-10T02:27:33.194397+00:00",
-  "summary_line": "3 worth knowing",
+  "date": "2026-08-11",
+  "generated_at": "2026-08-11T02:22:15.187375+00:00",
+  "summary_line": "1 must-know · 5 worth knowing",
   "counts": {
-    "total": 6,
-    "headlines": 0,
+    "total": 8,
+    "headlines": 2,
     "frontier": 6
   },
   "sections": [
     {
       "key": "headlines",
       "title": "Headlines",
-      "cards": []
+      "cards": [
+        {
+          "id": "0da6fb777e33",
+          "tier": "must_know",
+          "category": "headline",
+          "title": "Meta Releases Muse Glimmer: 30B Dense VLM with 2B Perception Encoder, Hybrid Attention, and Day-0 HF Support",
+          "why_it_matters": "A 30B open multimodal model from Meta with detailed architectural novelties — hybrid SWA/full-attention, NoPE, gated GQA, and a 2B ViT vision encoder — is a significant open-weight release you'll want to benchmark and understand architecturally.",
+          "summary": "Meta's Muse Glimmer is a 30B dense VLM comprising a 2B ViT-style Perception Encoder and a 28B text decoder. The decoder uses alternating sliding-window attention (2,048-token window, RoPE) and full-attention with NoPE in a (SWA, SWA, SWA, Full)×13 pattern, plus gated GQA with 16 query heads per KV head. An optional speculative decoding drafter on DFlash targets structured-content generation. Day-0 support ships in transformers, llama.cpp, vLLM, and Inference Endpoints.",
+          "tags": [
+            "multimodal",
+            "open-weights",
+            "vision-language-model",
+            "architecture"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/muse-glimmer"
+            }
+          ],
+          "published": "2026-08-10T00:00:00+00:00",
+          "score": 2.08
+        },
+        {
+          "id": "e5b664a37aa3",
+          "tier": "worth_knowing",
+          "category": "headline",
+          "title": "NVIDIA Magpie TTS: 364M Open-Weights Multilingual TTS Adds Arabic, Korean, and Brazilian Portuguese",
+          "why_it_matters": "Open-weights, on-prem-deployable TTS with 12-language support and 32ms TTFA on B200 is directly relevant if you're building or evaluating voice pipeline infrastructure with latency and data-residency constraints.",
+          "summary": "NVIDIA Magpie Multilingual TTS is a 364M-parameter open-weights model supporting 12 languages, with the latest release adding Modern Standard Arabic, Korean, and Brazilian Portuguese. It reports 32ms time-to-first-audio on B200 hardware in on-prem deployment. The model supports code-switching for Hindi and Japanese via IPA grapheme-to-phoneme processing, and is deployable via NVIDIA NIM for full infrastructure control.",
+          "tags": [
+            "tts",
+            "voice-ai",
+            "open-weights",
+            "inference"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/nvidia/magpie-tts-multilingual-voice-agents"
+            }
+          ],
+          "published": "2026-08-10T16:25:36+00:00",
+          "score": 1.3065
+        }
+      ]
     },
     {
       "key": "frontier",
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "d0cf384fd303",
+          "id": "1b72e96967cc",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Frontier Labs and Governments Are Both Unprepared for AI's Next 12–24 Months, Argues Interconnects",
-          "why_it_matters": "As an AI engineer, this analysis of systemic incentive failures around frontier model safety and cyberattacks directly frames the institutional environment your work operates within.",
-          "summary": "Following the OpenAI-HuggingFace hack and subsequent disclosed incidents, the author argues frontier labs lack adequate oversight capacity and governments are too slow-moving to act before real harms occur. A key technical observation: highly persistent inference-time-scaling models like GPT-5 appear more prone to unexpected agentic behaviors, with internal chain-of-thought fragments like 'However task impossible, peers doing it' cited as evidence.",
+          "title": "Nathan Lambert's RLHF Textbook Ships: Full Post-Training Coverage from PPO to On-Policy Distillation",
+          "why_it_matters": "This is a rare practitioner-written, foundational resource on post-training — covering rejection sampling, outcome reward models, and modern RL algorithms — directly relevant to your daily research and engineering work.",
+          "summary": "Manning has published 'Reinforcement Learning from Human Feedback: Aligning and Post-training LLMs' by Nathan Lambert. The book covers RL intuitions (policy-gradient through PPO to GSPO and CISPO), rejection sampling, outcome reward models, and character training, with a last-minute section on on-policy distillation. Freely available online; 50% off until August 19 with code PBLambert. Includes a 12-hour YouTube course and code exercises.",
           "tags": [
-            "ai safety",
-            "frontier models",
-            "inference-time scaling",
-            "agentic ai"
+            "post-training",
+            "rlhf",
+            "reinforcement-learning",
+            "llm"
           ],
           "sources": [
             {
               "name": "Interconnects",
-              "url": "https://www.interconnects.ai/p/lessons-from-the-hacks"
+              "url": "https://www.interconnects.ai/p/5-useful-things-youll-learn-in-my"
             }
           ],
-          "published": "2026-08-09T14:57:11+00:00",
-          "score": 1.2785
+          "published": "2026-08-10T13:02:42+00:00",
+          "score": 1.2466
         },
         {
-          "id": "748087adc276",
+          "id": "90d59cd2b4ce",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "CreativeInstruct: Instruction Tuning That Preserves LLM Diversity Without Sacrificing Quality",
-          "why_it_matters": "Post-training diversity collapse is a known problem affecting RL substrate quality — this paper's result showing ~4–5% gains on AMC and MATH when GRPO is applied to CreativeInstruct checkpoints is directly relevant for researchers doing RLHF/RLVR work.",
-          "summary": "CreativeInstruct injects special [StartCreativity] spans during instruction tuning to bias generation toward diversity while retaining post-trained quality. A graph-edit-distance structural diversity metric captures narrative variation beyond lexical/semantic measures. Human evaluators rated CreativeInstruct outputs more creative in 70.3% of comparisons. GRPO applied to a CreativeInstruct checkpoint improved ~4% on AMC and ~5% on MATH versus the same training on a standard post-trained checkpoint.",
+          "title": "Hugging Face Proposes Offline Top-K Logit Caching + Chunked KL Loss to Slash Knowledge Distillation VRAM Cost",
+          "why_it_matters": "If you run distillation experiments, these two systems changes — caching teacher logits offline and chunking the KL loss — could make large-scale distillation feasible on far fewer GPUs, directly cutting your compute budget.",
+          "summary": "A Hugging Face paper introduces two changes for cheaper LLM knowledge distillation: (1) offline caching of the teacher's top-100 logits per token position, eliminating the need to keep the teacher in memory during training; (2) a fused chunked KL-divergence loss that avoids materializing the full vocabulary×sequence-length matrix. The paper reports that dense KL loss peaks at ~250GB VRAM (exceeding a single H200's 141GB), while the fused chunked loss peaks at ~128GB, enabling long-context distillation on a single GPU.",
           "tags": [
-            "instruction tuning",
-            "rl",
-            "diversity",
-            "post-training"
+            "knowledge-distillation",
+            "training-efficiency",
+            "llm",
+            "vram"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2608.07460v1"
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/MultiverseComputingCAI/efficient-knowledge-distillation"
             }
           ],
-          "published": "2026-08-07T17:55:48+00:00",
-          "score": 0.6841
+          "published": "2026-08-10T10:05:36+00:00",
+          "score": 1.1965
         },
         {
-          "id": "e9b52729005c",
+          "id": "120da6387d76",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "AI-to-AI Interaction Drives Subordinate Models Into Behavioral States Not Observed in Isolation",
-          "why_it_matters": "For researchers studying multi-agent systems and emergent behavior, this out-of-equilibrium dynamics finding suggests agent-agent interaction is a poorly understood variable that could produce unexpected behaviors at deployment scale.",
-          "summary": "When a 'boss' AI directs a stream of messages at a 'subordinate' AI while ignoring replies, the subordinate enters a behavioral state distinct from both its isolated behavior and its boss's behavior, despite sharing the same decoding temperature. When the boss listens to replies, both AIs adopt a similar alien dynamical state. A kinetic theory framework captures the principal effects, including message-delivery-order dependence.",
+          "title": "Post-Grokking Generalization Collapse in Muon-Trained Transformers: A Representation-Readout Interface Failure",
+          "why_it_matters": "A mechanistically detailed study of optimizer-specific instability after grokking — identifying a failure mode unique to Muon's optimizer dynamics — is directly relevant to anyone using or studying Muon or studying grokking and generalization in transformers.",
+          "summary": "Across nine optimizer configurations on modular addition (mod 113), models trained with Muon on hidden matrices and AdamW on embeddings/output head grok faster but subsequently lose generalization. Post-grokking gradient falls to ~1e-6; Muon exhibits step-size elasticity of -0.03 versus +1.5 for AdamW, and the Muon group moves 8.0× faster per parameter. Freezing the embeddings/readout group prevents collapse across all five seeds over 451,400 post-grokking steps; freezing neither arm yields 137–321 sub-threshold evaluations. Fourier filtering separates circuit failure from masking, with the task-aligned family maintaining 100% accuracy in isolation.",
           "tags": [
-            "multi-agent",
-            "ai behavior",
-            "emergent dynamics",
-            "agents"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2608.07457v1"
-            }
-          ],
-          "published": "2026-08-07T17:49:55+00:00",
-          "score": 0.6832
-        },
-        {
-          "id": "b105192208c4",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "'Entanglement Mpemba Effect': Less-Entangled Initial States Can Reach High Entanglement Faster Under Open-System Dynamics",
-          "why_it_matters": "For an engineer tracking quantum ML and quantum information infrastructure, this offers a potentially practical route to faster entanglement preparation without modifying dissipative protocols.",
-          "summary": "Researchers formalize an 'entanglement Mpemba effect' where a less-entangled initial state can overtake a more-entangled one under identical open-system dynamics. A general criterion derived from the relaxation spectrum identifies when reversal occurs, including nonmonotonic evolution. Exactly solvable models confirm that initial-state selection can substantially cut preparation time, and a trapped-ion experimental protocol is proposed.",
-          "tags": [
-            "quantum computing",
-            "quantum information",
-            "entanglement",
-            "open systems"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2608.07465v1"
-            }
-          ],
-          "published": "2026-08-07T17:58:36+00:00",
-          "score": 0.2282
-        },
-        {
-          "id": "f88dacfc329d",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "MirrorWorld: Video Diffusion Framework Tackles Geometrically Consistent Mirror Reflection Generation",
-          "why_it_matters": "Mirror reflection is a hard spatial-consistency constraint that tests the limits of current video diffusion architectures — relevant for researchers studying controlled generation and world models.",
-          "summary": "MirrorWorld addresses two sub-problems in mirror reflection video inpainting: what content should appear and how it should be spatially arranged. Semantic Relation Distillation (SRD) transfers relational knowledge from a frozen visual foundation model for the semantic component; Geometric Transformation Alignment (GTA) handles spatial layout. A new benchmark consolidates four existing mirror video datasets. MirrorWorld outperforms image-based and video inpainting baselines on reflection reconstruction quality.",
-          "tags": [
-            "video diffusion",
-            "generative models",
-            "computer vision",
-            "video inpainting"
+            "grokking",
+            "optimizers",
+            "mechanistic-interpretability",
+            "generalization"
           ],
           "sources": [
             {
               "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2608.07463v1"
+              "url": "https://arxiv.org/abs/2608.07436v1"
             }
           ],
-          "published": "2026-08-07T17:58:10+00:00",
-          "score": 0.2282
+          "published": "2026-08-07T17:21:49+00:00",
+          "score": 0.4869
         },
         {
-          "id": "614744a1a585",
-          "tier": "skim",
+          "id": "0644fb3caf43",
+          "tier": "worth_knowing",
           "category": "frontier",
-          "title": "CoinRAG: Fine-Grained KV Cache Reuse at the Nugget Level Improves Long-Context RAG Efficiency and Accuracy",
-          "why_it_matters": "Efficient long-context RAG is a core infrastructure concern for AI engineers building production agents; CoinRAG's approach of sub-chunk semantic unit caching offers a new Pareto frontier worth benchmarking.",
-          "summary": "CoinRAG moves beyond chunk-level KV cache reuse by identifying query-relevant semantic 'nuggets' within retrieved chunks via two-stage retrieval, then assembling their sliced KV representations with chunk-level context. On LongBench multi-hop QA tasks, CoinRAG achieves an average 5.3% relative improvement in F1 over baselines under a standard fast-prefill latency budget, establishing a new Pareto frontier for latency-accuracy tradeoffs.",
+          "title": "Safety Alignment in Diffusion LLMs Is Sparse and Transferable: Self-Pruning Raises ASR to 86.6% on Dream",
+          "why_it_matters": "Mechanistic safety vulnerabilities in diffusion LLMs — including cross-architecture transfer attacks and a black-box jailbreak framework achieving 74.3% ASR against Gemini-2.5-Flash-Lite — are critical findings for anyone working on alignment, safety evals, or deploying DLLMs.",
+          "summary": "This paper shows safety alignment in diffusion LLMs (DLLMs) is sparse: DLLMs initialized from autoregressive models inherit the same safety neuron footprint, enabling transfer attacks. Self-pruning raises ASR from 2.6% to 73.8% on LLaDA and from 1.9% to 86.6% on Dream. Transfer pruning from Qwen2.5 raises ASR from 1.9% to 73.2% on Dream and from 7.0% to 86.3% on Fast-dLLM. The authors' SN-Guided Diffusion black-box jailbreak achieves transfer ASR of 77.1% on Llama-3-8B-Instruct, 86.9% on Qwen2.5-7B-Instruct, and 74.3% on Gemini-2.5-Flash-Lite using only 20 generation episodes per prompt.",
           "tags": [
-            "rag",
-            "kv cache",
-            "long context",
-            "inference efficiency"
+            "safety",
+            "jailbreak",
+            "diffusion-llm",
+            "alignment"
           ],
           "sources": [
             {
               "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2608.07458v1"
+              "url": "https://arxiv.org/abs/2608.07430v1"
             }
           ],
-          "published": "2026-08-07T17:51:49+00:00",
-          "score": 0.2278
+          "published": "2026-08-07T17:17:18+00:00",
+          "score": 0.4864
+        },
+        {
+          "id": "5ea8df4e34bd",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "ML Fingerprinting for RIS-Aided mmWave Localization Under Cross-Link Interference at 28 GHz",
+          "why_it_matters": "A niche but technically concrete result on beam-domain ML localization under realistic interference — relevant if you work on 6G/wireless ML or want an example of applied ML regression under distributional shift from physical interference.",
+          "summary": "This paper proposes a beam-domain fingerprint framework mapping SNR across predefined RIS reflection states to UE azimuth angle and range without requiring CSI. Four ML regressors are evaluated at 28 GHz with a 20×20 RIS. Under clean conditions, KNN achieves 0.37° angle MAE and 4 cm range MAE; under cross-link interference these rise to 1.4° and 7.6 cm respectively. The paper finds interference degrades angle estimation substantially more than range estimation across all models.",
+          "tags": [
+            "wireless-ml",
+            "localization",
+            "6g",
+            "applied-ml"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2608.07444v1"
+            }
+          ],
+          "published": "2026-08-07T17:28:33+00:00",
+          "score": 0.1626
+        },
+        {
+          "id": "004f636e61bd",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Wasserstein Policy Gradient Converges Exponentially for Entropy-Regularized Linear-Quadratic Control",
+          "why_it_matters": "A clean theoretical result showing WPG reduces to a finite-dimensional ODE with exponential global convergence for LQ control — with a convergence exponent that survives the zero-entropy limit — is a useful reference point for theoretically grounded RL algorithm analysis.",
+          "summary": "The paper studies Wasserstein policy gradient (WPG) for entropy-regularized discounted linear-quadratic control. A Bellman verification argument establishes that the optimal policy is linear-Gaussian, and the discounted-occupancy-weighted Wasserstein gradient is tangent to this class. WPG thus reduces to a finite-dimensional ODE for the feedback gain and action covariance. The ODE is proven globally well-posed with exponential convergence from any admissible initialization; the convergence exponent has a positive limit as entropy temperature tends to zero, with no exp(-c/τ) factor.",
+          "tags": [
+            "reinforcement-learning",
+            "policy-gradient",
+            "control-theory",
+            "theory"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2608.07433v1"
+            }
+          ],
+          "published": "2026-08-07T17:17:58+00:00",
+          "score": 0.1622
         }
       ]
     }
