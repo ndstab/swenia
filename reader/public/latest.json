@@ -1,131 +1,198 @@
 {
-  "date": "2026-08-12",
-  "generated_at": "2026-08-12T02:35:57.086875+00:00",
+  "date": "2026-08-13",
+  "generated_at": "2026-08-13T02:38:04.289329+00:00",
   "summary_line": "1 must-know · 4 worth knowing",
   "counts": {
-    "total": 5,
-    "headlines": 0,
-    "frontier": 5
+    "total": 8,
+    "headlines": 2,
+    "frontier": 6
   },
   "sections": [
     {
       "key": "headlines",
       "title": "Headlines",
-      "cards": []
+      "cards": [
+        {
+          "id": "f5d9b5f669dc",
+          "tier": "must_know",
+          "category": "headline",
+          "title": "Google DeepMind Launches Multilingual Sign-Language-to-Text Model, Deploys in Gboard and Live Transcribe",
+          "why_it_matters": "This is a meaningful multimodal ML milestone—training on 100K+ hours across 50+ sign languages with a pose-landmark input pipeline rather than raw video is a notable architecture and data-scaling decision worth tracking.",
+          "summary": "DeepMind's SL2T model is trained on over 100,000 hours of data across more than 50 sign languages, using on-device MediaPipe Holistic pose landmarks (not raw video) to protect privacy. Joint multilingual training outperformed single-language models in experiments. SL2T now powers ASL-to-English sign-to-text dictation in Gboard and Live Transcribe on Pixel 11, with more devices and languages planned.",
+          "tags": [
+            "multimodal",
+            "sign-language",
+            "google-deepmind",
+            "on-device"
+          ],
+          "sources": [
+            {
+              "name": "DeepMind",
+              "url": "https://deepmind.google/blog/putting-sign-language-ai-into-users-hands/"
+            }
+          ],
+          "published": "2026-08-12T14:01:59+00:00",
+          "score": 2.5183
+        },
+        {
+          "id": "ec0d34d30f20",
+          "tier": "skim",
+          "category": "headline",
+          "title": "LLMs Still Struggle at Long-Form Non-Fiction: A Textbook Author's Assessment",
+          "why_it_matters": "As an AI/research engineer, this practitioner-level critique of LLM writing limitations from someone who just authored a post-training/RLHF textbook offers a grounded counterweight to hype about AI-driven autonomous science.",
+          "summary": "Nathan Lambert, having used LLMs extensively while writing an RLHF textbook, argues models have stagnated at organizing and compellingly presenting established knowledge in long-form non-fiction—despite leaping from weak to superhuman at coding and math. He contends this knowledge-compression failure is a prerequisite gap before LLMs can autonomously solve open science problems, limiting near-term AI science progress to low-hanging fruit and cross-field connection rather than genuine insight.",
+          "tags": [
+            "llms",
+            "scientific-writing",
+            "scaling",
+            "ai-capabilities"
+          ],
+          "sources": [
+            {
+              "name": "Interconnects",
+              "url": "https://www.interconnects.ai/p/i-wrote-an-ai-textbook-how-long-until"
+            }
+          ],
+          "published": "2026-08-12T13:01:16+00:00",
+          "score": 0.4139
+        }
+      ]
     },
     {
       "key": "frontier",
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "f835e81be264",
-          "tier": "must_know",
+          "id": "1c97be6b6bc9",
+          "tier": "worth_knowing",
           "category": "frontier",
-          "title": "AI Agent Tightens Grothendieck Constant Bounds in Human-AI Math Collaboration Case Study",
-          "why_it_matters": "One of the clearest documented examples of an AI research system producing mathematically novel insights verified by domain experts — directly relevant to AI-for-science and agent capability assessment.",
-          "summary": "An AI research system was used to improve known bounds on the Grothendieck constant K_G — which measures hardness between combinatorial problems and their continuous relaxations — achieving bounds of 6π/11 ≤ K_G ≤ π/(2log(1+√2)) − 10⁻⁴. The paper provides a detailed case study of AI strengths and weaknesses in long-horizon mathematical research and conditions that enabled breakthrough insights.",
+          "title": "AVA-Encoder: Video-to-Knowledge-Graph Auto-Encoding for Agent-Native Video Representations",
+          "why_it_matters": "Representing video as an editable knowledge graph with typed edges that agents can query and manipulate is a technically interesting approach to bridging video understanding and agentic reasoning pipelines.",
+          "summary": "AVA-Encoder encodes video into a knowledge graph with hierarchy/state text nodes and a linked asset layer (images, audio, video clips), then reconstructs video from it. Reconstruction error drives textual-gradient optimization via pseudo-training in an outer loop and optional test-time KG refinement. The method reports a 20.7 percentage-point improvement over the strongest external baseline, and its pseudo-trained shot-level encoder policy uses 74.3% fewer system-prompt tokens than a human-tuned policy.",
           "tags": [
-            "ai-for-science",
             "agents",
-            "mathematics",
-            "reasoning"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2608.11195v1"
-            }
-          ],
-          "published": "2026-08-11T17:53:48+00:00",
-          "score": 2.6585
-        },
-        {
-          "id": "409408d0cf01",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "Surgical WAM: Action-Free Video Pretraining Lifts Surgical Robot Success Rate from 63.5% to 77.8%",
-          "why_it_matters": "Demonstrates a concrete, measurable benefit of world-model pretraining on action-free data for robotics — a key open question in data-efficient robot learning that generalizes beyond surgical settings.",
-          "summary": "Surgical WAM (built on Cosmos Policy) jointly predicts future endoscopic observations and action chunks. It pretrain on action-free surgical video, then fine-tunes on a fixed budget of action-labeled demos. Across four simulated surgical tasks, this raises average success rate from 63.5% to 77.8%, with a 20-percentage-point gain on PegTransfer; largest gains appear on contact-rich and bimanual tasks.",
-          "tags": [
-            "world-models",
-            "robot-learning",
-            "surgical-robotics",
-            "data-efficiency"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2608.11204v1"
-            }
-          ],
-          "published": "2026-08-11T17:59:13+00:00",
-          "score": 1.3309
-        },
-        {
-          "id": "518b7c8c8478",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "SAE Latent Sets Don't Compose Like a Bag of Features, Study Finds",
-          "why_it_matters": "Directly challenges a common assumption in mechanistic interpretability — that SAE features combine additively — with controlled experiments on both toy models and natural text.",
-          "summary": "Using overlap of active SAE latent sets as a similarity measure, the authors find SAE activation sets track model-internal similarity rather than human category boundaries or typicality. Under controlled semantic modifications, there is a substantial mismatch between human judgments of conceptual change and change in the SAE active set, suggesting SAE features do not compose via simple bag-of-features semantics outside idealized settings.",
-          "tags": [
-            "interpretability",
-            "sparse-autoencoders",
-            "mechanistic-interpretability",
-            "representations"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2608.11197v1"
-            }
-          ],
-          "published": "2026-08-11T17:55:59+00:00",
-          "score": 1.3299
-        },
-        {
-          "id": "3b64c5528841",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "Test-Time Self-Evolving GUI Grounding via On-Policy Self-Distillation, No Human Labels",
-          "why_it_matters": "Addresses the open problem of post-deployment adaptation for GUI agents without human annotation, using a technically novel combination of reflection, self-distillation, and contrastive calibration.",
-          "summary": "The framework runs a closed loop of Exploration, Evaluation, Reflection, and Internalization. An MLLM-based Reflector evaluates grounding predictions and generates reasoning reflections; Reflection-Guided On-Policy Self-Distillation converts these into token-level supervision via a conditioned self-teacher. Contrastive Calibration prevents corrupted signals from failed explorations. Across six benchmarks, average accuracy improves 7.4% over the base model with no human-annotated ground truth.",
-          "tags": [
-            "gui-agents",
-            "test-time-adaptation",
-            "self-distillation",
-            "reinforcement-learning"
+            "video-understanding",
+            "knowledge-graphs",
+            "representation-learning"
           ],
           "sources": [
             {
               "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2608.11191v1"
+              "url": "https://arxiv.org/abs/2608.12313v1"
             }
           ],
-          "published": "2026-08-11T17:50:25+00:00",
-          "score": 1.3282
+          "published": "2026-08-12T17:58:02+00:00",
+          "score": 1.3299
         },
         {
-          "id": "5eb3c49c6262",
+          "id": "af369fe94903",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "ALTK-Evolve vs. ACE: Token-Efficient Agentic Memory Cuts Inference Cost by ~7x on AppWorld",
-          "why_it_matters": "If you're building or evaluating LLM agents with episodic memory, this is a direct technical comparison of two self-improving agent systems on the same benchmark, with concrete cost-accuracy tradeoffs.",
-          "summary": "Both ACE and ALTK-Evolve convert an agent's past trajectories into reusable lessons injected at inference time — no weight updates. Key difference: ACE injects the full playbook every step; ALTK-Evolve selects a priority-weighted subset per task and model. On AppWorld, ALTK-Evolve matches or beats ACE on accuracy while using ~40% of ACE's tokens on strong models and ~14% on weak models.",
+          "title": "DreamFly: Causal Memory and Receding-Horizon Diffusion Planning for Aerial VLN",
+          "why_it_matters": "The receding-horizon diffusion planning design—predict K-step action chunk, execute only the first, then replan—is a clean architectural pattern relevant to anyone working on embodied agents or long-horizon action generation.",
+          "summary": "DreamFly addresses aerial vision-language navigation with three components: causally aligned historical memory (uses only past observations), receding-horizon diffusion planning (predict K steps, execute one), and LiteStop (estimates stop probability from action logits at the initial all-mask state). On the OpenFly benchmark, it achieves 32.04%/29.46% success rate and 28.22%/23.54% SPL on test-seen/test-unseen splits, outperforming all compared methods on both metrics.",
           "tags": [
+            "embodied-agents",
+            "diffusion",
+            "vision-language-navigation",
+            "planning"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2608.12308v1"
+            }
+          ],
+          "published": "2026-08-12T17:54:33+00:00",
+          "score": 1.3288
+        },
+        {
+          "id": "6d6bf8549af6",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Strong-to-Weak Test-Time Capability Transfer: Harnesses Nearly Double Weaker Model Performance on ToM Benchmarks",
+          "why_it_matters": "Showing that a stronger model can construct inference-time scaffolds that boost a weaker model from 0.49 to 0.91 average accuracy—without any parameter updates—is directly relevant to deployment strategies and complements distillation research.",
+          "summary": "The paper tests whether a stronger 'builder' model can iteratively construct inference-time harnesses (code offloading, benchmark-specific routing, strict answer-format enforcement) that lift a weaker 'target' model on Theory-of-Mind benchmarks, using 5% of data for harness refinement. Average target performance nearly doubles from 0.49 to 0.91. Gains come primarily from deterministic code offloading rather than extended reasoning, and weaker targets benefit most.",
+          "tags": [
+            "distillation",
+            "test-time-compute",
             "agents",
-            "agentic-memory",
-            "inference-efficiency",
-            "rl"
+            "capability-transfer"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2608.12307v1"
+            }
+          ],
+          "published": "2026-08-12T17:53:18+00:00",
+          "score": 1.3284
+        },
+        {
+          "id": "d1475e1e4d33",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "RCI Framework: Converting Sparse Stop-Feedback into Dense Costs for Safe Offline RL",
+          "why_it_matters": "Addressing the realistic sparse-label setting for safe RL—where only a binary stop signal is available rather than per-step cost annotations—via return decomposition is a practically important contribution for anyone building constrained offline RL systems.",
+          "summary": "RCI (Redistribution-based Cost Inference) takes binary trajectory-level stop-feedback and uses return decomposition to redistribute it into dense per-step cost signals, then trains a constrained offline policy on the augmented dataset in a CMDP framework. The paper proves return-equivalent redistribution preserves the feasible policy set and optimal Lagrangian. Experiments on highway driving and robotic manipulation show substantially lower violation rates versus sparse and classifier-based baselines, with robustness to label noise.",
+          "tags": [
+            "safe-rl",
+            "offline-rl",
+            "reinforcement-learning",
+            "credit-assignment"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2608.12306v1"
+            }
+          ],
+          "published": "2026-08-12T17:53:15+00:00",
+          "score": 1.3284
+        },
+        {
+          "id": "e43158037a35",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "OlmoEarth Studio Now Exports Custom Geospatial Embedding Vectors for Downstream ML",
+          "why_it_matters": "If you work on geospatial or environmental ML, this open-weight foundation model with exportable embeddings at multiple resolutions and encoder sizes is a ready-to-use building block for similarity search, segmentation, and change detection pipelines.",
+          "summary": "OlmoEarth Studio can now compute and export embedding vectors from its open-source Earth-observation foundation models as Cloud-Optimized GeoTIFFs. Users choose area, time range (1–12 monthly periods), encoder variant (Nano 128-dim/1.4M params, Tiny 192-dim/6.2M params, or Base 768-dim/89M params), resolution (10–80 m/pixel), and imagery source (Sentinel-2 L2A, Sentinel-1 RTC, or both). Vectors are stored as int8; model weights and code are publicly available.",
+          "tags": [
+            "geospatial",
+            "embeddings",
+            "earth-observation",
+            "open-weights"
           ],
           "sources": [
             {
               "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/ibm-research/altk-evolve-sldd"
+              "url": "https://huggingface.co/blog/allenai/olmoearth-embeddings"
             }
           ],
-          "published": "2026-08-11T13:37:10+00:00",
-          "score": 1.2526
+          "published": "2026-08-12T16:14:36+00:00",
+          "score": 0.4328
+        },
+        {
+          "id": "ab799e9da743",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "LiquidAI Releases LFM2.5-VL-3B: Fast Edge VLM with RL Post-Training and 11K tok/s GPU Throughput",
+          "why_it_matters": "A 3B-class VLM hitting ~11K tokens/second at high concurrency on a single H100 and 20 tok/s on a Galaxy S26 Ultra, with RL-based post-training and strong tool-use, is a practically significant edge-deployment result.",
+          "summary": "LFM2.5-VL-3B pairs a SigLIP2 400M NaFlex vision encoder with a 2.6B text backbone pretrained on ~34T tokens. Post-training uses SFT with knowledge distillation plus multi-reward RL. The model achieves ~11K tokens/second throughput at high concurrency on an H100 (roughly 2× larger 4B-class models), 228 tok/s on an M5 Max, and fits in ~3 GB. Tool-use performance matches Gemma-4-E2B and Qwen3.5-2B; tokenizer vocabulary doubled to 128K for non-Latin script support.",
+          "tags": [
+            "vision-language",
+            "edge-inference",
+            "reinforcement-learning",
+            "on-device"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/LiquidAI/lfm2-5-vl-3b"
+            }
+          ],
+          "published": "2026-08-12T14:00:51+00:00",
+          "score": 0.4196
         }
       ]
     }
