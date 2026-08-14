@@ -1,11 +1,11 @@
 {
-  "date": "2026-08-13",
-  "generated_at": "2026-08-13T02:38:04.289329+00:00",
-  "summary_line": "1 must-know · 4 worth knowing",
+  "date": "2026-08-14",
+  "generated_at": "2026-08-14T02:36:06.636746+00:00",
+  "summary_line": "1 must-know · 3 worth knowing",
   "counts": {
     "total": 8,
-    "headlines": 2,
-    "frontier": 6
+    "headlines": 3,
+    "frontier": 5
   },
   "sections": [
     {
@@ -13,48 +13,70 @@
       "title": "Headlines",
       "cards": [
         {
-          "id": "f5d9b5f669dc",
+          "id": "068e562e0512",
           "tier": "must_know",
           "category": "headline",
-          "title": "Google DeepMind Launches Multilingual Sign-Language-to-Text Model, Deploys in Gboard and Live Transcribe",
-          "why_it_matters": "This is a meaningful multimodal ML milestone—training on 100K+ hours across 50+ sign languages with a pose-landmark input pipeline rather than raw video is a notable architecture and data-scaling decision worth tracking.",
-          "summary": "DeepMind's SL2T model is trained on over 100,000 hours of data across more than 50 sign languages, using on-device MediaPipe Holistic pose landmarks (not raw video) to protect privacy. Joint multilingual training outperformed single-language models in experiments. SL2T now powers ASL-to-English sign-to-text dictation in Gboard and Live Transcribe on Pixel 11, with more devices and languages planned.",
+          "title": "Google DeepMind Releases Gemini 3.7 Flash: Major Coding and Agent Benchmark Gains at Half the Price",
+          "why_it_matters": "As a likely user of Gemini API models for agent workflows and coding tasks, the jump in SWE-bench-style scores and halved pricing makes this an immediate practical upgrade to evaluate.",
+          "summary": "Gemini 3.7 Flash, released three weeks after 3.6 Flash, shows large gains on coding benchmarks: FrontierCode 1.1 Main (43.6% vs 34.4%) and DeepSWE v1.1 (65.3% vs 49.0%). Web dev Elo on WebDev Arena rises to 1588 vs 1538. Knowledge-work benchmarks also improve: GDP.pdf (34.0% vs 22.0%) and AutomationBench (30.4% vs 17.0%). Priced at $0.75/1M input and $3.75/1M output tokens—half of 3.6 Flash's original price.",
           "tags": [
-            "multimodal",
-            "sign-language",
-            "google-deepmind",
-            "on-device"
+            "gemini",
+            "google deepmind",
+            "llm release",
+            "agents"
           ],
           "sources": [
             {
               "name": "DeepMind",
-              "url": "https://deepmind.google/blog/putting-sign-language-ai-into-users-hands/"
+              "url": "https://deepmind.google/blog/introducing-gemini-3-7-flash/"
             }
           ],
-          "published": "2026-08-12T14:01:59+00:00",
-          "score": 2.5183
+          "published": "2026-08-13T17:04:18+00:00",
+          "score": 2.6281
         },
         {
-          "id": "ec0d34d30f20",
-          "tier": "skim",
+          "id": "5fa28c256021",
+          "tier": "worth_knowing",
           "category": "headline",
-          "title": "LLMs Still Struggle at Long-Form Non-Fiction: A Textbook Author's Assessment",
-          "why_it_matters": "As an AI/research engineer, this practitioner-level critique of LLM writing limitations from someone who just authored a post-training/RLHF textbook offers a grounded counterweight to hype about AI-driven autonomous science.",
-          "summary": "Nathan Lambert, having used LLMs extensively while writing an RLHF textbook, argues models have stagnated at organizing and compellingly presenting established knowledge in long-form non-fiction—despite leaping from weak to superhuman at coding and math. He contends this knowledge-compression failure is a prerequisite gap before LLMs can autonomously solve open science problems, limiting near-term AI science progress to low-hanging fruit and cross-field connection rather than genuine insight.",
+          "title": "Hugging Face Hackathon Reproduced 2,226 ICML 2026 Papers with AI Agents—Here's What They Found",
+          "why_it_matters": "As a researcher, the scale and methodology here—agents reproducing 34% of a top ML conference in weeks, including catching proof errors in a spotlight paper—directly concerns how you should think about paper reliability and the future of peer review.",
+          "summary": "A community hackathon (July 15–Aug 2, 2026) attempted reproduction of 2,226 of 6,341 accepted ICML 2026 papers using coding agents (Claude Code, Codex, Cursor, orx). Participants published 6,816 logbooks with code, artifacts, and optional full agent traces; 35,908 claims were judged by an automated GLM-5.2 judge issuing verified/falsified/toy/inconclusive verdicts. The post highlights at least one accepted spotlight paper where proofs did not survive careful checking—something the reviewer explicitly admitted skipping.",
           "tags": [
-            "llms",
-            "scientific-writing",
-            "scaling",
-            "ai-capabilities"
+            "reproducibility",
+            "ml research",
+            "ai agents",
+            "icml"
           ],
           "sources": [
             {
-              "name": "Interconnects",
-              "url": "https://www.interconnects.ai/p/i-wrote-an-ai-textbook-how-long-until"
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/icml-2026-open-reproductions"
             }
           ],
-          "published": "2026-08-12T13:01:16+00:00",
-          "score": 0.4139
+          "published": "2026-08-13T00:00:00+00:00",
+          "score": 1.0367
+        },
+        {
+          "id": "c1c988556190",
+          "tier": "skim",
+          "category": "headline",
+          "title": "Hugging Face + AWS Strands Robots: Closed-Loop Robot Data Pipeline with Storage Buckets",
+          "why_it_matters": "If you work on robot learning or embodied AI, this is a concrete end-to-end open-source blueprint for continuous collect→train→deploy loops using LeRobot, Strands Agents, and HF's new Xet-backed Storage Buckets to avoid redundant byte transfers.",
+          "summary": "AWS Strands Robots SDK (Apache 2.0) now integrates with Hugging Face Storage Buckets—a mutable, non-versioned, Xet-backed object store announced March 2026—to close the robot learning loop. The same Robot() factory records LeRobot-format demonstrations, syncs only changed bytes to a bucket, streams the dataset back frame-by-frame without a full download, and deploys the trained checkpoint to hardware with one argument change. LeRobot's format is already used by 90K+ datasets from 8K+ publishers on the Hub.",
+          "tags": [
+            "robot learning",
+            "leRobot",
+            "embodied ai",
+            "data pipeline"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/amazon/strands-lerobot-streaming-data-loop"
+            }
+          ],
+          "published": "2026-08-13T17:16:04+00:00",
+          "score": 0.4392
         }
       ]
     },
@@ -63,136 +85,114 @@
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "1c97be6b6bc9",
+          "id": "5062583cd9e6",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "AVA-Encoder: Video-to-Knowledge-Graph Auto-Encoding for Agent-Native Video Representations",
-          "why_it_matters": "Representing video as an editable knowledge graph with typed edges that agents can query and manipulate is a technically interesting approach to bridging video understanding and agentic reasoning pipelines.",
-          "summary": "AVA-Encoder encodes video into a knowledge graph with hierarchy/state text nodes and a linked asset layer (images, audio, video clips), then reconstructs video from it. Reconstruction error drives textual-gradient optimization via pseudo-training in an outer loop and optional test-time KG refinement. The method reports a 20.7 percentage-point improvement over the strongest external baseline, and its pseudo-trained shot-level encoder policy uses 74.3% fewer system-prompt tokens than a human-tuned policy.",
+          "title": "Photonic Quantum SWITCH Enables BB84-Like QKD with No Key Disclosure for Eavesdropping Detection",
+          "why_it_matters": "For anyone tracking quantum information foundations or quantum ML, this is a proof-of-principle result showing indefinite causal order as a cryptographic resource with a genuinely novel detection mechanism distinct from standard BB84.",
+          "summary": "Researchers experimentally implemented a BB84-like QKD protocol placing Alice and Bob's operations in a photonic quantum SWITCH, achieving indefinite causal order. Eavesdropper detection is performed via control-qubit measurements rather than sacrificing key bits, achieving an average detection probability of 0.15±0.02 per shared qubit. A new measurement technique preserves path coherence while measuring photon polarization inside the SWITCH. Post-selection is still required, so this is not yet a fully secure QKD protocol.",
           "tags": [
+            "quantum computing",
+            "quantum cryptography",
+            "indefinite causal order",
+            "qkd"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2608.13561v1"
+            }
+          ],
+          "published": "2026-08-13T17:59:58+00:00",
+          "score": 1.3311
+        },
+        {
+          "id": "c2287c4e9f57",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "OmniScientist: End-to-End AI Scientist Handling Raw Multimodal Evidence Across 5 Discipline Families",
+          "why_it_matters": "The explicit test of raw perception vs. precomputed scalar features—with direct perception winning 85% of head-to-head judgments—is a concrete empirical result on why omni-modal grounding matters for autonomous research agents.",
+          "summary": "OmniScientist is an omni-modal AI scientist with a perception layer and three agents (ideation, experiment, writeup) operating in a deterministic pipeline. Evaluated on 36 real-data cases across 5 discipline families and modalities including images, signals, audio, video, 3D structures, and trajectories, it completes raw-data-to-manuscript in all 36 cases, scoring a mean of 6.3 overall. Against a blind variant receiving only precomputed scalar features, direct perception improves all 7 evaluation dimensions and wins 85% of head-to-head comparisons.",
+          "tags": [
+            "ai scientist",
+            "multimodal",
             "agents",
-            "video-understanding",
-            "knowledge-graphs",
-            "representation-learning"
+            "autonomous research"
           ],
           "sources": [
             {
               "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2608.12313v1"
+              "url": "https://arxiv.org/abs/2608.13558v1"
             }
           ],
-          "published": "2026-08-12T17:58:02+00:00",
-          "score": 1.3299
+          "published": "2026-08-13T17:59:52+00:00",
+          "score": 1.331
         },
         {
-          "id": "af369fe94903",
-          "tier": "worth_knowing",
+          "id": "b8c1eb736a42",
+          "tier": "skim",
           "category": "frontier",
-          "title": "DreamFly: Causal Memory and Receding-Horizon Diffusion Planning for Aerial VLN",
-          "why_it_matters": "The receding-horizon diffusion planning design—predict K-step action chunk, execute only the first, then replan—is a clean architectural pattern relevant to anyone working on embodied agents or long-horizon action generation.",
-          "summary": "DreamFly addresses aerial vision-language navigation with three components: causally aligned historical memory (uses only past observations), receding-horizon diffusion planning (predict K steps, execute one), and LiteStop (estimates stop probability from action logits at the initial all-mask state). On the OpenFly benchmark, it achieves 32.04%/29.46% success rate and 28.22%/23.54% SPL on test-seen/test-unseen splits, outperforming all compared methods on both metrics.",
+          "title": "AutoDesign: Meta-Harness Optimizer Beats Claude Design on Academic Poster Generation",
+          "why_it_matters": "The RSI-style loop—where a meta-optimizer iteratively improves a code agent's harness using rollout feedback—is a concrete instantiation of recursive self-improvement for agentic design tasks worth studying architecturally.",
+          "summary": "AutoDesign is a framework where a meta-harness optimizer directs a code agent to recursively improve its harness based on rollout feedback, applied to academic paper-to-poster generation. On PosterBench Main Track (100 papers, 5 disciplines), it scores 78.32, surpassing Claude Design by 7.45 points. Integrating the learned DesignHarness across 7 code-agent configurations raises average PosterBench Score from 54.99 to 67.39 (+12.4%). A full autonomous run completes in ~40 minutes for under $3.",
           "tags": [
-            "embodied-agents",
-            "diffusion",
-            "vision-language-navigation",
-            "planning"
+            "agents",
+            "recursive self-improvement",
+            "agentic design",
+            "benchmarks"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2608.13560v1"
+            }
+          ],
+          "published": "2026-08-13T17:59:57+00:00",
+          "score": 0.4437
+        },
+        {
+          "id": "277f47347ce7",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "HumanTracker: 153-Hour Benchmark and HumanScore Metric for Perceptually Aligned Humanoid Motion Tracking",
+          "why_it_matters": "If you work on humanoid robotics or embodied AI evaluation, HumanScore's focus on contact and stability failures that kinematic metrics miss is directly relevant to building trackers that behave well in the real world.",
+          "summary": "HumanTracker introduces a humanoid motion tracking benchmark with ~153 hours of optical motion capture from multiple professional performers, organized into four motion families with text labels. HumanScore, trained on 12K motion pairs (24K motions), is a preference-aligned metric that better predicts human preferences than kinematic error metrics and specifically surfaces contact and stability failures—such as foot skating and mistimed touchdowns—that per-frame metrics miss.",
+          "tags": [
+            "humanoid robotics",
+            "motion tracking",
+            "evaluation",
+            "embodied ai"
           ],
           "sources": [
             {
               "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2608.12308v1"
+              "url": "https://arxiv.org/abs/2608.13555v1"
             }
           ],
-          "published": "2026-08-12T17:54:33+00:00",
-          "score": 1.3288
+          "published": "2026-08-13T17:59:40+00:00",
+          "score": 0.4437
         },
         {
-          "id": "6d6bf8549af6",
-          "tier": "worth_knowing",
+          "id": "2d7eba48f9d7",
+          "tier": "skim",
           "category": "frontier",
-          "title": "Strong-to-Weak Test-Time Capability Transfer: Harnesses Nearly Double Weaker Model Performance on ToM Benchmarks",
-          "why_it_matters": "Showing that a stronger model can construct inference-time scaffolds that boost a weaker model from 0.49 to 0.91 average accuracy—without any parameter updates—is directly relevant to deployment strategies and complements distillation research.",
-          "summary": "The paper tests whether a stronger 'builder' model can iteratively construct inference-time harnesses (code offloading, benchmark-specific routing, strict answer-format enforcement) that lift a weaker 'target' model on Theory-of-Mind benchmarks, using 5% of data for harness refinement. Average target performance nearly doubles from 0.49 to 0.91. Gains come primarily from deterministic code offloading rather than extended reasoning, and weaker targets benefit most.",
+          "title": "Defensive Booster: Single Algorithm Unifies Online Gradient Boosting and Weak-to-Strong Boosting Guarantees",
+          "why_it_matters": "For researchers working on online learning theory or robust forecasting, a single efficient algorithm that provably achieves both Brier score competitiveness and vanishing classification error—previously only available separately—is a clean theoretical contribution worth noting.",
+          "summary": "The Defensive Booster is an online probabilistic forecasting algorithm that simultaneously achieves two previously separate guarantees: Brier score competitiveness with the best predictor in the span of a weak hypothesis class (matching online gradient boosting rates), and vanishing randomized classification error under the smooth weak-learning condition (matching online classification boosting rates). It uses a single weak-class learner rather than large ensembles, yielding orders-of-magnitude faster runtime. A strongly adaptive variant extends both guarantees to every time interval.",
           "tags": [
-            "distillation",
-            "test-time-compute",
-            "agents",
-            "capability-transfer"
+            "online learning",
+            "boosting",
+            "probabilistic forecasting",
+            "learning theory"
           ],
           "sources": [
             {
               "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2608.12307v1"
+              "url": "https://arxiv.org/abs/2608.13554v1"
             }
           ],
-          "published": "2026-08-12T17:53:18+00:00",
-          "score": 1.3284
-        },
-        {
-          "id": "d1475e1e4d33",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "RCI Framework: Converting Sparse Stop-Feedback into Dense Costs for Safe Offline RL",
-          "why_it_matters": "Addressing the realistic sparse-label setting for safe RL—where only a binary stop signal is available rather than per-step cost annotations—via return decomposition is a practically important contribution for anyone building constrained offline RL systems.",
-          "summary": "RCI (Redistribution-based Cost Inference) takes binary trajectory-level stop-feedback and uses return decomposition to redistribute it into dense per-step cost signals, then trains a constrained offline policy on the augmented dataset in a CMDP framework. The paper proves return-equivalent redistribution preserves the feasible policy set and optimal Lagrangian. Experiments on highway driving and robotic manipulation show substantially lower violation rates versus sparse and classifier-based baselines, with robustness to label noise.",
-          "tags": [
-            "safe-rl",
-            "offline-rl",
-            "reinforcement-learning",
-            "credit-assignment"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2608.12306v1"
-            }
-          ],
-          "published": "2026-08-12T17:53:15+00:00",
-          "score": 1.3284
-        },
-        {
-          "id": "e43158037a35",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "OlmoEarth Studio Now Exports Custom Geospatial Embedding Vectors for Downstream ML",
-          "why_it_matters": "If you work on geospatial or environmental ML, this open-weight foundation model with exportable embeddings at multiple resolutions and encoder sizes is a ready-to-use building block for similarity search, segmentation, and change detection pipelines.",
-          "summary": "OlmoEarth Studio can now compute and export embedding vectors from its open-source Earth-observation foundation models as Cloud-Optimized GeoTIFFs. Users choose area, time range (1–12 monthly periods), encoder variant (Nano 128-dim/1.4M params, Tiny 192-dim/6.2M params, or Base 768-dim/89M params), resolution (10–80 m/pixel), and imagery source (Sentinel-2 L2A, Sentinel-1 RTC, or both). Vectors are stored as int8; model weights and code are publicly available.",
-          "tags": [
-            "geospatial",
-            "embeddings",
-            "earth-observation",
-            "open-weights"
-          ],
-          "sources": [
-            {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/allenai/olmoearth-embeddings"
-            }
-          ],
-          "published": "2026-08-12T16:14:36+00:00",
-          "score": 0.4328
-        },
-        {
-          "id": "ab799e9da743",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "LiquidAI Releases LFM2.5-VL-3B: Fast Edge VLM with RL Post-Training and 11K tok/s GPU Throughput",
-          "why_it_matters": "A 3B-class VLM hitting ~11K tokens/second at high concurrency on a single H100 and 20 tok/s on a Galaxy S26 Ultra, with RL-based post-training and strong tool-use, is a practically significant edge-deployment result.",
-          "summary": "LFM2.5-VL-3B pairs a SigLIP2 400M NaFlex vision encoder with a 2.6B text backbone pretrained on ~34T tokens. Post-training uses SFT with knowledge distillation plus multi-reward RL. The model achieves ~11K tokens/second throughput at high concurrency on an H100 (roughly 2× larger 4B-class models), 228 tok/s on an M5 Max, and fits in ~3 GB. Tool-use performance matches Gemma-4-E2B and Qwen3.5-2B; tokenizer vocabulary doubled to 128K for non-Latin script support.",
-          "tags": [
-            "vision-language",
-            "edge-inference",
-            "reinforcement-learning",
-            "on-device"
-          ],
-          "sources": [
-            {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/LiquidAI/lfm2-5-vl-3b"
-            }
-          ],
-          "published": "2026-08-12T14:00:51+00:00",
-          "score": 0.4196
+          "published": "2026-08-13T17:59:35+00:00",
+          "score": 0.4437
         }
       ]
     }
