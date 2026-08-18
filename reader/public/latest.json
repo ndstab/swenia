@@ -1,11 +1,11 @@
 {
-  "date": "2026-08-15",
-  "generated_at": "2026-08-15T01:45:13.195327+00:00",
-  "summary_line": "2 worth knowing",
+  "date": "2026-08-18",
+  "generated_at": "2026-08-18T01:45:31.944300+00:00",
+  "summary_line": "4 worth knowing",
   "counts": {
-    "total": 4,
-    "headlines": 2,
-    "frontier": 2
+    "total": 6,
+    "headlines": 1,
+    "frontier": 5
   },
   "sections": [
     {
@@ -13,48 +13,26 @@
       "title": "Headlines",
       "cards": [
         {
-          "id": "3e4e84742a48",
+          "id": "30d6dd90b162",
           "tier": "worth_knowing",
           "category": "headline",
-          "title": "GLM-5.3: Z.ai Reaches Coding Frontier with Post-Training Alone, No New Base Model",
-          "why_it_matters": "As an AI/ML engineer, understanding how a ~750B-parameter model built purely on extended post-training matches or beats Claude Fable 5 and GPT-5.6-Sol on agentic coding benchmarks is a direct signal about where capability gains are coming from right now.",
-          "summary": "Z.ai's GLM-5.3 uses the same base model as GLM-5.2 but with substantially extended post-training — more RL environments, more diverse tasks, more compute on them. At roughly 750B parameters (about a third of Kimi K3), it surpasses Kimi K3 on many agentic coding benchmarks and matches or beats Claude Fable 5 and GPT-5.6-Sol on some. Z.ai attributes gains to RL scale, not distillation. Open weights coming to Hugging Face in two weeks.",
+          "title": "Nvidia Bets $26B on Open-Model Ecosystem to Drive Chip Demand",
+          "why_it_matters": "As an AI/ML engineer, understanding Nvidia's strategic bet on open-weight models shapes your read on the future funding and sustainability of the open-source tooling you build on.",
+          "summary": "Nvidia is reportedly spending $26B to support near-open-source models (releasing data, training code) to maximize inference demand across many companies — all buying Nvidia hardware. The author sees two futures: open models stay competitive and generate proportional economic returns, or they diverge into an efficiency/specialization niche while closed models dominate frontier capabilities. The latter is assessed as the more likely outcome.",
           "tags": [
-            "post-training",
-            "rl",
-            "chinese-labs",
-            "open-weights"
+            "open-source ai",
+            "nvidia",
+            "llm ecosystem",
+            "industry strategy"
           ],
           "sources": [
             {
               "name": "Interconnects",
-              "url": "https://www.interconnects.ai/p/glm-53-how-chinese-labs-keep-stride"
+              "url": "https://www.interconnects.ai/p/teaching-everyone-to-fish-for-tokens"
             }
           ],
-          "published": "2026-08-14T21:23:35+00:00",
-          "score": 1.4119
-        },
-        {
-          "id": "d556a48bace2",
-          "tier": "worth_knowing",
-          "category": "headline",
-          "title": "HF Hub Summer 2026: Chinese Labs Dominate Frontier Open Weights, U.S. Shifts to Hardware-Vendor Models",
-          "why_it_matters": "This structural snapshot of open-model publishing directly shapes which base models and ecosystems an AI/ML engineer should track and build on.",
-          "summary": "HF repositories grew from 2.43M to 2.96M models and 711K to 1M datasets. Chinese labs (Moonshot, MiniMax, Xiaomi, Z.ai) released frontier open models ranging 754B–2.78T parameters monthly, while U.S. labs mostly stayed under 130B outside NVIDIA Nemotron 3 Ultra (561B) and Thinking Machines' Inkling (952B). AMD and NVIDIA now lead U.S. new model releases (200+ repos each), displacing Google and Meta. Most U.S. releases above 100B are conversions or fine-tunes of Chinese models.",
-          "tags": [
-            "open-weights",
-            "scaling",
-            "chinese-labs",
-            "infrastructure"
-          ],
-          "sources": [
-            {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/state-of-open-models-summer-2026"
-            }
-          ],
-          "published": "2026-08-14T00:00:00+00:00",
-          "score": 1.0489
+          "published": "2026-08-17T15:07:49+00:00",
+          "score": 1.2941
         }
       ]
     },
@@ -63,48 +41,114 @@
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "0259d1bdfc2f",
-          "tier": "skim",
+          "id": "67993782c5e9",
+          "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Exact Calibration of Multi-Label Jaccard Loss Requires Exponentially Many Prediction Coordinates",
-          "why_it_matters": "For an ML researcher working on structured prediction or segmentation, this result sets a hard theoretical floor on surrogate loss design for IoU objectives and offers two concrete polynomial-dimension approximation alternatives.",
-          "summary": "For s-label Jaccard (IoU) loss, the convex calibration dimension is bounded between 2^(s-1) and 2^s−1, meaning any exactly calibrated convex surrogate needs exponentially many output coordinates. Two polynomial alternatives are provided: an (s²+1)-dimensional F1-to-Jaccard transfer with asymptotic regret at most 3−2√2, and a MinHash square-loss surrogate with dimension O((s²+s·log(1/ρ))/α²) (signed variant: O((s+log(1/ρ))/α²)) achieving regret floor α with probability 1−ρ.",
+          "title": "Marionette Separates World-State Prediction from Appearance Synthesis in Game World Models",
+          "why_it_matters": "This architecture directly addresses long-horizon consistency failures in autoregressive world models — a frontier problem relevant to anyone working on agents, world models, or video generation.",
+          "summary": "Marionette decomposes interactive game world modeling into three stages: an autoregressive dynamics model predicting an explicit 276-dimensional 3D world state (skeletons, trajectories, rotations), a zero-parameter graphics bridge computing geometry and occlusion in closed form, and a video-diffusion model synthesizing RGB appearance. Explicit state allows rule-based corrections: a terrain collider and separation cap cut ground penetration by 66% and keep characters engaged, with negligible fidelity cost (FVD 831 vs. 799 for recorded pose).",
           "tags": [
-            "multi-label",
-            "surrogate-loss",
-            "calibration",
-            "theory"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2608.13549v1"
-            }
-          ],
-          "published": "2026-08-13T17:59:17+00:00",
-          "score": 0.3216
-        },
-        {
-          "id": "31ceb9467c34",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "QuoteBench: Shell Quoting/Parsing Boundaries Cut LLM Agent Success by 55–73 Points, Frontier Models Adapt Unevenly",
-          "why_it_matters": "Any engineer deploying LLM coding agents needs to know that matched-score benchmarks hide catastrophic execution-path failures that only emerge when the full generation-to-shell transport stack is tested.",
-          "summary": "QuoteBench tests 8 agent configurations on 56 one-shot Bash tasks across 14 incident-derived families, inserting a single unescaped parser between generation and execution. Replaying identical outputs through that parser drops success rates by 55.4–73.2 percentage points. Disclosing the boundary recovers 30.4–60.7 points for 6 configurations but zero or negative for 2. GPT-5.6-sol's −3.6-point matched gap hides −64.3 points of damage and +60.7 points of recovery. Model rankings change under deployment configuration, with at least one unambiguous reversal among 26 comparable pairs.",
-          "tags": [
-            "agents",
-            "evals",
-            "coding-agents",
-            "benchmarks"
+            "world models",
+            "video generation",
+            "game ai",
+            "architecture"
           ],
           "sources": [
             {
               "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2608.13547v1"
+              "url": "https://arxiv.org/abs/2608.14530v1"
             }
           ],
-          "published": "2026-08-13T17:57:20+00:00",
-          "score": 0.3215
+          "published": "2026-08-14T17:48:16+00:00",
+          "score": 0.4941
+        },
+        {
+          "id": "9d36ecea20eb",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Formal Theory of LLM Session Handover: What Must Be Retained Across Context Boundaries",
+          "why_it_matters": "For engineers building multi-session agents or long-running LLM pipelines, this paper provides a theoretical foundation for what information is sufficient to preserve task continuity across context resets.",
+          "summary": "The paper formalizes session handover — transferring in-context learning state when a task continues across context-limit resets or agent switches — as a transfer of a task-relative ICL state. It defines predictive equivalence as characterizing the coarsest sufficient handover and derives a fixed-length bit requirement. A three-part record structure is proposed: exact decisions/constraints, task-justified statistics for repeated evidence, and original observations not preserved by those statistics. Gaussian linear regression yields exact finite-dimensional handovers; nonparametric regression yields memory-vs-squared-prediction-error bounds.",
+          "tags": [
+            "llm agents",
+            "context management",
+            "theory",
+            "in-context learning"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2608.14528v1"
+            }
+          ],
+          "published": "2026-08-14T17:47:13+00:00",
+          "score": 0.494
+        },
+        {
+          "id": "91f0ab6bb052",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Separating Evidence Interpretation from Decision Aggregation Fixes 'Count-Scale Drift' in Multi-Source LLM Systems",
+          "why_it_matters": "Engineers building RAG pipelines or multi-source reasoning systems often conflate reading and aggregation in a single prompt — this paper identifies a concrete failure mode and proposes an arithmetic fix.",
+          "summary": "The paper argues that concatenating many sources into one LLM prompt conflates evidence interpretation (needs capacity/context) with aggregation (needs fixed arithmetic and comparability). It proposes a four-field evidence tuple and identifies 'count-scale drift': thresholding a sum of unnormalized weights shifts the operating point with the number of sources, growing with reader reliability. Pooling calibrated log-likelihood ratios fixes this. On a longitudinal corpus, a small sequence encoder plus tree ensemble with censored survival loss reaches 0.921 AUPRC against 0.805 for a hand-crafted baseline.",
+          "tags": [
+            "rag",
+            "multi-source reasoning",
+            "aggregation",
+            "llm systems"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2608.14509v1"
+            }
+          ],
+          "published": "2026-08-14T17:24:55+00:00",
+          "score": 0.4914
+        },
+        {
+          "id": "b597a3d03ee7",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Constraint-Aware GPU Scheduler Beats FIFO by Up to 33 Percentage Points Utilization",
+          "why_it_matters": "If you run or design GPU clusters for training and inference workloads, this benchmarked result quantifies exactly how much capacity a smarter scheduling order can recover on identical hardware.",
+          "summary": "Hugging Face built a constraint-aware GPU allocator and benchmarked it against FIFO across seven scenarios. On the same hardware and workloads, GPU utilization rose by as much as 33 percentage points and priority-weighted output increased in every scenario, by as much as 105%. Key insight: FIFO's fixed reservation for real-time inference wastes capacity during off-peak hours, and arrival-order placement ignores downstream priority, both of which the new allocator addresses.",
+          "tags": [
+            "gpu scheduling",
+            "infrastructure",
+            "mlops",
+            "cluster efficiency"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/Dharma-AI/gpu-management-pt2"
+            }
+          ],
+          "published": "2026-08-17T19:46:21+00:00",
+          "score": 0.4601
+        },
+        {
+          "id": "bfd138899adf",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Developer Choices in Moral Preference Elicitation Shape AI Alignment Outcomes — Empirical Evidence",
+          "why_it_matters": "Anyone working on RLHF, alignment, or value aggregation pipelines should understand how upstream design choices (not just the voting mechanism) systematically bias the moral preferences encoded into models.",
+          "summary": "Across two phases (N=809) and three deployment contexts, this study shows that three pre-vote developer decisions — feature scoping, voter sampling, and question framing — each measurably shift aggregated moral preferences. Ideological composition of the voter pool affects roughly one-third of features, with some preference directions reversing. Question wording alone can shift ideological gaps by up to a full scale point. The authors conclude that aggregation alone cannot deliver fair alignment; each pipeline stage requires auditing and disclosure.",
+          "tags": [
+            "alignment",
+            "rlhf",
+            "value aggregation",
+            "ai ethics"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2608.14522v1"
+            }
+          ],
+          "published": "2026-08-14T17:43:16+00:00",
+          "score": 0.1645
         }
       ]
     }
