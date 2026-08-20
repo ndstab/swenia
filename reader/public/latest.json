@@ -1,198 +1,43 @@
 {
-  "date": "2026-08-19",
-  "generated_at": "2026-08-19T01:47:16.952604+00:00",
-  "summary_line": "4 worth knowing",
+  "date": "2026-08-20",
+  "generated_at": "2026-08-20T01:45:42.982386+00:00",
+  "summary_line": "1 worth knowing",
   "counts": {
-    "total": 8,
-    "headlines": 2,
-    "frontier": 6
+    "total": 1,
+    "headlines": 0,
+    "frontier": 1
   },
   "sections": [
     {
       "key": "headlines",
       "title": "Headlines",
-      "cards": [
-        {
-          "id": "5ce8103476b1",
-          "tier": "skim",
-          "category": "headline",
-          "title": "ALTK-Evolve: Agentic Memory Dosage Must Be Calibrated Per Model Tier",
-          "why_it_matters": "You build and evaluate agents — this gives you a concrete, empirically grounded framework for deciding how much self-mined memory to inject at inference time without touching model weights.",
-          "summary": "ALTK-Evolve distills behavioral guidelines from an agent's own trajectories and reinjects them at inference — no weight updates, no human labels. Across 8 models on AppWorld (585 tasks), strong models with headroom benefit from the full guideline set (DeepSeek-V3.2 +9.5pp TGC); weaker models do better with a compact core plus per-task retrieval (gpt-oss-120b +16.1pp at only +5% extra tokens); already-saturated models show no measurable gain.",
-          "tags": [
-            "agents",
-            "memory",
-            "inference",
-            "rl"
-          ],
-          "sources": [
-            {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/ibm-research/altk-evolve-hmm"
-            }
-          ],
-          "published": "2026-08-18T18:09:38+00:00",
-          "score": 0.4497
-        },
-        {
-          "id": "e520424e436f",
-          "tier": "skim",
-          "category": "headline",
-          "title": "Sentence Transformers Adds Native ColBERT-Style Multi-Vector Late Interaction Support",
-          "why_it_matters": "As an ML engineer building retrieval pipelines, native MultiVectorEncoder support in Sentence Transformers means you can drop in ColBERT, PyLate, or ColPali checkpoints with the same API you already use for dense and sparse models.",
-          "summary": "Sentence Transformers' new MultiVectorEncoder loads any PyLate or Stanford-NLP ColBERT checkpoint and colpali-engine visual document retrieval models. Multi-vector models retain one embedding per token and score via MaxSim (per-query-token maximum cosine similarity, summed), preserving token-level matching lost in single-vector pooling. This is also the current SoTA approach for visual document retrieval without OCR. Available via pip install -U sentence-transformers.",
-          "tags": [
-            "retrieval",
-            "colbert",
-            "embeddings",
-            "nlp"
-          ],
-          "sources": [
-            {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/multi-vector-encoder"
-            }
-          ],
-          "published": "2026-08-18T00:00:00+00:00",
-          "score": 0.3495
-        }
-      ]
+      "cards": []
     },
     {
       "key": "frontier",
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "6a46ccb9ab25",
+          "id": "22e214c52569",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "BATON: Additive-Cost Subtask Exploration Cuts Long-Horizon Robot Manipulation Failures",
-          "why_it_matters": "If you follow VLA + LLM agent research for robotics, BATON's transition-aware memory and subtask-level exploration directly address the compounding-error and multiplicative-cost problems that make long-horizon chaining hard.",
-          "summary": "BATON makes the subtask the unit of test-time exploration, reducing cost from multiplicative (T^K) to additive (T×K) across K stages. A transition-aware memory handles three handoff types: invocation (wrist-view verifier before VLA call), handoff (restoring entry state disturbed by predecessor), and lookahead (strategy selection whose outcome the successor can inherit). No parameters updated. On RoboMemArena, BATON improves task success by 11.6% and cumulative success by 14.9% over prior SoTA.",
+          "title": "Liquid AI Releases QAD Q4_0 Checkpoints for LFM2.5 Edge Models, Recovering ~97% of BF16 Accuracy",
+          "why_it_matters": "If you deploy or benchmark quantized models on edge hardware, this is a concrete, reproducible method that closes most of the PTQ accuracy gap at no extra runtime cost.",
+          "summary": "Liquid AI used Quantization-Aware Distillation (QAD) — a BF16 teacher distilled into a Q4_0 student — across four LFM2.5 models (230M, 350M, 1.2B, 2.6B). The checkpoints recover 96.5–97.4% of BF16 accuracy lost to standard PTQ, match Q5_K_M quality (230M/350M) or Q4_K_M quality (1.2B/2.6B), and achieve 3–33% higher decode throughput. All four GGUF checkpoints are available on Hugging Face for llama.cpp.",
           "tags": [
-            "robotics",
-            "agents",
-            "vla",
-            "long-horizon"
+            "quantization",
+            "edge-inference",
+            "distillation",
+            "gguf"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2608.16889v1"
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/LiquidAI/qad"
             }
           ],
-          "published": "2026-08-17T17:59:57+00:00",
-          "score": 0.9646
-        },
-        {
-          "id": "343bc94c3793",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "QVIRL: Bayesian IRL via Variational Q-Value Distributions, First to Train from Raw Pixels",
-          "why_it_matters": "For researchers working on reward learning, RLHF, or safe AI, QVIRL offers a scalable Bayesian IRL method with uncertainty quantification — properties needed for safety-critical and active learning settings.",
-          "summary": "QVIRL (Q-based Variational IRL) infers a posterior over reward functions from expert demonstrations by learning a variational distribution over optimal Q-values. It combines scalability with Bayesian uncertainty quantification. Evaluated on gridworlds, Lunar Lander, Highway Environment, and two Atari games with both static data and active learning settings. Claimed as the first Bayesian IRL method to demonstrate training directly from raw pixel observations.",
-          "tags": [
-            "inverse-rl",
-            "reward-learning",
-            "bayesian",
-            "safety"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2608.16888v1"
-            }
-          ],
-          "published": "2026-08-17T17:59:55+00:00",
-          "score": 0.9646
-        },
-        {
-          "id": "36c4e939d2c2",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "AlphaEvolve Helps Push Matrix Multiplication Exponent Bound to ω < 2.371177",
-          "why_it_matters": "This is a direct application of ML-driven optimization to a fundamental open problem in theoretical CS, and the AlphaEvolve contribution is a concrete data point on where AI-assisted math research stands.",
-          "summary": "Using a reformulated optimization problem based on the laser method's combination loss analysis, the authors design a new optimization algorithm and refine it with AlphaEvolve. The result is a new upper bound of ω < 2.371177, improving the previous best bound of 2.371339. The reformulation enables optimization in a larger setting than previously tractable.",
-          "tags": [
-            "algorithms",
-            "alphaevolve",
-            "theoretical-cs",
-            "optimization"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2608.16884v1"
-            }
-          ],
-          "published": "2026-08-17T17:59:05+00:00",
-          "score": 0.9644
-        },
-        {
-          "id": "f8870d2930c5",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "AutoSR: Monte Carlo Tree Search Over Persistent Research States for Symbolic Regression",
-          "why_it_matters": "For researchers interested in AI-assisted scientific discovery, AutoSR's MCTS over structured research states — coupling equations with reasoning and review history — is a meaningful architectural step beyond equation-level search.",
-          "summary": "AutoSR frames symbolic regression as a search over 'Research States' — each coupling a candidate equation with its reasoning, computational evidence, and agent review history. Proposer–reviewer agents develop states under progressive-widening MCTS. On nine selected benchmarks across two suites, AutoSR recovers algebraically equivalent relations in all nine cases, including three cp3-bench problems no published system previously recovered and six LSR-Transform problems.",
-          "tags": [
-            "symbolic-regression",
-            "scientific-discovery",
-            "agents",
-            "mcts"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2608.16876v1"
-            }
-          ],
-          "published": "2026-08-17T17:55:26+00:00",
-          "score": 0.9636
-        },
-        {
-          "id": "fdb3ec7b67ba",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "Hit-and-Run MCMC Mixing Time Tied to Poincaré Constants, Closing a 20-Year Open Problem",
-          "why_it_matters": "If you work on sampling algorithms for ML (e.g., posterior inference, generative models), this resolves a long-standing theoretical gap connecting Hit-and-Run convergence to KLS/Poincaré constants analogous to what was known for Ball walk.",
-          "summary": "This paper proves the spectral gap of Hit-and-Run is Ω(1/(n²·C_PI)) for convex bodies containing a unit ball, yielding mixing in O(n²·C_PI·log(M/ε)) steps — refining Lovász & Vempala (2004)'s O(n²R²) bound. For nearly isotropic bodies with KLS progress, complexity becomes O(n²log n·log(M/ε)), improving dimension dependence from cubic to nearly quadratic. The proof uses duality and functional isoperimetry rather than conductance bounding; the same technique gives Coordinate Hit-and-Run O(n³·C_PI·log(M/ε)).",
-          "tags": [
-            "sampling",
-            "mcmc",
-            "theory",
-            "convex-geometry"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2608.16878v1"
-            }
-          ],
-          "published": "2026-08-17T17:57:11+00:00",
-          "score": 0.3213
-        },
-        {
-          "id": "39ecefa78ed9",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "Analytical-Prior Pretraining Cuts Helmholtz Resonator Prediction Error with Scarce Simulation Data",
-          "why_it_matters": "The analytical-prior distillation strategy here — pretrain on cheap analytical evals, fine-tune on limited high-fidelity data — is a domain-agnostic technique relevant to any ML researcher building surrogates under tight simulation budgets.",
-          "summary": "With only 86 simulation-labelled geometries, direct SVR achieved 3.375 Hz MAE while residual SVR (learning analytical-to-simulation discrepancy) reduced it to 0.426 Hz. A direct MLP achieved 1.109 Hz; analytical-prior pretraining reduced this to 0.556 Hz (frozen prior) and 0.371 Hz (full fine-tuning), versus the analytical model baseline of 1.333 Hz. Gains held across training budgets of 20–70 labelled cases.",
-          "tags": [
-            "surrogate-models",
-            "data-efficiency",
-            "physics-ml",
-            "pretraining"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2608.16873v1"
-            }
-          ],
-          "published": "2026-08-17T17:53:14+00:00",
-          "score": 0.321
+          "published": "2026-08-19T13:48:49+00:00",
+          "score": 1.2706
         }
       ]
     }
