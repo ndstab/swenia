@@ -1,6 +1,6 @@
 {
-  "date": "2026-08-20",
-  "generated_at": "2026-08-20T01:45:42.982386+00:00",
+  "date": "2026-08-21",
+  "generated_at": "2026-08-21T01:51:02.201988+00:00",
   "summary_line": "1 worth knowing",
   "counts": {
     "total": 1,
@@ -18,26 +18,26 @@
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "22e214c52569",
+          "id": "c7cdb6722fd8",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Liquid AI Releases QAD Q4_0 Checkpoints for LFM2.5 Edge Models, Recovering ~97% of BF16 Accuracy",
-          "why_it_matters": "If you deploy or benchmark quantized models on edge hardware, this is a concrete, reproducible method that closes most of the PTQ accuracy gap at no extra runtime cost.",
-          "summary": "Liquid AI used Quantization-Aware Distillation (QAD) — a BF16 teacher distilled into a Q4_0 student — across four LFM2.5 models (230M, 350M, 1.2B, 2.6B). The checkpoints recover 96.5–97.4% of BF16 accuracy lost to standard PTQ, match Q5_K_M quality (230M/350M) or Q4_K_M quality (1.2B/2.6B), and achieve 3–33% higher decode throughput. All four GGUF checkpoints are available on Hugging Face for llama.cpp.",
+          "title": "LFM2.5-DSpark: Up to 3.18x GPU Throughput Gain via Speculative Decoding",
+          "why_it_matters": "Speculative decoding with a ~300M draft model cutting real inference latency by 57% on function-calling tasks is directly actionable for anyone deploying LFM2.5 on-device or on H100s.",
+          "summary": "LiquidAI's DSpark combines a DFlash-style parallel backbone, a Markov-chain sequential head, and a confidence-scheduled verifier to accelerate LFM2.5 inference. Draft models (~300M params, 5 layers) yield up to 3.18x GPU throughput on H100 and 2.87x on M4 Max, with 57% average function-calling latency reduction for LFM2.5-2.6B. Quality is identical to greedy baseline by construction. Day-one support for llama.cpp and SGLang is open-sourced.",
           "tags": [
-            "quantization",
-            "edge-inference",
-            "distillation",
-            "gguf"
+            "speculative decoding",
+            "inference optimization",
+            "on-device ai",
+            "llm serving"
           ],
           "sources": [
             {
               "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/LiquidAI/qad"
+              "url": "https://huggingface.co/blog/LiquidAI/lfm25-dspark"
             }
           ],
-          "published": "2026-08-19T13:48:49+00:00",
-          "score": 1.2706
+          "published": "2026-08-20T16:52:57+00:00",
+          "score": 1.3243
         }
       ]
     }
