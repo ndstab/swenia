@@ -1,176 +1,153 @@
 {
-  "date": "2026-08-22",
-  "generated_at": "2026-08-22T01:44:49.274494+00:00",
-  "summary_line": "2 must-know · 2 worth knowing",
+  "date": "2026-08-24",
+  "generated_at": "2026-08-24T01:52:02.886843+00:00",
+  "summary_line": "1 must-know · 2 worth knowing",
   "counts": {
-    "total": 7,
-    "headlines": 1,
+    "total": 6,
+    "headlines": 0,
     "frontier": 6
   },
   "sections": [
     {
       "key": "headlines",
       "title": "Headlines",
-      "cards": [
-        {
-          "id": "06daba08af15",
-          "tier": "must_know",
-          "category": "headline",
-          "title": "Google DeepMind Traces 15-Year Games-AI Arc, Announces EVE Online Partnership and SIMA 2",
-          "why_it_matters": "DeepMind's retrospective from DQN to SIMA 2 (Gemini-powered) signals the lab's current research direction — generalist game agents — which feeds directly into real-world embodied-agent and multimodal reasoning work.",
-          "summary": "DeepMind reviews its games-AI lineage: DQN (2015), AlphaGo/Zero, AlphaZero, MuZero, AlphaStar, and AlphaFold (2024 Nobel). SIMA 2, powered by Gemini, is a generalist agent operating via screen pixels and keyboard/mouse — no game API needed — achieving human-like play across No Man's Sky, Valheim, and others. A new research partnership with Fenris Creations targets EVE Online gameplay.",
-          "tags": [
-            "deepmind",
-            "reinforcement-learning",
-            "agents",
-            "game-ai"
-          ],
-          "sources": [
-            {
-              "name": "DeepMind",
-              "url": "https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/"
-            }
-          ],
-          "published": "2026-08-21T11:59:48+00:00",
-          "score": 2.4785
-        }
-      ]
+      "cards": []
     },
     {
       "key": "frontier",
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "3316a70c04fc",
+          "id": "064ca8c64dd8",
           "tier": "must_know",
           "category": "frontier",
-          "title": "AI4AI-Bench: New Benchmark Tests Whether LLM Agents Can Redesign Training Algorithms (Best Score: 0.25/1.0)",
-          "why_it_matters": "This is a direct operational test of recursive self-improvement capability — one of the field's most consequential open questions — and the results quantify how far current frontier systems are from closing that loop.",
-          "summary": "AI4AI-Bench presents 10 frozen research repos spanning 10 training-algorithm families; agents get 4 hours on one B300 to rewrite the training algorithm, which is then re-run for scoring against the original. Scale: 0=uninformative model, 0.1=original algorithm, 1.0=task optimum. Across 29 configurations of 6 systems, mean score is 0.166 and the best reaches 0.250. Most submissions never change how the model learns; those that do average 0.226 vs. 0.126 for those that don't. More reasoning effort shifts the fraction that attempts algorithmic change from 8% to 64%.",
+          "title": "One Researcher Taped Out a RISC-V Chip in Five Weeks Using AI Agents and Formal Verification",
+          "why_it_matters": "This is a landmark demonstration of AI-directed autonomous hardware design at scale — the 'Salt method' of proof-kernel-gated agent coordination is a concrete, reproducible workflow that research engineers should study.",
+          "summary": "Using consumer AI subscriptions over five weeks, one researcher directed AI agents from application code through a verified compiler and executive to a RISC-V processor taped out on a community silicon shuttle. No RTL was written by a human; no proofs passed human review. The 'Salt method' routes all mathematical claims through a Lean 4 proof kernel and SAT-checked silicon equivalence, with a published error ledger reaching catch #256 and zero incorrect proofs reaching the record.",
           "tags": [
-            "rsi",
-            "agents",
-            "benchmarking",
-            "llm-reasoning"
+            "ai agents",
+            "formal verification",
+            "hardware design",
+            "risc-v"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2608.20318v1"
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2608.21356v1"
             }
           ],
-          "published": "2026-08-20T17:56:59+00:00",
-          "score": 1.929
+          "published": "2026-08-21T17:59:16+00:00",
+          "score": 1.3806
         },
         {
-          "id": "76bef1017697",
+          "id": "337561a462b7",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Unified Variational Framework Connects PAC-Bayes, Ville, and Azuma-Hoeffding via Martingale Path-Space",
-          "why_it_matters": "If you work on PAC-Bayes bounds, safe testing, or sequential hypothesis testing, this provides an exact accounting of the slack discarded by each classical inequality — useful for tightening or choosing between bounds.",
-          "summary": "The paper develops exact variational identities for nonneg martingales on path-time space, recovering Ville's inequality, Azuma-Hoeffding, and PAC-Bayes as special cases while characterizing what each discards. Slack has closed form in three geometries. Random stopping times incur an e-process 'peeking penalty.' Geometric mixtures of test martingales gain a pooling benefit for multi-model safe testing.",
+          "title": "VIALS Benchmark Exposes Frontier VLMs' Failures on Life-Sciences Visual Artifacts",
+          "why_it_matters": "As AI agents are increasingly deployed in scientific workflows, this benchmark directly quantifies a capability gap — frontier vision-language models fail on domain-specific scientific image interpretation that domain-expert humans find straightforward.",
+          "summary": "VIALS is a 161-task visual question-answering benchmark covering gel blots, microscopy images, plasmid maps, flow cytometry plots, and molecular structures drawn from real biotech workflows (not polished publication figures). Frontier vision-language models fail to accurately interpret these images despite fluency on natural images, revealing gaps in domain knowledge and domain-specific visual reasoning.",
           "tags": [
-            "theory",
-            "concentration-inequalities",
-            "pac-bayes",
-            "sequential-testing"
+            "benchmarks",
+            "vision-language models",
+            "scientific ai",
+            "evals"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2608.20337v1"
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2608.21357v1"
             }
           ],
-          "published": "2026-08-20T17:59:57+00:00",
-          "score": 0.9651
+          "published": "2026-08-21T17:59:26+00:00",
+          "score": 0.6903
         },
         {
-          "id": "095ed1a6cc5d",
+          "id": "ce8c90692341",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "BERT-LER: BERT-Style EHR Model Pretrained on 75M Patients Unifies Lab Value Encoding and Interpretability",
-          "why_it_matters": "For researchers working on clinical ML or foundation models for structured data, this is a concrete architecture combining percentile-binned lab tokens with Integrated Gradients attributions, benchmarked on the public EHRShot suite.",
-          "summary": "BERT-LER encodes lab results as discrete tokens via percentile-based binning within a BERT-style architecture, pretrained and fine-tuned on a de-identified EHR dataset of 75 million patients. Integrated Gradients provides token-level attributions. On EHRShot and an asthma severity task, it matches or exceeds public baselines, with stronger margins on laboratory-related sub-tasks, and attributions align with known clinical risk factors.",
+          "title": "PerturbRx Learns Drug-Induced Molecular Transitions to Predict Patient Cancer Treatment Response",
+          "why_it_matters": "Combining perturbation biology with representation learning for clinical drug-response prediction is a technically interesting approach relevant to researchers working on RL-style transition models or scientific ML for biomedicine.",
+          "summary": "PerturbRx trains a drug- and dose-conditioned latent transition predictor on context-matched but cell-unpaired control and treated single-cell populations, then transfers frozen predictors to pretreatment patient profiles — no post-treatment measurements needed. Combining predicted transitions with patient and drug representations, PerturbRx achieves the strongest aggregate predictive performance across TCGA and patient-derived xenograft benchmarks among evaluated methods.",
           "tags": [
-            "ehr",
-            "clinical-ml",
-            "transformers",
-            "interpretability"
+            "computational biology",
+            "representation learning",
+            "drug response",
+            "single-cell"
           ],
           "sources": [
             {
               "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2608.20315v1"
+              "url": "https://arxiv.org/abs/2608.21349v1"
             }
           ],
-          "published": "2026-08-20T17:54:17+00:00",
-          "score": 0.9639
+          "published": "2026-08-21T17:54:48+00:00",
+          "score": 0.6896
         },
         {
-          "id": "68e9fb1705e1",
+          "id": "0fd7ab208fd3",
           "tier": "skim",
           "category": "frontier",
-          "title": "Hugging Face Research: ASR Models Memorize Benchmark Transcripts, Not Audio",
-          "why_it_matters": "Benchmark gaming in speech recognition directly parallels evaluation inflation you should watch for in LLM and multimodal model comparisons — the methodology here is a concrete template for detecting it.",
-          "summary": "Testing 11 open-source ASR models, Hugging Face found several top-scorers reproduce VoxPopuli and LibriSpeech reference transcripts even when audio contradicts them or key words are silenced. Models appear to use acoustic cues to identify benchmark membership. Three new probes quantify this 'benchmaxxing,' and held-out sets in Real World VoiceEQ and Open-ASR Leaderboard aim to counter it.",
+          "title": "Squeezed Light Could Boost Detection of QED Vacuum Nonlinearity",
+          "why_it_matters": "Quantum ML and physics-informed AI researchers tracking experimental quantum foundations will want to know that photonic state engineering (including squeezed states) can meaningfully improve detectability of a fundamental QED prediction.",
+          "summary": "QED predicts vacuum behaves as a nonlinear medium. Experiments searching for this effect look for photons appearing in modes that would be empty without vacuum nonlinearity. Replacing the initial vacuum in that mode with classical or non-classical (e.g., squeezed) photon states is shown to significantly improve detectability of the signal.",
           "tags": [
-            "asr",
-            "benchmarking",
-            "evaluation",
-            "speech-recognition"
+            "quantum photonics",
+            "qed",
+            "squeezed states",
+            "quantum optics"
           ],
           "sources": [
             {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/asr-benchmark-optimization"
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2608.21361v1"
             }
           ],
-          "published": "2026-08-21T00:00:00+00:00",
-          "score": 0.3497
+          "published": "2026-08-21T17:59:54+00:00",
+          "score": 0.2301
         },
         {
-          "id": "fe499c0eb399",
+          "id": "a18fb8d3acf4",
           "tier": "skim",
           "category": "frontier",
-          "title": "TCP_α: Margin-Controlled Confidence Target Guarantees Separation of Correct vs. Incorrect Predictions",
-          "why_it_matters": "Post-hoc confidence calibration with provable correct/incorrect separation is directly applicable to any production classifier where selective prediction or human-in-the-loop thresholding matters.",
-          "summary": "TCP_α is a post-hoc confidence estimation target that penalizes misclassified samples with a tunable margin, provably separating target values of correct and incorrect predictions regardless of class count. Evaluated on rāga identification and frame-wise ornamentation detection, rejecting the lowest-confidence 8% of predictions lifts macro-F1 from 0.89 to 0.98. Fine-tuning the confidence head with 5% labeled samples restores performance under domain shift.",
+          "title": "New Accelerated Newton Method Hits O(1/k³) Without Cubic Regularization Subproblems",
+          "why_it_matters": "Optimization methods underpin virtually all ML training; a second-order method achieving O(1/k³) convergence with only one linear solve per iteration and no nonlinear subproblems is a meaningful algorithmic advance worth tracking.",
+          "summary": "A direct accelerated Newton method for convex functions with Lipschitz-continuous Hessian achieves O(1/k³) global convergence using only primal variables and one linear solve per iteration — no cubic regularization, nonlinear parameter search, or dual extragradient corrections required. Supports Hessian-free inexact solvers, Bregman divergence generalization, and composite optimization extensions.",
+          "tags": [
+            "optimization",
+            "second-order methods",
+            "convex optimization",
+            "algorithms"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2608.21359v1"
+            }
+          ],
+          "published": "2026-08-21T17:59:37+00:00",
+          "score": 0.2301
+        },
+        {
+          "id": "35ae6aa2a023",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Exact Truthfulness Is Incompatible with Complete and Sound Calibration Measures",
+          "why_it_matters": "Calibration and truthfulness of probabilistic predictions are core concerns in ML evaluation and alignment; this impossibility result and the accompanying approximate-truthfulness constructions are theoretically significant for researchers in forecasting and online learning.",
+          "summary": "For sequential binary prediction, exact truthfulness in a calibration measure is proved incompatible with both completeness and soundness, even for independent outcomes. Two general reductions from a base measure yield additively and multiplicatively approximately truthful calibration measures. The multiplicative reduction produces a sound and complete measure that is (1+exp(−T^((1−ε)/2)/2))-multiplicatively truthful for any 0<ε<1, improving on Haghtalab et al. (2024).",
           "tags": [
             "calibration",
-            "confidence-estimation",
-            "music-information-retrieval",
-            "post-hoc"
+            "online learning",
+            "sequential prediction",
+            "theory"
           ],
           "sources": [
             {
               "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2608.20326v1"
+              "url": "https://arxiv.org/abs/2608.21348v1"
             }
           ],
-          "published": "2026-08-20T17:58:50+00:00",
-          "score": 0.3216
-        },
-        {
-          "id": "6f112348d56c",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "Confidence Sets for Sparse Dictionary Learning Under High Coherence With AEB Adaptive Computation",
-          "why_it_matters": "Relevant if you work on dictionary learning or sparse coding for scientific signals where physical interpretability of atom support matters and coherence creates ambiguity.",
-          "summary": "The paper addresses physical-support uncertainty in sparse pursuit over learned, highly coherent dictionaries. A cross-dictionary confidence correspondence retains calibration-compatible dictionaries and deployment-compatible sparse representations, projecting onto physical-support space. Minimax physical resolution from N calibration signals satisfies δ_opt(N,s) ∝ min{s, 1/(√N·s²)}. The proposed active endpoint bracketing (AEB) procedure evaluates only candidates that can affect the physical report, avoiding unsupported refinement with fewer evaluations.",
-          "tags": [
-            "dictionary-learning",
-            "sparse-coding",
-            "uncertainty-quantification",
-            "signal-processing"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2608.20295v1"
-            }
-          ],
-          "published": "2026-08-20T17:35:26+00:00",
-          "score": 0.3199
+          "published": "2026-08-21T17:54:05+00:00",
+          "score": 0.2298
         }
       ]
     }
