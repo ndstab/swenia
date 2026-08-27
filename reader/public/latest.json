@@ -1,11 +1,11 @@
 {
-  "date": "2026-08-26",
-  "generated_at": "2026-08-26T01:52:35.611467+00:00",
-  "summary_line": "5 worth knowing",
+  "date": "2026-08-27",
+  "generated_at": "2026-08-27T09:26:29.333782+00:00",
+  "summary_line": "1 must-know · 4 worth knowing",
   "counts": {
-    "total": 9,
+    "total": 7,
     "headlines": 2,
-    "frontier": 7
+    "frontier": 5
   },
   "sections": [
     {
@@ -13,48 +13,48 @@
       "title": "Headlines",
       "cards": [
         {
-          "id": "74043a2c13e4",
-          "tier": "worth_knowing",
-          "category": "headline",
-          "title": "IBM Granite 4.2: 3B/8B/30B Reasoning LLMs with 512K Context, Agentic RL, Apache 2.0",
-          "why_it_matters": "Granite 4.2 is a fully open-weight reasoning family with agentic RL training and a 512K context window — directly relevant for researchers building or benchmarking capable, deployable open models.",
-          "summary": "Granite 4.2 releases three dense decoder-only models (3B, 8B, 30B) pretrained from scratch on ~15T tokens across five phases, reaching 512K context. All three get SFT on chain-of-thought and tool-use data (~7.2M samples, ~100B tokens), then multi-stage RL. The 8B and 30B additionally undergo agentic RL in sandboxed environments with code execution, terminal, and web tools. All support thinking/non-thinking/low-effort modes, native tool calling in OpenAI format, and Apache 2.0 licensing.",
-          "tags": [
-            "open-weights",
-            "reasoning",
-            "agentic-rl",
-            "ibm"
-          ],
-          "sources": [
-            {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/ibm-granite/granite-4-2"
-            }
-          ],
-          "published": "2026-08-25T15:14:14+00:00",
-          "score": 1.2939
-        },
-        {
-          "id": "2983dbf79834",
+          "id": "83abfc082897",
           "tier": "skim",
           "category": "headline",
-          "title": "Gradio's gr.Workflow: Graph-Based AI Pipeline Builder with Auto-REST API and HF Spaces Deploy",
-          "why_it_matters": "Directly lowers the overhead for ML engineers to expose multi-step model pipelines as both interactive UIs and REST endpoints, with parallel fan-out and GPU support built in.",
-          "summary": "gr.Workflow, built into Gradio, lets developers define multi-step AI pipelines as typed node graphs supporting Python functions, Hugging Face Inference Providers, other Gradio Spaces, or Hub datasets. The same graph renders as a drag-and-drop canvas and auto-generates named REST endpoints per output node. Fan-out parallel execution, ZeroGPU integration for on-demand GPU access, and one-command deployment to HF Spaces are all included.",
+          "title": "Google Launches Gemini 3.5 Transcribe: 2.6% WER Non-Streaming, 70% Latency Improvement over Chirp 3",
+          "why_it_matters": "As an AI/ML engineer building voice agents or multimodal pipelines, this is a significant new API option with measurable accuracy and latency benchmarks worth tracking against competing STT services.",
+          "summary": "Gemini 3.5 Transcribe achieves 4.0% WER (streaming) and 2.6% WER (non-streaming) per Artificial Analysis benchmarks, and improves time-to-final-transcription by 70% over Chirp 3. Available via Live API (sub-second streaming) and Interactions API (speaker attribution, word-level timestamps). Supports 85+ languages, custom vocabulary, and up to 3-speaker diarization. Also powers Gboard's Rambler and Gemini macOS app.",
           "tags": [
-            "mlops",
-            "gradio",
-            "inference",
-            "developer-tools"
+            "speech-to-text",
+            "gemini",
+            "google-deepmind",
+            "multimodal"
+          ],
+          "sources": [
+            {
+              "name": "DeepMind",
+              "url": "https://deepmind.google/blog/intelligent-transcription-with-gemini-3-5-transcribe/"
+            }
+          ],
+          "published": "2026-08-26T17:01:00+00:00",
+          "score": 0.398
+        },
+        {
+          "id": "bcd3314d2ba2",
+          "tier": "skim",
+          "category": "headline",
+          "title": "Papers with Code Hybrid Search: Qwen3-Embedding-0.6B + pgvector + RRF over 110K Papers",
+          "why_it_matters": "A clean real-world case study of hybrid retrieval architecture — versioned embeddings, offline/online compute split, graceful degradation — directly relevant to any engineer building production RAG or search systems.",
+          "summary": "Papers with Code's search combines PostgreSQL full-text search with pgvector dense embeddings (Qwen3-Embedding-0.6B, 256-dim MRL vectors), fused via reciprocal rank fusion. Offline corpus embedding runs as Hugging Face Jobs; live query embedding uses a protected Inference Endpoint with full-text fallback on cold start. The system covers 110,000+ papers with a strictly versioned embedding contract to prevent silent drift.",
+          "tags": [
+            "retrieval",
+            "rag",
+            "hybrid-search",
+            "infrastructure"
           ],
           "sources": [
             {
               "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/gradio-workflow-guide"
+              "url": "https://huggingface.co/blog/pwc-search"
             }
           ],
-          "published": "2026-08-25T00:00:00+00:00",
-          "score": 0.349
+          "published": "2026-08-21T00:00:00+00:00",
+          "score": 0.0594
         }
       ]
     },
@@ -63,157 +63,114 @@
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "9aba1eeb1840",
+          "id": "615e5519323f",
+          "tier": "must_know",
+          "category": "frontier",
+          "title": "VBVR-Pro: Closed-Loop Benchmark for Training MLLMs to Reason Natively Through Visual Generation",
+          "why_it_matters": "For researchers working on agents, world models, or multimodal reasoning, this is a rare benchmark that makes visual-generative reasoning trainable with verifiable RL rewards rather than VLM-as-judge.",
+          "summary": "VBVR-Pro provides 300 procedurally generated tasks where visual states (images/video) are the reasoning substrate. It includes deterministic reward scorers that outperform VLM-as-judge for RL training, and supports controlled comparison across 30+ image, video, and interleaved generators. Video generation leads on spatiotemporal tracking; interleaved generation is compute-efficient. Models transfer to seven external benchmarks including RISE-Video and MME-CoF-Pro.",
+          "tags": [
+            "visual-reasoning",
+            "reinforcement-learning",
+            "multimodal",
+            "benchmarks"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2608.26105v1"
+            }
+          ],
+          "published": "2026-08-26T17:59:51+00:00",
+          "score": 2.4208
+        },
+        {
+          "id": "ddb07d388e63",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "FraudBench: Protocol Choice Swings Feasible Adversarial Examples from 3.7 to 2,832 in Financial ML Robustness Eval",
-          "why_it_matters": "Highlights a fundamental evaluation pitfall — protocol sensitivity — that applies broadly to any ML robustness benchmark using domain constraints, not just financial fraud detection.",
-          "summary": "FraudBench evaluates the same dataset–model–attack–defense configurations under three protocols: unconstrained attacks, post-hoc feasibility filtering, and constraint-integrated attacks. On Lending Club Loan Data under white-box settings, post-hoc filtering yields ~3.7 feasible-flipped examples on average, while constraint-integrated attack generation produces ~2,832.3 under the same budget. On IEEE-CIS, feasibility and attacker capability emerge as independent axes; black-box protocol choice also alters model-family rankings.",
+          "title": "Visual Dependence-Aware Framework Tackles Cross-Modal Forgetting in Unsupervised Continual MLLM Post-Training",
+          "why_it_matters": "Continual post-training of deployed MLLMs on unlabeled streaming data is an under-studied but practically critical problem; this work's framing of visual dependence distortion as a forgetting signal is a technically novel angle.",
+          "summary": "VDA addresses Multimodal Unsupervised Continual Post-Training by treating token-level visual dependence (VD) as a diagnostic signal. Visually Constrained Optimal Transport (VC-OT) uses region-aware ground cost and dependence-stratified penalties to prevent cross-modal forgetting. Visually Modulated Adaptation (VMA) exploits VD heterogeneity to drive new-task plasticity. The framework targets stability-plasticity balance without labeled data.",
           "tags": [
-            "adversarial-robustness",
-            "benchmarks",
-            "financial-ml",
-            "evaluation"
+            "continual-learning",
+            "multimodal",
+            "post-training",
+            "mllm"
           ],
           "sources": [
             {
               "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2608.24551v1"
+              "url": "https://arxiv.org/abs/2608.26095v1"
             }
           ],
-          "published": "2026-08-25T13:36:42+00:00",
-          "score": 1.2651
+          "published": "2026-08-26T17:57:04+00:00",
+          "score": 1.2096
         },
         {
-          "id": "e619d0b67c63",
+          "id": "1354d2ba66f5",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Neurosymbolic Alignment: HGNN Physiological World Model Drives ORPO to 90.8% Clinical Safety Score, Beating GPT-4 5-shot",
-          "why_it_matters": "The framework of grounding preference optimization with a structured knowledge-graph scorer is technically transferable beyond clinical AI to any domain where symbolic constraints should shape RLHF/preference training.",
-          "summary": "A 7B clinical LLM is coupled with an HGNN-based Physiological World Model over an 847K-node biomedical knowledge graph. Candidate responses are scored via homeostatic constraints, multi-hop path plausibility, and drug-interaction penalties; scores drive iterative on-policy ORPO updates. On the 2,500-scenario Clinical Safety Benchmark, CSS improves from 69.5% to 90.8% (+21.3 pp over ORPO), harmful-response rate drops from 14.1% to 5.1%, and drug-interaction detection improves from 72.8% to 91.6%. The method exceeds GPT-4 5-shot on all safety metrics and outperforms SFT+SelfCorrect by 11.4 pp CSS.",
+          "title": "MyoMechanix: 7,500-Sample Multimodal AQA Benchmark Pairing sEMG, 3D Pose, and RGB for Biomechanical Coaching",
+          "why_it_matters": "For researchers in Physical AI, embodied agents, or multimodal sensing, this is a large structured benchmark combining physiological signals with vision for fine-grained action quality assessment — a relatively rare combination.",
+          "summary": "MyoMechanix contains 7,500+ samples across 20 weight-loaded actions from 38 subjects, with synchronized multiview RGB, 3D pose, sEMG, and additional physiological signals. A Fitness Knowledge Graph structures expert annotations into action phases, errors, and corrective feedback. The CUBIST engine does compositional decomposition-analysis-recomposition for error attribution. New tasks include Video2EMG, suggesting video can substitute costly EMG sensing.",
           "tags": [
-            "alignment",
-            "neurosymbolic",
-            "clinical-ai",
-            "preference-optimization"
+            "action-quality-assessment",
+            "multimodal",
+            "physical-ai",
+            "benchmarks"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2608.24534v1"
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2608.26094v1"
             }
           ],
-          "published": "2026-08-25T13:20:03+00:00",
-          "score": 1.2602
+          "published": "2026-08-26T17:56:33+00:00",
+          "score": 1.2095
         },
         {
-          "id": "9c56a86d23e2",
+          "id": "ca05126635d9",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "PeakBench: New Benchmark Disentangles Logical Dependency Planning from Resource-Constrained Scheduling in LLM Tool Agents",
-          "why_it_matters": "Addresses a concrete gap in agent evaluation — most benchmarks ignore parallel execution safety under resource constraints — directly relevant for researchers building or evaluating production LLM agents.",
-          "summary": "PeakBench provides executable multi-tool workflows with dependency annotations and measured resource profiles, targeting the gap between logical planning (tool selection, argument generation) and physical scheduling (parallelization under resource limits). Its two-part evaluation framework isolates each dimension with dedicated metrics. Results show strong logical planning does not reliably yield safe or efficient execution under resource constraints, and that exposing resource information reduces avoidable overflows.",
+          "title": "Autonomous AI Agent Designs Wireless Power Control ML Algorithms: Reaches 99.5% of MM Reference in 81 Unattended Experiments",
+          "why_it_matters": "This is a concrete autoresearch demonstration where an agent autonomously recovers provably structured solutions to a hard non-convex optimization problem — directly relevant to researchers interested in AI-driven algorithm discovery and agentic ML.",
+          "summary": "An AI coding agent was given full authority over architecture, loss function, input/output parameterization, and training recipe for cell-edge power control, a non-convex NP-hard problem. Over 26 hours and 81 experiments, it reached 99.5% of a minorization-maximization reference at roughly 600× lower inference cost, closing 94% of the gap from its first working solution. The discovered output parameterization reproduces the exact max-min-optimal allocation at minimum percentile.",
           "tags": [
+            "autoresearch",
             "agents",
-            "benchmarks",
-            "tool-use",
-            "scheduling"
+            "reinforcement-learning",
+            "wireless-ml"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2608.24509v1"
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2608.26093v1"
             }
           ],
-          "published": "2026-08-25T12:56:08+00:00",
-          "score": 1.2532
+          "published": "2026-08-26T17:56:00+00:00",
+          "score": 1.2093
         },
         {
-          "id": "f6b26e55a489",
+          "id": "5309d9655463",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Quantization-Aware Healing (QAH): 4-bit Compressed 60B Model Beats Its bfloat16 Checkpoint on 7 of 9 Benchmarks",
-          "why_it_matters": "QAH inverts the standard accuracy hierarchy between quantized and full-precision models, offering a principled distillation recipe for researchers working on efficient LLM deployment after structural compression.",
-          "summary": "QAH distills a structurally compressed, MXFP4-quantized student (60B parameters) directly from the original full-size, full-precision teacher via KL divergence on logits, bypassing the degraded recovered bfloat16 checkpoint used in standard quantization-aware distillation. Applied to a GPT-OSS 120B model compressed to 60B and quantized to MXFP4, the 4-bit student outperforms the bfloat16 checkpoint on 7 of 9 benchmarks. KL distillation also provides training stability absent from cross-entropy task losses.",
+          "title": "Sentence Transformers Adds Full Training Pipeline for ColBERT-Style Multi-Vector Models",
+          "why_it_matters": "If you build or fine-tune retrieval systems, this gives you a production-ready, single-GPU path to domain-specific multi-vector models that beat all general-purpose retrievers — dense, sparse, lexical, and multi-vector.",
+          "summary": "Sentence Transformers now ships MultiVectorEncoder with a complete ColBERT-style training stack: loss functions, evaluators, and a Trainer class. A medical model fine-tuned in 14.5 hours on one RTX 3090 outperforms all tested general-purpose retrievers. Key insight: truncation at 180–512 tokens costs up to 0.24 NDCG@10 on long-document domains; custom training lets you configure the right length.",
           "tags": [
-            "quantization",
-            "distillation",
-            "model-compression",
-            "efficiency"
+            "retrieval",
+            "colbert",
+            "fine-tuning",
+            "sentence-transformers"
           ],
           "sources": [
             {
               "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/MultiverseComputingCAI/quantization-aware-healing"
+              "url": "https://huggingface.co/blog/train-multi-vector-encoder"
             }
           ],
-          "published": "2026-08-25T11:39:24+00:00",
-          "score": 1.2312
-        },
-        {
-          "id": "97fbab8989e1",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "StrokeGuard: Dual-Agent System for Prehospital FAST Stroke Screening on Mobile Devices",
-          "why_it_matters": "Demonstrates a practical multi-agent architecture with state-machine control and stage-local fallback — a concrete systems pattern relevant to agentic AI design beyond healthcare.",
-          "summary": "StrokeGuard separates formal FAST assessment (facial palsy, arm weakness, speech impairment) from procedural support using a dual-channel agent mechanism with state-machine control and stage-local fallback recovery. Video assessment modules handle per-stage scoring. In a simulated prehospital scenario, it improved MATES-9 user-experience scores by 10.83 points (23.8% relative increase) over a paper FAST-style form.",
-          "tags": [
-            "multi-agent",
-            "clinical-ai",
-            "human-ai-interaction"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2608.24555v1"
-            }
-          ],
-          "published": "2026-08-25T13:39:30+00:00",
-          "score": 0.422
-        },
-        {
-          "id": "856ff35efdd4",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "LLM-Guided Evolutionary Search Discovers Transmission Protocols Boosting Collective Problem-Solving by up to 37%",
-          "why_it_matters": "Using LLMs to evolve state-aware coordination protocols is a frontier application of AI-assisted algorithm design relevant to researchers working on multi-agent systems and collective intelligence.",
-          "summary": "The paper formalizes information-sharing protocols as state-aware programs that route resources based on agent and collective states, going beyond fixed network topologies. LLM-guided evolutionary search discovers protocols for a collective discovery task, improving performance over standard baselines by up to 37%. Ablations show that removing content-dependence while preserving network topology eliminates performance gains, confirming state-awareness as the key driver. Evolved protocols transfer across domain variations and agent populations.",
-          "tags": [
-            "multi-agent",
-            "collective-intelligence",
-            "evolutionary-search",
-            "llm-applications"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2608.24545v1"
-            }
-          ],
-          "published": "2026-08-25T13:34:03+00:00",
-          "score": 0.4214
-        },
-        {
-          "id": "1d6c058bb996",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "LumiXAI: Modular Full-Stack Framework Unifying Feature Attribution Across Modalities, APIs, and GUIs",
-          "why_it_matters": "Interpretability tooling fragmentation slows research iteration; a unified, extensible framework with plug-in attribution methods and containerized reproducibility is a practical infrastructure gain for ML engineers.",
-          "summary": "LumiXAI consolidates feature attribution into a single system with classification and generative attribution, an interactive GUI for bidirectional exploration, and a plug-in architecture for adding models and methods. Three access tiers serve non-programmers, developers, and extenders from one backend. Containerized services and persistent result storage are designed to make attribution analyses reproducible across machines.",
-          "tags": [
-            "interpretability",
-            "explainability",
-            "feature-attribution",
-            "tooling"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2608.24524v1"
-            }
-          ],
-          "published": "2026-08-25T13:11:14+00:00",
-          "score": 0.4192
+          "published": "2026-08-26T00:00:00+00:00",
+          "score": 0.9427
         }
       ]
     }
