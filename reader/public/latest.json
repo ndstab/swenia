@@ -1,11 +1,11 @@
 {
-  "date": "2026-08-27",
-  "generated_at": "2026-08-27T09:26:29.333782+00:00",
-  "summary_line": "1 must-know · 4 worth knowing",
+  "date": "2026-08-28",
+  "generated_at": "2026-08-28T11:13:30.726579+00:00",
+  "summary_line": "2 must-know · 5 worth knowing",
   "counts": {
-    "total": 7,
+    "total": 8,
     "headlines": 2,
-    "frontier": 5
+    "frontier": 6
   },
   "sections": [
     {
@@ -13,48 +13,48 @@
       "title": "Headlines",
       "cards": [
         {
-          "id": "83abfc082897",
-          "tier": "skim",
+          "id": "a13e39d4fa54",
+          "tier": "must_know",
           "category": "headline",
-          "title": "Google Launches Gemini 3.5 Transcribe: 2.6% WER Non-Streaming, 70% Latency Improvement over Chirp 3",
-          "why_it_matters": "As an AI/ML engineer building voice agents or multimodal pipelines, this is a significant new API option with measurable accuracy and latency benchmarks worth tracking against competing STT services.",
-          "summary": "Gemini 3.5 Transcribe achieves 4.0% WER (streaming) and 2.6% WER (non-streaming) per Artificial Analysis benchmarks, and improves time-to-final-transcription by 70% over Chirp 3. Available via Live API (sub-second streaming) and Interactions API (speaker attribution, word-level timestamps). Supports 85+ languages, custom vocabulary, and up to 3-speaker diarization. Also powers Gboard's Rambler and Gemini macOS app.",
+          "title": "Google Releases Gemini Omni 1.1 Flash with Scene Extension, Keyframe Control, and 4K Upscaling",
+          "why_it_matters": "As an AI/ML engineer tracking generative video tooling, this is a production-ready API update from DeepMind that directly affects what you can build with controllable video generation today.",
+          "summary": "Gemini Omni 1.1 Flash adds: scene extension using up to 10 seconds of prior context (vs. 1 second previously), extendable up to 40 seconds in 10-second increments; first/last keyframe specification for smooth transitions; 360p draft mode up to 60% faster at one-third the cost of 720p; 4K upscaling for final output; and up to 3 seconds of video reference input. Available via Gemini API and Google AI Studio.",
           "tags": [
-            "speech-to-text",
-            "gemini",
-            "google-deepmind",
+            "generative video",
+            "google deepmind",
+            "api",
             "multimodal"
           ],
           "sources": [
             {
               "name": "DeepMind",
-              "url": "https://deepmind.google/blog/intelligent-transcription-with-gemini-3-5-transcribe/"
+              "url": "https://deepmind.google/blog/gemini-omni-1-1-flash-lets-you-build-with-more-control/"
             }
           ],
-          "published": "2026-08-26T17:01:00+00:00",
-          "score": 0.398
+          "published": "2026-08-27T16:11:32+00:00",
+          "score": 2.3031
         },
         {
-          "id": "bcd3314d2ba2",
-          "tier": "skim",
+          "id": "d9b2bc36ffdf",
+          "tier": "must_know",
           "category": "headline",
-          "title": "Papers with Code Hybrid Search: Qwen3-Embedding-0.6B + pgvector + RRF over 110K Papers",
-          "why_it_matters": "A clean real-world case study of hybrid retrieval architecture — versioned embeddings, offline/online compute split, graceful degradation — directly relevant to any engineer building production RAG or search systems.",
-          "summary": "Papers with Code's search combines PostgreSQL full-text search with pgvector dense embeddings (Qwen3-Embedding-0.6B, 256-dim MRL vectors), fused via reciprocal rank fusion. Offline corpus embedding runs as Hugging Face Jobs; live query embedding uses a protected Inference Endpoint with full-text fallback on cold start. The system covers 110,000+ papers with a strictly versioned embedding contract to prevent silent drift.",
+          "title": "Google DeepMind Pilots World's First Double-Blind AI Benchmark Evaluation Using Cryptographic Isolation",
+          "why_it_matters": "Benchmark contamination is a core validity threat to AI evals you rely on for comparing models; this cryptographic approach directly addresses whether leaderboard numbers can be trusted.",
+          "summary": "Google partnered with Singapore's AI Safety Institute, OpenMined, AVERI, and MLCommons to run the first double-blind evaluation of a proprietary frontier model (Gemini Flash Lite). Using Google Cloud's Confidential Space, neither the evaluator sees model weights nor Google sees test prompts—cryptographically enforced. Eliminates the historical tradeoff between IP protection and evaluation integrity, targeting benchmark contamination at the technical level.",
           "tags": [
-            "retrieval",
-            "rag",
-            "hybrid-search",
-            "infrastructure"
+            "evals",
+            "ai safety",
+            "benchmarks",
+            "cryptography"
           ],
           "sources": [
             {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/pwc-search"
+              "name": "DeepMind",
+              "url": "https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/"
             }
           ],
-          "published": "2026-08-21T00:00:00+00:00",
-          "score": 0.0594
+          "published": "2026-08-27T12:59:16+00:00",
+          "score": 2.2029
         }
       ]
     },
@@ -63,114 +63,136 @@
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "615e5519323f",
-          "tier": "must_know",
+          "id": "339389e5f937",
+          "tier": "worth_knowing",
           "category": "frontier",
-          "title": "VBVR-Pro: Closed-Loop Benchmark for Training MLLMs to Reason Natively Through Visual Generation",
-          "why_it_matters": "For researchers working on agents, world models, or multimodal reasoning, this is a rare benchmark that makes visual-generative reasoning trainable with verifiable RL rewards rather than VLM-as-judge.",
-          "summary": "VBVR-Pro provides 300 procedurally generated tasks where visual states (images/video) are the reasoning substrate. It includes deterministic reward scorers that outperform VLM-as-judge for RL training, and supports controlled comparison across 30+ image, video, and interleaved generators. Video generation leads on spatiotemporal tracking; interleaved generation is compute-efficient. Models transfer to seven external benchmarks including RISE-Video and MME-CoF-Pro.",
+          "title": "Spectral Fingerprinting of Non-Abelian Gauge Theories on Near-Term Quantum Hardware",
+          "why_it_matters": "If you follow quantum ML or quantum simulation, this demonstrates a concrete near-term algorithm—78 two-qubit gates deep—that extracts full spectral distributions from a (1+1)d SO(3) gauge theory, with practical qubit-halving via dynamical circuits.",
+          "summary": "Maximally mixed state spectral sampling extracts finite-resolution spectral distributions across the full energy range of a Hamiltonian. Applied to a (1+1)d non-Abelian SO(3) gauge theory using circuits 78 two-qubit gates deep. Dynamical circuit capabilities roughly halve qubit requirements. A novel Pauli-frame optimization compiles controlled-time evolutions. Applications shown for disordered many-body transitions and mid-spectrum densities of states.",
           "tags": [
-            "visual-reasoning",
-            "reinforcement-learning",
-            "multimodal",
-            "benchmarks"
+            "quantum computing",
+            "quantum simulation",
+            "gauge theory",
+            "spectral methods"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2608.26105v1"
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2608.27457v1"
             }
           ],
-          "published": "2026-08-26T17:59:51+00:00",
-          "score": 2.4208
+          "published": "2026-08-27T17:59:51+00:00",
+          "score": 1.1808
         },
         {
-          "id": "ddb07d388e63",
+          "id": "2099625cfbdb",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Visual Dependence-Aware Framework Tackles Cross-Modal Forgetting in Unsupervised Continual MLLM Post-Training",
-          "why_it_matters": "Continual post-training of deployed MLLMs on unlabeled streaming data is an under-studied but practically critical problem; this work's framing of visual dependence distortion as a forgetting signal is a technically novel angle.",
-          "summary": "VDA addresses Multimodal Unsupervised Continual Post-Training by treating token-level visual dependence (VD) as a diagnostic signal. Visually Constrained Optimal Transport (VC-OT) uses region-aware ground cost and dependence-stratified penalties to prevent cross-modal forgetting. Visually Modulated Adaptation (VMA) exploits VD heterogeneity to drive new-task plasticity. The framework targets stability-plasticity balance without labeled data.",
+          "title": "CritICL: Using Small-Model Failure Modes as In-Context Guidance to Boost Large-Model Reasoning at Inference Time",
+          "why_it_matters": "For an engineer interested in inference-time scaling and post-training methods, this offers a low-cost alternative to repeated sampling or external verifiers by exploiting structured failure patterns across model scales.",
+          "summary": "CritICL is an inference-time framework that treats failure modes of weaker models in the same family as structured signals, incorporating them as critique-based in-context examples for stronger models. Two variants: CritICL-dynamic (input-specific failure prediction) and CritICL-static (global failure profile). Outperforms standard ICL and matches or beats test-time scaling methods while requiring fewer generations and lower token cost.",
           "tags": [
-            "continual-learning",
-            "multimodal",
-            "post-training",
-            "mllm"
+            "inference-time scaling",
+            "reasoning",
+            "in-context learning",
+            "llm"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2608.26095v1"
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2608.27455v1"
             }
           ],
-          "published": "2026-08-26T17:57:04+00:00",
-          "score": 1.2096
+          "published": "2026-08-27T17:59:30+00:00",
+          "score": 1.1807
         },
         {
-          "id": "1354d2ba66f5",
+          "id": "b408838a2d8e",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "MyoMechanix: 7,500-Sample Multimodal AQA Benchmark Pairing sEMG, 3D Pose, and RGB for Biomechanical Coaching",
-          "why_it_matters": "For researchers in Physical AI, embodied agents, or multimodal sensing, this is a large structured benchmark combining physiological signals with vision for fine-grained action quality assessment — a relatively rare combination.",
-          "summary": "MyoMechanix contains 7,500+ samples across 20 weight-loaded actions from 38 subjects, with synchronized multiview RGB, 3D pose, sEMG, and additional physiological signals. A Fitness Knowledge Graph structures expert annotations into action phases, errors, and corrective feedback. The CUBIST engine does compositional decomposition-analysis-recomposition for error attribution. New tasks include Video2EMG, suggesting video can substitute costly EMG sensing.",
+          "title": "WikiSkill: Persistent Wiki-Based Knowledge Accumulation Drives Transferable Agent Skill Evolution",
+          "why_it_matters": "For researchers working on agents and continual learning, this addresses the key bottleneck of scattered optimization history by co-evolving skills with a persistent, structured knowledge base.",
+          "summary": "WikiSkill separates raw execution experience, accumulated knowledge, and executable skills, continuously consolidating experience into a persistent wiki that informs subsequent skill updates. Outperforms state-of-the-art skill-evolution baselines across diverse benchmarks. Larger models benefit more from evolved skills; smaller models with evolved skills can outperform larger models without them. Skills transfer across model families, and cross-model evolved skills can outperform self-evolved ones.",
           "tags": [
-            "action-quality-assessment",
-            "multimodal",
-            "physical-ai",
-            "benchmarks"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2608.26094v1"
-            }
-          ],
-          "published": "2026-08-26T17:56:33+00:00",
-          "score": 1.2095
-        },
-        {
-          "id": "ca05126635d9",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "Autonomous AI Agent Designs Wireless Power Control ML Algorithms: Reaches 99.5% of MM Reference in 81 Unattended Experiments",
-          "why_it_matters": "This is a concrete autoresearch demonstration where an agent autonomously recovers provably structured solutions to a hard non-convex optimization problem — directly relevant to researchers interested in AI-driven algorithm discovery and agentic ML.",
-          "summary": "An AI coding agent was given full authority over architecture, loss function, input/output parameterization, and training recipe for cell-edge power control, a non-convex NP-hard problem. Over 26 hours and 81 experiments, it reached 99.5% of a minorization-maximization reference at roughly 600× lower inference cost, closing 94% of the gap from its first working solution. The discovered output parameterization reproduces the exact max-min-optimal allocation at minimum percentile.",
-          "tags": [
-            "autoresearch",
             "agents",
-            "reinforcement-learning",
-            "wireless-ml"
+            "skill learning",
+            "continual learning",
+            "llm"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2608.26093v1"
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2608.27454v1"
             }
           ],
-          "published": "2026-08-26T17:56:00+00:00",
-          "score": 1.2093
+          "published": "2026-08-27T17:59:11+00:00",
+          "score": 1.1806
         },
         {
-          "id": "5309d9655463",
+          "id": "7ebecc7b840b",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Sentence Transformers Adds Full Training Pipeline for ColBERT-Style Multi-Vector Models",
-          "why_it_matters": "If you build or fine-tune retrieval systems, this gives you a production-ready, single-GPU path to domain-specific multi-vector models that beat all general-purpose retrievers — dense, sparse, lexical, and multi-vector.",
-          "summary": "Sentence Transformers now ships MultiVectorEncoder with a complete ColBERT-style training stack: loss functions, evaluators, and a Trainer class. A medical model fine-tuned in 14.5 hours on one RTX 3090 outperforms all tested general-purpose retrievers. Key insight: truncation at 180–512 tokens costs up to 0.24 NDCG@10 on long-document domains; custom training lets you configure the right length.",
+          "title": "SWE-Prime: Two-Stage Trajectory and Segment Filtering Cuts SFT Data to 10% While Improving SWE-Bench Performance",
+          "why_it_matters": "For researchers doing post-training or SFT on agent trajectories, this directly addresses the noisy-supervision problem from successful-but-suboptimal rollouts with a concrete, measurable data selection method.",
+          "summary": "SWE-Prime applies two-stage SFT data selection: trajectory-level filtering on process quality, result quality, and representativeness; then segment-level selection scoring contribution, learnability, and risk. Only selected segments contribute to loss, but full context is preserved. Training on the resulting 10% subset outperforms full-dataset training by up to 12.2% on SWE-Bench Pro and 24.2% on SWE-Bench Verified.",
           "tags": [
-            "retrieval",
-            "colbert",
-            "fine-tuning",
-            "sentence-transformers"
+            "sft",
+            "software engineering agents",
+            "post-training",
+            "data selection"
           ],
           "sources": [
             {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/train-multi-vector-encoder"
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2608.27449v1"
             }
           ],
-          "published": "2026-08-26T00:00:00+00:00",
-          "score": 0.9427
+          "published": "2026-08-27T17:58:10+00:00",
+          "score": 1.1803
+        },
+        {
+          "id": "119f271baacb",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "TTPO: Test-Time Policy Optimization Matches Label-Supervised RLHF Without Any Ground-Truth Labels",
+          "why_it_matters": "For researchers in RL and post-training, TTPO is a practically significant result: it achieves label-supervised performance on competition math benchmarks purely via majority-vote pseudo-labels, raising the ceiling for label-free test-time training.",
+          "summary": "TTPO addresses fragility of majority-vote pseudo-labels by using an asymmetric objective: agreeing rollouts are distilled via OPSD, disagreeing rollouts are penalized via Grouped RL. Token-level selection down-weights converged positions in distillation and penalizes only confident errors in RL. Without any labels, TTPO matches label-supervised OPSD on five competition benchmarks, raises Qwen3-1.7B from 38.0% to 45.2% in TTT, and yields +25.2% to +36.4% without thinking.",
+          "tags": [
+            "rl",
+            "post-training",
+            "test-time training",
+            "reasoning"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2608.27448v1"
+            }
+          ],
+          "published": "2026-08-27T17:58:10+00:00",
+          "score": 1.1803
+        },
+        {
+          "id": "285ae6844473",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Fock-Space Fragmentation Enables Exact Dynamical Responses in Quantum Geometric Nesting Models",
+          "why_it_matters": "For researchers tracking exactly solvable many-body models or quantum ML with structured Hamiltonians, this proves that variational stiffness estimates are exact in QGN models and extends to optical conductivity, Green's functions, and dynamical structure factors.",
+          "summary": "Quantum geometric nesting (QGN) models exhibit Fock-space fragmentation: excitations decouple into Krylov subspaces with fixed particle/hole counts. The paper proves that spontaneous symmetry breaking stiffness equals its variational Gaussian-manifold value exactly, confirming a bootstrap conjecture. Perturbations confined to a fixed Fock-space fragment yield exact response functions, enabling exact computation of static susceptibility, optical conductivity, dynamical structure factors, and single-particle Green's functions.",
+          "tags": [
+            "quantum many-body",
+            "exactly solvable models",
+            "condensed matter",
+            "quantum geometry"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2608.27446v1"
+            }
+          ],
+          "published": "2026-08-27T17:58:06+00:00",
+          "score": 0.3934
         }
       ]
     }
