@@ -1,11 +1,11 @@
 {
-  "date": "2026-08-28",
-  "generated_at": "2026-08-28T11:13:30.726579+00:00",
-  "summary_line": "2 must-know · 5 worth knowing",
+  "date": "2026-08-29",
+  "generated_at": "2026-08-29T06:57:06.149226+00:00",
+  "summary_line": "1 worth knowing",
   "counts": {
-    "total": 8,
-    "headlines": 2,
-    "frontier": 6
+    "total": 1,
+    "headlines": 1,
+    "frontier": 0
   },
   "sections": [
     {
@@ -13,188 +13,33 @@
       "title": "Headlines",
       "cards": [
         {
-          "id": "a13e39d4fa54",
-          "tier": "must_know",
+          "id": "b0b2c2da12a5",
+          "tier": "worth_knowing",
           "category": "headline",
-          "title": "Google Releases Gemini Omni 1.1 Flash with Scene Extension, Keyframe Control, and 4K Upscaling",
-          "why_it_matters": "As an AI/ML engineer tracking generative video tooling, this is a production-ready API update from DeepMind that directly affects what you can build with controllable video generation today.",
-          "summary": "Gemini Omni 1.1 Flash adds: scene extension using up to 10 seconds of prior context (vs. 1 second previously), extendable up to 40 seconds in 10-second increments; first/last keyframe specification for smooth transitions; 360p draft mode up to 60% faster at one-third the cost of 720p; 4K upscaling for final output; and up to 3 seconds of video reference input. Available via Gemini API and Google AI Studio.",
+          "title": "Open ASR Leaderboard Adds Indian English & Hindi Benchmarks With 4,888 Speakers",
+          "why_it_matters": "ASR bias across demographics is a known blind spot in standard WER leaderboards, and this dataset gives researchers a concrete, demographically rich tool to measure and address it — directly relevant if you work on speech, multilingual models, or evaluation methodology.",
+          "summary": "The Open ASR Leaderboard now includes Monsoon en-IN and Monsoon hi-IN evaluation sets — the first Indic language and first Global South data on the leaderboard. Each language has public and private splits, totaling 4,888 speaker-disjoint speakers with 12 recorded attributes. Data varies across geography, age, gender, devices, acoustic conditions, vocabulary, speech type, and speech rate, collected via unscripted dual-channel conversations across hundreds of Indian districts.",
           "tags": [
-            "generative video",
-            "google deepmind",
-            "api",
-            "multimodal"
-          ],
-          "sources": [
-            {
-              "name": "DeepMind",
-              "url": "https://deepmind.google/blog/gemini-omni-1-1-flash-lets-you-build-with-more-control/"
-            }
-          ],
-          "published": "2026-08-27T16:11:32+00:00",
-          "score": 2.3031
-        },
-        {
-          "id": "d9b2bc36ffdf",
-          "tier": "must_know",
-          "category": "headline",
-          "title": "Google DeepMind Pilots World's First Double-Blind AI Benchmark Evaluation Using Cryptographic Isolation",
-          "why_it_matters": "Benchmark contamination is a core validity threat to AI evals you rely on for comparing models; this cryptographic approach directly addresses whether leaderboard numbers can be trusted.",
-          "summary": "Google partnered with Singapore's AI Safety Institute, OpenMined, AVERI, and MLCommons to run the first double-blind evaluation of a proprietary frontier model (Gemini Flash Lite). Using Google Cloud's Confidential Space, neither the evaluator sees model weights nor Google sees test prompts—cryptographically enforced. Eliminates the historical tradeoff between IP protection and evaluation integrity, targeting benchmark contamination at the technical level.",
-          "tags": [
-            "evals",
-            "ai safety",
+            "asr",
+            "speech recognition",
             "benchmarks",
-            "cryptography"
+            "multilingual"
           ],
           "sources": [
             {
-              "name": "DeepMind",
-              "url": "https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/"
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/open-asr-leaderboard-global-south"
             }
           ],
-          "published": "2026-08-27T12:59:16+00:00",
-          "score": 2.2029
+          "published": "2026-08-28T00:00:00+00:00",
+          "score": 0.9759
         }
       ]
     },
     {
       "key": "frontier",
       "title": "Frontier & Papers",
-      "cards": [
-        {
-          "id": "339389e5f937",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "Spectral Fingerprinting of Non-Abelian Gauge Theories on Near-Term Quantum Hardware",
-          "why_it_matters": "If you follow quantum ML or quantum simulation, this demonstrates a concrete near-term algorithm—78 two-qubit gates deep—that extracts full spectral distributions from a (1+1)d SO(3) gauge theory, with practical qubit-halving via dynamical circuits.",
-          "summary": "Maximally mixed state spectral sampling extracts finite-resolution spectral distributions across the full energy range of a Hamiltonian. Applied to a (1+1)d non-Abelian SO(3) gauge theory using circuits 78 two-qubit gates deep. Dynamical circuit capabilities roughly halve qubit requirements. A novel Pauli-frame optimization compiles controlled-time evolutions. Applications shown for disordered many-body transitions and mid-spectrum densities of states.",
-          "tags": [
-            "quantum computing",
-            "quantum simulation",
-            "gauge theory",
-            "spectral methods"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2608.27457v1"
-            }
-          ],
-          "published": "2026-08-27T17:59:51+00:00",
-          "score": 1.1808
-        },
-        {
-          "id": "2099625cfbdb",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "CritICL: Using Small-Model Failure Modes as In-Context Guidance to Boost Large-Model Reasoning at Inference Time",
-          "why_it_matters": "For an engineer interested in inference-time scaling and post-training methods, this offers a low-cost alternative to repeated sampling or external verifiers by exploiting structured failure patterns across model scales.",
-          "summary": "CritICL is an inference-time framework that treats failure modes of weaker models in the same family as structured signals, incorporating them as critique-based in-context examples for stronger models. Two variants: CritICL-dynamic (input-specific failure prediction) and CritICL-static (global failure profile). Outperforms standard ICL and matches or beats test-time scaling methods while requiring fewer generations and lower token cost.",
-          "tags": [
-            "inference-time scaling",
-            "reasoning",
-            "in-context learning",
-            "llm"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2608.27455v1"
-            }
-          ],
-          "published": "2026-08-27T17:59:30+00:00",
-          "score": 1.1807
-        },
-        {
-          "id": "b408838a2d8e",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "WikiSkill: Persistent Wiki-Based Knowledge Accumulation Drives Transferable Agent Skill Evolution",
-          "why_it_matters": "For researchers working on agents and continual learning, this addresses the key bottleneck of scattered optimization history by co-evolving skills with a persistent, structured knowledge base.",
-          "summary": "WikiSkill separates raw execution experience, accumulated knowledge, and executable skills, continuously consolidating experience into a persistent wiki that informs subsequent skill updates. Outperforms state-of-the-art skill-evolution baselines across diverse benchmarks. Larger models benefit more from evolved skills; smaller models with evolved skills can outperform larger models without them. Skills transfer across model families, and cross-model evolved skills can outperform self-evolved ones.",
-          "tags": [
-            "agents",
-            "skill learning",
-            "continual learning",
-            "llm"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2608.27454v1"
-            }
-          ],
-          "published": "2026-08-27T17:59:11+00:00",
-          "score": 1.1806
-        },
-        {
-          "id": "7ebecc7b840b",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "SWE-Prime: Two-Stage Trajectory and Segment Filtering Cuts SFT Data to 10% While Improving SWE-Bench Performance",
-          "why_it_matters": "For researchers doing post-training or SFT on agent trajectories, this directly addresses the noisy-supervision problem from successful-but-suboptimal rollouts with a concrete, measurable data selection method.",
-          "summary": "SWE-Prime applies two-stage SFT data selection: trajectory-level filtering on process quality, result quality, and representativeness; then segment-level selection scoring contribution, learnability, and risk. Only selected segments contribute to loss, but full context is preserved. Training on the resulting 10% subset outperforms full-dataset training by up to 12.2% on SWE-Bench Pro and 24.2% on SWE-Bench Verified.",
-          "tags": [
-            "sft",
-            "software engineering agents",
-            "post-training",
-            "data selection"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2608.27449v1"
-            }
-          ],
-          "published": "2026-08-27T17:58:10+00:00",
-          "score": 1.1803
-        },
-        {
-          "id": "119f271baacb",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "TTPO: Test-Time Policy Optimization Matches Label-Supervised RLHF Without Any Ground-Truth Labels",
-          "why_it_matters": "For researchers in RL and post-training, TTPO is a practically significant result: it achieves label-supervised performance on competition math benchmarks purely via majority-vote pseudo-labels, raising the ceiling for label-free test-time training.",
-          "summary": "TTPO addresses fragility of majority-vote pseudo-labels by using an asymmetric objective: agreeing rollouts are distilled via OPSD, disagreeing rollouts are penalized via Grouped RL. Token-level selection down-weights converged positions in distillation and penalizes only confident errors in RL. Without any labels, TTPO matches label-supervised OPSD on five competition benchmarks, raises Qwen3-1.7B from 38.0% to 45.2% in TTT, and yields +25.2% to +36.4% without thinking.",
-          "tags": [
-            "rl",
-            "post-training",
-            "test-time training",
-            "reasoning"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2608.27448v1"
-            }
-          ],
-          "published": "2026-08-27T17:58:10+00:00",
-          "score": 1.1803
-        },
-        {
-          "id": "285ae6844473",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "Fock-Space Fragmentation Enables Exact Dynamical Responses in Quantum Geometric Nesting Models",
-          "why_it_matters": "For researchers tracking exactly solvable many-body models or quantum ML with structured Hamiltonians, this proves that variational stiffness estimates are exact in QGN models and extends to optical conductivity, Green's functions, and dynamical structure factors.",
-          "summary": "Quantum geometric nesting (QGN) models exhibit Fock-space fragmentation: excitations decouple into Krylov subspaces with fixed particle/hole counts. The paper proves that spontaneous symmetry breaking stiffness equals its variational Gaussian-manifold value exactly, confirming a bootstrap conjecture. Perturbations confined to a fixed Fock-space fragment yield exact response functions, enabling exact computation of static susceptibility, optical conductivity, dynamical structure factors, and single-particle Green's functions.",
-          "tags": [
-            "quantum many-body",
-            "exactly solvable models",
-            "condensed matter",
-            "quantum geometry"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2608.27446v1"
-            }
-          ],
-          "published": "2026-08-27T17:58:06+00:00",
-          "score": 0.3934
-        }
-      ]
+      "cards": []
     }
   ]
 }
