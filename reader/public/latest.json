@@ -1,45 +1,137 @@
 {
-  "date": "2026-08-29",
-  "generated_at": "2026-08-29T06:57:06.149226+00:00",
-  "summary_line": "1 worth knowing",
+  "date": "2026-08-31",
+  "generated_at": "2026-08-31T05:21:07.685246+00:00",
+  "summary_line": "2 worth knowing",
   "counts": {
-    "total": 1,
-    "headlines": 1,
-    "frontier": 0
+    "total": 5,
+    "headlines": 0,
+    "frontier": 5
   },
   "sections": [
     {
       "key": "headlines",
       "title": "Headlines",
-      "cards": [
-        {
-          "id": "b0b2c2da12a5",
-          "tier": "worth_knowing",
-          "category": "headline",
-          "title": "Open ASR Leaderboard Adds Indian English & Hindi Benchmarks With 4,888 Speakers",
-          "why_it_matters": "ASR bias across demographics is a known blind spot in standard WER leaderboards, and this dataset gives researchers a concrete, demographically rich tool to measure and address it — directly relevant if you work on speech, multilingual models, or evaluation methodology.",
-          "summary": "The Open ASR Leaderboard now includes Monsoon en-IN and Monsoon hi-IN evaluation sets — the first Indic language and first Global South data on the leaderboard. Each language has public and private splits, totaling 4,888 speaker-disjoint speakers with 12 recorded attributes. Data varies across geography, age, gender, devices, acoustic conditions, vocabulary, speech type, and speech rate, collected via unscripted dual-channel conversations across hundreds of Indian districts.",
-          "tags": [
-            "asr",
-            "speech recognition",
-            "benchmarks",
-            "multilingual"
-          ],
-          "sources": [
-            {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/open-asr-leaderboard-global-south"
-            }
-          ],
-          "published": "2026-08-28T00:00:00+00:00",
-          "score": 0.9759
-        }
-      ]
+      "cards": []
     },
     {
       "key": "frontier",
       "title": "Frontier & Papers",
-      "cards": []
+      "cards": [
+        {
+          "id": "92620651d2b6",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Aero Hand Open: Sim-Ready Tendon-Driven Robotic Hand with Zero-Shot Sim-to-Real Transfer",
+          "why_it_matters": "Addresses one of the hardest sim-to-real gaps in dexterous manipulation—tendon/cable transmission modeling—by releasing a complete, fully identified simulation stack that enables policy training with no real-world fine-tuning.",
+          "summary": "Aero Hand Open is an open-source anthropomorphic tendon-driven hand released with: a simulator that models the cable transmission directly, an identified actuation map (including three-way thumb coupling) linking motor commands to joint states bidirectionally, and an RL training package. Policies trained entirely in simulation deploy on hardware without fine-tuning or state estimation. Mechanical design, sim model, mapping, training env, and deployment stack are all released.",
+          "tags": [
+            "robotics",
+            "sim-to-real",
+            "reinforcement-learning",
+            "dexterous-manipulation"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2608.28578v1"
+            }
+          ],
+          "published": "2026-08-28T17:53:48+00:00",
+          "score": 0.6568
+        },
+        {
+          "id": "36631031ae78",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Size-Weight Frontier: Principled Coverage Guarantees for Synthetic-Augmented Statistical Inference",
+          "why_it_matters": "Provides a theoretically grounded framework for safely weighting LLM-generated synthetic data in inference tasks—directly relevant to anyone using LLM outputs to augment limited real datasets.",
+          "summary": "Naively treating synthetic samples as real data biases inference. This framework characterizes augmentation by synthetic sample size and per-sample weight, then defines a size-weight frontier: for each weight, the largest synthetic sample size ensuring task-marginal coverage. The frontier is estimated from historical tasks and provides finite-sample coverage guarantees for all configurations on or below it. Applied to LLM-augmented opinion surveys, it achieves target coverage while substantially narrowing confidence intervals.",
+          "tags": [
+            "synthetic-data",
+            "statistical-inference",
+            "llm",
+            "uncertainty-quantification"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2608.28576v1"
+            }
+          ],
+          "published": "2026-08-28T17:52:33+00:00",
+          "score": 0.6567
+        },
+        {
+          "id": "8fd598394588",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "QGPINNs: Physics-Informed Neural Networks for Fractional PDEs on Quantum Graphs",
+          "why_it_matters": "Extends PINNs to a structurally novel domain—quantum graphs with nonlocal/fractional operators—introducing techniques like learnable singularity capture and dynamic loss balancing that could inform broader PINN architecture design.",
+          "summary": "QGPINNs is a PyTorch framework where each graph edge gets its own neural network; a unified loss enforces fractional elliptic and time-fractional evolution equations plus continuity, Kirchhoff-Neumann, and Dirichlet conditions. Extras include Fourier feature embeddings, soft/hard constraints, dynamic loss balancing, and a learnable singularity-capturing feature. Also supports inverse problems (recovering fractional operator orders from noisy data). Validated on IEEE 14-bus and agricultural drainage networks.",
+          "tags": [
+            "pinns",
+            "scientific-ml",
+            "graph-neural-networks",
+            "fractional-pdes"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2608.28589v1"
+            }
+          ],
+          "published": "2026-08-28T17:59:47+00:00",
+          "score": 0.2193
+        },
+        {
+          "id": "62da176ad32e",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Infinitesimal Long-Range Hoppings Nonperturbatively Reconstruct Non-Hermitian Spectra",
+          "why_it_matters": "Reveals a sharp, non-perturbative failure mode of standard tight-binding truncations in non-Hermitian systems—a physically important finding for anyone modeling open quantum systems or non-Hermitian skin effects.",
+          "summary": "Infinitesimal exponentially decaying long-range hoppings that are routinely truncated in tight-binding models can nonperturbatively reconstruct the full spectrum and eigenstates of short-range non-Hermitian systems under open boundary conditions. The effect is governed by competition between the hopping decay length and the skin-mode localization length. In 1D, a squeezed generalized Brillouin zone captures the reconstructed spectrum; in 2D+, a squeezed amoeba formulation applies. Long-range hoppings also qualitatively reshape Green's functions.",
+          "tags": [
+            "quantum-physics",
+            "non-hermitian",
+            "condensed-matter",
+            "skin-effect"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2608.28577v1"
+            },
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2608.28575v1"
+            }
+          ],
+          "published": "2026-08-28T17:53:36+00:00",
+          "score": 0.2189
+        },
+        {
+          "id": "604ea3611edf",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "New QFT Circuits via Mackey and Clifford Theory Yield Exponential Speedups for Non-Abelian Groups",
+          "why_it_matters": "Efficient QFTs over non-abelian groups are a longstanding bottleneck in quantum algorithms; these new systematic constructions unlock polynomial-in-log-q circuits for GL₂(Fq) and remove prior size restrictions for wreath products.",
+          "summary": "Two new approaches to non-abelian quantum Fourier transform circuit construction are introduced. The Mackey-theoretic approach yields QFT circuits over GL₂(Fq) scaling polynomially in log q rather than polynomially in q—an exponential improvement. The Clifford-theoretic approach handles wreath products F≀Sₙ with cost depending on a QFT over F and its representation registers, removing the previous |F|=poly(n) restriction and enabling exponential gains when F itself has an efficient QFT.",
+          "tags": [
+            "quantum-computing",
+            "quantum-algorithms",
+            "quantum-fourier-transform",
+            "non-abelian-groups"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2608.28573v1"
+            }
+          ],
+          "published": "2026-08-28T17:49:30+00:00",
+          "score": 0.2187
+        }
+      ]
     }
   ]
 }
