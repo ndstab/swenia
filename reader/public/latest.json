@@ -1,11 +1,11 @@
 {
-  "date": "2026-08-31",
-  "generated_at": "2026-08-31T05:21:07.685246+00:00",
+  "date": "2026-09-01",
+  "generated_at": "2026-09-01T04:55:27.284873+00:00",
   "summary_line": "2 worth knowing",
   "counts": {
-    "total": 5,
+    "total": 6,
     "headlines": 0,
-    "frontier": 5
+    "frontier": 6
   },
   "sections": [
     {
@@ -18,118 +18,134 @@
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "92620651d2b6",
+          "id": "130ebb9f32b4",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Aero Hand Open: Sim-Ready Tendon-Driven Robotic Hand with Zero-Shot Sim-to-Real Transfer",
-          "why_it_matters": "Addresses one of the hardest sim-to-real gaps in dexterous manipulation—tendon/cable transmission modeling—by releasing a complete, fully identified simulation stack that enables policy training with no real-world fine-tuning.",
-          "summary": "Aero Hand Open is an open-source anthropomorphic tendon-driven hand released with: a simulator that models the cable transmission directly, an identified actuation map (including three-way thumb coupling) linking motor commands to joint states bidirectionally, and an RL training package. Policies trained entirely in simulation deploy on hardware without fine-tuning or state estimation. Mechanical design, sim model, mapping, training env, and deployment stack are all released.",
+          "title": "ECHO-OFTRL Algorithm Achieves Constant Individual Regret in N-Player Games, Removing Polylogarithmic Horizon Dependence",
+          "why_it_matters": "For RL and multi-agent systems researchers, eliminating the horizon dependence in individual regret is a theoretical milestone relevant to designing decentralized equilibrium-finding algorithms.",
+          "summary": "ECHO-OFTRL combines optimistic follow-the-regularized-leader with an EMA cascade for high-order optimism. For any finite N-player normal-form game under full-information feedback, it guarantees per-player regret bounded by O(poly(N, log m_max)) simultaneously for all horizons T≥1, with no polylogarithmic T factor. The algorithm is deterministic and fully uncoupled.",
+          "tags": [
+            "game theory",
+            "multi-agent",
+            "reinforcement learning",
+            "regret minimization"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2608.31166v1"
+            }
+          ],
+          "published": "2026-08-31T17:59:16+00:00",
+          "score": 1.2886
+        },
+        {
+          "id": "6a71b49a657c",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Kuafu System Uses LLM-Synthesized 'SUN Programs' to Unify MPC Control and RL Policy Learning for Robot Manipulation",
+          "why_it_matters": "Robotics and RL researchers will find this directly relevant: it replaces hand-crafted dense rewards and demonstrations with auto-synthesized semantic programs, achieving strong sim-to-real transfer.",
+          "summary": "Semantically UNified (SUN) Programs encode geometric and contact relations once, compiling them into MPC costs, RL rewards, and transition guards. A vision-language model auto-synthesizes programs from language and scene input. Across nine tasks, Kuafu achieves 82.03% macro-success vs. 35.67% sparse-reward and 24.75% Stage-BC baselines; DP3 policies trained on 500 trajectories reach 34.7% success on physical Franka and Kinova robots.",
           "tags": [
             "robotics",
-            "sim-to-real",
-            "reinforcement-learning",
-            "dexterous-manipulation"
+            "reinforcement learning",
+            "llm-agents",
+            "sim-to-real"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2608.28578v1"
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2608.31167v1"
             }
           ],
-          "published": "2026-08-28T17:53:48+00:00",
-          "score": 0.6568
+          "published": "2026-08-31T17:59:16+00:00",
+          "score": 1.2886
         },
         {
-          "id": "36631031ae78",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "Size-Weight Frontier: Principled Coverage Guarantees for Synthetic-Augmented Statistical Inference",
-          "why_it_matters": "Provides a theoretically grounded framework for safely weighting LLM-generated synthetic data in inference tasks—directly relevant to anyone using LLM outputs to augment limited real datasets.",
-          "summary": "Naively treating synthetic samples as real data biases inference. This framework characterizes augmentation by synthetic sample size and per-sample weight, then defines a size-weight frontier: for each weight, the largest synthetic sample size ensuring task-marginal coverage. The frontier is estimated from historical tasks and provides finite-sample coverage guarantees for all configurations on or below it. Applied to LLM-augmented opinion surveys, it achieves target coverage while substantially narrowing confidence intervals.",
-          "tags": [
-            "synthetic-data",
-            "statistical-inference",
-            "llm",
-            "uncertainty-quantification"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2608.28576v1"
-            }
-          ],
-          "published": "2026-08-28T17:52:33+00:00",
-          "score": 0.6567
-        },
-        {
-          "id": "8fd598394588",
+          "id": "6e6db2081e41",
           "tier": "skim",
           "category": "frontier",
-          "title": "QGPINNs: Physics-Informed Neural Networks for Fractional PDEs on Quantum Graphs",
-          "why_it_matters": "Extends PINNs to a structurally novel domain—quantum graphs with nonlocal/fractional operators—introducing techniques like learnable singularity capture and dynamic loss balancing that could inform broader PINN architecture design.",
-          "summary": "QGPINNs is a PyTorch framework where each graph edge gets its own neural network; a unified loss enforces fractional elliptic and time-fractional evolution equations plus continuity, Kirchhoff-Neumann, and Dirichlet conditions. Extras include Fourier feature embeddings, soft/hard constraints, dynamic loss balancing, and a learnable singularity-capturing feature. Also supports inverse problems (recovering fractional operator orders from noisy data). Validated on IEEE 14-bus and agricultural drainage networks.",
+          "title": "Quantum Circuit Framework Simulates Both Markovian and Non-Markovian Open Quantum Dynamics for Heavy-Ion Physics",
+          "why_it_matters": "If you follow quantum ML or quantum simulation, this bridges quantum computing methods with nuclear physics by introducing a concrete circuit construction for memory-carrying non-Markovian dynamics.",
+          "summary": "Authors introduce a pseudomode auxiliary qubit that carries bath memory, coupling to the subsystem and a residual Markovian bath. Tracing out the pseudomode exactly reproduces non-Markovian evolution; in appropriate time-scale limits, the circuit smoothly recovers Markovian behavior. Framework targets future simulation of jets, heavy quarks, and quarkonia in heavy-ion collisions.",
           "tags": [
-            "pinns",
-            "scientific-ml",
-            "graph-neural-networks",
-            "fractional-pdes"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2608.28589v1"
-            }
-          ],
-          "published": "2026-08-28T17:59:47+00:00",
-          "score": 0.2193
-        },
-        {
-          "id": "62da176ad32e",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "Infinitesimal Long-Range Hoppings Nonperturbatively Reconstruct Non-Hermitian Spectra",
-          "why_it_matters": "Reveals a sharp, non-perturbative failure mode of standard tight-binding truncations in non-Hermitian systems—a physically important finding for anyone modeling open quantum systems or non-Hermitian skin effects.",
-          "summary": "Infinitesimal exponentially decaying long-range hoppings that are routinely truncated in tight-binding models can nonperturbatively reconstruct the full spectrum and eigenstates of short-range non-Hermitian systems under open boundary conditions. The effect is governed by competition between the hopping decay length and the skin-mode localization length. In 1D, a squeezed generalized Brillouin zone captures the reconstructed spectrum; in 2D+, a squeezed amoeba formulation applies. Long-range hoppings also qualitatively reshape Green's functions.",
-          "tags": [
-            "quantum-physics",
-            "non-hermitian",
-            "condensed-matter",
-            "skin-effect"
+            "quantum computing",
+            "quantum simulation",
+            "open quantum systems"
           ],
           "sources": [
             {
               "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2608.28577v1"
-            },
-            {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2608.28575v1"
+              "url": "https://arxiv.org/abs/2608.31173v1"
             }
           ],
-          "published": "2026-08-28T17:53:36+00:00",
-          "score": 0.2189
+          "published": "2026-08-31T17:59:59+00:00",
+          "score": 0.4296
         },
         {
-          "id": "604ea3611edf",
+          "id": "9d3e7e056727",
           "tier": "skim",
           "category": "frontier",
-          "title": "New QFT Circuits via Mackey and Clifford Theory Yield Exponential Speedups for Non-Abelian Groups",
-          "why_it_matters": "Efficient QFTs over non-abelian groups are a longstanding bottleneck in quantum algorithms; these new systematic constructions unlock polynomial-in-log-q circuits for GL₂(Fq) and remove prior size restrictions for wreath products.",
-          "summary": "Two new approaches to non-abelian quantum Fourier transform circuit construction are introduced. The Mackey-theoretic approach yields QFT circuits over GL₂(Fq) scaling polynomially in log q rather than polynomially in q—an exponential improvement. The Clifford-theoretic approach handles wreath products F≀Sₙ with cost depending on a QFT over F and its representation registers, removing the previous |F|=poly(n) restriction and enabling exponential gains when F itself has an efficient QFT.",
+          "title": "Context-Aware Interleaved Batching Cuts WhisperX Word Error Rate While Preserving Throughput",
+          "why_it_matters": "For ML engineers deploying ASR pipelines, this offers a drop-in improvement over WhisperX that recovers cross-segment context without sacrificing batch throughput.",
+          "summary": "WhisperX batches audio segments in isolation, losing punctuation and terminology context; standard Whisper preserves context but hallucinates. The proposed method uses VAD segment boundaries to stabilize text conditioning, allowing historical context to persist across batches. Long-form audio benchmarks show lower WER and better proper noun accuracy at high throughput.",
           "tags": [
-            "quantum-computing",
-            "quantum-algorithms",
-            "quantum-fourier-transform",
-            "non-abelian-groups"
+            "speech recognition",
+            "asr",
+            "inference optimization"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2608.31170v1"
+            }
+          ],
+          "published": "2026-08-31T17:59:46+00:00",
+          "score": 0.4296
+        },
+        {
+          "id": "1e424c80f988",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Efficient Analytical Protocol Finds Excitable Zero-Modes in Constrained Quantum Systems via Local Eigendecomposition",
+          "why_it_matters": "Researchers working on quantum many-body scars, Rydberg atom arrays, or tensor-network methods will find this a useful analytical tool for characterizing atypical eigenstates in constrained Hamiltonians.",
+          "summary": "The protocol uses eigendecomposition of the local unconstrained Hamiltonian to analytically find translation-invariant excitable zero-modes (EZMs) in kinetically constrained systems. Applied to a decorated Rydberg chain, it produces a continuous MPS manifold in the zero-energy eigenspace whose span grows exponentially with system size, and derives analytical expressions for non-zero-momentum zero-modes and exact scars at E=±√3.",
+          "tags": [
+            "quantum many-body",
+            "rydberg atoms",
+            "quantum scars",
+            "condensed matter"
           ],
           "sources": [
             {
               "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2608.28573v1"
+              "url": "https://arxiv.org/abs/2608.31165v1"
             }
           ],
-          "published": "2026-08-28T17:49:30+00:00",
-          "score": 0.2187
+          "published": "2026-08-31T17:59:12+00:00",
+          "score": 0.4295
+        },
+        {
+          "id": "b1a7692597f0",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Sharp Approximation Rate for Hypernetworks: Latent Dimension M and Network Budget P Trade Off as (P·min{M,P})^{-α/d}",
+          "why_it_matters": "For researchers studying hypernetworks, LoRA-style adapters, or parameter-efficient fine-tuning, this gives the first sharp theoretical bound characterizing how much expressivity is lost by compressing into a low-dimensional latent space.",
+          "summary": "For affine generators mapping R^M latent codes to ReLU network parameters with budget P, the optimal worst-case uniform approximation error over α-Hölder functions on [0,1]^d is shown to scale sharply as (P·min{M,P})^{-α/d}. Notably, even a fixed-dimensional latent space suffices for vanishing error as P grows, justifying parameter-efficient methods theoretically.",
+          "tags": [
+            "approximation theory",
+            "hypernetworks",
+            "parameter-efficient fine-tuning",
+            "neural networks"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2608.31157v1"
+            }
+          ],
+          "published": "2026-08-31T17:55:51+00:00",
+          "score": 0.4292
         }
       ]
     }
