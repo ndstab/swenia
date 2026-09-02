@@ -1,151 +1,202 @@
 {
-  "date": "2026-09-01",
-  "generated_at": "2026-09-01T04:55:27.284873+00:00",
-  "summary_line": "2 worth knowing",
+  "date": "2026-09-02",
+  "generated_at": "2026-09-02T04:18:28.210687+00:00",
+  "summary_line": "1 must-know · 6 worth knowing",
   "counts": {
-    "total": 6,
-    "headlines": 0,
-    "frontier": 6
+    "total": 8,
+    "headlines": 1,
+    "frontier": 7
   },
   "sections": [
     {
       "key": "headlines",
       "title": "Headlines",
-      "cards": []
+      "cards": [
+        {
+          "id": "dfd1ea2e5518",
+          "tier": "must_know",
+          "category": "headline",
+          "title": "Google DeepMind Launches Agentic Video Understanding in Gemini 3.7/3.6/3.5 Flash",
+          "why_it_matters": "This is a flagship Google DeepMind capability release combining native tool use with video processing—a concrete step toward agentic multimodal systems you'll need to track.",
+          "summary": "Instead of fixed-FPS static ingestion, Gemini models now run an agentic loop that dynamically selects which video segments, frame rates, and modalities (frames, audio, transcript) to inspect. Across standard benchmarks, this reduces token consumption by up to 88% and costs by up to 66%, while improving accuracy by up to 7%. Gemini 3.7 Flash achieves the best accuracy-cost Pareto point. Available now via Gemini API and Google AI Studio at standard token pricing.",
+          "tags": [
+            "gemini",
+            "video-understanding",
+            "agents",
+            "multimodal"
+          ],
+          "sources": [
+            {
+              "name": "DeepMind",
+              "url": "https://deepmind.google/blog/introducing-agentic-video-in-gemini/"
+            }
+          ],
+          "published": "2026-09-01T17:08:51+00:00",
+          "score": 2.5692
+        }
+      ]
     },
     {
       "key": "frontier",
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "130ebb9f32b4",
+          "id": "23bdbfdbd061",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "ECHO-OFTRL Algorithm Achieves Constant Individual Regret in N-Player Games, Removing Polylogarithmic Horizon Dependence",
-          "why_it_matters": "For RL and multi-agent systems researchers, eliminating the horizon dependence in individual regret is a theoretical milestone relevant to designing decentralized equilibrium-finding algorithms.",
-          "summary": "ECHO-OFTRL combines optimistic follow-the-regularized-leader with an EMA cascade for high-order optimism. For any finite N-player normal-form game under full-information feedback, it guarantees per-player regret bounded by O(poly(N, log m_max)) simultaneously for all horizons T≥1, with no polylogarithmic T factor. The algorithm is deterministic and fully uncoupled.",
+          "title": "BenchMIRT: Multidimensional IRT Audits What LLM Benchmarks Actually Measure at the Question Level",
+          "why_it_matters": "As an AI/ML engineer who evaluates models, understanding whether benchmark scores reflect intended capabilities—safety vs. reasoning—directly affects how you interpret and report results.",
+          "summary": "Hugging Face's BenchMIRT applies multidimensional Item Response Theory (MIRT) to 100 LLMs across 16 benchmarks and 34K+ questions. Without being told which benchmarks target which skills, it independently recovers two dominant dimensions: safety and general reasoning. Key finding: BBQ (a bias benchmark) aligns strongly with general reasoning, not safety; WildJailbreak's harmful vs. benign subsets load onto different dimensions—facts obscured by aggregate scores.",
           "tags": [
-            "game theory",
-            "multi-agent",
-            "reinforcement learning",
-            "regret minimization"
+            "benchmarking",
+            "evaluation",
+            "llm",
+            "psychometrics"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/allenai/benchmirt"
+            }
+          ],
+          "published": "2026-09-01T21:39:07+00:00",
+          "score": 1.3676
+        },
+        {
+          "id": "7e7cafd2d0c0",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Mechanistic Internals of LLM-as-Judge: Two-Stage Crystallization Found in Themis and Prometheus",
+          "why_it_matters": "If you use LLM judges for automated evals or RLHF reward signals, knowing exactly how those ratings are formed—and what fine-tuning installs—directly informs how much to trust them.",
+          "summary": "Using causal tracing, logit-lens projection, and attention-head knockout on Themis (Llama-3-8B) and Prometheus (Mistral-7B), the study finds a two-stage pipeline: below layer 15, attention performs local error comparison; above it, MLP cascades integrate the signal. Rating crystallizes sharply at layer 26 (Themis) and 25 (Prometheus). A base-model control reproduces routing but not stage separation, showing fine-tuning specifically installs MLP suppression below L15 and advances crystallization depth.",
+          "tags": [
+            "interpretability",
+            "llm-as-judge",
+            "mechanistic-analysis",
+            "evaluation"
           ],
           "sources": [
             {
               "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2608.31166v1"
+              "url": "https://arxiv.org/abs/2609.01604v1"
             }
           ],
-          "published": "2026-08-31T17:59:16+00:00",
-          "score": 1.2886
+          "published": "2026-09-01T17:59:49+00:00",
+          "score": 1.2999
         },
         {
-          "id": "6a71b49a657c",
+          "id": "72070e74359c",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Kuafu System Uses LLM-Synthesized 'SUN Programs' to Unify MPC Control and RL Policy Learning for Robot Manipulation",
-          "why_it_matters": "Robotics and RL researchers will find this directly relevant: it replaces hand-crafted dense rewards and demonstrations with auto-synthesized semantic programs, achieving strong sim-to-real transfer.",
-          "summary": "Semantically UNified (SUN) Programs encode geometric and contact relations once, compiling them into MPC costs, RL rewards, and transition guards. A vision-language model auto-synthesizes programs from language and scene input. Across nine tasks, Kuafu achieves 82.03% macro-success vs. 35.67% sparse-reward and 24.75% Stage-BC baselines; DP3 policies trained on 500 trajectories reach 34.7% success on physical Franka and Kinova robots.",
+          "title": "Facet-0: Robotic Foundation Model Reaches 82% on Sub-Millimeter Assembly via Action-Wrench RL",
+          "why_it_matters": "Combining multimodal representation learning with force-feedback RL post-training is a technically novel approach to contact-rich manipulation—relevant if you follow robotics foundation models or RL for physical systems.",
+          "summary": "Facet-0 jointly predicts action chunks and expected future wrist-wrench profiles via flow matching, aligning causal wrench history with vision-language and kinematic state. A distributional Action-Wrench Critic trained on deployment rollouts distinguishes motions with similar task progress but different contact outcomes. Trained on ManuFacet-1K (1,000 hours, three embodiments), it achieves 82% mean success on five sub-millimeter computer-assembly tasks vs. 15% for the strongest baseline, at 0.5 mm placement accuracy and 50 ms command latency.",
           "tags": [
             "robotics",
-            "reinforcement learning",
-            "llm-agents",
-            "sim-to-real"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2608.31167v1"
-            }
-          ],
-          "published": "2026-08-31T17:59:16+00:00",
-          "score": 1.2886
-        },
-        {
-          "id": "6e6db2081e41",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "Quantum Circuit Framework Simulates Both Markovian and Non-Markovian Open Quantum Dynamics for Heavy-Ion Physics",
-          "why_it_matters": "If you follow quantum ML or quantum simulation, this bridges quantum computing methods with nuclear physics by introducing a concrete circuit construction for memory-carrying non-Markovian dynamics.",
-          "summary": "Authors introduce a pseudomode auxiliary qubit that carries bath memory, coupling to the subsystem and a residual Markovian bath. Tracing out the pseudomode exactly reproduces non-Markovian evolution; in appropriate time-scale limits, the circuit smoothly recovers Markovian behavior. Framework targets future simulation of jets, heavy quarks, and quarkonia in heavy-ion collisions.",
-          "tags": [
-            "quantum computing",
-            "quantum simulation",
-            "open quantum systems"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2608.31173v1"
-            }
-          ],
-          "published": "2026-08-31T17:59:59+00:00",
-          "score": 0.4296
-        },
-        {
-          "id": "9d3e7e056727",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "Context-Aware Interleaved Batching Cuts WhisperX Word Error Rate While Preserving Throughput",
-          "why_it_matters": "For ML engineers deploying ASR pipelines, this offers a drop-in improvement over WhisperX that recovers cross-segment context without sacrificing batch throughput.",
-          "summary": "WhisperX batches audio segments in isolation, losing punctuation and terminology context; standard Whisper preserves context but hallucinates. The proposed method uses VAD segment boundaries to stabilize text conditioning, allowing historical context to persist across batches. Long-form audio benchmarks show lower WER and better proper noun accuracy at high throughput.",
-          "tags": [
-            "speech recognition",
-            "asr",
-            "inference optimization"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2608.31170v1"
-            }
-          ],
-          "published": "2026-08-31T17:59:46+00:00",
-          "score": 0.4296
-        },
-        {
-          "id": "1e424c80f988",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "Efficient Analytical Protocol Finds Excitable Zero-Modes in Constrained Quantum Systems via Local Eigendecomposition",
-          "why_it_matters": "Researchers working on quantum many-body scars, Rydberg atom arrays, or tensor-network methods will find this a useful analytical tool for characterizing atypical eigenstates in constrained Hamiltonians.",
-          "summary": "The protocol uses eigendecomposition of the local unconstrained Hamiltonian to analytically find translation-invariant excitable zero-modes (EZMs) in kinetically constrained systems. Applied to a decorated Rydberg chain, it produces a continuous MPS manifold in the zero-energy eigenspace whose span grows exponentially with system size, and derives analytical expressions for non-zero-momentum zero-modes and exact scars at E=±√3.",
-          "tags": [
-            "quantum many-body",
-            "rydberg atoms",
-            "quantum scars",
-            "condensed matter"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2608.31165v1"
-            }
-          ],
-          "published": "2026-08-31T17:59:12+00:00",
-          "score": 0.4295
-        },
-        {
-          "id": "b1a7692597f0",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "Sharp Approximation Rate for Hypernetworks: Latent Dimension M and Network Budget P Trade Off as (P·min{M,P})^{-α/d}",
-          "why_it_matters": "For researchers studying hypernetworks, LoRA-style adapters, or parameter-efficient fine-tuning, this gives the first sharp theoretical bound characterizing how much expressivity is lost by compressing into a low-dimensional latent space.",
-          "summary": "For affine generators mapping R^M latent codes to ReLU network parameters with budget P, the optimal worst-case uniform approximation error over α-Hölder functions on [0,1]^d is shown to scale sharply as (P·min{M,P})^{-α/d}. Notably, even a fixed-dimensional latent space suffices for vanishing error as P grows, justifying parameter-efficient methods theoretically.",
-          "tags": [
-            "approximation theory",
-            "hypernetworks",
-            "parameter-efficient fine-tuning",
-            "neural networks"
+            "reinforcement-learning",
+            "foundation-models",
+            "manipulation"
           ],
           "sources": [
             {
               "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2608.31157v1"
+              "url": "https://arxiv.org/abs/2609.01596v1"
             }
           ],
-          "published": "2026-08-31T17:55:51+00:00",
-          "score": 0.4292
+          "published": "2026-09-01T17:58:07+00:00",
+          "score": 1.2994
+        },
+        {
+          "id": "9b02a4037ae4",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Quantization Damage in LLMs Is Diffuse: Global Granularity Beats Layer-Selective Precision Allocation by 21–52 Points",
+          "why_it_matters": "If you serve or evaluate quantized open-weight models, this causal study directly challenges the common practice of protecting only 'critical' layers and offers a concrete better default.",
+          "summary": "Using causal mixed-precision intervention (raising each layer to 8-bit and measuring accuracy recovery) across 9 models in 4 architecture families, the authors find quantization damage is mostly diffuse—recovering 75% of the accuracy gap requires roughly half the layers in 8 of 9 models (Qwen3-8B is the concentrated exception). At a matched precision budget, spending it globally via finer quantization granularity outperforms locally repairing the most recoverable layers by 21–52 points across all 8 group-128-compatible models, including Qwen3-8B.",
+          "tags": [
+            "quantization",
+            "llm",
+            "post-training",
+            "efficiency"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2609.01587v1"
+            },
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2609.01573v1"
+            }
+          ],
+          "published": "2026-09-01T17:53:41+00:00",
+          "score": 1.298
+        },
+        {
+          "id": "0d86495fdcc1",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "SAGE: Entropy-Gated VLM Teacher Queries Enable Lightweight Autonomous RL Policies",
+          "why_it_matters": "Using VLMs as selective, imperfect teachers rather than fixed policies is a practically useful framing for reducing inference costs in agent training—directly relevant to RL and agent research.",
+          "summary": "SAGE queries a VLM teacher only when learner action-entropy is high, executes the suggested action, and distills it into a lightweight RL policy weighted by environment-derived advantages (not uniform trust). At evaluation time, the learned policy requires zero VLM calls. Tested on sparse-reward visual reasoning and navigation tasks, SAGE improves over unguided RL in several environments, including cases where the student policy exceeds its VLM teacher, while reducing VLM queries to a fraction of training steps.",
+          "tags": [
+            "reinforcement-learning",
+            "agents",
+            "vlm",
+            "distillation"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2609.01567v1"
+            }
+          ],
+          "published": "2026-09-01T17:33:41+00:00",
+          "score": 1.292
+        },
+        {
+          "id": "85562dc16345",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Hugging Face Releases 207 WebGPU Kernels and Fleet Benchmarking Suite for In-Browser AI",
+          "why_it_matters": "Browser-side inference is a growing deployment target; a versioned, crowdsourced kernel library with correctness contracts could meaningfully improve the quality of local AI runtimes you might build on.",
+          "summary": "The @huggingface/kernels library loads and runs 207 Apache-2.0 WebGPU kernels from the Hub, covering matrix multiplications, attention primitives, quantization ops, and more. Each kernel ships with a manifest, correctness tests, benchmark cases, and WGSL shader templates. Fleet is a browser-based crowdsourced benchmarking tool that collects correctness and performance data across real-world GPUs to drive kernel improvements.",
+          "tags": [
+            "webgpu",
+            "browser-inference",
+            "kernels",
+            "inference"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/webgpu-kernels"
+            }
+          ],
+          "published": "2026-09-01T00:00:00+00:00",
+          "score": 1.0124
+        },
+        {
+          "id": "63846c6e3b03",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Gradient-Update Mismatch: Conflict-Free Gradient Surgery Is Undone by Optimizers in PINN Training",
+          "why_it_matters": "If you train multi-objective neural networks or use gradient surgery methods with adaptive optimizers, this finding that optimizer state can reintroduce gradient conflicts—and a fix that projects the optimizer update—is directly actionable.",
+          "summary": "The paper shows that when gradient surgery constructs a conflict-free direction, modern optimizers (momentum, adaptive, curvature-based) can map it outside the conflict-free cone via historical state or adaptive scaling—called Gradient-Update Mismatch (GUM), observed at conflict rates up to 86.3%. The proposed fix, Gradient-Update Alignment (GUA), projects the optimizer's update proposal onto the conflict-free cone and adjusts internal optimizer state accordingly. GUA reduces relative L2 error by up to 98.2% in individual PINN settings.",
+          "tags": [
+            "optimization",
+            "physics-informed-neural-networks",
+            "gradient-surgery",
+            "training"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2609.01558v1"
+            }
+          ],
+          "published": "2026-09-01T17:20:13+00:00",
+          "score": 0.4293
         }
       ]
     }
