@@ -1,11 +1,11 @@
 {
-  "date": "2026-09-04",
-  "generated_at": "2026-09-04T04:20:22.098678+00:00",
-  "summary_line": "1 must-know · 6 worth knowing",
+  "date": "2026-09-05",
+  "generated_at": "2026-09-05T04:15:13.932780+00:00",
+  "summary_line": "1 items to skim.",
   "counts": {
-    "total": 11,
+    "total": 1,
     "headlines": 1,
-    "frontier": 10
+    "frontier": 0
   },
   "sections": [
     {
@@ -13,254 +13,33 @@
       "title": "Headlines",
       "cards": [
         {
-          "id": "56da2c8ef803",
-          "tier": "must_know",
+          "id": "22915ca8a273",
+          "tier": "skim",
           "category": "headline",
-          "title": "Google DeepMind WeatherNext 3: Hourly Forecasts at 5 km Resolution Using Live Satellite Data",
-          "why_it_matters": "WeatherNext 3 demonstrates a major architectural shift—ingesting raw geostationary satellite mosaics instead of NWP reanalysis—that is directly relevant to AI engineers interested in real-world, continuously updating observation-driven generative models.",
-          "summary": "WeatherNext 3 generates hourly global forecasts at 5 km resolution for key surface variables (10 km for others, 25 km for atmospheric variables like wind), roughly 5× sharper than WeatherNext 2's 25 km/6-hour output. Unlike prior models trained on NWP reanalysis data (which carries a 6-hour lag), WeatherNext 3 ingests live geostationary satellite mosaics via a Functional Generative Network mesh transformer, enabling continuous atmospheric grounding. Ranked most accurate globally by independent live evaluations from Brightband.",
+          "title": "IBM Granite Time Series Foundation Models Now Stream-Native on Confluent Cloud via Flink",
+          "why_it_matters": "As an AI/ML engineer, this is a production-grade deployment pattern for TSFMs — zero-config, stateful, stream-native inference — worth knowing for real-world time-series ML architecture decisions.",
+          "summary": "IBM's Granite time series foundation models (44M+ downloads) are now available on Confluent Cloud, callable from Flink for stream-native forecasting, anomaly detection, similarity search, and optimization. Flink manages per-series state fault-tolerantly, eliminating separate data stores. IBM cites 5–10× productivity gains in industrial deployments. Confluent Platform support for on-premises/hybrid follows.",
           "tags": [
-            "weather-ai",
-            "deepmind",
-            "geospatial",
-            "foundation-models"
+            "time-series",
+            "mlops",
+            "streaming",
+            "ibm"
           ],
           "sources": [
             {
-              "name": "DeepMind",
-              "url": "https://deepmind.google/blog/introducing-weathernext-3-our-most-advanced-and-accurate-global-weather-ai-model/"
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/ibm-research/real-time-intelligence"
             }
           ],
-          "published": "2026-09-03T15:02:08+00:00",
-          "score": 2.4939
+          "published": "2026-09-02T13:49:14+00:00",
+          "score": 0.2101
         }
       ]
     },
     {
       "key": "frontier",
       "title": "Frontier & Papers",
-      "cards": [
-        {
-          "id": "5ac6737397a7",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "'Compile by Training': Distill NL Specs into Small Reusable Neural Functions Without Runtime LLM Calls",
-          "why_it_matters": "This is a practically useful inference-cost reduction technique: for recurring text functions, compiling to a fine-tuned small adapter eliminates per-call latency and provider dependency, relevant to any engineer deploying LLM-based pipelines at scale.",
-          "summary": "'Compile by training' converts a natural-language function specification into a small adapter on a compact interpreter model. At compile time, teacher models generate task-specific examples; the adapter is trained on these and then runs independently. On FuzzyBench-Hard—where the fast 'Program-as-Weights' compiler produced zero exact matches—this approach reaches 83.6% semantic accuracy, at a compile-time cost of ~1 minute vs. seconds for the fast compiler. Demonstrated in a multi-site web helper, a 3D avatar controller, and a bidirectional translator.",
-          "tags": [
-            "inference-efficiency",
-            "distillation",
-            "prompt-compilation",
-            "agents"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2609.04199v1"
-            }
-          ],
-          "published": "2026-09-03T17:59:49+00:00",
-          "score": 1.2993
-        },
-        {
-          "id": "75afc6b7941c",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "LLM-as-Judge Reliability Audit: Same-Window Repeat Rankings Agree at Spearman 0.40, Far Below Required 0.90",
-          "why_it_matters": "If you use LLM judges for evals, reward modeling, or leaderboards, this preregistered audit provides concrete, alarming evidence that model-name identifiers on shared endpoints are not frozen instruments—critical to know before trusting any automated eval pipeline.",
-          "summary": "A preregistered, two-campaign audit of 52,988 LLM judge requests found same-window repeat rankings agreeing at Spearman 0.40 against a required threshold of 0.90, and byte-identical next-day replays at 0.78 against a required 0.99. Four providers share a similar noise floor (medians 0.74–0.88). Self-hosting helped only under quiet server conditions. The authors identify three mechanisms—label-to-meaning mapping bias, candidate gaps below the noise floor, and non-deterministic outputs—and propose an eight-rule design checklist plus a three-level snapshot-identity ladder.",
-          "tags": [
-            "evals",
-            "llm-judges",
-            "reliability",
-            "measurement"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2609.04198v1"
-            }
-          ],
-          "published": "2026-09-03T17:59:43+00:00",
-          "score": 1.2993
-        },
-        {
-          "id": "a3e5ba214a98",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "ESPO Prompt Optimizer: +3.76 pp Accuracy Over GEPA with 47% Shorter Prompts Across 7 Benchmarks",
-          "why_it_matters": "Prompt optimization is a practical tool for research engineers, and ESPO's structured diagnose-diversify-stabilize approach provides a concrete, reproducible improvement over prior evolutionary methods with shorter, faster prompts.",
-          "summary": "ESPO decomposes prompt optimization into three phases: Diagnose (cluster training errors into structural patterns in one round), Propose (four complementary candidate-generation strategies), and Select (bootstrap stability selection). Across seven benchmarks including GSM8K, MMLU, and HotpotQA, ESPO averages 74.67% vs. GEPA's 70.91% (+3.76 pp) while producing prompts averaging 1,004 vs. 1,878 characters (47% shorter). Cross-model tests on Gemma 3 12B, Mistral 14B, Qwen3 32B, and Claude Haiku 4.5 show ESPO best on every model; largest gap is Qwen3 GSM8K (15.00% → 91.40%).",
-          "tags": [
-            "prompt-optimization",
-            "automatic-prompting",
-            "benchmarks",
-            "reasoning"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2609.04197v1"
-            }
-          ],
-          "published": "2026-09-03T17:59:37+00:00",
-          "score": 1.2992
-        },
-        {
-          "id": "ca41ad6246e0",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "LLM Judges Can't Reliably Identify High-Advantage CoT Steps: Legibility ≠ Interpretability",
-          "why_it_matters": "This directly challenges the foundation of process reward models and generative critics—if LLM judges cannot recover step importance from trace text, the supervision signal for many RLHF and PRM pipelines is weaker than assumed.",
-          "summary": "The paper operationalizes reasoning-step importance as advantage (change in expected correct-answer probability via Monte Carlo rollouts) and tests whether LLM judges can identify high-advantage steps in chain-of-thought traces. Sufficiently capable judges outperform a prevalence baseline but fall well short of a noise ceiling. Fine-tuning a step-level critic improves performance on incorrect responses but remains far from ceiling for correct ones, suggesting step importance is only partially recoverable from trace text alone.",
-          "tags": [
-            "interpretability",
-            "chain-of-thought",
-            "process-reward-models",
-            "faithfulness"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2609.04194v1"
-            }
-          ],
-          "published": "2026-09-03T17:59:08+00:00",
-          "score": 1.2991
-        },
-        {
-          "id": "90451c2128ef",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "EditVid: Training-Free Unified Video Editing Framework Hits 78.16 FiVE-Acc vs. 58.95 for Best Baseline",
-          "why_it_matters": "A unified training-free approach covering instruction-guided and reference-guided video editing with strong benchmark results is useful context for research engineers tracking the video generation/editing frontier.",
-          "summary": "EditVid combines sparse causal memory for local temporal coherence, correspondence-based post-attention token injection for long-range identity preservation, and soft latent blending for edit locality—all without additional training. It supports style transfer, attribute modification, object insertion, part-level editing, and subject replacement within the same framework. On FiVE, it achieves 78.16 FiVE-Acc vs. 58.95 for the strongest training-free baseline. A user study shows 51.8% overall preference over 7 competing methods.",
-          "tags": [
-            "video-editing",
-            "diffusion",
-            "training-free",
-            "multimodal"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2609.04190v1"
-            }
-          ],
-          "published": "2026-09-03T17:59:01+00:00",
-          "score": 1.2991
-        },
-        {
-          "id": "96a3500c5a4b",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "NeoMME: 260M/800M Multimodal Encoder Trained from Scratch, No Separate Vision Tower",
-          "why_it_matters": "As a research engineer building retrieval or document-understanding pipelines, NeoMME's single-Transformer design and 255× index compression are directly actionable architecture and engineering insights.",
-          "summary": "NeoMME (260M and 800M) is a multilingual, multimodal encoder pretrained from scratch with a masked discrete-diffusion objective. A single bidirectional Transformer handles both text tokens and 32×32 image patches. For visual document retrieval, the 260M variant encodes ~51 pages/second at 2048×2048 on an L40S—roughly 2× ColModernVBERT's throughput—and sits on the ViDoRe v3 Pareto frontier. Hierarchical token pooling and asymmetric quantization shrink late-interaction index storage 255× (1.5 MB → 6 kB per page) while retaining >95% of baseline nDCG@10. Apache 2.0, available in Hugging Face Transformers.",
-          "tags": [
-            "multimodal",
-            "encoders",
-            "document-retrieval",
-            "open-weights"
-          ],
-          "sources": [
-            {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/Hcompany/neomme"
-            }
-          ],
-          "published": "2026-09-03T13:13:48+00:00",
-          "score": 1.2161
-        },
-        {
-          "id": "89ddc0e0c7bd",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "First PAC Learning Framework for General-Sum Concurrent Stochastic Games with NE Existence Certificates",
-          "why_it_matters": "Extends PAC learning theory to multi-agent concurrent stochastic games with principled Nash equilibrium existence certification—relevant to researchers working on multi-agent RL theory and robust game-solving.",
-          "summary": "The paper introduces a PAC learning algorithm for general-sum concurrent stochastic games (CSGs) with transition uncertainty. It maintains L¹ confidence sets over transition kernels and solves a robust CSG for a social-welfare optimal ε-NE. A Nash margin characterization either returns an ε-approximate NE whose social-welfare value is ε-close to optimal, or certifies that no exact NE exists. Under a minimum reachability condition p_reach > 0, sample complexity is Õ(R_max² H⁴ |S|² |A| / (p_reach ε²)).",
-          "tags": [
-            "multi-agent-rl",
-            "game-theory",
-            "pac-learning",
-            "theory"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2609.04189v1"
-            }
-          ],
-          "published": "2026-09-03T17:58:57+00:00",
-          "score": 0.433
-        },
-        {
-          "id": "45020768fad9",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "100 GRPO Steps Boosts LFM2.5-350M Structured Output Compliance from ~22% to Competitive Levels",
-          "why_it_matters": "A concise, reproducible demonstration that GRPO fine-tuning on schema compliance is achievable on tiny models with minimal compute—directly useful for anyone deploying small LLMs in structured-output pipelines.",
-          "summary": "Starting from LiquidAI's LFM2.5-350M base model scoring 22.6% on the IFStruct schema-compliance benchmark, the authors apply ~100 GRPO steps on a free-tier GPU to improve structured output validity across JSON and YAML formats. IFStruct measures parseable, schema-adherent output rather than reasoning quality. The guide uses llama.cpp for local serving and TRL for training, with all artifacts and evaluation code open-sourced.",
-          "tags": [
-            "rlhf",
-            "structured-outputs",
-            "small-models",
-            "fine-tuning"
-          ],
-          "sources": [
-            {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/grpo-with-trl-ifstruct"
-            }
-          ],
-          "published": "2026-09-03T00:00:00+00:00",
-          "score": 0.3373
-        },
-        {
-          "id": "86b47b47cb74",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "'funes': Local, Durable Memory Layer for Coding Agents Built from Existing Session Traces",
-          "why_it_matters": "For AI engineers running coding agents (Claude Code, Codex, etc.), funes provides a self-hosted, privacy-preserving recall system that persists rationale across sessions without sending traces to external models.",
-          "summary": "funes is a single binary that indexes existing coding-agent session traces (Claude Code, Codex, pi, Hermes) into a local Lance dataset using a pipeline of BM25 + vector search, cross-encoder reranking, and recency weighting. Embedding and reranking run locally with no ML runtime dependency. Agents gain a recall tool that returns original text with full provenance. Memory can optionally sync to a private Hugging Face dataset; credentials are redacted before any upload. Indexing is incremental per session.",
-          "tags": [
-            "agents",
-            "memory",
-            "developer-tools",
-            "retrieval"
-          ],
-          "sources": [
-            {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/funes"
-            }
-          ],
-          "published": "2026-09-03T00:00:00+00:00",
-          "score": 0.3373
-        },
-        {
-          "id": "b844bdeeb825",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "Open Reproduction: Training Qwen3.5-35B with GRPO + OpenEnv to Generate Watercolor-Style p5.js Code",
-          "why_it_matters": "A fully open, end-to-end RL training pipeline using GRPO on a real creative coding task—useful for research engineers exploring reward design, RL environments, and code generation with non-standard reward signals.",
-          "summary": "An open reproduction of Surya Narreddi's viral watercolor-painting LM project, using Qwen/Qwen3.5-35B-A3B with LoRA GRPO training via TRL on Hugging Face Jobs. The model generates ~150-line p5.brush JavaScript programs constrained to ten library methods. The pipeline includes an RL environment and scorer model as Spaces, a pairwise judge via Inference Providers, and a hand-rated reference pool—all published. Three reward mixes were trained and compared; full artifacts and training scripts are open.",
-          "tags": [
-            "rl",
-            "grpo",
-            "code-generation",
-            "open-source"
-          ],
-          "sources": [
-            {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/train-to-paint-with-code"
-            }
-          ],
-          "published": "2026-09-03T00:00:00+00:00",
-          "score": 0.3373
-        }
-      ]
+      "cards": []
     }
   ]
 }
