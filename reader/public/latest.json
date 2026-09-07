@@ -1,45 +1,111 @@
 {
-  "date": "2026-09-05",
-  "generated_at": "2026-09-05T04:15:13.932780+00:00",
-  "summary_line": "1 items to skim.",
+  "date": "2026-09-07",
+  "generated_at": "2026-09-07T04:23:08.565708+00:00",
+  "summary_line": "3 worth knowing",
   "counts": {
-    "total": 1,
-    "headlines": 1,
-    "frontier": 0
+    "total": 4,
+    "headlines": 0,
+    "frontier": 4
   },
   "sections": [
     {
       "key": "headlines",
       "title": "Headlines",
-      "cards": [
-        {
-          "id": "22915ca8a273",
-          "tier": "skim",
-          "category": "headline",
-          "title": "IBM Granite Time Series Foundation Models Now Stream-Native on Confluent Cloud via Flink",
-          "why_it_matters": "As an AI/ML engineer, this is a production-grade deployment pattern for TSFMs — zero-config, stateful, stream-native inference — worth knowing for real-world time-series ML architecture decisions.",
-          "summary": "IBM's Granite time series foundation models (44M+ downloads) are now available on Confluent Cloud, callable from Flink for stream-native forecasting, anomaly detection, similarity search, and optimization. Flink manages per-series state fault-tolerantly, eliminating separate data stores. IBM cites 5–10× productivity gains in industrial deployments. Confluent Platform support for on-premises/hybrid follows.",
-          "tags": [
-            "time-series",
-            "mlops",
-            "streaming",
-            "ibm"
-          ],
-          "sources": [
-            {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/ibm-research/real-time-intelligence"
-            }
-          ],
-          "published": "2026-09-02T13:49:14+00:00",
-          "score": 0.2101
-        }
-      ]
+      "cards": []
     },
     {
       "key": "frontier",
       "title": "Frontier & Papers",
-      "cards": []
+      "cards": [
+        {
+          "id": "00660e54fcfb",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "UniMate: One Diffusion Transformer Animates Any Skeleton from Text",
+          "why_it_matters": "If you work with 3D assets or generative models, topology-agnostic motion synthesis is a genuine unsolved problem — UniMate's architecture tricks (spectral RoPE via graph Laplacian, graph-aware attention bias) are technically novel and worth understanding.",
+          "summary": "UniMate is a unified foundation model that generates articulated motion for arbitrary rigged skeletons given only a text prompt, with no test-time optimization or per-skeleton retraining. It uses a topology-aware diffusion transformer with graph-aware attention biases, a spectral rotary position embedding derived from the graph Laplacian, and a global topological conditioner. Trained on UniML3D (13,006 sequences across seven skeleton categories), it supports zero-shot cross-topology transfer and text-guided editing.",
+          "tags": [
+            "3d animation",
+            "diffusion models",
+            "graph neural networks",
+            "generative models"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2609.05415v1"
+            }
+          ],
+          "published": "2026-09-04T17:59:00+00:00",
+          "score": 0.6665
+        },
+        {
+          "id": "095535ae1480",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "WearableQA: LLM Reasoning Benchmark over 200 Users' Real Longitudinal Wearable Data",
+          "why_it_matters": "As health AI and agentic systems move toward real-world sensor integration, rigorous benchmarks that stress-test multi-signal physiological reasoning are critical infrastructure — this one exposes large gaps across 14 models.",
+          "summary": "WearableQA is a 4,084-question multiple-choice benchmark built from wearable time series, blood biomarkers, and demographics of 200 real users (up to 500 days each). It spans 16 question types across data vs. health reasoning and single- vs. cross-signal reasoning axes. Evaluating 14 proprietary and open-source LLMs yields scores ranging from 19.6% to 72.9% against a 10% chance baseline; most models fall below 60%, indicating the benchmark is far from solved.",
+          "tags": [
+            "benchmarks",
+            "health ai",
+            "llm evaluation",
+            "wearables"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2609.05405v1"
+            }
+          ],
+          "published": "2026-09-04T17:52:37+00:00",
+          "score": 0.6655
+        },
+        {
+          "id": "260a63111d7a",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "RegionFed: Gradient-Level Federated Learning Fixes Transformer Collapse in Heterogeneous Retail Search",
+          "why_it_matters": "Parameter-level personalized FL catastrophically failing on modern transformers (below 10% accuracy on T5) is a practical blocker for privacy-preserving NLP — RegionFed's gradient-conflict routing approach is an architectural solution worth tracking.",
+          "summary": "RegionFed is a federated learning framework that operates entirely at the gradient level, using ℓ₂ conflict between regional and global gradients to diagnose heterogeneity, route regions to personalization strategies, and control personalization strength. Unlike parameter-level methods that collapse on T5 (below 10% accuracy), RegionFed deploys unchanged on T5-Small, T5-3B, RoBERTa, and CNN. On Amazon ESCI, Amazon Reviews, and LEAF-FEMNIST, RegionFed-Meta achieves 92.27% accuracy, within 0.23 percentage points of the centralized upper bound, with (ε≈0.60)-differential privacy.",
+          "tags": [
+            "federated learning",
+            "nlp",
+            "transformers",
+            "privacy"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2609.05403v1"
+            }
+          ],
+          "published": "2026-09-04T17:50:10+00:00",
+          "score": 0.6652
+        },
+        {
+          "id": "a4d1a91bf1a5",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Quantum Fine-Tuning of Chronos for Time-Series Classification: Wing Modules Scale Accuracy with Added Inputs",
+          "why_it_matters": "Quantum ML scaling behavior is poorly understood; this paper's concrete finding — that added qubits help only when carrying new information — is a principled result relevant to anyone thinking about hybrid classical-quantum architectures.",
+          "summary": "The authors fine-tune Chronos embeddings for power-grid event classification using a quantum head, outperforming a larger classical MLP by 1.7–2.0 percentage points of balanced accuracy. Gains saturate when more information is fed into a fixed-width register. To extend scaling, they introduce 'wing modules' — sparse, one-way few-qubit circuits feeding additional inputs into a fixed 12-qubit core — raising balanced accuracy from 83.6% (no wings) to 85.2% (two wings, 19 qubits total). Ablations confirm qubits help only when carrying new inputs.",
+          "tags": [
+            "quantum ml",
+            "time series",
+            "hybrid classical-quantum",
+            "fine-tuning"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2609.05408v1"
+            }
+          ],
+          "published": "2026-09-04T17:56:24+00:00",
+          "score": 0.222
+        }
+      ]
     }
   ]
 }
