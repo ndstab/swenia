@@ -1,11 +1,11 @@
 {
-  "date": "2026-09-07",
-  "generated_at": "2026-09-07T04:23:08.565708+00:00",
-  "summary_line": "3 worth knowing",
+  "date": "2026-09-08",
+  "generated_at": "2026-09-08T04:23:05.652271+00:00",
+  "summary_line": "2 items to skim.",
   "counts": {
-    "total": 4,
+    "total": 2,
     "headlines": 0,
-    "frontier": 4
+    "frontier": 2
   },
   "sections": [
     {
@@ -18,92 +18,48 @@
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "00660e54fcfb",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "UniMate: One Diffusion Transformer Animates Any Skeleton from Text",
-          "why_it_matters": "If you work with 3D assets or generative models, topology-agnostic motion synthesis is a genuine unsolved problem — UniMate's architecture tricks (spectral RoPE via graph Laplacian, graph-aware attention bias) are technically novel and worth understanding.",
-          "summary": "UniMate is a unified foundation model that generates articulated motion for arbitrary rigged skeletons given only a text prompt, with no test-time optimization or per-skeleton retraining. It uses a topology-aware diffusion transformer with graph-aware attention biases, a spectral rotary position embedding derived from the graph Laplacian, and a global topological conditioner. Trained on UniML3D (13,006 sequences across seven skeleton categories), it supports zero-shot cross-topology transfer and text-guided editing.",
-          "tags": [
-            "3d animation",
-            "diffusion models",
-            "graph neural networks",
-            "generative models"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2609.05415v1"
-            }
-          ],
-          "published": "2026-09-04T17:59:00+00:00",
-          "score": 0.6665
-        },
-        {
-          "id": "095535ae1480",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "WearableQA: LLM Reasoning Benchmark over 200 Users' Real Longitudinal Wearable Data",
-          "why_it_matters": "As health AI and agentic systems move toward real-world sensor integration, rigorous benchmarks that stress-test multi-signal physiological reasoning are critical infrastructure — this one exposes large gaps across 14 models.",
-          "summary": "WearableQA is a 4,084-question multiple-choice benchmark built from wearable time series, blood biomarkers, and demographics of 200 real users (up to 500 days each). It spans 16 question types across data vs. health reasoning and single- vs. cross-signal reasoning axes. Evaluating 14 proprietary and open-source LLMs yields scores ranging from 19.6% to 72.9% against a 10% chance baseline; most models fall below 60%, indicating the benchmark is far from solved.",
-          "tags": [
-            "benchmarks",
-            "health ai",
-            "llm evaluation",
-            "wearables"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2609.05405v1"
-            }
-          ],
-          "published": "2026-09-04T17:52:37+00:00",
-          "score": 0.6655
-        },
-        {
-          "id": "260a63111d7a",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "RegionFed: Gradient-Level Federated Learning Fixes Transformer Collapse in Heterogeneous Retail Search",
-          "why_it_matters": "Parameter-level personalized FL catastrophically failing on modern transformers (below 10% accuracy on T5) is a practical blocker for privacy-preserving NLP — RegionFed's gradient-conflict routing approach is an architectural solution worth tracking.",
-          "summary": "RegionFed is a federated learning framework that operates entirely at the gradient level, using ℓ₂ conflict between regional and global gradients to diagnose heterogeneity, route regions to personalization strategies, and control personalization strength. Unlike parameter-level methods that collapse on T5 (below 10% accuracy), RegionFed deploys unchanged on T5-Small, T5-3B, RoBERTa, and CNN. On Amazon ESCI, Amazon Reviews, and LEAF-FEMNIST, RegionFed-Meta achieves 92.27% accuracy, within 0.23 percentage points of the centralized upper bound, with (ε≈0.60)-differential privacy.",
-          "tags": [
-            "federated learning",
-            "nlp",
-            "transformers",
-            "privacy"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2609.05403v1"
-            }
-          ],
-          "published": "2026-09-04T17:50:10+00:00",
-          "score": 0.6652
-        },
-        {
-          "id": "a4d1a91bf1a5",
+          "id": "fb2a6b48e0fd",
           "tier": "skim",
           "category": "frontier",
-          "title": "Quantum Fine-Tuning of Chronos for Time-Series Classification: Wing Modules Scale Accuracy with Added Inputs",
-          "why_it_matters": "Quantum ML scaling behavior is poorly understood; this paper's concrete finding — that added qubits help only when carrying new information — is a principled result relevant to anyone thinking about hybrid classical-quantum architectures.",
-          "summary": "The authors fine-tune Chronos embeddings for power-grid event classification using a quantum head, outperforming a larger classical MLP by 1.7–2.0 percentage points of balanced accuracy. Gains saturate when more information is fed into a fixed-width register. To extend scaling, they introduce 'wing modules' — sparse, one-way few-qubit circuits feeding additional inputs into a fixed 12-qubit core — raising balanced accuracy from 83.6% (no wings) to 85.2% (two wings, 19 qubits total). Ablations confirm qubits help only when carrying new inputs.",
+          "title": "Diffusion TV: CRT-Based Art Installation Makes Denoising Process Tangible",
+          "why_it_matters": "As someone working in generative AI, this offers a novel angle on embodied explainability — using physical interaction to convey the diffusion denoising process rather than diagrams or text.",
+          "summary": "An interactive art installation uses a modified CRT TV to let audiences physically experience diffusion model denoising. Antenna manipulation controls image clarity, metaphorically enacting the denoising process; a tuning knob switches between three channels of AI-generated animals spanning extinct, endangered, and speculative species. The work frames intermediate generative states as experiential material rather than final outputs.",
           "tags": [
-            "quantum ml",
-            "time series",
-            "hybrid classical-quantum",
-            "fine-tuning"
+            "diffusion models",
+            "explainable ai",
+            "generative art",
+            "human-computer interaction"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2609.05404v1"
+            }
+          ],
+          "published": "2026-09-04T17:51:48+00:00",
+          "score": 0.1589
+        },
+        {
+          "id": "4ec69a2acbe7",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Parametric Amplification Boosts Multiparameter Quantum Estimation in Coupled-Cavity Optomechanics",
+          "why_it_matters": "For an engineer tracking quantum ML and quantum sensing, this work provides concrete precision bounds and tunable mechanisms for simultaneous estimation of multiple quantum parameters — relevant to quantum hardware benchmarking.",
+          "summary": "Researchers analyze a coupled-cavity optomechanical system with two-mode squeezed vacuum, intracavity degenerate parametric amplification, and coherent optical feedback for simultaneous estimation of optomechanical coupling strength and cavity dissipation rate. Using Gaussian-state formalism and quantum Fisher information matrices under SLD/RLD frameworks, they find parametric amplification substantially reduces estimation uncertainty across broad operating conditions, while coherent feedback produces nonmonotonic precision changes depending sensitively on reflectivity, phase, squeezing, and thermal occupation.",
+          "tags": [
+            "quantum estimation",
+            "optomechanics",
+            "quantum sensing",
+            "quantum fisher information"
           ],
           "sources": [
             {
               "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2609.05408v1"
+              "url": "https://arxiv.org/abs/2609.05402v1"
             }
           ],
-          "published": "2026-09-04T17:56:24+00:00",
-          "score": 0.222
+          "published": "2026-09-04T17:48:44+00:00",
+          "score": 0.1588
         }
       ]
     }
