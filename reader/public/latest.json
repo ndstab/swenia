@@ -1,65 +1,220 @@
 {
-  "date": "2026-09-08",
-  "generated_at": "2026-09-08T04:23:05.652271+00:00",
-  "summary_line": "2 items to skim.",
+  "date": "2026-09-09",
+  "generated_at": "2026-09-09T04:29:03.090849+00:00",
+  "summary_line": "2 must-know · 4 worth knowing",
   "counts": {
-    "total": 2,
-    "headlines": 0,
-    "frontier": 2
+    "total": 9,
+    "headlines": 2,
+    "frontier": 7
   },
   "sections": [
     {
       "key": "headlines",
       "title": "Headlines",
-      "cards": []
+      "cards": [
+        {
+          "id": "80d284f58871",
+          "tier": "must_know",
+          "category": "headline",
+          "title": "Google DeepMind Releases AlphaGenome Atlas: 9 Billion DNA Variant Predictions in a Free Research Portal",
+          "why_it_matters": "A landmark compute-at-scale application of AI to genomics; comparable in scope to AlphaFold DB expansion and signals where DeepMind is pushing scientific AI next.",
+          "summary": "AlphaGenome Atlas precomputes molecular-effect predictions for all ~9 billion possible single-nucleotide variants in the human genome, forming a 1-petabyte dataset (30× larger than the AlphaFold Database). A new AlphaGenome Variant Impact (AVI) score combines AlphaGenome and AlphaMissense predictions into a single ranking number. Available free for academic research via web portal, API, and Google Antigravity.",
+          "tags": [
+            "deepmind",
+            "genomics",
+            "scientific-ai",
+            "infrastructure"
+          ],
+          "sources": [
+            {
+              "name": "DeepMind",
+              "url": "https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/"
+            }
+          ],
+          "published": "2026-09-08T14:00:15+00:00",
+          "score": 2.4535
+        },
+        {
+          "id": "2089fa5ad760",
+          "tier": "worth_knowing",
+          "category": "headline",
+          "title": "Open Model License Landscape 2026: Western Labs Go Apache 2.0, Chinese Frontier Gets More Restrictive",
+          "why_it_matters": "Licensing conditions directly affect what open models you can legally use in inference or fine-tuning pipelines, and the diverging trend between Western and Chinese frontier labs is accelerating.",
+          "summary": "Google and Meta have switched to Apache 2.0; meanwhile Kimi K3, MiniMax M3, and now GLM-5.3 (Zhipu) have adopted restrictive custom licenses. GLM-5.3's key clause requires a Z.AI security review for MaaS operators whose revenue—including undefined 'affiliates'—exceeds $10B over any 12-month period. Also highlighted: Motif-3 (MIT, strong scores for size), Qwen3.8-Flash-Next (125B-A6B with 51B n-gram embeddings, GDN + Qwen Sparse Attention preview), and Tencent's Hy4-preview.",
+          "tags": [
+            "open-source",
+            "licensing",
+            "model-releases",
+            "frontier-models"
+          ],
+          "sources": [
+            {
+              "name": "Interconnects",
+              "url": "https://www.interconnects.ai/p/latest-open-artifacts-24-motif-3"
+            }
+          ],
+          "published": "2026-09-08T14:15:25+00:00",
+          "score": 1.231
+        }
+      ]
     },
     {
       "key": "frontier",
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "fb2a6b48e0fd",
-          "tier": "skim",
+          "id": "f7a6fe634d0d",
+          "tier": "must_know",
           "category": "frontier",
-          "title": "Diffusion TV: CRT-Based Art Installation Makes Denoising Process Tangible",
-          "why_it_matters": "As someone working in generative AI, this offers a novel angle on embodied explainability — using physical interaction to convey the diffusion denoising process rather than diagrams or text.",
-          "summary": "An interactive art installation uses a modified CRT TV to let audiences physically experience diffusion model denoising. Antenna manipulation controls image clarity, metaphorically enacting the denoising process; a tuning knob switches between three channels of AI-generated animals spanning extinct, endangered, and speculative species. The work frames intermediate generative states as experiential material rather than final outputs.",
+          "title": "Emergent AI Agent Coordination via Copying: Field Study of Thousands of Agents Collaborating on a Wiki",
+          "why_it_matters": "A rare naturalistic dataset of multi-agent collective behavior at scale, with direct implications for understanding—and steering—emergent conventions in deployed agent populations.",
+          "summary": "In June 2026, thousands of short-lived AI agents (each ~1 hour, no persistent memory) spontaneously used a public wiki to share answers for a timed test. Analysis of the full edit record shows a single 'copying' rule—an agent adopts an option proportional to its prevalence in what it can currently see—reproduces heavy-tailed page-meeting distributions, name-piece frequencies, and cross-page content variation. The finding implies that whoever writes first sets conventions for all subsequent agents.",
           "tags": [
-            "diffusion models",
-            "explainable ai",
-            "generative art",
-            "human-computer interaction"
+            "agents",
+            "multi-agent",
+            "emergent-behavior",
+            "collective-intelligence"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2609.09150v1"
+            }
+          ],
+          "published": "2026-09-08T17:59:20+00:00",
+          "score": 2.5931
+        },
+        {
+          "id": "7953feb2ca71",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "TANGO: Whole-Body Vision-Language-Action Model for Humanoid Navigation in Cluttered Spaces",
+          "why_it_matters": "Advances the agent + embodied AI frontier by unifying VLN with 29-DoF whole-body control, with zero-shot real-world transfer—a meaningful step beyond 2D nav baselines.",
+          "summary": "TANGO frames cluttered indoor navigation as a whole-body control problem rather than 2D path planning, predicting 29-DoF joint-space actions from natural language and egocentric RGB. Trained entirely in simulation via path planning, kinematic motion generation, obstacle-aware editing, and RL tracking, it achieves SOTA on vision-language navigation benchmarks and transfers zero-shot to a Unitree G1 humanoid without real-world training data.",
+          "tags": [
+            "embodied-ai",
+            "robotics",
+            "vision-language-action",
+            "reinforcement-learning"
           ],
           "sources": [
             {
               "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2609.05404v1"
+              "url": "https://arxiv.org/abs/2609.09158v1"
             }
           ],
-          "published": "2026-09-04T17:51:48+00:00",
-          "score": 0.1589
+          "published": "2026-09-08T17:59:55+00:00",
+          "score": 1.2967
         },
         {
-          "id": "4ec69a2acbe7",
-          "tier": "skim",
+          "id": "2ff41be7afa6",
+          "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Parametric Amplification Boosts Multiparameter Quantum Estimation in Coupled-Cavity Optomechanics",
-          "why_it_matters": "For an engineer tracking quantum ML and quantum sensing, this work provides concrete precision bounds and tunable mechanisms for simultaneous estimation of multiple quantum parameters — relevant to quantum hardware benchmarking.",
-          "summary": "Researchers analyze a coupled-cavity optomechanical system with two-mode squeezed vacuum, intracavity degenerate parametric amplification, and coherent optical feedback for simultaneous estimation of optomechanical coupling strength and cavity dissipation rate. Using Gaussian-state formalism and quantum Fisher information matrices under SLD/RLD frameworks, they find parametric amplification substantially reduces estimation uncertainty across broad operating conditions, while coherent feedback produces nonmonotonic precision changes depending sensitively on reflectivity, phase, squeezing, and thermal occupation.",
+          "title": "Credit Stabilization Through Time (CST): Fixing Length Extrapolation in Recurrent Models",
+          "why_it_matters": "Directly relevant if you work on SSMs or recurrent architectures for long-context modeling—CST offers a training-time intervention that improves generalization up to 128× the training length.",
+          "summary": "Standard BPTT-trained recurrent models fail beyond their training horizon. The paper argues the root cause is unstable 'state credit'—gradient signal flowing to earlier states—rather than vanishing gradients alone. CST locally rescales state-credit norms during backprop without rotating the corrected component or altering the forward pass. Gains are shown at up to 128× training length on both synthetic and real-data regimes.",
           "tags": [
-            "quantum estimation",
-            "optomechanics",
-            "quantum sensing",
-            "quantum fisher information"
+            "recurrent-models",
+            "long-context",
+            "training-methods",
+            "architectures"
           ],
           "sources": [
             {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2609.05402v1"
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2609.09157v1"
             }
           ],
-          "published": "2026-09-04T17:48:44+00:00",
-          "score": 0.1588
+          "published": "2026-09-08T17:59:53+00:00",
+          "score": 1.2967
+        },
+        {
+          "id": "1d13f97d658e",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Procedural Graphs: Self-Evolving Execution Structures for Long-Horizon LLM Agents",
+          "why_it_matters": "Offers a principled alternative to memory-only agent architectures for long-horizon tasks—the self-evolution loop is particularly relevant for researchers building production agentic systems.",
+          "summary": "Procedural Graphs organize agent procedural knowledge as (procedure, relation, procedure) triplets, analogous to knowledge graphs for facts. At each step, a guidance model converts the active subgraph into situational guidance without dictating actions. A self-evolution loop contrasts failed and successful trajectories, editing graph topology while preserving validated improvements. Starting from minimal skeletons, the approach matches or surpasses hand-designed graphs across multiple datasets and LLMs.",
+          "tags": [
+            "agents",
+            "long-horizon",
+            "reasoning",
+            "planning"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2609.09153v1"
+            }
+          ],
+          "published": "2026-09-08T17:59:41+00:00",
+          "score": 1.2966
+        },
+        {
+          "id": "3fba584c9165",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "ReCite: Agentic Claim-Level Reasoning for Faithful Academic Citation",
+          "why_it_matters": "Addresses misattribution in RAG-based citation systems—a practical problem for any researcher building or using AI writing tools—by replacing similarity search with explicit reasoning.",
+          "summary": "ReCite is a decoupled agentic framework for citation recommendation that combines location perception, intent-aware query planning, and reflective verification via self-correction loops. Trained on synthesized reasoning trajectories, it targets claim-evidence logical consistency rather than semantic similarity. The lightweight system is reported to outperform larger generative models on strict citation accuracy metrics.",
+          "tags": [
+            "agents",
+            "rag",
+            "academic-ai",
+            "reasoning"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2609.09156v1"
+            }
+          ],
+          "published": "2026-09-08T17:59:50+00:00",
+          "score": 0.4322
+        },
+        {
+          "id": "8335fa6af961",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Silver Rate Is Near-Optimal for Gradient Descent Acceleration: Matching Lower Bounds Proved",
+          "why_it_matters": "Closes a foundational open question in optimization theory—relevant for researchers who care about the theoretical limits of GD step-size tuning and acceleration.",
+          "summary": "The paper proves non-anytime lower bounds of Ω(n^{-p_sil - O(√(log log n / log n))}) and anytime lower bounds of Ω(n^{-2p_sil/(1+p_sil) - O(...)}) for GD with predetermined nonnegative stepsizes on smooth convex problems, where p_sil = log₂(1+√2). Combined with known silver-schedule upper bounds, these results determine the optimal polynomial convergence exponents in both settings.",
+          "tags": [
+            "optimization",
+            "theory",
+            "gradient-descent",
+            "convergence"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2609.09152v1"
+            }
+          ],
+          "published": "2026-09-08T17:59:38+00:00",
+          "score": 0.4322
+        },
+        {
+          "id": "4f420d1c5cd0",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Boundary-Aware Self-Distillation for Subset-Level LLM Safety Refusal",
+          "why_it_matters": "If you work on post-training or deployment safety, this paper offers a concrete method for training refusal boundaries at sub-topic granularity—more useful than coarse topic-level guards like LlamaGuard-3.",
+          "summary": "The paper formalizes 'narrow-boundary safety': refuse only a harmful subset of a topic (e.g., political manipulation) while preserving answers on the benign complement. It identifies three failure modes in standard self-generation pipelines—coverage gaps (19.88% prompts dropped), false refusals near boundaries, and boundary bleed—and proposes boundary-aware self-distillation with escalating retry strategies, reducing uncovered prompts to 0.20%.",
+          "tags": [
+            "safety",
+            "rlhf",
+            "post-training",
+            "alignment"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/MultiverseComputingCAI/safety-for-whom"
+            }
+          ],
+          "published": "2026-09-08T14:23:07+00:00",
+          "score": 0.4111
         }
       ]
     }
