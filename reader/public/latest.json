@@ -1,11 +1,11 @@
 {
-  "date": "2026-09-10",
-  "generated_at": "2026-09-10T04:26:51.384841+00:00",
-  "summary_line": "2 worth knowing",
+  "date": "2026-09-11",
+  "generated_at": "2026-09-11T04:26:14.498663+00:00",
+  "summary_line": "3 worth knowing",
   "counts": {
-    "total": 8,
-    "headlines": 2,
-    "frontier": 6
+    "total": 6,
+    "headlines": 1,
+    "frontier": 5
   },
   "sections": [
     {
@@ -13,47 +13,26 @@
       "title": "Headlines",
       "cards": [
         {
-          "id": "e8608e40b722",
-          "tier": "worth_knowing",
-          "category": "headline",
-          "title": "IBM's Granite PatchTST-FM-r2 Claims Top Zero-Shot Forecasting Spot on GIFT-Eval Under Permissive License",
-          "why_it_matters": "A commercially-licensed, open-weight time-series foundation model hitting SOTA zero-shot benchmarks is directly relevant if you work on forecasting pipelines or production ML infrastructure.",
-          "summary": "IBM released Granite Time Series PatchTST-FM-r2, a ~385M-parameter time-series foundation model. As of September 8, 2026, it ranks #1 among replicable zero-shot models with permissive licenses (Apache 2.0 / OpenMDW 1.0) on GIFT-Eval, and #2 overall in that zero-shot replicable category. It supports probabilistic forecasting via a 99-quantile head, context lengths up to 8,192, and missing-value imputation. Backbone uses conformer blocks combining multi-head self-attention with temporal convolution.",
-          "tags": [
-            "time-series",
-            "foundation models",
-            "forecasting",
-            "open weights"
-          ],
-          "sources": [
-            {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/ibm-research/ibm-releases-sota-granite-time-series"
-            }
-          ],
-          "published": "2026-09-09T15:36:24+00:00",
-          "score": 1.255
-        },
-        {
-          "id": "af4f922db583",
+          "id": "e723d856f72c",
           "tier": "skim",
           "category": "headline",
-          "title": "Why Most People Still Don't Feel AI's Impact — And When They Might",
-          "why_it_matters": "As someone deep in the AI bubble, this essay offers a grounding calibration on the gap between field-level excitement and real-world diffusion that shapes the societal context your work exists within.",
-          "summary": "Most people's daily touchpoints with AI — image generation, enhanced search — are marginal. Unlike past industrial revolutions that delivered tangible physical goods, AI's near-term benefits (scientific breakthroughs, new therapeutics) risk being too indirect for average people to attribute to AI. The author argues early-stage AI's real value is building compounding foundational infrastructure over decades, not immediate consumer-visible change.",
+          "title": "One Researcher's Resignation Sparked a Mainstream AI Extinction-Risk Firestorm",
+          "why_it_matters": "This piece dissects how the discourse environment around AI safety shifted rapidly — understanding the social dynamics is essential for any researcher fielding questions from policymakers, journalists, or the public about extinction-level risk claims.",
+          "summary": "Jacob Coxon's resignation citing safety concerns landed in a newly primed discourse environment, igniting mainstream coverage of extinction-risk framings (including Evan Hubinger's >10% extinction figure). The author argues the ground had dried due to rising AI stakes, that fear-based narratives travel fastest, and that frontier lab culture — especially at Anthropic — distorts employees' technical forecasting in ways that feed the cycle.",
           "tags": [
-            "ai diffusion",
-            "societal impact",
-            "technology adoption"
+            "ai safety",
+            "ai discourse",
+            "existential risk",
+            "frontier labs"
           ],
           "sources": [
             {
               "name": "Interconnects",
-              "url": "https://www.interconnects.ai/p/when-will-average-people-feel-ais"
+              "url": "https://www.interconnects.ai/p/one-resignation-turned-the-embers"
             }
           ],
-          "published": "2026-09-09T11:01:23+00:00",
-          "score": 0.3925
+          "published": "2026-09-10T15:28:52+00:00",
+          "score": 0.4177
         }
       ]
     },
@@ -62,134 +41,114 @@
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "89289cc766b8",
+          "id": "6c6d3bf8794f",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "IdeaAMBIG Benchmark Reveals LLMs Fail at Locating Implementation Gaps in Research Specs",
-          "why_it_matters": "This benchmark directly measures whether AI coding agents can faithfully implement research methods from specs — a core bottleneck for AI-assisted research and automated reproducibility pipelines you may work with.",
-          "summary": "IdeaAMBIG is a 660-instance benchmark testing LLMs on codification-readiness assessment, defect localization, and clarification generation in research method specs. Across 13 LLMs, best defect localization on real-world instances reaches only 9.6% Macro Defect Recovery Rate, while clarification success (given the defect) reaches 80.6%. Oracle experiments show gold resolutions raise codification-ready rate from 14% to 98%, identifying defect localization as the primary bottleneck.",
+          "title": "GPU-CFR: CUDA Graph Replay Delivers 29–80× Speedup Over Prior GPU CFR Implementations",
+          "why_it_matters": "CFR is foundational to game-theoretic AI and multi-agent RL; a compiler approach that achieves 14–258× speedups over CPU baselines on a single A100 is a substantial infrastructure advance for anyone working on large-scale game solving or equilibrium finding.",
+          "summary": "GPU-CFR observes that for a fixed game, everything about a CFR iteration except numerical values is statically known. It compiles the game into flat edge/information-set arrays with precomputed indices, uses static chance folding and depth-level batched passes to cut framework operations by up to 18.1×, then records one iteration via CUDA Graph Replay for single-launch replay. On one A100, it runs 29.8–80.4× faster than prior GPU CFR and 14–258× faster than LiteEFG on the four largest games tested.",
           "tags": [
-            "benchmarks",
-            "reproducibility",
-            "llm evaluation",
-            "agents"
+            "game theory",
+            "reinforcement learning",
+            "cuda",
+            "algorithms"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2609.10539v1"
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2609.11923v1"
             }
           ],
-          "published": "2026-09-09T17:59:04+00:00",
+          "published": "2026-09-10T17:58:14+00:00",
           "score": 1.2971
         },
         {
-          "id": "798484348927",
+          "id": "27dad2126ff9",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Entropic Optimal Transport Yields Estimable Error Bounds for Covariate and Concept Shift",
+          "why_it_matters": "Distribution shift is a persistent practical problem; this work provides both a corrected theoretical definition of concept shift under support mismatch and a concrete estimable bound — useful for researchers who need rigorous guarantees on model generalization.",
+          "summary": "The paper identifies that the standard definition of concept shift breaks when source and target supports mismatch. Using entropic optimal transport, it introduces γ*-concept shifts and derives a unified error bound covering both covariate and γ*-concept shifts, valid for broad loss functions, label spaces, and stochastic labeling. The DataShifts algorithm provides sample-based estimators with concentration guarantees for practical use.",
+          "tags": [
+            "distribution shift",
+            "generalization",
+            "optimal transport",
+            "theory"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2609.11918v1"
+            }
+          ],
+          "published": "2026-09-10T17:57:52+00:00",
+          "score": 1.2969
+        },
+        {
+          "id": "8e555c18f01d",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "MoE Models Overfit to Repeated Data Faster Than Dense Models, Expert Specialization Is the Culprit",
+          "why_it_matters": "As pretraining data exhaustion drives multi-epoch training, understanding that MoE architectures degrade significantly faster than dense models under repetition — and that sparsity level (total, not active parameters) drives the effect — is critical for anyone designing or training sparse LLMs.",
+          "summary": "Experiments on 80M–1B active (up to 8.5B total) parameter models show dense models tolerate 8× data repetition with minimal degradation, while MoEs begin suffering at 4× and underperform dense models after 32× repetition. The effect scales with total (not active) parameter count. Masking-based regularization allows MoEs to outperform dense models even at 64× repetition, though no method matches all-unique training. MoE routing stabilizes early in training, and expert over-specialization correlates with overfitting.",
+          "tags": [
+            "mixture of experts",
+            "pretraining",
+            "data repetition",
+            "sparse models"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2609.11917v1"
+            }
+          ],
+          "published": "2026-09-10T17:57:33+00:00",
+          "score": 1.2968
+        },
+        {
+          "id": "f4c199dae3e5",
           "tier": "skim",
           "category": "frontier",
-          "title": "Bell-Type Tests Without Bell Tests: Quantum vs. Classical Time Evolution via Correlation Patterns",
-          "why_it_matters": "For researchers interested in quantum ML or quantum computing foundations, this proposes a new discriminator between quantum and classical dynamics applicable where standard Bell tests cannot be constructed.",
-          "summary": "The paper explores using statistical correlation patterns as Bell-type tests in settings where standard Bell tests are infeasible (e.g., cosmology). It shows quantum vacuum fluctuations in closed Hamiltonian systems produce time-independent correlations controlled by the energy gap, while classical Hamiltonian systems exhibit apparent poles at physical frequencies leading to time-dependent, eventually dephasing correlations. The approach is extended to quantum optics, quantum walks, and quantum search.",
+          "title": "First Chip-Scale Gaussian Boson Sampling System Detects 11,059 Photons, Runs as a World Model",
+          "why_it_matters": "Demonstrating a fully integrated, programmable GBS processor at 4 GHz clock rate — and repurposing it as a physical world model that outperforms classical echo state networks — bridges quantum hardware and ML applications in a concrete way.",
+          "summary": "Researchers report the first chip-scale space-time multiplexed GBS system on thin-film lithium niobate, integrating electro-optic modulators, on-chip delay lines, and a multiplexed interferometric network running at 4 GHz. It achieves detection events of up to 11,059 photons within 1 millisecond. Beyond quantum advantage benchmarking, the hardware is reconfigured as a GBS-powered world model for physical dynamics, achieving lower prediction error with fewer trainable readout parameters than a classical echo state network baseline.",
           "tags": [
             "quantum computing",
-            "bell inequalities",
-            "quantum foundations"
+            "photonics",
+            "quantum ml",
+            "hardware"
           ],
           "sources": [
             {
               "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2609.10535v1"
+              "url": "https://arxiv.org/abs/2609.11922v1"
             }
           ],
-          "published": "2026-09-09T17:58:31+00:00",
+          "published": "2026-09-10T17:58:13+00:00",
           "score": 0.4323
         },
         {
-          "id": "379803d744c5",
+          "id": "cb50b0c3c856",
           "tier": "skim",
           "category": "frontier",
-          "title": "Normalizing Flows Automatically Extract Near-Pivotal Statistics Under Nuisance Parameters",
-          "why_it_matters": "A technically relevant result for researchers doing simulation-based or likelihood-free inference, showing normalizing flows can automate nuisance-robust statistic construction with provable near-pivotality.",
-          "summary": "The paper presents a normalizing flow decomposition that extracts near-pivotal statistics in the presence of nuisance parameters using only a sample generator. Near-pivotality is defined by minimum average KL-divergence of p-values versus uniform. The method recovers the one-sample t-test almost exactly, outperforms the Welch test on worst-case size, and achieves better power and speed than profile likelihood-ratio techniques on small-to-moderate samples.",
+          "title": "Hugging Face Rebuilds AUTOMATIC1111 as a 73-Node Gradio Workflow Canvas",
+          "why_it_matters": "Workflow1111 demonstrates how Gradio's new graph-based workflow primitive can replicate a complex, widely-used open-source tool — directly relevant if you build or evaluate ML tooling infrastructure.",
+          "summary": "Workflow1111 recreates most of AUTOMATIC1111's feature set as a single Gradio Workflow canvas of 11 media pipelines across 73 nodes, covering text-to-image, hi-res fix via FLUX.1-Kontext, image-to-image, VLM interrogation (Qwen2.5-VL), LLM prompt expansion (Qwen3-4B), detection-to-inpaint masking (DETR), ControlNet annotators, background removal, PNG metadata, and image-to-video. Nodes run in parallel where possible; users authenticate via Hugging Face account.",
           "tags": [
-            "likelihood-free inference",
-            "normalizing flows",
-            "statistics",
-            "simulation-based inference"
+            "gradio",
+            "diffusion models",
+            "ml tooling",
+            "hugging face"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2609.10534v1"
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/gradio-workflow-1111"
             }
           ],
-          "published": "2026-09-09T17:58:15+00:00",
-          "score": 0.4323
-        },
-        {
-          "id": "3f3166383756",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "Noether Symmetries Provide General Route to Deterministic Energy Harvesting from Quantum Sources",
-          "why_it_matters": "Relevant to quantum thermodynamics foundations underlying quantum computing hardware and quantum information theory — provides a symmetry-based framework for a previously ad hoc phenomenon.",
-          "summary": "The paper establishes that any continuous symmetry with a conserved Noether charge generates orbits of source states all capable of deterministic energy harvesting (absorbing energy without absorbing entropy), provided harvester boundary states are symmetry-invariant. One DEH-capable state with nonzero charge-sector asymmetry generates infinitely many simultaneous DEH-capable states. Results are illustrated with Jaynes-Cummings, three-spin XX chain, and SU(2) models, and extended to generalised probabilistic theories.",
-          "tags": [
-            "quantum thermodynamics",
-            "quantum information",
-            "symmetry"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2609.10533v1"
-            }
-          ],
-          "published": "2026-09-09T17:58:08+00:00",
-          "score": 0.4323
-        },
-        {
-          "id": "31fdf4b3db3b",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "Gap-Entropy Conjecture Resolved for Best-Arm Identification in Fixed-Confidence Bandits",
-          "why_it_matters": "A clean theoretical resolution of a long-standing conjecture in bandit theory — directly relevant to RL researchers and anyone working on sample-efficient exploration or adaptive experiment design.",
-          "summary": "The paper proves the gap-entropy conjecture for fixed-confidence best-arm identification with independent unit-variance Gaussian arms. The optimal expected sample complexity, averaged over arm-label permutations, is within constant factors of H(log(1/δ) + Ent(I)), where H is the sum of inverse-squared gaps and Ent(I) is an entropy term over gap-magnitude buckets. An instance-independent algorithm achieves this bound up to constants plus a term involving the minimum gap.",
-          "tags": [
-            "bandits",
-            "reinforcement learning",
-            "theory",
-            "sample complexity"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2609.10529v1"
-            }
-          ],
-          "published": "2026-09-09T17:57:11+00:00",
-          "score": 0.4322
-        },
-        {
-          "id": "dd64f978dba6",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "Finite-Witness Characterization of Language Generation in the Limit, Verified in Lean",
-          "why_it_matters": "Foundational theory on the limits of generative language models from a learning-theoretic perspective — niche but relevant to researchers thinking rigorously about what LLMs can and cannot learn.",
-          "summary": "The paper characterizes when language generation in the limit is possible: exactly when each target language can be assigned a finite positive witness such that targets activated by any finite sample share an infinite common intersection. A separation-width hierarchy with multiple distinct levels is established and fully verified in Lean 4, including cases requiring unbounded finite witnesses and cases where no finite-witness assignment exists.",
-          "tags": [
-            "learning theory",
-            "formal verification",
-            "language generation",
-            "theoretical ml"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2609.10525v1"
-            }
-          ],
-          "published": "2026-09-09T17:54:30+00:00",
-          "score": 0.4319
+          "published": "2026-09-10T00:00:00+00:00",
+          "score": 0.3369
         }
       ]
     }
