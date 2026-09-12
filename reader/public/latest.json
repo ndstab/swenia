@@ -1,154 +1,65 @@
 {
-  "date": "2026-09-11",
-  "generated_at": "2026-09-11T04:26:14.498663+00:00",
-  "summary_line": "3 worth knowing",
+  "date": "2026-09-12",
+  "generated_at": "2026-09-12T04:24:02.327146+00:00",
+  "summary_line": "2 items to skim.",
   "counts": {
-    "total": 6,
-    "headlines": 1,
-    "frontier": 5
+    "total": 2,
+    "headlines": 0,
+    "frontier": 2
   },
   "sections": [
     {
       "key": "headlines",
       "title": "Headlines",
-      "cards": [
-        {
-          "id": "e723d856f72c",
-          "tier": "skim",
-          "category": "headline",
-          "title": "One Researcher's Resignation Sparked a Mainstream AI Extinction-Risk Firestorm",
-          "why_it_matters": "This piece dissects how the discourse environment around AI safety shifted rapidly — understanding the social dynamics is essential for any researcher fielding questions from policymakers, journalists, or the public about extinction-level risk claims.",
-          "summary": "Jacob Coxon's resignation citing safety concerns landed in a newly primed discourse environment, igniting mainstream coverage of extinction-risk framings (including Evan Hubinger's >10% extinction figure). The author argues the ground had dried due to rising AI stakes, that fear-based narratives travel fastest, and that frontier lab culture — especially at Anthropic — distorts employees' technical forecasting in ways that feed the cycle.",
-          "tags": [
-            "ai safety",
-            "ai discourse",
-            "existential risk",
-            "frontier labs"
-          ],
-          "sources": [
-            {
-              "name": "Interconnects",
-              "url": "https://www.interconnects.ai/p/one-resignation-turned-the-embers"
-            }
-          ],
-          "published": "2026-09-10T15:28:52+00:00",
-          "score": 0.4177
-        }
-      ]
+      "cards": []
     },
     {
       "key": "frontier",
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "6c6d3bf8794f",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "GPU-CFR: CUDA Graph Replay Delivers 29–80× Speedup Over Prior GPU CFR Implementations",
-          "why_it_matters": "CFR is foundational to game-theoretic AI and multi-agent RL; a compiler approach that achieves 14–258× speedups over CPU baselines on a single A100 is a substantial infrastructure advance for anyone working on large-scale game solving or equilibrium finding.",
-          "summary": "GPU-CFR observes that for a fixed game, everything about a CFR iteration except numerical values is statically known. It compiles the game into flat edge/information-set arrays with precomputed indices, uses static chance folding and depth-level batched passes to cut framework operations by up to 18.1×, then records one iteration via CUDA Graph Replay for single-launch replay. On one A100, it runs 29.8–80.4× faster than prior GPU CFR and 14–258× faster than LiteEFG on the four largest games tested.",
-          "tags": [
-            "game theory",
-            "reinforcement learning",
-            "cuda",
-            "algorithms"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2609.11923v1"
-            }
-          ],
-          "published": "2026-09-10T17:58:14+00:00",
-          "score": 1.2971
-        },
-        {
-          "id": "27dad2126ff9",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "Entropic Optimal Transport Yields Estimable Error Bounds for Covariate and Concept Shift",
-          "why_it_matters": "Distribution shift is a persistent practical problem; this work provides both a corrected theoretical definition of concept shift under support mismatch and a concrete estimable bound — useful for researchers who need rigorous guarantees on model generalization.",
-          "summary": "The paper identifies that the standard definition of concept shift breaks when source and target supports mismatch. Using entropic optimal transport, it introduces γ*-concept shifts and derives a unified error bound covering both covariate and γ*-concept shifts, valid for broad loss functions, label spaces, and stochastic labeling. The DataShifts algorithm provides sample-based estimators with concentration guarantees for practical use.",
-          "tags": [
-            "distribution shift",
-            "generalization",
-            "optimal transport",
-            "theory"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2609.11918v1"
-            }
-          ],
-          "published": "2026-09-10T17:57:52+00:00",
-          "score": 1.2969
-        },
-        {
-          "id": "8e555c18f01d",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "MoE Models Overfit to Repeated Data Faster Than Dense Models, Expert Specialization Is the Culprit",
-          "why_it_matters": "As pretraining data exhaustion drives multi-epoch training, understanding that MoE architectures degrade significantly faster than dense models under repetition — and that sparsity level (total, not active parameters) drives the effect — is critical for anyone designing or training sparse LLMs.",
-          "summary": "Experiments on 80M–1B active (up to 8.5B total) parameter models show dense models tolerate 8× data repetition with minimal degradation, while MoEs begin suffering at 4× and underperform dense models after 32× repetition. The effect scales with total (not active) parameter count. Masking-based regularization allows MoEs to outperform dense models even at 64× repetition, though no method matches all-unique training. MoE routing stabilizes early in training, and expert over-specialization correlates with overfitting.",
-          "tags": [
-            "mixture of experts",
-            "pretraining",
-            "data repetition",
-            "sparse models"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2609.11917v1"
-            }
-          ],
-          "published": "2026-09-10T17:57:33+00:00",
-          "score": 1.2968
-        },
-        {
-          "id": "f4c199dae3e5",
+          "id": "26b4f9087881",
           "tier": "skim",
           "category": "frontier",
-          "title": "First Chip-Scale Gaussian Boson Sampling System Detects 11,059 Photons, Runs as a World Model",
-          "why_it_matters": "Demonstrating a fully integrated, programmable GBS processor at 4 GHz clock rate — and repurposing it as a physical world model that outperforms classical echo state networks — bridges quantum hardware and ML applications in a concrete way.",
-          "summary": "Researchers report the first chip-scale space-time multiplexed GBS system on thin-film lithium niobate, integrating electro-optic modulators, on-chip delay lines, and a multiplexed interferometric network running at 4 GHz. It achieves detection events of up to 11,059 photons within 1 millisecond. Beyond quantum advantage benchmarking, the hardware is reconfigured as a GBS-powered world model for physical dynamics, achieving lower prediction error with fewer trainable readout parameters than a classical echo state network baseline.",
+          "title": "Rényi Coherent Information Is Monotone in Rényi Index for Stabilizer Codes Under Pauli Noise",
+          "why_it_matters": "If you work on quantum error correction or mixed-state phases, this resolves a standing ambiguity about whether Rényi coherent information is a well-ordered proxy for decodability transitions.",
+          "summary": "For stabilizer codes under independent Bernoulli Pauli noise, the Rényi-n coherent information is proven nondecreasing in n. A general combinatorial theorem covers classical linear codes and detector error models too. The paper also gives Rényi-n coherent information an operational meaning via postselection on n-1 auxiliary blocks, and shows saturation equals asymptotically perfect recovery of the postselected channel.",
           "tags": [
-            "quantum computing",
-            "photonics",
-            "quantum ml",
-            "hardware"
+            "quantum error correction",
+            "quantum information",
+            "stabilizer codes",
+            "rényi entropy"
           ],
           "sources": [
             {
               "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2609.11922v1"
+              "url": "https://arxiv.org/abs/2609.11930v1"
             }
           ],
-          "published": "2026-09-10T17:58:13+00:00",
-          "score": 0.4323
+          "published": "2026-09-10T17:59:57+00:00",
+          "score": 0.3101
         },
         {
-          "id": "cb50b0c3c856",
+          "id": "1330ee2acba6",
           "tier": "skim",
           "category": "frontier",
-          "title": "Hugging Face Rebuilds AUTOMATIC1111 as a 73-Node Gradio Workflow Canvas",
-          "why_it_matters": "Workflow1111 demonstrates how Gradio's new graph-based workflow primitive can replicate a complex, widely-used open-source tool — directly relevant if you build or evaluate ML tooling infrastructure.",
-          "summary": "Workflow1111 recreates most of AUTOMATIC1111's feature set as a single Gradio Workflow canvas of 11 media pipelines across 73 nodes, covering text-to-image, hi-res fix via FLUX.1-Kontext, image-to-image, VLM interrogation (Qwen2.5-VL), LLM prompt expansion (Qwen3-4B), detection-to-inpaint masking (DETR), ControlNet annotators, background removal, PNG metadata, and image-to-video. Nodes run in parallel where possible; users authenticate via Hugging Face account.",
+          "title": "Complete Single-Letter Formula for Asymptotic State Conversion in Quantum Resource Theory of Asymmetry",
+          "why_it_matters": "This resolves a long-open problem in quantum resource theory with implications for quantum clock precision and asymmetry distillation that could inform quantum ML and sensing work.",
+          "summary": "For finite-dimensional systems under compact Lie group symmetries in the i.i.d. asymptotic regime, the paper derives a single-letter formula for optimal state conversion rates with vanishing trace-distance error. The rate is governed by a one-parameter family of quantum Fisher information matrices interpolating between symmetric and right-logarithmic-derivative QFIs. Even for U(1) symmetry, no finite subfamily suffices in general, revealing irreversibility and an activation mechanism for quantum clocks.",
           "tags": [
-            "gradio",
-            "diffusion models",
-            "ml tooling",
-            "hugging face"
+            "quantum resource theory",
+            "quantum fisher information",
+            "symmetry breaking",
+            "quantum clocks"
           ],
           "sources": [
             {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/gradio-workflow-1111"
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2609.11926v1"
             }
           ],
-          "published": "2026-09-10T00:00:00+00:00",
-          "score": 0.3369
+          "published": "2026-09-10T17:59:15+00:00",
+          "score": 0.31
         }
       ]
     }
