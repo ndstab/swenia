@@ -1,67 +1,45 @@
 {
-  "date": "2026-09-12",
-  "generated_at": "2026-09-12T04:24:02.327146+00:00",
-  "summary_line": "2 items to skim.",
+  "date": "2026-09-14",
+  "generated_at": "2026-09-14T04:43:58.295677+00:00",
+  "summary_line": "1 items to skim.",
   "counts": {
-    "total": 2,
-    "headlines": 0,
-    "frontier": 2
+    "total": 1,
+    "headlines": 1,
+    "frontier": 0
   },
   "sections": [
     {
       "key": "headlines",
       "title": "Headlines",
-      "cards": []
+      "cards": [
+        {
+          "id": "3149e64f7f8b",
+          "tier": "skim",
+          "category": "headline",
+          "title": "Curated Reading List: Open-Source AI & Open Models (Updated Sep 2026)",
+          "why_it_matters": "As an AI/research engineer, this is a single-stop reference covering the technical, economic, safety, and geopolitical dimensions of open-weight models — directly relevant to understanding where the field is heading and how to position research work.",
+          "summary": "Nathan Lambert's continuously updated reading list covers open-model strategy, licensing gradients, safety tradeoffs, data commons decline, US-China competition, and adoption data. Key anchors include Solaiman's release-gradient framework, Bommasani et al. on societal impact, Longpre et al. on data consent crises, and Thinking Machines Lab's safe open-weights position paper.",
+          "tags": [
+            "open-source ai",
+            "open-weight models",
+            "ai policy",
+            "reading list"
+          ],
+          "sources": [
+            {
+              "name": "Interconnects",
+              "url": "https://www.interconnects.ai/p/open-source-ai-reading-list"
+            }
+          ],
+          "published": "2026-09-11T12:36:25+00:00",
+          "score": 0.2052
+        }
+      ]
     },
     {
       "key": "frontier",
       "title": "Frontier & Papers",
-      "cards": [
-        {
-          "id": "26b4f9087881",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "Rényi Coherent Information Is Monotone in Rényi Index for Stabilizer Codes Under Pauli Noise",
-          "why_it_matters": "If you work on quantum error correction or mixed-state phases, this resolves a standing ambiguity about whether Rényi coherent information is a well-ordered proxy for decodability transitions.",
-          "summary": "For stabilizer codes under independent Bernoulli Pauli noise, the Rényi-n coherent information is proven nondecreasing in n. A general combinatorial theorem covers classical linear codes and detector error models too. The paper also gives Rényi-n coherent information an operational meaning via postselection on n-1 auxiliary blocks, and shows saturation equals asymptotically perfect recovery of the postselected channel.",
-          "tags": [
-            "quantum error correction",
-            "quantum information",
-            "stabilizer codes",
-            "rényi entropy"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2609.11930v1"
-            }
-          ],
-          "published": "2026-09-10T17:59:57+00:00",
-          "score": 0.3101
-        },
-        {
-          "id": "1330ee2acba6",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "Complete Single-Letter Formula for Asymptotic State Conversion in Quantum Resource Theory of Asymmetry",
-          "why_it_matters": "This resolves a long-open problem in quantum resource theory with implications for quantum clock precision and asymmetry distillation that could inform quantum ML and sensing work.",
-          "summary": "For finite-dimensional systems under compact Lie group symmetries in the i.i.d. asymptotic regime, the paper derives a single-letter formula for optimal state conversion rates with vanishing trace-distance error. The rate is governed by a one-parameter family of quantum Fisher information matrices interpolating between symmetric and right-logarithmic-derivative QFIs. Even for U(1) symmetry, no finite subfamily suffices in general, revealing irreversibility and an activation mechanism for quantum clocks.",
-          "tags": [
-            "quantum resource theory",
-            "quantum fisher information",
-            "symmetry breaking",
-            "quantum clocks"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2609.11926v1"
-            }
-          ],
-          "published": "2026-09-10T17:59:15+00:00",
-          "score": 0.31
-        }
-      ]
+      "cards": []
     }
   ]
 }
