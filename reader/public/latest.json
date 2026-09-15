@@ -1,45 +1,45 @@
 {
-  "date": "2026-09-14",
-  "generated_at": "2026-09-14T04:43:58.295677+00:00",
-  "summary_line": "1 items to skim.",
+  "date": "2026-09-15",
+  "generated_at": "2026-09-15T04:44:08.797804+00:00",
+  "summary_line": "1 worth knowing",
   "counts": {
     "total": 1,
-    "headlines": 1,
-    "frontier": 0
+    "headlines": 0,
+    "frontier": 1
   },
   "sections": [
     {
       "key": "headlines",
       "title": "Headlines",
-      "cards": [
-        {
-          "id": "3149e64f7f8b",
-          "tier": "skim",
-          "category": "headline",
-          "title": "Curated Reading List: Open-Source AI & Open Models (Updated Sep 2026)",
-          "why_it_matters": "As an AI/research engineer, this is a single-stop reference covering the technical, economic, safety, and geopolitical dimensions of open-weight models — directly relevant to understanding where the field is heading and how to position research work.",
-          "summary": "Nathan Lambert's continuously updated reading list covers open-model strategy, licensing gradients, safety tradeoffs, data commons decline, US-China competition, and adoption data. Key anchors include Solaiman's release-gradient framework, Bommasani et al. on societal impact, Longpre et al. on data consent crises, and Thinking Machines Lab's safe open-weights position paper.",
-          "tags": [
-            "open-source ai",
-            "open-weight models",
-            "ai policy",
-            "reading list"
-          ],
-          "sources": [
-            {
-              "name": "Interconnects",
-              "url": "https://www.interconnects.ai/p/open-source-ai-reading-list"
-            }
-          ],
-          "published": "2026-09-11T12:36:25+00:00",
-          "score": 0.2052
-        }
-      ]
+      "cards": []
     },
     {
       "key": "frontier",
       "title": "Frontier & Papers",
-      "cards": []
+      "cards": [
+        {
+          "id": "d4e55a9164f4",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Async GRPO + LoRA Across Separate HF Jobs: No NCCL Required (TRL v1.14)",
+          "why_it_matters": "If you're running RL fine-tuning at scale, this architecture shows how to fully decouple trainer and inference workers across machines without NCCL, cutting a 500-step run from 3h 27m to 53m.",
+          "summary": "TRL v1.14's AsyncGRPOTrainer now trains a LoRA adapter (rank-1 = a few MB vs ~3 GB full model) and syncs it to vLLM replicas via a shared Storage Bucket FUSE mount — no NCCL, no shared node required. A lightweight proxy handles auth, KV-prefix-aware routing, and broadcasts adapter updates to all vLLM replicas. Motivated by Thinking Machines' finding that LoRA matches full fine-tuning for policy-gradient RL.",
+          "tags": [
+            "rl",
+            "lora",
+            "distributed-training",
+            "trl"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/asyncgrpo-lora-hfjobs"
+            }
+          ],
+          "published": "2026-09-10T00:00:00+00:00",
+          "score": 0.2653
+        }
+      ]
     }
   ]
 }
