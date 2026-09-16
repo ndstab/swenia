@@ -1,43 +1,176 @@
 {
-  "date": "2026-09-15",
-  "generated_at": "2026-09-15T04:44:08.797804+00:00",
-  "summary_line": "1 worth knowing",
+  "date": "2026-09-16",
+  "generated_at": "2026-09-16T04:39:53.750685+00:00",
+  "summary_line": "1 must-know · 5 worth knowing",
   "counts": {
-    "total": 1,
-    "headlines": 0,
-    "frontier": 1
+    "total": 7,
+    "headlines": 1,
+    "frontier": 6
   },
   "sections": [
     {
       "key": "headlines",
       "title": "Headlines",
-      "cards": []
+      "cards": [
+        {
+          "id": "f4c3141ce9f2",
+          "tier": "must_know",
+          "category": "headline",
+          "title": "Google DeepMind Launches Gemini 3.8 Live and 3.8 Live Extended Thinking for Real-Time Voice Agents",
+          "why_it_matters": "These are production-grade voice-agent models from a leading lab — Gemini 3.8 Live Extended Thinking tops Artificial Analysis' Speech-to-Speech Quality Index, a benchmark result the whole field will reference when evaluating real-time reasoning capabilities.",
+          "summary": "Gemini 3.8 Live targets scale and cost efficiency for voice agents; 3.8 Live Extended Thinking targets high-complexity tasks and scores 82.6 on Artificial Analysis' Speech-to-Speech Quality Index (#1 overall), 68.6% on τ-Voice, 35.1% on Sierra's τ-Voice-banking, and 97.7% on Big Bench Audio. Supports 97 languages, background tool-calling, SynthID audio watermarking, and simultaneous reasoning-and-speaking for Extended Thinking. Available now via Gemini API and Google AI Studio.",
+          "tags": [
+            "gemini",
+            "voice-agents",
+            "deepmind",
+            "product-launch"
+          ],
+          "sources": [
+            {
+              "name": "DeepMind",
+              "url": "https://deepmind.google/blog/introducing-gemini-3-8-live-and-3-8-live-extended-thinking/"
+            }
+          ],
+          "published": "2026-09-15T17:05:57+00:00",
+          "score": 2.5548
+        }
+      ]
     },
     {
       "key": "frontier",
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "d4e55a9164f4",
+          "id": "3a773c041649",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Async GRPO + LoRA Across Separate HF Jobs: No NCCL Required (TRL v1.14)",
-          "why_it_matters": "If you're running RL fine-tuning at scale, this architecture shows how to fully decouple trainer and inference workers across machines without NCCL, cutting a 500-step run from 3h 27m to 53m.",
-          "summary": "TRL v1.14's AsyncGRPOTrainer now trains a LoRA adapter (rank-1 = a few MB vs ~3 GB full model) and syncs it to vLLM replicas via a shared Storage Bucket FUSE mount — no NCCL, no shared node required. A lightweight proxy handles auth, KV-prefix-aware routing, and broadcasts adapter updates to all vLLM replicas. Motivated by Thinking Machines' finding that LoRA matches full fine-tuning for policy-gradient RL.",
+          "title": "Agentic Societies Require a 'Social Harness': Proposed Architecture for Multi-Agent Safety",
+          "why_it_matters": "As multi-agent systems with heterogeneous principals become a real deployment pattern, this paper's layered harness architecture directly addresses failure modes — including malicious-agent exploitation of communication — that working agent engineers will encounter.",
+          "summary": "The paper defines an 'agentic society' as autonomous agents coordinating across trust boundaries for partially-aligned principals. Experiments show honest, competent agents frequently fail with existing messaging primitives, and faulty or malicious agents can stall collaboration or pursue harmful goals via communication exploits. The proposed social harness adds a layered architecture: preventing certain failure classes outright, enabling runtime invalid-message detection, and supporting post-hoc investigation.",
           "tags": [
-            "rl",
-            "lora",
-            "distributed-training",
-            "trl"
+            "agents",
+            "multi-agent",
+            "safety",
+            "architecture"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2609.17527v1"
+            }
+          ],
+          "published": "2026-09-15T17:57:27+00:00",
+          "score": 1.2927
+        },
+        {
+          "id": "081665d6ed5d",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "ScienceBuddy: Recursive-in-Recursive Self-Improvement Couples Harness Evolution with RL for Scientific Agents",
+          "why_it_matters": "The recursive-in-recursive RSI paradigm — inner loop improves the harness with model fixed, outer loop trains the model under the improved harness — is a technically novel post-training approach directly relevant to anyone working on continual learning or agent self-improvement.",
+          "summary": "ScienceBuddy is a released interactive research workspace where an agent continuously improves via recursive-in-recursive self-improvement: an inner recursion evolves the harness (fixed model), while an outer recursion trains the model under the improved harness. Researcher requests, feedback, and execution evidence are converted into training tasks and evaluation rubrics. Case studies span four scientific task families. Released as a research product for community use.",
+          "tags": [
+            "self-improvement",
+            "reinforcement-learning",
+            "agents",
+            "continual-learning"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2609.17523v1"
+            }
+          ],
+          "published": "2026-09-15T17:55:28+00:00",
+          "score": 1.2921
+        },
+        {
+          "id": "fd63daad3a58",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "PhysStream: Autoregressive Physics-Grounded Video Generation with Mid-Generation Motion Control",
+          "why_it_matters": "Combining structured scene memory with sparse velocity-increment control signals for mid-generation intervention is a technically novel approach to controllable video generation that researchers in world models and interactive simulation will find directly relevant.",
+          "summary": "PhysStream is a two-stage autoregressive image-to-video model using positional maps and object tracking maps as structured scene memory, with fine-grained control via sparse velocity-increment signals encoding physical quantities. It supports mid-generation control over multi-object tabletop rigid-body scenes. On synthetic benchmarks it reduces FVMD by 33% and trajectory error by 12% over the strongest baselines; human evaluators prefer it in over 85% of in-the-wild comparisons.",
+          "tags": [
+            "video-generation",
+            "world-models",
+            "physics",
+            "controllable-generation"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2609.17521v1"
+            }
+          ],
+          "published": "2026-09-15T17:55:13+00:00",
+          "score": 1.2921
+        },
+        {
+          "id": "9d168e2ac175",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Chain-of-Self-Questioning (CoSQ): Prompt-Only Selective Abstention Cuts Wrong-Commitment Rate by 32%",
+          "why_it_matters": "A prompt-only, model-agnostic abstention framework with tunable coverage is directly applicable when building systems where confident wrong answers carry higher cost than referral — relevant to agent reliability and eval work.",
+          "summary": "CoSQ is a prompt-only framework conditioning answer commitment on an explicit self-assessment of required information. On TruthfulQA (817 items, 11 model families, 17 conditions), Grounded-CoSQ at τ=0.90 reduces mean unconditional wrong-commitment rate from 13.1% to 8.9% (32.1% relative reduction) versus chain-of-thought, raises answered accuracy from 86.9% to 89.7%, and covers 87.6% of questions. Gains hold across all 11 models and all evaluated thresholds.",
+          "tags": [
+            "llm-reliability",
+            "abstention",
+            "evaluation",
+            "prompting"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2609.17516v1"
+            }
+          ],
+          "published": "2026-09-15T17:52:24+00:00",
+          "score": 1.2912
+        },
+        {
+          "id": "16a7b27ed0ae",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Agent Consistency Gap: GPT-4.1 Succeeds on 77% of Tasks but Only 53% Pass All 5 Runs",
+          "why_it_matters": "If you're building or evaluating production agents, this exposes a critical blind spot in standard benchmarking and offers a concrete, already-implemented method to diagnose and halve the reliability gap without hurting average accuracy.",
+          "summary": "A ReAct agent using GPT-4.1 on AppWorld scores 77.4% Mean@5 but only 53.0% Pass^5 — a 24.4-point consistency gap. The Consistency Analyzer identifies flip-prone decision points by resampling a single trace without re-running tasks end-to-end. Resulting 'consistency guidelines' in ALTK-Evolve cut the gap from 24.4pp to 12.0pp, with Pass^5 improving 16.0pp on same tasks and 13.0pp on similar tasks.",
+          "tags": [
+            "agents",
+            "evaluation",
+            "reliability",
+            "benchmarking"
           ],
           "sources": [
             {
               "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/asyncgrpo-lora-hfjobs"
+              "url": "https://huggingface.co/blog/ibm-research/altk-evolve-consistency"
             }
           ],
-          "published": "2026-09-10T00:00:00+00:00",
-          "score": 0.2653
+          "published": "2026-09-15T16:00:44+00:00",
+          "score": 1.2583
+        },
+        {
+          "id": "801edc7f3bae",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Pruning LLMs for Tool Calling: MoE Models Tolerate More, Dense Models Show Sharp Degradation Cliffs",
+          "why_it_matters": "If you're optimizing inference cost via pruning for deployed tool-calling agents, this study's finding that grounded specificity degrades before schema-level intent — and that aggressive pruning can induce systematic over-refusal — has direct engineering implications.",
+          "summary": "Across four LLMs (dense Transformer, dense hybrid, MoE architectures) and multiple pruning methods, evaluated on 19,500+ smart-home tool-calling instances after post-pruning SFT: dense models have narrow safe pruning windows followed by sharp degradation, while MoE models tolerate substantially more pruning. Pruning degrades grounded specificity (argument/value accuracy) before schema-level intent (operation/device). Aggressive dense pruning can induce systematic over-refusal.",
+          "tags": [
+            "pruning",
+            "tool-calling",
+            "llm-efficiency",
+            "model-architecture"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2609.17515v1"
+            }
+          ],
+          "published": "2026-09-15T17:51:48+00:00",
+          "score": 0.4303
         }
       ]
     }
