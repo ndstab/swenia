@@ -1,7 +1,7 @@
 {
-  "date": "2026-09-16",
-  "generated_at": "2026-09-16T04:39:53.750685+00:00",
-  "summary_line": "1 must-know · 5 worth knowing",
+  "date": "2026-09-17",
+  "generated_at": "2026-09-17T04:44:09.500233+00:00",
+  "summary_line": "1 must-know · 4 worth knowing",
   "counts": {
     "total": 7,
     "headlines": 1,
@@ -13,26 +13,26 @@
       "title": "Headlines",
       "cards": [
         {
-          "id": "f4c3141ce9f2",
+          "id": "642a1494ec3f",
           "tier": "must_know",
           "category": "headline",
-          "title": "Google DeepMind Launches Gemini 3.8 Live and 3.8 Live Extended Thinking for Real-Time Voice Agents",
-          "why_it_matters": "These are production-grade voice-agent models from a leading lab — Gemini 3.8 Live Extended Thinking tops Artificial Analysis' Speech-to-Speech Quality Index, a benchmark result the whole field will reference when evaluating real-time reasoning capabilities.",
-          "summary": "Gemini 3.8 Live targets scale and cost efficiency for voice agents; 3.8 Live Extended Thinking targets high-complexity tasks and scores 82.6 on Artificial Analysis' Speech-to-Speech Quality Index (#1 overall), 68.6% on τ-Voice, 35.1% on Sierra's τ-Voice-banking, and 97.7% on Big Bench Audio. Supports 97 languages, background tool-calling, SynthID audio watermarking, and simultaneous reasoning-and-speaking for Extended Thinking. Available now via Gemini API and Google AI Studio.",
+          "title": "TypeSafe AI Launches Jev: A Non-Autoregressive 'System One' Model for Structured Decisions",
+          "why_it_matters": "A former OpenAI researcher is releasing a new model class with a new architecture, parallel sampler, and training method (RLCD) explicitly targeting structured automation—a genuine architectural departure worth tracking.",
+          "summary": "TypeSafe AI (founded by ex-OpenAI researcher Diogo Almeida) releases Jev, a frontier model that outputs all probabilities in parallel rather than autoregressively generating tokens. It targets structured, typed outputs only—no string generation, no hallucination by construction. Claims two orders of magnitude faster and more efficient than LLMs on 'System One' tasks, using a training method called Reinforcement Learning for Calibrated Decisions (RLCD). Benchmarked against Astra and Fable as reference models.",
           "tags": [
-            "gemini",
-            "voice-agents",
-            "deepmind",
-            "product-launch"
+            "model-release",
+            "structured-outputs",
+            "inference-efficiency",
+            "rl"
           ],
           "sources": [
             {
-              "name": "DeepMind",
-              "url": "https://deepmind.google/blog/introducing-gemini-3-8-live-and-3-8-live-extended-thinking/"
+              "name": "HN (1802pts)",
+              "url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev"
             }
           ],
-          "published": "2026-09-15T17:05:57+00:00",
-          "score": 2.5548
+          "published": "2026-09-15T19:25:03+00:00",
+          "score": 1.8886
         }
       ]
     },
@@ -41,136 +41,136 @@
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "3a773c041649",
+          "id": "5ee0c9c9c8a5",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Agentic Societies Require a 'Social Harness': Proposed Architecture for Multi-Agent Safety",
-          "why_it_matters": "As multi-agent systems with heterogeneous principals become a real deployment pattern, this paper's layered harness architecture directly addresses failure modes — including malicious-agent exploitation of communication — that working agent engineers will encounter.",
-          "summary": "The paper defines an 'agentic society' as autonomous agents coordinating across trust boundaries for partially-aligned principals. Experiments show honest, competent agents frequently fail with existing messaging primitives, and faulty or malicious agents can stall collaboration or pursue harmful goals via communication exploits. The proposed social harness adds a layered architecture: preventing certain failure classes outright, enabling runtime invalid-message detection, and supporting post-hoc investigation.",
+          "title": "Tokeniser Search Procedure Beats Objective: BPE's Bottom-Up Merging Is the Key Factor",
+          "why_it_matters": "If you train or fine-tune LMs and care about tokenisation choices, this gives you a principled, experimentally grounded answer to a long-standing confound between BPE and UnigramLM.",
+          "summary": "By completing a 2×2 design space (objective × search), the authors isolate that bottom-up search—not compression vs. log-likelihood objective—dominates bits-per-byte performance across model sizes, vocabulary sizes, and English/multilingual settings. BLiMP grammaticality scores, however, show no consistent relationship with either design axis.",
           "tags": [
-            "agents",
-            "multi-agent",
-            "safety",
-            "architecture"
+            "tokenisation",
+            "language-models",
+            "nlp",
+            "bpe"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2609.17527v1"
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2609.19145v1"
             }
           ],
-          "published": "2026-09-15T17:57:27+00:00",
-          "score": 1.2927
+          "published": "2026-09-16T17:59:45+00:00",
+          "score": 1.2921
         },
         {
-          "id": "081665d6ed5d",
+          "id": "a06a9a801335",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "ScienceBuddy: Recursive-in-Recursive Self-Improvement Couples Harness Evolution with RL for Scientific Agents",
-          "why_it_matters": "The recursive-in-recursive RSI paradigm — inner loop improves the harness with model fixed, outer loop trains the model under the improved harness — is a technically novel post-training approach directly relevant to anyone working on continual learning or agent self-improvement.",
-          "summary": "ScienceBuddy is a released interactive research workspace where an agent continuously improves via recursive-in-recursive self-improvement: an inner recursion evolves the harness (fixed model), while an outer recursion trains the model under the improved harness. Researcher requests, feedback, and execution evidence are converted into training tasks and evaluation rubrics. Case studies span four scientific task families. Released as a research product for community use.",
+          "title": "ComPO: Zeroth-Order Preference Alignment Mitigates Likelihood Displacement",
+          "why_it_matters": "As a researcher working with RLHF and post-training, this offers a theoretically grounded alternative to DPO-style methods with convergence guarantees and empirical wins on Llama, Gemma, and Qwen3.",
+          "summary": "ComPO uses comparison oracles to extract directional gradient information from preference pairs without optimizing a differentiable loss, sidestepping likelihood displacement. An online variant adds reverse-KL control via unlabeled policy generations. Experiments on Mistral, Llama, Gemma-2, Qwen3, and Gemma-3 show improved length-controlled win rates over existing direct alignment methods.",
           "tags": [
-            "self-improvement",
+            "rlhf",
+            "preference-alignment",
+            "post-training",
+            "llm"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2609.19144v1"
+            }
+          ],
+          "published": "2026-09-16T17:59:35+00:00",
+          "score": 1.2921
+        },
+        {
+          "id": "eb059025b116",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "History-Dependent Logging Causes Exponential Sample Complexity in Off-Policy Evaluation",
+          "why_it_matters": "Directly relevant to RL and offline RL researchers: shows that standard coverage conditions are insufficient when the logger uses history, with a tight theoretical lower bound and matching estimator.",
+          "summary": "For any horizon H≥3, the authors construct POMDPs with at most two latent states per stage where action coverage, belief coverage, and behavior-marginal outcome-revealing conditions all hold with constants independent of H, yet evaluating a known deterministic target policy to accuracy 1/8 requires Θ((3/2)^H log(1/δ)) episodes. The hardness mechanism is a reset that erases the unknown transition determining target value; a matching optimal estimator is also derived.",
+          "tags": [
+            "offline-rl",
+            "off-policy-evaluation",
+            "pomdp",
+            "theory"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2609.19135v1"
+            }
+          ],
+          "published": "2026-09-16T17:56:12+00:00",
+          "score": 1.2911
+        },
+        {
+          "id": "c934e533b7f3",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "ScienceIDE Turns Scientific Code Repositories into RL/SFT Training Environments for Agents",
+          "why_it_matters": "For researchers building code agents or studying transfer learning, this infrastructure converts real scientific codebases into verifiable training environments with evidence of positive transfer to general benchmarks.",
+          "summary": "ScienceIDE wraps scientific repositories into programmable environments with expert-defined acceptance criteria, supporting task generation, execution, and verification for SFT, RL, and eval. Models trained on verified trajectories—PhAI-IDE-72B, 9B, and 4B—show gains on held-out scientific code repair and selected general-purpose code, reasoning, and knowledge benchmarks.",
+          "tags": [
+            "agents",
+            "code-generation",
             "reinforcement-learning",
-            "agents",
-            "continual-learning"
+            "scientific-ai"
           ],
           "sources": [
             {
               "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2609.17523v1"
+              "url": "https://arxiv.org/abs/2609.19134v1"
             }
           ],
-          "published": "2026-09-15T17:55:28+00:00",
-          "score": 1.2921
+          "published": "2026-09-16T17:55:47+00:00",
+          "score": 1.2909
         },
         {
-          "id": "fd63daad3a58",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "PhysStream: Autoregressive Physics-Grounded Video Generation with Mid-Generation Motion Control",
-          "why_it_matters": "Combining structured scene memory with sparse velocity-increment control signals for mid-generation intervention is a technically novel approach to controllable video generation that researchers in world models and interactive simulation will find directly relevant.",
-          "summary": "PhysStream is a two-stage autoregressive image-to-video model using positional maps and object tracking maps as structured scene memory, with fine-grained control via sparse velocity-increment signals encoding physical quantities. It supports mid-generation control over multi-object tabletop rigid-body scenes. On synthetic benchmarks it reduces FVMD by 33% and trajectory error by 12% over the strongest baselines; human evaluators prefer it in over 85% of in-the-wild comparisons.",
-          "tags": [
-            "video-generation",
-            "world-models",
-            "physics",
-            "controllable-generation"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2609.17521v1"
-            }
-          ],
-          "published": "2026-09-15T17:55:13+00:00",
-          "score": 1.2921
-        },
-        {
-          "id": "9d168e2ac175",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "Chain-of-Self-Questioning (CoSQ): Prompt-Only Selective Abstention Cuts Wrong-Commitment Rate by 32%",
-          "why_it_matters": "A prompt-only, model-agnostic abstention framework with tunable coverage is directly applicable when building systems where confident wrong answers carry higher cost than referral — relevant to agent reliability and eval work.",
-          "summary": "CoSQ is a prompt-only framework conditioning answer commitment on an explicit self-assessment of required information. On TruthfulQA (817 items, 11 model families, 17 conditions), Grounded-CoSQ at τ=0.90 reduces mean unconditional wrong-commitment rate from 13.1% to 8.9% (32.1% relative reduction) versus chain-of-thought, raises answered accuracy from 86.9% to 89.7%, and covers 87.6% of questions. Gains hold across all 11 models and all evaluated thresholds.",
-          "tags": [
-            "llm-reliability",
-            "abstention",
-            "evaluation",
-            "prompting"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2609.17516v1"
-            }
-          ],
-          "published": "2026-09-15T17:52:24+00:00",
-          "score": 1.2912
-        },
-        {
-          "id": "16a7b27ed0ae",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "Agent Consistency Gap: GPT-4.1 Succeeds on 77% of Tasks but Only 53% Pass All 5 Runs",
-          "why_it_matters": "If you're building or evaluating production agents, this exposes a critical blind spot in standard benchmarking and offers a concrete, already-implemented method to diagnose and halve the reliability gap without hurting average accuracy.",
-          "summary": "A ReAct agent using GPT-4.1 on AppWorld scores 77.4% Mean@5 but only 53.0% Pass^5 — a 24.4-point consistency gap. The Consistency Analyzer identifies flip-prone decision points by resampling a single trace without re-running tasks end-to-end. Resulting 'consistency guidelines' in ALTK-Evolve cut the gap from 24.4pp to 12.0pp, with Pass^5 improving 16.0pp on same tasks and 13.0pp on similar tasks.",
-          "tags": [
-            "agents",
-            "evaluation",
-            "reliability",
-            "benchmarking"
-          ],
-          "sources": [
-            {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/ibm-research/altk-evolve-consistency"
-            }
-          ],
-          "published": "2026-09-15T16:00:44+00:00",
-          "score": 1.2583
-        },
-        {
-          "id": "801edc7f3bae",
+          "id": "0e6d747ca03e",
           "tier": "skim",
           "category": "frontier",
-          "title": "Pruning LLMs for Tool Calling: MoE Models Tolerate More, Dense Models Show Sharp Degradation Cliffs",
-          "why_it_matters": "If you're optimizing inference cost via pruning for deployed tool-calling agents, this study's finding that grounded specificity degrades before schema-level intent — and that aggressive pruning can induce systematic over-refusal — has direct engineering implications.",
-          "summary": "Across four LLMs (dense Transformer, dense hybrid, MoE architectures) and multiple pruning methods, evaluated on 19,500+ smart-home tool-calling instances after post-pruning SFT: dense models have narrow safe pruning windows followed by sharp degradation, while MoE models tolerate substantially more pruning. Pruning degrades grounded specificity (argument/value accuracy) before schema-level intent (operation/device). Aggressive dense pruning can induce systematic over-refusal.",
+          "title": "PANORAMA: Panoptic Grounded Captioning with Pixel-Level Mask Selection",
+          "why_it_matters": "Relevant for researchers building vision-language agents that need both detailed captions and spatially precise grounding—this provides a new benchmark, metric, and model tackling both simultaneously.",
+          "summary": "PANORAMA frames phrase grounding as mask proposal selection conditioned on contextualized phrase representations, jointly trained with caption generation. The authors introduce PanoCaps (human-annotated, near-complete pixel coverage) and a generalized Panoptic Quality metric. PANORAMA achieves best overall grounding on PanoCaps and matches or exceeds specialized models on several pixel-level grounding tasks.",
           "tags": [
-            "pruning",
-            "tool-calling",
-            "llm-efficiency",
-            "model-architecture"
+            "vision-language",
+            "segmentation",
+            "grounding",
+            "benchmark"
           ],
           "sources": [
             {
               "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2609.17515v1"
+              "url": "https://arxiv.org/abs/2609.19143v1"
             }
           ],
-          "published": "2026-09-15T17:51:48+00:00",
-          "score": 0.4303
+          "published": "2026-09-16T17:59:30+00:00",
+          "score": 0.4307
+        },
+        {
+          "id": "65c6dcff033a",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Audio-Augmented Video Generation Gives Robots Force Profiles for Contact-Rich Manipulation",
+          "why_it_matters": "Bridges a concrete gap in robot learning from video—force information—using generated audio loudness as a proxy signal, a novel multimodal angle relevant to embodied AI researchers.",
+          "summary": "The pipeline generates both video and contact audio from natural-language prompts, deriving kinematic trajectories and time-varying desired-force profiles from audio loudness. A closed-loop force regulator on a Franka Panda robot tracks these profiles during contact. The approach succeeds on contact-rich tasks where kinematic-only baselines fail, and is also used as a data engine for policy training.",
+          "tags": [
+            "robotics",
+            "video-generation",
+            "embodied-ai",
+            "manipulation"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2609.19137v1"
+            }
+          ],
+          "published": "2026-09-16T17:56:44+00:00",
+          "score": 0.4304
         }
       ]
     }
