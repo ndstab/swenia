@@ -1,155 +1,45 @@
 {
-  "date": "2026-09-18",
-  "generated_at": "2026-09-18T04:29:52.924001+00:00",
-  "summary_line": "2 worth knowing",
+  "date": "2026-09-20",
+  "generated_at": "2026-09-20T04:44:13.335344+00:00",
+  "summary_line": "1 items to skim.",
   "counts": {
-    "total": 6,
-    "headlines": 0,
-    "frontier": 6
+    "total": 1,
+    "headlines": 1,
+    "frontier": 0
   },
   "sections": [
     {
       "key": "headlines",
       "title": "Headlines",
-      "cards": []
+      "cards": [
+        {
+          "id": "00e72da2b937",
+          "tier": "skim",
+          "category": "headline",
+          "title": "Why One AI Researcher Still Doubts True Recursive Self-Improvement",
+          "why_it_matters": "As an AI/research engineer, this is a technically grounded dissent against the current 'singularity soon' bandwagon — directly relevant to how you should weigh RSI claims and safety discourse in 2025–26.",
+          "summary": "The author argues against true RSI via three claims: automatable research is too narrow to overcome exponential scaling costs, parallel agents face real diminishing returns, and resource/political bottlenecks remain largely AI-resistant. They expect things to move fast enough to feel like short-timeline advocates were right, but predict no superintelligence within 8 years — framing current safety anxiety as culturally amplified rather than evidence-driven.",
+          "tags": [
+            "rsi",
+            "scaling",
+            "ai safety",
+            "agents"
+          ],
+          "sources": [
+            {
+              "name": "Interconnects",
+              "url": "https://www.interconnects.ai/p/where-i-stand-on-rsi"
+            }
+          ],
+          "published": "2026-09-19T15:42:20+00:00",
+          "score": 0.4172
+        }
+      ]
     },
     {
       "key": "frontier",
       "title": "Frontier & Papers",
-      "cards": [
-        {
-          "id": "8d2b464d81ab",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "SafeHarness: Obstacle-Aware Planning and Contact Execution Lifts Robot Coding Agents to 87.5% Collision Avoidance",
-          "why_it_matters": "Directly relevant to anyone building LLM-based robotic agents — demonstrates a concrete failure mode of coding agents under safety constraints and a structured fix.",
-          "summary": "Coding agents writing robot controllers routinely collide with obstacles despite explicit prompt-level prohibitions, because safety constraints never become planning priorities. SafeHarness adds obstacle-aware route planning (bounding-box grounding, waypoint verification, replanning) and obstacle-aware contact execution. It achieves 71.9% task success and 87.5% collision avoidance, beating prior SOTA by 6.5% and 27.0% respectively, and outperforming the harness-free agent by 2.3× and 1.5×.",
-          "tags": [
-            "robotics",
-            "agents",
-            "safety",
-            "llm"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2609.20822v1"
-            }
-          ],
-          "published": "2026-09-17T17:59:58+00:00",
-          "score": 1.2965
-        },
-        {
-          "id": "408369ea7578",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "Workspace Tokens: VLM-Supervised Latent Memory for Robots, Queried Cheaply at Deployment",
-          "why_it_matters": "Relevant to robotics and agent researchers seeking efficient long-horizon memory without expensive in-loop VLM calls.",
-          "summary": "Instead of querying a VLM at inference time, workspace tokens distill task-salient historical information at train time using VLM-identified cues and a set-reconstruction decoder loss. The resulting lightweight latent token replaces full observation histories at deployment, enabling memory-intensive manipulation without in-loop VLM reasoning. Workspace tokens also improve policy performance beyond reducing compute.",
-          "tags": [
-            "robotics",
-            "world models",
-            "agents",
-            "efficiency"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2609.20820v1"
-            }
-          ],
-          "published": "2026-09-17T17:59:53+00:00",
-          "score": 1.2965
-        },
-        {
-          "id": "a505040292e0",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "Quantum Darwinism with Imperfect CNOT Gates: Geometry Controls Redundant Record Formation",
-          "why_it_matters": "Bridges quantum information theory and decoherence research — relevant if you track quantum ML foundations or quantum computing error models.",
-          "summary": "A single alignment parameter Λ governs how preparation and interaction angle jointly determine conditional-state distinguishability in an imperfect-CNOT Darwinism model with random Gaussian couplings. Local fields nonmonotonically affect recording quality; the Z basis stays optimal for Holevo information. Simulations up to 24 environment qubits quantify high mean information vs. reliable fragment records.",
-          "tags": [
-            "quantum computing",
-            "quantum information",
-            "decoherence",
-            "quantum darwinism"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2609.20823v1"
-            }
-          ],
-          "published": "2026-09-17T17:59:59+00:00",
-          "score": 0.4322
-        },
-        {
-          "id": "3ce3a34231bb",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "Embedding Models Poorly Represent Physical Measurement Units — String Similarity Dominates",
-          "why_it_matters": "Flags a concrete failure mode of embedding models relevant to anyone using retrieval or semantic search over scientific or numerical data.",
-          "summary": "A study of whether embedding spaces reflect objective physical measurements (mass, distance, time, volume) finds only weak alignment. Embedding representations of physical quantities are strongly driven by superficial string similarity rather than measurement semantics, and recalibrating similarity does not substantially fix the problem.",
-          "tags": [
-            "embeddings",
-            "evaluation",
-            "nlp",
-            "measurement"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2609.20821v1"
-            }
-          ],
-          "published": "2026-09-17T17:59:54+00:00",
-          "score": 0.4322
-        },
-        {
-          "id": "1ed4425ba194",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "FAMOS: Feed-Forward Articulated Object Modeling from Sparse Unordered Point Clouds",
-          "why_it_matters": "Useful for researchers building manipulation agents or 3D scene understanding systems that must handle articulated objects from limited views.",
-          "summary": "FAMOS predicts movable-part segmentation and joint parameters from sparse, unordered partial point clouds using a Multi-state Articulation Transformer with alternating state-wise and global attention. An observed articulation span objective supervises motion range across inputs. A procedural data generator addresses dataset scarcity. FAMOS outperforms both feed-forward and optimization-based baselines on PartNet-Mobility, ACD, and ArtiCraft-10K.",
-          "tags": [
-            "3d understanding",
-            "robotics",
-            "transformers",
-            "articulation"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2609.20817v1"
-            }
-          ],
-          "published": "2026-09-17T17:59:40+00:00",
-          "score": 0.4321
-        },
-        {
-          "id": "ff15496ee785",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "Paint-Anything: Hex-Value Color Control for Image Generation and Editing via Shared Prompt Interface",
-          "why_it_matters": "Relevant to researchers working on controllable generation and fine-grained conditioning — demonstrates a clean data-pipeline approach to precise color specification.",
-          "summary": "Paint-Anything trains a shared hex-prompt interface for both text-to-image generation and editing using object-level color supervision on Paint-500K, a dataset built via object grounding, perceptual color labeling, and editing-pair synthesis. Pure-color anchors at high-noise timesteps supplement approximate real-image labels. On FLUX.2-4B, it improves ACBench-T2I by 85.3% and ACBench-Edit by 28.3% over the base model.",
-          "tags": [
-            "image generation",
-            "controllable generation",
-            "diffusion",
-            "color"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2609.20816v1"
-            }
-          ],
-          "published": "2026-09-17T17:59:30+00:00",
-          "score": 0.4321
-        }
-      ]
+      "cards": []
     }
   ]
 }
