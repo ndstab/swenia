@@ -1,11 +1,11 @@
 {
-  "date": "2026-09-20",
-  "generated_at": "2026-09-20T04:44:13.335344+00:00",
-  "summary_line": "1 items to skim.",
+  "date": "2026-09-21",
+  "generated_at": "2026-09-21T04:43:48.501431+00:00",
+  "summary_line": "2 worth knowing",
   "counts": {
-    "total": 1,
+    "total": 5,
     "headlines": 1,
-    "frontier": 0
+    "frontier": 4
   },
   "sections": [
     {
@@ -13,33 +13,125 @@
       "title": "Headlines",
       "cards": [
         {
-          "id": "00e72da2b937",
+          "id": "643a84217e15",
           "tier": "skim",
           "category": "headline",
-          "title": "Why One AI Researcher Still Doubts True Recursive Self-Improvement",
-          "why_it_matters": "As an AI/research engineer, this is a technically grounded dissent against the current 'singularity soon' bandwagon — directly relevant to how you should weigh RSI claims and safety discourse in 2025–26.",
-          "summary": "The author argues against true RSI via three claims: automatable research is too narrow to overcome exponential scaling costs, parallel agents face real diminishing returns, and resource/political bottlenecks remain largely AI-resistant. They expect things to move fast enough to feel like short-timeline advocates were right, but predict no superintelligence within 8 years — framing current safety anxiety as culturally amplified rather than evidence-driven.",
+          "title": "Practical Guide: Steering ChatGPT Away from Generic AI Poster Aesthetics Using Named Design Styles",
+          "why_it_matters": "Mostly a creative/UX exploration with limited technical depth — useful anecdotally for prompt engineering intuition but not frontier research signal.",
+          "summary": "A blogger demonstrates that ChatGPT's default image generation tends toward repetitive aesthetics, but explicit style prompting (e.g., 'Bauhaus-inspired geometric minimalist') yields more distinctive outputs. The post catalogs style names ChatGPT suggests — Swiss Style, brutalist, risograph, 90s rave — as reusable vocabulary for future prompts. No novel technical findings; primarily a practical design-prompting walkthrough.",
           "tags": [
-            "rsi",
-            "scaling",
-            "ai safety",
-            "agents"
+            "prompt engineering",
+            "image generation",
+            "design"
           ],
           "sources": [
             {
-              "name": "Interconnects",
-              "url": "https://www.interconnects.ai/p/where-i-stand-on-rsi"
+              "name": "HN (1792pts)",
+              "url": "https://john.hartnup.uk/2026/06/07/ai-event-posters.html"
             }
           ],
-          "published": "2026-09-19T15:42:20+00:00",
-          "score": 0.4172
+          "published": "2026-09-19T09:20:58+00:00",
+          "score": 0.2737
         }
       ]
     },
     {
       "key": "frontier",
       "title": "Frontier & Papers",
-      "cards": []
+      "cards": [
+        {
+          "id": "b0ddf344ba0b",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Designer-RSI: Procedural Memory Lets Frozen LLM Master 230+ Design Tools Without Weight Updates",
+          "why_it_matters": "As an AI/research engineer tracking agents and post-training methods, this demonstrates a concrete continual-learning alternative to fine-tuning — growing an external skill bank purely from noisy, unverifiable real-user feedback.",
+          "summary": "A frozen frontier model (Claude-Sonnet-4/Opus-4.6) controls professional design software via 230+ tools. An external procedural memory bank grows from 76 to 139 skills over 5 rounds on 1,406 real briefs: widening adds skills for uncovered subtasks, deepening revises existing ones against successes/failures. GenEval2 execution success rises from 72.7% to 99.3% on Sonnet-4; combining both mechanisms yields a 58.5% win rate vs. no-skill baseline (p=0.025), versus 49.4%/48.6% for either alone.",
+          "tags": [
+            "agents",
+            "continual learning",
+            "procedural memory",
+            "agentic design"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2609.22086v1"
+            },
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2609.22068v1"
+            }
+          ],
+          "published": "2026-09-18T17:59:56+00:00",
+          "score": 0.6635
+        },
+        {
+          "id": "4c1fb566ccf2",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "BrainWideBench: Unified Transfer-Learning Benchmark Across 276 Brain Regions and 139 Mice",
+          "why_it_matters": "For researchers tracking representation learning and cross-domain transfer, this benchmark exposes a concrete open problem: no single pretraining objective generalizes across behavior decoding, neural prediction, and anatomical recovery simultaneously.",
+          "summary": "BrainWideBench evaluates across-animal transfer on the IBL Brainwide Map dataset — 276 brain regions, 139 mice, sensory-guided decision-making task. Three task suites test behavior decoding, masked/future neural activity prediction, and anatomical organization recovery. Results show pretraining improves over single-session baselines, but gains are highly dependent on pretraining–downstream objective alignment; no method performs uniformly well across all three suites.",
+          "tags": [
+            "neuroscience",
+            "representation learning",
+            "benchmarks",
+            "transfer learning"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2609.22064v1"
+            }
+          ],
+          "published": "2026-09-18T17:54:32+00:00",
+          "score": 0.6627
+        },
+        {
+          "id": "070246c7a009",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Solo Researcher Claims Priority Over TypeSafe AI's Non-Autoregressive Decision Model 'Jev', Releases Open Alternative 'Laya'",
+          "why_it_matters": "A priority dispute over non-autoregressive, RL-guided structured-decision models is directly relevant if you're evaluating fast classification/routing alternatives to generative LLMs in production pipelines.",
+          "summary": "A researcher claims 2025 arXiv papers (2503.23303, 2510.01237) predate TypeSafe AI's 'Jev' launch (founded by an OpenAI co-inventor), which uses RLCD for calibrated schema decisions at $0.042/M tokens with ~150ms latency. Their open-source response, Laya, uses bidirectional encoders for three decision primitives (choice, score, flag) and runs in 32.8ms single-GPU (7.2ms batched), claiming 6–8× speed advantage, Apache 2.0, 100+ languages.",
+          "tags": [
+            "non-autoregressive",
+            "reinforcement learning",
+            "structured decisions",
+            "inference"
+          ],
+          "sources": [
+            {
+              "name": "HN (1302pts)",
+              "url": "https://laya.convaiinnovations.com/"
+            }
+          ],
+          "published": "2026-09-19T10:46:58+00:00",
+          "score": 0.2792
+        },
+        {
+          "id": "ea0d7595726a",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Study of 73K Reddit Posts Finds AI Agent Values Most Often Unmet During Human Supervision Phases",
+          "why_it_matters": "For engineers building or evaluating agentic systems, this surfaces a systematic finding: users' stated values cluster around operating conditions (cost, oversight, access) rather than outputs — a gap current agent evals largely miss.",
+          "summary": "Using Value Sensitive Design, researchers LLM-analyzed 73,093 Reddit posts about OpenClaw agent use, identifying 21 values across 6 groups. Values were mostly fulfilled when users described agent outputs (5 of 6 groups) but unmet when users described supervising the agent (all 6 groups). The authors term this pattern 'value-sensitive delegation,' arguing evals must address pre-run conditions, not just task completion.",
+          "tags": [
+            "agents",
+            "evaluation",
+            "human values",
+            "human-ai interaction"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2609.22067v1"
+            }
+          ],
+          "published": "2026-09-18T17:55:09+00:00",
+          "score": 0.2209
+        }
+      ]
     }
   ]
 }
