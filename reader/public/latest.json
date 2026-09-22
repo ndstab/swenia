@@ -1,11 +1,11 @@
 {
-  "date": "2026-09-21",
-  "generated_at": "2026-09-21T04:43:48.501431+00:00",
-  "summary_line": "2 worth knowing",
+  "date": "2026-09-22",
+  "generated_at": "2026-09-22T04:41:06.368349+00:00",
+  "summary_line": "1 must-know · 6 worth knowing",
   "counts": {
-    "total": 5,
+    "total": 9,
     "headlines": 1,
-    "frontier": 4
+    "frontier": 8
   },
   "sections": [
     {
@@ -13,25 +13,26 @@
       "title": "Headlines",
       "cards": [
         {
-          "id": "643a84217e15",
-          "tier": "skim",
+          "id": "9a319be2f748",
+          "tier": "must_know",
           "category": "headline",
-          "title": "Practical Guide: Steering ChatGPT Away from Generic AI Poster Aesthetics Using Named Design Styles",
-          "why_it_matters": "Mostly a creative/UX exploration with limited technical depth — useful anecdotally for prompt engineering intuition but not frontier research signal.",
-          "summary": "A blogger demonstrates that ChatGPT's default image generation tends toward repetitive aesthetics, but explicit style prompting (e.g., 'Bauhaus-inspired geometric minimalist') yields more distinctive outputs. The post catalogs style names ChatGPT suggests — Swiss Style, brutalist, risograph, 90s rave — as reusable vocabulary for future prompts. No novel technical findings; primarily a practical design-prompting walkthrough.",
+          "title": "Chinese Open-Weight Models Now Dominate: A Congressional Briefing on U.S.-China AI Competition",
+          "why_it_matters": "This is a field-level state-of-the-union on open-weight models that directly benchmarks the landscape you work in — including which labs and models are leading, and by how much.",
+          "summary": "Since ~April 2025, Chinese open-weight models have led American counterparts on capability benchmarks and Hugging Face downloads. As of September 2026, China's download lead stands at ~1.6B out of 3.2B total. On the Artificial Analysis Intelligence Index, top Chinese models (GLM-5.3: 45, Kimi K3: 44, GLM-5.3-Flash: 42) substantially outscore leading American open-weight models (Thinking Machines' Inkling: 26, Nvidia Nemotron 3 Ultra: 23).",
           "tags": [
-            "prompt engineering",
-            "image generation",
-            "design"
+            "open-weight models",
+            "u.s.-china ai",
+            "llm benchmarks",
+            "meta llama"
           ],
           "sources": [
             {
-              "name": "HN (1792pts)",
-              "url": "https://john.hartnup.uk/2026/06/07/ai-event-posters.html"
+              "name": "Interconnects",
+              "url": "https://www.interconnects.ai/p/the-current-balance-of-power-in-open"
             }
           ],
-          "published": "2026-09-19T09:20:58+00:00",
-          "score": 0.2737
+          "published": "2026-09-21T11:56:56+00:00",
+          "score": 2.3778
         }
       ]
     },
@@ -40,96 +41,179 @@
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "b0ddf344ba0b",
+          "id": "dbb7e02aa936",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Designer-RSI: Procedural Memory Lets Frozen LLM Master 230+ Design Tools Without Weight Updates",
-          "why_it_matters": "As an AI/research engineer tracking agents and post-training methods, this demonstrates a concrete continual-learning alternative to fine-tuning — growing an external skill bank purely from noisy, unverifiable real-user feedback.",
-          "summary": "A frozen frontier model (Claude-Sonnet-4/Opus-4.6) controls professional design software via 230+ tools. An external procedural memory bank grows from 76 to 139 skills over 5 rounds on 1,406 real briefs: widening adds skills for uncovered subtasks, deepening revises existing ones against successes/failures. GenEval2 execution success rises from 72.7% to 99.3% on Sonnet-4; combining both mechanisms yields a 58.5% win rate vs. no-skill baseline (p=0.025), versus 49.4%/48.6% for either alone.",
+          "title": "GameHorizon Suite: 5,000-Hour AAA Gameplay Dataset and Multi-Horizon Benchmark Across 47 Models",
+          "why_it_matters": "A large-scale, reproducible agent evaluation suite spanning visual understanding, planning, and action control is directly relevant to your interest in agents and evals.",
+          "summary": "GameHorizon Suite comprises an automated annotation pipeline, a dataset of 5,000 hours of gameplay from 21 AAA titles collected by 100 expert players with temporally aligned actions and multi-horizon instructions, and a benchmark with offline (standardized QA) and online (stepwise) evaluation tracks. Evaluating 47 models via over one million invocations, it reveals a clear hierarchy of task difficulty and significant model capability differences.",
           "tags": [
             "agents",
-            "continual learning",
-            "procedural memory",
-            "agentic design"
+            "evals",
+            "video games",
+            "multimodal"
           ],
           "sources": [
             {
               "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2609.22086v1"
-            },
-            {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2609.22068v1"
+              "url": "https://arxiv.org/abs/2609.25001v1"
             }
           ],
-          "published": "2026-09-18T17:59:56+00:00",
-          "score": 0.6635
+          "published": "2026-09-21T17:59:33+00:00",
+          "score": 1.293
         },
         {
-          "id": "4c1fb566ccf2",
+          "id": "12a5b86b03c2",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "BrainWideBench: Unified Transfer-Learning Benchmark Across 276 Brain Regions and 139 Mice",
-          "why_it_matters": "For researchers tracking representation learning and cross-domain transfer, this benchmark exposes a concrete open problem: no single pretraining objective generalizes across behavior decoding, neural prediction, and anatomical recovery simultaneously.",
-          "summary": "BrainWideBench evaluates across-animal transfer on the IBL Brainwide Map dataset — 276 brain regions, 139 mice, sensory-guided decision-making task. Three task suites test behavior decoding, masked/future neural activity prediction, and anatomical organization recovery. Results show pretraining improves over single-session baselines, but gains are highly dependent on pretraining–downstream objective alignment; no method performs uniformly well across all three suites.",
+          "title": "Critical-State RL: Targeting Only Trainable States in Multi-Turn Tool Use Yields +14pp on BFCL",
+          "why_it_matters": "Identifying which turns in a multi-turn agent trajectory actually benefit from RL training is a core open problem — this method offers a principled diagnostic with strong empirical results.",
+          "summary": "Critical-State RL diagnoses which states in multi-turn tool-use interactions are 'trainable' by separating action-dependent reward variation from downstream continuation noise via nested sampling, then applies contextual-bandit training only at selected states. On BFCL v4, the method improves missing-function task performance by ~14 percentage points; training at non-selected states leaves performance flat or worse.",
           "tags": [
-            "neuroscience",
-            "representation learning",
-            "benchmarks",
-            "transfer learning"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2609.22064v1"
-            }
-          ],
-          "published": "2026-09-18T17:54:32+00:00",
-          "score": 0.6627
-        },
-        {
-          "id": "070246c7a009",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "Solo Researcher Claims Priority Over TypeSafe AI's Non-Autoregressive Decision Model 'Jev', Releases Open Alternative 'Laya'",
-          "why_it_matters": "A priority dispute over non-autoregressive, RL-guided structured-decision models is directly relevant if you're evaluating fast classification/routing alternatives to generative LLMs in production pipelines.",
-          "summary": "A researcher claims 2025 arXiv papers (2503.23303, 2510.01237) predate TypeSafe AI's 'Jev' launch (founded by an OpenAI co-inventor), which uses RLCD for calibrated schema decisions at $0.042/M tokens with ~150ms latency. Their open-source response, Laya, uses bidirectional encoders for three decision primitives (choice, score, flag) and runs in 32.8ms single-GPU (7.2ms batched), claiming 6–8× speed advantage, Apache 2.0, 100+ languages.",
-          "tags": [
-            "non-autoregressive",
             "reinforcement learning",
-            "structured decisions",
-            "inference"
+            "agents",
+            "tool use",
+            "multi-turn"
           ],
           "sources": [
             {
-              "name": "HN (1302pts)",
-              "url": "https://laya.convaiinnovations.com/"
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2609.24985v1"
             }
           ],
-          "published": "2026-09-19T10:46:58+00:00",
-          "score": 0.2792
+          "published": "2026-09-21T17:57:20+00:00",
+          "score": 1.2923
         },
         {
-          "id": "ea0d7595726a",
-          "tier": "skim",
+          "id": "88e2ce27fc28",
+          "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Study of 73K Reddit Posts Finds AI Agent Values Most Often Unmet During Human Supervision Phases",
-          "why_it_matters": "For engineers building or evaluating agentic systems, this surfaces a systematic finding: users' stated values cluster around operating conditions (cost, oversight, access) rather than outputs — a gap current agent evals largely miss.",
-          "summary": "Using Value Sensitive Design, researchers LLM-analyzed 73,093 Reddit posts about OpenClaw agent use, identifying 21 values across 6 groups. Values were mostly fulfilled when users described agent outputs (5 of 6 groups) but unmet when users described supervising the agent (all 6 groups). The authors term this pattern 'value-sensitive delegation,' arguing evals must address pre-run conditions, not just task completion.",
+          "title": "WorldCrafter: Implicit 3D-Aware Memory Enables Long-Horizon Consistent Video World Models",
+          "why_it_matters": "World models with persistent, viewpoint-consistent memory are a key frontier for embodied agents and interactive simulation — this is a direct technical advance on that problem.",
+          "summary": "WorldCrafter introduces a camera-queryable implicit 3D-aware memory module trained jointly with a video diffusion generator. A pose-conditioned readout compresses multi-view historical observations into target-view-specific tokens before denoising, without explicit depth correspondences. Combined with recent temporal context and few-step distillation, it enables streaming scene exploration from a single image or text prompt, showing substantial gains in long-horizon consistency and camera-control accuracy over baselines.",
           "tags": [
-            "agents",
-            "evaluation",
-            "human values",
-            "human-ai interaction"
+            "world models",
+            "video generation",
+            "3d representation",
+            "agents"
           ],
           "sources": [
             {
               "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2609.22067v1"
+              "url": "https://arxiv.org/abs/2609.24984v1"
             }
           ],
-          "published": "2026-09-18T17:55:09+00:00",
-          "score": 0.2209
+          "published": "2026-09-21T17:57:06+00:00",
+          "score": 1.2923
+        },
+        {
+          "id": "73e7c9267adf",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "onPanda: Token-Level Correction Tool Cuts LLM Alignment Annotation Time by 52%",
+          "why_it_matters": "Efficient on-policy data collection is a practical bottleneck for RLHF/SFT pipelines — this tool and its annotation efficiency result are directly actionable for post-training workflows.",
+          "summary": "onPanda is an annotation tool where annotators identify the first inappropriate token in a model response, substitute it, and let the model continue from the corrected prefix, iterating until satisfactory. A controlled study reports 52% reduction in median annotation time versus manual post-editing. The resulting data preserves the model's sampling distribution for on-policy SFT and preference learning, and token-level corrections provide naturally paired positive-negative samples. A dataset (Panda-CVL) and benchmark are released.",
+          "tags": [
+            "rlhf",
+            "data annotation",
+            "post-training",
+            "alignment"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2609.24983v1"
+            }
+          ],
+          "published": "2026-09-21T17:56:53+00:00",
+          "score": 1.2922
+        },
+        {
+          "id": "23229d5be034",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "DexTacWAM: Tactile World-Action Model Averages 70.6 vs. 38.0 Baseline Across Six Dexterous Tasks",
+          "why_it_matters": "Integrating tactile sensing into video-based world models is a frontier problem for robotics and embodied AI — this result shows a data-efficient path from vision priors to contact-rich manipulation.",
+          "summary": "DexTacWAM injects per-fingertip tactile encodings through a finger- and pose-aware compressor into a video diffusion world model, enabling joint visuo-tactile world modeling. On six contact-rich tasks on a 22-DoF bimanual platform, it averages 70.6 vs. 38.0 for the strongest baseline. Ablations show removing tactile world modeling drops the four-task mean from 74.7 to 26.6. Tactile adaptation requires ~100 demonstrations per task after four hours of encoder fine-tuning, retaining visual quality within 0.5 dB of vision-only baselines.",
+          "tags": [
+            "robotics",
+            "world models",
+            "tactile sensing",
+            "dexterous manipulation"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2609.24976v1"
+            }
+          ],
+          "published": "2026-09-21T17:55:24+00:00",
+          "score": 1.2917
+        },
+        {
+          "id": "c701b57089c5",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Block Pruning as Ising Glass: Physics-Based CBO Achieves +23pp MMLU at 50% Compression of Llama-70B",
+          "why_it_matters": "This is a technically deep result connecting statistical physics to LLM compression, directly relevant if you work on efficient inference or model deployment at scale.",
+          "summary": "Multiverse Computing reformulates transformer block removal as a constrained binary optimization (CBO) problem isomorphic to an Ising spin glass, capturing pairwise block-interaction couplings via a second-order Taylor expansion of the loss. The Ising energy serves as a cheap proxy for benchmark quality, enabling large-scale candidate ranking without benchmarking. At 50% compression of Llama-3.3-70B-Instruct, the method gains ~23 percentage points on MMLU over the best competing block-removal method.",
+          "tags": [
+            "model pruning",
+            "llm compression",
+            "optimization",
+            "efficient inference"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/MultiverseComputingCAI/pruning-llms-like-a-physicist-block-removal-as-an"
+            }
+          ],
+          "published": "2026-09-21T13:44:34+00:00",
+          "score": 1.2189
+        },
+        {
+          "id": "e14a092a03b9",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Quantum Mpemba Effect Engineered via Stark Localization: Hotter States Cool Super-Exponentially Faster",
+          "why_it_matters": "A concrete quantum phenomenon with experimentally accessible signatures and a designed mechanism — relevant if you track frontier quantum computing results.",
+          "summary": "Researchers show that Stark localization can engineer a quantum energy landscape where local dissipation produces a Mpemba effect: hotter initial states cool faster than colder ones. The cooling rates for localized initial states are super-exponentially separated. The effect is further enhanced by collective hopping of bound pairs under attractive on-site interactions. The authors claim clear experimental signatures in present-day setups.",
+          "tags": [
+            "quantum computing",
+            "quantum physics",
+            "localization"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2609.24993v1"
+            }
+          ],
+          "published": "2026-09-21T17:58:08+00:00",
+          "score": 0.4309
+        },
+        {
+          "id": "eb792e0fc342",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Hugging Face tokenizers v1: Up to 10x+ Faster Encode/Decode via BPE and Pipeline Rewrites",
+          "why_it_matters": "Tokenizer throughput can bottleneck large-scale training and high-concurrency serving pipelines — this release directly affects your infrastructure stack.",
+          "summary": "tokenizers v1 preserves identical token IDs and API compatibility with v0.23 while substantially improving throughput, often by tens of times in benchmarks. Key changes include replacing regex-based pre-tokenization with hand-written bitstream splitters for fixed model patterns, plus stage-by-stage pipeline optimizations. Benchmarks cover single- and multi-threaded scaling, per-model/language performance, latency, decoding throughput, and memory usage. IBM, NVIDIA, and the ExecuTorch team contributed patches.",
+          "tags": [
+            "tokenization",
+            "infrastructure",
+            "nlp",
+            "performance"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/tokenizers-v1"
+            }
+          ],
+          "published": "2026-09-21T00:00:00+00:00",
+          "score": 0.3357
         }
       ]
     }
