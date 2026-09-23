@@ -1,11 +1,11 @@
 {
-  "date": "2026-09-22",
-  "generated_at": "2026-09-22T04:41:06.368349+00:00",
-  "summary_line": "1 must-know · 6 worth knowing",
+  "date": "2026-09-23",
+  "generated_at": "2026-09-23T04:36:23.169372+00:00",
+  "summary_line": "5 worth knowing",
   "counts": {
-    "total": 9,
-    "headlines": 1,
-    "frontier": 8
+    "total": 10,
+    "headlines": 3,
+    "frontier": 7
   },
   "sections": [
     {
@@ -13,26 +13,70 @@
       "title": "Headlines",
       "cards": [
         {
-          "id": "9a319be2f748",
-          "tier": "must_know",
+          "id": "2960c64a019e",
+          "tier": "worth_knowing",
           "category": "headline",
-          "title": "Chinese Open-Weight Models Now Dominate: A Congressional Briefing on U.S.-China AI Competition",
-          "why_it_matters": "This is a field-level state-of-the-union on open-weight models that directly benchmarks the landscape you work in — including which labs and models are leading, and by how much.",
-          "summary": "Since ~April 2025, Chinese open-weight models have led American counterparts on capability benchmarks and Hugging Face downloads. As of September 2026, China's download lead stands at ~1.6B out of 3.2B total. On the Artificial Analysis Intelligence Index, top Chinese models (GLM-5.3: 45, Kimi K3: 44, GLM-5.3-Flash: 42) substantially outscore leading American open-weight models (Thinking Machines' Inkling: 26, Nvidia Nemotron 3 Ultra: 23).",
+          "title": "UK AISI and EvalEval Release Standardized Evaluation Cards for Claude Opus 4/4.5/4.6, GPT-5 Variants Across Five Benchmarks",
+          "why_it_matters": "Reproducibility of benchmark results is a core methodological issue for researchers relying on evals to compare models — this infrastructure directly affects how reliably you can interpret frontier model performance claims.",
+          "summary": "AISI and EvalEval are releasing verified evaluation results via the Every Eval Ever (EEE) schema and Evaluation Cards platform. Results cover five benchmarks — HealthBench, FrontierMath, Humanity's Last Exam, SWE-Bench Pro, and Terminal-Bench 2.0 — across six frontier models: Claude Opus 4, 4.5, 4.6, GPT-5, GPT-5.2, and GPT-5.4. An accompanying paper studies how inference-time compute and evaluation protocol affect benchmark performance.",
           "tags": [
-            "open-weight models",
-            "u.s.-china ai",
-            "llm benchmarks",
-            "meta llama"
+            "evals",
+            "benchmarks",
+            "reproducibility",
+            "frontier-models"
           ],
           "sources": [
             {
-              "name": "Interconnects",
-              "url": "https://www.interconnects.ai/p/the-current-balance-of-power-in-open"
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/evaleval-aisi"
             }
           ],
-          "published": "2026-09-21T11:56:56+00:00",
-          "score": 2.3778
+          "published": "2026-09-22T00:00:00+00:00",
+          "score": 1.0082
+        },
+        {
+          "id": "98acfe91fd30",
+          "tier": "worth_knowing",
+          "category": "headline",
+          "title": "Hugging Face Transformers Now Loads llama.cpp GGUF Quantized Models Natively via from_pretrained",
+          "why_it_matters": "For researchers doing local inference or experimenting with quantized open-weight models, native GGUF support in Transformers removes a key friction point and unifies the ecosystem around a standard API.",
+          "summary": "Transformers now supports loading GGUF-format models directly via from_pretrained using llama.cpp's underlying ggml kernels through Hugging Face's kernels library. Initial support targets Apple Silicon and the Qwen3.5 architecture, with automatic Metal kernel loading when weights stay packed. Users can select quantization levels (e.g., Q4_K_M, Q5_K_M) from existing Hub checkpoints; post-load usage is standard Transformers API.",
+          "tags": [
+            "local-inference",
+            "gguf",
+            "quantization",
+            "transformers"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/transformers-llama-cpp-quants"
+            }
+          ],
+          "published": "2026-09-22T00:00:00+00:00",
+          "score": 1.0082
+        },
+        {
+          "id": "fb8ad85c459c",
+          "tier": "skim",
+          "category": "headline",
+          "title": "oMLX Creator Jun Kim Joins Hugging Face to Accelerate Apple Silicon Local AI Ecosystem",
+          "why_it_matters": "As local inference on Apple Silicon gains traction for model experimentation, consolidating MLX tooling under Hugging Face's umbrella accelerates the pipeline from Transformers model definitions to MLX deployable implementations.",
+          "summary": "Jun Kim, creator of oMLX, joins Hugging Face to maintain and develop the project full-time. oMLX stays Apache 2.0 with Jun continuing to lead it. The stated goal is to streamline conversion from Transformers model definitions to MLX reference implementations consumable by multiple inference engines (mlx-lm, mlx-vlm, LM Studio). Hugging Face frames this as part of a broader push to support local AI on Apple Silicon.",
+          "tags": [
+            "mlx",
+            "local-inference",
+            "apple-silicon",
+            "open-source"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/omlx"
+            }
+          ],
+          "published": "2026-09-22T00:00:00+00:00",
+          "score": 0.3361
         }
       ]
     },
@@ -41,179 +85,158 @@
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "dbb7e02aa936",
+          "id": "88ae90f68cb3",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "GameHorizon Suite: 5,000-Hour AAA Gameplay Dataset and Multi-Horizon Benchmark Across 47 Models",
-          "why_it_matters": "A large-scale, reproducible agent evaluation suite spanning visual understanding, planning, and action control is directly relevant to your interest in agents and evals.",
-          "summary": "GameHorizon Suite comprises an automated annotation pipeline, a dataset of 5,000 hours of gameplay from 21 AAA titles collected by 100 expert players with temporally aligned actions and multi-horizon instructions, and a benchmark with offline (standardized QA) and online (stepwise) evaluation tracks. Evaluating 47 models via over one million invocations, it reveals a clear hierarchy of task difficulty and significant model capability differences.",
+          "title": "Flash-dLLM Delivers 5.1×–11.0× Speedups on Diffusion LLM Inference via IO-Aware KV Caching",
+          "why_it_matters": "Diffusion LLMs are an emerging non-autoregressive architecture and this training-free acceleration framework addresses their core deployment bottleneck — relevant if you're tracking alternatives to standard AR generation.",
+          "summary": "Flash-dLLM is a training-free inference framework for diffusion LLMs that identifies GPU memory I/O as the dominant bottleneck and addresses it with a fused IO-aware KV-cache kernel. It adds a KV-cache-driven draft-and-verify decoding strategy where the dLLM acts as both drafter and verifier with no auxiliary model. On GSM8K and HumanEval, it achieves 5.1× and 11.0× speedups respectively over Elastic-Cache.",
           "tags": [
-            "agents",
-            "evals",
-            "video games",
-            "multimodal"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2609.25001v1"
-            }
-          ],
-          "published": "2026-09-21T17:59:33+00:00",
-          "score": 1.293
-        },
-        {
-          "id": "12a5b86b03c2",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "Critical-State RL: Targeting Only Trainable States in Multi-Turn Tool Use Yields +14pp on BFCL",
-          "why_it_matters": "Identifying which turns in a multi-turn agent trajectory actually benefit from RL training is a core open problem — this method offers a principled diagnostic with strong empirical results.",
-          "summary": "Critical-State RL diagnoses which states in multi-turn tool-use interactions are 'trainable' by separating action-dependent reward variation from downstream continuation noise via nested sampling, then applies contextual-bandit training only at selected states. On BFCL v4, the method improves missing-function task performance by ~14 percentage points; training at non-selected states leaves performance flat or worse.",
-          "tags": [
-            "reinforcement learning",
-            "agents",
-            "tool use",
-            "multi-turn"
+            "diffusion-llm",
+            "inference",
+            "kv-cache",
+            "efficiency"
           ],
           "sources": [
             {
               "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2609.24985v1"
+              "url": "https://arxiv.org/abs/2609.26796v1"
             }
           ],
-          "published": "2026-09-21T17:57:20+00:00",
-          "score": 1.2923
+          "published": "2026-09-22T17:59:57+00:00",
+          "score": 1.2945
         },
         {
-          "id": "88e2ce27fc28",
+          "id": "9645f3cacb4e",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "WorldCrafter: Implicit 3D-Aware Memory Enables Long-Horizon Consistent Video World Models",
-          "why_it_matters": "World models with persistent, viewpoint-consistent memory are a key frontier for embodied agents and interactive simulation — this is a direct technical advance on that problem.",
-          "summary": "WorldCrafter introduces a camera-queryable implicit 3D-aware memory module trained jointly with a video diffusion generator. A pose-conditioned readout compresses multi-view historical observations into target-view-specific tokens before denoising, without explicit depth correspondences. Combined with recent temporal context and few-step distillation, it enables streaming scene exploration from a single image or text prompt, showing substantial gains in long-horizon consistency and camera-control accuracy over baselines.",
+          "title": "First Natural Graph Problem with Asymptotic Distributed Quantum Advantage: O(1)-Round 3-Coloring of Cycles",
+          "why_it_matters": "This is a landmark theoretical result for quantum algorithms — the first natural (not artificially constructed) graph problem demonstrating a provable asymptotic advantage for quantum-LOCAL over classical-LOCAL models.",
+          "summary": "A new distributed quantum algorithm 3-colors cycles in O(1) rounds with high probability, versus Θ(log* n) classically. This implies all locally checkable labeling problems solvable in O(log* n) classical rounds — including maximal independent set and maximal matching on bounded-degree graphs — can be solved in O(1) quantum-LOCAL rounds. All prior quantum-LOCAL separations used artificial problems; these are the first natural examples.",
           "tags": [
-            "world models",
-            "video generation",
-            "3d representation",
-            "agents"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2609.24984v1"
-            }
-          ],
-          "published": "2026-09-21T17:57:06+00:00",
-          "score": 1.2923
-        },
-        {
-          "id": "73e7c9267adf",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "onPanda: Token-Level Correction Tool Cuts LLM Alignment Annotation Time by 52%",
-          "why_it_matters": "Efficient on-policy data collection is a practical bottleneck for RLHF/SFT pipelines — this tool and its annotation efficiency result are directly actionable for post-training workflows.",
-          "summary": "onPanda is an annotation tool where annotators identify the first inappropriate token in a model response, substitute it, and let the model continue from the corrected prefix, iterating until satisfactory. A controlled study reports 52% reduction in median annotation time versus manual post-editing. The resulting data preserves the model's sampling distribution for on-policy SFT and preference learning, and token-level corrections provide naturally paired positive-negative samples. A dataset (Panda-CVL) and benchmark are released.",
-          "tags": [
-            "rlhf",
-            "data annotation",
-            "post-training",
-            "alignment"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2609.24983v1"
-            }
-          ],
-          "published": "2026-09-21T17:56:53+00:00",
-          "score": 1.2922
-        },
-        {
-          "id": "23229d5be034",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "DexTacWAM: Tactile World-Action Model Averages 70.6 vs. 38.0 Baseline Across Six Dexterous Tasks",
-          "why_it_matters": "Integrating tactile sensing into video-based world models is a frontier problem for robotics and embodied AI — this result shows a data-efficient path from vision priors to contact-rich manipulation.",
-          "summary": "DexTacWAM injects per-fingertip tactile encodings through a finger- and pose-aware compressor into a video diffusion world model, enabling joint visuo-tactile world modeling. On six contact-rich tasks on a 22-DoF bimanual platform, it averages 70.6 vs. 38.0 for the strongest baseline. Ablations show removing tactile world modeling drops the four-task mean from 74.7 to 26.6. Tactile adaptation requires ~100 demonstrations per task after four hours of encoder fine-tuning, retaining visual quality within 0.5 dB of vision-only baselines.",
-          "tags": [
-            "robotics",
-            "world models",
-            "tactile sensing",
-            "dexterous manipulation"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2609.24976v1"
-            }
-          ],
-          "published": "2026-09-21T17:55:24+00:00",
-          "score": 1.2917
-        },
-        {
-          "id": "c701b57089c5",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "Block Pruning as Ising Glass: Physics-Based CBO Achieves +23pp MMLU at 50% Compression of Llama-70B",
-          "why_it_matters": "This is a technically deep result connecting statistical physics to LLM compression, directly relevant if you work on efficient inference or model deployment at scale.",
-          "summary": "Multiverse Computing reformulates transformer block removal as a constrained binary optimization (CBO) problem isomorphic to an Ising spin glass, capturing pairwise block-interaction couplings via a second-order Taylor expansion of the loss. The Ising energy serves as a cheap proxy for benchmark quality, enabling large-scale candidate ranking without benchmarking. At 50% compression of Llama-3.3-70B-Instruct, the method gains ~23 percentage points on MMLU over the best competing block-removal method.",
-          "tags": [
-            "model pruning",
-            "llm compression",
-            "optimization",
-            "efficient inference"
-          ],
-          "sources": [
-            {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/MultiverseComputingCAI/pruning-llms-like-a-physicist-block-removal-as-an"
-            }
-          ],
-          "published": "2026-09-21T13:44:34+00:00",
-          "score": 1.2189
-        },
-        {
-          "id": "e14a092a03b9",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "Quantum Mpemba Effect Engineered via Stark Localization: Hotter States Cool Super-Exponentially Faster",
-          "why_it_matters": "A concrete quantum phenomenon with experimentally accessible signatures and a designed mechanism — relevant if you track frontier quantum computing results.",
-          "summary": "Researchers show that Stark localization can engineer a quantum energy landscape where local dissipation produces a Mpemba effect: hotter initial states cool faster than colder ones. The cooling rates for localized initial states are super-exponentially separated. The effect is further enhanced by collective hopping of bound pairs under attractive on-site interactions. The authors claim clear experimental signatures in present-day setups.",
-          "tags": [
-            "quantum computing",
-            "quantum physics",
-            "localization"
+            "quantum-computing",
+            "distributed-algorithms",
+            "quantum-advantage",
+            "graph-theory"
           ],
           "sources": [
             {
               "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2609.24993v1"
+              "url": "https://arxiv.org/abs/2609.26788v1"
             }
           ],
-          "published": "2026-09-21T17:58:08+00:00",
-          "score": 0.4309
+          "published": "2026-09-22T17:58:07+00:00",
+          "score": 1.294
         },
         {
-          "id": "eb792e0fc342",
-          "tier": "skim",
+          "id": "c204880862e4",
+          "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Hugging Face tokenizers v1: Up to 10x+ Faster Encode/Decode via BPE and Pipeline Rewrites",
-          "why_it_matters": "Tokenizer throughput can bottleneck large-scale training and high-concurrency serving pipelines — this release directly affects your infrastructure stack.",
-          "summary": "tokenizers v1 preserves identical token IDs and API compatibility with v0.23 while substantially improving throughput, often by tens of times in benchmarks. Key changes include replacing regex-based pre-tokenization with hand-written bitstream splitters for fixed model patterns, plus stage-by-stage pipeline optimizations. Benchmarks cover single- and multi-threaded scaling, per-model/language performance, latency, decoding throughput, and memory usage. IBM, NVIDIA, and the ExecuTorch team contributed patches.",
+          "title": "Agensh Scales Self-Organized Multi-Agent Systems to 1,024 Agents, Gains 49% on ProgramBench",
+          "why_it_matters": "Scaling the number of agents as a new dimension for complex task performance is a practically relevant result for anyone building or evaluating agentic systems under latency constraints.",
+          "summary": "Agensh is a multi-agent harness without a central orchestrator: workers asynchronously claim sub-tasks, share findings, and merge progress via a shared workspace and message interface. Evaluated on the five hardest ProgramBench tasks with GPT-5.6-sol, scaling from 1 to 128 agents raises mean final test-pass rate from 19.31% to 28.78% (~49% relative gain). On the pandoc task, 1 to 1,024 agents raises pass rate from 33.89% to 55.06%.",
           "tags": [
-            "tokenization",
-            "infrastructure",
-            "nlp",
-            "performance"
+            "multi-agent",
+            "agents",
+            "scaling",
+            "code-generation"
           ],
           "sources": [
             {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/tokenizers-v1"
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2609.26781v1"
             }
           ],
-          "published": "2026-09-21T00:00:00+00:00",
-          "score": 0.3357
+          "published": "2026-09-22T17:56:25+00:00",
+          "score": 1.2935
+        },
+        {
+          "id": "5604a12e8e4e",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Heterogeneous-Distance Lattice Surgery Cuts Qubit Overhead for Fault-Tolerant Distributed Quantum Computing",
+          "why_it_matters": "Noisy inter-QPU links are a core engineering bottleneck for distributed quantum systems; this architecture reduces physical qubit overhead while maintaining error suppression — meaningful for near-term fault-tolerant quantum hardware.",
+          "summary": "An 8-data-patch ancilla-mediated (8-DAM) architecture for distributed quantum computing enlarges only the central ancilla spanning inter-QPU boundaries while keeping data patches at distance d. Traveling stabilizers suppress hook errors during merge/split operations between unequal-distance patches. Circuit-level simulations show logical-readout error rates depend weakly on link noise, and the design supports two simultaneous distributed logical CNOT operations with a single enlarged ancilla at lower logical error rates than two independent CNOTs at high link noise.",
+          "tags": [
+            "quantum-computing",
+            "fault-tolerance",
+            "distributed-quantum",
+            "lattice-surgery"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2609.26784v1"
+            }
+          ],
+          "published": "2026-09-22T17:56:56+00:00",
+          "score": 0.4312
+        },
+        {
+          "id": "cd930cd19c57",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Decentralized Multi-Agent POMDP Learning with Delayed Information Sharing and Finite-Sample Guarantees",
+          "why_it_matters": "For researchers working on multi-agent RL and cooperative decision-making under partial observability, this provides theoretical grounding for decentralized learning without a centralized coordinator and includes concrete sample-complexity bounds.",
+          "summary": "A framework for decentralized cooperative decision-making in partially observable MDPs with unknown dynamics uses low-rank model representations and team-theoretic equivalence. Agents act on local private information and delayed common information, learn approximate low-rank MDPs independently, and apply least-squares value iteration. The paper proves finite-sample performance guarantees and derives a sample-complexity bound showing each agent recovers an approximate team-optimal policy component.",
+          "tags": [
+            "multi-agent-rl",
+            "pomdp",
+            "decentralized-learning",
+            "theory"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2609.26783v1"
+            }
+          ],
+          "published": "2026-09-22T17:56:46+00:00",
+          "score": 0.4312
+        },
+        {
+          "id": "9b1c952ac049",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "SpeakerMem-R1: Dual-Track Memory for Multi-Party Dialogue Achieves SOTA on EverMemBench",
+          "why_it_matters": "Long-context multi-party memory is an active frontier for conversational agents; this work's RL-trained writer and dual-track architecture offer concrete techniques for attribution and relational state tracking.",
+          "summary": "SpeakerMem-R1 uses a dual-track memory: verbatim speaker-labeled messages plus derived structured states organized into person-level and group-level views, combined at query time by entity, event, and time. Writer-R1 is trained with speaker-conditioned GRPO using a SpeakerLevenshtein reward to reduce attribution errors. On GroupMemBench, SocialMemBench, and EverMemBench the system achieves 47.9%, 69.2%, and 61.9% binary accuracy; EverMemBench reports 62.33%, described as the best reported result among current frameworks. RL raises SFT writer accuracy from 57.38% to 68.20% on a 305-question controlled evaluation.",
+          "tags": [
+            "conversational-ai",
+            "memory",
+            "multi-party-dialogue",
+            "rl"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2609.26780v1"
+            }
+          ],
+          "published": "2026-09-22T17:56:12+00:00",
+          "score": 0.4311
+        },
+        {
+          "id": "b7ce14e363bb",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Epoch AI's JS Denain and Nathan Lambert Debate RSI, US-China Gap, and Frontier Post-Training",
+          "why_it_matters": "As an AI/ML engineer tracking field trajectory, this is a substantive technical debate between two researchers who closely study AI progress metrics — covering RSI timelines, Chinese model competitiveness, and what frontier post-training recipes look like.",
+          "summary": "JS Denain (Epoch AI Insights lead) and Nathan Lambert discuss whether internal lab measurements justify imminent RSI claims. Denain finds the published evidence — including OpenAI's reported 2× monthly increase in Codex spending by researchers — suggestive but not strong evidence of a near-term software intelligence explosion. Topics also cover distillation's role in the US-China gap, what Chinese job postings reveal, and open vs. closed model safety.",
+          "tags": [
+            "rsi",
+            "scaling",
+            "us-china-ai",
+            "post-training"
+          ],
+          "sources": [
+            {
+              "name": "Interconnects",
+              "url": "https://www.interconnects.ai/p/debating-rsi-the-us-china-gap-and"
+            }
+          ],
+          "published": "2026-09-22T13:37:45+00:00",
+          "score": 0.4061
         }
       ]
     }
