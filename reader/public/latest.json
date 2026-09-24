@@ -1,11 +1,11 @@
 {
-  "date": "2026-09-23",
-  "generated_at": "2026-09-23T04:36:23.169372+00:00",
-  "summary_line": "5 worth knowing",
+  "date": "2026-09-24",
+  "generated_at": "2026-09-24T04:34:13.814061+00:00",
+  "summary_line": "4 worth knowing",
   "counts": {
-    "total": 10,
+    "total": 9,
     "headlines": 3,
-    "frontier": 7
+    "frontier": 6
   },
   "sections": [
     {
@@ -13,70 +13,70 @@
       "title": "Headlines",
       "cards": [
         {
-          "id": "2960c64a019e",
+          "id": "4c4abcff4acd",
           "tier": "worth_knowing",
           "category": "headline",
-          "title": "UK AISI and EvalEval Release Standardized Evaluation Cards for Claude Opus 4/4.5/4.6, GPT-5 Variants Across Five Benchmarks",
-          "why_it_matters": "Reproducibility of benchmark results is a core methodological issue for researchers relying on evals to compare models — this infrastructure directly affects how reliably you can interpret frontier model performance claims.",
-          "summary": "AISI and EvalEval are releasing verified evaluation results via the Every Eval Ever (EEE) schema and Evaluation Cards platform. Results cover five benchmarks — HealthBench, FrontierMath, Humanity's Last Exam, SWE-Bench Pro, and Terminal-Bench 2.0 — across six frontier models: Claude Opus 4, 4.5, 4.6, GPT-5, GPT-5.2, and GPT-5.4. An accompanying paper studies how inference-time compute and evaluation protocol affect benchmark performance.",
+          "title": "Google Extends Private AI Compute with Persistent, End-to-End Encrypted Cloud Memory",
+          "why_it_matters": "As AI systems move toward persistent, cross-session memory, the cryptographic architecture underpinning that memory is a critical infrastructure concern for anyone building or evaluating privacy-sensitive AI products.",
+          "summary": "Google's Private AI Compute now adds a persistent memory layer: data is stored encrypted in cloud secure enclaves, with cryptographic keys held exclusively on user devices, making it inaccessible even to Google. Previously the platform was stateless, wiping context after each task. The update includes an independent cybersecurity audit, tamper-proof public software logs, and device-side verification before any personal data is sent.",
           "tags": [
-            "evals",
-            "benchmarks",
-            "reproducibility",
-            "frontier-models"
+            "privacy",
+            "infrastructure",
+            "secure-compute",
+            "ai-systems"
           ],
           "sources": [
             {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/evaleval-aisi"
+              "name": "DeepMind",
+              "url": "https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory/"
             }
           ],
-          "published": "2026-09-22T00:00:00+00:00",
-          "score": 1.0082
+          "published": "2026-09-23T16:00:57+00:00",
+          "score": 1.26
         },
         {
-          "id": "98acfe91fd30",
-          "tier": "worth_knowing",
-          "category": "headline",
-          "title": "Hugging Face Transformers Now Loads llama.cpp GGUF Quantized Models Natively via from_pretrained",
-          "why_it_matters": "For researchers doing local inference or experimenting with quantized open-weight models, native GGUF support in Transformers removes a key friction point and unifies the ecosystem around a standard API.",
-          "summary": "Transformers now supports loading GGUF-format models directly via from_pretrained using llama.cpp's underlying ggml kernels through Hugging Face's kernels library. Initial support targets Apple Silicon and the Qwen3.5 architecture, with automatic Metal kernel loading when weights stay packed. Users can select quantization levels (e.g., Q4_K_M, Q5_K_M) from existing Hub checkpoints; post-load usage is standard Transformers API.",
-          "tags": [
-            "local-inference",
-            "gguf",
-            "quantization",
-            "transformers"
-          ],
-          "sources": [
-            {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/transformers-llama-cpp-quants"
-            }
-          ],
-          "published": "2026-09-22T00:00:00+00:00",
-          "score": 1.0082
-        },
-        {
-          "id": "fb8ad85c459c",
+          "id": "a70f8ac64edf",
           "tier": "skim",
           "category": "headline",
-          "title": "oMLX Creator Jun Kim Joins Hugging Face to Accelerate Apple Silicon Local AI Ecosystem",
-          "why_it_matters": "As local inference on Apple Silicon gains traction for model experimentation, consolidating MLX tooling under Hugging Face's umbrella accelerates the pipeline from Transformers model definitions to MLX deployable implementations.",
-          "summary": "Jun Kim, creator of oMLX, joins Hugging Face to maintain and develop the project full-time. oMLX stays Apache 2.0 with Jun continuing to lead it. The stated goal is to streamline conversion from Transformers model definitions to MLX reference implementations consumable by multiple inference engines (mlx-lm, mlx-vlm, LM Studio). Hugging Face frames this as part of a broader push to support local AI on Apple Silicon.",
+          "title": "MuJoCo Warp (MJWarp) Scales Robotics Sim to 2,048 Parallel GPU Environments",
+          "why_it_matters": "If you work on robot learning pipelines, understanding how MJWarp bridges standard MuJoCo MJCF workflows to massively parallel GPU simulation is directly relevant to your training infrastructure choices.",
+          "summary": "MJWarp implements MuJoCo physics via NVIDIA Warp, compiling CUDA kernels to run up to 2,048 parallel environments on GPU. Warp uses statically-typed Python kernels (wp.tid() per logical thread), supports CUDA graph capture to reduce dispatch overhead, and offers opt-in differentiability and deterministic execution (added in Warp 1.15). This article covers environment scaling, not policy training.",
           "tags": [
-            "mlx",
-            "local-inference",
-            "apple-silicon",
-            "open-source"
+            "robotics",
+            "simulation",
+            "gpu",
+            "reinforcement-learning"
           ],
           "sources": [
             {
               "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/omlx"
+              "url": "https://huggingface.co/blog/nvidia/how-to-use-nvidia-warp-and-mjwarp"
             }
           ],
-          "published": "2026-09-22T00:00:00+00:00",
-          "score": 0.3361
+          "published": "2026-09-23T18:41:40+00:00",
+          "score": 0.4359
+        },
+        {
+          "id": "be2314c62992",
+          "tier": "skim",
+          "category": "headline",
+          "title": "Google Launches Gemini 3.8 Flash TTS and Flash-Lite TTS with Voice Design and #1 Hume Benchmark Score",
+          "why_it_matters": "A flagship TTS release from Google DeepMind with benchmark-leading results and novel generative voice design capabilities is a major product development the field will be discussing.",
+          "summary": "Gemini 3.8 Flash TTS tops Hume AI's Voice Design Benchmark at 71.4 overall and 60.8 for accent modeling. It supports generative voice creation via natural-language prompts across 100+ languages, a 2,000+ voice library, voice replication from 30-second samples with SynthID watermarking, and line-by-line performance direction. Flash-Lite TTS targets high-volume, cost-efficient use cases. Both support multi-speaker staging and non-verbal cues.",
+          "tags": [
+            "text-to-speech",
+            "google-deepmind",
+            "gemini",
+            "audio-generation"
+          ],
+          "sources": [
+            {
+              "name": "DeepMind",
+              "url": "https://deepmind.google/blog/say-hello-to-gemini-38-text-to-speech/"
+            }
+          ],
+          "published": "2026-09-23T15:25:14+00:00",
+          "score": 0.4165
         }
       ]
     },
@@ -85,158 +85,136 @@
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "88ae90f68cb3",
+          "id": "23114ea420bd",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Flash-dLLM Delivers 5.1×–11.0× Speedups on Diffusion LLM Inference via IO-Aware KV Caching",
-          "why_it_matters": "Diffusion LLMs are an emerging non-autoregressive architecture and this training-free acceleration framework addresses their core deployment bottleneck — relevant if you're tracking alternatives to standard AR generation.",
-          "summary": "Flash-dLLM is a training-free inference framework for diffusion LLMs that identifies GPU memory I/O as the dominant bottleneck and addresses it with a fused IO-aware KV-cache kernel. It adds a KV-cache-driven draft-and-verify decoding strategy where the dLLM acts as both drafter and verifier with no auxiliary model. On GSM8K and HumanEval, it achieves 5.1× and 11.0× speedups respectively over Elastic-Cache.",
+          "title": "x₀-Prediction Outperforms Velocity Prediction for Diffusion in High-Dimensional Encoder Latents",
+          "why_it_matters": "If you train or fine-tune latent diffusion models on top of pretrained visual encoders, this result has a direct, actionable impact on your choice of flow-matching parameterization.",
+          "summary": "Finetuning pretrained visual encoders for reconstruction recovers fine-grained detail but reduces effective latent dimensionality, altering the manifold geometry. Standard velocity prediction in flow matching then wastes capacity fitting orthogonal noise directions outside the signal manifold. Switching to x₀-prediction focuses learning on the actual data manifold and consistently improves text-to-image generation across multiple strong-reconstruction encoders.",
           "tags": [
-            "diffusion-llm",
-            "inference",
-            "kv-cache",
-            "efficiency"
+            "diffusion-models",
+            "flow-matching",
+            "representation-learning",
+            "generative-models"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2609.26796v1"
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2609.28473v1"
             }
           ],
-          "published": "2026-09-22T17:59:57+00:00",
+          "published": "2026-09-23T17:59:56+00:00",
+          "score": 1.2952
+        },
+        {
+          "id": "c3133f218208",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "StudentBench: AI Tutoring Statistically Equivalent to Human Tutoring on GRE, at 918× Lower Cost",
+          "why_it_matters": "A large-scale controlled study (2,383 participants, 175k messages) providing rigorous evidence on LLM teaching efficacy is relevant to anyone thinking about LLM evaluation beyond standard benchmarks.",
+          "summary": "StudentBench measured GRE learning gains across AI tutoring, human tutoring, and no-tutoring conditions. AI tutoring achieved statistical equivalence to expert human tutoring (p=.015); in 5 of 7 GRE domains the best AI tutor surpassed humans. One AI tutor matched human learning gains (p=.044) at USD 0.0052 vs USD 4.81 per percentage point — 918× cheaper. Faster AI response correlated with more student messages and larger gains (all p<.002).",
+          "tags": [
+            "llm-evaluation",
+            "education",
+            "benchmarks",
+            "ai-agents"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2609.28470v1"
+            }
+          ],
+          "published": "2026-09-23T17:57:45+00:00",
           "score": 1.2945
         },
         {
-          "id": "9645f3cacb4e",
+          "id": "bce600a12eb6",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "First Natural Graph Problem with Asymptotic Distributed Quantum Advantage: O(1)-Round 3-Coloring of Cycles",
-          "why_it_matters": "This is a landmark theoretical result for quantum algorithms — the first natural (not artificially constructed) graph problem demonstrating a provable asymptotic advantage for quantum-LOCAL over classical-LOCAL models.",
-          "summary": "A new distributed quantum algorithm 3-colors cycles in O(1) rounds with high probability, versus Θ(log* n) classically. This implies all locally checkable labeling problems solvable in O(log* n) classical rounds — including maximal independent set and maximal matching on bounded-degree graphs — can be solved in O(1) quantum-LOCAL rounds. All prior quantum-LOCAL separations used artificial problems; these are the first natural examples.",
-          "tags": [
-            "quantum-computing",
-            "distributed-algorithms",
-            "quantum-advantage",
-            "graph-theory"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2609.26788v1"
-            }
-          ],
-          "published": "2026-09-22T17:58:07+00:00",
-          "score": 1.294
-        },
-        {
-          "id": "c204880862e4",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "Agensh Scales Self-Organized Multi-Agent Systems to 1,024 Agents, Gains 49% on ProgramBench",
-          "why_it_matters": "Scaling the number of agents as a new dimension for complex task performance is a practically relevant result for anyone building or evaluating agentic systems under latency constraints.",
-          "summary": "Agensh is a multi-agent harness without a central orchestrator: workers asynchronously claim sub-tasks, share findings, and merge progress via a shared workspace and message interface. Evaluated on the five hardest ProgramBench tasks with GPT-5.6-sol, scaling from 1 to 128 agents raises mean final test-pass rate from 19.31% to 28.78% (~49% relative gain). On the pandoc task, 1 to 1,024 agents raises pass rate from 33.89% to 55.06%.",
-          "tags": [
-            "multi-agent",
-            "agents",
-            "scaling",
-            "code-generation"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2609.26781v1"
-            }
-          ],
-          "published": "2026-09-22T17:56:25+00:00",
-          "score": 1.2935
-        },
-        {
-          "id": "5604a12e8e4e",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "Heterogeneous-Distance Lattice Surgery Cuts Qubit Overhead for Fault-Tolerant Distributed Quantum Computing",
-          "why_it_matters": "Noisy inter-QPU links are a core engineering bottleneck for distributed quantum systems; this architecture reduces physical qubit overhead while maintaining error suppression — meaningful for near-term fault-tolerant quantum hardware.",
-          "summary": "An 8-data-patch ancilla-mediated (8-DAM) architecture for distributed quantum computing enlarges only the central ancilla spanning inter-QPU boundaries while keeping data patches at distance d. Traveling stabilizers suppress hook errors during merge/split operations between unequal-distance patches. Circuit-level simulations show logical-readout error rates depend weakly on link noise, and the design supports two simultaneous distributed logical CNOT operations with a single enlarged ancilla at lower logical error rates than two independent CNOTs at high link noise.",
+          "title": "Fault-Tolerant Quantum Computation Achieves Constant Space and Strictly Logarithmic Time Overhead",
+          "why_it_matters": "Proving tight logarithmic time overhead with constant space overhead using good quantum locally testable codes is a significant theoretical advance in fault-tolerant quantum computing that researchers in quantum ML and quantum computing infrastructure will follow closely.",
+          "summary": "Two constructions achieve constant-space-overhead fault-tolerant quantum computation with provably strictly O(log n) time overhead, tightening prior results that had additional subpolylogarithmic factors. The primary construction uses polynomial-subrank transversal logical CCZ gates on good quantum locally testable codes (qLTCs) for addressable universal computation. An alternative modifies quantum Reed–Solomon magic-state distillation by recursively applying a fixed distillation circuit protected by qLTCs of increasing block length.",
           "tags": [
             "quantum-computing",
             "fault-tolerance",
-            "distributed-quantum",
-            "lattice-surgery"
+            "quantum-error-correction",
+            "complexity-theory"
           ],
           "sources": [
             {
               "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2609.26784v1"
+              "url": "https://arxiv.org/abs/2609.28461v1"
             }
           ],
-          "published": "2026-09-22T17:56:56+00:00",
-          "score": 0.4312
+          "published": "2026-09-23T17:53:01+00:00",
+          "score": 1.2931
         },
         {
-          "id": "cd930cd19c57",
+          "id": "51ec26f86ebd",
           "tier": "skim",
           "category": "frontier",
-          "title": "Decentralized Multi-Agent POMDP Learning with Delayed Information Sharing and Finite-Sample Guarantees",
-          "why_it_matters": "For researchers working on multi-agent RL and cooperative decision-making under partial observability, this provides theoretical grounding for decentralized learning without a centralized coordinator and includes concrete sample-complexity bounds.",
-          "summary": "A framework for decentralized cooperative decision-making in partially observable MDPs with unknown dynamics uses low-rank model representations and team-theoretic equivalence. Agents act on local private information and delayed common information, learn approximate low-rank MDPs independently, and apply least-squares value iteration. The paper proves finite-sample performance guarantees and derives a sample-complexity bound showing each agent recovers an approximate team-optimal policy component.",
+          "title": "ModernBERT Bi-Encoder with Contrastive Learning Hits 98.4% on PAN21 Authorship Verification",
+          "why_it_matters": "Contrastive learning applied to NLP verification tasks is a methodologically transferable technique; the strong result on a standard benchmark is useful signal for practitioners working on document similarity or attribution.",
+          "summary": "Contrastive learning outperforms classification-based approaches for authorship verification. Key factors identified: loss function, batch size, training duration, pretrained model choice, input context length, and random text-span data augmentation. A ModernBERT Bi-Encoder trained with these considerations achieves 98.4% accuracy on the PAN21 authorship verification benchmark.",
           "tags": [
-            "multi-agent-rl",
-            "pomdp",
-            "decentralized-learning",
-            "theory"
+            "nlp",
+            "contrastive-learning",
+            "authorship-verification",
+            "bert"
           ],
           "sources": [
             {
               "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2609.26783v1"
+              "url": "https://arxiv.org/abs/2609.28471v1"
             }
           ],
-          "published": "2026-09-22T17:56:46+00:00",
-          "score": 0.4312
+          "published": "2026-09-23T17:59:08+00:00",
+          "score": 0.4316
         },
         {
-          "id": "9b1c952ac049",
+          "id": "c6cb53921f89",
           "tier": "skim",
           "category": "frontier",
-          "title": "SpeakerMem-R1: Dual-Track Memory for Multi-Party Dialogue Achieves SOTA on EverMemBench",
-          "why_it_matters": "Long-context multi-party memory is an active frontier for conversational agents; this work's RL-trained writer and dual-track architecture offer concrete techniques for attribution and relational state tracking.",
-          "summary": "SpeakerMem-R1 uses a dual-track memory: verbatim speaker-labeled messages plus derived structured states organized into person-level and group-level views, combined at query time by entity, event, and time. Writer-R1 is trained with speaker-conditioned GRPO using a SpeakerLevenshtein reward to reduce attribution errors. On GroupMemBench, SocialMemBench, and EverMemBench the system achieves 47.9%, 69.2%, and 61.9% binary accuracy; EverMemBench reports 62.33%, described as the best reported result among current frameworks. RL raises SFT writer accuracy from 57.38% to 68.20% on a 305-question controlled evaluation.",
+          "title": "Compressed Permutation Oracle Soundness Bound Tightened from O(N^{1/12}) to Ω(N^{1/2})",
+          "why_it_matters": "This is a foundational result in quantum cryptography: a tighter soundness bound directly strengthens quantum security proofs for SHA3 (sponge construction) and SHA1/SHA2 (Davies–Meyer), which underpin much of current cryptographic infrastructure.",
+          "summary": "The compressed permutation oracle technique, used to analyze quantum security of cryptographic constructions, was previously sound only up to O(N^{1/12}) queries on N-element permutations. A new, simpler proof tightens this to Ω(N^{1/2}), which is tight. The key technique constructs the compression isometry from a POVM on the naive purification. Immediate corollaries include tight collision and pre-image lower bounds for SHA3's sponge hash and the Davies–Meyer function in SHA1/SHA2.",
           "tags": [
-            "conversational-ai",
-            "memory",
-            "multi-party-dialogue",
-            "rl"
+            "quantum-cryptography",
+            "quantum-computing",
+            "hash-functions",
+            "complexity-theory"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2609.26780v1"
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2609.28469v1"
             }
           ],
-          "published": "2026-09-22T17:56:12+00:00",
-          "score": 0.4311
+          "published": "2026-09-23T17:57:21+00:00",
+          "score": 0.4315
         },
         {
-          "id": "b7ce14e363bb",
+          "id": "e3c0890a2c56",
           "tier": "skim",
           "category": "frontier",
-          "title": "Epoch AI's JS Denain and Nathan Lambert Debate RSI, US-China Gap, and Frontier Post-Training",
-          "why_it_matters": "As an AI/ML engineer tracking field trajectory, this is a substantive technical debate between two researchers who closely study AI progress metrics — covering RSI timelines, Chinese model competitiveness, and what frontier post-training recipes look like.",
-          "summary": "JS Denain (Epoch AI Insights lead) and Nathan Lambert discuss whether internal lab measurements justify imminent RSI claims. Denain finds the published evidence — including OpenAI's reported 2× monthly increase in Codex spending by researchers — suggestive but not strong evidence of a near-term software intelligence explosion. Topics also cover distillation's role in the US-China gap, what Chinese job postings reveal, and open vs. closed model safety.",
+          "title": "Language-Guided Robot Group Joining with Spectral Partitioning and Formation-Prior Goal Prediction",
+          "why_it_matters": "Combining language grounding with geometric social-formation priors for robot navigation is a technically interesting approach to a hard semantic planning problem relevant to embodied AI research.",
+          "summary": "The system formulates robot group joining as a language-grounded task: given a natural-language group description, it uses recursive spectral partitioning to generate candidate subsets and ranks them with a language-conditioned image-geometry model. A goal predictor then uses human-formation priors to produce a multimodal energy-orientation map over feasible joining poses. Evaluated on conversations, queues, and audiences; achieves sub-second inference and outperforms all baselines in joining-pose prediction, with real-robot validation.",
           "tags": [
-            "rsi",
-            "scaling",
-            "us-china-ai",
-            "post-training"
+            "social-robotics",
+            "navigation",
+            "language-grounding",
+            "embodied-ai"
           ],
           "sources": [
             {
-              "name": "Interconnects",
-              "url": "https://www.interconnects.ai/p/debating-rsi-the-us-china-gap-and"
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2609.28467v1"
             }
           ],
-          "published": "2026-09-22T13:37:45+00:00",
-          "score": 0.4061
+          "published": "2026-09-23T17:55:48+00:00",
+          "score": 0.4313
         }
       ]
     }
