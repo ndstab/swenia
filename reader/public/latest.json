@@ -1,130 +1,135 @@
 {
-  "date": "2026-09-28",
-  "generated_at": "2026-09-28T05:12:03.407325+00:00",
-  "summary_line": "2 worth knowing",
+  "date": "2026-09-29",
+  "generated_at": "2026-09-29T05:34:35.006010+00:00",
+  "summary_line": "1 must-know · 3 worth knowing",
   "counts": {
     "total": 5,
-    "headlines": 0,
-    "frontier": 5
+    "headlines": 1,
+    "frontier": 4
   },
   "sections": [
     {
       "key": "headlines",
       "title": "Headlines",
-      "cards": []
+      "cards": [
+        {
+          "id": "9552195c964d",
+          "tier": "must_know",
+          "category": "headline",
+          "title": "Hugging Face Holo4: Generalist Computer-Use Agents in 27B Dense and 35B-A3B MoE",
+          "why_it_matters": "As an AI/ML engineer, Holo4 represents a significant open-weight agentic model release that unifies GUI, code, MCP, and API interaction in a single model — a genuine architectural and training advance worth tracking for agent system design.",
+          "summary": "Hugging Face releases Holo4 in two sizes (27B dense, 35B-A3B MoE), both available via H Models API. Models interact via GUIs, code, MCP, and APIs interchangeably, trained with supervised and RL on tasks from their Agentic Task Factory. On OSWorld 2.0, Holo4-27B scores 61.7% vs. 81.8% for Opus 5.5. Trajectories and weights (FP16, FP8, GGUF) are fully open-sourced.",
+          "tags": [
+            "agents",
+            "computer-use",
+            "open-weights",
+            "reinforcement-learning"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/Hcompany/holo4"
+            }
+          ],
+          "published": "2026-09-28T09:44:05+00:00",
+          "score": 2.2774
+        }
+      ]
     },
     {
       "key": "frontier",
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "4ae60f3ad564",
+          "id": "eead37cf78dd",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Self-Supervised Confidence Fine-Tuning Cuts Reasoning Tokens by 25% Without Length Penalties",
-          "why_it_matters": "If you work with long-chain-of-thought models, this shows a training-signal shortcut — only 600 problems, no RL length penalties — that competes with explicit efficiency objectives.",
-          "summary": "Fine-tuning reasoning models (Gemma, Qwen, Nemotron, GPT-OSS) to predict their own mid-trajectory confidence reduces generated tokens by up to 25% at matched accuracy on math, science, and coding benchmarks. No early-stopping or confidence elicitation is used at inference. The efficiency gain emerges as a side-effect of metacognitive supervision, not direct length optimization.",
+          "title": "Telescopic Language Models: A Single Training Run Yields Valid LMs at Every Layer Depth",
+          "why_it_matters": "For a researcher working on efficient inference or model compression, TLM's stochastic prefix supervision approach directly addresses the failure mode of fixed-exit Matryoshka-style models and cuts quality-budget curve area by 43–44% — a concrete, reproducible training objective result.",
+          "summary": "Telescopic Language Models (TLMs) use stochastic prefix supervision — randomly truncated capacity-axis prefixes trained against full next-token targets plus one full-capacity pass — producing a valid LM at every layer depth with only two forward-backward passes per step and no architectural changes. On a 200M proxy suite (20B FineWeb-Edu tokens), TLM reduces area under the quality-budget curve by 43–44% vs. fixed-exit Matryoshka suites, matches them at full capacity, and costs ~12% less GPU per run.",
           "tags": [
-            "reasoning",
-            "inference-efficiency",
-            "self-supervised",
-            "fine-tuning"
+            "efficient-inference",
+            "scaling",
+            "training-methods",
+            "language-models"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2609.31619v1"
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2609.35769v1"
             }
           ],
-          "published": "2026-09-25T17:59:52+00:00",
-          "score": 0.6592
+          "published": "2026-09-28T17:59:53+00:00",
+          "score": 1.2772
         },
         {
-          "id": "75f76fd5f661",
+          "id": "a5a1b41e6ae6",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Black-Box Post-Processing Algorithms Align Generative AI Output Attribute Distributions to User Targets",
-          "why_it_matters": "Fairness and synthetic-data use cases often require distributional control without model access; query-optimal post-processing algorithms are a practical tool for ML deployment pipelines.",
-          "summary": "For black-box generative models, the paper develops algorithms that post-process outputs so their joint attribute distribution matches a user-specified target, minimizing expected query count. Both exact and approximate alignment are covered, with optimality proved as requested outputs grow. Experiments on text-to-image and geocoded persona generation validate improvements over prompting-based interventions.",
-          "tags": [
-            "fairness",
-            "synthetic-data",
-            "alignment",
-            "black-box"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2609.31607v1"
-            }
-          ],
-          "published": "2026-09-25T17:55:49+00:00",
-          "score": 0.6585
-        },
-        {
-          "id": "71e0fa6544d1",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "Gap-Free Differentially Private PCA Algorithm for Gaussian Data",
-          "why_it_matters": "Differential privacy for PCA has long required eigenvalue gap assumptions; a gap-free result is a meaningful theoretical advance for privacy-preserving ML pipelines.",
-          "summary": "The paper presents a differentially private PCA algorithm that removes the eigenvalue gap assumption previously required, specifically for Gaussian-distributed data. Details on error rates and mechanisms are not provided in the abstract beyond this core claim.",
-          "tags": [
-            "differential-privacy",
-            "pca",
-            "theory"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2609.31614v1"
-            }
-          ],
-          "published": "2026-09-25T17:58:38+00:00",
-          "score": 0.2197
-        },
-        {
-          "id": "606fd0c967c6",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "First-Order Stationarity Theory for Reverse Diffusion Samplers Parallels Nonconvex Optimization",
-          "why_it_matters": "Understanding diffusion sampling through an optimization lens gives researchers sharper convergence guarantees and a principled framework for analyzing discretized samplers.",
-          "summary": "SDE-based reverse diffusions of overdamped and underdamped Langevin processes contract relative Fisher divergences at explicit exponential rates when the forward process's stationary potential is strongly convex — a condition on the noising process, not the data. Discretization analysis yields averaged first-order stationarity bounds analogous to averaged gradient-norm guarantees in nonconvex optimization, guaranteeing score consistency rather than global mode weights.",
+          "title": "PDMD: One-Line Fix to Distribution Matching Distillation Stabilizes Video Diffusion at 4 NFE",
+          "why_it_matters": "If you work on diffusion model distillation or video generation, PDMD's theoretical grounding of why DMD degrades — critic error accumulation — and its near-zero-overhead fix are directly actionable insights for production-quality fast samplers.",
+          "summary": "PDMD projects out the DMD update component parallel to the student-critic endpoint residual, provably removing a constant fraction of critic error while discarding only a vanishing fraction of ideal DMD signal. Requires a single code-line change with no extra networks or training stages. With Wan2.1 at 4 NFE, PDMD achieves VBench total score 83.73, surpassing matched DMD by 1.03 points; on MiniMax-H3 joint video-audio generation, scores 83.17 visual total, 0.41 above the strongest distilled baseline.",
           "tags": [
             "diffusion-models",
-            "sampling",
-            "theory",
-            "langevin"
+            "video-generation",
+            "distillation",
+            "efficient-inference"
           ],
           "sources": [
             {
               "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2609.31612v1"
+              "url": "https://arxiv.org/abs/2609.35768v1"
+            },
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2609.35763v1"
             }
           ],
-          "published": "2026-09-25T17:57:43+00:00",
-          "score": 0.2196
+          "published": "2026-09-28T17:59:52+00:00",
+          "score": 1.2772
         },
         {
-          "id": "0778a0722dfc",
-          "tier": "skim",
+          "id": "027d77b79e0f",
+          "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Measurement-Based Uncomputation Framework Trades Probabilistic Success for Quantum Circuit Spacetime Cost",
-          "why_it_matters": "Reducing uncomputation overhead is critical for early fault-tolerant quantum algorithms; this algebraic framework offers structured trade-offs directly relevant to quantum ML and near-term quantum computing.",
-          "summary": "The paper frames measurement-based uncomputation (MBU) via quantum error correction: measurements on garbage registers induce phase errors whose syndrome determines success probability. Post-selected MBU eliminates the uncomputation oracle at probabilistic cost governed by the affine rank of the garbage support, shown to be small in the HHL algorithm example. A structural condition allows reuse of the original oracle for phase correction, interpolating between post-selected, partial, and deterministic MBU.",
+          "title": "UMM-Reflection: Interleaved RL Trains Unified Models to Reflectively Self-Repair Image Generation",
+          "why_it_matters": "The interleaved RL formulation — sharing one initial image across sibling trajectories so group-relative advantage compares full reflection strategies, with credit flowing across rounds and to both model roles — is a technically novel approach to self-correction in unified multimodal models relevant to agents and RL post-training research.",
+          "summary": "UMM-Reflection applies RL to complete reflection trajectories within a single unified model that both perceives and generates images. Sibling trajectories share an initial image for group-relative advantage estimation; one trajectory-level advantage updates both reflection tokens and flow-based image revisions jointly. On BAGEL, GenEval improves 12.05 points over SFT; gains also transfer to WISE (+10.97), OneIG-Bench (+3.48), and T2I-CompBench++ (+4.63), all held-out benchmarks.",
           "tags": [
-            "quantum-computing",
-            "fault-tolerance",
-            "uncomputation",
-            "error-correction"
+            "reinforcement-learning",
+            "multimodal",
+            "post-training",
+            "image-generation"
           ],
           "sources": [
             {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2609.31605v1"
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2609.35767v1"
             }
           ],
-          "published": "2026-09-25T17:54:52+00:00",
-          "score": 0.2195
+          "published": "2026-09-28T17:59:36+00:00",
+          "score": 1.2771
+        },
+        {
+          "id": "b4b6fb02e11a",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "FurE: 10× Faster Animal Fur Reconstruction via PCA Decoder Transferred from Human Hair Data",
+          "why_it_matters": "The cross-domain transfer trick — using a PCA-based decoder trained on human hair to handle animal fur without animal-fur datasets — is a methodologically interesting trick for any researcher working on neural implicit representations or data-scarce 3D reconstruction.",
+          "summary": "FurE reconstructs editable, per-strand animal fur from multi-view images without animal-fur training data. It optimizes a root-conditioned latent field decoded via a PCA-based decoder pre-trained on human hair strands, and reconstructs a defurred body using surface-constrained Gaussian Frosting with part-based priors. Achieves 10× speedup in strand training over dense per-strand SOTA while retaining fidelity.",
+          "tags": [
+            "3d-reconstruction",
+            "neural-rendering",
+            "representation-learning"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2609.35770v1"
+            }
+          ],
+          "published": "2026-09-28T17:59:58+00:00",
+          "score": 0.4257
         }
       ]
     }
