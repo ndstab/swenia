@@ -1,10 +1,10 @@
 {
-  "date": "2026-09-29",
-  "generated_at": "2026-09-29T05:34:35.006010+00:00",
-  "summary_line": "1 must-know · 3 worth knowing",
+  "date": "2026-09-30",
+  "generated_at": "2026-09-30T05:22:50.929559+00:00",
+  "summary_line": "4 worth knowing",
   "counts": {
-    "total": 5,
-    "headlines": 1,
+    "total": 6,
+    "headlines": 2,
     "frontier": 4
   },
   "sections": [
@@ -13,26 +13,48 @@
       "title": "Headlines",
       "cards": [
         {
-          "id": "9552195c964d",
-          "tier": "must_know",
+          "id": "493cf3fce1b8",
+          "tier": "worth_knowing",
           "category": "headline",
-          "title": "Hugging Face Holo4: Generalist Computer-Use Agents in 27B Dense and 35B-A3B MoE",
-          "why_it_matters": "As an AI/ML engineer, Holo4 represents a significant open-weight agentic model release that unifies GUI, code, MCP, and API interaction in a single model — a genuine architectural and training advance worth tracking for agent system design.",
-          "summary": "Hugging Face releases Holo4 in two sizes (27B dense, 35B-A3B MoE), both available via H Models API. Models interact via GUIs, code, MCP, and APIs interchangeably, trained with supervised and RL on tasks from their Agentic Task Factory. On OSWorld 2.0, Holo4-27B scores 61.7% vs. 81.8% for Opus 5.5. Trajectories and weights (FP16, FP8, GGUF) are fully open-sourced.",
+          "title": "NVIDIA Kumo Tabular: Open Foundation Model Hits #1 on Four Tabular Benchmarks",
+          "why_it_matters": "If you work on enterprise ML pipelines, a zero-shot tabular model that tops TabArena, BeyondArena, TALENT, and ScoringBench without training or feature engineering is a direct alternative to the XGBoost/LightGBM workflow.",
+          "summary": "NVIDIA Kumo Tabular is an open foundation model (28M–215M params) for tabular classification and regression. It performs in-context learning in a single forward pass with no fine-tuning, using column, row, and in-context attention (column attention scales linearly with rows). Pretrained on synthetic data only; released under OpenMDW-1.1 for commercial use on Hugging Face.",
           "tags": [
-            "agents",
-            "computer-use",
-            "open-weights",
-            "reinforcement-learning"
+            "tabular ml",
+            "foundation models",
+            "in-context learning",
+            "nvidia"
           ],
           "sources": [
             {
               "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/Hcompany/holo4"
+              "url": "https://huggingface.co/blog/nvidia/kumo-tabular"
             }
           ],
-          "published": "2026-09-28T09:44:05+00:00",
-          "score": 2.2774
+          "published": "2026-09-29T15:30:38+00:00",
+          "score": 1.2372
+        },
+        {
+          "id": "984223f109f3",
+          "tier": "skim",
+          "category": "headline",
+          "title": "ProvenanceGuard: Source-Aware Factuality Verification for MCP-Based LLM Agents",
+          "why_it_matters": "As LLM agents increasingly route over multiple tools, cross-source conflation is a silent failure mode; this post-generation verification layer is directly applicable to any multi-source agent pipeline you might build.",
+          "summary": "ProvenanceGuard is a post-generation verification layer for MCP agents that tracks source identity through the full pipeline rather than pooling evidence. It decomposes answers into claims, routes each to its most relevant source, checks NLI support (DeBERTa), verifies attribution match, and emits per-claim and answer-level verdicts. Blocked answers go through RARR-style repair and re-verification.",
+          "tags": [
+            "llm agents",
+            "factuality",
+            "mcp",
+            "verification"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/MultiverseComputingCAI/getting-the-source-right-not-just-the-fact-source"
+            }
+          ],
+          "published": "2026-09-29T13:07:00+00:00",
+          "score": 0.3989
         }
       ]
     },
@@ -41,95 +63,96 @@
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "eead37cf78dd",
+          "id": "34b40a592223",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Telescopic Language Models: A Single Training Run Yields Valid LMs at Every Layer Depth",
-          "why_it_matters": "For a researcher working on efficient inference or model compression, TLM's stochastic prefix supervision approach directly addresses the failure mode of fixed-exit Matryoshka-style models and cuts quality-budget curve area by 43–44% — a concrete, reproducible training objective result.",
-          "summary": "Telescopic Language Models (TLMs) use stochastic prefix supervision — randomly truncated capacity-axis prefixes trained against full next-token targets plus one full-capacity pass — producing a valid LM at every layer depth with only two forward-backward passes per step and no architectural changes. On a 200M proxy suite (20B FineWeb-Edu tokens), TLM reduces area under the quality-budget curve by 43–44% vs. fixed-exit Matryoshka suites, matches them at full capacity, and costs ~12% less GPU per run.",
+          "title": "Skill-Space Shooting: Foundation-Model-Guided Policy Improvement Without Human Demos",
+          "why_it_matters": "For researchers working on robot learning and autonomous agents, this proposes a scalable correction mechanism that bypasses per-task human demonstration by leveraging reusable skill primitives.",
+          "summary": "Skill-space shooting uses foundation model guidance to search for corrective behaviors—short, reusable skills—and converts successful trials into policy improvement signal. Real-world experiments show iterative policy gains without human demonstration, and skills transfer across tasks to reduce the cost of teaching new ones.",
           "tags": [
-            "efficient-inference",
-            "scaling",
-            "training-methods",
-            "language-models"
+            "robot learning",
+            "rl",
+            "autonomous agents",
+            "policy improvement"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2609.38178v1"
+            }
+          ],
+          "published": "2026-09-29T17:59:55+00:00",
+          "score": 1.2807
+        },
+        {
+          "id": "4d22a3ee01cd",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Imagine3D-LLM: MLLMs Decode Compact 3D Gaussian Representations to Improve Spatial Reasoning",
+          "why_it_matters": "Teaching MLLMs to internally reconstruct a scene before answering is a novel architectural approach to 3D understanding that could inform how you design multimodal reasoning systems.",
+          "summary": "Imagine3D-LLM appends learnable summary tokens after image tokens and decodes them into a compact 3D Gaussian Splatting representation supervised by a photometric reconstruction loss, trained jointly with next-token prediction. The reconstruction objective also strengthens cross-frame correspondence in the underlying image features. The model outperforms prior methods across multiple spatial reasoning and 3D understanding benchmarks.",
+          "tags": [
+            "multimodal llm",
+            "3d understanding",
+            "spatial reasoning",
+            "gaussian splatting"
           ],
           "sources": [
             {
               "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2609.35769v1"
+              "url": "https://arxiv.org/abs/2609.38177v1"
             }
           ],
-          "published": "2026-09-28T17:59:53+00:00",
-          "score": 1.2772
+          "published": "2026-09-29T17:59:52+00:00",
+          "score": 1.2806
         },
         {
-          "id": "a5a1b41e6ae6",
+          "id": "a704b5cdb0b7",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "PDMD: One-Line Fix to Distribution Matching Distillation Stabilizes Video Diffusion at 4 NFE",
-          "why_it_matters": "If you work on diffusion model distillation or video generation, PDMD's theoretical grounding of why DMD degrades — critic error accumulation — and its near-zero-overhead fix are directly actionable insights for production-quality fast samplers.",
-          "summary": "PDMD projects out the DMD update component parallel to the student-critic endpoint residual, provably removing a constant fraction of critic error while discarding only a vanishing fraction of ideal DMD signal. Requires a single code-line change with no extra networks or training stages. With Wan2.1 at 4 NFE, PDMD achieves VBench total score 83.73, surpassing matched DMD by 1.03 points; on MiniMax-H3 joint video-audio generation, scores 83.17 visual total, 0.41 above the strongest distilled baseline.",
+          "title": "STEPQuant: Spatial-Temporal PTQ for Delta-Rule Recurrent States Hits 5x Compression at 6-Bit",
+          "why_it_matters": "Linear attention models are increasingly viable for long-context serving, and quantizing their recurrent states is the key memory bottleneck this directly addresses with concrete gains on Qwen3 and Kimi-Linear.",
+          "summary": "STEPQuant is a post-training quantization framework for Delta-rule recurrent states that allocates precision by error magnitude and memory lifetime, jointly fitting key-row and value-column scales. On Qwen3.8-27B and Kimi-Linear-48B-A3B-Instruct, 6-bit STEPQuant matches FP32 accuracy and outperforms uniform INT8 at 4-bit. Integrated into SGLang, it achieves over 5x recurrent-state compression and reduces total serving memory by up to 68.7%.",
           "tags": [
-            "diffusion-models",
-            "video-generation",
-            "distillation",
-            "efficient-inference"
+            "quantization",
+            "linear attention",
+            "inference",
+            "serving"
           ],
           "sources": [
             {
               "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2609.35768v1"
+              "url": "https://arxiv.org/abs/2609.38169v1"
             },
             {
               "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2609.35763v1"
+              "url": "https://arxiv.org/abs/2609.38166v1"
             }
           ],
-          "published": "2026-09-28T17:59:52+00:00",
-          "score": 1.2772
+          "published": "2026-09-29T17:59:40+00:00",
+          "score": 1.2806
         },
         {
-          "id": "027d77b79e0f",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "UMM-Reflection: Interleaved RL Trains Unified Models to Reflectively Self-Repair Image Generation",
-          "why_it_matters": "The interleaved RL formulation — sharing one initial image across sibling trajectories so group-relative advantage compares full reflection strategies, with credit flowing across rounds and to both model roles — is a technically novel approach to self-correction in unified multimodal models relevant to agents and RL post-training research.",
-          "summary": "UMM-Reflection applies RL to complete reflection trajectories within a single unified model that both perceives and generates images. Sibling trajectories share an initial image for group-relative advantage estimation; one trajectory-level advantage updates both reflection tokens and flow-based image revisions jointly. On BAGEL, GenEval improves 12.05 points over SFT; gains also transfer to WISE (+10.97), OneIG-Bench (+3.48), and T2I-CompBench++ (+4.63), all held-out benchmarks.",
-          "tags": [
-            "reinforcement-learning",
-            "multimodal",
-            "post-training",
-            "image-generation"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2609.35767v1"
-            }
-          ],
-          "published": "2026-09-28T17:59:36+00:00",
-          "score": 1.2771
-        },
-        {
-          "id": "b4b6fb02e11a",
+          "id": "068752a7a64d",
           "tier": "skim",
           "category": "frontier",
-          "title": "FurE: 10× Faster Animal Fur Reconstruction via PCA Decoder Transferred from Human Hair Data",
-          "why_it_matters": "The cross-domain transfer trick — using a PCA-based decoder trained on human hair to handle animal fur without animal-fur datasets — is a methodologically interesting trick for any researcher working on neural implicit representations or data-scarce 3D reconstruction.",
-          "summary": "FurE reconstructs editable, per-strand animal fur from multi-view images without animal-fur training data. It optimizes a root-conditioned latent field decoded via a PCA-based decoder pre-trained on human hair strands, and reconstructs a defurred body using surface-constrained Gaussian Frosting with part-based priors. Achieves 10× speedup in strand training over dense per-strand SOTA while retaining fidelity.",
+          "title": "Theory Paper: Semantic Speciation and Nonlocality Windows in Generative Models Proven to Coincide",
+          "why_it_matters": "If you study diffusion or autoregressive dynamics, this theoretical result formally links two empirically observed phenomena—semantic class commitment and long-range dependency onset—under a common-cause hypothesis.",
+          "summary": "The paper formalizes two temporal windows in generative model dynamics: a speciation window (when a sample commits to a semantic class) and a nonlocality window (when local context becomes insufficient). Under a 'common cause' hypothesis—that semantic labels explain a fraction of long-range token correlations—the authors prove the nonlocality window must lie within the speciation window. Both windows shrink to a single phase transition as system size grows, verified analytically in Gaussian mixtures.",
           "tags": [
-            "3d-reconstruction",
-            "neural-rendering",
-            "representation-learning"
+            "generative models",
+            "theory",
+            "diffusion",
+            "scaling"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2609.35770v1"
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2609.38176v1"
             }
           ],
-          "published": "2026-09-28T17:59:58+00:00",
-          "score": 0.4257
+          "published": "2026-09-29T17:59:50+00:00",
+          "score": 0.4269
         }
       ]
     }
