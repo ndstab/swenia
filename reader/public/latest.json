@@ -1,10 +1,10 @@
 {
-  "date": "2026-09-30",
-  "generated_at": "2026-09-30T05:22:50.929559+00:00",
-  "summary_line": "4 worth knowing",
+  "date": "2026-10-01",
+  "generated_at": "2026-10-01T05:38:14.147937+00:00",
+  "summary_line": "1 must-know · 3 worth knowing",
   "counts": {
-    "total": 6,
-    "headlines": 2,
+    "total": 7,
+    "headlines": 3,
     "frontier": 4
   },
   "sections": [
@@ -13,48 +13,70 @@
       "title": "Headlines",
       "cards": [
         {
-          "id": "493cf3fce1b8",
-          "tier": "worth_knowing",
+          "id": "15e70ee5e4a7",
+          "tier": "must_know",
           "category": "headline",
-          "title": "NVIDIA Kumo Tabular: Open Foundation Model Hits #1 on Four Tabular Benchmarks",
-          "why_it_matters": "If you work on enterprise ML pipelines, a zero-shot tabular model that tops TabArena, BeyondArena, TALENT, and ScoringBench without training or feature engineering is a direct alternative to the XGBoost/LightGBM workflow.",
-          "summary": "NVIDIA Kumo Tabular is an open foundation model (28M–215M params) for tabular classification and regression. It performs in-context learning in a single forward pass with no fine-tuning, using column, row, and in-context attention (column attention scales linearly with rows). Pretrained on synthetic data only; released under OpenMDW-1.1 for commercial use on Hugging Face.",
+          "title": "Google DeepMind Announces Gemini 4 Argon: Frontier Model with 1M Output Tokens and 77.9% on DeepSWE",
+          "why_it_matters": "As an AI/ML engineer, Gemini 4 Argon represents a major frontier model release with directly relevant capabilities: SOTA software engineering benchmarks, massive output context, and real internal deployments at Google scale.",
+          "summary": "Gemini 4 Argon launches in limited access via Google's Fairwind Program. It sets a new SOTA on DeepSWE v1.1 at 77.9% and leads the Vals Index across finance, coding, legal, and tax. Output token limit expands to 1M (up from 64K). Pricing: $2/M input, $10/M output, 95% off cached inputs. Internal use cases include C++→Rust migration (800K+ lines), memory optimization freeing 300 TiB across Google data centers, and quantum algorithm optimization beating a published baseline by 40%.",
           "tags": [
-            "tabular ml",
-            "foundation models",
-            "in-context learning",
-            "nvidia"
+            "gemini",
+            "google-deepmind",
+            "frontier-model",
+            "software-engineering"
           ],
           "sources": [
             {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/nvidia/kumo-tabular"
+              "name": "DeepMind",
+              "url": "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence/"
             }
           ],
-          "published": "2026-09-29T15:30:38+00:00",
-          "score": 1.2372
+          "published": "2026-09-30T20:01:45+00:00",
+          "score": 2.6252
         },
         {
-          "id": "984223f109f3",
-          "tier": "skim",
+          "id": "0a622a33b8e3",
+          "tier": "worth_knowing",
           "category": "headline",
-          "title": "ProvenanceGuard: Source-Aware Factuality Verification for MCP-Based LLM Agents",
-          "why_it_matters": "As LLM agents increasingly route over multiple tools, cross-source conflation is a silent failure mode; this post-generation verification layer is directly applicable to any multi-source agent pipeline you might build.",
-          "summary": "ProvenanceGuard is a post-generation verification layer for MCP agents that tracks source identity through the full pipeline rather than pooling evidence. It decomposes answers into claims, routes each to its most relevant source, checks NLI support (DeBERTa), verifies attribution match, and emits per-claim and answer-level verdicts. Blocked answers go through RARR-style repair and re-verification.",
+          "title": "Google DeepMind's SynthID Bio Watermarks AI-Generated Proteins That Remain Detectable After Physical Synthesis",
+          "why_it_matters": "A technically novel safety primitive at the intersection of AI and biosecurity — the watermark survives the digital-to-physical transition, which is a meaningful capability advance relevant to AI safety and responsible deployment research.",
+          "summary": "SynthID Bio embeds imperceptible watermarks into AI-designed proteins by subtly guiding amino acid choice (sequences) and adjusting atomic coordinates (3D structures). Wet-lab testing across three target proteins (VEGF-A, SARS-CoV-2 spike RBD, PD-L1) showed watermarked binders matched unwatermarked hit rate, binding affinity, and sequence diversity. For structure prediction, a small portion of AlphaFold 3's diffusion network is fine-tuned to embed watermarks natively into model weights with near-perfect detectability.",
           "tags": [
-            "llm agents",
-            "factuality",
-            "mcp",
-            "verification"
+            "biosecurity",
+            "watermarking",
+            "synthetic-biology",
+            "google-deepmind"
+          ],
+          "sources": [
+            {
+              "name": "DeepMind",
+              "url": "https://deepmind.google/blog/introducing-synthid-bio/"
+            }
+          ],
+          "published": "2026-09-30T15:03:07+00:00",
+          "score": 1.2249
+        },
+        {
+          "id": "581ab3112c30",
+          "tier": "worth_knowing",
+          "category": "headline",
+          "title": "Open TTS Leaderboard Launches Objective, Multilingual Evaluation for 8K+ Hugging Face TTS Models",
+          "why_it_matters": "If you work with or evaluate TTS systems, this leaderboard offers a fast, reproducible, objective alternative to slow arena-style voting — covering open-weight models that arenas systematically underrepresent.",
+          "summary": "Hugging Face's Open TTS Leaderboard evaluates models on WER/CER (via Qwen3 ASR), batched inference speed (RTFx) and streaming latency (TTFA) on H200, and speaker similarity (WavLM cosine similarity). Evaluation drops from weeks to hours. Kokoro-82M, Supertonic-3, and fishaudio/s2-pro lead on English WER. Multilingual and voice-cloning splits included; human preference ranking is explicitly not replaced.",
+          "tags": [
+            "tts",
+            "evaluation",
+            "open-source",
+            "multilingual"
           ],
           "sources": [
             {
               "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/MultiverseComputingCAI/getting-the-source-right-not-just-the-fact-source"
+              "url": "https://huggingface.co/blog/open-tts-leaderboard"
             }
           ],
-          "published": "2026-09-29T13:07:00+00:00",
-          "score": 0.3989
+          "published": "2026-09-30T00:00:00+00:00",
+          "score": 0.9939
         }
       ]
     },
@@ -63,96 +85,92 @@
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "34b40a592223",
+          "id": "5155b289a771",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Skill-Space Shooting: Foundation-Model-Guided Policy Improvement Without Human Demos",
-          "why_it_matters": "For researchers working on robot learning and autonomous agents, this proposes a scalable correction mechanism that bypasses per-task human demonstration by leveraging reusable skill primitives.",
-          "summary": "Skill-space shooting uses foundation model guidance to search for corrective behaviors—short, reusable skills—and converts successful trials into policy improvement signal. Real-world experiments show iterative policy gains without human demonstration, and skills transfer across tasks to reduce the cost of teaching new ones.",
+          "title": "Ranking-PE: AUROC-Optimized Prompt Evolution for Imbalanced Multimodal Clinical Diagnosis",
+          "why_it_matters": "Directly relevant to anyone doing prompt optimization or RLHF-adjacent work on imbalanced datasets — it shows accuracy-based objectives can actively harm ranking quality in high-stakes settings, and offers a drop-in fix.",
+          "summary": "Ranking-PE replaces per-instance correctness cells in prompt-evolution score matrices with pairwise-ordering cells over (positive, negative) pairs, whose column average equals empirical AUROC by the Wilcoxon-Mann-Whitney identity. Applied to MIMIC across three diseases, it beats accuracy-based prompt evolution by +5.8 AUROC pp on fine-tuned Qwen3-VL-8B and +16.2 pp on MedGemma-4B, at no extra model calls. Ablations show a medical-grade visual backbone is a prerequisite that prompt search alone cannot substitute.",
           "tags": [
-            "robot learning",
-            "rl",
-            "autonomous agents",
-            "policy improvement"
+            "prompt-optimization",
+            "multimodal",
+            "clinical-ai",
+            "auroc"
           ],
           "sources": [
             {
               "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2609.38178v1"
+              "url": "https://arxiv.org/abs/2609.40361v1"
             }
           ],
-          "published": "2026-09-29T17:59:55+00:00",
-          "score": 1.2807
+          "published": "2026-09-30T17:59:56+00:00",
+          "score": 1.2761
         },
         {
-          "id": "4d22a3ee01cd",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "Imagine3D-LLM: MLLMs Decode Compact 3D Gaussian Representations to Improve Spatial Reasoning",
-          "why_it_matters": "Teaching MLLMs to internally reconstruct a scene before answering is a novel architectural approach to 3D understanding that could inform how you design multimodal reasoning systems.",
-          "summary": "Imagine3D-LLM appends learnable summary tokens after image tokens and decodes them into a compact 3D Gaussian Splatting representation supervised by a photometric reconstruction loss, trained jointly with next-token prediction. The reconstruction objective also strengthens cross-frame correspondence in the underlying image features. The model outperforms prior methods across multiple spatial reasoning and 3D understanding benchmarks.",
-          "tags": [
-            "multimodal llm",
-            "3d understanding",
-            "spatial reasoning",
-            "gaussian splatting"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2609.38177v1"
-            }
-          ],
-          "published": "2026-09-29T17:59:52+00:00",
-          "score": 1.2806
-        },
-        {
-          "id": "a704b5cdb0b7",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "STEPQuant: Spatial-Temporal PTQ for Delta-Rule Recurrent States Hits 5x Compression at 6-Bit",
-          "why_it_matters": "Linear attention models are increasingly viable for long-context serving, and quantizing their recurrent states is the key memory bottleneck this directly addresses with concrete gains on Qwen3 and Kimi-Linear.",
-          "summary": "STEPQuant is a post-training quantization framework for Delta-rule recurrent states that allocates precision by error magnitude and memory lifetime, jointly fitting key-row and value-column scales. On Qwen3.8-27B and Kimi-Linear-48B-A3B-Instruct, 6-bit STEPQuant matches FP32 accuracy and outperforms uniform INT8 at 4-bit. Integrated into SGLang, it achieves over 5x recurrent-state compression and reduces total serving memory by up to 68.7%.",
-          "tags": [
-            "quantization",
-            "linear attention",
-            "inference",
-            "serving"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2609.38169v1"
-            },
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2609.38166v1"
-            }
-          ],
-          "published": "2026-09-29T17:59:40+00:00",
-          "score": 1.2806
-        },
-        {
-          "id": "068752a7a64d",
+          "id": "347f7646bbb8",
           "tier": "skim",
           "category": "frontier",
-          "title": "Theory Paper: Semantic Speciation and Nonlocality Windows in Generative Models Proven to Coincide",
-          "why_it_matters": "If you study diffusion or autoregressive dynamics, this theoretical result formally links two empirically observed phenomena—semantic class commitment and long-range dependency onset—under a common-cause hypothesis.",
-          "summary": "The paper formalizes two temporal windows in generative model dynamics: a speciation window (when a sample commits to a semantic class) and a nonlocality window (when local context becomes insufficient). Under a 'common cause' hypothesis—that semantic labels explain a fraction of long-range token correlations—the authors prove the nonlocality window must lie within the speciation window. Both windows shrink to a single phase transition as system size grows, verified analytically in Gaussian mixtures.",
+          "title": "SCAPO: Semifactual Stability Improves Token-Level Credit Assignment in GRPO, Gains 5.63 pp on AIME",
+          "why_it_matters": "A technically grounded improvement to GRPO's credit assignment — directly relevant if you work on RL post-training for reasoning, addressing a concrete spurious-correlation failure mode with measurable gains.",
+          "summary": "SCAPO identifies that GRPO assigns uniform outcome-derived advantage to all tokens, potentially reinforcing sensitivity to task-irrelevant prompt features. It measures token probability drift under semifactual interventions (same problem, same answer, varied surface form) and downweights advantages for high-drift tokens in early training. On Qwen3-4B-Base and Qwen3-1.7B-Base, SCAPO improves AIME 2024–2026 accuracy over GRPO by 5.63 and 4.17 percentage points respectively, with gains on most math and all OOD benchmarks tested.",
           "tags": [
-            "generative models",
-            "theory",
-            "diffusion",
-            "scaling"
+            "rlvr",
+            "grpo",
+            "reasoning",
+            "post-training"
           ],
           "sources": [
             {
               "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2609.38176v1"
+              "url": "https://arxiv.org/abs/2609.40360v1"
             }
           ],
-          "published": "2026-09-29T17:59:50+00:00",
-          "score": 0.4269
+          "published": "2026-09-30T17:59:56+00:00",
+          "score": 0.4254
+        },
+        {
+          "id": "070430f8edee",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Non-Invasive Brain-to-Text Gains Were Largely Explained by Word-Duration Shortcuts, Not Brain Signals",
+          "why_it_matters": "A critical reproducibility finding for anyone following BCI or neural decoding research — it reframes a reported accuracy result and shows that a simple architectural fix yields genuinely stronger decoding.",
+          "summary": "The authors show that overlapping fixed-length windows in d'Ascoli et al. (2025) implicitly encode inter-word timing, allowing networks to guess words from duration statistics rather than brain activity: synthetic (brain-free) signals reach 22.0% balanced accuracy vs. 22.3% on real recordings. Processing each window independently eliminates the shortcut. The resulting SimpleB2T achieves 36.6% WER with five observations per word on perceived speech, approaching past invasive decoding results.",
+          "tags": [
+            "brain-computer-interface",
+            "neural-decoding",
+            "reproducibility",
+            "nlp"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2609.40359v1"
+            }
+          ],
+          "published": "2026-09-30T17:59:52+00:00",
+          "score": 0.4254
+        },
+        {
+          "id": "7ac3f7734e2a",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "ViTeX-Bench: First Real-Video Benchmark for Scene Text Editing with 387 Videos and 13 Metrics",
+          "why_it_matters": "Relevant to researchers in video generation/editing or multimodal evaluation — provides a reproducible evaluation framework for a gap where general video metrics fail to capture text-specific correctness.",
+          "summary": "ViTeX-Bench comprises 387 real-world 720p videos with text-region masks and editing instructions across three evaluation axes: text correctness, visual/temporal quality, and edit locality, measured by 13 metrics. A 157-video frozen evaluation split supports fair comparison. The released ViTeX-Edit-14B achieves CharAcc 0.688, the highest among evaluated video-native editors, with motion-aligned glyph-video conditioning. Eight baselines tested; accurate text, temporal stability, and scene preservation remain difficult to achieve simultaneously.",
+          "tags": [
+            "video-editing",
+            "benchmark",
+            "scene-text",
+            "evaluation"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2609.40356v1"
+            }
+          ],
+          "published": "2026-09-30T17:59:33+00:00",
+          "score": 0.4253
         }
       ]
     }
