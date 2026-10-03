@@ -1,11 +1,11 @@
 {
-  "date": "2026-10-02",
-  "generated_at": "2026-10-02T05:24:50.447019+00:00",
-  "summary_line": "5 worth knowing",
+  "date": "2026-10-03",
+  "generated_at": "2026-10-03T05:07:01.174884+00:00",
+  "summary_line": "1 worth knowing",
   "counts": {
-    "total": 8,
-    "headlines": 2,
-    "frontier": 6
+    "total": 1,
+    "headlines": 1,
+    "frontier": 0
   },
   "sections": [
     {
@@ -13,188 +13,33 @@
       "title": "Headlines",
       "cards": [
         {
-          "id": "a885ed61f54a",
+          "id": "d599f0a282be",
           "tier": "worth_knowing",
           "category": "headline",
-          "title": "AutoSynthData: ServiceNow's Pipeline for Turning Agent Failures into Training Data",
-          "why_it_matters": "If you're building or fine-tuning enterprise agents, this is a concrete, end-to-end curriculum generation framework from a major enterprise AI lab worth understanding architecturally.",
-          "summary": "ServiceNow CoreAI's AutoSynthData converts target-model failures and teacher-model successes into new training tasks for enterprise agents. Tasks must satisfy feasibility, realism, and difficulty criteria; verifiers must be sound and complete. As the model improves, the curriculum shifts toward remaining weaknesses. Demonstrated on the EnterpriseOps Gym benchmark dataset.",
+          "title": "Ai2 Open-Sources AstaBrief 8B: 3.5× Faster Scientific Report Generation from Qwen3-8B",
+          "why_it_matters": "As an AI/ML engineer you may need to run scientific synthesis locally or adapt open-weight models for domain-specific long-form generation — AstaBrief's training recipe and open weights give you a reproducible starting point for both.",
+          "summary": "Ai2 fine-tuned Qwen3-8B into AstaBrief 8B for citation-grounded scientific report generation. Post-training used tens of thousands of real research queries, citation-focused filtering, and preference data. A single-pass pipeline (vs. section-by-section) cuts generation to 51.1s vs. 178.5s for Claude-powered Thinking mode (~3.5× faster). Weights, training data, and an example PDF workflow are fully open-sourced.",
           "tags": [
-            "agents",
+            "open-weights",
+            "scientific-nlp",
             "post-training",
-            "data-synthesis",
-            "enterprise-ai"
+            "report-generation"
           ],
           "sources": [
             {
               "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/ServiceNow-AI/autosynthdata"
+              "url": "https://huggingface.co/blog/allenai/astabrief"
             }
           ],
-          "published": "2026-10-02T04:01:31+00:00",
-          "score": 1.4713
-        },
-        {
-          "id": "0bf00b70dbd7",
-          "tier": "worth_knowing",
-          "category": "headline",
-          "title": "OLMo-Core 3: Open MoE Training Stack Reaches 1T Parameters with 2.7× Throughput Gain",
-          "why_it_matters": "Openly released training infrastructure that scales MoE to trillion parameters is a direct resource for research labs constrained by compute, and the architectural shift from FSDP to DDP-with-resident-experts is technically substantive.",
-          "summary": "OLMo-Core 3 replaces FSDP-based MoE training with a DDP system that keeps experts resident on GPUs and routes data to them. On 8 NVIDIA B300 GPUs, a 47B-parameter MoE reached 52,000 tokens/s/GPU versus 19,400 with the prior stack (~2.7× speedup). Scaling from 8 to 128 experts (4 active per token) grew total capacity from 4.6B to 47B parameters with under 5% throughput loss; benchmarked at over 1T total parameters.",
-          "tags": [
-            "moe",
-            "training-infrastructure",
-            "open-source",
-            "scaling"
-          ],
-          "sources": [
-            {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/allenai/olmocore3"
-            }
-          ],
-          "published": "2026-10-01T15:01:43+00:00",
-          "score": 1.2283
+          "published": "2026-10-02T15:19:50+00:00",
+          "score": 1.2386
         }
       ]
     },
     {
       "key": "frontier",
       "title": "Frontier & Papers",
-      "cards": [
-        {
-          "id": "e91e271ba7dc",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "GALA: Distilling Neural Avatar Animation into Linear Blendshapes for 60fps Mobile Rendering",
-          "why_it_matters": "The finding that learned avatar representations share a latent linear structure is a clean, generalizable result with implications for efficient neural rendering and model compression.",
-          "summary": "GALA distills pretrained 3D Gaussian avatar models into a shallow MLP coefficient predictor plus a linear blend of identity-independent blendshapes, constructed via block-local PCA under a rendering-aware metric. Applied to facial and full-body animation, it reduces CPU animation cost by up to three orders of magnitude, generalizes to held-out identities, and reaches 60fps on mobile devices.",
-          "tags": [
-            "3d-generation",
-            "neural-rendering",
-            "distillation",
-            "efficient-inference"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2610.02207v1"
-            }
-          ],
-          "published": "2026-10-01T17:59:58+00:00",
-          "score": 1.2801
-        },
-        {
-          "id": "f361e0cd028d",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "KaliBench: 8,504-Query CLI Benchmark Reveals No Open Model Exceeds 42% on Cybersecurity Tool Use",
-          "why_it_matters": "For researchers working on tool-use agents or verifiable reward signals, this is a concrete, large-scale benchmark with deterministic evaluation and demonstrated RL training applicability.",
-          "summary": "KaliBench covers 8,504 natural-language-to-CLI query-command pairs across 1,642 Kali Linux tools, 23 capability dimensions, and 5 security phases. Evaluation uses deterministic canonicalization and alias-aware comparison. In the unrestricted setting, no open-weight model exceeds 42% exact-command accuracy. SFT and RL with verifiable rewards from KaliBench bring an 8B model to performance comparable to a 685B MoE model.",
-          "tags": [
-            "benchmarks",
-            "tool-use",
-            "cybersecurity",
-            "rl-with-verifiable-rewards"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2610.02206v1"
-            }
-          ],
-          "published": "2026-10-01T17:59:55+00:00",
-          "score": 1.2801
-        },
-        {
-          "id": "7c0f8889026c",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "RPG Framework: Autonomous Robot Skill Improvement Without Weight Updates, 28.6%→95% Success",
-          "why_it_matters": "Weight-frozen self-improvement via simulation practice and symbolic skill refinement is a key frontier for scalable robotics; the jump from 28.6% to 95% over 15 rounds is a strong empirical result.",
-          "summary": "RPG (Reconstruct, Practice, Go Real) improves robot execution systems without updating model weights. It identifies manipulation capabilities offline, constructs simulation practice tasks, diagnoses failures using execution feedback and simulator state, then builds and refines a symbolic skill library and system prompt. On 22 held-out manipulation tasks, success improved from 28.6% to 95.0% after 15 rounds, outperforming ASPIRE (75.5%) and a GPT-6 Astra Pro-powered baseline (60.0%). All 30 physical trials succeeded post-calibration.",
-          "tags": [
-            "robotics",
-            "agents",
-            "self-improvement",
-            "embodied-ai"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2610.02204v1"
-            }
-          ],
-          "published": "2026-10-01T17:59:50+00:00",
-          "score": 1.28
-        },
-        {
-          "id": "4520783cd67f",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "NEPA-DiT: Adaptive Embedding Prediction at Every Denoising Step Hits FID 1.32 on ImageNet 256×256",
-          "why_it_matters": "Recomputing conditioning embeddings per denoising step via a learned predictor is a novel architectural idea with strong empirical results, relevant to anyone working on diffusion model conditioning or generative modeling.",
-          "summary": "NEPA trains a Transformer to predict the next continuous embedding in a sequence; in generation, clean-image embeddings are predicted from noisy-image and condition embeddings and recomputed at every denoising step. Combined with REPA, the resulting NEPA-DiT-XL achieves FID 1.32 on class-conditional ImageNet 256×256 using approximately one-third the training compute of REPA alone.",
-          "tags": [
-            "diffusion-models",
-            "generative-modeling",
-            "image-generation",
-            "architectures"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2610.02203v1"
-            }
-          ],
-          "published": "2026-10-01T17:59:49+00:00",
-          "score": 0.4267
-        },
-        {
-          "id": "08cab8a0a2e5",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "ScholarCatalyst Benchmark: Even Claude Fable 5.1 Reaches Only 0.51 Recall@20 on Research Paper Retrieval",
-          "why_it_matters": "A rigorous, author-annotated benchmark for idea-level retrieval is directly relevant to anyone building scientific agents or working on retrieval-augmented research assistants.",
-          "summary": "ScholarCatalyst has 184 lead authors of 207 CS papers label which prior papers did or could have advanced their projects, with rationales. The task: retrieve those papers from literature available at project start. Agentic search (0.42 R@20) underperformed embedding retrieval (0.48 R@20). An agent built on Claude Fable 5.1 reached only 0.51 R@20, highlighting limits of current retrieval methods for expert scientific intuition.",
-          "tags": [
-            "retrieval",
-            "scientific-agents",
-            "benchmarks",
-            "rag"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2610.02202v1"
-            }
-          ],
-          "published": "2026-10-01T17:59:47+00:00",
-          "score": 0.4267
-        },
-        {
-          "id": "db9f46c0fb89",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "SILSA: Sliding-Window Slice Latents for Topology-Preserving 3D Generation with 98%+ Fewer Tokens",
-          "why_it_matters": "The combination of dramatic token reduction and explicit topological supervision (persistence diagrams, Betti transitions) represents a technically substantive advance for 3D generative modeling.",
-          "summary": "SILSA represents 3D shapes as overlapping slice latents along three canonical axes, encoded by a Slice VAE and decoded via a sparse volumetric decoder, enabling single-stage rectified-flow generation. Slice-level topology supervision matches persistence diagrams and Betti transitions across slices. Versus the strongest baseline: +8.7% PSNR, +5.96 absolute coverage, −9.2% Betti error, 70% fewer tokens than the next-most-compact baseline, 40.4% less training memory, and 58.5% faster inference.",
-          "tags": [
-            "3d-generation",
-            "generative-modeling",
-            "topology",
-            "efficient-inference"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2610.02201v1"
-            }
-          ],
-          "published": "2026-10-01T17:59:46+00:00",
-          "score": 0.4267
-        }
-      ]
+      "cards": []
     }
   ]
 }
