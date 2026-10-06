@@ -1,11 +1,11 @@
 {
-  "date": "2026-10-05",
-  "generated_at": "2026-10-05T05:24:14.523887+00:00",
-  "summary_line": "3 worth knowing",
+  "date": "2026-10-06",
+  "generated_at": "2026-10-06T06:08:32.634940+00:00",
+  "summary_line": "2 worth knowing",
   "counts": {
-    "total": 6,
+    "total": 4,
     "headlines": 0,
-    "frontier": 6
+    "frontier": 4
   },
   "sections": [
     {
@@ -18,136 +18,92 @@
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "73a3a6804276",
+          "id": "c70a159273aa",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "SNAP: Restricting Decoder Expressivity Unlocks Transferable 3D Geometry from Novel View Synthesis",
-          "why_it_matters": "If you work on 3D representations, agents, or self-supervised vision, SNAP's finding that decoder design—not supervisory signal—is the bottleneck reframes how NVS-based pretraining should be architected.",
-          "summary": "SNAP is a self-supervised encoder-decoder transformer for novel view synthesis that uses a pose-conditioned local decoder and a latent-space reconstruction target instead of pixel-space targets. Restricting decoder expressivity forces the encoder to retain geometric structure. SNAP competes with geometry-supervised and self-supervised baselines on visual localization, pose estimation, point correspondence, depth estimation, and robot manipulation, with emergent viewpoint invariance despite lower compute and data.",
+          "title": "Starting Token Cues Unlock Base-Model Reasoning Without RL Fine-Tuning",
+          "why_it_matters": "This reframes how we think about what RL post-training actually does — critical for anyone working on RLHF, reasoning models, or understanding emergent capabilities.",
+          "summary": "Fixing specific starting tokens ('Okay', 'Alright,') makes base models competitive with their RL-trained counterparts: on MATH-500, the cue '.\\n\\nOkay' raises OLMo-3-7B from 42% to 78%, and 'Alright,' raises Qwen3-14B from 72% to 87%. Causal data interventions show arbitrary words (e.g., 'chicken') become effective reasoning cues via targeted training-data edits; RL primarily raises these cues' probability.",
           "tags": [
-            "3d representations",
-            "self-supervised learning",
-            "novel view synthesis",
-            "geometric learning"
+            "reasoning",
+            "rl",
+            "post-training",
+            "base-models"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2610.03717v1"
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2610.06851v1"
             }
           ],
-          "published": "2026-10-02T17:59:14+00:00",
-          "score": 0.6572
+          "published": "2026-10-05T17:59:52+00:00",
+          "score": 1.2672
         },
         {
-          "id": "ca7b51b5d065",
+          "id": "5f3c3171d3de",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "4DCodeBench: New Benchmark Tests Agents on Reconstructing Dynamic Scenes as Executable Code",
-          "why_it_matters": "For researchers building agents with world-modeling or physical reasoning capabilities, this benchmark directly tests whether frontier models can translate video observations of complex dynamics into working code—a meaningful proxy for causal world understanding.",
-          "summary": "4DCodeBench tasks agents with reconstructing dynamic real-world and synthetic scenes—spanning deformation, fluid flow, and fracture—as executable graphics programs via code generation. Benchmarking of frontier models finds that strong static reconstruction ability does not transfer reliably to complex dynamic scene reconstruction, exposing a clear capability gap.",
+          "title": "Probing Diffusion Transformer Text Tokens Reveals Early, Rich Scene Representations",
+          "why_it_matters": "For researchers in interpretability or generative models, this is direct mechanistic evidence for what MM-DiT contextual tokens encode and a practical handle for improving generation quality.",
+          "summary": "A lightweight bottleneck network maps MM-DiT intermediate contextual tokens into a frozen LLM's input space, enabling natural-language interrogation of hidden states. Generation-specific semantics are readable surprisingly early in denoising; information remains decodable even with an empty prompt. Generations with more readable contextual representations score higher on human-preference metrics. A derived training technique, Contextual Alignment, reinforces visual-semantic encoding and improves generation quality and distributional coverage.",
+          "tags": [
+            "interpretability",
+            "diffusion-models",
+            "transformers",
+            "text-to-image"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2610.06844v1"
+            }
+          ],
+          "published": "2026-10-05T17:59:17+00:00",
+          "score": 1.267
+        },
+        {
+          "id": "99e793ca69d9",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Agentic Pipeline Reformats ML Flowcharts Across Aspect Ratios Without Hallucinating Edges",
+          "why_it_matters": "If you ever repurpose paper figures for slides or posters, this directly addresses the broken-connection problem that plagues automated layout tools.",
+          "summary": "Parse→Style→Layout agentic pipeline with paired critic agents (deterministic constraint checks + VLM visual feedback) reformats raster flowcharts to arbitrary aspect ratios, outputting editable mxGraph XML. On 100-flowchart benchmark across five ratios, achieves 68.6% Content Fidelity vs. 11.2–41.4% for prior approaches, evaluated by Gemini 3.1 Pro and validated against human judgments.",
           "tags": [
             "agents",
-            "world models",
-            "benchmarks",
-            "inverse graphics"
+            "document-ai",
+            "figure-generation",
+            "ml-tooling"
           ],
           "sources": [
             {
               "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2610.03715v1"
+              "url": "https://arxiv.org/abs/2610.06852v1"
             }
           ],
-          "published": "2026-10-02T17:58:49+00:00",
-          "score": 0.6571
+          "published": "2026-10-05T17:59:54+00:00",
+          "score": 0.4224
         },
         {
-          "id": "25a8aee56cc1",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "Stratified Retention: A Framework for What World Models Should and Shouldn't Forget",
-          "why_it_matters": "For researchers building continual-learning or world-model systems, this paper formalizes a core oversight: standard forgetting metrics cannot distinguish correct knowledge revision from catastrophic forgetting, creating a flawed evaluation baseline.",
-          "summary": "The paper argues world models require retention stratified by invariance timescale—physics and object permanence must never be revised, while instance-level facts should be updated as environments change. Standard forgetting metrics rank a frozen model highest, conflating correct revision with failure. The authors propose differential retention, combining invariant regression testing with revision latency measurement, evaluated jointly across the adaptation stream without aggregation.",
-          "tags": [
-            "world models",
-            "continual learning",
-            "evaluation",
-            "reasoning"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2610.03713v1"
-            }
-          ],
-          "published": "2026-10-02T17:58:14+00:00",
-          "score": 0.657
-        },
-        {
-          "id": "c84fdcde884e",
+          "id": "bd542ab392b3",
           "tier": "skim",
           "category": "frontier",
-          "title": "SpiderCSS: ZX-Calculus Pipeline Cuts Logical Error Rates by 33.7% for CSS Fault-Tolerant State Prep",
-          "why_it_matters": "For engineers and researchers tracking fault-tolerant quantum computing infrastructure, SpiderCSS delivers concrete circuit-level gains—reduced depth, qubit footprint, and error rates—without expensive verification overhead.",
-          "summary": "SpiderCSS is a compilation pipeline for fault-tolerant logical state preparation in arbitrary CSS codes. Using ZX-calculus and fault-equivalent rewrites, it builds CNOT-minimal circuits provably fault-tolerant without verification circuits. Monte Carlo simulations on codes up to distance 15 show an average 33.7% decrease in logical error rate and a 9.5% increase in acceptance rate versus existing scalable and heuristic methods, with reduced circuit depth and qubit footprint.",
+          "title": "BiasFlow: Geometric Backbone Diagnostics and Regularization Reduce Spurious Feature Reliance",
+          "why_it_matters": "For researchers working on robustness or fairness, BiasFlow offers principled centroid-geometry diagnostics that WGA alone cannot provide, with concrete WGA gains on standard benchmarks.",
+          "summary": "BiasFlow is a hook-based toolkit measuring class-attribute centroid alignment (IBMI), within-class centroid separation (W-IBMI), and feature-projection sensitivity. Paired regularizer BFR adds a centroid-alignment penalty; on UrbanCars it improves worst-group accuracy by up to +26.0 pp. Freezing CelebA-Std backbones and retraining heads: BFR+GroupDRO raises WGA from 40.7% to 64.1% while reducing Male probe accuracy from 92.5% to 72.2%, though attribute information remains partially recoverable.",
           "tags": [
-            "quantum computing",
-            "fault tolerance",
-            "css codes",
-            "circuit compilation"
+            "robustness",
+            "fairness",
+            "representation-learning",
+            "spurious-correlations"
           ],
           "sources": [
             {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2610.03714v1"
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2610.06846v1"
             }
           ],
-          "published": "2026-10-02T17:58:44+00:00",
-          "score": 0.219
-        },
-        {
-          "id": "e2994a7c76a9",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "RNADynBench: 2,585-Trajectory MD Benchmark and Unified Model for RNA Conformational Dynamics",
-          "why_it_matters": "For ML researchers at the intersection of biology and generative modeling, this benchmark and unified model address both trajectory generation and dynamics representation from a single conformer—a technically underserved problem with clear structural biology implications.",
-          "summary": "RNADynBench provides 2,585 quality-controlled 100-ns all-atom MD trajectories with leakage-controlled splits. RNADynNet uses a shared backbone combining coordinate denoising, single-frame-to-trajectory alignment, and physical grounding for both trajectory generation and dynamics fingerprint extraction. Generated trajectories achieve RMSF correlations of 0.875 and 0.766 on standard and high-flexibility test sets respectively; single-conformer predictions show comparable agreement with MD-derived dynamics.",
-          "tags": [
-            "rna",
-            "molecular dynamics",
-            "generative models",
-            "benchmarks"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2610.03712v1"
-            }
-          ],
-          "published": "2026-10-02T17:58:08+00:00",
-          "score": 0.219
-        },
-        {
-          "id": "96564f464040",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "Pseudorandom Unitaries May Exist Without Quantum-Computable One-Way Functions: First Oracle Evidence",
-          "why_it_matters": "This result shifts the foundations of quantum cryptography for researchers in quantum ML and post-quantum security, providing the first evidence PRUs sit in a weaker complexity regime than previously assumed.",
-          "summary": "The paper proves that five alternating random diagonal phase layers and Hadamard transforms form a strong PRU secure under adaptive access to the unitary, its inverse, transpose, and conjugate. Implemented via a classical random oracle, the construction remains secure against uniform BQP adversaries with QMA-level inversion capability, providing black-box separation evidence that PRUs do not imply quantum-computable one-way functions—strengthening the Kretschmer-Qian-Tal STOC 2025 result.",
-          "tags": [
-            "quantum cryptography",
-            "pseudorandomness",
-            "complexity theory",
-            "quantum computing"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2610.03711v1"
-            }
-          ],
-          "published": "2026-10-02T17:58:06+00:00",
-          "score": 0.219
+          "published": "2026-10-05T17:59:28+00:00",
+          "score": 0.4224
         }
       ]
     }
