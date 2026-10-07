@@ -1,109 +1,198 @@
 {
-  "date": "2026-10-06",
-  "generated_at": "2026-10-06T06:08:32.634940+00:00",
-  "summary_line": "2 worth knowing",
+  "date": "2026-10-07",
+  "generated_at": "2026-10-07T05:43:30.440395+00:00",
+  "summary_line": "6 worth knowing",
   "counts": {
-    "total": 4,
-    "headlines": 0,
-    "frontier": 4
+    "total": 8,
+    "headlines": 3,
+    "frontier": 5
   },
   "sections": [
     {
       "key": "headlines",
       "title": "Headlines",
-      "cards": []
+      "cards": [
+        {
+          "id": "4dd290070848",
+          "tier": "worth_knowing",
+          "category": "headline",
+          "title": "Google DeepMind Launches EmbeddingGemma 2: 740M-Param Multimodal Embedding Model",
+          "why_it_matters": "A commercially permissive, sub-1B multimodal embedder that runs on-device with 567MB RAM is directly relevant if you build RAG pipelines, semantic search, or edge inference systems.",
+          "summary": "EmbeddingGemma 2 (740M params, Apache 2.0) is built on Gemma 4 and unifies text, code, images, video, and audio in a shared embedding space. It achieves a 9.92-point MTEB Code improvement over EmbeddingGemma 1 (68.76 → 78.68). Modular design allows text-only use at 270M params; full multimodal at ~567MB RAM with quantization on Pixel 11 Pro. Uses Matryoshka Representation Learning for up to 6x storage reduction. Features an 8K token context window.",
+          "tags": [
+            "embeddings",
+            "multimodal",
+            "on-device ml",
+            "google deepmind"
+          ],
+          "sources": [
+            {
+              "name": "DeepMind",
+              "url": "https://deepmind.google/blog/embeddinggemma-2-an-open-lightweight-multimodal-embedding-model/"
+            }
+          ],
+          "published": "2026-10-06T19:57:04+00:00",
+          "score": 1.3096
+        },
+        {
+          "id": "085f7195b66f",
+          "tier": "worth_knowing",
+          "category": "headline",
+          "title": "Falcon-Emirati-7B: Dialect-Specialized Arabic LLM Built on Falcon-H1-Arabic",
+          "why_it_matters": "Dialect-specialized fine-tuning with hybrid SSM+Transformer architectures is a technically interesting case study in low-resource adaptation, relevant to anyone working on multilingual or culturally-grounded models.",
+          "summary": "Falcon-Emirati-7B fine-tunes the Falcon-H1-Arabic 7B model — which uses a hybrid Mamba+Transformer architecture with up to 256K context — specifically for Emirati Arabic dialect, vocabulary, and cultural knowledge including nabati poetry and proverbs. Built because MSA-trained models miss non-literal meaning in Emirati. Data pipeline involved trial-and-error mixing of dialectal and MSA data across continued pre-training, SFT, and preference optimization stages.",
+          "tags": [
+            "arabic nlp",
+            "dialect adaptation",
+            "fine-tuning",
+            "multilinguality"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/tiiuae/falcon-emirati"
+            }
+          ],
+          "published": "2026-10-06T06:44:39+00:00",
+          "score": 1.0901
+        },
+        {
+          "id": "ee5a948a7c39",
+          "tier": "skim",
+          "category": "headline",
+          "title": "Open vs. Closed Model Cyber Risk: The Policy Debate Is Missing Key Trade-offs",
+          "why_it_matters": "As an AI/ML engineer, the regulatory trajectory on open-weight models directly affects what you can build, deploy, and research — and this piece lays out the structural flaws in how that debate is being conducted.",
+          "summary": "The author argues the cyber-risk discourse on open-weight models is solipsistic: Anthropic's GLM-5.3 report assesses offensive cyber risk without engaging with what a ban would actually achieve or how Chinese labs assess risk. Public evidence documents closed models as the primary source of documented cyberattacks, yet classified briefings are driving anti-open-weight policy sentiment. The framing 'Open Dangerous, Closed Safe' may be closer to 'both unsafe.'",
+          "tags": [
+            "ai policy",
+            "open-weight models",
+            "cyber risk",
+            "governance"
+          ],
+          "sources": [
+            {
+              "name": "Interconnects",
+              "url": "https://www.interconnects.ai/p/the-cyber-risk-discourse-is-broken"
+            }
+          ],
+          "published": "2026-10-06T14:22:41+00:00",
+          "score": 0.404
+        }
+      ]
     },
     {
       "key": "frontier",
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "c70a159273aa",
+          "id": "324abc840535",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Starting Token Cues Unlock Base-Model Reasoning Without RL Fine-Tuning",
-          "why_it_matters": "This reframes how we think about what RL post-training actually does — critical for anyone working on RLHF, reasoning models, or understanding emergent capabilities.",
-          "summary": "Fixing specific starting tokens ('Okay', 'Alright,') makes base models competitive with their RL-trained counterparts: on MATH-500, the cue '.\\n\\nOkay' raises OLMo-3-7B from 42% to 78%, and 'Alright,' raises Qwen3-14B from 72% to 87%. Causal data interventions show arbitrary words (e.g., 'chicken') become effective reasoning cues via targeted training-data edits; RL primarily raises these cues' probability.",
+          "title": "QF3: Off-Policy Flow RL Trains Humanoid Locomotion from Scratch with 10x Speedup",
+          "why_it_matters": "First off-policy flow RL method demonstrated on humanoid locomotion with zero-shot hardware transfer — a meaningful advance for robotics RL researchers working with flow-based policies.",
+          "summary": "QF3 trains flow policies using flow matching plus critic action gradients backpropagated through a one-step output prediction, applying critic gradients only to action dimensions near the replay action. Claims to be the first off-policy flow RL method to train humanoid locomotion from scratch and transfer zero-shot to hardware. Achieves 10x wall-clock speedup over FPO++ (on-policy). Also applied to fine-tuning pretrained manipulation policies on ABC-Sim and Robomimic.",
           "tags": [
-            "reasoning",
+            "reinforcement learning",
+            "robotics",
+            "flow matching",
+            "humanoid"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2610.08789v1"
+            }
+          ],
+          "published": "2026-10-06T17:59:34+00:00",
+          "score": 1.2745
+        },
+        {
+          "id": "bd1bc00a4ad7",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Conformal Prediction Set Size Formally Linked to Shannon Mutual Information",
+          "why_it_matters": "Provides a rigorous information-theoretic foundation for using conformal set-size reduction as an information gain metric — directly relevant if you use conformal prediction for uncertainty quantification in ML systems.",
+          "summary": "The paper introduces a family of generalized information measures based on conformal prediction set size and coverage. Key results: Shannon mutual information admits an exact integral representation in terms of these measures; in classification settings, conformal set-size reduction from additional information is sandwiched between calibration-dependent family members and obeys a data processing inequality, both up to finite-sample calibration and model error. Validated across 11 classification settings.",
+          "tags": [
+            "conformal prediction",
+            "uncertainty quantification",
+            "information theory",
+            "classification"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2610.08785v1"
+            }
+          ],
+          "published": "2026-10-06T17:59:11+00:00",
+          "score": 1.2743
+        },
+        {
+          "id": "affb881774c1",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "IdeaAnchor: Training LLMs to Synthesize Literature into Research Ideas with Structured Supervision",
+          "why_it_matters": "Structured supervision for literature-grounded ideation — combining demonstration, self-distillation, and RL — is relevant if you work on research automation or scientific LLM agents.",
+          "summary": "IdeaAnchor introduces structured specifications ('anchors') encoding how each input paper should be synthesized — capturing functional roles, relationships, and synthesis criteria — mined from published papers. Models are trained via demonstration, self-distillation, and RL, with retrieval added at inference. Analysis finds anchor-based training strengthens creative synthesis while retrieval improves detail elaboration; combining both yields best performance.",
+          "tags": [
+            "research automation",
             "rl",
-            "post-training",
-            "base-models"
+            "scientific llms",
+            "ideation"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2610.06851v1"
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2610.08781v1"
             }
           ],
-          "published": "2026-10-05T17:59:52+00:00",
-          "score": 1.2672
+          "published": "2026-10-06T17:59:01+00:00",
+          "score": 1.2743
         },
         {
-          "id": "5f3c3171d3de",
+          "id": "f2b503bafe57",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Probing Diffusion Transformer Text Tokens Reveals Early, Rich Scene Representations",
-          "why_it_matters": "For researchers in interpretability or generative models, this is direct mechanistic evidence for what MM-DiT contextual tokens encode and a practical handle for improving generation quality.",
-          "summary": "A lightweight bottleneck network maps MM-DiT intermediate contextual tokens into a frozen LLM's input space, enabling natural-language interrogation of hidden states. Generation-specific semantics are readable surprisingly early in denoising; information remains decodable even with an empty prompt. Generations with more readable contextual representations score higher on human-preference metrics. A derived training technique, Contextual Alignment, reinforces visual-semantic encoding and improves generation quality and distributional coverage.",
+          "title": "DepthWorld: Adding Metric Depth Supervision to Video World Models Improves RGB Prediction by +1.48 dB PSNR",
+          "why_it_matters": "Depth supervision improving RGB prediction quality in a Stable Video Diffusion-based world model is a concrete architectural insight for researchers building 3D-consistent world models for robotics.",
+          "summary": "DepthWorld fine-tunes Stable Video Diffusion to jointly predict multi-view RGB and depth via spatial latent tiling, leaving the pretrained VAE unchanged. A calibration pipeline combining learned stereo depth with a joint factor graph produces DROID-3D from the DROID dataset, achieving <0.7 px reprojection error on 90% of episodes. Depth supervision yields +1.48 dB PSNR over an RGB-only baseline at equal training budget, plus accurate metric depth for geometric reasoning.",
           "tags": [
-            "interpretability",
-            "diffusion-models",
-            "transformers",
-            "text-to-image"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2610.06844v1"
-            }
-          ],
-          "published": "2026-10-05T17:59:17+00:00",
-          "score": 1.267
-        },
-        {
-          "id": "99e793ca69d9",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "Agentic Pipeline Reformats ML Flowcharts Across Aspect Ratios Without Hallucinating Edges",
-          "why_it_matters": "If you ever repurpose paper figures for slides or posters, this directly addresses the broken-connection problem that plagues automated layout tools.",
-          "summary": "Parse→Style→Layout agentic pipeline with paired critic agents (deterministic constraint checks + VLM visual feedback) reformats raster flowcharts to arbitrary aspect ratios, outputting editable mxGraph XML. On 100-flowchart benchmark across five ratios, achieves 68.6% Content Fidelity vs. 11.2–41.4% for prior approaches, evaluated by Gemini 3.1 Pro and validated against human judgments.",
-          "tags": [
-            "agents",
-            "document-ai",
-            "figure-generation",
-            "ml-tooling"
+            "world models",
+            "robotics",
+            "3d reconstruction",
+            "video diffusion"
           ],
           "sources": [
             {
               "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2610.06852v1"
+              "url": "https://arxiv.org/abs/2610.08780v1"
             }
           ],
-          "published": "2026-10-05T17:59:54+00:00",
-          "score": 0.4224
+          "published": "2026-10-06T17:59:00+00:00",
+          "score": 1.2743
         },
         {
-          "id": "bd542ab392b3",
+          "id": "5ea9417694aa",
           "tier": "skim",
           "category": "frontier",
-          "title": "BiasFlow: Geometric Backbone Diagnostics and Regularization Reduce Spurious Feature Reliance",
-          "why_it_matters": "For researchers working on robustness or fairness, BiasFlow offers principled centroid-geometry diagnostics that WGA alone cannot provide, with concrete WGA gains on standard benchmarks.",
-          "summary": "BiasFlow is a hook-based toolkit measuring class-attribute centroid alignment (IBMI), within-class centroid separation (W-IBMI), and feature-projection sensitivity. Paired regularizer BFR adds a centroid-alignment penalty; on UrbanCars it improves worst-group accuracy by up to +26.0 pp. Freezing CelebA-Std backbones and retraining heads: BFR+GroupDRO raises WGA from 40.7% to 64.1% while reducing Male probe accuracy from 92.5% to 72.2%, though attribute information remains partially recoverable.",
+          "title": "4D-HOF: Feed-Forward 4D Hand-Object Interaction Reconstruction via Conditional Flow Matching",
+          "why_it_matters": "Replacing per-sequence optimization with a feed-forward flow matching model that supports test-time physical guidance is a technically interesting approach for embodied AI and manipulation researchers.",
+          "summary": "4D-HOF uses a conditional flow matching model to transport coarse foundation-model estimates of hand-object states toward an interaction manifold, correcting errors in translation, rotation, and alignment without per-sequence optimization. Test-time guidance is integrated directly into the transport process using physical constraints and 2D evidence rather than post-hoc optimization. Achieves state-of-the-art on out-of-domain benchmarks.",
           "tags": [
-            "robustness",
-            "fairness",
-            "representation-learning",
-            "spurious-correlations"
+            "robotics",
+            "flow matching",
+            "4d reconstruction",
+            "embodied ai"
           ],
           "sources": [
             {
               "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2610.06846v1"
+              "url": "https://arxiv.org/abs/2610.08782v1"
             }
           ],
-          "published": "2026-10-05T17:59:28+00:00",
-          "score": 0.4224
+          "published": "2026-10-06T17:59:02+00:00",
+          "score": 0.4248
         }
       ]
     }
