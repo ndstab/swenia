@@ -1,66 +1,43 @@
 {
-  "date": "2026-10-10",
-  "generated_at": "2026-10-10T05:38:33.579379+00:00",
-  "summary_line": "1 worth knowing",
+  "date": "2026-10-11",
+  "generated_at": "2026-10-11T05:34:24.674316+00:00",
+  "summary_line": "1 items to skim.",
   "counts": {
-    "total": 2,
-    "headlines": 1,
+    "total": 1,
+    "headlines": 0,
     "frontier": 1
   },
   "sections": [
     {
       "key": "headlines",
       "title": "Headlines",
-      "cards": [
-        {
-          "id": "992438874f53",
-          "tier": "skim",
-          "category": "headline",
-          "title": "Engineering Acceleration, Not Superintelligence: A Grounded Take on Near-Term AI Progress",
-          "why_it_matters": "This is a detailed, technically grounded framework from an industry-connected observer on what AI-assisted research actually accelerates and what it doesn't — directly relevant to how you should think about your own work changing over the next few years.",
-          "summary": "The author argues near-term AI progress is best understood as parallelized, AI-assisted language modeling — not recursive self-improvement toward AGI. Inference efficiency gains (historically 10–30% cost reductions post-launch) will compound near-exponentially. Architecture and data-selection research may be largely automated in 2–3 years. The bottleneck shifts from engineering back to ideas, mirroring pre-deep-learning AI. Jevons paradox will drive demand higher as costs fall.",
-          "tags": [
-            "scaling",
-            "inference efficiency",
-            "ai research",
-            "agents"
-          ],
-          "sources": [
-            {
-              "name": "Interconnects",
-              "url": "https://www.interconnects.ai/p/i-expect-rapid-progress-but-not-towards"
-            }
-          ],
-          "published": "2026-10-09T21:33:47+00:00",
-          "score": 0.4469
-        }
-      ]
+      "cards": []
     },
     {
       "key": "frontier",
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "43ef54e74d27",
-          "tier": "worth_knowing",
+          "id": "b6e749ecd040",
+          "tier": "skim",
           "category": "frontier",
-          "title": "Ai2 Replaces Priority Scheduler with Budget-Based Fair-Share System for H100/B200/B300 Clusters",
-          "why_it_matters": "If you work on or adjacent to ML infrastructure, this is a rare detailed post-mortem on GPU cluster scheduling pathologies and the architectural fix — directly applicable to any multi-team research compute environment.",
-          "summary": "Ai2's AI Infrastructure team manages clusters of 88–1024 NVIDIA H100, B200, and B300 GPUs serving ~150 researchers, with 2–3x more demand than supply at any moment. A priority-based scheduler produced GPU squatting, 100% priority inflation, and engineers spending most ticket time negotiating non-preemptable shutdowns. They replaced it with GPU time budgets, hierarchical fair-share allocation, and a time-slicing contract, moving resource debates from ad-hoc negotiation to transparent administrative budgeting.",
+          "title": "PPT Distillable Entanglement Proven Strictly Below Regularised Rains Bound",
+          "why_it_matters": "If you track quantum information theory or quantum ML foundations, this resolves a 2019 open problem about entanglement manipulation limits under PPT channels—a key constraint in quantum Shannon theory.",
+          "summary": "New results characterise PPT distillable entanglement in the asymptotic vanishing-error regime: (a) a regularised formula via a measured-relative-entropy-like quantity, and (b) two single-letter upper bounds. Crucially, (b) proves PPT distillable entanglement can be strictly below the regularised Rains bound—demonstrated concretely for 3×3 Werner states at antisymmetric weight 25/26, where a certified upper bound of 0.62107 ebits falls below the Rains bound of ~0.64766 ebits.",
           "tags": [
-            "ml infrastructure",
-            "gpu scheduling",
-            "compute",
-            "distributed training"
+            "quantum information",
+            "entanglement distillation",
+            "quantum shannon theory",
+            "ppt channels"
           ],
           "sources": [
             {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/allenai/impactful-scheduling"
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2610.12454v1"
             }
           ],
-          "published": "2026-10-09T15:20:29+00:00",
-          "score": 1.2298
+          "published": "2026-10-08T17:59:09+00:00",
+          "score": 0.2185
         }
       ]
     }

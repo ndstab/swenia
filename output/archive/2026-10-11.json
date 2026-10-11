@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-11",
+  "generated_at": "2026-10-11T05:34:24.674316+00:00",
+  "summary_line": "1 items to skim.",
+  "counts": {
+    "total": 1,
+    "headlines": 0,
+    "frontier": 1
+  },
+  "sections": [
+    {
+      "key": "headlines",
+      "title": "Headlines",
+      "cards": []
+    },
+    {
+      "key": "frontier",
+      "title": "Frontier & Papers",
+      "cards": [
+        {
+          "id": "b6e749ecd040",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "PPT Distillable Entanglement Proven Strictly Below Regularised Rains Bound",
+          "why_it_matters": "If you track quantum information theory or quantum ML foundations, this resolves a 2019 open problem about entanglement manipulation limits under PPT channels—a key constraint in quantum Shannon theory.",
+          "summary": "New results characterise PPT distillable entanglement in the asymptotic vanishing-error regime: (a) a regularised formula via a measured-relative-entropy-like quantity, and (b) two single-letter upper bounds. Crucially, (b) proves PPT distillable entanglement can be strictly below the regularised Rains bound—demonstrated concretely for 3×3 Werner states at antisymmetric weight 25/26, where a certified upper bound of 0.62107 ebits falls below the Rains bound of ~0.64766 ebits.",
+          "tags": [
+            "quantum information",
+            "entanglement distillation",
+            "quantum shannon theory",
+            "ppt channels"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2610.12454v1"
+            }
+          ],
+          "published": "2026-10-08T17:59:09+00:00",
+          "score": 0.2185
+        }
+      ]
+    }
+  ]
+}
