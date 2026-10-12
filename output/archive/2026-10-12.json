@@ -1,0 +1,155 @@
+{
+  "date": "2026-10-12",
+  "generated_at": "2026-10-12T05:45:01.185631+00:00",
+  "summary_line": "2 must-know · 2 worth knowing",
+  "counts": {
+    "total": 6,
+    "headlines": 0,
+    "frontier": 6
+  },
+  "sections": [
+    {
+      "key": "headlines",
+      "title": "Headlines",
+      "cards": []
+    },
+    {
+      "key": "frontier",
+      "title": "Frontier & Papers",
+      "cards": [
+        {
+          "id": "0904e2d74a87",
+          "tier": "must_know",
+          "category": "frontier",
+          "title": "Doublon-Holon Collider on 42 Qubits Validates Bethe-Ansatz Scattering Matrix",
+          "why_it_matters": "For anyone tracking quantum hardware progress and quantum simulation, this is a concrete milestone: a parameter-free match to an exactly solvable model on real quantum hardware.",
+          "summary": "On IBM's 42-qubit ibm_boston processor, researchers simulated quasiparticle scattering in the Fermi-Hubbard model using a 21-site half-filled chain. They measured doublon-holon transmission probabilities that agree with the Bethe-ansatz scattering matrix without free parameters, and inferred entanglement generation from particle-number fluctuations. A control doublon-doublon collision showed no interaction dependence, as expected for indistinguishable particles.",
+          "tags": [
+            "quantum-computing",
+            "quantum-simulation",
+            "quantum-hardware",
+            "condensed-matter"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2610.13946v1"
+            }
+          ],
+          "published": "2026-10-09T17:59:06+00:00",
+          "score": 1.3081
+        },
+        {
+          "id": "c49e2800425e",
+          "tier": "must_know",
+          "category": "frontier",
+          "title": "Cryptographically Hidden Capabilities in LLM Weights Are Provably Unelicitable — Implications for Safety Evals",
+          "why_it_matters": "This directly challenges the reliability of capability evaluations used in AI safety and deployment decisions — a must-know result for anyone working on evals, red-teaming, or model auditing.",
+          "summary": "The authors construct backdoor attacks that embed encrypted neural networks inside host model weights, activated only by a secret trigger. Using digital lockers, hidden circuits are provably hard to elicit or interpret even with full weight access, under cryptographic assumptions. Fine-tuning, weight noising, gradient-based trigger search, and latent adversarial training all fail to surface a hidden chemical reaction prediction capability. Models are released publicly.",
+          "tags": [
+            "ai-safety",
+            "capability-evals",
+            "backdoors",
+            "interpretability"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2610.13928v1"
+            }
+          ],
+          "published": "2026-10-09T17:55:06+00:00",
+          "score": 1.3068
+        },
+        {
+          "id": "56b5967d6570",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "LLMs vs. Humans in the Wikipedia Game: Best Models Reach Human-Level Navigation",
+          "why_it_matters": "If you build retrieval or agent systems that navigate large document graphs, this benchmark reveals which models succeed and where they break down across languages and domains.",
+          "summary": "Researchers tested sentence embedding models and LLMs on the Wikipedia Game — navigating to a target article via links — across five Wikipedia languages and five academic citation datasets built with OpenAlex. No model significantly outperformed humans, but GPT-o3 mini, GPT-4o, QwQ:32B, and DeepSeek-R1:70B achieved comparable success. Performance and rankings varied by language and topic.",
+          "tags": [
+            "retrieval",
+            "benchmarks",
+            "llm-evaluation",
+            "knowledge-graphs"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2610.13948v1"
+            }
+          ],
+          "published": "2026-10-09T17:59:56+00:00",
+          "score": 0.6542
+        },
+        {
+          "id": "8e9720268994",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Hide and Seek (HnS): Black-Box Concept Attribution for Vision Models Without Weight Access",
+          "why_it_matters": "As an AI engineer working on model interpretability or vision systems, HnS extends concept-level attribution to tasks like captioning and segmentation where no prior method applies, and requires neither model weights nor labeled concept datasets.",
+          "summary": "HnS retrieves concept-aligned images via a vision-language model, localizes and masks the concept region, then measures attribution from output change in the black-box model — enabling local, faithful attribution. Validated on CelebA and COCO-Stuff, it outperforms existing methods on agreement with ground-truth attributions, and applies to image captioning and satellite image segmentation where prior methods fail.",
+          "tags": [
+            "interpretability",
+            "concept-attribution",
+            "vision",
+            "black-box-models"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2610.13935v1"
+            }
+          ],
+          "published": "2026-10-09T17:56:59+00:00",
+          "score": 0.6537
+        },
+        {
+          "id": "45abc2ac98cc",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Warped Born Rule Creates Maxwell's Demon: Observation Drives Phase Transitions in Quantum Gases",
+          "why_it_matters": "A foundational quantum mechanics result with implications for quantum ML and measurement-based protocols — understanding how modified measurement rules alter many-body dynamics is relevant to quantum circuit and quantum ML research.",
+          "summary": "Replacing the Born rule with a warped version p_b(m) ∝ ‖P_m|ψ⟩‖^(2b) introduces a probabilistic bias in repeated local measurements. For b>1, the gas freezes into clustered configurations (Maxwell's demon-like entropy extraction); for b<1, it becomes hyperuniform. Results are derived analytically for a 1D quantum gas and confirmed numerically via matrix product state simulations with projective-measurement circuits.",
+          "tags": [
+            "quantum-mechanics",
+            "measurement",
+            "many-body-physics",
+            "quantum-foundations"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2610.13936v1"
+            }
+          ],
+          "published": "2026-10-09T17:57:00+00:00",
+          "score": 0.2179
+        },
+        {
+          "id": "9f318fa1fefa",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Constructive Topological Expressivity Bounds for ReLU Networks via Betti Numbers of Outputs",
+          "why_it_matters": "For researchers studying neural network theory, this shifts expressivity analysis from decision boundaries to network outputs, providing constructive architectural bounds applicable beyond classification.",
+          "summary": "The authors prove that a ReLU network with a specific architecture can express spaces homotopy equivalent to wedge sums of spheres with arbitrary Betti numbers, giving upper bounds for any connected Betti-number sequence. Better bounds are achieved for product-of-spheres spaces, yielding architecture (∑d_n, 3∑d_n+2N, ∑d_n+N). A conjecture proposes a tight bound of (d, d+1, d+1) for a sphere-homeomorphic space.",
+          "tags": [
+            "neural-network-theory",
+            "expressivity",
+            "topology",
+            "relu-networks"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2610.13931v1"
+            }
+          ],
+          "published": "2026-10-09T17:55:33+00:00",
+          "score": 0.2178
+        }
+      ]
+    }
+  ]
+}
