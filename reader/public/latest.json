@@ -1,11 +1,11 @@
 {
-  "date": "2026-10-14",
-  "generated_at": "2026-10-14T04:42:38.563100+00:00",
-  "summary_line": "1 must-know · 6 worth knowing",
+  "date": "2026-10-15",
+  "generated_at": "2026-10-15T04:24:27.184534+00:00",
+  "summary_line": "1 must-know · 5 worth knowing",
   "counts": {
     "total": 8,
-    "headlines": 3,
-    "frontier": 5
+    "headlines": 2,
+    "frontier": 6
   },
   "sections": [
     {
@@ -13,23 +13,19 @@
       "title": "Headlines",
       "cards": [
         {
-          "id": "471508c04c30",
+          "id": "884ebf3c3978",
           "tier": "must_know",
           "category": "headline",
-          "title": "Gemini 4 Argon Safety Report: Frontier Cyberdefense Capabilities and Three-Layer Misuse Protection",
-          "why_it_matters": "Argon represents a new frontier in model capability for security tasks, and its three-layer real-time protection architecture — input screening, activation probes, continuous monitoring — is directly relevant to researchers working on AI safety and deployment.",
-          "summary": "Gemini 4 Argon solves all 12 end-to-end simulated cyberattack scenarios, up from 5 in the previous generation. Safety violations on adversarial stress tests reduced nearly twofold versus prior Gemini models. Protection uses three layers: input screening by smaller models, internal activation probes detecting dangerous knowledge activation, and continuous mid-stream monitoring. Wiz used Argon to find a critical bug in hospital software; Google used it to patch foundational open-source vulnerabilities.",
+          "title": "Google DeepMind Launches Gemini 4 Argon: 87% on ERQA, Purpose-Built for Physical Reasoning and Robotics",
+          "why_it_matters": "A flagship frontier model release from DeepMind targeting physical/spatial reasoning and the full robotics stack — this is a major capability jump every AI/robotics researcher needs to know about.",
+          "summary": "Gemini 4 Argon scores 87% on the Embodied Reasoning (ERQA) benchmark, outperforming all other frontier models on 3D physical-spatial tasks. DeepMind demonstrates it across robot control (zero-shot MuJoCo practice, closed-loop video world models), Real2Sim reconstruction from camera feeds or sketches, hindsight labeling, and iterative self-improvement on hardware including Boston Dynamics Spot.",
           "tags": [
             "gemini",
-            "ai safety",
-            "cybersecurity",
-            "frontier models"
+            "google-deepmind",
+            "robotics",
+            "physical-reasoning"
           ],
           "sources": [
-            {
-              "name": "DeepMind",
-              "url": "https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely/"
-            },
             {
               "name": "DeepMind",
               "url": "https://deepmind.google/blog/gemini-4-argon-for-robotics/"
@@ -39,52 +35,30 @@
               "url": "https://deepmind.google/blog/introducing-gemini-4-argon/"
             }
           ],
-          "published": "2026-10-13T19:43:07+00:00",
-          "score": 2.6478
+          "published": "2026-10-13T16:01:58+00:00",
+          "score": 1.8101
         },
         {
-          "id": "58e4191fcfe4",
+          "id": "672ebf75c430",
           "tier": "worth_knowing",
           "category": "headline",
-          "title": "Google DeepMind + Singapore GovTech Deploy On-Device Gemma-Based Scam Detection Model",
-          "why_it_matters": "This is a concrete production deployment of a fine-tuned Gemma model running on-device for privacy-preserving inference, illustrating real edge-AI architecture tradeoffs relevant to ML engineers.",
-          "summary": "DeepMind and Singapore's GovTech fine-tuned a lightweight Gemma model on local scam conversation data — impersonations, social engineering, regional schemes — and deployed it in a two-stage on-device pipeline: a lightweight classifier screens messages first, then the Gemma model evaluates conversation context. Training used anonymized scam reports with no citizen PII, within a sovereign GCP sandbox. Presented at SICW 2026.",
+          "title": "HiRO-ACEv2 Delivers Global 3 km Climate Simulation at 1/300th the Cost of Physics Models",
+          "why_it_matters": "If you work on AI for science or climate, this is a concrete SOTA result showing ML emulators can match high-resolution physics simulations at extreme-event tails — a key frontier benchmark.",
+          "summary": "Ai2's HiRO-ACEv2 pairs a 100 km AI climate model (ACE) with a neural downscaler (HiROv2) to produce global 3 km atmospheric data. HiROv2 now predicts rain, wind, and pressure simultaneously, matching target simulation statistics within 3% even for one-in-a-million extreme events. Full-system cost is ~1/300th of the reference X-SHiELD physics model; regional runs save even more.",
           "tags": [
-            "on-device ai",
-            "gemma",
-            "safety",
-            "edge inference"
-          ],
-          "sources": [
-            {
-              "name": "DeepMind",
-              "url": "https://deepmind.google/blog/on-device-ai-scam-detection-mddi/"
-            }
-          ],
-          "published": "2026-10-14T02:00:14+00:00",
-          "score": 1.4447
-        },
-        {
-          "id": "550c4c02e9ff",
-          "tier": "worth_knowing",
-          "category": "headline",
-          "title": "Liquid AI's LFM2.5-24B-A2B: 2B Active-Parameter MoE Beats Larger Models on Agentic Tasks",
-          "why_it_matters": "This is a directly deployable on-device reasoning agent that outperforms models with 50% more parameters on tool-use benchmarks, relevant to anyone building or evaluating agentic systems.",
-          "summary": "LFM2.5-24B-A2B is a 24B-total/2B-active MoE reasoning model with 131K context, trained on ~33T pre-training tokens plus 2.3T mid-training tokens. It scores 48.09 on LiveClaw vs 38.19 for Qwen3.6-35B-A3B, leads on 5 of 8 agentic benchmarks, decodes 184 tok/s on Apple M5 Max and over 21K tok/s on a single NVIDIA B300. Post-training uses SFT, teacher specialization, two MOPD stages, and agentic RL.",
-          "tags": [
-            "moe",
-            "agents",
-            "on-device inference",
-            "tool use"
+            "climate-ml",
+            "weather-emulation",
+            "downscaling",
+            "ai-for-science"
           ],
           "sources": [
             {
               "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/LiquidAI/lfm25-24b-a2b"
+              "url": "https://huggingface.co/blog/allenai/hiro-acev2"
             }
           ],
-          "published": "2026-10-13T17:05:48+00:00",
-          "score": 1.2765
+          "published": "2026-10-14T16:12:42+00:00",
+          "score": 1.2663
         }
       ]
     },
@@ -93,114 +67,136 @@
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "55ca2e8db03e",
+          "id": "f2f6604a9159",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Retrieval Disagreement Exposes Shared-Index Bias in Multilingual Dense Retrievers",
-          "why_it_matters": "For researchers building multilingual RAG or retrieval systems, this paper precisely diagnoses why cross-lingual retrieval degrades and proposes an inference-time steering fix requiring no retraining.",
-          "summary": "The same query in different languages retrieves substantially different documents from a shared multilingual dense index — not due to weak per-language understanding but because same-language or English documents crowd out correct answers in the shared space. The paper introduces disagreement-guided steering: contrasting language-idiosyncratic retrievals against cross-lingual agreements to derive a steering direction added to queries at inference. It reduces same-language crowding more than baselines while remaining competitive on recall.",
-          "tags": [
-            "multilingual retrieval",
-            "dense embeddings",
-            "rag",
-            "representation learning"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2610.18526v1"
-            }
-          ],
-          "published": "2026-10-13T15:13:32+00:00",
-          "score": 1.2438
-        },
-        {
-          "id": "a7bb00349e80",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "Skill Routing Collapse: LLM Agents Fail to Load Relevant Skills as Library Size Grows",
-          "why_it_matters": "Directly relevant to engineers building skill-based or tool-augmented agents — this paper quantifies a concrete failure mode and identifies semantic interference as the root cause.",
-          "summary": "On SkillsBench, adding irrelevant skills while keeping golden skills fixed causes agent skill-loaded recall to drop from 73.6% to 27.4% at 1,000 irrelevant skills, and the zero-load rate rises from 9.3% to 51.6%. Explicit preselection retains 73.9% recall. Masking irrelevant skill descriptions largely restores loading, implicating semantic interference from metadata rather than skill unavailability. Explicit planning prompts with metadata intact still underperform preselection.",
-          "tags": [
-            "agents",
-            "tool use",
-            "rag",
-            "llm evaluation"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2610.18522v1"
-            }
-          ],
-          "published": "2026-10-13T15:12:12+00:00",
-          "score": 1.2434
-        },
-        {
-          "id": "1b67ad2ce224",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "Log-Linear Logit Geometry in LLMs: A Universal Structure Emerging During Pretraining",
-          "why_it_matters": "This is a fundamental interpretability finding about the structure of LLM output distributions that could inform decoding algorithms and understanding of what pretraining learns.",
-          "summary": "Across architectures, scales, and prediction contexts, sorted vocabulary logits follow z_(r) ≈ μ − α·log(r). The slope α rises from ~0.2 at initialization to ~1.4–1.7 after training, well above what order-statistic baselines predict, and correlates with predictive performance. The authors argue this trained slope captures learned structure beyond generic extreme-value effects and represents the first systematic analysis of logit geometry underlying decoding assumptions.",
-          "tags": [
-            "interpretability",
-            "language modeling",
-            "decoding",
-            "pretraining"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2610.18520v1"
-            }
-          ],
-          "published": "2026-10-13T15:11:06+00:00",
-          "score": 1.2431
-        },
-        {
-          "id": "a97bf7c7b6a4",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "Imprinting: Knowledge Distillation Transfers Teacher Safety Dispositions, Not Just Task Capability",
-          "why_it_matters": "Critical finding for post-training and alignment researchers: distillation from a harm-accepting teacher measurably reduces harm avoidance in students even when training data contains no safety-related content.",
-          "summary": "Students distilled from harm-accepting vs harm-avoiding teacher variants on ordinary reasoning and knowledge tasks shift their safety-pragmatism behavior toward the source teacher's disposition — termed 'imprinting.' Excluding a sparse set of divergence tokens reduces imprinting; response rewriting preserves source-dependent effects and can add rewriter-dependent shifts. Post-distillation preference optimization raises harm avoidance but does not eliminate the source-dependent difference. Effect varies across teacher-student pairs and safety behavior types.",
-          "tags": [
-            "knowledge distillation",
-            "alignment",
-            "rlhf",
-            "post-training"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2610.18517v1"
-            }
-          ],
-          "published": "2026-10-13T15:09:59+00:00",
-          "score": 1.2428
-        },
-        {
-          "id": "19950828fef0",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "APTree: Behavior-Tree Framework for Automated Robotic Task Planning in Construction",
-          "why_it_matters": "Combines symbolic planning with behavior trees and formal safety proofs — a useful architectural reference for researchers working on robot task planning or agent orchestration systems.",
-          "summary": "APTree is a model-driven framework that coordinates heterogeneous symbolic planners to auto-generate modular behavior-tree task plans at runtime for construction robotics. It includes a domain-specific language for task plan specification and validation, detects errors at design time and runtime, and provides machine-checked formal safety guarantees for plan composition under planner soundness and non-interference assumptions. Evaluated on the real-world livMatS Biomimetic Shell pavilion.",
+          "title": "Latent Diffusion in Weight Space Generates Deployable Humanoid Control Networks",
+          "why_it_matters": "Generating functional robot policies directly in weight space — rather than training them from scratch — is a frontier research direction with implications for rapid policy generation and weight-space interpretability.",
+          "summary": "Researchers train a latent diffusion model (linear autoencoder + Diffusion Transformer) over RL-trained actor network weights for the Unitree G1 humanoid. Sampled networks deploy directly for walking, dancing, and spin kicks. Analysis reveals first-layer weights consistently encode kinematic structure under both RL and imitation learning, suggesting embodiment-specific structure in learned weights.",
           "tags": [
             "robotics",
-            "task planning",
-            "behavior trees",
-            "symbolic ai"
+            "weight-space-learning",
+            "diffusion-models",
+            "humanoid-control"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2610.18523v1"
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2610.20606v1"
             }
           ],
-          "published": "2026-10-13T15:12:13+00:00",
-          "score": 0.4145
+          "published": "2026-10-14T17:59:52+00:00",
+          "score": 1.2981
+        },
+        {
+          "id": "780fe0f72a79",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "HiRe-MoMa: Hierarchical Residual Fine-Tuning for Mobile Manipulation in ~30 Minutes of Real-World Interaction",
+          "why_it_matters": "Sample-efficient on-robot fine-tuning is a major bottleneck for real-world deployment; this framework's sparse-human-guidance approach and ~30-minute adaptation time are practically significant results.",
+          "summary": "HiRe-MoMa freezes a base policy and adds residual correction heads split into mobile-base and manipulator-arm branches with unidirectional conditioning to reduce gradient interference. Sparse human interventions covering under 20% of training are used to reshape critic value estimates. Real-world experiments on TIAGo++ show consistent task improvement with roughly 30 minutes of online interaction.",
+          "tags": [
+            "robotics",
+            "reinforcement-learning",
+            "mobile-manipulation",
+            "sample-efficiency"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2610.20607v1"
+            }
+          ],
+          "published": "2026-10-14T17:59:52+00:00",
+          "score": 1.2981
+        },
+        {
+          "id": "a56c4f744d39",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Co-Evolving Acting and Forecasting Boosts Language Agent Sample Efficiency Up to 2× Over GRPO",
+          "why_it_matters": "Better RL training signals for language agents without inference overhead directly addresses a core bottleneck in agentic AI research you likely work adjacent to.",
+          "summary": "The proposed method adds multi-step action targets to agentic RL: on successful trajectories, the policy backbone is trained to forecast future action sequences from each history step, forming a temporal ensemble absorbed during training. At inference the agent still acts one step at a time with no overhead. Across five benchmarks it beats GRPO and ECHO baselines, with up to 1.9× and 2.0× better sample efficiency on ScienceWorld respectively.",
+          "tags": [
+            "language-agents",
+            "reinforcement-learning",
+            "sample-efficiency",
+            "agentic-ai"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2610.20597v1"
+            }
+          ],
+          "published": "2026-10-14T17:59:28+00:00",
+          "score": 1.298
+        },
+        {
+          "id": "28116706d65a",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "'Elastify' Any Pre-Trained Transformer Retraining-Free: Smooth Accuracy–Cost Tradeoffs Up to 60% Sparsity",
+          "why_it_matters": "A practical, retraining-free method to make existing transformers dynamically adapt compute at inference time is directly useful for deploying models across heterogeneous hardware — a real engineering problem.",
+          "summary": "The method ranks individual MLP neurons and attention heads jointly on a common importance scale via differentiable soft-pruning loss minimized across many sparsity targets simultaneously, requiring no retraining. Tested on 27 vision and text transformers (22M–8B parameters), it achieves smooth degradation to 60% sparsity. At 50% sparsity, DINOv3 ViT-H+/16 loses only 0.8% ImageNet-1k linear-probing accuracy while removing 427M parameters. A 60%-sparse AugReg ViT-B/16 achieves 1.80× higher throughput on an A100.",
+          "tags": [
+            "transformers",
+            "model-compression",
+            "inference-efficiency",
+            "pruning"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2610.20588v1"
+            }
+          ],
+          "published": "2026-10-14T17:58:08+00:00",
+          "score": 1.2976
+        },
+        {
+          "id": "729dcb55a93d",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Direct Logical CCZ State Cultivation on Bivariate Bicycle Codes Beats T-State Conversion Costs",
+          "why_it_matters": "Fault-tolerant quantum arithmetic requires efficient Toffoli/CCZ gates; this end-to-end protocol on LDPC codes with simulated infidelities below 10⁻⁶ is a concrete advance for anyone tracking quantum error correction hardware roadmaps.",
+          "summary": "The protocol prepares logical CCZ states directly on bivariate tricycle/bicycle (BT/BB) codes using cup-product CCZ gates and projection-preserving lifts. Under circuit-level noise (single-qubit 0.01%, CZ 0.1%, CCZ 0.5%), exact simulation yields joint infidelities of 1.84×10⁻⁵ at 21.94% acceptance and 4.10×10⁻⁷ at 8.89% acceptance. Spacetime cost per CCZ state is estimated lower than T-state cultivation followed by CCZ conversion.",
+          "tags": [
+            "quantum-error-correction",
+            "fault-tolerant-qc",
+            "ccz-states",
+            "ldpc-codes"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2610.20591v1"
+            }
+          ],
+          "published": "2026-10-14T17:58:30+00:00",
+          "score": 0.4326
+        },
+        {
+          "id": "e768c87dd315",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Price-of-Anarchy Analysis Shows First-Price Auctions Can Be Near-Efficient in AI Agent Markets",
+          "why_it_matters": "As multi-agent AI systems and LLM routing markets become real infrastructure, understanding auction-theoretic welfare guarantees is increasingly relevant for researchers designing agentic systems.",
+          "summary": "The paper analyzes first-price auctions (FPAs) for allocating user prompts among AI agents. Two structural features reduce welfare loss: a 'competitive floor' (multiple agents value most prompts similarly, e.g. via model distillation) which can drive price-of-anarchy to zero as the floor rises, and near-conditional-independence of agent values given prompt difficulty, which yields an efficiency guarantee approaching 1−1/e² — better than the general 1−1/e bound. Results are validated on the EmbedLLM prompt routing dataset.",
+          "tags": [
+            "multi-agent-systems",
+            "auction-theory",
+            "llm-routing",
+            "agentic-ai"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2610.20587v1"
+            }
+          ],
+          "published": "2026-10-14T17:57:57+00:00",
+          "score": 0.4325
         }
       ]
     }

@@ -1,0 +1,204 @@
+{
+  "date": "2026-10-15",
+  "generated_at": "2026-10-15T04:24:27.184534+00:00",
+  "summary_line": "1 must-know · 5 worth knowing",
+  "counts": {
+    "total": 8,
+    "headlines": 2,
+    "frontier": 6
+  },
+  "sections": [
+    {
+      "key": "headlines",
+      "title": "Headlines",
+      "cards": [
+        {
+          "id": "884ebf3c3978",
+          "tier": "must_know",
+          "category": "headline",
+          "title": "Google DeepMind Launches Gemini 4 Argon: 87% on ERQA, Purpose-Built for Physical Reasoning and Robotics",
+          "why_it_matters": "A flagship frontier model release from DeepMind targeting physical/spatial reasoning and the full robotics stack — this is a major capability jump every AI/robotics researcher needs to know about.",
+          "summary": "Gemini 4 Argon scores 87% on the Embodied Reasoning (ERQA) benchmark, outperforming all other frontier models on 3D physical-spatial tasks. DeepMind demonstrates it across robot control (zero-shot MuJoCo practice, closed-loop video world models), Real2Sim reconstruction from camera feeds or sketches, hindsight labeling, and iterative self-improvement on hardware including Boston Dynamics Spot.",
+          "tags": [
+            "gemini",
+            "google-deepmind",
+            "robotics",
+            "physical-reasoning"
+          ],
+          "sources": [
+            {
+              "name": "DeepMind",
+              "url": "https://deepmind.google/blog/gemini-4-argon-for-robotics/"
+            },
+            {
+              "name": "DeepMind",
+              "url": "https://deepmind.google/blog/introducing-gemini-4-argon/"
+            }
+          ],
+          "published": "2026-10-13T16:01:58+00:00",
+          "score": 1.8101
+        },
+        {
+          "id": "672ebf75c430",
+          "tier": "worth_knowing",
+          "category": "headline",
+          "title": "HiRO-ACEv2 Delivers Global 3 km Climate Simulation at 1/300th the Cost of Physics Models",
+          "why_it_matters": "If you work on AI for science or climate, this is a concrete SOTA result showing ML emulators can match high-resolution physics simulations at extreme-event tails — a key frontier benchmark.",
+          "summary": "Ai2's HiRO-ACEv2 pairs a 100 km AI climate model (ACE) with a neural downscaler (HiROv2) to produce global 3 km atmospheric data. HiROv2 now predicts rain, wind, and pressure simultaneously, matching target simulation statistics within 3% even for one-in-a-million extreme events. Full-system cost is ~1/300th of the reference X-SHiELD physics model; regional runs save even more.",
+          "tags": [
+            "climate-ml",
+            "weather-emulation",
+            "downscaling",
+            "ai-for-science"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/allenai/hiro-acev2"
+            }
+          ],
+          "published": "2026-10-14T16:12:42+00:00",
+          "score": 1.2663
+        }
+      ]
+    },
+    {
+      "key": "frontier",
+      "title": "Frontier & Papers",
+      "cards": [
+        {
+          "id": "f2f6604a9159",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Latent Diffusion in Weight Space Generates Deployable Humanoid Control Networks",
+          "why_it_matters": "Generating functional robot policies directly in weight space — rather than training them from scratch — is a frontier research direction with implications for rapid policy generation and weight-space interpretability.",
+          "summary": "Researchers train a latent diffusion model (linear autoencoder + Diffusion Transformer) over RL-trained actor network weights for the Unitree G1 humanoid. Sampled networks deploy directly for walking, dancing, and spin kicks. Analysis reveals first-layer weights consistently encode kinematic structure under both RL and imitation learning, suggesting embodiment-specific structure in learned weights.",
+          "tags": [
+            "robotics",
+            "weight-space-learning",
+            "diffusion-models",
+            "humanoid-control"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2610.20606v1"
+            }
+          ],
+          "published": "2026-10-14T17:59:52+00:00",
+          "score": 1.2981
+        },
+        {
+          "id": "780fe0f72a79",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "HiRe-MoMa: Hierarchical Residual Fine-Tuning for Mobile Manipulation in ~30 Minutes of Real-World Interaction",
+          "why_it_matters": "Sample-efficient on-robot fine-tuning is a major bottleneck for real-world deployment; this framework's sparse-human-guidance approach and ~30-minute adaptation time are practically significant results.",
+          "summary": "HiRe-MoMa freezes a base policy and adds residual correction heads split into mobile-base and manipulator-arm branches with unidirectional conditioning to reduce gradient interference. Sparse human interventions covering under 20% of training are used to reshape critic value estimates. Real-world experiments on TIAGo++ show consistent task improvement with roughly 30 minutes of online interaction.",
+          "tags": [
+            "robotics",
+            "reinforcement-learning",
+            "mobile-manipulation",
+            "sample-efficiency"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2610.20607v1"
+            }
+          ],
+          "published": "2026-10-14T17:59:52+00:00",
+          "score": 1.2981
+        },
+        {
+          "id": "a56c4f744d39",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Co-Evolving Acting and Forecasting Boosts Language Agent Sample Efficiency Up to 2× Over GRPO",
+          "why_it_matters": "Better RL training signals for language agents without inference overhead directly addresses a core bottleneck in agentic AI research you likely work adjacent to.",
+          "summary": "The proposed method adds multi-step action targets to agentic RL: on successful trajectories, the policy backbone is trained to forecast future action sequences from each history step, forming a temporal ensemble absorbed during training. At inference the agent still acts one step at a time with no overhead. Across five benchmarks it beats GRPO and ECHO baselines, with up to 1.9× and 2.0× better sample efficiency on ScienceWorld respectively.",
+          "tags": [
+            "language-agents",
+            "reinforcement-learning",
+            "sample-efficiency",
+            "agentic-ai"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2610.20597v1"
+            }
+          ],
+          "published": "2026-10-14T17:59:28+00:00",
+          "score": 1.298
+        },
+        {
+          "id": "28116706d65a",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "'Elastify' Any Pre-Trained Transformer Retraining-Free: Smooth Accuracy–Cost Tradeoffs Up to 60% Sparsity",
+          "why_it_matters": "A practical, retraining-free method to make existing transformers dynamically adapt compute at inference time is directly useful for deploying models across heterogeneous hardware — a real engineering problem.",
+          "summary": "The method ranks individual MLP neurons and attention heads jointly on a common importance scale via differentiable soft-pruning loss minimized across many sparsity targets simultaneously, requiring no retraining. Tested on 27 vision and text transformers (22M–8B parameters), it achieves smooth degradation to 60% sparsity. At 50% sparsity, DINOv3 ViT-H+/16 loses only 0.8% ImageNet-1k linear-probing accuracy while removing 427M parameters. A 60%-sparse AugReg ViT-B/16 achieves 1.80× higher throughput on an A100.",
+          "tags": [
+            "transformers",
+            "model-compression",
+            "inference-efficiency",
+            "pruning"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2610.20588v1"
+            }
+          ],
+          "published": "2026-10-14T17:58:08+00:00",
+          "score": 1.2976
+        },
+        {
+          "id": "729dcb55a93d",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Direct Logical CCZ State Cultivation on Bivariate Bicycle Codes Beats T-State Conversion Costs",
+          "why_it_matters": "Fault-tolerant quantum arithmetic requires efficient Toffoli/CCZ gates; this end-to-end protocol on LDPC codes with simulated infidelities below 10⁻⁶ is a concrete advance for anyone tracking quantum error correction hardware roadmaps.",
+          "summary": "The protocol prepares logical CCZ states directly on bivariate tricycle/bicycle (BT/BB) codes using cup-product CCZ gates and projection-preserving lifts. Under circuit-level noise (single-qubit 0.01%, CZ 0.1%, CCZ 0.5%), exact simulation yields joint infidelities of 1.84×10⁻⁵ at 21.94% acceptance and 4.10×10⁻⁷ at 8.89% acceptance. Spacetime cost per CCZ state is estimated lower than T-state cultivation followed by CCZ conversion.",
+          "tags": [
+            "quantum-error-correction",
+            "fault-tolerant-qc",
+            "ccz-states",
+            "ldpc-codes"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2610.20591v1"
+            }
+          ],
+          "published": "2026-10-14T17:58:30+00:00",
+          "score": 0.4326
+        },
+        {
+          "id": "e768c87dd315",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Price-of-Anarchy Analysis Shows First-Price Auctions Can Be Near-Efficient in AI Agent Markets",
+          "why_it_matters": "As multi-agent AI systems and LLM routing markets become real infrastructure, understanding auction-theoretic welfare guarantees is increasingly relevant for researchers designing agentic systems.",
+          "summary": "The paper analyzes first-price auctions (FPAs) for allocating user prompts among AI agents. Two structural features reduce welfare loss: a 'competitive floor' (multiple agents value most prompts similarly, e.g. via model distillation) which can drive price-of-anarchy to zero as the floor rises, and near-conditional-independence of agent values given prompt difficulty, which yields an efficiency guarantee approaching 1−1/e² — better than the general 1−1/e bound. Results are validated on the EmbedLLM prompt routing dataset.",
+          "tags": [
+            "multi-agent-systems",
+            "auction-theory",
+            "llm-routing",
+            "agentic-ai"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2610.20587v1"
+            }
+          ],
+          "published": "2026-10-14T17:57:57+00:00",
+          "score": 0.4325
+        }
+      ]
+    }
+  ]
+}
