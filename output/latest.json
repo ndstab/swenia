@@ -1,10 +1,10 @@
 {
-  "date": "2026-10-15",
-  "generated_at": "2026-10-15T04:24:27.184534+00:00",
-  "summary_line": "1 must-know · 5 worth knowing",
+  "date": "2026-10-16",
+  "generated_at": "2026-10-16T04:20:20.631686+00:00",
+  "summary_line": "3 must-know · 6 worth knowing",
   "counts": {
-    "total": 8,
-    "headlines": 2,
+    "total": 11,
+    "headlines": 5,
     "frontier": 6
   },
   "sections": [
@@ -13,52 +13,114 @@
       "title": "Headlines",
       "cards": [
         {
-          "id": "884ebf3c3978",
+          "id": "9d251ac6836a",
           "tier": "must_know",
           "category": "headline",
-          "title": "Google DeepMind Launches Gemini 4 Argon: 87% on ERQA, Purpose-Built for Physical Reasoning and Robotics",
-          "why_it_matters": "A flagship frontier model release from DeepMind targeting physical/spatial reasoning and the full robotics stack — this is a major capability jump every AI/robotics researcher needs to know about.",
-          "summary": "Gemini 4 Argon scores 87% on the Embodied Reasoning (ERQA) benchmark, outperforming all other frontier models on 3D physical-spatial tasks. DeepMind demonstrates it across robot control (zero-shot MuJoCo practice, closed-loop video world models), Real2Sim reconstruction from camera feeds or sketches, hindsight labeling, and iterative self-improvement on hardware including Boston Dynamics Spot.",
+          "title": "Meta Releases Llama-Series MoE Model: 816B Total / 42B Active Parameters, Multimodal, Coding-Optimized",
+          "why_it_matters": "This is Meta's largest open-weight release to date—a frontier MoE model with multimodal inputs and agentic coding focus that the whole field will benchmark and build on.",
+          "summary": "The model (checkpoint: Muse-Spark-Open-816B-A42B) uses 62 transformer layers with 256 experts per MoE block, routing 8 experts per token (~42B active parameters), with 97% of parameters in experts. Accepts image, audio, and video inputs via dedicated encoders. BF16 checkpoint is ~1.5TB; NVFP4 variant runs on a single B200 node. Optimized for agentic coding: multi-file refactoring, debugging, and tool use over long contexts.",
           "tags": [
-            "gemini",
-            "google-deepmind",
-            "robotics",
-            "physical-reasoning"
+            "meta",
+            "open-weights",
+            "mixture-of-experts",
+            "multimodal"
           ],
           "sources": [
             {
-              "name": "DeepMind",
-              "url": "https://deepmind.google/blog/gemini-4-argon-for-robotics/"
-            },
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/meta-muse-spark-open"
+            }
+          ],
+          "published": "2026-10-15T00:00:00+00:00",
+          "score": 2.0239
+        },
+        {
+          "id": "3733c75a28bf",
+          "tier": "must_know",
+          "category": "headline",
+          "title": "Black Forest Labs Releases FLUX.3 Image Klein: Multi-Reference Image Editing with Layout Control",
+          "why_it_matters": "Unified text-to-image, multi-reference image-to-image, and bounding-box layout control in a single distilled checkpoint with 2-second H100 inference is a practical capability upgrade for generative image pipelines.",
+          "summary": "FLUX.3 Image Klein ships two open checkpoints supporting text-to-image, multi-reference image-to-image (referenced as <ref_image_N> in prompts), and JSON bounding-box layout control on a normalized 0–1000 scale. The distilled checkpoint generates 1024×1024 images in about 2 seconds on H100 at 16 steps. NVFP4 and FP8 weights supported. Integrated as a Modular Diffusers pipeline with LoRA training scripts included.",
+          "tags": [
+            "image-generation",
+            "diffusion-models",
+            "open-weights",
+            "flux"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/flux-3"
+            }
+          ],
+          "published": "2026-10-15T00:00:00+00:00",
+          "score": 2.0239
+        },
+        {
+          "id": "f174716114a9",
+          "tier": "must_know",
+          "category": "headline",
+          "title": "Google DeepMind Launches Gemini 4 Argon: Frontier Model Claiming #1 on Vals Index for Enterprise Tasks",
+          "why_it_matters": "A flagship Google DeepMind model release with documented real-world engineering impact (including internal Google deployments) is a must-track event for any AI/ML practitioner.",
+          "summary": "Gemini 4 Argon is globally available via API at $2/M input and $10/M output tokens. It ranks #1 on the Vals Index across finance, coding, legal, and tax benchmarks. Documented internal results include: 35%+ increase in agentic code submissions, ~33% reduction in rollbacks, 40% cut in in-memory session prep time for ADK, 2.3x speedup on xTB quantum chemistry, and 2.85x inference speedup on Gemma 4 E2B via vLLM.",
+          "tags": [
+            "google-deepmind",
+            "gemini",
+            "frontier-models",
+            "coding-agents"
+          ],
+          "sources": [
             {
               "name": "DeepMind",
               "url": "https://deepmind.google/blog/introducing-gemini-4-argon/"
             }
           ],
-          "published": "2026-10-13T16:01:58+00:00",
-          "score": 1.8101
+          "published": "2026-10-13T16:01:52+00:00",
+          "score": 1.2982
         },
         {
-          "id": "672ebf75c430",
+          "id": "a01e02239da0",
           "tier": "worth_knowing",
           "category": "headline",
-          "title": "HiRO-ACEv2 Delivers Global 3 km Climate Simulation at 1/300th the Cost of Physics Models",
-          "why_it_matters": "If you work on AI for science or climate, this is a concrete SOTA result showing ML emulators can match high-resolution physics simulations at extreme-event tails — a key frontier benchmark.",
-          "summary": "Ai2's HiRO-ACEv2 pairs a 100 km AI climate model (ACE) with a neural downscaler (HiROv2) to produce global 3 km atmospheric data. HiROv2 now predicts rain, wind, and pressure simultaneously, matching target simulation statistics within 3% even for one-in-a-million extreme events. Full-system cost is ~1/300th of the reference X-SHiELD physics model; regional runs save even more.",
+          "title": "IBM Releases Granite Switch 4.1: Multi-Adapter Model Combining Chat, Safety Decisions, and ASR",
+          "why_it_matters": "The Activated LoRA architecture enabling KV-cache sharing across adapters is a practically important inference efficiency technique worth tracking for multi-task deployment scenarios.",
+          "summary": "Granite-Switch-4.1-8B and -30B compose a general Decision aLoRA, a Guardian safety aLoRA (claimed to outperform several named closed decision models on safety tasks), and Granite-Speech-5.0-Turbo-CTC ASR into one endpoint at roughly base-model VRAM cost. Cache-efficient Activated LoRAs reuse KV cache across adapter switches. The 30B model reportedly outperformed a 27B competitor on a 5-step RAG workflow. Community adapter composition is supported.",
           "tags": [
-            "climate-ml",
-            "weather-emulation",
-            "downscaling",
-            "ai-for-science"
+            "efficient-inference",
+            "lora",
+            "asr",
+            "decision-models"
           ],
           "sources": [
             {
               "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/allenai/hiro-acev2"
+              "url": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1"
             }
           ],
-          "published": "2026-10-14T16:12:42+00:00",
-          "score": 1.2663
+          "published": "2026-10-15T20:34:01+00:00",
+          "score": 1.3465
+        },
+        {
+          "id": "996b33c09ad5",
+          "tier": "worth_knowing",
+          "category": "headline",
+          "title": "Google DeepMind's Antigravity Agentic Platform Finds Novel Antimicrobial Peptide Candidate",
+          "why_it_matters": "Antigravity demonstrates a concrete agentic science workflow compressing multi-database biological search into a single session—a model for how AI agents can accelerate wet-lab-adjacent research pipelines.",
+          "summary": "Google Antigravity is an agentic science workbench enabling multi-turn, researcher-steered discovery sessions. Using ProtNLM—a model predicting biological function from amino acid sequences—it scanned millions of unannotated UniProt entries. Researchers identified a novel antimicrobial peptide candidate with predicted activity against respiratory-tract-infection pathogens in Streptococcus pseudopneumoniae; the lead is now in wet-lab validation.",
+          "tags": [
+            "agents",
+            "biology",
+            "protein-ml",
+            "agentic-science"
+          ],
+          "sources": [
+            {
+              "name": "DeepMind",
+              "url": "https://deepmind.google/blog/accelerating-antimicrobial-discovery/"
+            }
+          ],
+          "published": "2026-10-15T16:08:03+00:00",
+          "score": 1.2661
         }
       ]
     },
@@ -67,136 +129,144 @@
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "f2f6604a9159",
+          "id": "ba4e7337aba2",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Latent Diffusion in Weight Space Generates Deployable Humanoid Control Networks",
-          "why_it_matters": "Generating functional robot policies directly in weight space — rather than training them from scratch — is a frontier research direction with implications for rapid policy generation and weight-space interpretability.",
-          "summary": "Researchers train a latent diffusion model (linear autoencoder + Diffusion Transformer) over RL-trained actor network weights for the Unitree G1 humanoid. Sampled networks deploy directly for walking, dancing, and spin kicks. Analysis reveals first-layer weights consistently encode kinematic structure under both RL and imitation learning, suggesting embodiment-specific structure in learned weights.",
+          "title": "NVIDIA & AI4Bharat Release 2.8T-Token Indic Pretraining Corpus with Open Pipeline",
+          "why_it_matters": "Massive open multilingual corpora with reproducible generation pipelines are directly actionable for researchers building or fine-tuning models on low-resource languages, and this is the largest open synthetic Indic dataset to date.",
+          "summary": "Nemotron-pretraining-Indic-v1 covers all 22 constitutionally recognized Indian languages across 34 language-script configurations: 2,601B native-script tokens and 224.6B romanized tokens (Gemma-4 tokenizer). Content spans translated math, code, and QA material. The open pipeline includes prompts, LLM workflows, and quality checks with input-grounded verification. Built jointly by NVIDIA and IIT Madras's AI4Bharat lab.",
+          "tags": [
+            "multilingual",
+            "pretraining",
+            "open-data",
+            "indic-languages"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/nvidia/scaling-indic-pretraining"
+            }
+          ],
+          "published": "2026-10-16T01:44:47+00:00",
+          "score": 1.4469
+        },
+        {
+          "id": "8031ac42ea20",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "LIBERO-PeRM: New Benchmark for Personalized Preference Learning in Robot Manipulation",
+          "why_it_matters": "Benchmarks that decompose preference learning from task completion are essential infrastructure for embodied-agent researchers working on generalizable, user-adaptive policies.",
+          "summary": "LIBERO-PeRM introduces 312 tasks across five suites evaluating zero-shot preference following, single-preference learning from demos, sample efficiency, cross-layout generalization, and preference composition/conflict handling. Preferences span motion, skill, and user-profile categories. Results show current VLA policies fail at zero-shot personalization; SFT makes preferences learnable, but generalization and conflict handling remain unsolved.",
           "tags": [
             "robotics",
-            "weight-space-learning",
-            "diffusion-models",
-            "humanoid-control"
+            "preference-learning",
+            "benchmark",
+            "embodied-agents"
           ],
           "sources": [
             {
               "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2610.20606v1"
+              "url": "https://arxiv.org/abs/2610.22372v1"
+            },
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2610.22364v1"
+            },
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2610.22362v1"
             }
           ],
-          "published": "2026-10-14T17:59:52+00:00",
-          "score": 1.2981
+          "published": "2026-10-15T17:59:59+00:00",
+          "score": 1.2993
         },
         {
-          "id": "780fe0f72a79",
+          "id": "c3d471dd5190",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "HiRe-MoMa: Hierarchical Residual Fine-Tuning for Mobile Manipulation in ~30 Minutes of Real-World Interaction",
-          "why_it_matters": "Sample-efficient on-robot fine-tuning is a major bottleneck for real-world deployment; this framework's sparse-human-guidance approach and ~30-minute adaptation time are practically significant results.",
-          "summary": "HiRe-MoMa freezes a base policy and adds residual correction heads split into mobile-base and manipulator-arm branches with unidirectional conditioning to reduce gradient interference. Sparse human interventions covering under 20% of training are used to reshape critic value estimates. Real-world experiments on TIAGo++ show consistent task improvement with roughly 30 minutes of online interaction.",
+          "title": "LLM-Guided Evolutionary Search Finds SOTA Quantum Circuits Across 8 Tasks",
+          "why_it_matters": "LLMs proposing circuit designs verified by an independent evaluator is a novel co-design paradigm with direct relevance to quantum ML and algorithm optimization research.",
+          "summary": "An evolutionary framework uses LLMs to propose quantum circuit designs scored by an independent evaluator. Across 8 tasks spanning numerical computation, chemistry, optimization, simulation, and number theory, 7 of 8 results significantly reduce both Toffoli gate and qubit counts versus prior state of the art. The eighth task yields a new reversible architecture for prime-field modular inversion, making the divsteps algorithm viable for reversible arithmetic.",
           "tags": [
-            "robotics",
-            "reinforcement-learning",
-            "mobile-manipulation",
-            "sample-efficiency"
+            "quantum-computing",
+            "llm-agents",
+            "circuit-optimization",
+            "algorithm-discovery"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2610.20607v1"
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2610.22367v1"
             }
           ],
-          "published": "2026-10-14T17:59:52+00:00",
-          "score": 1.2981
+          "published": "2026-10-15T17:59:20+00:00",
+          "score": 1.2992
         },
         {
-          "id": "a56c4f744d39",
+          "id": "2f5abc61ec43",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Co-Evolving Acting and Forecasting Boosts Language Agent Sample Efficiency Up to 2× Over GRPO",
-          "why_it_matters": "Better RL training signals for language agents without inference overhead directly addresses a core bottleneck in agentic AI research you likely work adjacent to.",
-          "summary": "The proposed method adds multi-step action targets to agentic RL: on successful trajectories, the policy backbone is trained to forecast future action sequences from each history step, forming a temporal ensemble absorbed during training. At inference the agent still acts one step at a time with no overhead. Across five benchmarks it beats GRPO and ECHO baselines, with up to 1.9× and 2.0× better sample efficiency on ScienceWorld respectively.",
+          "title": "PathFM: Flow-Matching Model for Full Trajectory Forecasting Beats Quantile Baselines on Path Metrics",
+          "why_it_matters": "Capturing joint trajectory distributions rather than marginal quantiles matters for cumulative and extremal forecasting tasks—PathFM's distilled flow-matching approach is a technically credible step forward for time series researchers.",
+          "summary": "PathFM uses flow matching to generate complete future multivariate trajectories rather than marginal quantiles. A distilled one-to-two-step sampler with shared history attention cache achieves path generation speed comparable to a single quantile-model query. The authors introduce fps-bench (augmenting fev-bench with energy and variogram scores); PathFM achieves the highest aggregate path score on fps-bench among evaluated baselines and sustains long-run variability on chaotic systems where baselines collapse.",
           "tags": [
-            "language-agents",
-            "reinforcement-learning",
-            "sample-efficiency",
-            "agentic-ai"
+            "time-series",
+            "generative-models",
+            "flow-matching",
+            "forecasting"
           ],
           "sources": [
             {
               "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2610.20597v1"
+              "url": "https://arxiv.org/abs/2610.22358v1"
             }
           ],
-          "published": "2026-10-14T17:59:28+00:00",
-          "score": 1.298
+          "published": "2026-10-15T17:58:45+00:00",
+          "score": 1.299
         },
         {
-          "id": "28116706d65a",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "'Elastify' Any Pre-Trained Transformer Retraining-Free: Smooth Accuracy–Cost Tradeoffs Up to 60% Sparsity",
-          "why_it_matters": "A practical, retraining-free method to make existing transformers dynamically adapt compute at inference time is directly useful for deploying models across heterogeneous hardware — a real engineering problem.",
-          "summary": "The method ranks individual MLP neurons and attention heads jointly on a common importance scale via differentiable soft-pruning loss minimized across many sparsity targets simultaneously, requiring no retraining. Tested on 27 vision and text transformers (22M–8B parameters), it achieves smooth degradation to 60% sparsity. At 50% sparsity, DINOv3 ViT-H+/16 loses only 0.8% ImageNet-1k linear-probing accuracy while removing 427M parameters. A 60%-sparse AugReg ViT-B/16 achieves 1.80× higher throughput on an A100.",
-          "tags": [
-            "transformers",
-            "model-compression",
-            "inference-efficiency",
-            "pruning"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2610.20588v1"
-            }
-          ],
-          "published": "2026-10-14T17:58:08+00:00",
-          "score": 1.2976
-        },
-        {
-          "id": "729dcb55a93d",
+          "id": "e55435e79e6c",
           "tier": "skim",
           "category": "frontier",
-          "title": "Direct Logical CCZ State Cultivation on Bivariate Bicycle Codes Beats T-State Conversion Costs",
-          "why_it_matters": "Fault-tolerant quantum arithmetic requires efficient Toffoli/CCZ gates; this end-to-end protocol on LDPC codes with simulated infidelities below 10⁻⁶ is a concrete advance for anyone tracking quantum error correction hardware roadmaps.",
-          "summary": "The protocol prepares logical CCZ states directly on bivariate tricycle/bicycle (BT/BB) codes using cup-product CCZ gates and projection-preserving lifts. Under circuit-level noise (single-qubit 0.01%, CZ 0.1%, CCZ 0.5%), exact simulation yields joint infidelities of 1.84×10⁻⁵ at 21.94% acceptance and 4.10×10⁻⁷ at 8.89% acceptance. Spacetime cost per CCZ state is estimated lower than T-state cultivation followed by CCZ conversion.",
+          "title": "Theoretical Proof: qLDPC Code States Maintain Exponential CMI Decay Under Local Pauli Noise",
+          "why_it_matters": "Formal stability guarantees for quantum error-correcting code states under noise are foundational for quantum computing researchers working on LDPC codes and mixed-state phases of matter.",
+          "summary": "The paper proves that for normalized code-projector states of Z_d qLDPC stabilizer codes under local Pauli noise, conditional mutual information I(A:C|B) decays exponentially with buffer width B in two regimes: weak noise (error clusters must cross buffer) and strong noise (buffer supports no logical operator). It also establishes robustness of Levin-Wen topological entropy and, on finite lattices of size n, implies a constant-layer quasi-local Petz recovery channel of range O(poly(log n)/ε).",
           "tags": [
             "quantum-error-correction",
-            "fault-tolerant-qc",
-            "ccz-states",
-            "ldpc-codes"
+            "qldpc",
+            "quantum-computing",
+            "theory"
           ],
           "sources": [
             {
               "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2610.20591v1"
+              "url": "https://arxiv.org/abs/2610.22357v1"
             }
           ],
-          "published": "2026-10-14T17:58:30+00:00",
-          "score": 0.4326
+          "published": "2026-10-15T17:58:40+00:00",
+          "score": 0.433
         },
         {
-          "id": "e768c87dd315",
+          "id": "c797ac90ed8b",
           "tier": "skim",
           "category": "frontier",
-          "title": "Price-of-Anarchy Analysis Shows First-Price Auctions Can Be Near-Efficient in AI Agent Markets",
-          "why_it_matters": "As multi-agent AI systems and LLM routing markets become real infrastructure, understanding auction-theoretic welfare guarantees is increasingly relevant for researchers designing agentic systems.",
-          "summary": "The paper analyzes first-price auctions (FPAs) for allocating user prompts among AI agents. Two structural features reduce welfare loss: a 'competitive floor' (multiple agents value most prompts similarly, e.g. via model distillation) which can drive price-of-anarchy to zero as the floor rises, and near-conditional-independence of agent values given prompt difficulty, which yields an efficiency guarantee approaching 1−1/e² — better than the general 1−1/e bound. Results are validated on the EmbedLLM prompt routing dataset.",
+          "title": "Researcher Claims Neural Networks Are 'Clean': Superposition in InceptionV1 Was Architectural Artifact",
+          "why_it_matters": "If the canonical polysemanticity/superposition evidence that drove the field toward sparse autoencoders was misread, it fundamentally changes the interpretability research agenda for every ML researcher.",
+          "summary": "After months studying neurons and circuits, the author argues the landmark polysemanticity evidence in InceptionV1 resulted from architectural failure rather than a general superposition learning principle. With standard architectural improvements and no change to model size or training data, 99–100% of neurons in InceptionV1's last layer became easily interpretable. The author proposes 'recursive generalization' as the correct motif and argues networks can be studied directly without SAE-style unfolding.",
           "tags": [
-            "multi-agent-systems",
-            "auction-theory",
-            "llm-routing",
-            "agentic-ai"
+            "interpretability",
+            "mechanistic-interpretability",
+            "neural-networks",
+            "circuits"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2610.20587v1"
+              "name": "HN (559pts)",
+              "url": "https://already-clean.goodfire.com/"
             }
           ],
-          "published": "2026-10-14T17:57:57+00:00",
-          "score": 0.4325
+          "published": "2026-10-15T16:04:01+00:00",
+          "score": 0.4216
         }
       ]
     }
