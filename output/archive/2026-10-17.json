@@ -1,0 +1,94 @@
+{
+  "date": "2026-10-17",
+  "generated_at": "2026-10-17T04:10:57.615049+00:00",
+  "summary_line": "1 must-know · 1 worth knowing",
+  "counts": {
+    "total": 3,
+    "headlines": 1,
+    "frontier": 2
+  },
+  "sections": [
+    {
+      "key": "headlines",
+      "title": "Headlines",
+      "cards": [
+        {
+          "id": "849b423196d1",
+          "tier": "must_know",
+          "category": "headline",
+          "title": "Hugging Face & Reflection Launch Beam: 501B Open-Weight MoE for Coding and Agents",
+          "why_it_matters": "A frontier-scale, Apache 2.0 MoE model with 1M context, full RL recipes, and day-0 vLLM/SGLang support is exactly the kind of open-weight drop that reshapes what self-hosted AI research and production deployments can do.",
+          "summary": "Beam is a 501B-parameter sparse MoE (23B active per token), 52 layers, 256 experts with 8 routed per token. Supports 1M-token context, five reasoning levels, tool calling, speculative decoding, and ships in BF16/FP8/NVFP4. Day-0 support in transformers, vLLM, and SGLang; full-parameter RL via Miles; custom Rust inference harness. Apache 2.0.",
+          "tags": [
+            "open-weight",
+            "moe",
+            "agents",
+            "inference"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/reflection-beam"
+            }
+          ],
+          "published": "2026-10-16T00:00:00+00:00",
+          "score": 2.0283
+        }
+      ]
+    },
+    {
+      "key": "frontier",
+      "title": "Frontier & Papers",
+      "cards": [
+        {
+          "id": "e69116fb9b0e",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "T2-Z: Test-Time Optimization of Latent Environment Factors for Robot World Models",
+          "why_it_matters": "For researchers working on world models and robot agents, T2-Z shows a principled way to adapt to unseen physical or rule-based environment factors at test time using only a handful of interactions — no supervision on what those factors are.",
+          "summary": "T2-Z adds a learnable environment latent to a robotic world model. Training alternates between optimizing world-model dynamics and optimizing latents from world-prediction error alone. At test time, the frozen world model adapts by optimizing a fresh latent from one or more interaction trajectories. Across 7 simulated and 4 real tasks, object prediction error drops from 15.20 to 7.00 and action success rises from 33.73% to 72.96%.",
+          "tags": [
+            "world-models",
+            "robotics",
+            "test-time adaptation",
+            "rl"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2610.22364v1"
+            },
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2610.22362v1"
+            }
+          ],
+          "published": "2026-10-15T17:59:11+00:00",
+          "score": 0.9329
+        },
+        {
+          "id": "d2d1f7fd5e93",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "OmniVerifier-C1: Decomposed Graded Visual Verifier for Structured World Modeling",
+          "why_it_matters": "Replacing binary reward signals with fine-grained, decomposed verifiers is a live challenge in multimodal RL and world-modeling pipelines — this work directly addresses that with both empirical results and a theoretical comparison of pointwise vs. pairwise paradigms.",
+          "summary": "OmniVerifier-C1 decomposes complex prompts into sub-components and assigns pointwise continuous scores rather than binary True/False judgments. A Decoupled RL strategy jointly trains sub-question binary judgment and global alignment scoring. The graded verifier outperforms binary baselines in text-to-image settings and on structured world-modeling tasks (Maze, Sudoku). The paper also shows pairwise verification yields more accurate critiques than pointwise when ground-truth images are available.",
+          "tags": [
+            "verifiers",
+            "multimodal",
+            "rl",
+            "world-models"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2610.22355v1"
+            }
+          ],
+          "published": "2026-10-15T17:58:04+00:00",
+          "score": 0.3109
+        }
+      ]
+    }
+  ]
+}
