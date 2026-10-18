@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-18",
+  "generated_at": "2026-10-18T04:17:53.002709+00:00",
+  "summary_line": "1 must-know · 1 worth knowing",
+  "counts": {
+    "total": 2,
+    "headlines": 1,
+    "frontier": 1
+  },
+  "sections": [
+    {
+      "key": "headlines",
+      "title": "Headlines",
+      "cards": [
+        {
+          "id": "987754dece67",
+          "tier": "must_know",
+          "category": "headline",
+          "title": "Meta's Muse Spark Open (816B MoE) Shifts Western Open-Weight Balance",
+          "why_it_matters": "As an AI/ML engineer tracking frontier open-weight models, this is the biggest Western open-source release in months and directly affects what you can self-host for agentic and coding workloads.",
+          "summary": "Meta dropped Muse Spark Open: 816B total / 42B active MoE, 1M-token context, natively multimodal, built for coding and agentic use. It scores near DeepSeek V4.1 Flash on the Artificial Analysis Index, above GLM 5.2 but behind GLM 5.3 and Kimi K3. Mistral Large 4 (index score 38) and Reflection's Beam also announced this week; weights not yet released for those two.",
+          "tags": [
+            "open-weights",
+            "llm",
+            "meta",
+            "frontier-models"
+          ],
+          "sources": [
+            {
+              "name": "Interconnects",
+              "url": "https://www.interconnects.ai/p/meta-shakes-up-the-frontiers-open"
+            }
+          ],
+          "published": "2026-10-17T14:06:54+00:00",
+          "score": 2.4636
+        }
+      ]
+    },
+    {
+      "key": "frontier",
+      "title": "Frontier & Papers",
+      "cards": [
+        {
+          "id": "f85afceab2ad",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "CoDA: Robot Policies and Simulation Data Engines Co-Evolve via Shared Memory",
+          "why_it_matters": "For a researcher interested in RL and agents, CoDA's approach of using a VLM critic to diagnose policy failures and auto-generate targeted training environments is a technically novel alternative to static sim-to-real pipelines.",
+          "summary": "CoDA pairs a generative simulation engine with an action policy through a shared memory of failures, diagnoses, and learning progress. A VLM critic converts failures into generation and training programs; Text2potential turns diagnoses into staged potentials for action-chunk value learning. Out-of-distribution success jumps from 5.3% (SFT) to 27.6%, beating the strongest closed-loop baseline by 9.5 pp. On LIBERO-Pro, 15 rounds raise success from 25% to 84% under position perturbations and 1% to 76% under instruction perturbations.",
+          "tags": [
+            "robotics",
+            "reinforcement-learning",
+            "simulation",
+            "agents"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2610.22362v1"
+            }
+          ],
+          "published": "2026-10-15T17:59:02+00:00",
+          "score": 0.6673
+        }
+      ]
+    }
+  ]
+}
