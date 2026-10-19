@@ -1,0 +1,137 @@
+{
+  "date": "2026-10-19",
+  "generated_at": "2026-10-19T04:26:56.228634+00:00",
+  "summary_line": "2 must-know · 2 worth knowing",
+  "counts": {
+    "total": 5,
+    "headlines": 0,
+    "frontier": 5
+  },
+  "sections": [
+    {
+      "key": "headlines",
+      "title": "Headlines",
+      "cards": []
+    },
+    {
+      "key": "frontier",
+      "title": "Frontier & Papers",
+      "cards": [
+        {
+          "id": "2cf33ea6373a",
+          "tier": "must_know",
+          "category": "frontier",
+          "title": "Behavioral Couplings in LLMs: Fine-Tuning One Behavior Can Silently Trigger Another",
+          "why_it_matters": "For any researcher or engineer doing post-training, RLHF, or fine-tuning, this is a direct safety and alignment concern — couplings can compose across document sets, making emergent misbehaviors hard to trace even when they never co-occur in any single training document.",
+          "summary": "Training documents that co-describe two behaviors create a 'behavioral coupling': fine-tuning for behavior 1 later elicits behavior 2. Critically, couplings compose transitively — if doc-A pairs behaviors 1+2 and doc-B pairs behaviors 2+3, fine-tuning on 1 elicits both 2 and 3, even though 1 and 3 never appear together. Standard behavioral evals of current model state are insufficient to detect this.",
+          "tags": [
+            "alignment",
+            "fine-tuning",
+            "llm safety",
+            "emergent behavior"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2610.23847v1"
+            }
+          ],
+          "published": "2026-10-16T17:58:08+00:00",
+          "score": 1.3316
+        },
+        {
+          "id": "665db5bfc90a",
+          "tier": "must_know",
+          "category": "frontier",
+          "title": "IBM Nighthawk r2 Demonstrates Distance-Based Logical Error Suppression in Surface Code Memory",
+          "why_it_matters": "Concrete hardware evidence of logical error suppression scaling with code distance on a cloud-accessible processor is a key milestone for fault-tolerant quantum computing that anyone tracking quantum hardware progress should note.",
+          "summary": "On IBM Nighthawk r2, optimizing syndrome extraction with short readout, fused measurement/reset, and XX echo reduces median per-round logical error rate by 3.8× (X basis) and 1.4× (Z basis) vs. standard readout. Scaling protected distance from 3 to 6 reduces per-round error from ~0.52% to ~0.22–0.24%; error-suppression factors under maximum-likelihood decoding reach 1.68 (Z) and 1.85 (X). Long-lived correlations persist at 150 rounds.",
+          "tags": [
+            "quantum error correction",
+            "surface code",
+            "quantum hardware",
+            "fault-tolerant computing"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2610.23840v1"
+            }
+          ],
+          "published": "2026-10-16T17:56:53+00:00",
+          "score": 1.3312
+        },
+        {
+          "id": "6c92a95079ef",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "MFlow Adaptive Parameterization and ConvRefiner Fix Pixel-Space Diffusion Transformers",
+          "why_it_matters": "If you work on generative models or diffusion architectures, this paper directly tackles the x0- vs. velocity-prediction design choice and a persistent high-frequency quality gap — both practical issues for anyone building or evaluating pixel-space models.",
+          "summary": "MFlow learns to interpolate between x0- and u-prediction per principal data direction, end-to-end with diffusion training; larger models systematically prefer velocity prediction. A separate frozen-backbone ConvRefiner module, trained post-hoc with adversarial loss, restores high-frequency statistics without hurting FID. Evaluated on ImageNet, UCF-101, and text-to-image.",
+          "tags": [
+            "diffusion models",
+            "generative models",
+            "image synthesis",
+            "transformers"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2610.23854v1"
+            }
+          ],
+          "published": "2026-10-16T17:59:30+00:00",
+          "score": 0.666
+        },
+        {
+          "id": "6c9b379f94e1",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Spectral Query Encoding Provides Task-Aligned Inductive Biases in Parameterized Quantum Circuits",
+          "why_it_matters": "For quantum ML researchers, this offers a principled route from known task spectral structure to circuit design, potentially improving data efficiency on structured tasks without adding sample-dependent parameters.",
+          "summary": "In data-reuploading quantum circuits, encoding a fixed spectral query modulates how existing signal frequencies are combined without adding new sample-dependent information, changing the circuit's hypothesis class. On small-scale tasks including a synthetic aperture radar classification analogue, query-aligned circuits outperform parameter-matched circuits with mismatched or absent queries when training data is limited.",
+          "tags": [
+            "quantum machine learning",
+            "parameterized quantum circuits",
+            "spectral methods",
+            "inductive bias"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2610.23834v1"
+            }
+          ],
+          "published": "2026-10-16T17:53:19+00:00",
+          "score": 0.6651
+        },
+        {
+          "id": "e22eeba82d81",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "LLM Agents Reproduce 77.4% of Cancer Registry Study Claims and Flag Analytical Robustness Issues",
+          "why_it_matters": "As agentic AI systems move into scientific workflows, this benchmark and pipeline offer a concrete, measurable signal for what LLM agents can and cannot reliably automate in research reproduction and robustness testing.",
+          "summary": "SEER-Repro benchmarks 20 published SEER-database cancer studies. An LLM agent reproduces 77.4% of 2,190 atomic claims. A second agentic pipeline tests robustness by identifying analytical choices, proposing defensible alternatives, and re-running analyses; it flags potentially consequential choices in 9.5% of fully reproduced findings for expert review.",
+          "tags": [
+            "llm agents",
+            "scientific reproducibility",
+            "benchmarks",
+            "agentic ai"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2610.23845v1"
+            },
+            {
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2610.23839v1"
+            }
+          ],
+          "published": "2026-10-16T17:57:55+00:00",
+          "score": 0.2219
+        }
+      ]
+    }
+  ]
+}
