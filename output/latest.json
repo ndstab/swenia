@@ -1,135 +1,158 @@
 {
-  "date": "2026-10-19",
-  "generated_at": "2026-10-19T04:26:56.228634+00:00",
-  "summary_line": "2 must-know · 2 worth knowing",
+  "date": "2026-10-20",
+  "generated_at": "2026-10-20T04:37:40.897664+00:00",
+  "summary_line": "3 worth knowing",
   "counts": {
-    "total": 5,
-    "headlines": 0,
-    "frontier": 5
+    "total": 6,
+    "headlines": 2,
+    "frontier": 4
   },
   "sections": [
     {
       "key": "headlines",
       "title": "Headlines",
-      "cards": []
+      "cards": [
+        {
+          "id": "9dbc0d55ff91",
+          "tier": "skim",
+          "category": "headline",
+          "title": "TorchNeuron Makes AWS Trainium a Native PyTorch Device, Boosting HF Model Coverage to 89%",
+          "why_it_matters": "If you train or serve models on AWS Trainium, this replaces the XLA-based Optimum Neuron workflow with native eager execution, FSDP2, and direct compatibility with Transformers, Diffusers, PEFT, and TRL — no custom modeling classes needed.",
+          "summary": "TorchNeuron (public beta Oct 20, 2026, pip-installable) adds Trainium as a native PyTorch device with eager mode, torch.compile, DTensor, and FSDP2. Supported text-generation architectures jump from 46% (Optimum Neuron v0.4.5) to 89% of the top-100 most-used models. HF recommends migrating away from Optimum Neuron to use Transformers/Accelerate/TRL directly via device_map='neuron'.",
+          "tags": [
+            "hardware",
+            "infrastructure",
+            "training",
+            "hugging-face"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/hf-torchneuron"
+            }
+          ],
+          "published": "2026-10-19T00:00:00+00:00",
+          "score": 0.336
+        },
+        {
+          "id": "e3c36d4422c6",
+          "tier": "skim",
+          "category": "headline",
+          "title": "Apertus 1.5: Fully Open 8B/70B Models with Native Multimodal, 262k Context, and Thinking Mode",
+          "why_it_matters": "A significant fully-open release (weights, data, training details) adding multimodality via early-fusion discrete tokenization, long context, and RLVR-based reasoning — directly comparable infrastructure to leading proprietary models for researchers who need reproducible baselines.",
+          "summary": "Apertus 1.5 continues pretraining Apertus 1.0 with 4T additional tokens (8B) and 2T (70B), reaching 19T and 17T total. Multimodality is added via early-fusion discrete tokens: images use the Emu3.5 tokenizer (1,024 tokens per 512×512 image), audio uses WavTokenizer (40 tokens/sec). Context grows to 262,144 tokens. Post-training pipeline: SFT → long-context SFT → RLVR (~350k prompts) → DPO → charter-aligned SDPO. All weights, data, and SFT/preference mixes are released.",
+          "tags": [
+            "open-weights",
+            "multimodal",
+            "post-training",
+            "long-context"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/swiss-ai/apertus-v15-release-notes"
+            }
+          ],
+          "published": "2026-10-15T09:08:45+00:00",
+          "score": 0.1006
+        }
+      ]
     },
     {
       "key": "frontier",
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "2cf33ea6373a",
-          "tier": "must_know",
+          "id": "d14cb6675218",
+          "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Behavioral Couplings in LLMs: Fine-Tuning One Behavior Can Silently Trigger Another",
-          "why_it_matters": "For any researcher or engineer doing post-training, RLHF, or fine-tuning, this is a direct safety and alignment concern — couplings can compose across document sets, making emergent misbehaviors hard to trace even when they never co-occur in any single training document.",
-          "summary": "Training documents that co-describe two behaviors create a 'behavioral coupling': fine-tuning for behavior 1 later elicits behavior 2. Critically, couplings compose transitively — if doc-A pairs behaviors 1+2 and doc-B pairs behaviors 2+3, fine-tuning on 1 elicits both 2 and 3, even though 1 and 3 never appear together. Standard behavioral evals of current model state are insufficient to detect this.",
+          "title": "Halcyon: Strong Text-to-Image Generation from Scratch, No Language Pretraining Required",
+          "why_it_matters": "Challenges a core assumption in T2I system design — that internet-scale language pretraining is necessary — with controlled experiments and compute-efficient results that reframe how multimodal models should be pretrained.",
+          "summary": "Halcyon, a family of early-fusion multimodal autoregressive models trained from scratch on 100M image-text pairs (GPIC dataset), outperforms LlamaGen-XL/8 (48.0 vs 63.3 gFD) with 18.2× less compute at 0.52B parameters, and outperforms JiT-T2I-XXL/8++ (35.3 vs 41.0 gFD) with 275× less compute at 1.6B. Controlled experiments show text-only pretraining does not improve T2I quality. Code and models released.",
           "tags": [
-            "alignment",
-            "fine-tuning",
-            "llm safety",
-            "emergent behavior"
+            "text-to-image",
+            "multimodal",
+            "pretraining",
+            "architecture"
           ],
           "sources": [
             {
               "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2610.23847v1"
+              "url": "https://arxiv.org/abs/2610.26863v1"
             }
           ],
-          "published": "2026-10-16T17:58:08+00:00",
-          "score": 1.3316
+          "published": "2026-10-19T17:59:59+00:00",
+          "score": 1.2941
         },
         {
-          "id": "665db5bfc90a",
-          "tier": "must_know",
-          "category": "frontier",
-          "title": "IBM Nighthawk r2 Demonstrates Distance-Based Logical Error Suppression in Surface Code Memory",
-          "why_it_matters": "Concrete hardware evidence of logical error suppression scaling with code distance on a cloud-accessible processor is a key milestone for fault-tolerant quantum computing that anyone tracking quantum hardware progress should note.",
-          "summary": "On IBM Nighthawk r2, optimizing syndrome extraction with short readout, fused measurement/reset, and XX echo reduces median per-round logical error rate by 3.8× (X basis) and 1.4× (Z basis) vs. standard readout. Scaling protected distance from 3 to 6 reduces per-round error from ~0.52% to ~0.22–0.24%; error-suppression factors under maximum-likelihood decoding reach 1.68 (Z) and 1.85 (X). Long-lived correlations persist at 150 rounds.",
-          "tags": [
-            "quantum error correction",
-            "surface code",
-            "quantum hardware",
-            "fault-tolerant computing"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2610.23840v1"
-            }
-          ],
-          "published": "2026-10-16T17:56:53+00:00",
-          "score": 1.3312
-        },
-        {
-          "id": "6c92a95079ef",
+          "id": "79fca884af4a",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "MFlow Adaptive Parameterization and ConvRefiner Fix Pixel-Space Diffusion Transformers",
-          "why_it_matters": "If you work on generative models or diffusion architectures, this paper directly tackles the x0- vs. velocity-prediction design choice and a persistent high-frequency quality gap — both practical issues for anyone building or evaluating pixel-space models.",
-          "summary": "MFlow learns to interpolate between x0- and u-prediction per principal data direction, end-to-end with diffusion training; larger models systematically prefer velocity prediction. A separate frozen-backbone ConvRefiner module, trained post-hoc with adversarial loss, restores high-frequency statistics without hurting FID. Evaluated on ImageNet, UCF-101, and text-to-image.",
+          "title": "OpenVLHarness: Multimodal Tool-Use Harness Adds 9.7–12.6 Points Across 22 Benchmarks",
+          "why_it_matters": "Directly relevant to agent and reasoning research: demonstrates that persistent multimodal memory and heterogeneous tool integration close gaps that scaling inference compute alone cannot, with results across eight open and proprietary backbones.",
+          "summary": "OpenVLHarness combines a capability layer (tool interfaces plus evidence rendering) with persistent multimodal memory storing images, structured data, and web references as addressable artifacts. Evaluated on 22 benchmarks, it improves average scores by 9.7–12.6 points over no-tool baselines, including +11.2 with Qwen3-VL-8B, +9.7 with Kimi K3, and +9.9 with GPT-6 Astra. GPT-6 Luna at medium effort beats Codex and Visual Sketchpad at maximum effort by 7.7–8.5 points at ≤37% token cost.",
           "tags": [
-            "diffusion models",
-            "generative models",
-            "image synthesis",
-            "transformers"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2610.23854v1"
-            }
-          ],
-          "published": "2026-10-16T17:59:30+00:00",
-          "score": 0.666
-        },
-        {
-          "id": "6c9b379f94e1",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "Spectral Query Encoding Provides Task-Aligned Inductive Biases in Parameterized Quantum Circuits",
-          "why_it_matters": "For quantum ML researchers, this offers a principled route from known task spectral structure to circuit design, potentially improving data efficiency on structured tasks without adding sample-dependent parameters.",
-          "summary": "In data-reuploading quantum circuits, encoding a fixed spectral query modulates how existing signal frequencies are combined without adding new sample-dependent information, changing the circuit's hypothesis class. On small-scale tasks including a synthetic aperture radar classification analogue, query-aligned circuits outperform parameter-matched circuits with mismatched or absent queries when training data is limited.",
-          "tags": [
-            "quantum machine learning",
-            "parameterized quantum circuits",
-            "spectral methods",
-            "inductive bias"
+            "agents",
+            "multimodal",
+            "reasoning",
+            "benchmarks"
           ],
           "sources": [
             {
               "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2610.23834v1"
-            }
-          ],
-          "published": "2026-10-16T17:53:19+00:00",
-          "score": 0.6651
-        },
-        {
-          "id": "e22eeba82d81",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "LLM Agents Reproduce 77.4% of Cancer Registry Study Claims and Flag Analytical Robustness Issues",
-          "why_it_matters": "As agentic AI systems move into scientific workflows, this benchmark and pipeline offer a concrete, measurable signal for what LLM agents can and cannot reliably automate in research reproduction and robustness testing.",
-          "summary": "SEER-Repro benchmarks 20 published SEER-database cancer studies. An LLM agent reproduces 77.4% of 2,190 atomic claims. A second agentic pipeline tests robustness by identifying analytical choices, proposing defensible alternatives, and re-running analyses; it flags potentially consequential choices in 9.5% of fully reproduced findings for expert review.",
-          "tags": [
-            "llm agents",
-            "scientific reproducibility",
-            "benchmarks",
-            "agentic ai"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2610.23845v1"
+              "url": "https://arxiv.org/abs/2610.26860v1"
             },
             {
-              "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2610.23839v1"
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2610.26856v1"
             }
           ],
-          "published": "2026-10-16T17:57:55+00:00",
-          "score": 0.2219
+          "published": "2026-10-19T17:59:58+00:00",
+          "score": 1.2941
+        },
+        {
+          "id": "00e3e8d95d96",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "FunCAD-Harness: LLM Agents for Functional CAD Design with Physics-Simulation Feedback",
+          "why_it_matters": "Relevant to researchers studying LLM agents on structured, verifiable tasks — the simulation-in-the-loop eval framework and 46-mechanism benchmark expose failure modes invisible to visual or static code checks.",
+          "summary": "FunCAD-Harness translates abstract functional requirements into candidate-specific physical simulation tests, using simulation feedback to guide iterative design revisions by LLM agents. FunCADBench covers 46 mechanism families with interdependent, multi-step operations. Experiments show the harness exposes mechanical failures invisible to visual inspection and substantially improves functional success rates over standard simulation-augmented baselines.",
+          "tags": [
+            "agents",
+            "evaluation",
+            "reasoning",
+            "robotics"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2610.26861v1"
+            }
+          ],
+          "published": "2026-10-19T17:59:58+00:00",
+          "score": 1.2941
+        },
+        {
+          "id": "eceb10125f1e",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "CoopUQ: Uncertainty-Aware Cooperative Occupancy Forecasting for Multi-Robot Navigation",
+          "why_it_matters": "Niche but technically substantive for researchers working on multi-agent RL or robot safety: the uncertainty-penalized cost in constrained MARL is a concrete mechanism for handling OOD distribution shift in shared environments.",
+          "summary": "CoopUQ fuses spatiotemporal features across robots to predict future occupancy grid maps, then uses both predictions and their uncertainty as cost signals in constrained multi-agent RL, penalizing navigation through occupied or highly uncertain regions. Evaluated in Unity3D simulations across varied layouts, pedestrian densities, and OOD rushing behavior, plus real-robot experiments, it shows improved prediction and safety over representative baselines.",
+          "tags": [
+            "multi-agent-rl",
+            "robotics",
+            "uncertainty",
+            "navigation"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2610.26852v1"
+            }
+          ],
+          "published": "2026-10-19T17:59:49+00:00",
+          "score": 0.4314
         }
       ]
     }
