@@ -1,0 +1,200 @@
+{
+  "date": "2026-10-22",
+  "generated_at": "2026-10-22T04:28:33.667864+00:00",
+  "summary_line": "5 worth knowing",
+  "counts": {
+    "total": 8,
+    "headlines": 1,
+    "frontier": 7
+  },
+  "sections": [
+    {
+      "key": "headlines",
+      "title": "Headlines",
+      "cards": [
+        {
+          "id": "9b35c0bfb2f0",
+          "tier": "skim",
+          "category": "headline",
+          "title": "IBM Granite Speech 5.0: New 2B Model Ranks #2 on Open ASR Leaderboard; Turbo CTC Hits 19,870 RTFx",
+          "why_it_matters": "Open-weight speech models with competitive ASR accuracy and extreme inference speed are directly useful infrastructure for any AI system ingesting audio, and the 77% speed gain on Turbo CTC is a meaningful engineering data point.",
+          "summary": "Granite Speech 5.0-2B achieves 5.06% average English WER (ranked #2 open-weight on Open ASR Leaderboard), trained on 390K hours of audio, supporting transcription and translation across six languages with keyword biasing up to 2,000 terms. The revised 470M Turbo CTC model adds multilingual support and reaches 19,870 RTFx (~1.6× faster than prior release). Updated 4.1-2B-Plus reduces WDER and cpWER by 7% each and cuts long-form WER by 24%. All models are Apache 2.0.",
+          "tags": [
+            "speech recognition",
+            "asr",
+            "open-weight",
+            "inference speed"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/ibm-granite/granite-speech-5"
+            }
+          ],
+          "published": "2026-10-21T14:58:18+00:00",
+          "score": 0.4145
+        }
+      ]
+    },
+    {
+      "key": "frontier",
+      "title": "Frontier & Papers",
+      "cards": [
+        {
+          "id": "7104bc51c295",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "NVIDIA Kumo Relational: First Few-Shot Foundation Model to Beat Supervised ML on Relational Databases",
+          "why_it_matters": "This is a flagship NVIDIA research release that could make XGBoost and feature-engineering pipelines obsolete for enterprise tabular/relational ML — a major paradigm shift directly relevant to production ML work.",
+          "summary": "Kumo Relational is a pre-trained relational foundation model that operates directly on multi-table databases (preserving foreign keys and timestamps) without flattening or task-specific training. Across 41 tasks on 15 databases, it outperforms supervised relational deep learning and expert-engineered GBT pipelines; on RelBench V1 classification it beats GBTs by ~4 AUROC points, and on the SAP SALT benchmark it surpasses AutoGluon ensembles by 8% MRR. Scales to 500B+ rows.",
+          "tags": [
+            "structured data",
+            "foundation model",
+            "tabular ml",
+            "nvidia"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/nvidia/kumo-relational"
+            }
+          ],
+          "published": "2026-10-21T18:26:30+00:00",
+          "score": 1.3049
+        },
+        {
+          "id": "685948fc08f8",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "LongZero: RL Improves LLM Long-Context Reasoning with Zero External Data",
+          "why_it_matters": "Bootstrapping long-context RL from the model itself — no corpora, no teacher models — is a practically significant result for researchers hitting data scarcity walls when scaling reasoning training.",
+          "summary": "LongZero trains LLMs to improve long-context reasoning via GRPO with no external data. The model first synthesizes question-answer pairs with compact structured evidence, then separately expands that evidence into long multi-document contexts. Combining self-written multi-hop and multi-round retrieval tasks, LongZero outperforms RL baselines trained on externally synthesized corpora across five long-context reasoning benchmarks on two LLMs.",
+          "tags": [
+            "long-context",
+            "reinforcement learning",
+            "reasoning",
+            "data synthesis"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2610.30132v1"
+            }
+          ],
+          "published": "2026-10-21T17:59:14+00:00",
+          "score": 1.2967
+        },
+        {
+          "id": "9052b2916380",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "PhysiCalWorld: In-Context Physics Calibration for World Models via Exploratory Interaction Clips",
+          "why_it_matters": "Calibrating world models to instance-specific physics without fine-tuning or labeled physics data is a key open problem for robust simulation and planning agents.",
+          "summary": "PhysiCalWorld encodes a short exploratory interaction clip from a test scene into a compact physics descriptor token, grounding action-conditioned world model predictions in scene-specific dynamics (mass, damping, friction) without fine-tuning or physics labels. Trained end-to-end with latent prediction loss only, the descriptor is extracted once and reused across rollouts. Evaluated across four environments with diverse physics variations, it improves rollout accuracy and visual planning success, with descriptors forming a physically structured latent space that generalizes beyond training physics ranges.",
+          "tags": [
+            "world models",
+            "physics simulation",
+            "in-context learning",
+            "planning"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2610.30125v1"
+            }
+          ],
+          "published": "2026-10-21T17:57:59+00:00",
+          "score": 1.2963
+        },
+        {
+          "id": "0ceea72fc2c6",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Environment Duels: LLM Solving and Authoring Are Distinct Skills in a Co-Evolution Benchmark",
+          "why_it_matters": "Understanding how LLMs teach and challenge each other — and that hint-lift in duels tracks downstream RL improvement on held-out benchmarks — has direct implications for synthetic data generation and curriculum design in post-training.",
+          "summary": "Environment Duels is an agentic benchmark where each of nine frontier LLMs writes environments with privileged hints and solves others' environments. Solving and authoring prove to be distinct capabilities: top solvers are not top authors, and smaller models write harder environments. In an RL study with Qwen3.8-27B, hint-lift on an author's environments tracks held-out reasoning and agentic benchmark improvement, whether using the model's own or another model's environments. Head-to-head outcomes form a stable transitive ranking.",
+          "tags": [
+            "llm evaluation",
+            "agentic benchmarks",
+            "co-evolution",
+            "post-training"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2610.30116v1"
+            }
+          ],
+          "published": "2026-10-21T17:55:31+00:00",
+          "score": 1.2955
+        },
+        {
+          "id": "d60aa5d999be",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "AI-Assisted Discovery of A-greement: A New Consensus Protocol Beating State-of-the-Art by Up to 33%",
+          "why_it_matters": "AI-assisted discovery of a verified, outperforming distributed systems protocol — with a Lean-based verification framework uncovering previously unknown vulnerabilities — is a landmark result for AI-for-science and automated research.",
+          "summary": "The authors built AI-greement, an agent harness combining a protocol knowledge base, modular implementation skeleton, and Lean-based verification framework, to autonomously discover, implement, and verify consensus protocols. The resulting A-greement protocol reduces mean latency over the fastest baseline by 12.2% on write-heavy and 33.3% on read-heavy workloads across six geo-distributed deployments with 5 or 9 replicas. The Lean formalization also uncovered previously unreported vulnerabilities in existing consensus protocols.",
+          "tags": [
+            "distributed systems",
+            "ai for science",
+            "formal verification",
+            "agents"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2610.30114v1"
+            }
+          ],
+          "published": "2026-10-21T17:55:19+00:00",
+          "score": 1.2955
+        },
+        {
+          "id": "4afd58564012",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "LoopRec: Per-Item Adaptive Computation Depth for Sequential Recommendation",
+          "why_it_matters": "The adaptive-compute idea — exit early when representations converge, compute deeper only where needed — is a generally applicable architectural principle relevant beyond recommendation to any sequential modeling task.",
+          "summary": "LoopRec applies a single weight-shared block recursively with a lightweight binary gate at each recursion boundary, allowing each item in a user's history to exit early or continue independently. Oracle analysis confirms non-uniform computational need: most items converge shallow while a critical minority require full depth. Across four backbone families on public benchmarks, LoopRec consistently outperforms fixed-depth counterparts; lower-frequency and more recent items naturally receive deeper computation.",
+          "tags": [
+            "adaptive computation",
+            "sequential recommendation",
+            "architecture",
+            "efficiency"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2610.30128v1"
+            }
+          ],
+          "published": "2026-10-21T17:58:06+00:00",
+          "score": 0.4321
+        },
+        {
+          "id": "354f89a6c7db",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "VocabX: Domain-Specialized Tokenizer Cuts Inference Cost 77% Without Changing the Model",
+          "why_it_matters": "A concrete, production-validated technique for slashing inference costs on domain-specific SLMs that's immediately applicable to any specialized fine-tuned model deployment.",
+          "summary": "VocabX rebuilds the tokenizer of a fine-tuned SLM around per-token inference cost rather than frequency, targeting the two wastes in general vocabularies: fragmentation of domain-repeated text and excess entries scored at every decode step. Applied to a Qwen3-4B Portuguese essay grader in production, it cuts measured inference cost by 77% without modifying the base model weights or training recipe. Paper is under review; numbers may change.",
+          "tags": [
+            "inference efficiency",
+            "tokenization",
+            "slm",
+            "production ml"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/Dharma-AI/vocabx-vocabulary-specialization"
+            }
+          ],
+          "published": "2026-10-21T17:35:36+00:00",
+          "score": 0.4299
+        }
+      ]
+    }
+  ]
+}

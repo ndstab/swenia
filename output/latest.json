@@ -1,11 +1,11 @@
 {
-  "date": "2026-10-21",
-  "generated_at": "2026-10-21T04:31:23.467969+00:00",
-  "summary_line": "1 must-know · 7 worth knowing",
+  "date": "2026-10-22",
+  "generated_at": "2026-10-22T04:28:33.667864+00:00",
+  "summary_line": "5 worth knowing",
   "counts": {
-    "total": 14,
-    "headlines": 5,
-    "frontier": 9
+    "total": 8,
+    "headlines": 1,
+    "frontier": 7
   },
   "sections": [
     {
@@ -13,114 +13,26 @@
       "title": "Headlines",
       "cards": [
         {
-          "id": "34b84ef907f5",
-          "tier": "must_know",
-          "category": "headline",
-          "title": "DeepSeek V4.1 Flash, DeepInfer, US/China Open-Weight Controls, and MiMo-V2.6-Pro-RL Top Rankings",
-          "why_it_matters": "This covers multiple simultaneous developments — a new top-ranked open model, major regulatory moves in both the US and China targeting open-weight AI, and DeepSeek's production inference stack going public — all of which will shape the open-model ecosystem you work in.",
-          "summary": "China's MOFCOM proposed pre-approval for frontier AI exports (open-source gets automatic approval in the draft). DHS banned DeepSeek as a federal vendor. DeepSeek released DeepInfer, their internal inference stack, publicly — potentially far more efficient than vLLM/SGLang, estimated to yield ~90% gross margins. MiMo-V2.6-Pro-RL (Xiaomi) now tops Artificial Analysis open-model rankings via scaled RL training. DeepSeek-V4.1-Flash-1017 (552B-A16B, MIT license, multimodal) is praised for price/performance on agentic benchmarks.",
-          "tags": [
-            "open-weight models",
-            "inference",
-            "regulation",
-            "rl training"
-          ],
-          "sources": [
-            {
-              "name": "Interconnects",
-              "url": "https://www.interconnects.ai/p/latest-open-artifacts-25-deepseek"
-            }
-          ],
-          "published": "2026-10-20T17:04:21+00:00",
-          "score": 2.5589
-        },
-        {
-          "id": "79e072c52849",
+          "id": "9b35c0bfb2f0",
           "tier": "skim",
           "category": "headline",
-          "title": "DeepSeek Open-Sources DeepInfer: Their Production Inference Stack with Custom Kernels and Speculative Decoding",
-          "why_it_matters": "DeepInfer is DeepSeek's internal production inference system — the first time a leading lab has released such a stack publicly — with optimizations that could substantially outperform vLLM/SGLang for their models and reshape inference economics.",
-          "summary": "DeepInfer supports DeepSeek-V4.1-Flash with FlashMLA, DeepGEMM, DeepEP, and custom TileLang kernels. Key features include DSpark confidence-scheduled speculative decoding, SWA bounded replay for prefill, asynchronous zero-overhead batch scheduling, batch-invariant and deterministic inference, and structured output generation. Supports NVIDIA SM100 GPUs and Huawei Ascend 950 NPUs. Measured on 4 SM100 GPUs (prefill) and 64 (decode). Apache 2.0 license.",
+          "title": "IBM Granite Speech 5.0: New 2B Model Ranks #2 on Open ASR Leaderboard; Turbo CTC Hits 19,870 RTFx",
+          "why_it_matters": "Open-weight speech models with competitive ASR accuracy and extreme inference speed are directly useful infrastructure for any AI system ingesting audio, and the 77% speed gain on Turbo CTC is a meaningful engineering data point.",
+          "summary": "Granite Speech 5.0-2B achieves 5.06% average English WER (ranked #2 open-weight on Open ASR Leaderboard), trained on 390K hours of audio, supporting transcription and translation across six languages with keyword biasing up to 2,000 terms. The revised 470M Turbo CTC model adds multilingual support and reaches 19,870 RTFx (~1.6× faster than prior release). Updated 4.1-2B-Plus reduces WDER and cpWER by 7% each and cuts long-form WER by 24%. All models are Apache 2.0.",
           "tags": [
-            "inference",
-            "deepseek",
-            "systems",
-            "speculative decoding"
-          ],
-          "sources": [
-            {
-              "name": "HN (2180pts)",
-              "url": "https://github.com/deepseek-ai/DeepInfer"
-            }
-          ],
-          "published": "2026-10-20T09:08:54+00:00",
-          "score": 0.382
-        },
-        {
-          "id": "84cd8d44e982",
-          "tier": "skim",
-          "category": "headline",
-          "title": "TorchTPU Makes TPUs a Native PyTorch Device, Enabling HuggingFace Transformers/Diffusers on Google TPUs",
-          "why_it_matters": "Removes the major software friction of running PyTorch on TPUs — previously requiring torch_xla's lazy execution quirks — opening up large TPU pods as a training and inference platform for the broader HuggingFace ecosystem.",
-          "summary": "TorchTPU adds TPU as a native PyTorch backend with Pallas kernels, distributed training support, and torch.compile integration. Transformers v5 loads models via device_map='tpu'; Diffusers pipelines move to TPU with pipe.to('tpu'). Tensor parallelism across chips is supported via TensorParallelConfig. Replaces the prior Optimum TPU workaround. Installs via pip with a single command.",
-          "tags": [
-            "infrastructure",
-            "tpu",
-            "pytorch",
-            "hardware"
+            "speech recognition",
+            "asr",
+            "open-weight",
+            "inference speed"
           ],
           "sources": [
             {
               "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/hf-torchtpu"
+              "url": "https://huggingface.co/blog/ibm-granite/granite-speech-5"
             }
           ],
-          "published": "2026-10-20T00:00:00+00:00",
-          "score": 0.3365
-        },
-        {
-          "id": "2596ff929aee",
-          "tier": "skim",
-          "category": "headline",
-          "title": "AnyLanguageModel 1.0: Unified Swift API for Local and Hosted LLM Inference on Apple Platforms",
-          "why_it_matters": "Niche but useful if you build iOS/macOS AI apps — provides a drop-in API unifying on-device (llama.cpp, MLX, Core ML) and hosted (OpenAI, Anthropic, Gemini, HuggingFace Inference Providers) models with consistent tool calling and guided generation.",
-          "summary": "AnyLanguageModel 1.0 provides a Foundation Models-compatible Swift API supporting local inference via llama.cpp, MLX, and Core ML, plus hosted providers including OpenAI, Anthropic, Gemini, Ollama, and HuggingFace Inference Providers. Tool calling, guided generation with nested types, and image support work across all providers. Runs on Linux too. Companion releases: swift-huggingface 1.0 and swift-xet 1.0 for accelerated Hub model downloads.",
-          "tags": [
-            "inference",
-            "apple",
-            "on-device",
-            "sdk"
-          ],
-          "sources": [
-            {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/anylanguagemodel-1-0"
-            }
-          ],
-          "published": "2026-10-20T00:00:00+00:00",
-          "score": 0.3365
-        },
-        {
-          "id": "3eb18e5ff7f2",
-          "tier": "skim",
-          "category": "headline",
-          "title": "PyTorch 2.15 MPS: 5–6.5× Faster MoE Decoding, FP8 Support, and 8× Faster Softmax on Apple Silicon",
-          "why_it_matters": "Major MPS backend improvements make Mac a substantially more viable local training and inference platform — especially the MoE speedup (relevant for Qwen3, LFM2.5) and FP8 support — worth knowing if you develop or test models locally on Apple Silicon.",
-          "summary": "PyTorch 2.15 MPS adds FP8 (float8_e4m3fn) tensor support with F.scaled_mm on GPU. MoE model decode speeds improve 5–6.5×: Qwen3.6-35B-A3B goes from 9.4 to 61.3 tokens/s on M3 Ultra with torch.compile; LFM2.5-8B-A1B from 23.6 to 123.6 tokens/s. Softmax over vocabulary is ~8× faster. Wan2.2 tiled VAE decode memory drops from ~270 GiB to ~8 GiB peak. Requires macOS 15 and Python 3.11+.",
-          "tags": [
-            "infrastructure",
-            "apple silicon",
-            "pytorch",
-            "inference"
-          ],
-          "sources": [
-            {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/mps-pytorch-2-15"
-            }
-          ],
-          "published": "2026-10-20T00:00:00+00:00",
-          "score": 0.3365
+          "published": "2026-10-21T14:58:18+00:00",
+          "score": 0.4145
         }
       ]
     },
@@ -129,202 +41,158 @@
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "4eb9f7080b11",
+          "id": "7104bc51c295",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "NVIDIA Cosmos3-H-Dreams: First Real-Time Generative Surgical Simulator Trained on Clinical Cholecystectomy Data",
-          "why_it_matters": "Demonstrates a world foundation model pipeline — action-conditioned video generation distilled to real-time on a single GPU — with a technically detailed teacher-to-student distillation approach relevant to embodied AI and world model research.",
-          "summary": "Built on Cosmos3-H-Embodied-Nano (16B parameters), the model is fine-tuned on clinical cholecystectomy video and 28-dimensional kinematics from the CMR Versius platform. A bidirectional teacher trained on 72-frame horizons is distilled via causal teacher forcing and Self-Forcing into a streaming causal student. FlashDreams enables real-time interactive inference on a single RTX PRO 6000 GPU. First generative surgical simulator trained on clinical procedure recordings with live kinematic control.",
+          "title": "NVIDIA Kumo Relational: First Few-Shot Foundation Model to Beat Supervised ML on Relational Databases",
+          "why_it_matters": "This is a flagship NVIDIA research release that could make XGBoost and feature-engineering pipelines obsolete for enterprise tabular/relational ML — a major paradigm shift directly relevant to production ML work.",
+          "summary": "Kumo Relational is a pre-trained relational foundation model that operates directly on multi-table databases (preserving foreign keys and timestamps) without flattening or task-specific training. Across 41 tasks on 15 databases, it outperforms supervised relational deep learning and expert-engineered GBT pipelines; on RelBench V1 classification it beats GBTs by ~4 AUROC points, and on the SAP SALT benchmark it surpasses AutoGluon ensembles by 8% MRR. Scales to 500B+ rows.",
           "tags": [
-            "world models",
-            "embodied ai",
-            "video generation",
-            "surgical robotics"
+            "structured data",
+            "foundation model",
+            "tabular ml",
+            "nvidia"
           ],
           "sources": [
             {
               "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/nvidia/cosmos3-h-dreams"
+              "url": "https://huggingface.co/blog/nvidia/kumo-relational"
             }
           ],
-          "published": "2026-10-20T18:17:47+00:00",
-          "score": 1.3014
+          "published": "2026-10-21T18:26:30+00:00",
+          "score": 1.3049
         },
         {
-          "id": "6e8151461517",
+          "id": "685948fc08f8",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Co-Generating 3D Rig Motion and Video for Arbitrary Skeletons via Cross-Attention to a Pretrained Video Model",
-          "why_it_matters": "Presents a technically clean architecture separating 3D motion modeling from video generation, enabling arbitrary-skeleton animation — relevant if you work on generative models, 3D, or embodied agents.",
-          "summary": "A separate motion model supporting arbitrary skeletons connects to a pretrained video model via cross-attention layers, avoiding the need to add billions of parameters. The motion model is pretrained on motion-only data, then paired video is synthesized using a generative video editor to create ~200K training pairs. The model jointly recovers camera pose, supports text-to-animation, video-to-rig-motion, and keyframe control across human, animal, and robot rigs.",
+          "title": "LongZero: RL Improves LLM Long-Context Reasoning with Zero External Data",
+          "why_it_matters": "Bootstrapping long-context RL from the model itself — no corpora, no teacher models — is a practically significant result for researchers hitting data scarcity walls when scaling reasoning training.",
+          "summary": "LongZero trains LLMs to improve long-context reasoning via GRPO with no external data. The model first synthesizes question-answer pairs with compact structured evidence, then separately expands that evidence into long multi-document contexts. Combining self-written multi-hop and multi-round retrieval tasks, LongZero outperforms RL baselines trained on externally synthesized corpora across five long-context reasoning benchmarks on two LLMs.",
           "tags": [
-            "3d motion generation",
-            "video generation",
-            "animation",
-            "architecture"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2610.28632v1"
-            }
-          ],
-          "published": "2026-10-20T17:59:56+00:00",
-          "score": 1.296
-        },
-        {
-          "id": "9db810cb474b",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "GBClaw: Agentic LLM Framework Automates Grain Boundary Mechanistic Research in Materials Science",
-          "why_it_matters": "Demonstrates an agentic AI architecture — orchestrator, specialized agents, domain tools, simulation interfaces, hierarchical memory, dynamic replanning — applied successfully to a hard scientific domain, showing the frontier of AI-for-science agents.",
-          "summary": "GBClaw integrates LLMs in a modular agentic architecture to study general asymmetric tilt grain boundaries in nickel. Applied to 14 GBs, it characterized interfacial defect structures and identified diverse deformation modes. Comparing boundary sliding with and without secondary misfit dislocations revealed substantial shear-strength differences. Researcher-guided follow-up traced anomalously high shear resistance to metastable boundary structures.",
-          "tags": [
-            "agents",
-            "ai for science",
-            "materials science",
-            "llm"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2610.28629v1"
-            }
-          ],
-          "published": "2026-10-20T17:59:40+00:00",
-          "score": 1.2959
-        },
-        {
-          "id": "6924c109bde3",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "AdaDex: Hybrid Dexterous Mimicking Turns Seconds of Human Motion into Adaptable Multi-Finger Robot Skills",
-          "why_it_matters": "Combines motion tracking and goal-conditioned RL in a single framework that generalizes far off the reference trajectory — a technically interesting approach for dexterous manipulation research bridging imitation and RL.",
-          "summary": "AdaDex trains a shared policy on two parallel environment populations: dense motion-tracking environments (instilling human prior from a single short trajectory) and generalization environments with noised initial states and sparse object-success reward. Input trajectories can come from mocap or HOI reconstruction from RGB(D) video. The framework learns functional grasping, in-hand reorientation with finger gaiting, and dynamic throw-and-catch, and demonstrates sim-to-real transfer.",
-          "tags": [
-            "dexterous manipulation",
+            "long-context",
             "reinforcement learning",
-            "imitation learning",
-            "robotics"
+            "reasoning",
+            "data synthesis"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2610.28628v1"
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2610.30132v1"
             }
           ],
-          "published": "2026-10-20T17:59:32+00:00",
-          "score": 1.2959
+          "published": "2026-10-21T17:59:14+00:00",
+          "score": 1.2967
         },
         {
-          "id": "e7965774d73e",
+          "id": "9052b2916380",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "UniWALM: Single Mixture-of-Transformers Backbone Co-Generates Video, Action, and Language for Robot Manipulation",
-          "why_it_matters": "Unifies video, action, and language generation in one model with synchronous diffusion heads — including a language-as-memory loop without an external planner — and introduces Flow Matching with Correction for robust action generation, relevant to embodied AI and world model research.",
-          "summary": "UniWALM uses a mixture-of-transformers backbone with per-modality diffusion heads that co-denoise video, action, and language synchronously. Generated language is re-consumed on the next step as memory, with no external planner or memory bank. Flow Matching with Correction (FMC) trains recovery from perturbed trajectories at no inference-time cost. On RMBench memory-dependent tasks, UniWALM reaches 34.5% vs. Mem-0's 28.5% (keyframe-equipped). On a real Find-the-Item task, textual memory lifts success from 11.1% to 61.1%.",
+          "title": "PhysiCalWorld: In-Context Physics Calibration for World Models via Exploratory Interaction Clips",
+          "why_it_matters": "Calibrating world models to instance-specific physics without fine-tuning or labeled physics data is a key open problem for robust simulation and planning agents.",
+          "summary": "PhysiCalWorld encodes a short exploratory interaction clip from a test scene into a compact physics descriptor token, grounding action-conditioned world model predictions in scene-specific dynamics (mass, damping, friction) without fine-tuning or physics labels. Trained end-to-end with latent prediction loss only, the descriptor is extracted once and reused across rollouts. Evaluated across four environments with diverse physics variations, it improves rollout accuracy and visual planning success, with descriptors forming a physically structured latent space that generalizes beyond training physics ranges.",
           "tags": [
             "world models",
-            "embodied ai",
-            "robot manipulation",
-            "architecture"
+            "physics simulation",
+            "in-context learning",
+            "planning"
           ],
           "sources": [
             {
               "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2610.28626v1"
+              "url": "https://arxiv.org/abs/2610.30125v1"
             }
           ],
-          "published": "2026-10-20T17:59:04+00:00",
-          "score": 1.2958
+          "published": "2026-10-21T17:57:59+00:00",
+          "score": 1.2963
         },
         {
-          "id": "e6d66d9e332f",
+          "id": "0ceea72fc2c6",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "IndustrialReMEmbR: Fleet-Scale Spatiotemporal Memory for Warehouse Robots with On-Device Encoding and GDPR PII Abstraction",
-          "why_it_matters": "Demonstrates a practical architecture for multi-robot semantic memory at scale — splitting vision/language model execution across robot (Jetson) and server, caching vision tokens to avoid caption generation at write time — relevant to robotics infrastructure and embodied AI systems.",
-          "summary": "Each robot runs Cosmos-Embed1 (retrieval embeddings), Cosmos3-Edge vision encoder, and Wan2.2 VAE on an NVIDIA Jetson without uploading raw frames. The vision-language boundary of Cosmos3-Edge is split: vision encoder on robot, language decoder on server using cached vision tokens. A Nemotron agent retrieves memories by content, position, and time. Person detection in image patches zeros out PII for GDPR compliance. Cached-token decoding matches the unsplit model across all 450 tested decodes.",
+          "title": "Environment Duels: LLM Solving and Authoring Are Distinct Skills in a Co-Evolution Benchmark",
+          "why_it_matters": "Understanding how LLMs teach and challenge each other — and that hint-lift in duels tracks downstream RL improvement on held-out benchmarks — has direct implications for synthetic data generation and curriculum design in post-training.",
+          "summary": "Environment Duels is an agentic benchmark where each of nine frontier LLMs writes environments with privileged hints and solves others' environments. Solving and authoring prove to be distinct capabilities: top solvers are not top authors, and smaller models write harder environments. In an RL study with Qwen3.8-27B, hint-lift on an author's environments tracks held-out reasoning and agentic benchmark improvement, whether using the model's own or another model's environments. Head-to-head outcomes form a stable transitive ranking.",
           "tags": [
-            "robotics",
-            "embodied ai",
-            "memory",
-            "infrastructure"
+            "llm evaluation",
+            "agentic benchmarks",
+            "co-evolution",
+            "post-training"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2610.30116v1"
+            }
+          ],
+          "published": "2026-10-21T17:55:31+00:00",
+          "score": 1.2955
+        },
+        {
+          "id": "d60aa5d999be",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "AI-Assisted Discovery of A-greement: A New Consensus Protocol Beating State-of-the-Art by Up to 33%",
+          "why_it_matters": "AI-assisted discovery of a verified, outperforming distributed systems protocol — with a Lean-based verification framework uncovering previously unknown vulnerabilities — is a landmark result for AI-for-science and automated research.",
+          "summary": "The authors built AI-greement, an agent harness combining a protocol knowledge base, modular implementation skeleton, and Lean-based verification framework, to autonomously discover, implement, and verify consensus protocols. The resulting A-greement protocol reduces mean latency over the fastest baseline by 12.2% on write-heavy and 33.3% on read-heavy workloads across six geo-distributed deployments with 5 or 9 replicas. The Lean formalization also uncovered previously unreported vulnerabilities in existing consensus protocols.",
+          "tags": [
+            "distributed systems",
+            "ai for science",
+            "formal verification",
+            "agents"
           ],
           "sources": [
             {
               "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2610.28624v1"
+              "url": "https://arxiv.org/abs/2610.30114v1"
             }
           ],
-          "published": "2026-10-20T17:58:32+00:00",
-          "score": 1.2956
+          "published": "2026-10-21T17:55:19+00:00",
+          "score": 1.2955
         },
         {
-          "id": "61477b32fc61",
-          "tier": "worth_knowing",
+          "id": "4afd58564012",
+          "tier": "skim",
           "category": "frontier",
-          "title": "PUN Neural Operator Learns Noise-Aware Value Fields for Planning in Unseen Geometries via Monte Carlo Pretraining",
-          "why_it_matters": "Technically interesting approach combining stochastic optimal control PDE formulations with neural operators and Walk-on-Stars Monte Carlo — achieving 95–100% success on 4D replanning with 10.7–60.6% gains at highest noise levels while running 3–32× faster than baselines.",
-          "summary": "PUN learns geometry-to-value-field mappings using noisy, partially converged Walk on Stars (WoSt) Monte Carlo labels, amortizing expensive PDE solving across environments. Reflecting Neumann obstacle boundaries replace zero-Dirichlet to preserve goal signal along long routes. At inference, test-time scaling uses bounded local search guided by the predicted global field. Evaluated across four noise levels in up to 4D planning tasks; achieves 95–100% success on 4D replanning benchmark.",
+          "title": "LoopRec: Per-Item Adaptive Computation Depth for Sequential Recommendation",
+          "why_it_matters": "The adaptive-compute idea — exit early when representations converge, compute deeper only where needed — is a generally applicable architectural principle relevant beyond recommendation to any sequential modeling task.",
+          "summary": "LoopRec applies a single weight-shared block recursively with a lightweight binary gate at each recursion boundary, allowing each item in a user's history to exit early or continue independently. Oracle analysis confirms non-uniform computational need: most items converge shallow while a critical minority require full depth. Across four backbone families on public benchmarks, LoopRec consistently outperforms fixed-depth counterparts; lower-frequency and more recent items naturally receive deeper computation.",
           "tags": [
-            "planning",
-            "stochastic control",
-            "neural operators",
-            "robotics"
+            "adaptive computation",
+            "sequential recommendation",
+            "architecture",
+            "efficiency"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2610.28623v1"
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2610.30128v1"
             }
           ],
-          "published": "2026-10-20T17:58:30+00:00",
-          "score": 1.2956
+          "published": "2026-10-21T17:58:06+00:00",
+          "score": 0.4321
         },
         {
-          "id": "ca293d8533a3",
+          "id": "354f89a6c7db",
           "tier": "skim",
           "category": "frontier",
-          "title": "FairStress: Benchmark Measuring LLM Fairness Under Adversarial Persuasion, Not Just Final Decisions",
-          "why_it_matters": "Reveals a methodological gap in standard fairness evals — models can appear fair at the output level while exhibiting asymmetric susceptibility to persuasion by demographic group — relevant for anyone deploying or evaluating LLMs in high-stakes settings.",
-          "summary": "FairStress contains 300 two-candidate decision scenarios across 29 domains including hiring, healthcare, lending, and housing. It tests whether models switch decisions under adversarial prefixes (e.g., 'senior leadership prefers Candidate B') differentially by demographic group, beyond simple demographic-swap consistency. Tested across Olmo, Llama, Qwen, Gemma, Claude, and GPT families. Also examines internal activation patterns and decision explanations across demographic groups.",
+          "title": "VocabX: Domain-Specialized Tokenizer Cuts Inference Cost 77% Without Changing the Model",
+          "why_it_matters": "A concrete, production-validated technique for slashing inference costs on domain-specific SLMs that's immediately applicable to any specialized fine-tuned model deployment.",
+          "summary": "VocabX rebuilds the tokenizer of a fine-tuned SLM around per-token inference cost rather than frequency, targeting the two wastes in general vocabularies: fragmentation of domain-repeated text and excess entries scored at every decode step. Applied to a Qwen3-4B Portuguese essay grader in production, it cuts measured inference cost by 77% without modifying the base model weights or training recipe. Paper is under review; numbers may change.",
           "tags": [
-            "fairness",
-            "evals",
-            "llm",
-            "bias"
+            "inference efficiency",
+            "tokenization",
+            "slm",
+            "production ml"
           ],
           "sources": [
             {
               "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/allenai/fairstress"
+              "url": "https://huggingface.co/blog/Dharma-AI/vocabx-vocabulary-specialization"
             }
           ],
-          "published": "2026-10-20T16:09:19+00:00",
-          "score": 0.4211
-        },
-        {
-          "id": "94e7f4f5c0e5",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "ALTK-Evolve: Learned Prompt Guidelines Lift GPT-4.1 ReAct Agent to Top of τ²-bench Customer Service Leaderboard",
-          "why_it_matters": "Shows that distilling behavioral guidelines from agent trajectories — without weight updates or human annotation — can outperform more complex systems on a strict policy-bound agentic benchmark, a practically useful result for agent post-training research.",
-          "summary": "Using GPT-4.1 on τ²-bench retail, a stock ReAct scaffold with learned guidelines appended to the system prompt achieves 67.5% Pass^4 — solving all four independent attempts for 67.5% of tasks — topping the October 12, 2026 leaderboard snapshot. Guidelines are extracted from training-task trajectories using the same GPT-4.1 model; no weight updates or human labels required. The same approach was previously demonstrated on coding agents.",
-          "tags": [
-            "agents",
-            "rl",
-            "post-training",
-            "evals"
-          ],
-          "sources": [
-            {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/ibm-research/altk-evolve-bc"
-            }
-          ],
-          "published": "2026-10-20T15:19:48+00:00",
-          "score": 0.4163
+          "published": "2026-10-21T17:35:36+00:00",
+          "score": 0.4299
         }
       ]
     }
