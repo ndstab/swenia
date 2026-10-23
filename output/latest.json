@@ -1,11 +1,11 @@
 {
-  "date": "2026-10-22",
-  "generated_at": "2026-10-22T04:28:33.667864+00:00",
-  "summary_line": "5 worth knowing",
+  "date": "2026-10-23",
+  "generated_at": "2026-10-23T04:34:37.384222+00:00",
+  "summary_line": "6 worth knowing",
   "counts": {
-    "total": 8,
-    "headlines": 1,
-    "frontier": 7
+    "total": 11,
+    "headlines": 3,
+    "frontier": 8
   },
   "sections": [
     {
@@ -13,26 +13,70 @@
       "title": "Headlines",
       "cards": [
         {
-          "id": "9b35c0bfb2f0",
+          "id": "eaa0ebff7daf",
           "tier": "skim",
           "category": "headline",
-          "title": "IBM Granite Speech 5.0: New 2B Model Ranks #2 on Open ASR Leaderboard; Turbo CTC Hits 19,870 RTFx",
-          "why_it_matters": "Open-weight speech models with competitive ASR accuracy and extreme inference speed are directly useful infrastructure for any AI system ingesting audio, and the 77% speed gain on Turbo CTC is a meaningful engineering data point.",
-          "summary": "Granite Speech 5.0-2B achieves 5.06% average English WER (ranked #2 open-weight on Open ASR Leaderboard), trained on 390K hours of audio, supporting transcription and translation across six languages with keyword biasing up to 2,000 terms. The revised 470M Turbo CTC model adds multilingual support and reaches 19,870 RTFx (~1.6× faster than prior release). Updated 4.1-2B-Plus reduces WDER and cpWER by 7% each and cuts long-form WER by 24%. All models are Apache 2.0.",
+          "title": "OlmoEarth v1.3: State-of-the-Art Satellite Embeddings Covering Entire Planet, Fully Open",
+          "why_it_matters": "Fully open foundation model with precomputed planetary embeddings is a significant infrastructure drop for anyone working on geospatial ML or remote-sensing applications.",
+          "summary": "OlmoEarth v1.3 is a satellite embedding model producing 128-dimensional vectors at 10-meter resolution for every pixel on Earth, using Sentinel-1/2 and Landsat time series. Its 128-dim embeddings top 20 of 27 cross-continent evals; 64-dim tops 18 of 27. Precomputed annual embeddings (2017–2025) are freely available. Training cost ~$2,720 H100 time, with 53% of v1.2's compute and 50% of its carbon.",
           "tags": [
-            "speech recognition",
-            "asr",
-            "open-weight",
-            "inference speed"
+            "remote-sensing",
+            "geospatial-ml",
+            "foundation-models",
+            "open-weights"
           ],
           "sources": [
             {
               "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/ibm-granite/granite-speech-5"
+              "url": "https://huggingface.co/blog/allenai/olmoearth-v1-3"
             }
           ],
-          "published": "2026-10-21T14:58:18+00:00",
-          "score": 0.4145
+          "published": "2026-10-22T16:11:31+00:00",
+          "score": 0.421
+        },
+        {
+          "id": "e66e9796ba6b",
+          "tier": "skim",
+          "category": "headline",
+          "title": "Google DeepMind Releases ForTy 2020: 10-Meter Global Forest-Type Map with 2017–2025 Time Series",
+          "why_it_matters": "A rare large-scale geospatial ML deployment from DeepMind/Google Research with direct regulatory relevance; useful context for anyone tracking applied ML at planetary scale.",
+          "summary": "ForTy 2020, from Google DeepMind, Google Research, WRI, and IIASA, classifies every 10×10-meter patch of Earth into six FAO-defined categories (primary, naturally regenerating, planted, plantation, tree crops, other land). A 2017–2025 annual time series tracks forest-type transitions. The map serves as a baseline for EU deforestation regulation, distinguishing ecological value that tree-cover maps cannot.",
+          "tags": [
+            "geospatial-ml",
+            "remote-sensing",
+            "applied-ml",
+            "deepmind"
+          ],
+          "sources": [
+            {
+              "name": "DeepMind",
+              "url": "https://deepmind.google/blog/beyond-tree-cover-mapping-the-worlds-forest-types/"
+            }
+          ],
+          "published": "2026-10-22T14:30:24+00:00",
+          "score": 0.4112
+        },
+        {
+          "id": "5d118fadbe79",
+          "tier": "skim",
+          "category": "headline",
+          "title": "IBM Granite Timeseries Ensemble: Four-Model Zero-Shot Forecasting Recipe Released on Hugging Face",
+          "why_it_matters": "A practical, permissively licensed ensemble of complementary time-series architectures worth knowing for applied ML engineers who deal with forecasting without labeled training data.",
+          "summary": "Granite Timeseries Ensemble combines four pre-trained Granite models (PatchTST-FM-r1/r2, FlowState, Tiny Time Mixers) into a single interface returning median and quantile forecasts. Two combination modes are offered: uniform probability pooling (no fitted weights) and adaptive IQR ensemble. No retraining required; the recipe stores configuration and downloads member checkpoints at runtime.",
+          "tags": [
+            "time-series",
+            "forecasting",
+            "ensemble",
+            "open-source"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/ibm-research/granite-timeseries-ensemble-r1"
+            }
+          ],
+          "published": "2026-10-22T07:51:31+00:00",
+          "score": 0.375
         }
       ]
     },
@@ -41,158 +85,180 @@
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "7104bc51c295",
+          "id": "95eb6975ad24",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "NVIDIA Kumo Relational: First Few-Shot Foundation Model to Beat Supervised ML on Relational Databases",
-          "why_it_matters": "This is a flagship NVIDIA research release that could make XGBoost and feature-engineering pipelines obsolete for enterprise tabular/relational ML — a major paradigm shift directly relevant to production ML work.",
-          "summary": "Kumo Relational is a pre-trained relational foundation model that operates directly on multi-table databases (preserving foreign keys and timestamps) without flattening or task-specific training. Across 41 tasks on 15 databases, it outperforms supervised relational deep learning and expert-engineered GBT pipelines; on RelBench V1 classification it beats GBTs by ~4 AUROC points, and on the SAP SALT benchmark it surpasses AutoGluon ensembles by 8% MRR. Scales to 500B+ rows.",
+          "title": "ThinkingBox Turns Agent DB-Grading into RL Rewards, Boosts Qwen3-27B Pass@1 from 51.7% to 60.78%",
+          "why_it_matters": "This is a concrete, reproducible post-training loop for agentic tasks using executable database outcomes as GRPO rewards — directly relevant to anyone working on RL fine-tuning of agents.",
+          "summary": "Microsoft and Hugging Face's ThinkingBox uses terminal database-state checks as reward signals for GRPO training on tasks outside ThinkingBox-Bench. After 50 GRPO steps on Qwen3.8-27B, pass@1 rose from 51.70% to 60.78% and tasks solved on all 20 attempts jumped from 38 to 107. Key insight: offline policy-relative difficulty filtering selects non-trivial training tasks before training begins.",
           "tags": [
-            "structured data",
-            "foundation model",
-            "tabular ml",
-            "nvidia"
+            "rl",
+            "agents",
+            "post-training",
+            "agentic-evals"
           ],
           "sources": [
             {
               "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/nvidia/kumo-relational"
+              "url": "https://huggingface.co/blog/microsoft/thinkingbox-training"
             }
           ],
-          "published": "2026-10-21T18:26:30+00:00",
-          "score": 1.3049
+          "published": "2026-10-22T22:24:34+00:00",
+          "score": 1.3769
         },
         {
-          "id": "685948fc08f8",
+          "id": "3237bebe3ffd",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "LongZero: RL Improves LLM Long-Context Reasoning with Zero External Data",
-          "why_it_matters": "Bootstrapping long-context RL from the model itself — no corpora, no teacher models — is a practically significant result for researchers hitting data scarcity walls when scaling reasoning training.",
-          "summary": "LongZero trains LLMs to improve long-context reasoning via GRPO with no external data. The model first synthesizes question-answer pairs with compact structured evidence, then separately expands that evidence into long multi-document contexts. Combining self-written multi-hop and multi-round retrieval tasks, LongZero outperforms RL baselines trained on externally synthesized corpora across five long-context reasoning benchmarks on two LLMs.",
+          "title": "Sensorimotor Alignment (S²): Offline Proxy Metric for Embodied Robot Policy Quality",
+          "why_it_matters": "Offers a training-free, cheap offline metric for ranking embodied models before expensive closed-loop rollouts — directly useful for robotics and VLA research workflows.",
+          "summary": "S² measures how well a model's sensory representations align with the geometry of physical motion trajectories, extending the Platonic Representation Hypothesis to embodied models. It correlates positively with downstream robot task success across model families and can rank VLM backbones before fine-tuning into VLAs, providing representation-level explanations beyond closed-loop success rates.",
           "tags": [
-            "long-context",
-            "reinforcement learning",
+            "robotics",
+            "embodied-ai",
+            "representations",
+            "offline-evaluation"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2610.31670v1"
+            }
+          ],
+          "published": "2026-10-22T17:59:51+00:00",
+          "score": 1.295
+        },
+        {
+          "id": "cebab80e970a",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Direct Pass@k Optimization for Reasoning Chain Pruning Balances Quality and Diversity",
+          "why_it_matters": "Directly relevant to test-time compute scaling research; provides a principled, theoretically grounded alternative to ad-hoc quality/diversity pruning heuristics.",
+          "summary": "This paper frames early-exit pruning of reasoning candidates as directly optimizing pass@k — the probability at least one surviving partial solution completes correctly. The objective inherently balances quality (keep good partials) and diversity (penalize redundancy) without separate design choices. Evaluated on eight open-weight reasoning models, the method outperforms both quality-only and diversity-only baselines, with largest gains at moderate keep rates.",
+          "tags": [
             "reasoning",
-            "data synthesis"
+            "test-time-compute",
+            "inference",
+            "pruning"
           ],
           "sources": [
             {
               "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2610.30132v1"
+              "url": "https://arxiv.org/abs/2610.31667v1"
             }
           ],
-          "published": "2026-10-21T17:59:14+00:00",
-          "score": 1.2967
+          "published": "2026-10-22T17:59:48+00:00",
+          "score": 1.295
         },
         {
-          "id": "9052b2916380",
+          "id": "d4ec81e1dc75",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "PhysiCalWorld: In-Context Physics Calibration for World Models via Exploratory Interaction Clips",
-          "why_it_matters": "Calibrating world models to instance-specific physics without fine-tuning or labeled physics data is a key open problem for robust simulation and planning agents.",
-          "summary": "PhysiCalWorld encodes a short exploratory interaction clip from a test scene into a compact physics descriptor token, grounding action-conditioned world model predictions in scene-specific dynamics (mass, damping, friction) without fine-tuning or physics labels. Trained end-to-end with latent prediction loss only, the descriptor is extracted once and reused across rollouts. Evaluated across four environments with diverse physics variations, it improves rollout accuracy and visual planning success, with descriptors forming a physically structured latent space that generalizes beyond training physics ranges.",
+          "title": "Phase Transition in Partially Trainable Networks: ~4% Trainable Neurons Capture 90% of Approximation Gain",
+          "why_it_matters": "Provides rigorous theoretical grounding for a common practical observation — that fine-tuning a small fraction of parameters yields most of the accuracy gain — with explicit bounds useful for understanding efficient fine-tuning regimes.",
+          "summary": "This paper establishes squared L2 approximation rates for two-layer networks where a proportion P of neurons are trainable and the rest are fixed random features. Under polynomial spectral decay with exponent α>1, the bound is O((κ_P log(m/δ)/m)^α). For d=5, τ=10 (spherical biased-ReLU), roughly 4.1% trainable neurons capture 90% of the approximation improvement from P=0 to P=1, with analogous phase transitions observed empirically up to 15-layer networks.",
           "tags": [
-            "world models",
-            "physics simulation",
-            "in-context learning",
-            "planning"
+            "theory",
+            "neural-networks",
+            "fine-tuning",
+            "approximation-theory"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2610.30125v1"
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2610.31663v1"
             }
           ],
-          "published": "2026-10-21T17:57:59+00:00",
-          "score": 1.2963
+          "published": "2026-10-22T17:59:29+00:00",
+          "score": 1.2949
         },
         {
-          "id": "0ceea72fc2c6",
+          "id": "f932c9cd5486",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Environment Duels: LLM Solving and Authoring Are Distinct Skills in a Co-Evolution Benchmark",
-          "why_it_matters": "Understanding how LLMs teach and challenge each other — and that hint-lift in duels tracks downstream RL improvement on held-out benchmarks — has direct implications for synthetic data generation and curriculum design in post-training.",
-          "summary": "Environment Duels is an agentic benchmark where each of nine frontier LLMs writes environments with privileged hints and solves others' environments. Solving and authoring prove to be distinct capabilities: top solvers are not top authors, and smaller models write harder environments. In an RL study with Qwen3.8-27B, hint-lift on an author's environments tracks held-out reasoning and agentic benchmark improvement, whether using the model's own or another model's environments. Head-to-head outcomes form a stable transitive ranking.",
+          "title": "Selective AI Auditing with Provable Error-Control: Online Algorithm Minimizes Human Review Rate",
+          "why_it_matters": "Provides a theoretically grounded framework for human-in-the-loop AI oversight with formal guarantees — relevant to deployment and alignment engineering work on LLM systems.",
+          "summary": "The paper formalizes online monitoring of AI decisions as a constrained optimization: minimize expert auditing frequency while keeping unaudited error rate below a user-defined threshold. A family of algorithms with no distributional assumptions is derived, including one that asymptotically achieves the optimal auditing rate for both adversarial and i.i.d. streams. Experiments cover LLM harmful-request screening, text annotation, and data labeling.",
           "tags": [
-            "llm evaluation",
-            "agentic benchmarks",
-            "co-evolution",
-            "post-training"
+            "ai-safety",
+            "human-in-the-loop",
+            "evals",
+            "deployment"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2610.30116v1"
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2610.31662v1"
             }
           ],
-          "published": "2026-10-21T17:55:31+00:00",
-          "score": 1.2955
+          "published": "2026-10-22T17:59:22+00:00",
+          "score": 1.2949
         },
         {
-          "id": "d60aa5d999be",
+          "id": "a9abc586116d",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "AI-Assisted Discovery of A-greement: A New Consensus Protocol Beating State-of-the-Art by Up to 33%",
-          "why_it_matters": "AI-assisted discovery of a verified, outperforming distributed systems protocol — with a Lean-based verification framework uncovering previously unknown vulnerabilities — is a landmark result for AI-for-science and automated research.",
-          "summary": "The authors built AI-greement, an agent harness combining a protocol knowledge base, modular implementation skeleton, and Lean-based verification framework, to autonomously discover, implement, and verify consensus protocols. The resulting A-greement protocol reduces mean latency over the fastest baseline by 12.2% on write-heavy and 33.3% on read-heavy workloads across six geo-distributed deployments with 5 or 9 replicas. The Lean formalization also uncovered previously unreported vulnerabilities in existing consensus protocols.",
+          "title": "SpectralCanary: Low-Frequency Image Watermarking Achieves 91.1% TPR@1%FPR for T2I Dataset Auditing",
+          "why_it_matters": "Dataset provenance and copyright auditing for generative models is an active research problem; this is a concrete, benchmark-tested approach with strong empirical numbers.",
+          "summary": "SpectralCanary blends a fixed canary image into dataset images via a low-pass mask before release, then detects the transferred signal in outputs from suspect fine-tuned T2I models. Across eight tests on Pokemon and three data transformations, it achieves 91.1% per-generation TPR@1% FPR and 94.8% model-level accuracy using 30 generations. Across five domains with SD3.5, average TPR@1% FPR is 92.4%; image fidelity is SSIM 0.989, LPIPS 0.022, mean ΔFID 0.05.",
           "tags": [
-            "distributed systems",
-            "ai for science",
-            "formal verification",
-            "agents"
+            "watermarking",
+            "data-provenance",
+            "generative-models",
+            "security"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2610.30114v1"
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2610.31659v1"
             }
           ],
-          "published": "2026-10-21T17:55:19+00:00",
-          "score": 1.2955
+          "published": "2026-10-22T17:59:03+00:00",
+          "score": 1.2948
         },
         {
-          "id": "4afd58564012",
+          "id": "3d3449f74dda",
           "tier": "skim",
           "category": "frontier",
-          "title": "LoopRec: Per-Item Adaptive Computation Depth for Sequential Recommendation",
-          "why_it_matters": "The adaptive-compute idea — exit early when representations converge, compute deeper only where needed — is a generally applicable architectural principle relevant beyond recommendation to any sequential modeling task.",
-          "summary": "LoopRec applies a single weight-shared block recursively with a lightweight binary gate at each recursion boundary, allowing each item in a user's history to exit early or continue independently. Oracle analysis confirms non-uniform computational need: most items converge shallow while a critical minority require full depth. Across four backbone families on public benchmarks, LoopRec consistently outperforms fixed-depth counterparts; lower-frequency and more recent items naturally receive deeper computation.",
+          "title": "Cost-Aware Abstention for LLM IT-Ticket Routing: TF-IDF+LR Beats LLMs, Cuts Misroutes from 15.3% to 3.5%",
+          "why_it_matters": "A methodologically careful evaluation framework for LLM deployment decisions under explicit cost asymmetry — useful signal for applied ML engineers choosing between LLMs and classical classifiers.",
+          "summary": "On a 47,837-ticket eight-class corpus, calibration-selected abstention policies are evaluated under explicit misrouting costs. TF-IDF with logistic regression at threshold 0.60 reduces test cost by 38.1% (95% CI [35.7%, 40.4%]) and wrong routes from 15.3% to 3.5%. The strongest prompted LLM configuration reaches 0.477 accuracy on a 1,000-ticket subset versus 0.879 for fine-tuned DistilBERT. GPT-4o-mini few-shot has correctness AUROC 0.500 before and after recalibration.",
           "tags": [
-            "adaptive computation",
-            "sequential recommendation",
-            "architecture",
-            "efficiency"
+            "llm-deployment",
+            "classification",
+            "calibration",
+            "applied-ml"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2610.30128v1"
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2610.31657v1"
             }
           ],
-          "published": "2026-10-21T17:58:06+00:00",
-          "score": 0.4321
+          "published": "2026-10-22T17:58:52+00:00",
+          "score": 0.4316
         },
         {
-          "id": "354f89a6c7db",
+          "id": "f9b499debdda",
           "tier": "skim",
           "category": "frontier",
-          "title": "VocabX: Domain-Specialized Tokenizer Cuts Inference Cost 77% Without Changing the Model",
-          "why_it_matters": "A concrete, production-validated technique for slashing inference costs on domain-specific SLMs that's immediately applicable to any specialized fine-tuned model deployment.",
-          "summary": "VocabX rebuilds the tokenizer of a fine-tuned SLM around per-token inference cost rather than frequency, targeting the two wastes in general vocabularies: fragmentation of domain-repeated text and excess entries scored at every decode step. Applied to a Qwen3-4B Portuguese essay grader in production, it cuts measured inference cost by 77% without modifying the base model weights or training recipe. Paper is under review; numbers may change.",
+          "title": "Profiling TorchNeuron on AWS Trainium: System-Level Inference Analysis Walkthrough",
+          "why_it_matters": "Practical profiling knowledge for AWS Trainium is sparse; this walkthrough is directly useful for engineers deploying or optimizing models on non-CUDA hardware.",
+          "summary": "Part 1 of a series on AWS Trainium inference profiling using TorchNeuron. Covers configuring torch.profiler with NeuronConfig (device/runtime modes, per-NeuronCore capture, CPU-device time correlation), reading key_averages() for operation-level Neuron device time, and tracing operations through Neuron Explorer from framework dispatch to hardware execution. Uses RMSNorm as a worked example across three implementations.",
           "tags": [
-            "inference efficiency",
-            "tokenization",
-            "slm",
-            "production ml"
+            "infrastructure",
+            "hardware",
+            "profiling",
+            "inference"
           ],
           "sources": [
             {
               "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/Dharma-AI/vocabx-vocabulary-specialization"
+              "url": "https://huggingface.co/blog/amazon/profiling-torchneuron-part-1"
             }
           ],
-          "published": "2026-10-21T17:35:36+00:00",
-          "score": 0.4299
+          "published": "2026-10-21T16:04:43+00:00",
+          "score": 0.3012
         }
       ]
     }
