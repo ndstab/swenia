@@ -1,11 +1,11 @@
 {
-  "date": "2026-10-23",
-  "generated_at": "2026-10-23T04:34:37.384222+00:00",
-  "summary_line": "6 worth knowing",
+  "date": "2026-10-24",
+  "generated_at": "2026-10-24T04:23:59.011302+00:00",
+  "summary_line": "1 worth knowing",
   "counts": {
-    "total": 11,
-    "headlines": 3,
-    "frontier": 8
+    "total": 2,
+    "headlines": 1,
+    "frontier": 1
   },
   "sections": [
     {
@@ -13,70 +13,26 @@
       "title": "Headlines",
       "cards": [
         {
-          "id": "eaa0ebff7daf",
+          "id": "6430909168b5",
           "tier": "skim",
           "category": "headline",
-          "title": "OlmoEarth v1.3: State-of-the-Art Satellite Embeddings Covering Entire Planet, Fully Open",
-          "why_it_matters": "Fully open foundation model with precomputed planetary embeddings is a significant infrastructure drop for anyone working on geospatial ML or remote-sensing applications.",
-          "summary": "OlmoEarth v1.3 is a satellite embedding model producing 128-dimensional vectors at 10-meter resolution for every pixel on Earth, using Sentinel-1/2 and Landsat time series. Its 128-dim embeddings top 20 of 27 cross-continent evals; 64-dim tops 18 of 27. Precomputed annual embeddings (2017–2025) are freely available. Training cost ~$2,720 H100 time, with 53% of v1.2's compute and 50% of its carbon.",
+          "title": "Hugging Face Launches Trainium Model Support Lookup Space for AWS Trainium Compatibility",
+          "why_it_matters": "If you ever evaluate or deploy models on AWS Trainium hardware, this space gives you instant compatibility data, shard counts, memory usage, and runnable scripts without trial-and-error compilation cycles.",
+          "summary": "A new Hugging Face Space surfaces a public dataset showing which Transformers models pass or fail on AWS Trainium2 (trn2) via torch-neuronx. Each entry records neuronx-cc compiler version, core count, wall time, peak memory, and a reproducible run.py. Currently covers text-generation and image-text-to-text models up to 16 Trainium2 cores; diffusers and other tasks are planned. A public NEFF cache lets users skip recompilation.",
           "tags": [
-            "remote-sensing",
-            "geospatial-ml",
-            "foundation-models",
-            "open-weights"
+            "aws trainium",
+            "hardware",
+            "inference",
+            "transformers"
           ],
           "sources": [
             {
               "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/allenai/olmoearth-v1-3"
+              "url": "https://huggingface.co/blog/torch-neuronx-model-support"
             }
           ],
-          "published": "2026-10-22T16:11:31+00:00",
-          "score": 0.421
-        },
-        {
-          "id": "e66e9796ba6b",
-          "tier": "skim",
-          "category": "headline",
-          "title": "Google DeepMind Releases ForTy 2020: 10-Meter Global Forest-Type Map with 2017–2025 Time Series",
-          "why_it_matters": "A rare large-scale geospatial ML deployment from DeepMind/Google Research with direct regulatory relevance; useful context for anyone tracking applied ML at planetary scale.",
-          "summary": "ForTy 2020, from Google DeepMind, Google Research, WRI, and IIASA, classifies every 10×10-meter patch of Earth into six FAO-defined categories (primary, naturally regenerating, planted, plantation, tree crops, other land). A 2017–2025 annual time series tracks forest-type transitions. The map serves as a baseline for EU deforestation regulation, distinguishing ecological value that tree-cover maps cannot.",
-          "tags": [
-            "geospatial-ml",
-            "remote-sensing",
-            "applied-ml",
-            "deepmind"
-          ],
-          "sources": [
-            {
-              "name": "DeepMind",
-              "url": "https://deepmind.google/blog/beyond-tree-cover-mapping-the-worlds-forest-types/"
-            }
-          ],
-          "published": "2026-10-22T14:30:24+00:00",
-          "score": 0.4112
-        },
-        {
-          "id": "5d118fadbe79",
-          "tier": "skim",
-          "category": "headline",
-          "title": "IBM Granite Timeseries Ensemble: Four-Model Zero-Shot Forecasting Recipe Released on Hugging Face",
-          "why_it_matters": "A practical, permissively licensed ensemble of complementary time-series architectures worth knowing for applied ML engineers who deal with forecasting without labeled training data.",
-          "summary": "Granite Timeseries Ensemble combines four pre-trained Granite models (PatchTST-FM-r1/r2, FlowState, Tiny Time Mixers) into a single interface returning median and quantile forecasts. Two combination modes are offered: uniform probability pooling (no fitted weights) and adaptive IQR ensemble. No retraining required; the recipe stores configuration and downloads member checkpoints at runtime.",
-          "tags": [
-            "time-series",
-            "forecasting",
-            "ensemble",
-            "open-source"
-          ],
-          "sources": [
-            {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/ibm-research/granite-timeseries-ensemble-r1"
-            }
-          ],
-          "published": "2026-10-22T07:51:31+00:00",
-          "score": 0.375
+          "published": "2026-10-23T00:00:00+00:00",
+          "score": 0.337
         }
       ]
     },
@@ -85,180 +41,26 @@
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "95eb6975ad24",
+          "id": "d5dfb55b0129",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "ThinkingBox Turns Agent DB-Grading into RL Rewards, Boosts Qwen3-27B Pass@1 from 51.7% to 60.78%",
-          "why_it_matters": "This is a concrete, reproducible post-training loop for agentic tasks using executable database outcomes as GRPO rewards — directly relevant to anyone working on RL fine-tuning of agents.",
-          "summary": "Microsoft and Hugging Face's ThinkingBox uses terminal database-state checks as reward signals for GRPO training on tasks outside ThinkingBox-Bench. After 50 GRPO steps on Qwen3.8-27B, pass@1 rose from 51.70% to 60.78% and tasks solved on all 20 attempts jumped from 38 to 107. Key insight: offline policy-relative difficulty filtering selects non-trivial training tasks before training begins.",
+          "title": "LitPivot: AI System That Grounds Early Research Ideas in Literature, Beating Chat-Only Tools",
+          "why_it_matters": "As a research engineer who reads and produces papers, a system that automatically segments your proposal into problem/contribution/evaluation facets and critiques each against retrieved literature could meaningfully accelerate your own ideation and lit-review workflow.",
+          "summary": "LitPivot, built with UPenn collaborators and accepted to UIST 2026, splits a research proposal into problem, contribution, and evaluation facets, retrieves and groups related papers per facet, then generates literature-supported critiques with suggested revisions. In a 17-researcher study, domain experts rated LitPivot-developed ideas as better grounded; participants also perceived ideas as more novel and useful compared to a text editor plus AI chat baseline.",
           "tags": [
-            "rl",
-            "agents",
-            "post-training",
-            "agentic-evals"
+            "research tools",
+            "ai-assisted writing",
+            "literature review",
+            "ideation"
           ],
           "sources": [
             {
               "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/microsoft/thinkingbox-training"
+              "url": "https://huggingface.co/blog/allenai/litpivot"
             }
           ],
-          "published": "2026-10-22T22:24:34+00:00",
-          "score": 1.3769
-        },
-        {
-          "id": "3237bebe3ffd",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "Sensorimotor Alignment (S²): Offline Proxy Metric for Embodied Robot Policy Quality",
-          "why_it_matters": "Offers a training-free, cheap offline metric for ranking embodied models before expensive closed-loop rollouts — directly useful for robotics and VLA research workflows.",
-          "summary": "S² measures how well a model's sensory representations align with the geometry of physical motion trajectories, extending the Platonic Representation Hypothesis to embodied models. It correlates positively with downstream robot task success across model families and can rank VLM backbones before fine-tuning into VLAs, providing representation-level explanations beyond closed-loop success rates.",
-          "tags": [
-            "robotics",
-            "embodied-ai",
-            "representations",
-            "offline-evaluation"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2610.31670v1"
-            }
-          ],
-          "published": "2026-10-22T17:59:51+00:00",
-          "score": 1.295
-        },
-        {
-          "id": "cebab80e970a",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "Direct Pass@k Optimization for Reasoning Chain Pruning Balances Quality and Diversity",
-          "why_it_matters": "Directly relevant to test-time compute scaling research; provides a principled, theoretically grounded alternative to ad-hoc quality/diversity pruning heuristics.",
-          "summary": "This paper frames early-exit pruning of reasoning candidates as directly optimizing pass@k — the probability at least one surviving partial solution completes correctly. The objective inherently balances quality (keep good partials) and diversity (penalize redundancy) without separate design choices. Evaluated on eight open-weight reasoning models, the method outperforms both quality-only and diversity-only baselines, with largest gains at moderate keep rates.",
-          "tags": [
-            "reasoning",
-            "test-time-compute",
-            "inference",
-            "pruning"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2610.31667v1"
-            }
-          ],
-          "published": "2026-10-22T17:59:48+00:00",
-          "score": 1.295
-        },
-        {
-          "id": "d4ec81e1dc75",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "Phase Transition in Partially Trainable Networks: ~4% Trainable Neurons Capture 90% of Approximation Gain",
-          "why_it_matters": "Provides rigorous theoretical grounding for a common practical observation — that fine-tuning a small fraction of parameters yields most of the accuracy gain — with explicit bounds useful for understanding efficient fine-tuning regimes.",
-          "summary": "This paper establishes squared L2 approximation rates for two-layer networks where a proportion P of neurons are trainable and the rest are fixed random features. Under polynomial spectral decay with exponent α>1, the bound is O((κ_P log(m/δ)/m)^α). For d=5, τ=10 (spherical biased-ReLU), roughly 4.1% trainable neurons capture 90% of the approximation improvement from P=0 to P=1, with analogous phase transitions observed empirically up to 15-layer networks.",
-          "tags": [
-            "theory",
-            "neural-networks",
-            "fine-tuning",
-            "approximation-theory"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2610.31663v1"
-            }
-          ],
-          "published": "2026-10-22T17:59:29+00:00",
-          "score": 1.2949
-        },
-        {
-          "id": "f932c9cd5486",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "Selective AI Auditing with Provable Error-Control: Online Algorithm Minimizes Human Review Rate",
-          "why_it_matters": "Provides a theoretically grounded framework for human-in-the-loop AI oversight with formal guarantees — relevant to deployment and alignment engineering work on LLM systems.",
-          "summary": "The paper formalizes online monitoring of AI decisions as a constrained optimization: minimize expert auditing frequency while keeping unaudited error rate below a user-defined threshold. A family of algorithms with no distributional assumptions is derived, including one that asymptotically achieves the optimal auditing rate for both adversarial and i.i.d. streams. Experiments cover LLM harmful-request screening, text annotation, and data labeling.",
-          "tags": [
-            "ai-safety",
-            "human-in-the-loop",
-            "evals",
-            "deployment"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2610.31662v1"
-            }
-          ],
-          "published": "2026-10-22T17:59:22+00:00",
-          "score": 1.2949
-        },
-        {
-          "id": "a9abc586116d",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "SpectralCanary: Low-Frequency Image Watermarking Achieves 91.1% TPR@1%FPR for T2I Dataset Auditing",
-          "why_it_matters": "Dataset provenance and copyright auditing for generative models is an active research problem; this is a concrete, benchmark-tested approach with strong empirical numbers.",
-          "summary": "SpectralCanary blends a fixed canary image into dataset images via a low-pass mask before release, then detects the transferred signal in outputs from suspect fine-tuned T2I models. Across eight tests on Pokemon and three data transformations, it achieves 91.1% per-generation TPR@1% FPR and 94.8% model-level accuracy using 30 generations. Across five domains with SD3.5, average TPR@1% FPR is 92.4%; image fidelity is SSIM 0.989, LPIPS 0.022, mean ΔFID 0.05.",
-          "tags": [
-            "watermarking",
-            "data-provenance",
-            "generative-models",
-            "security"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2610.31659v1"
-            }
-          ],
-          "published": "2026-10-22T17:59:03+00:00",
-          "score": 1.2948
-        },
-        {
-          "id": "3d3449f74dda",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "Cost-Aware Abstention for LLM IT-Ticket Routing: TF-IDF+LR Beats LLMs, Cuts Misroutes from 15.3% to 3.5%",
-          "why_it_matters": "A methodologically careful evaluation framework for LLM deployment decisions under explicit cost asymmetry — useful signal for applied ML engineers choosing between LLMs and classical classifiers.",
-          "summary": "On a 47,837-ticket eight-class corpus, calibration-selected abstention policies are evaluated under explicit misrouting costs. TF-IDF with logistic regression at threshold 0.60 reduces test cost by 38.1% (95% CI [35.7%, 40.4%]) and wrong routes from 15.3% to 3.5%. The strongest prompted LLM configuration reaches 0.477 accuracy on a 1,000-ticket subset versus 0.879 for fine-tuned DistilBERT. GPT-4o-mini few-shot has correctness AUROC 0.500 before and after recalibration.",
-          "tags": [
-            "llm-deployment",
-            "classification",
-            "calibration",
-            "applied-ml"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2610.31657v1"
-            }
-          ],
-          "published": "2026-10-22T17:58:52+00:00",
-          "score": 0.4316
-        },
-        {
-          "id": "f9b499debdda",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "Profiling TorchNeuron on AWS Trainium: System-Level Inference Analysis Walkthrough",
-          "why_it_matters": "Practical profiling knowledge for AWS Trainium is sparse; this walkthrough is directly useful for engineers deploying or optimizing models on non-CUDA hardware.",
-          "summary": "Part 1 of a series on AWS Trainium inference profiling using TorchNeuron. Covers configuring torch.profiler with NeuronConfig (device/runtime modes, per-NeuronCore capture, CPU-device time correlation), reading key_averages() for operation-level Neuron device time, and tracing operations through Neuron Explorer from framework dispatch to hardware execution. Uses RMSNorm as a worked example across three implementations.",
-          "tags": [
-            "infrastructure",
-            "hardware",
-            "profiling",
-            "inference"
-          ],
-          "sources": [
-            {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/amazon/profiling-torchneuron-part-1"
-            }
-          ],
-          "published": "2026-10-21T16:04:43+00:00",
-          "score": 0.3012
+          "published": "2026-10-23T16:15:50+00:00",
+          "score": 1.2673
         }
       ]
     }
