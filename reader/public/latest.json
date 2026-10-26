@@ -1,11 +1,11 @@
 {
-  "date": "2026-10-24",
-  "generated_at": "2026-10-24T04:23:59.011302+00:00",
-  "summary_line": "1 worth knowing",
+  "date": "2026-10-26",
+  "generated_at": "2026-10-26T04:31:12.221168+00:00",
+  "summary_line": "4 worth knowing",
   "counts": {
-    "total": 2,
+    "total": 6,
     "headlines": 1,
-    "frontier": 1
+    "frontier": 5
   },
   "sections": [
     {
@@ -13,26 +13,26 @@
       "title": "Headlines",
       "cards": [
         {
-          "id": "6430909168b5",
+          "id": "cb0e6541c41d",
           "tier": "skim",
           "category": "headline",
-          "title": "Hugging Face Launches Trainium Model Support Lookup Space for AWS Trainium Compatibility",
-          "why_it_matters": "If you ever evaluate or deploy models on AWS Trainium hardware, this space gives you instant compatibility data, shard counts, memory usage, and runnable scripts without trial-and-error compilation cycles.",
-          "summary": "A new Hugging Face Space surfaces a public dataset showing which Transformers models pass or fail on AWS Trainium2 (trn2) via torch-neuronx. Each entry records neuronx-cc compiler version, core count, wall time, peak memory, and a reproducible run.py. Currently covers text-generation and image-text-to-text models up to 16 Trainium2 cores; diffusers and other tasks are planned. A public NEFF cache lets users skip recompilation.",
+          "title": "Kimi K3.1 Pro: Strong Benchmarks, Mixed Reception, and AI-Cybersecurity Tensions",
+          "why_it_matters": "Nathan Lambert and Florian dig into exactly the kind of messy, field-shaping questions — model adoption dynamics, open-weight security trade-offs, and what's coming next — that an AI/research engineer needs to track beyond the headline numbers.",
+          "summary": "Interconnects podcast covers Kimi K3.1 Pro's mixed market reception despite strong Artificial Analysis benchmark scores, alleged undisclosed paid promotion in its launch, and a broader debate on whether open-weight models meaningfully raise cybersecurity risk. Also touches on abliterated model APIs, LiteLLM security incident, and Anthropic's junior hiring stance.",
           "tags": [
-            "aws trainium",
-            "hardware",
-            "inference",
-            "transformers"
+            "kimi",
+            "open-weight models",
+            "cybersecurity",
+            "model launches"
           ],
           "sources": [
             {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/torch-neuronx-model-support"
+              "name": "Interconnects",
+              "url": "https://www.interconnects.ai/p/podcast-kimi-k31-pro-the-new-cyber"
             }
           ],
-          "published": "2026-10-23T00:00:00+00:00",
-          "score": 0.337
+          "published": "2026-10-25T11:49:00+00:00",
+          "score": 0.3965
         }
       ]
     },
@@ -41,26 +41,114 @@
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "d5dfb55b0129",
+          "id": "cf56be11690a",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "LitPivot: AI System That Grounds Early Research Ideas in Literature, Beating Chat-Only Tools",
-          "why_it_matters": "As a research engineer who reads and produces papers, a system that automatically segments your proposal into problem/contribution/evaluation facets and critiques each against retrieved literature could meaningfully accelerate your own ideation and lit-review workflow.",
-          "summary": "LitPivot, built with UPenn collaborators and accepted to UIST 2026, splits a research proposal into problem, contribution, and evaluation facets, retrieves and groups related papers per facet, then generates literature-supported critiques with suggested revisions. In a 17-researcher study, domain experts rated LitPivot-developed ideas as better grounded; participants also perceived ideas as more novel and useful compared to a text editor plus AI chat baseline.",
+          "title": "Instruction-Tuned LLMs as a Distinct Linguistic Genre: A Discourse Analysis",
+          "why_it_matters": "Understanding instruction fine-tuning as a formalized genre — shaped by system prompts, special tokens, and role structures — offers a conceptual frame for reasoning about alignment and model behavior that complements purely technical perspectives.",
+          "summary": "This paper argues instruction-fine-tuned LLMs instantiate a novel 'instructional-conversational genre' built from recursive training on human-model dialogues, formalized via system prompts, special tokens, and turn-taking role assignments. The framing draws on discourse and genre theory rather than purely technical ML analysis.",
           "tags": [
-            "research tools",
-            "ai-assisted writing",
-            "literature review",
-            "ideation"
+            "instruction tuning",
+            "language models",
+            "discourse analysis",
+            "alignment"
           ],
           "sources": [
             {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/allenai/litpivot"
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2610.32982v1"
             }
           ],
-          "published": "2026-10-23T16:15:50+00:00",
-          "score": 1.2673
+          "published": "2026-10-23T17:59:56+00:00",
+          "score": 0.6654
+        },
+        {
+          "id": "35dcefd54895",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "SceneBloom: Agentic Indoor Scene Generation with Zero Mesh Collisions for Embodied AI Training",
+          "why_it_matters": "High-quality, physically valid synthetic environments are a core bottleneck for embodied agent research; SceneBloom's collision-free results and downstream policy gains are directly relevant to anyone training navigation or manipulation agents.",
+          "summary": "SceneBloom combines diffusion-based hierarchical furniture layout sampling with a contract-guided 3D compiler that extracts spatial relations and corrects poses. Across five room types it is the only compared method with no mesh collisions or out-of-bounds objects, and object-navigation policies trained in its scenes outperform those trained on an equal number of real scans.",
+          "tags": [
+            "embodied ai",
+            "scene generation",
+            "diffusion models",
+            "sim-to-real"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2610.32978v1"
+            }
+          ],
+          "published": "2026-10-23T17:59:21+00:00",
+          "score": 0.6653
+        },
+        {
+          "id": "29523b75cac2",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "RobustRLlib: Unified Benchmark Covering 17 Robust RL Algorithms Across 273 Perturbation Configs",
+          "why_it_matters": "Robust RL is a key gap between research and real-world deployment; a unified, reproducible library spanning online, offline, and safe RL with a clear capability map is a practical resource for any RL researcher.",
+          "summary": "RobustRLlib integrates 17 robust online, offline, and safe RL algorithms under a single interface and evaluates them across 273 perturbation configurations, humanoid tasks, and vision-language-action tasks. Systematic results expose where current methods remain effective and where significant robustness gaps persist. Code is open-source.",
+          "tags": [
+            "reinforcement learning",
+            "robust rl",
+            "benchmarks",
+            "open source"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2610.32971v1"
+            }
+          ],
+          "published": "2026-10-23T17:57:22+00:00",
+          "score": 0.665
+        },
+        {
+          "id": "0ef444719e0c",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "DexPort: Portable Hand-Held Interface Boosts Dexterous Manipulation Policy Success from 36% to 78%",
+          "why_it_matters": "Data collection is a hard bottleneck for dexterous manipulation research; DexPort's skill-abstraction approach and the concrete success-rate gains across real tasks make it directly actionable for robotics and imitation-learning researchers.",
+          "summary": "DexPort uses the same robot hand hardware for collection and deployment, recording commanded joint targets and measured states. Operators specify wrist motion and select from a small skill set rather than controlling each joint. Across four tasks — pick-and-place, screwing, drawer stowage, bimanual scanning — using recorded robot commands over states improved success from 11% to 64%, and in-the-wild data improved success from 36% to 78%.",
+          "tags": [
+            "dexterous manipulation",
+            "imitation learning",
+            "data collection",
+            "robotics"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2610.32969v1"
+            }
+          ],
+          "published": "2026-10-23T17:56:28+00:00",
+          "score": 0.6649
+        },
+        {
+          "id": "7203253786a1",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Slater Determinants Can Achieve Maximal Orbital Entanglement Despite Zero Particle Correlation",
+          "why_it_matters": "For researchers working at the intersection of quantum ML and quantum information, this result shows mean-field states — the baseline of most many-body methods — are a viable entanglement resource, potentially opening new algorithmic directions.",
+          "summary": "The paper proves that Slater determinants of N fermions on d sites can carry up to min{d_A, d_B, N, d−N} ebits of orbital entanglement, matching the maximum over all fermionic states given sufficient particles and holes. New majorization relations for Hermitian matrices yield closed-form maximal orbital total correlation across a range of bipartitions.",
+          "tags": [
+            "quantum computing",
+            "quantum information",
+            "entanglement",
+            "many-body physics"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2610.32974v1"
+            }
+          ],
+          "published": "2026-10-23T17:58:30+00:00",
+          "score": 0.2217
         }
       ]
     }
