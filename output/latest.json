@@ -1,154 +1,153 @@
 {
-  "date": "2026-10-26",
-  "generated_at": "2026-10-26T04:31:12.221168+00:00",
-  "summary_line": "4 worth knowing",
+  "date": "2026-10-27",
+  "generated_at": "2026-10-27T04:50:15.091719+00:00",
+  "summary_line": "2 worth knowing",
   "counts": {
     "total": 6,
-    "headlines": 1,
-    "frontier": 5
+    "headlines": 0,
+    "frontier": 6
   },
   "sections": [
     {
       "key": "headlines",
       "title": "Headlines",
-      "cards": [
-        {
-          "id": "cb0e6541c41d",
-          "tier": "skim",
-          "category": "headline",
-          "title": "Kimi K3.1 Pro: Strong Benchmarks, Mixed Reception, and AI-Cybersecurity Tensions",
-          "why_it_matters": "Nathan Lambert and Florian dig into exactly the kind of messy, field-shaping questions — model adoption dynamics, open-weight security trade-offs, and what's coming next — that an AI/research engineer needs to track beyond the headline numbers.",
-          "summary": "Interconnects podcast covers Kimi K3.1 Pro's mixed market reception despite strong Artificial Analysis benchmark scores, alleged undisclosed paid promotion in its launch, and a broader debate on whether open-weight models meaningfully raise cybersecurity risk. Also touches on abliterated model APIs, LiteLLM security incident, and Anthropic's junior hiring stance.",
-          "tags": [
-            "kimi",
-            "open-weight models",
-            "cybersecurity",
-            "model launches"
-          ],
-          "sources": [
-            {
-              "name": "Interconnects",
-              "url": "https://www.interconnects.ai/p/podcast-kimi-k31-pro-the-new-cyber"
-            }
-          ],
-          "published": "2026-10-25T11:49:00+00:00",
-          "score": 0.3965
-        }
-      ]
+      "cards": []
     },
     {
       "key": "frontier",
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "cf56be11690a",
+          "id": "9f7a5172026e",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Instruction-Tuned LLMs as a Distinct Linguistic Genre: A Discourse Analysis",
-          "why_it_matters": "Understanding instruction fine-tuning as a formalized genre — shaped by system prompts, special tokens, and role structures — offers a conceptual frame for reasoning about alignment and model behavior that complements purely technical perspectives.",
-          "summary": "This paper argues instruction-fine-tuned LLMs instantiate a novel 'instructional-conversational genre' built from recursive training on human-model dialogues, formalized via system prompts, special tokens, and turn-taking role assignments. The framing draws on discourse and genre theory rather than purely technical ML analysis.",
+          "title": "DecisionRAG: LLM-Native Retrieval via Hierarchical Decision Models, No Retriever Needed",
+          "why_it_matters": "As an AI/ML engineer, this directly addresses the retriever-generator capability gap in RAG pipelines — a core architectural limitation you likely deal with daily.",
+          "summary": "DecisionRAG replaces traditional retrievers with a pretrained LM used as a decision model: it jointly scores candidate document branches in a single forward pass (no token generation) by evaluating them in shared context. Navigating corpus hierarchy top-down, it beats dense retrieval + 8B reranker by 13.8 R@1 on MultiDoc2Dial and 17.4 Hit@1 on Natural Questions, with 0.7–1.8s latency on a 2.68M-paragraph Wikipedia corpus. No task-specific training required.",
           "tags": [
-            "instruction tuning",
-            "language models",
-            "discourse analysis",
-            "alignment"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2610.32982v1"
-            }
-          ],
-          "published": "2026-10-23T17:59:56+00:00",
-          "score": 0.6654
-        },
-        {
-          "id": "35dcefd54895",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "SceneBloom: Agentic Indoor Scene Generation with Zero Mesh Collisions for Embodied AI Training",
-          "why_it_matters": "High-quality, physically valid synthetic environments are a core bottleneck for embodied agent research; SceneBloom's collision-free results and downstream policy gains are directly relevant to anyone training navigation or manipulation agents.",
-          "summary": "SceneBloom combines diffusion-based hierarchical furniture layout sampling with a contract-guided 3D compiler that extracts spatial relations and corrects poses. Across five room types it is the only compared method with no mesh collisions or out-of-bounds objects, and object-navigation policies trained in its scenes outperform those trained on an equal number of real scans.",
-          "tags": [
-            "embodied ai",
-            "scene generation",
-            "diffusion models",
-            "sim-to-real"
+            "rag",
+            "retrieval",
+            "nlp",
+            "information-retrieval"
           ],
           "sources": [
             {
               "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2610.32978v1"
+              "url": "https://arxiv.org/abs/2610.35868v1"
             }
           ],
-          "published": "2026-10-23T17:59:21+00:00",
-          "score": 0.6653
+          "published": "2026-10-26T17:59:44+00:00",
+          "score": 1.2903
         },
         {
-          "id": "29523b75cac2",
+          "id": "43aedf7c36bc",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "RobustRLlib: Unified Benchmark Covering 17 Robust RL Algorithms Across 273 Perturbation Configs",
-          "why_it_matters": "Robust RL is a key gap between research and real-world deployment; a unified, reproducible library spanning online, offline, and safe RL with a clear capability map is a practical resource for any RL researcher.",
-          "summary": "RobustRLlib integrates 17 robust online, offline, and safe RL algorithms under a single interface and evaluates them across 273 perturbation configurations, humanoid tasks, and vision-language-action tasks. Systematic results expose where current methods remain effective and where significant robustness gaps persist. Code is open-source.",
+          "title": "Auto-Research Arena: A Benchmark for Evaluating Autonomous AI Research Systems on LM Pretraining",
+          "why_it_matters": "Autonomous research agents are a frontier topic — this benchmark gives you a concrete framework and surprising finding that simple sequential search beats several sophisticated auto-research harnesses.",
+          "summary": "Auto-Research Arena evaluates autonomous research systems across nine targets spanning model, data, training, and inference efficiency in LM pretraining. Seven research harnesses were benchmarked using two foundation models; several sophisticated methods underperformed a simple sequential search baseline. Discovered ideas, reused in a quality-driven search, achieved lower training loss under matched data/FLOPs and lower held-out BPB at the same model size.",
           "tags": [
-            "reinforcement learning",
-            "robust rl",
-            "benchmarks",
-            "open source"
+            "autonomous-research",
+            "benchmarking",
+            "language-modeling",
+            "meta-learning"
           ],
           "sources": [
             {
               "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2610.32971v1"
+              "url": "https://arxiv.org/abs/2610.35866v1"
             }
           ],
-          "published": "2026-10-23T17:57:22+00:00",
-          "score": 0.665
+          "published": "2026-10-26T17:59:33+00:00",
+          "score": 1.2903
         },
         {
-          "id": "0ef444719e0c",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "DexPort: Portable Hand-Held Interface Boosts Dexterous Manipulation Policy Success from 36% to 78%",
-          "why_it_matters": "Data collection is a hard bottleneck for dexterous manipulation research; DexPort's skill-abstraction approach and the concrete success-rate gains across real tasks make it directly actionable for robotics and imitation-learning researchers.",
-          "summary": "DexPort uses the same robot hand hardware for collection and deployment, recording commanded joint targets and measured states. Operators specify wrist motion and select from a small skill set rather than controlling each joint. Across four tasks — pick-and-place, screwing, drawer stowage, bimanual scanning — using recorded robot commands over states improved success from 11% to 64%, and in-the-wild data improved success from 36% to 78%.",
-          "tags": [
-            "dexterous manipulation",
-            "imitation learning",
-            "data collection",
-            "robotics"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2610.32969v1"
-            }
-          ],
-          "published": "2026-10-23T17:56:28+00:00",
-          "score": 0.6649
-        },
-        {
-          "id": "7203253786a1",
+          "id": "1b1f79e16356",
           "tier": "skim",
           "category": "frontier",
-          "title": "Slater Determinants Can Achieve Maximal Orbital Entanglement Despite Zero Particle Correlation",
-          "why_it_matters": "For researchers working at the intersection of quantum ML and quantum information, this result shows mean-field states — the baseline of most many-body methods — are a viable entanglement resource, potentially opening new algorithmic directions.",
-          "summary": "The paper proves that Slater determinants of N fermions on d sites can carry up to min{d_A, d_B, N, d−N} ebits of orbital entanglement, matching the maximum over all fermionic states given sufficient particles and holes. New majorization relations for Hermitian matrices yield closed-form maximal orbital total correlation across a range of bipartitions.",
+          "title": "Evolution Strategies Reframed as Center-of-Mass Displacement: A Geometric Interpretation",
+          "why_it_matters": "If you work with RL or black-box optimization, this geometric lens on ES updates offers a cleaner intuition than the standard smoothed-gradient framing and clarifies what baseline subtraction actually does.",
+          "summary": "The paper reinterprets the mean-subtracted ES update as the displacement from a population's centroid to its reward-weighted center of mass, scaled by a scalar dependent on mean reward. This holds exactly for any finite population. Subtracting mean reward shifts the reference point from the model to the sampled centroid. The result is a purely geometric, gradient-free view of ES dynamics with no new algorithmic contribution.",
           "tags": [
-            "quantum computing",
-            "quantum information",
-            "entanglement",
-            "many-body physics"
+            "evolution-strategies",
+            "optimization",
+            "reinforcement-learning",
+            "theory"
           ],
           "sources": [
             {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2610.32974v1"
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2610.35865v1"
             }
           ],
-          "published": "2026-10-23T17:58:30+00:00",
-          "score": 0.2217
+          "published": "2026-10-26T17:59:33+00:00",
+          "score": 0.4301
+        },
+        {
+          "id": "38ba9905824c",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "FLORE: Force-Reactive Diffusion Policy Achieves 80% Success on Contact-Rich Humanoid Tasks",
+          "why_it_matters": "Humanoid loco-manipulation with explicit force control is a hard open problem in robotics — this result showing 80% vs 26.7% for position-only policies is a meaningful empirical signal for embodied AI researchers.",
+          "summary": "FLORE collects demonstrations via UMI-style force-sensing grippers and wearable body trackers, then trains a diffusion policy conditioned on vision, proprioception, and measured contact wrenches to predict actions and per-hand force commands. A hybrid compliance whole-body controller with integral force-error tracking executes commands. Across three contact-rich tasks on a real humanoid, the force-reactive policy succeeds in 80% of rollouts vs. 26.7% for a position-only baseline.",
+          "tags": [
+            "robotics",
+            "humanoid",
+            "imitation-learning",
+            "force-control"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2610.35862v1"
+            }
+          ],
+          "published": "2026-10-26T17:59:11+00:00",
+          "score": 0.43
+        },
+        {
+          "id": "7d3d08c359ab",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Intermittent Gradient Signals Can Cause Asymptotically Infinite Learning Variance Even at Correct Optima",
+          "why_it_matters": "For researchers thinking about biologically plausible learning or sparse/noisy credit assignment, this theoretical result sets a formal stability constraint that complements existing SGD convergence conditions.",
+          "summary": "The paper analyzes learning stability when gradient signals are noisy and only intermittently available. Even when average dynamics converge to the correct optimum, variance in learned parameters can be asymptotically infinite. Explicit stability conditions are derived for single- and multi-layer linear networks. The conclusion: unbiased credit assignment is insufficient — feedback must also be sufficiently frequent and informative.",
+          "tags": [
+            "theory",
+            "optimization",
+            "biologically-plausible-learning",
+            "sgd"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2610.35856v1"
+            }
+          ],
+          "published": "2026-10-26T17:58:14+00:00",
+          "score": 0.43
+        },
+        {
+          "id": "90c8f9345195",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "NPC-RubricBench: 30 LLMs Benchmarked Across 6 Longitudinal Cancer Care Phases Reveal Phase-Dependent Failure Modes",
+          "why_it_matters": "For AI engineers building or evaluating medical LLMs, this benchmark exposes a critical gap: strong diagnostic accuracy doesn't transfer to later care phases, and prompt granularity creates a quality-faithfulness tradeoff.",
+          "summary": "NPC-RubricBench covers 941 patient-phase units from 405 nasopharyngeal carcinoma patients across six care phases and 17,688 patient-specific criteria. Among 30 evaluated models, explicit decision errors dominated anatomical staging (48.2%) while omissions dominated initial work-up (33.4%) and post-treatment follow-up (30.4%). Medically adapted models showed higher omission rates than general-purpose models. Detailed prompts improved Decision Quality but reduced Evidence Faithfulness and Safety Adherence.",
+          "tags": [
+            "medical-ai",
+            "llm-evaluation",
+            "clinical-reasoning",
+            "benchmarking"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2610.35847v1"
+            }
+          ],
+          "published": "2026-10-26T17:56:26+00:00",
+          "score": 0.4298
         }
       ]
     }

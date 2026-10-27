@@ -1,0 +1,155 @@
+{
+  "date": "2026-10-27",
+  "generated_at": "2026-10-27T04:50:15.091719+00:00",
+  "summary_line": "2 worth knowing",
+  "counts": {
+    "total": 6,
+    "headlines": 0,
+    "frontier": 6
+  },
+  "sections": [
+    {
+      "key": "headlines",
+      "title": "Headlines",
+      "cards": []
+    },
+    {
+      "key": "frontier",
+      "title": "Frontier & Papers",
+      "cards": [
+        {
+          "id": "9f7a5172026e",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "DecisionRAG: LLM-Native Retrieval via Hierarchical Decision Models, No Retriever Needed",
+          "why_it_matters": "As an AI/ML engineer, this directly addresses the retriever-generator capability gap in RAG pipelines — a core architectural limitation you likely deal with daily.",
+          "summary": "DecisionRAG replaces traditional retrievers with a pretrained LM used as a decision model: it jointly scores candidate document branches in a single forward pass (no token generation) by evaluating them in shared context. Navigating corpus hierarchy top-down, it beats dense retrieval + 8B reranker by 13.8 R@1 on MultiDoc2Dial and 17.4 Hit@1 on Natural Questions, with 0.7–1.8s latency on a 2.68M-paragraph Wikipedia corpus. No task-specific training required.",
+          "tags": [
+            "rag",
+            "retrieval",
+            "nlp",
+            "information-retrieval"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2610.35868v1"
+            }
+          ],
+          "published": "2026-10-26T17:59:44+00:00",
+          "score": 1.2903
+        },
+        {
+          "id": "43aedf7c36bc",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Auto-Research Arena: A Benchmark for Evaluating Autonomous AI Research Systems on LM Pretraining",
+          "why_it_matters": "Autonomous research agents are a frontier topic — this benchmark gives you a concrete framework and surprising finding that simple sequential search beats several sophisticated auto-research harnesses.",
+          "summary": "Auto-Research Arena evaluates autonomous research systems across nine targets spanning model, data, training, and inference efficiency in LM pretraining. Seven research harnesses were benchmarked using two foundation models; several sophisticated methods underperformed a simple sequential search baseline. Discovered ideas, reused in a quality-driven search, achieved lower training loss under matched data/FLOPs and lower held-out BPB at the same model size.",
+          "tags": [
+            "autonomous-research",
+            "benchmarking",
+            "language-modeling",
+            "meta-learning"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2610.35866v1"
+            }
+          ],
+          "published": "2026-10-26T17:59:33+00:00",
+          "score": 1.2903
+        },
+        {
+          "id": "1b1f79e16356",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Evolution Strategies Reframed as Center-of-Mass Displacement: A Geometric Interpretation",
+          "why_it_matters": "If you work with RL or black-box optimization, this geometric lens on ES updates offers a cleaner intuition than the standard smoothed-gradient framing and clarifies what baseline subtraction actually does.",
+          "summary": "The paper reinterprets the mean-subtracted ES update as the displacement from a population's centroid to its reward-weighted center of mass, scaled by a scalar dependent on mean reward. This holds exactly for any finite population. Subtracting mean reward shifts the reference point from the model to the sampled centroid. The result is a purely geometric, gradient-free view of ES dynamics with no new algorithmic contribution.",
+          "tags": [
+            "evolution-strategies",
+            "optimization",
+            "reinforcement-learning",
+            "theory"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2610.35865v1"
+            }
+          ],
+          "published": "2026-10-26T17:59:33+00:00",
+          "score": 0.4301
+        },
+        {
+          "id": "38ba9905824c",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "FLORE: Force-Reactive Diffusion Policy Achieves 80% Success on Contact-Rich Humanoid Tasks",
+          "why_it_matters": "Humanoid loco-manipulation with explicit force control is a hard open problem in robotics — this result showing 80% vs 26.7% for position-only policies is a meaningful empirical signal for embodied AI researchers.",
+          "summary": "FLORE collects demonstrations via UMI-style force-sensing grippers and wearable body trackers, then trains a diffusion policy conditioned on vision, proprioception, and measured contact wrenches to predict actions and per-hand force commands. A hybrid compliance whole-body controller with integral force-error tracking executes commands. Across three contact-rich tasks on a real humanoid, the force-reactive policy succeeds in 80% of rollouts vs. 26.7% for a position-only baseline.",
+          "tags": [
+            "robotics",
+            "humanoid",
+            "imitation-learning",
+            "force-control"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2610.35862v1"
+            }
+          ],
+          "published": "2026-10-26T17:59:11+00:00",
+          "score": 0.43
+        },
+        {
+          "id": "7d3d08c359ab",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Intermittent Gradient Signals Can Cause Asymptotically Infinite Learning Variance Even at Correct Optima",
+          "why_it_matters": "For researchers thinking about biologically plausible learning or sparse/noisy credit assignment, this theoretical result sets a formal stability constraint that complements existing SGD convergence conditions.",
+          "summary": "The paper analyzes learning stability when gradient signals are noisy and only intermittently available. Even when average dynamics converge to the correct optimum, variance in learned parameters can be asymptotically infinite. Explicit stability conditions are derived for single- and multi-layer linear networks. The conclusion: unbiased credit assignment is insufficient — feedback must also be sufficiently frequent and informative.",
+          "tags": [
+            "theory",
+            "optimization",
+            "biologically-plausible-learning",
+            "sgd"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2610.35856v1"
+            }
+          ],
+          "published": "2026-10-26T17:58:14+00:00",
+          "score": 0.43
+        },
+        {
+          "id": "90c8f9345195",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "NPC-RubricBench: 30 LLMs Benchmarked Across 6 Longitudinal Cancer Care Phases Reveal Phase-Dependent Failure Modes",
+          "why_it_matters": "For AI engineers building or evaluating medical LLMs, this benchmark exposes a critical gap: strong diagnostic accuracy doesn't transfer to later care phases, and prompt granularity creates a quality-faithfulness tradeoff.",
+          "summary": "NPC-RubricBench covers 941 patient-phase units from 405 nasopharyngeal carcinoma patients across six care phases and 17,688 patient-specific criteria. Among 30 evaluated models, explicit decision errors dominated anatomical staging (48.2%) while omissions dominated initial work-up (33.4%) and post-treatment follow-up (30.4%). Medically adapted models showed higher omission rates than general-purpose models. Detailed prompts improved Decision Quality but reduced Evidence Faithfulness and Safety Adherence.",
+          "tags": [
+            "medical-ai",
+            "llm-evaluation",
+            "clinical-reasoning",
+            "benchmarking"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2610.35847v1"
+            }
+          ],
+          "published": "2026-10-26T17:56:26+00:00",
+          "score": 0.4298
+        }
+      ]
+    }
+  ]
+}
