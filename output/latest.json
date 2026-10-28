@@ -1,153 +1,220 @@
 {
-  "date": "2026-10-27",
-  "generated_at": "2026-10-27T04:50:15.091719+00:00",
-  "summary_line": "2 worth knowing",
+  "date": "2026-10-28",
+  "generated_at": "2026-10-28T05:25:06.039171+00:00",
+  "summary_line": "1 must-know · 4 worth knowing",
   "counts": {
-    "total": 6,
-    "headlines": 0,
-    "frontier": 6
+    "total": 9,
+    "headlines": 1,
+    "frontier": 8
   },
   "sections": [
     {
       "key": "headlines",
       "title": "Headlines",
-      "cards": []
+      "cards": [
+        {
+          "id": "d17d13a0006a",
+          "tier": "must_know",
+          "category": "headline",
+          "title": "Google DeepMind Announces Genie 4: Real-Time Multimodal World Simulation with Native Audio and Gemini Reasoning",
+          "why_it_matters": "Genie 4 represents a significant frontier advance in world models — a core research area for training agents and robots — and its Gemini integration demonstrates a new paradigm of LLM-as-planner within live simulation loops.",
+          "summary": "Genie 4 is DeepMind's new world model offering real-time interactive simulation with natively generated audio, realistic physics, and character dialogue. It integrates Gemini Omni for appearance grounding and Gemini 3.8 Flash as an in-loop planning agent that breaks goals into steps and tracks frame-by-frame progress. Currently in research preview for trusted testers; broader rollout starts with Google AI Ultra subscribers.",
+          "tags": [
+            "world-models",
+            "agents",
+            "deepmind",
+            "multimodal"
+          ],
+          "sources": [
+            {
+              "name": "DeepMind",
+              "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/"
+            }
+          ],
+          "published": "2026-10-27T16:01:38+00:00",
+          "score": 2.4909
+        }
+      ]
     },
     {
       "key": "frontier",
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "9f7a5172026e",
+          "id": "f9fc9bf8c857",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "DecisionRAG: LLM-Native Retrieval via Hierarchical Decision Models, No Retriever Needed",
-          "why_it_matters": "As an AI/ML engineer, this directly addresses the retriever-generator capability gap in RAG pipelines — a core architectural limitation you likely deal with daily.",
-          "summary": "DecisionRAG replaces traditional retrievers with a pretrained LM used as a decision model: it jointly scores candidate document branches in a single forward pass (no token generation) by evaluating them in shared context. Navigating corpus hierarchy top-down, it beats dense retrieval + 8B reranker by 13.8 R@1 on MultiDoc2Dial and 17.4 Hit@1 on Natural Questions, with 0.7–1.8s latency on a 2.68M-paragraph Wikipedia corpus. No task-specific training required.",
-          "tags": [
-            "rag",
-            "retrieval",
-            "nlp",
-            "information-retrieval"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2610.35868v1"
-            }
-          ],
-          "published": "2026-10-26T17:59:44+00:00",
-          "score": 1.2903
-        },
-        {
-          "id": "43aedf7c36bc",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "Auto-Research Arena: A Benchmark for Evaluating Autonomous AI Research Systems on LM Pretraining",
-          "why_it_matters": "Autonomous research agents are a frontier topic — this benchmark gives you a concrete framework and surprising finding that simple sequential search beats several sophisticated auto-research harnesses.",
-          "summary": "Auto-Research Arena evaluates autonomous research systems across nine targets spanning model, data, training, and inference efficiency in LM pretraining. Seven research harnesses were benchmarked using two foundation models; several sophisticated methods underperformed a simple sequential search baseline. Discovered ideas, reused in a quality-driven search, achieved lower training loss under matched data/FLOPs and lower held-out BPB at the same model size.",
-          "tags": [
-            "autonomous-research",
-            "benchmarking",
-            "language-modeling",
-            "meta-learning"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2610.35866v1"
-            }
-          ],
-          "published": "2026-10-26T17:59:33+00:00",
-          "score": 1.2903
-        },
-        {
-          "id": "1b1f79e16356",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "Evolution Strategies Reframed as Center-of-Mass Displacement: A Geometric Interpretation",
-          "why_it_matters": "If you work with RL or black-box optimization, this geometric lens on ES updates offers a cleaner intuition than the standard smoothed-gradient framing and clarifies what baseline subtraction actually does.",
-          "summary": "The paper reinterprets the mean-subtracted ES update as the displacement from a population's centroid to its reward-weighted center of mass, scaled by a scalar dependent on mean reward. This holds exactly for any finite population. Subtracting mean reward shifts the reference point from the model to the sampled centroid. The result is a purely geometric, gradient-free view of ES dynamics with no new algorithmic contribution.",
-          "tags": [
-            "evolution-strategies",
-            "optimization",
-            "reinforcement-learning",
-            "theory"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2610.35865v1"
-            }
-          ],
-          "published": "2026-10-26T17:59:33+00:00",
-          "score": 0.4301
-        },
-        {
-          "id": "38ba9905824c",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "FLORE: Force-Reactive Diffusion Policy Achieves 80% Success on Contact-Rich Humanoid Tasks",
-          "why_it_matters": "Humanoid loco-manipulation with explicit force control is a hard open problem in robotics — this result showing 80% vs 26.7% for position-only policies is a meaningful empirical signal for embodied AI researchers.",
-          "summary": "FLORE collects demonstrations via UMI-style force-sensing grippers and wearable body trackers, then trains a diffusion policy conditioned on vision, proprioception, and measured contact wrenches to predict actions and per-hand force commands. A hybrid compliance whole-body controller with integral force-error tracking executes commands. Across three contact-rich tasks on a real humanoid, the force-reactive policy succeeds in 80% of rollouts vs. 26.7% for a position-only baseline.",
+          "title": "ThinkWorld: RL over World-Model Predictions Enables Human-Video-to-Robot Transfer Without Action Labels",
+          "why_it_matters": "Grounding robot action reasoning in predicted world dynamics — then using RL to reinforce predictions that match observed outcomes — is a technically novel approach to the action-label bottleneck that robotics and VLA researchers will want to examine.",
+          "summary": "ThinkWorld introduces Chain-of-Dynamics (CoD), sequences of discrete motion tokens representing intermediate dynamics between world states, as a shared action representation across embodiments. CoD is initialized on action-labeled demos, then RL reinforces CoD choices whose predicted future states better match observed outcomes — enabling unannotated human videos to provide direct supervision. Results show effective human-to-robot transfer and generalization to unseen tasks in simulation and on real robots.",
           "tags": [
             "robotics",
-            "humanoid",
-            "imitation-learning",
-            "force-control"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2610.35862v1"
-            }
-          ],
-          "published": "2026-10-26T17:59:11+00:00",
-          "score": 0.43
-        },
-        {
-          "id": "7d3d08c359ab",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "Intermittent Gradient Signals Can Cause Asymptotically Infinite Learning Variance Even at Correct Optima",
-          "why_it_matters": "For researchers thinking about biologically plausible learning or sparse/noisy credit assignment, this theoretical result sets a formal stability constraint that complements existing SGD convergence conditions.",
-          "summary": "The paper analyzes learning stability when gradient signals are noisy and only intermittently available. Even when average dynamics converge to the correct optimum, variance in learned parameters can be asymptotically infinite. Explicit stability conditions are derived for single- and multi-layer linear networks. The conclusion: unbiased credit assignment is insufficient — feedback must also be sufficiently frequent and informative.",
-          "tags": [
-            "theory",
-            "optimization",
-            "biologically-plausible-learning",
-            "sgd"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2610.35856v1"
-            }
-          ],
-          "published": "2026-10-26T17:58:14+00:00",
-          "score": 0.43
-        },
-        {
-          "id": "90c8f9345195",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "NPC-RubricBench: 30 LLMs Benchmarked Across 6 Longitudinal Cancer Care Phases Reveal Phase-Dependent Failure Modes",
-          "why_it_matters": "For AI engineers building or evaluating medical LLMs, this benchmark exposes a critical gap: strong diagnostic accuracy doesn't transfer to later care phases, and prompt granularity creates a quality-faithfulness tradeoff.",
-          "summary": "NPC-RubricBench covers 941 patient-phase units from 405 nasopharyngeal carcinoma patients across six care phases and 17,688 patient-specific criteria. Among 30 evaluated models, explicit decision errors dominated anatomical staging (48.2%) while omissions dominated initial work-up (33.4%) and post-treatment follow-up (30.4%). Medically adapted models showed higher omission rates than general-purpose models. Detailed prompts improved Decision Quality but reduced Evidence Faithfulness and Safety Adherence.",
-          "tags": [
-            "medical-ai",
-            "llm-evaluation",
-            "clinical-reasoning",
-            "benchmarking"
+            "reinforcement-learning",
+            "world-models",
+            "vla"
           ],
           "sources": [
             {
               "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2610.35847v1"
+              "url": "https://arxiv.org/abs/2610.37666v1"
             }
           ],
-          "published": "2026-10-26T17:56:26+00:00",
-          "score": 0.4298
+          "published": "2026-10-27T17:59:52+00:00",
+          "score": 1.28
+        },
+        {
+          "id": "fd2e76b88250",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "PORTAL: Active Label-Querying Controller That Decides When and Whether to Apply Test-Time Adaptation",
+          "why_it_matters": "Test-time adaptation is a practical concern for deployed ML systems; PORTAL's principled stopping and query-routing strategy addresses a real failure mode (per-batch intervention harm) that most TTA papers ignore.",
+          "summary": "PORTAL is a controller for test-time adaptation that selects which prediction rule to use, which inputs to label, and when to stop querying. It exploits shared comparisons across candidates from each acquired label and stops when remaining labels can't change the decision or when accuracy gain doesn't justify another query. Experiments show it converts net-harmful interventions into useful selective choices, prevents ordering-induced failures, and improves future batch candidates from acquired labels.",
+          "tags": [
+            "test-time-adaptation",
+            "distribution-shift",
+            "active-learning",
+            "deployment"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2610.37658v1"
+            }
+          ],
+          "published": "2026-10-27T17:58:53+00:00",
+          "score": 1.2797
+        },
+        {
+          "id": "cdb986594d96",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Heads of Security: Learned Per-Head Attention Gates Cut Prompt Injection ASR to 10% on GPT-OSS-20B",
+          "why_it_matters": "Prompt injection is the primary security threat in deployed LLM agents; HoS's attention-level architectural defense with strong adaptive-attack results is a technically substantive advance over fine-tuning baselines.",
+          "summary": "HoS adds learned per-head attention gates that redistribute attention between trusted and untrusted tokens, enforcing instruction-data separation architecturally. On Llama-3.3-70B-Instruct and GPT-OSS-20B, the black-box RL-Hammer attack achieves 97% ASR on GPT-OSS-20B and 85% on SecAlign but only 10% on HoS. The white-box Claudini attack needs 3× more FLOPs to match ASR against HoS. Unlike SecAlign and ASIDE, HoS preserves utility in few-shot settings; ASIDE achieves only 10% utility on tool-use benchmarks.",
+          "tags": [
+            "prompt-injection",
+            "llm-security",
+            "attention",
+            "agents"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2610.37657v1"
+            }
+          ],
+          "published": "2026-10-27T17:58:52+00:00",
+          "score": 1.2797
+        },
+        {
+          "id": "db98bf59a6c7",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Liquid AI's LFM3: One 1.7B-Parameter Backbone Spanning Text, Vision, Audio, Omni, and Decision Models",
+          "why_it_matters": "A tri-hybrid architecture (conv + sliding-window + global attention) with strong edge benchmarks and 256K context is directly relevant to anyone building on-device or agentic AI systems.",
+          "summary": "LFM3-1.7B-Base uses 24 layers combining 13 gated short convolutions, 5 sliding-window attention layers, and 6 global attention layers, pretrained on 22T tokens. It outperforms LFM2.5-2.6B with 35% fewer parameters, is ~25% faster at 8K-token context, fits ~1 GB at 4-bit, and spawns six 2B-class specialized models including a first omni model. Each fine-tunes on a single GPU.",
+          "tags": [
+            "multimodal",
+            "edge-inference",
+            "architecture",
+            "foundation-models"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/LiquidAI/lfm3"
+            }
+          ],
+          "published": "2026-10-27T17:16:52+00:00",
+          "score": 1.2673
+        },
+        {
+          "id": "652f1bf21442",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Hexels: Hexagonal Surface Primitives Beat 2DGS by 4.53–7.38 dB PSNR at Matched Memory",
+          "why_it_matters": "A concrete Pareto improvement over Gaussian splatting primitives at equal memory budgets is directly actionable for researchers working on efficient 3D reconstruction or novel-view synthesis pipelines.",
+          "summary": "Hexels are planar hexagonal surface elements with a local color field, designed to exploit locally planar regions more efficiently than Gaussian splats. Across 34 scenes, they improve PSNR over memory-matched 2DGS by 4.53–7.38 dB with lower training VRAM. Per-primitive, Hexels outperform 2DGS by up to 4.74 dB at 2.31× faster FPS. On 15 DTU scans, surface reconstruction error drops 28.9%; on 6 Tanks and Temples scenes, mean F1 reaches 34.38% vs. 31.72% for 2DGS.",
+          "tags": [
+            "3d-reconstruction",
+            "novel-view-synthesis",
+            "gaussian-splatting",
+            "efficiency"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2610.37668v1"
+            }
+          ],
+          "published": "2026-10-27T17:59:59+00:00",
+          "score": 0.4267
+        },
+        {
+          "id": "5b28d06822d9",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Exact Analytical Solution for Collectively Pumped Dicke Superradiance via Continued Fractions",
+          "why_it_matters": "A rare exact closed-form treatment of driven-dissipative collective quantum dynamics provides a clean theoretical reference point for quantum ML researchers studying open quantum systems or reservoir computing.",
+          "summary": "The authors derive an exact finite continued fraction for Laplace-transformed Dicke-state populations in an N-emitter system with collective decay rate Γ and collective incoherent pumping rate R, by resumming infinitely many quantum trajectories. Perturbative transient solutions are obtained in strong- and weak-pumping limits, and exact relaxation eigenvalues are identified at balanced pump-decay strengths. The method extends to arbitrary permutationally symmetric initial states.",
+          "tags": [
+            "quantum-computing",
+            "open-quantum-systems",
+            "superradiance",
+            "analytical-methods"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2610.37665v1"
+            }
+          ],
+          "published": "2026-10-27T17:59:34+00:00",
+          "score": 0.4266
+        },
+        {
+          "id": "41bc6b9d60ba",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Exceptional Points in Lindblad Systems Offer No Scaling Advantage for Weak-Perturbation Detection",
+          "why_it_matters": "Clarifies a contested claim in quantum sensing: EPs don't improve the fundamental scaling of detection time with perturbation strength, a result that constrains how quantum ML hardware based on non-Hermitian systems should be evaluated.",
+          "summary": "For finite-dimensional Lindblad systems with a unique stationary state and nonzero relaxation gap, exceptional points (EPs) provide no improvement in how observation time scales with perturbation strength. However, EPs can shorten absolute observation time to a fixed detection accuracy by selecting perturbations that enhance quantum Fisher information rate. An optomechanical model illustrates faster force detection at an EP versus a non-EP reference at equal decay rate.",
+          "tags": [
+            "quantum-computing",
+            "quantum-sensing",
+            "non-hermitian",
+            "fisher-information"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2610.37660v1"
+            }
+          ],
+          "published": "2026-10-27T17:59:06+00:00",
+          "score": 0.4266
+        },
+        {
+          "id": "34370e88c88d",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Ai2 Study: LLM Novelty Judges Are Highly Unstable — Prompt Wording Alone Can Shift Accuracy by 50+ Percentage Points",
+          "why_it_matters": "If you use LLM judges to evaluate research idea novelty in any automated discovery or paper-generation pipeline, this benchmark directly challenges the reliability of that approach.",
+          "summary": "Ai2 benchmarked six LLM novelty judges (GPT-5.1, GPT-5.2, GPT-5.4, Claude Sonnet 4.5, Claude Opus 4.5, Claude Opus 4.6) using ICLR 2026 reviews to build pools of 154 high-novelty and 145 lower-novelty ideas. Minor prompt changes shift pairwise novelty accuracy by over 50 percentage points. Retrieval and extra reasoning don't consistently help; two purpose-built novelty systems underperform a simple Claude Opus 4.6 baseline.",
+          "tags": [
+            "evals",
+            "scientific-discovery",
+            "llm-judges",
+            "benchmarks"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/allenai/novelty-bench"
+            }
+          ],
+          "published": "2026-10-27T16:12:42+00:00",
+          "score": 0.4162
         }
       ]
     }
