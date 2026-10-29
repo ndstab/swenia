@@ -1,0 +1,90 @@
+{
+  "date": "2026-10-29",
+  "generated_at": "2026-10-29T05:33:47.335232+00:00",
+  "summary_line": "1 must-know · 1 worth knowing",
+  "counts": {
+    "total": 3,
+    "headlines": 2,
+    "frontier": 1
+  },
+  "sections": [
+    {
+      "key": "headlines",
+      "title": "Headlines",
+      "cards": [
+        {
+          "id": "b0da25ea6c1a",
+          "tier": "must_know",
+          "category": "headline",
+          "title": "Google DeepMind Launches Gemini 4 Carbon: #1 on AA Intelligence Index v5 with Cybersecurity SOTA",
+          "why_it_matters": "A new flagship frontier model from DeepMind ranking first on the most prominent independent intelligence index—with major jumps in agentic coding and cybersecurity—is a must-know development for anyone tracking frontier capabilities.",
+          "summary": "Gemini 4 Carbon scores 59 on Artificial Analysis Intelligence Index v5, ranking #1. It achieves SOTA on SEC-bench Pro (88.2% vulnerability finding), ExploitGym (54.8% exploitation), and CWE-bench (71.0% patching). It jumps +89 Elo to #4 on WebDev Arena (1768). Priced at $2/M input and $10/M output tokens, Carbon is initially rolling out only to select cyber defenders via the Fairwind Program before broader release.",
+          "tags": [
+            "gemini",
+            "google-deepmind",
+            "frontier-models",
+            "cybersecurity"
+          ],
+          "sources": [
+            {
+              "name": "DeepMind",
+              "url": "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/"
+            }
+          ],
+          "published": "2026-10-28T17:00:58+00:00",
+          "score": 2.5202
+        },
+        {
+          "id": "7ae8eb20550e",
+          "tier": "worth_knowing",
+          "category": "headline",
+          "title": "NVIDIA Nemotron 3.5 Transcribe: Open-Weight Model for Multilingual ASR, Diarization, and Audio Q&A",
+          "why_it_matters": "A single open-weight checkpoint topping the Hugging Face Open ASR Leaderboard for English and two speaker-attribution benchmarks is directly relevant if you work on speech pipelines or need promptable, adaptable transcription infrastructure.",
+          "summary": "Nemotron 3.5 Transcribe is an open-weight, promptable model handling transcription (40 languages), translation (31 languages to/from English), speaker attribution (13 languages, up to 8 speakers, up to 1-hour recordings), and audio Q&A in one checkpoint. It leads the HF Open ASR Leaderboard (English), posts the lowest error rate on David AI's 21-language diarization leaderboard, and ranks first in VoiceArena's 14-system comparison. Fine-tuning on medical audio cut WER 45.8% relative to best-prompt baseline.",
+          "tags": [
+            "speech",
+            "asr",
+            "open-weights",
+            "nvidia"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/nvidia/nemotron-transcribe-granary"
+            }
+          ],
+          "published": "2026-10-28T14:58:17+00:00",
+          "score": 1.2248
+        }
+      ]
+    },
+    {
+      "key": "frontier",
+      "title": "Frontier & Papers",
+      "cards": [
+        {
+          "id": "45f878f3f6da",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Artificial Analysis Intelligence Index v5: Benchmark Design Under the Microscope",
+          "why_it_matters": "As an AI/ML engineer who relies on leaderboards to compare models, understanding how AA's flagship index is constructed—and where it strains—directly affects how you interpret frontier model rankings.",
+          "summary": "AA's v5 Intelligence Index splits evenly across Knowledge Work, Coding, Science, and General (25% each), using tasks like FrontierCode 2.0, Terminal-Bench, and HLE-Diamond. The author critiques aggregation trade-offs, notes that v5 places 8 closed models above the best open-weight contender (Kimi K3.1 Pro), and argues singular intelligence indices are increasingly ill-suited to jagged, rapidly advancing frontier capabilities.",
+          "tags": [
+            "benchmarks",
+            "evaluation",
+            "frontier-models",
+            "open-weights"
+          ],
+          "sources": [
+            {
+              "name": "Interconnects",
+              "url": "https://www.interconnects.ai/p/artificial-analysis-v5-and-the-benchmarkers"
+            }
+          ],
+          "published": "2026-10-28T12:58:39+00:00",
+          "score": 0.3971
+        }
+      ]
+    }
+  ]
+}
