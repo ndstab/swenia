@@ -1,11 +1,11 @@
 {
-  "date": "2026-10-29",
-  "generated_at": "2026-10-29T05:33:47.335232+00:00",
-  "summary_line": "1 must-know · 1 worth knowing",
+  "date": "2026-10-30",
+  "generated_at": "2026-10-30T05:34:29.337456+00:00",
+  "summary_line": "2 worth knowing",
   "counts": {
-    "total": 3,
-    "headlines": 2,
-    "frontier": 1
+    "total": 8,
+    "headlines": 4,
+    "frontier": 4
   },
   "sections": [
     {
@@ -13,48 +13,92 @@
       "title": "Headlines",
       "cards": [
         {
-          "id": "b0da25ea6c1a",
-          "tier": "must_know",
-          "category": "headline",
-          "title": "Google DeepMind Launches Gemini 4 Carbon: #1 on AA Intelligence Index v5 with Cybersecurity SOTA",
-          "why_it_matters": "A new flagship frontier model from DeepMind ranking first on the most prominent independent intelligence index—with major jumps in agentic coding and cybersecurity—is a must-know development for anyone tracking frontier capabilities.",
-          "summary": "Gemini 4 Carbon scores 59 on Artificial Analysis Intelligence Index v5, ranking #1. It achieves SOTA on SEC-bench Pro (88.2% vulnerability finding), ExploitGym (54.8% exploitation), and CWE-bench (71.0% patching). It jumps +89 Elo to #4 on WebDev Arena (1768). Priced at $2/M input and $10/M output tokens, Carbon is initially rolling out only to select cyber defenders via the Fairwind Program before broader release.",
-          "tags": [
-            "gemini",
-            "google-deepmind",
-            "frontier-models",
-            "cybersecurity"
-          ],
-          "sources": [
-            {
-              "name": "DeepMind",
-              "url": "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/"
-            }
-          ],
-          "published": "2026-10-28T17:00:58+00:00",
-          "score": 2.5202
-        },
-        {
-          "id": "7ae8eb20550e",
+          "id": "f3538b6fb36f",
           "tier": "worth_knowing",
           "category": "headline",
-          "title": "NVIDIA Nemotron 3.5 Transcribe: Open-Weight Model for Multilingual ASR, Diarization, and Audio Q&A",
-          "why_it_matters": "A single open-weight checkpoint topping the Hugging Face Open ASR Leaderboard for English and two speaker-attribution benchmarks is directly relevant if you work on speech pipelines or need promptable, adaptable transcription infrastructure.",
-          "summary": "Nemotron 3.5 Transcribe is an open-weight, promptable model handling transcription (40 languages), translation (31 languages to/from English), speaker attribution (13 languages, up to 8 speakers, up to 1-hour recordings), and audio Q&A in one checkpoint. It leads the HF Open ASR Leaderboard (English), posts the lowest error rate on David AI's 21-language diarization leaderboard, and ranks first in VoiceArena's 14-system comparison. Fine-tuning on medical audio cut WER 45.8% relative to best-prompt baseline.",
+          "title": "IBM Granite Switch 4.1.1: Adapter-Based Model Updates Without Retraining the Base",
+          "why_it_matters": "As a research engineer, this demonstrates a concrete modular architecture pattern—versioned, software-style adapter composition—that could inform how you think about continual learning and deployment workflows.",
+          "summary": "Granite Switch 4.1.1 is a backward-compatible patch release updating two adapters: a multilingual ASR model covering 10 languages with native punctuation, and an improved Decision adapter. The base model was untouched; only the adapters were retrained and recomposed. IBM plans an Adapter SDK and tutorials for third-party adapter development.",
           "tags": [
-            "speech",
-            "asr",
-            "open-weights",
-            "nvidia"
+            "modular-ml",
+            "adapters",
+            "deployment",
+            "asr"
           ],
           "sources": [
             {
               "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/nvidia/nemotron-transcribe-granary"
+              "url": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1-1"
             }
           ],
-          "published": "2026-10-28T14:58:17+00:00",
-          "score": 1.2248
+          "published": "2026-10-29T13:37:07+00:00",
+          "score": 1.2018
+        },
+        {
+          "id": "a1765f446c5b",
+          "tier": "worth_knowing",
+          "category": "headline",
+          "title": "Mistral Large 4 (Le Chonk): ~1T-Parameter MoE with 1M Context, Strong Cybersecurity Capabilities",
+          "why_it_matters": "This is a major open-weight release from a leading lab—a flagship MoE model with novel sparse attention combining MLA and DeepSeek Sparse Attention, making it directly relevant both as a deployment target and as an architecture reference.",
+          "summary": "Mistral Large 4 is a multimodal MoE model with ~1T total and 49B active parameters, 1M token context, and a Pixtral vision encoder. Its 72-layer decoder uses Multi-head Latent Attention combined with a DeepSeek Sparse Attention indexer selecting up to 2,048 key positions per query, and a 3:1 RoPE-to-NoPE layer pattern. It scores 82% on the Artificial Analysis Cyber Index. Released under an MIT-derivative open-weight license.",
+          "tags": [
+            "mistral",
+            "moe",
+            "open-weights",
+            "cybersecurity"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/mistral-large4"
+            }
+          ],
+          "published": "2026-10-29T00:00:00+00:00",
+          "score": 0.9947
+        },
+        {
+          "id": "e1c742c1d925",
+          "tier": "skim",
+          "category": "headline",
+          "title": "Project ProtoStar: Multi-University Initiative to Make Publicly Funded Research AI-Ready on Hugging Face",
+          "why_it_matters": "As a researcher who relies on scientific datasets for ML work, a coordinated push to standardize and open-source $190B/year in federally funded research artifacts in machine-actionable formats directly expands your data supply.",
+          "summary": "Project ProtoStar, anchored by CMU, Purdue, Georgia Tech, ASU, and GWU with Hugging Face as infrastructure partner, aims to release publicly funded scientific datasets, models, and code in AI-ready formats. The first challenge opens November 2. Hugging Face already hosts 17,000+ public science datasets, with new science dataset uploads growing more than 3x year-over-year in 2026.",
+          "tags": [
+            "open-science",
+            "datasets",
+            "research-infrastructure",
+            "hugging-face"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/announcing-project-protostar"
+            }
+          ],
+          "published": "2026-10-29T00:00:00+00:00",
+          "score": 0.3316
+        },
+        {
+          "id": "85d975255b4f",
+          "tier": "skim",
+          "category": "headline",
+          "title": "AnySpeechRecognizer and AnyDecisionModel: On-Device Swift APIs for Parakeet, Qwen3-ASR, and Typed Decision Models on Apple Silicon",
+          "why_it_matters": "For engineers building local inference pipelines on Apple hardware, this provides production-ready Swift APIs for swapping in open models like Parakeet and Qwen3-ASR as drop-in replacements for Apple's native speech framework.",
+          "summary": "Two new Swift packages extend Apple's SpeechAnalyzer API to support NVIDIA Parakeet (25 European languages, Core ML), Qwen3-ASR (30 languages plus 22 Chinese dialects, 0.6B and 1.7B variants), and a typed AnyDecisionModel that derives yes/no, multiple-choice, and rating answers from token probabilities rather than generation. Models run on-device via Core ML, MLX, or llama.cpp and can be fetched from the Hugging Face Hub.",
+          "tags": [
+            "on-device-ml",
+            "asr",
+            "apple-silicon",
+            "swift"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/anydecisionmodel"
+            }
+          ],
+          "published": "2026-10-29T00:00:00+00:00",
+          "score": 0.3316
         }
       ]
     },
@@ -63,26 +107,96 @@
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "45f878f3f6da",
+          "id": "b224081afdee",
           "tier": "skim",
           "category": "frontier",
-          "title": "Artificial Analysis Intelligence Index v5: Benchmark Design Under the Microscope",
-          "why_it_matters": "As an AI/ML engineer who relies on leaderboards to compare models, understanding how AA's flagship index is constructed—and where it strains—directly affects how you interpret frontier model rankings.",
-          "summary": "AA's v5 Intelligence Index splits evenly across Knowledge Work, Coding, Science, and General (25% each), using tasks like FrontierCode 2.0, Terminal-Bench, and HLE-Diamond. The author critiques aggregation trade-offs, notes that v5 places 8 closed models above the best open-weight contender (Kimi K3.1 Pro), and argues singular intelligence indices are increasingly ill-suited to jagged, rapidly advancing frontier capabilities.",
+          "title": "Quantum Snapshot Thermometry: Recovering Hidden Conserved Densities Without Extra Measurement Bases",
+          "why_it_matters": "For a researcher tracking quantum simulation diagnostics and measurement efficiency, this offers a new technique to extract hydrodynamic observables—diffusion constants, energy fronts, conserved-charge profiles—from fixed-basis snapshots alone.",
+          "summary": "The paper shows that combining projective snapshots with local equilibration assumptions and a calibrated equation of state can recover conserved-density profiles invisible to direct measurement. Numerically demonstrated capabilities include recovering energy fronts, diffusion constants, and distinguishing spin from energy transport, without additional measurement bases or full state tomography.",
           "tags": [
-            "benchmarks",
-            "evaluation",
-            "frontier-models",
-            "open-weights"
+            "quantum-simulation",
+            "measurement",
+            "thermodynamics",
+            "hydrodynamics"
           ],
           "sources": [
             {
-              "name": "Interconnects",
-              "url": "https://www.interconnects.ai/p/artificial-analysis-v5-and-the-benchmarkers"
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2610.40652v1"
+            },
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2610.40638v1"
             }
           ],
-          "published": "2026-10-28T12:58:39+00:00",
-          "score": 0.3971
+          "published": "2026-10-29T17:59:38+00:00",
+          "score": 0.4257
+        },
+        {
+          "id": "054f1967d154",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Spacetime Renormalization Proves Asynchronous Classical Memory Can Be Stable Under Competing Local Dynamics",
+          "why_it_matters": "For researchers in quantum error correction or distributed systems, this provides a rigorous framework proving that autonomous error-correcting memories can work without synchronized updates—a practically important relaxation.",
+          "summary": "The paper develops a spacetime renormalization framework to analyze memory stability when sites update at independent random times. It proves stability of the asynchronous R squeezing code and introduces robust processes in 2D and 3D where both encoded phases persist under sufficiently weak noise, even noise favoring one phase. Stable interfaces and suppressed defect propagation are identified as key geometric conditions.",
+          "tags": [
+            "quantum-error-correction",
+            "renormalization",
+            "fault-tolerance",
+            "classical-memory"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2610.40651v1"
+            }
+          ],
+          "published": "2026-10-29T17:59:33+00:00",
+          "score": 0.4257
+        },
+        {
+          "id": "f9369ab60a4e",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Benchmarking Multiqubit Mølmer–Sørensen Gates for Trapped-Ion Unitary Synthesis",
+          "why_it_matters": "For researchers tracking quantum hardware-software co-design, this provides a systematic, application-agnostic methodology for evaluating when native multiqubit gate sets actually yield circuit advantages on trapped-ion hardware.",
+          "summary": "The paper develops a toolset to evaluate gate sets built from native Mølmer–Sørensen multiqubit gates using unitary synthesis as an application-agnostic benchmark. It investigates trade-offs between engineering complexity and algorithmic performance, identifying specific hardware requirements under which multiqubit gates provide measurable advantage over two-qubit gate sets.",
+          "tags": [
+            "trapped-ion",
+            "quantum-hardware",
+            "gate-sets",
+            "unitary-synthesis"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2610.40642v1"
+            }
+          ],
+          "published": "2026-10-29T17:58:57+00:00",
+          "score": 0.4256
+        },
+        {
+          "id": "0a37e0934bed",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Spectral Criterion for Local Dissipative Ground-State Preparation of Free-Fermion Hamiltonians",
+          "why_it_matters": "For researchers in quantum simulation or open quantum systems, this establishes a precise, checkable condition determining when a local Lindbladian can prepare a target ground state—clarifying fundamental limits of autonomous state preparation.",
+          "summary": "The paper derives a complete spectral criterion for the existence of exponentially local linear jump operators that prepare free-fermion ground states via quadratic Lindbladians. Sign-changing Fermi-level crossings constitute a provable no-go obstruction in 1D; additional obstructions arise in higher dimensions, illustrated via two quadratic-band-touching models. Short-range ground-state correlations are shown to be sufficient (though not necessary) for local dissipative preparation even without translation invariance.",
+          "tags": [
+            "open-quantum-systems",
+            "lindbladian",
+            "ground-state-preparation",
+            "quantum-simulation"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2610.40628v1"
+            }
+          ],
+          "published": "2026-10-29T17:56:55+00:00",
+          "score": 0.4254
         }
       ]
     }
