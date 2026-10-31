@@ -1,0 +1,156 @@
+{
+  "date": "2026-10-31",
+  "generated_at": "2026-10-31T05:20:48.036740+00:00",
+  "summary_line": "4 worth knowing",
+  "counts": {
+    "total": 6,
+    "headlines": 2,
+    "frontier": 4
+  },
+  "sections": [
+    {
+      "key": "headlines",
+      "title": "Headlines",
+      "cards": [
+        {
+          "id": "77b8021d805e",
+          "tier": "worth_knowing",
+          "category": "headline",
+          "title": "'Black October' AI Cyber Risk: Did Open-Weight Fear Mongers Overshoot?",
+          "why_it_matters": "This is a live, contested debate in AI safety about open-weight model risks — directly relevant to how you think about capability thresholds and policy implications of model releases.",
+          "summary": "Interconnects argues that fears around open-weight Claude Mythos being a catastrophic cyber weapon were overstated. GLM-5.3, now publicly available, is cited as the capability threshold, yet no step-change in cyber harm is evident over a month later. The piece quotes Rob Wiblin and Anthropic's Project Glasswing blog as examples of language it considers exaggerated, while acknowledging a real, ongoing rise in vulnerability disclosures.",
+          "tags": [
+            "ai safety",
+            "open-weight models",
+            "cybersecurity",
+            "policy"
+          ],
+          "sources": [
+            {
+              "name": "Interconnects",
+              "url": "https://www.interconnects.ai/p/was-i-wrong-about-open-models-and"
+            }
+          ],
+          "published": "2026-10-30T17:36:56+00:00",
+          "score": 1.2745
+        },
+        {
+          "id": "b2263e9f8412",
+          "tier": "skim",
+          "category": "headline",
+          "title": "NVIDIA Nemotron Stack Powers a Halloween Interactive Talking House",
+          "why_it_matters": "A practical end-to-end showcase of NVIDIA's Nemotron Voice Agent stack — ASR, small LM, zero-shot TTS, and Audio2Face-3D — running fully offline on a single Blackwell workstation, useful for evaluating local inference pipelines.",
+          "summary": "A developer built 'MonsterHouse,' a Halloween garage-door character using NVIDIA Nemotron 3 ASR, Nemotron 3.5 Bolt E4B 4GB (with a LoRA personality adapter), Magpie TTS Zeroshot, and Audio2Face-3D animating a custom Unreal Engine 5 rig. The full pipeline — including costume recognition via Nemotron Nano Omni and visitor tracking via YOLO and ByteTrack — runs on a single workstation with RTX PRO 6000 and RTX PRO 4000 Blackwell GPUs.",
+          "tags": [
+            "nvidia",
+            "voice agents",
+            "on-device inference",
+            "multimodal"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/nvidia/nemotron-halloween"
+            }
+          ],
+          "published": "2026-10-30T17:57:24+00:00",
+          "score": 0.4268
+        }
+      ]
+    },
+    {
+      "key": "frontier",
+      "title": "Frontier & Papers",
+      "cards": [
+        {
+          "id": "daba7b5e4e64",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Negative Log-Odds Gradients Boost LLM Data Attribution Recall by 35–72 Points",
+          "why_it_matters": "Data attribution and training data influence estimation are increasingly important for interpretability and data curation — this paper offers concrete, reproducible improvements over standard baselines.",
+          "summary": "The paper introduces CATT, a controlled benchmark using fictitious fine-tuning data for unambiguous attribution ground truth. Key findings: causal evidence within documents is highly localized, and standard cross-entropy-based averaging dilutes it. Replacing cross-entropy with negative log-odds gradients and aggregating only top-token scores improves ground-truth recall by 35–72 percentage points on CATT, and boosts counterfactual retraining performance by up to 4.9x on FTRACE-TREX.",
+          "tags": [
+            "interpretability",
+            "data attribution",
+            "training data",
+            "llm"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2610.40655v1"
+            }
+          ],
+          "published": "2026-10-29T17:59:53+00:00",
+          "score": 0.9181
+        },
+        {
+          "id": "91d195a114db",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Neural Thickets Gains Come From Output Diversity, Not Weight-Space Geometry",
+          "why_it_matters": "Challenges a recently proposed hypothesis about pretrained model weight-space structure — the reframing as Perturb-Select-Vote has direct implications for inference-time compute and ensemble methods you might use in practice.",
+          "summary": "The paper reproduces Neural Thickets performance gains but shows the geometric 'dense expert neighborhood' explanation is unnecessary. Perturbing only a single decoder block recovers most gains; adding a random bias to output logits with a fully frozen model matches or exceeds full-weight perturbations on most reasoning tasks. The authors formalize this as Perturb-Select-Vote (PSV) and show logit-level PSV also improves vision performance under domain shift with no weight modification.",
+          "tags": [
+            "inference-time compute",
+            "ensembles",
+            "reasoning",
+            "llm"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2610.40649v1"
+            }
+          ],
+          "published": "2026-10-29T17:59:29+00:00",
+          "score": 0.918
+        },
+        {
+          "id": "2453e3d93d18",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "SpecSlot: Decoupling Spectral Detail from Global Attention Sequence Length in Image Generation",
+          "why_it_matters": "A novel architecture idea for pixel-space diffusion/flow transformers that achieves better FID at lower FLOPs — relevant if you follow efficient generative model architectures.",
+          "summary": "SpecSlot expands each spatial anchor into multiple slots, each covering a disjoint DCT frequency band. Only the lowest-frequency slot participates in global attention; higher-frequency slots interact locally, keeping global sequence length fixed regardless of spectral resolution. On ImageNet-512, it improves FID by 2.84 over a FLOPs-matched JiT control with 3.9% fewer FLOPs. On text-to-image DPG-Bench, it surpasses JiT-B/8 by 1.06 at 40.6% lower forward cost.",
+          "tags": [
+            "generative models",
+            "transformers",
+            "image generation",
+            "efficient architectures"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2610.40647v1"
+            }
+          ],
+          "published": "2026-10-29T17:59:21+00:00",
+          "score": 0.918
+        },
+        {
+          "id": "978502652aaf",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Propose-Filter-Release: A General DP Primitive That Scales Noise to Typical Sensitivity",
+          "why_it_matters": "A new general-purpose differential privacy primitive that could improve utility in DP-ML pipelines by avoiding worst-case noise inflation from outlier records.",
+          "summary": "PFR privately filters out atypical records before applying a release mechanism, allowing noise to be scaled to typical rather than worst-case sensitivity. It requires only a concave friendliness score and a friendly-DP release mechanism, then guarantees standard differential privacy under public conditions on record count. The framework generalizes propose-test-release and subsumes FriendlyCore, with instantiations for scalar statistics, PCA, KL divergence, graph effective resistances, and treatment-rule selection.",
+          "tags": [
+            "differential privacy",
+            "privacy",
+            "statistics",
+            "ml theory"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2610.40654v1"
+            }
+          ],
+          "published": "2026-10-29T17:59:49+00:00",
+          "score": 0.306
+        }
+      ]
+    }
+  ]
+}

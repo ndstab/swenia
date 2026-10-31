@@ -1,10 +1,10 @@
 {
-  "date": "2026-10-30",
-  "generated_at": "2026-10-30T05:34:29.337456+00:00",
-  "summary_line": "2 worth knowing",
+  "date": "2026-10-31",
+  "generated_at": "2026-10-31T05:20:48.036740+00:00",
+  "summary_line": "4 worth knowing",
   "counts": {
-    "total": 8,
-    "headlines": 4,
+    "total": 6,
+    "headlines": 2,
     "frontier": 4
   },
   "sections": [
@@ -13,92 +13,48 @@
       "title": "Headlines",
       "cards": [
         {
-          "id": "f3538b6fb36f",
+          "id": "77b8021d805e",
           "tier": "worth_knowing",
           "category": "headline",
-          "title": "IBM Granite Switch 4.1.1: Adapter-Based Model Updates Without Retraining the Base",
-          "why_it_matters": "As a research engineer, this demonstrates a concrete modular architecture pattern—versioned, software-style adapter composition—that could inform how you think about continual learning and deployment workflows.",
-          "summary": "Granite Switch 4.1.1 is a backward-compatible patch release updating two adapters: a multilingual ASR model covering 10 languages with native punctuation, and an improved Decision adapter. The base model was untouched; only the adapters were retrained and recomposed. IBM plans an Adapter SDK and tutorials for third-party adapter development.",
+          "title": "'Black October' AI Cyber Risk: Did Open-Weight Fear Mongers Overshoot?",
+          "why_it_matters": "This is a live, contested debate in AI safety about open-weight model risks — directly relevant to how you think about capability thresholds and policy implications of model releases.",
+          "summary": "Interconnects argues that fears around open-weight Claude Mythos being a catastrophic cyber weapon were overstated. GLM-5.3, now publicly available, is cited as the capability threshold, yet no step-change in cyber harm is evident over a month later. The piece quotes Rob Wiblin and Anthropic's Project Glasswing blog as examples of language it considers exaggerated, while acknowledging a real, ongoing rise in vulnerability disclosures.",
           "tags": [
-            "modular-ml",
-            "adapters",
-            "deployment",
-            "asr"
+            "ai safety",
+            "open-weight models",
+            "cybersecurity",
+            "policy"
           ],
           "sources": [
             {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1-1"
+              "name": "Interconnects",
+              "url": "https://www.interconnects.ai/p/was-i-wrong-about-open-models-and"
             }
           ],
-          "published": "2026-10-29T13:37:07+00:00",
-          "score": 1.2018
+          "published": "2026-10-30T17:36:56+00:00",
+          "score": 1.2745
         },
         {
-          "id": "a1765f446c5b",
-          "tier": "worth_knowing",
-          "category": "headline",
-          "title": "Mistral Large 4 (Le Chonk): ~1T-Parameter MoE with 1M Context, Strong Cybersecurity Capabilities",
-          "why_it_matters": "This is a major open-weight release from a leading lab—a flagship MoE model with novel sparse attention combining MLA and DeepSeek Sparse Attention, making it directly relevant both as a deployment target and as an architecture reference.",
-          "summary": "Mistral Large 4 is a multimodal MoE model with ~1T total and 49B active parameters, 1M token context, and a Pixtral vision encoder. Its 72-layer decoder uses Multi-head Latent Attention combined with a DeepSeek Sparse Attention indexer selecting up to 2,048 key positions per query, and a 3:1 RoPE-to-NoPE layer pattern. It scores 82% on the Artificial Analysis Cyber Index. Released under an MIT-derivative open-weight license.",
-          "tags": [
-            "mistral",
-            "moe",
-            "open-weights",
-            "cybersecurity"
-          ],
-          "sources": [
-            {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/mistral-large4"
-            }
-          ],
-          "published": "2026-10-29T00:00:00+00:00",
-          "score": 0.9947
-        },
-        {
-          "id": "e1c742c1d925",
+          "id": "b2263e9f8412",
           "tier": "skim",
           "category": "headline",
-          "title": "Project ProtoStar: Multi-University Initiative to Make Publicly Funded Research AI-Ready on Hugging Face",
-          "why_it_matters": "As a researcher who relies on scientific datasets for ML work, a coordinated push to standardize and open-source $190B/year in federally funded research artifacts in machine-actionable formats directly expands your data supply.",
-          "summary": "Project ProtoStar, anchored by CMU, Purdue, Georgia Tech, ASU, and GWU with Hugging Face as infrastructure partner, aims to release publicly funded scientific datasets, models, and code in AI-ready formats. The first challenge opens November 2. Hugging Face already hosts 17,000+ public science datasets, with new science dataset uploads growing more than 3x year-over-year in 2026.",
+          "title": "NVIDIA Nemotron Stack Powers a Halloween Interactive Talking House",
+          "why_it_matters": "A practical end-to-end showcase of NVIDIA's Nemotron Voice Agent stack — ASR, small LM, zero-shot TTS, and Audio2Face-3D — running fully offline on a single Blackwell workstation, useful for evaluating local inference pipelines.",
+          "summary": "A developer built 'MonsterHouse,' a Halloween garage-door character using NVIDIA Nemotron 3 ASR, Nemotron 3.5 Bolt E4B 4GB (with a LoRA personality adapter), Magpie TTS Zeroshot, and Audio2Face-3D animating a custom Unreal Engine 5 rig. The full pipeline — including costume recognition via Nemotron Nano Omni and visitor tracking via YOLO and ByteTrack — runs on a single workstation with RTX PRO 6000 and RTX PRO 4000 Blackwell GPUs.",
           "tags": [
-            "open-science",
-            "datasets",
-            "research-infrastructure",
-            "hugging-face"
+            "nvidia",
+            "voice agents",
+            "on-device inference",
+            "multimodal"
           ],
           "sources": [
             {
               "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/announcing-project-protostar"
+              "url": "https://huggingface.co/blog/nvidia/nemotron-halloween"
             }
           ],
-          "published": "2026-10-29T00:00:00+00:00",
-          "score": 0.3316
-        },
-        {
-          "id": "85d975255b4f",
-          "tier": "skim",
-          "category": "headline",
-          "title": "AnySpeechRecognizer and AnyDecisionModel: On-Device Swift APIs for Parakeet, Qwen3-ASR, and Typed Decision Models on Apple Silicon",
-          "why_it_matters": "For engineers building local inference pipelines on Apple hardware, this provides production-ready Swift APIs for swapping in open models like Parakeet and Qwen3-ASR as drop-in replacements for Apple's native speech framework.",
-          "summary": "Two new Swift packages extend Apple's SpeechAnalyzer API to support NVIDIA Parakeet (25 European languages, Core ML), Qwen3-ASR (30 languages plus 22 Chinese dialects, 0.6B and 1.7B variants), and a typed AnyDecisionModel that derives yes/no, multiple-choice, and rating answers from token probabilities rather than generation. Models run on-device via Core ML, MLX, or llama.cpp and can be fetched from the Hugging Face Hub.",
-          "tags": [
-            "on-device-ml",
-            "asr",
-            "apple-silicon",
-            "swift"
-          ],
-          "sources": [
-            {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/anydecisionmodel"
-            }
-          ],
-          "published": "2026-10-29T00:00:00+00:00",
-          "score": 0.3316
+          "published": "2026-10-30T17:57:24+00:00",
+          "score": 0.4268
         }
       ]
     },
@@ -107,96 +63,92 @@
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "b224081afdee",
-          "tier": "skim",
+          "id": "daba7b5e4e64",
+          "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Quantum Snapshot Thermometry: Recovering Hidden Conserved Densities Without Extra Measurement Bases",
-          "why_it_matters": "For a researcher tracking quantum simulation diagnostics and measurement efficiency, this offers a new technique to extract hydrodynamic observables—diffusion constants, energy fronts, conserved-charge profiles—from fixed-basis snapshots alone.",
-          "summary": "The paper shows that combining projective snapshots with local equilibration assumptions and a calibrated equation of state can recover conserved-density profiles invisible to direct measurement. Numerically demonstrated capabilities include recovering energy fronts, diffusion constants, and distinguishing spin from energy transport, without additional measurement bases or full state tomography.",
+          "title": "Negative Log-Odds Gradients Boost LLM Data Attribution Recall by 35–72 Points",
+          "why_it_matters": "Data attribution and training data influence estimation are increasingly important for interpretability and data curation — this paper offers concrete, reproducible improvements over standard baselines.",
+          "summary": "The paper introduces CATT, a controlled benchmark using fictitious fine-tuning data for unambiguous attribution ground truth. Key findings: causal evidence within documents is highly localized, and standard cross-entropy-based averaging dilutes it. Replacing cross-entropy with negative log-odds gradients and aggregating only top-token scores improves ground-truth recall by 35–72 percentage points on CATT, and boosts counterfactual retraining performance by up to 4.9x on FTRACE-TREX.",
           "tags": [
-            "quantum-simulation",
-            "measurement",
-            "thermodynamics",
-            "hydrodynamics"
+            "interpretability",
+            "data attribution",
+            "training data",
+            "llm"
           ],
           "sources": [
             {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2610.40652v1"
-            },
-            {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2610.40638v1"
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2610.40655v1"
             }
           ],
-          "published": "2026-10-29T17:59:38+00:00",
-          "score": 0.4257
+          "published": "2026-10-29T17:59:53+00:00",
+          "score": 0.9181
         },
         {
-          "id": "054f1967d154",
-          "tier": "skim",
+          "id": "91d195a114db",
+          "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Spacetime Renormalization Proves Asynchronous Classical Memory Can Be Stable Under Competing Local Dynamics",
-          "why_it_matters": "For researchers in quantum error correction or distributed systems, this provides a rigorous framework proving that autonomous error-correcting memories can work without synchronized updates—a practically important relaxation.",
-          "summary": "The paper develops a spacetime renormalization framework to analyze memory stability when sites update at independent random times. It proves stability of the asynchronous R squeezing code and introduces robust processes in 2D and 3D where both encoded phases persist under sufficiently weak noise, even noise favoring one phase. Stable interfaces and suppressed defect propagation are identified as key geometric conditions.",
+          "title": "Neural Thickets Gains Come From Output Diversity, Not Weight-Space Geometry",
+          "why_it_matters": "Challenges a recently proposed hypothesis about pretrained model weight-space structure — the reframing as Perturb-Select-Vote has direct implications for inference-time compute and ensemble methods you might use in practice.",
+          "summary": "The paper reproduces Neural Thickets performance gains but shows the geometric 'dense expert neighborhood' explanation is unnecessary. Perturbing only a single decoder block recovers most gains; adding a random bias to output logits with a fully frozen model matches or exceeds full-weight perturbations on most reasoning tasks. The authors formalize this as Perturb-Select-Vote (PSV) and show logit-level PSV also improves vision performance under domain shift with no weight modification.",
           "tags": [
-            "quantum-error-correction",
-            "renormalization",
-            "fault-tolerance",
-            "classical-memory"
+            "inference-time compute",
+            "ensembles",
+            "reasoning",
+            "llm"
           ],
           "sources": [
             {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2610.40651v1"
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2610.40649v1"
             }
           ],
-          "published": "2026-10-29T17:59:33+00:00",
-          "score": 0.4257
+          "published": "2026-10-29T17:59:29+00:00",
+          "score": 0.918
         },
         {
-          "id": "f9369ab60a4e",
-          "tier": "skim",
+          "id": "2453e3d93d18",
+          "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Benchmarking Multiqubit Mølmer–Sørensen Gates for Trapped-Ion Unitary Synthesis",
-          "why_it_matters": "For researchers tracking quantum hardware-software co-design, this provides a systematic, application-agnostic methodology for evaluating when native multiqubit gate sets actually yield circuit advantages on trapped-ion hardware.",
-          "summary": "The paper develops a toolset to evaluate gate sets built from native Mølmer–Sørensen multiqubit gates using unitary synthesis as an application-agnostic benchmark. It investigates trade-offs between engineering complexity and algorithmic performance, identifying specific hardware requirements under which multiqubit gates provide measurable advantage over two-qubit gate sets.",
+          "title": "SpecSlot: Decoupling Spectral Detail from Global Attention Sequence Length in Image Generation",
+          "why_it_matters": "A novel architecture idea for pixel-space diffusion/flow transformers that achieves better FID at lower FLOPs — relevant if you follow efficient generative model architectures.",
+          "summary": "SpecSlot expands each spatial anchor into multiple slots, each covering a disjoint DCT frequency band. Only the lowest-frequency slot participates in global attention; higher-frequency slots interact locally, keeping global sequence length fixed regardless of spectral resolution. On ImageNet-512, it improves FID by 2.84 over a FLOPs-matched JiT control with 3.9% fewer FLOPs. On text-to-image DPG-Bench, it surpasses JiT-B/8 by 1.06 at 40.6% lower forward cost.",
           "tags": [
-            "trapped-ion",
-            "quantum-hardware",
-            "gate-sets",
-            "unitary-synthesis"
+            "generative models",
+            "transformers",
+            "image generation",
+            "efficient architectures"
           ],
           "sources": [
             {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2610.40642v1"
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2610.40647v1"
             }
           ],
-          "published": "2026-10-29T17:58:57+00:00",
-          "score": 0.4256
+          "published": "2026-10-29T17:59:21+00:00",
+          "score": 0.918
         },
         {
-          "id": "0a37e0934bed",
+          "id": "978502652aaf",
           "tier": "skim",
           "category": "frontier",
-          "title": "Spectral Criterion for Local Dissipative Ground-State Preparation of Free-Fermion Hamiltonians",
-          "why_it_matters": "For researchers in quantum simulation or open quantum systems, this establishes a precise, checkable condition determining when a local Lindbladian can prepare a target ground state—clarifying fundamental limits of autonomous state preparation.",
-          "summary": "The paper derives a complete spectral criterion for the existence of exponentially local linear jump operators that prepare free-fermion ground states via quadratic Lindbladians. Sign-changing Fermi-level crossings constitute a provable no-go obstruction in 1D; additional obstructions arise in higher dimensions, illustrated via two quadratic-band-touching models. Short-range ground-state correlations are shown to be sufficient (though not necessary) for local dissipative preparation even without translation invariance.",
+          "title": "Propose-Filter-Release: A General DP Primitive That Scales Noise to Typical Sensitivity",
+          "why_it_matters": "A new general-purpose differential privacy primitive that could improve utility in DP-ML pipelines by avoiding worst-case noise inflation from outlier records.",
+          "summary": "PFR privately filters out atypical records before applying a release mechanism, allowing noise to be scaled to typical rather than worst-case sensitivity. It requires only a concave friendliness score and a friendly-DP release mechanism, then guarantees standard differential privacy under public conditions on record count. The framework generalizes propose-test-release and subsumes FriendlyCore, with instantiations for scalar statistics, PCA, KL divergence, graph effective resistances, and treatment-rule selection.",
           "tags": [
-            "open-quantum-systems",
-            "lindbladian",
-            "ground-state-preparation",
-            "quantum-simulation"
+            "differential privacy",
+            "privacy",
+            "statistics",
+            "ml theory"
           ],
           "sources": [
             {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2610.40628v1"
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2610.40654v1"
             }
           ],
-          "published": "2026-10-29T17:56:55+00:00",
-          "score": 0.4254
+          "published": "2026-10-29T17:59:49+00:00",
+          "score": 0.306
         }
       ]
     }
