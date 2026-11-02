@@ -1,154 +1,153 @@
 {
-  "date": "2026-10-31",
-  "generated_at": "2026-10-31T05:20:48.036740+00:00",
+  "date": "2026-11-02",
+  "generated_at": "2026-11-02T05:48:51.945188+00:00",
   "summary_line": "4 worth knowing",
   "counts": {
     "total": 6,
-    "headlines": 2,
-    "frontier": 4
+    "headlines": 0,
+    "frontier": 6
   },
   "sections": [
     {
       "key": "headlines",
       "title": "Headlines",
-      "cards": [
-        {
-          "id": "77b8021d805e",
-          "tier": "worth_knowing",
-          "category": "headline",
-          "title": "'Black October' AI Cyber Risk: Did Open-Weight Fear Mongers Overshoot?",
-          "why_it_matters": "This is a live, contested debate in AI safety about open-weight model risks — directly relevant to how you think about capability thresholds and policy implications of model releases.",
-          "summary": "Interconnects argues that fears around open-weight Claude Mythos being a catastrophic cyber weapon were overstated. GLM-5.3, now publicly available, is cited as the capability threshold, yet no step-change in cyber harm is evident over a month later. The piece quotes Rob Wiblin and Anthropic's Project Glasswing blog as examples of language it considers exaggerated, while acknowledging a real, ongoing rise in vulnerability disclosures.",
-          "tags": [
-            "ai safety",
-            "open-weight models",
-            "cybersecurity",
-            "policy"
-          ],
-          "sources": [
-            {
-              "name": "Interconnects",
-              "url": "https://www.interconnects.ai/p/was-i-wrong-about-open-models-and"
-            }
-          ],
-          "published": "2026-10-30T17:36:56+00:00",
-          "score": 1.2745
-        },
-        {
-          "id": "b2263e9f8412",
-          "tier": "skim",
-          "category": "headline",
-          "title": "NVIDIA Nemotron Stack Powers a Halloween Interactive Talking House",
-          "why_it_matters": "A practical end-to-end showcase of NVIDIA's Nemotron Voice Agent stack — ASR, small LM, zero-shot TTS, and Audio2Face-3D — running fully offline on a single Blackwell workstation, useful for evaluating local inference pipelines.",
-          "summary": "A developer built 'MonsterHouse,' a Halloween garage-door character using NVIDIA Nemotron 3 ASR, Nemotron 3.5 Bolt E4B 4GB (with a LoRA personality adapter), Magpie TTS Zeroshot, and Audio2Face-3D animating a custom Unreal Engine 5 rig. The full pipeline — including costume recognition via Nemotron Nano Omni and visitor tracking via YOLO and ByteTrack — runs on a single workstation with RTX PRO 6000 and RTX PRO 4000 Blackwell GPUs.",
-          "tags": [
-            "nvidia",
-            "voice agents",
-            "on-device inference",
-            "multimodal"
-          ],
-          "sources": [
-            {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/nvidia/nemotron-halloween"
-            }
-          ],
-          "published": "2026-10-30T17:57:24+00:00",
-          "score": 0.4268
-        }
-      ]
+      "cards": []
     },
     {
       "key": "frontier",
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "daba7b5e4e64",
+          "id": "e318697021c8",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Negative Log-Odds Gradients Boost LLM Data Attribution Recall by 35–72 Points",
-          "why_it_matters": "Data attribution and training data influence estimation are increasingly important for interpretability and data curation — this paper offers concrete, reproducible improvements over standard baselines.",
-          "summary": "The paper introduces CATT, a controlled benchmark using fictitious fine-tuning data for unambiguous attribution ground truth. Key findings: causal evidence within documents is highly localized, and standard cross-entropy-based averaging dilutes it. Replacing cross-entropy with negative log-odds gradients and aggregating only top-token scores improves ground-truth recall by 35–72 percentage points on CATT, and boosts counterfactual retraining performance by up to 4.9x on FTRACE-TREX.",
+          "title": "LARC: Latent Continuous-Space Reasoning Boosts Unified Multimodal Image Generation",
+          "why_it_matters": "Closes a fundamental gap between discrete CoT reasoning and continuous image generation — directly relevant to anyone building or evaluating multimodal models.",
+          "summary": "LARC frames reasoning for image generation in continuous hidden-state space rather than discrete tokens, using two-stage training: curriculum SFT to shift from token-level to latent reasoning, then information-gain RL for self-supervised refinement. On GenEval it achieves a 7 percentage-point gain over BAGEL and shows measurable test-time scaling under both parallel and sequential strategies.",
           "tags": [
-            "interpretability",
-            "data attribution",
-            "training data",
-            "llm"
+            "multimodal",
+            "reasoning",
+            "text-to-image",
+            "rl"
           ],
           "sources": [
             {
               "name": "arXiv:cs.CL",
-              "url": "https://arxiv.org/abs/2610.40655v1"
+              "url": "https://arxiv.org/abs/2610.42149v1"
             }
           ],
-          "published": "2026-10-29T17:59:53+00:00",
-          "score": 0.9181
+          "published": "2026-10-30T17:59:43+00:00",
+          "score": 0.6535
         },
         {
-          "id": "91d195a114db",
+          "id": "94768006782b",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Neural Thickets Gains Come From Output Diversity, Not Weight-Space Geometry",
-          "why_it_matters": "Challenges a recently proposed hypothesis about pretrained model weight-space structure — the reframing as Perturb-Select-Vote has direct implications for inference-time compute and ensemble methods you might use in practice.",
-          "summary": "The paper reproduces Neural Thickets performance gains but shows the geometric 'dense expert neighborhood' explanation is unnecessary. Perturbing only a single decoder block recovers most gains; adding a random bias to output logits with a fully frozen model matches or exceeds full-weight perturbations on most reasoning tasks. The authors formalize this as Perturb-Select-Vote (PSV) and show logit-level PSV also improves vision performance under domain shift with no weight modification.",
+          "title": "Flide: Up to 9.5× Faster LLM Decision-Tree Inference via Exact State Forking",
+          "why_it_matters": "Directly solves inference inefficiency for tree-structured agent decision models — important for anyone building or deploying LLM-based agent systems at scale.",
+          "summary": "Flide is an inference engine for decision models that decouples logical tree structure from a flattened physical token stream. ForkAttention uses GPU-resident indices to ensure each branch evaluates identically to an isolated forward pass, covering both standard attention and recurrent GatedDeltaNet layers. Benchmarks show up to 9.5× speedup over vLLM and SGLang with the closest match to float32 reference in total variation distance.",
           "tags": [
-            "inference-time compute",
-            "ensembles",
-            "reasoning",
-            "llm"
+            "inference",
+            "agents",
+            "llm",
+            "systems"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2610.40649v1"
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2610.42148v1"
             }
           ],
-          "published": "2026-10-29T17:59:29+00:00",
-          "score": 0.918
+          "published": "2026-10-30T17:59:38+00:00",
+          "score": 0.6535
         },
         {
-          "id": "2453e3d93d18",
+          "id": "e407015fbb2c",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "SpecSlot: Decoupling Spectral Detail from Global Attention Sequence Length in Image Generation",
-          "why_it_matters": "A novel architecture idea for pixel-space diffusion/flow transformers that achieves better FID at lower FLOPs — relevant if you follow efficient generative model architectures.",
-          "summary": "SpecSlot expands each spatial anchor into multiple slots, each covering a disjoint DCT frequency band. Only the lowest-frequency slot participates in global attention; higher-frequency slots interact locally, keeping global sequence length fixed regardless of spectral resolution. On ImageNet-512, it improves FID by 2.84 over a FLOPs-matched JiT control with 3.9% fewer FLOPs. On text-to-image DPG-Bench, it surpasses JiT-B/8 by 1.06 at 40.6% lower forward cost.",
+          "title": "Latent Sparse Attention (LSA) Enables Subquadratic Accuracy at 10M-Token Context",
+          "why_it_matters": "Practical subquadratic attention that maintains accuracy at extreme context lengths is a key infrastructure need for long-horizon agent and research workflows.",
+          "summary": "LSA hierarchically clusters keys in a learned latent space so queries score cluster hierarchies rather than all keys, reducing prefill, decode, and training cost. Distilled-LSA on GLM-5.3-FLASH at 10M tokens speeds up one attention layer 22.7× in prefill and 4.6× in decode over original sparse attention; on QWEN-3.8-27B the gains are 72.4× and 42.5× over full attention. Native-LSA matches full-attention accuracy with 1.6× training speedup at 128k tokens.",
           "tags": [
-            "generative models",
-            "transformers",
-            "image generation",
-            "efficient architectures"
+            "attention",
+            "long-context",
+            "efficiency",
+            "architecture"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2610.40647v1"
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2610.42147v1"
             }
           ],
-          "published": "2026-10-29T17:59:21+00:00",
-          "score": 0.918
+          "published": "2026-10-30T17:59:34+00:00",
+          "score": 0.6535
         },
         {
-          "id": "978502652aaf",
+          "id": "64f418c76263",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "ID-WM: Hierarchical World Model Separates Reachability Planning from Low-Level Control",
+          "why_it_matters": "A principled hierarchical world model that reduces compounding errors in long-horizon tasks — directly relevant to embodied AI and model-based RL research.",
+          "summary": "ID-WM uses a high-level model to sample reachable state transitions across the manifold and a low-level inverse dynamics solver to ground them into actions, avoiding rigid macro-actions. This separation lets the planner find feasible subgoals without low-level execution constraints. Results show a 38.5% improvement over SOTA policy and diffusion-based planners and a 135% gain over single-level world model MPC on long-horizon navigation and manipulation tasks.",
+          "tags": [
+            "world models",
+            "planning",
+            "embodied ai",
+            "reinforcement learning"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2610.42146v1"
+            }
+          ],
+          "published": "2026-10-30T17:59:25+00:00",
+          "score": 0.6535
+        },
+        {
+          "id": "5148952f5387",
           "tier": "skim",
           "category": "frontier",
-          "title": "Propose-Filter-Release: A General DP Primitive That Scales Noise to Typical Sensitivity",
-          "why_it_matters": "A new general-purpose differential privacy primitive that could improve utility in DP-ML pipelines by avoiding worst-case noise inflation from outlier records.",
-          "summary": "PFR privately filters out atypical records before applying a release mechanism, allowing noise to be scaled to typical rather than worst-case sensitivity. It requires only a concave friendliness score and a friendly-DP release mechanism, then guarantees standard differential privacy under public conditions on record count. The framework generalizes propose-test-release and subsumes FriendlyCore, with instantiations for scalar statistics, PCA, KL divergence, graph effective resistances, and treatment-rule selection.",
+          "title": "Secret-Shared Teleportation of a Two-Qudit Gate with Deferred Recipient Selection",
+          "why_it_matters": "Advances distributed quantum computing by enabling flexible, post-distribution routing of entangling gate capability — a meaningful primitive for quantum networks.",
+          "summary": "The paper shows a two-qudit entangling gate (CSUM^k) can be secret-shared across n parties: shares distributed in advance, with a later key release activating exactly one recipient. Any coalition fewer than n nodes or the key register alone learns nothing; unselected nodes cannot detect selection. The two-candidate case forms a ((3,5)) threshold scheme with explicit O(n) encoder/decoder circuits.",
           "tags": [
-            "differential privacy",
-            "privacy",
-            "statistics",
-            "ml theory"
+            "quantum computing",
+            "quantum networks",
+            "cryptography",
+            "distributed systems"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2610.40654v1"
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2610.42150v1"
             }
           ],
-          "published": "2026-10-29T17:59:49+00:00",
-          "score": 0.306
+          "published": "2026-10-30T17:59:43+00:00",
+          "score": 0.2178
+        },
+        {
+          "id": "99f551775f2d",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "RoboArchitect: Automated LLM-Driven Agent Harness Design Replaces Robotic Finetuning",
+          "why_it_matters": "Demonstrates that frozen policy performance can be dramatically recovered through automated harness optimization — a compelling alternative to expensive finetuning that reshapes how researchers think about robot adaptation.",
+          "summary": "RoboArchitect uses a coding model to observe robot rollouts, diagnose failures, and iteratively revise the agent harness around a frozen policy — including evolving persistent memory for learned heuristics like effective grasp depths. Without any weight updates, success rates rise from 9.7% to 43.3% on unseen scenes and 12.7% to 40.2% on unseen tasks across multiple benchmarks, often matching or exceeding finetuned baselines.",
+          "tags": [
+            "robotics",
+            "agents",
+            "llm",
+            "policy"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2610.42141v1"
+            }
+          ],
+          "published": "2026-10-30T17:58:48+00:00",
+          "score": 0.2178
         }
       ]
     }

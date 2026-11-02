@@ -1,0 +1,155 @@
+{
+  "date": "2026-11-02",
+  "generated_at": "2026-11-02T05:48:51.945188+00:00",
+  "summary_line": "4 worth knowing",
+  "counts": {
+    "total": 6,
+    "headlines": 0,
+    "frontier": 6
+  },
+  "sections": [
+    {
+      "key": "headlines",
+      "title": "Headlines",
+      "cards": []
+    },
+    {
+      "key": "frontier",
+      "title": "Frontier & Papers",
+      "cards": [
+        {
+          "id": "e318697021c8",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "LARC: Latent Continuous-Space Reasoning Boosts Unified Multimodal Image Generation",
+          "why_it_matters": "Closes a fundamental gap between discrete CoT reasoning and continuous image generation — directly relevant to anyone building or evaluating multimodal models.",
+          "summary": "LARC frames reasoning for image generation in continuous hidden-state space rather than discrete tokens, using two-stage training: curriculum SFT to shift from token-level to latent reasoning, then information-gain RL for self-supervised refinement. On GenEval it achieves a 7 percentage-point gain over BAGEL and shows measurable test-time scaling under both parallel and sequential strategies.",
+          "tags": [
+            "multimodal",
+            "reasoning",
+            "text-to-image",
+            "rl"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2610.42149v1"
+            }
+          ],
+          "published": "2026-10-30T17:59:43+00:00",
+          "score": 0.6535
+        },
+        {
+          "id": "94768006782b",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Flide: Up to 9.5× Faster LLM Decision-Tree Inference via Exact State Forking",
+          "why_it_matters": "Directly solves inference inefficiency for tree-structured agent decision models — important for anyone building or deploying LLM-based agent systems at scale.",
+          "summary": "Flide is an inference engine for decision models that decouples logical tree structure from a flattened physical token stream. ForkAttention uses GPU-resident indices to ensure each branch evaluates identically to an isolated forward pass, covering both standard attention and recurrent GatedDeltaNet layers. Benchmarks show up to 9.5× speedup over vLLM and SGLang with the closest match to float32 reference in total variation distance.",
+          "tags": [
+            "inference",
+            "agents",
+            "llm",
+            "systems"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2610.42148v1"
+            }
+          ],
+          "published": "2026-10-30T17:59:38+00:00",
+          "score": 0.6535
+        },
+        {
+          "id": "e407015fbb2c",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Latent Sparse Attention (LSA) Enables Subquadratic Accuracy at 10M-Token Context",
+          "why_it_matters": "Practical subquadratic attention that maintains accuracy at extreme context lengths is a key infrastructure need for long-horizon agent and research workflows.",
+          "summary": "LSA hierarchically clusters keys in a learned latent space so queries score cluster hierarchies rather than all keys, reducing prefill, decode, and training cost. Distilled-LSA on GLM-5.3-FLASH at 10M tokens speeds up one attention layer 22.7× in prefill and 4.6× in decode over original sparse attention; on QWEN-3.8-27B the gains are 72.4× and 42.5× over full attention. Native-LSA matches full-attention accuracy with 1.6× training speedup at 128k tokens.",
+          "tags": [
+            "attention",
+            "long-context",
+            "efficiency",
+            "architecture"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2610.42147v1"
+            }
+          ],
+          "published": "2026-10-30T17:59:34+00:00",
+          "score": 0.6535
+        },
+        {
+          "id": "64f418c76263",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "ID-WM: Hierarchical World Model Separates Reachability Planning from Low-Level Control",
+          "why_it_matters": "A principled hierarchical world model that reduces compounding errors in long-horizon tasks — directly relevant to embodied AI and model-based RL research.",
+          "summary": "ID-WM uses a high-level model to sample reachable state transitions across the manifold and a low-level inverse dynamics solver to ground them into actions, avoiding rigid macro-actions. This separation lets the planner find feasible subgoals without low-level execution constraints. Results show a 38.5% improvement over SOTA policy and diffusion-based planners and a 135% gain over single-level world model MPC on long-horizon navigation and manipulation tasks.",
+          "tags": [
+            "world models",
+            "planning",
+            "embodied ai",
+            "reinforcement learning"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2610.42146v1"
+            }
+          ],
+          "published": "2026-10-30T17:59:25+00:00",
+          "score": 0.6535
+        },
+        {
+          "id": "5148952f5387",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Secret-Shared Teleportation of a Two-Qudit Gate with Deferred Recipient Selection",
+          "why_it_matters": "Advances distributed quantum computing by enabling flexible, post-distribution routing of entangling gate capability — a meaningful primitive for quantum networks.",
+          "summary": "The paper shows a two-qudit entangling gate (CSUM^k) can be secret-shared across n parties: shares distributed in advance, with a later key release activating exactly one recipient. Any coalition fewer than n nodes or the key register alone learns nothing; unselected nodes cannot detect selection. The two-candidate case forms a ((3,5)) threshold scheme with explicit O(n) encoder/decoder circuits.",
+          "tags": [
+            "quantum computing",
+            "quantum networks",
+            "cryptography",
+            "distributed systems"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2610.42150v1"
+            }
+          ],
+          "published": "2026-10-30T17:59:43+00:00",
+          "score": 0.2178
+        },
+        {
+          "id": "99f551775f2d",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "RoboArchitect: Automated LLM-Driven Agent Harness Design Replaces Robotic Finetuning",
+          "why_it_matters": "Demonstrates that frozen policy performance can be dramatically recovered through automated harness optimization — a compelling alternative to expensive finetuning that reshapes how researchers think about robot adaptation.",
+          "summary": "RoboArchitect uses a coding model to observe robot rollouts, diagnose failures, and iteratively revise the agent harness around a frozen policy — including evolving persistent memory for learned heuristics like effective grasp depths. Without any weight updates, success rates rise from 9.7% to 43.3% on unseen scenes and 12.7% to 40.2% on unseen tasks across multiple benchmarks, often matching or exceeding finetuned baselines.",
+          "tags": [
+            "robotics",
+            "agents",
+            "llm",
+            "policy"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2610.42141v1"
+            }
+          ],
+          "published": "2026-10-30T17:58:48+00:00",
+          "score": 0.2178
+        }
+      ]
+    }
+  ]
+}
