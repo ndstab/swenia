@@ -1,0 +1,156 @@
+{
+  "date": "2026-11-03",
+  "generated_at": "2026-11-03T06:29:52.633933+00:00",
+  "summary_line": "1 must-know · 2 worth knowing",
+  "counts": {
+    "total": 6,
+    "headlines": 2,
+    "frontier": 4
+  },
+  "sections": [
+    {
+      "key": "headlines",
+      "title": "Headlines",
+      "cards": [
+        {
+          "id": "9091e4453210",
+          "tier": "worth_knowing",
+          "category": "headline",
+          "title": "Realtime-Bench: Frontier LLMs Top Out at 36% on Real-Time Interactive Tasks",
+          "why_it_matters": "As an AI/ML engineer, this benchmark directly quantifies where agent pipelines will fail on latency-sensitive tasks — a hard constraint for anyone building or deploying agentic systems.",
+          "summary": "Realtime-Bench (50 interactive game/web tasks) tests three capabilities: temporal state tracking, adaptive deliberation, and time-aware action selection. Best performer GPT-6 Astra (high) hits only 36% under wall-clock conditions; with a paused clock, top models reach 70–80%, revealing that inference latency — not raw capability — is the primary bottleneck for real-time agents.",
+          "tags": [
+            "agents",
+            "benchmarks",
+            "llm-evaluation",
+            "real-time"
+          ],
+          "sources": [
+            {
+              "name": "Import AI",
+              "url": "https://importai.substack.com/p/import-ai-479-spacewar-low-latency"
+            }
+          ],
+          "published": "2026-11-02T14:30:54+00:00",
+          "score": 1.2014
+        },
+        {
+          "id": "094c331a98fa",
+          "tier": "skim",
+          "category": "headline",
+          "title": "Google DeepMind's PlanAssist Cuts UK Planning Officer Time by 58%, Expanding to 15 Councils",
+          "why_it_matters": "A concrete deployed Gemini application with measurable efficiency results is useful signal on where frontier model capabilities are actually landing in production public-sector workflows.",
+          "summary": "PlanAssist, built on Gemini by DeepMind with UK government and Google Cloud, automates document validation, policy checks, and draft report generation for routine householder planning applications. Pilots across Barnet, Camden, and Dorset cut officer assessment time by 58%; over 70% of AI-drafted reports required no edits. Expanding to 15 councils in a 12-month beta, targeting all English councils by 2027.",
+          "tags": [
+            "gemini",
+            "applied-ai",
+            "government",
+            "deployment"
+          ],
+          "sources": [
+            {
+              "name": "DeepMind",
+              "url": "https://deepmind.google/blog/speeding-up-planning-decisions-with-ai/"
+            }
+          ],
+          "published": "2026-10-30T14:18:30+00:00",
+          "score": 0.1469
+        }
+      ]
+    },
+    {
+      "key": "frontier",
+      "title": "Frontier & Papers",
+      "cards": [
+        {
+          "id": "7e74cfe7a10f",
+          "tier": "must_know",
+          "category": "frontier",
+          "title": "KAPPO: A Unified Framework Explaining and Controlling Sharpening in RL Post-Training via @k Objectives",
+          "why_it_matters": "This directly addresses a known failure mode in RLHF/RL post-training — sharpening reducing behavioral diversity — with a theoretically grounded, optimizer-agnostic solution relevant to anyone doing LLM post-training.",
+          "summary": "The authors derive closed-form optimal policies for KL-regularized pass@k and max@k objectives, showing they redistribute learning pressure toward harder prompts. Critically, standard @1 objectives achieve the same optima via prompt-adaptive regularization or reward transformation — providing an optimizer-independent explanation for @k's anti-sharpening effect. KAPPO implements this as a drop-in adapter for existing @1 RL methods, achieving @k performance with single-completion training, matching multi-completion baselines at lower cost.",
+          "tags": [
+            "rl-post-training",
+            "rlhf",
+            "llm-training",
+            "sharpening"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2611.03146v1"
+            }
+          ],
+          "published": "2026-11-02T13:54:45+00:00",
+          "score": 2.3828
+        },
+        {
+          "id": "96a99ddcc690",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "DepthGraft: Hierarchical Cross-Layer KV Sharing as Structural Regularizer Yields 7% MMLU-Pro Gain on 16B MoE",
+          "why_it_matters": "A concrete architectural intervention on depth-wise information dilution in Pre-LN transformers with strong empirical gains — directly relevant to anyone working on LLM pretraining or architecture design.",
+          "summary": "DepthGraft reconstructs deep-layer KV representations from stride-aligned shallow-to-middle source pairs, creating non-local gradient paths that sharpen key retrieval directions and enrich value subspaces. Analysis shows adjacent and global-anchor KV sharing designs underexploit this regularization effect. Tested on dense and MoE models from 0.5B to 16B: the 16B MoE gains 7.0% on MMLU-Pro, 6.6% on CMMLU, and 6.4% on C3, while reducing KV cache by roughly one third.",
+          "tags": [
+            "architecture",
+            "transformers",
+            "kv-cache",
+            "pretraining"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.CL",
+              "url": "https://arxiv.org/abs/2611.03142v1"
+            }
+          ],
+          "published": "2026-11-02T13:52:03+00:00",
+          "score": 1.1906
+        },
+        {
+          "id": "8bd6e430299e",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Survey: Where RL Can (and Cannot) Replace PID Controllers in Building HVAC Systems",
+          "why_it_matters": "For researchers interested in RL for real-world control, this review provides a principled taxonomy of RL integration points in industrial control stacks — a rare structured treatment of deployment constraints.",
+          "summary": "This review maps RL onto a layered HVAC control stack alongside PID and model-based controllers. It defines four integration modes — RL as gain tuner, direct regulatory replacement, MPC hybrid, and supervisory setpoint generator — and argues these are nested attachment points on one plant, not competing paradigms. Key finding: RL's admissible position must be argued case-by-case based on actuation authority, state access, and constraint handling requirements.",
+          "tags": [
+            "reinforcement-learning",
+            "control-systems",
+            "hvac",
+            "survey"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2611.03152v1"
+            }
+          ],
+          "published": "2026-11-02T13:59:15+00:00",
+          "score": 0.3975
+        },
+        {
+          "id": "c63c596f887b",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "FlowBatt: Flow Matching with Diffusion Transformer Achieves Sub-2.5% Error on Battery SOH Trajectory Prediction",
+          "why_it_matters": "Flow matching applied to a physically meaningful generative trajectory task — with interpretability-guided encoder design — is a technically transferable pattern for other degradation or time-series forecasting problems.",
+          "summary": "FlowBatt adapts flow matching with a diffusion transformer (DiT) backbone to predict full probabilistic state-of-health (SOH) trajectories for batteries conditioned on early-cycle capacity data. Explainable AI analysis guided encoder improvements. Evaluated on five benchmark datasets spanning diverse chemistries, FlowBatt achieves best trajectory-wise SOH prediction on all five with errors below 2.5%, and competitive remaining useful life prediction, while generating calibrated prediction intervals.",
+          "tags": [
+            "flow-matching",
+            "generative-models",
+            "time-series",
+            "applied-ml"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2611.03150v1"
+            }
+          ],
+          "published": "2026-11-02T13:58:18+00:00",
+          "score": 0.3975
+        }
+      ]
+    }
+  ]
+}
