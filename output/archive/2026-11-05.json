@@ -1,0 +1,222 @@
+{
+  "date": "2026-11-05",
+  "generated_at": "2026-11-05T06:27:54.618656+00:00",
+  "summary_line": "1 must-know · 3 worth knowing",
+  "counts": {
+    "total": 9,
+    "headlines": 2,
+    "frontier": 7
+  },
+  "sections": [
+    {
+      "key": "headlines",
+      "title": "Headlines",
+      "cards": [
+        {
+          "id": "c85e9d7dd64e",
+          "tier": "skim",
+          "category": "headline",
+          "title": "Open Model Inference Platforms Show Near-Exponential Token Growth, But Scale Vs. Closed APIs Remains Unclear",
+          "why_it_matters": "Gives you a rare quantitative anchor on the open model inference market — critical context for understanding where open-weight models sit relative to OpenAI/Anthropic in real deployment.",
+          "summary": "Using Baseten, Fireworks, Together AI, and OpenRouter as bellwethers, public disclosures show near-exponential token volume growth for open model inference. Fireworks alone reports serving 40T tokens/day on customized models, a vertical that grew 2x from summer — total likely well above 100T tokens. Google earnings data is used as a closed-model comparison baseline. Hyperscaler open-model share remains unmeasured.",
+          "tags": [
+            "open-source models",
+            "inference",
+            "market sizing",
+            "deployment"
+          ],
+          "sources": [
+            {
+              "name": "Interconnects",
+              "url": "https://www.interconnects.ai/p/how-well-can-we-measure-open-model"
+            }
+          ],
+          "published": "2026-11-04T16:35:44+00:00",
+          "score": 0.4124
+        },
+        {
+          "id": "fec0e46ceba4",
+          "tier": "skim",
+          "category": "headline",
+          "title": "Hugging Face Proposes 'Model Integration Contracts' to Catch Architecture-Level Regressions Before They Merge",
+          "why_it_matters": "Directly applicable if you contribute to or depend on Transformers — this is a concrete, replicable pattern for catching silent correctness bugs that pass forward-pass tests.",
+          "summary": "A SDPA bug introduced July 30, 2026 let UMT5's decoder attend to future tokens during training; it stayed in main for nearly two months undetected. The proposed fix is Model Integration Contracts (MICs): a shrunk fixture model (~66 MB vs 1,227 MB source), a runnable usage example, and recorded output baselines. PRs trigger fixture-based CPU tests for affected architectures. Replaying MICs over five months of commits flagged the regression on every affected commit.",
+          "tags": [
+            "mlops",
+            "transformers",
+            "testing",
+            "software engineering"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/transformers-mic"
+            }
+          ],
+          "published": "2026-11-03T00:00:00+00:00",
+          "score": 0.2347
+        }
+      ]
+    },
+    {
+      "key": "frontier",
+      "title": "Frontier & Papers",
+      "cards": [
+        {
+          "id": "090f638a40ae",
+          "tier": "must_know",
+          "category": "frontier",
+          "title": "FrontierPhysics Benchmark: Frontier AI Agents Complete Under 28% of End-to-End Physics Research Tasks",
+          "why_it_matters": "The first benchmark requiring agents to do full research cycles in physics — directly relevant to understanding real AI research autonomy limits, a key question for the field.",
+          "summary": "FrontierPhysics comprises 56 tasks created by 42 physicists from their own active research, spanning theoretical, computational, and experimental physics. Agents must review literature, plan, execute research, and produce manuscripts. Across 22 models in 26 configurations, no configuration passes more than 46 of 168 rollouts. Manual trajectory review identifies insufficient reasoning rigor and limited expert intuition — not knowledge gaps or execution errors — as the primary failure modes.",
+          "tags": [
+            "ai agents",
+            "scientific ai",
+            "benchmarks",
+            "reasoning"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2611.06910v1"
+            }
+          ],
+          "published": "2026-11-04T18:56:22+00:00",
+          "score": 2.5562
+        },
+        {
+          "id": "aabe7951cbd5",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Topology-Based Proof Confirms No Four Mutually Unbiased Bases Exist in Dimension Six, Closing 30-Year Open Problem",
+          "why_it_matters": "A landmark quantum information result — classifying all MUBs in the first non-prime-power dimension — with direct implications for quantum measurement theory and foundational quantum computing.",
+          "summary": "Using the topology of complex Hadamard matrices, researchers prove every mutually unbiased triple in dimension six belongs to a two-parameter family or is a single isolated triple from the Fourier matrix, and none extend to a fourth basis. The key new result is that all order-six complex Hadamard matrices except Tao's form a connected space; interval arithmetic certifies the classification. Dimension six is now the first non-prime-power dimension fully classified.",
+          "tags": [
+            "quantum information",
+            "quantum computing",
+            "foundations",
+            "mathematics"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2611.06917v1"
+            }
+          ],
+          "published": "2026-11-04T18:59:48+00:00",
+          "score": 1.2791
+        },
+        {
+          "id": "bcdac8b71f45",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Context Enrichment Reduces But Doesn't Eliminate LLM Agent Brittleness in Social Simulations",
+          "why_it_matters": "Directly relevant if you use LLMs as agents in simulations or evaluations — identifies which prompt enrichment strategies improve robustness and which don't.",
+          "summary": "The paper introduces 'selective robustness' — insensitivity to meaning-preserving prompt variation combined with directional response to decision-relevant changes — as a validation criterion for LLM social agents. Using a Prisoner's Dilemma-like game, four context enrichment types (neutral padding, generic social background, descriptive grounding, normative grounding) produce distinct behavioral patterns that vary between the two models tested. Richer context helps but results are model-dependent.",
+          "tags": [
+            "llm agents",
+            "robustness",
+            "social simulation",
+            "evaluation"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2611.06914v1"
+            }
+          ],
+          "published": "2026-11-04T18:58:23+00:00",
+          "score": 1.2787
+        },
+        {
+          "id": "2f288afcd4c5",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "BEAKER Benchmark Reveals MLLMs Can Follow Coarse Lab Procedures But Fail at Action-Grounded Perception for Autonomous Chemistry",
+          "why_it_matters": "Provides concrete evidence of where current frontier multimodal models fall short for embodied scientific agents — a key frontier for AI in real-world research automation.",
+          "summary": "BEAKER contains 1,000 expert-curated QA samples across 11 image/video task types covering affordance grounding, trajectory planning, equipment/state/safety recognition, and temporal procedure reasoning in self-driving chemical labs. 28 MLLMs were evaluated. Models handle coarse procedural understanding from video but consistently fail at grounding actions to operable regions, recognizing fine-grained apparatus states, and ordering mid-length procedure steps.",
+          "tags": [
+            "embodied ai",
+            "multimodal llms",
+            "scientific agents",
+            "benchmarks"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2611.06911v1"
+            }
+          ],
+          "published": "2026-11-04T18:57:17+00:00",
+          "score": 1.2784
+        },
+        {
+          "id": "3143154ad6fb",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "FlowReconBench: No Single Method Dominates Across Flow Reconstruction Regimes — Classical Methods Still Competitive",
+          "why_it_matters": "Useful calibration if you work on physics-informed ML or scientific ML — reveals where data-driven methods genuinely beat classical approaches and where they don't.",
+          "summary": "FlowReconBench evaluates 10 learned and 5 classical methods on laminar cylinder wake, 2D Kolmogorov turbulence, and 3D isotropic turbulence with shared splits and sensor draws. Classical methods (linear stochastic estimation, gappy POD, inverse-distance weighting) lead in low-order and dense-sensing regimes. Data-driven methods dominate at sparse sensors or poor observability. CRPS and error metrics yield different rankings for generative models; queryable methods scale better in 3D memory.",
+          "tags": [
+            "scientific ml",
+            "benchmarks",
+            "physics-informed ml",
+            "fluid dynamics"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2611.06912v1"
+            }
+          ],
+          "published": "2026-11-04T18:57:47+00:00",
+          "score": 0.4262
+        },
+        {
+          "id": "015c8ff67500",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Exact Resource Characterization for Single-Qubit Dyadic Quantum Programs: Gate Depth, Alphabet, and Program-State Layers Coincide",
+          "why_it_matters": "A foundational quantum compilation result — proving that three distinct resource measures collapse to the same minimum has direct implications for exact synthesis and resource-efficient quantum circuit compilation.",
+          "summary": "For single-qubit dyadic programs, the paper proves that arithmetic depth (Adepth), Fourier depth (Fdepth), and resource depth (Rdepth) are equal: the smallest real cyclotomic field containing a channel's Bloch matrix, the shallowest dyadic gate alphabet realizing it, and the shallowest program-state layer for stabilizer-assisted implementation all coincide. The proof combines a relative intersection law for the Clifford-cyclotomic tower with an arithmetic-closure invariant. A certificate-producing compiler is outlined.",
+          "tags": [
+            "quantum computing",
+            "quantum compilation",
+            "resource theory",
+            "circuit synthesis"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2611.06909v1"
+            }
+          ],
+          "published": "2026-11-04T18:56:04+00:00",
+          "score": 0.426
+        },
+        {
+          "id": "5afc49da7bd4",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Hugging Face Releases 2B-Parameter Document Field Extractor That Beats Frontier LLMs on Structured Extraction",
+          "why_it_matters": "A concrete example of a small specialist model outperforming frontier APIs on a well-defined task at lower cost — relevant for understanding where task-specific fine-tuning beats general-purpose LLMs.",
+          "summary": "The Dharma Field Extractor is a 2B-parameter model taking document images and returning structured JSON via open or schema-directed extraction. It handles invoices, IDs, medical forms, and contracts without per-type fine-tuning, returning null for absent fields rather than hallucinating. The team claims it outperforms every frontier LLM tested on this task at substantially lower cost, building on their earlier DharmaOCR-LITE work.",
+          "tags": [
+            "document ai",
+            "structured extraction",
+            "small models",
+            "fine-tuning"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/Dharma-AI/dharma-field-extractor"
+            }
+          ],
+          "published": "2026-11-04T17:50:10+00:00",
+          "score": 0.4196
+        }
+      ]
+    }
+  ]
+}
