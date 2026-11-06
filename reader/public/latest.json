@@ -1,11 +1,11 @@
 {
-  "date": "2026-11-05",
-  "generated_at": "2026-11-05T06:27:54.618656+00:00",
-  "summary_line": "1 must-know · 3 worth knowing",
+  "date": "2026-11-06",
+  "generated_at": "2026-11-06T06:23:00.149266+00:00",
+  "summary_line": "2 must-know · 4 worth knowing",
   "counts": {
     "total": 9,
-    "headlines": 2,
-    "frontier": 7
+    "headlines": 3,
+    "frontier": 6
   },
   "sections": [
     {
@@ -13,48 +13,70 @@
       "title": "Headlines",
       "cards": [
         {
-          "id": "c85e9d7dd64e",
-          "tier": "skim",
+          "id": "e8690f74b67f",
+          "tier": "must_know",
           "category": "headline",
-          "title": "Open Model Inference Platforms Show Near-Exponential Token Growth, But Scale Vs. Closed APIs Remains Unclear",
-          "why_it_matters": "Gives you a rare quantitative anchor on the open model inference market — critical context for understanding where open-weight models sit relative to OpenAI/Anthropic in real deployment.",
-          "summary": "Using Baseten, Fireworks, Together AI, and OpenRouter as bellwethers, public disclosures show near-exponential token volume growth for open model inference. Fireworks alone reports serving 40T tokens/day on customized models, a vertical that grew 2x from summer — total likely well above 100T tokens. Google earnings data is used as a closed-model comparison baseline. Hyperscaler open-model share remains unmeasured.",
+          "title": "NVIDIA Releases Four Open-Weight Cosmos 3 Nano World Models for Robotics and Autonomous Driving",
+          "why_it_matters": "World model simulation is a core research primitive for robotics and AV policy training — these open-weight, commercially licensed checkpoints give you ready-to-adapt foundations for multi-view, multi-sensor data generation.",
+          "summary": "NVIDIA adds four 16B-parameter post-trained Cosmos 3 Nano checkpoints under OpenMDW 1.1 (commercial use permitted): Transfer-Auto (offline multi-view RGB+LiDAR generation across up to 11 cameras), Sim-Auto (causally distilled streaming variant for fast interactive rollouts), Sim-Transfer (simulator controls + text prompt → photorealistic video), and Sim-Bimanual (action-conditioned video prediction for robot manipulation). Open weights and post-training recipes are released alongside a technical report.",
           "tags": [
-            "open-source models",
-            "inference",
-            "market sizing",
-            "deployment"
-          ],
-          "sources": [
-            {
-              "name": "Interconnects",
-              "url": "https://www.interconnects.ai/p/how-well-can-we-measure-open-model"
-            }
-          ],
-          "published": "2026-11-04T16:35:44+00:00",
-          "score": 0.4124
-        },
-        {
-          "id": "fec0e46ceba4",
-          "tier": "skim",
-          "category": "headline",
-          "title": "Hugging Face Proposes 'Model Integration Contracts' to Catch Architecture-Level Regressions Before They Merge",
-          "why_it_matters": "Directly applicable if you contribute to or depend on Transformers — this is a concrete, replicable pattern for catching silent correctness bugs that pass forward-pass tests.",
-          "summary": "A SDPA bug introduced July 30, 2026 let UMT5's decoder attend to future tokens during training; it stayed in main for nearly two months undetected. The proposed fix is Model Integration Contracts (MICs): a shrunk fixture model (~66 MB vs 1,227 MB source), a runnable usage example, and recorded output baselines. PRs trigger fixture-based CPU tests for affected architectures. Replaying MICs over five months of commits flagged the regression on every affected commit.",
-          "tags": [
-            "mlops",
-            "transformers",
-            "testing",
-            "software engineering"
+            "world models",
+            "robotics",
+            "autonomous driving",
+            "open weights"
           ],
           "sources": [
             {
               "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/transformers-mic"
+              "url": "https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation"
             }
           ],
-          "published": "2026-11-03T00:00:00+00:00",
-          "score": 0.2347
+          "published": "2026-11-05T19:35:16+00:00",
+          "score": 2.5823
+        },
+        {
+          "id": "825a50d1c0ad",
+          "tier": "must_know",
+          "category": "headline",
+          "title": "Google DeepMind Ships Gemini Omni 1.2 Flash: 15-Second Native Video, 30% Price Cut",
+          "why_it_matters": "Video generation infrastructure is evolving rapidly; understanding the current capability frontier — multi-turn editing, reference fidelity, lip-sync — matters for evaluating what generative video can and can't do in product and research pipelines.",
+          "summary": "Gemini Omni 1.2 Flash extends native video generation to 15 seconds (up from 10 in Omni 1.1), adds multi-turn conversational editing without full regeneration, improves reference image adherence for characters and products, and improves lip-sync with multi-speaker conditioning. Price drops 30% to $0.07/second at 720p; draft-at-360p then upscale-to-4K workflows reduce cost further. Generally available via Gemini API.",
+          "tags": [
+            "video generation",
+            "multimodal",
+            "google deepmind",
+            "product launch"
+          ],
+          "sources": [
+            {
+              "name": "DeepMind",
+              "url": "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips/"
+            }
+          ],
+          "published": "2026-11-05T17:05:16+00:00",
+          "score": 2.4942
+        },
+        {
+          "id": "89209ab642b1",
+          "tier": "worth_knowing",
+          "category": "headline",
+          "title": "Phonon TTS: Sub-100MB On-Device Speech Model Tops Open TTS Leaderboard Benchmarks",
+          "why_it_matters": "A flow-matching-based TTS model at 65–75 MB that runs in-browser and on embedded hardware, with Apache 2.0 weights for one variant, is a practical reference point for on-device inference and efficient generative audio research.",
+          "summary": "Phonon ships in two sizes (~65 MB and ~75 MB), covering English (Phonon 31m, Apache 2.0) and five languages including French, German, Spanish, Portuguese (Phonon 40m, CC BY-NC). It uses flow matching rather than autoregressive or diffusion approaches. Models run on phones, laptops, single-board computers, and in-browser. Over 100 built-in voices plus voice cloning. Phonon 31m was downloaded over 200,000 times in its first two weeks and ranks on Hugging Face's Open TTS Leaderboard across intelligibility, speed, and naturalness metrics.",
+          "tags": [
+            "tts",
+            "on-device inference",
+            "speech synthesis",
+            "open weights"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/phonon-tts"
+            }
+          ],
+          "published": "2026-11-05T00:00:00+00:00",
+          "score": 0.9836
         }
       ]
     },
@@ -63,158 +85,136 @@
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "090f638a40ae",
-          "tier": "must_know",
-          "category": "frontier",
-          "title": "FrontierPhysics Benchmark: Frontier AI Agents Complete Under 28% of End-to-End Physics Research Tasks",
-          "why_it_matters": "The first benchmark requiring agents to do full research cycles in physics — directly relevant to understanding real AI research autonomy limits, a key question for the field.",
-          "summary": "FrontierPhysics comprises 56 tasks created by 42 physicists from their own active research, spanning theoretical, computational, and experimental physics. Agents must review literature, plan, execute research, and produce manuscripts. Across 22 models in 26 configurations, no configuration passes more than 46 of 168 rollouts. Manual trajectory review identifies insufficient reasoning rigor and limited expert intuition — not knowledge gaps or execution errors — as the primary failure modes.",
-          "tags": [
-            "ai agents",
-            "scientific ai",
-            "benchmarks",
-            "reasoning"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2611.06910v1"
-            }
-          ],
-          "published": "2026-11-04T18:56:22+00:00",
-          "score": 2.5562
-        },
-        {
-          "id": "aabe7951cbd5",
+          "id": "8b4d884faceb",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Topology-Based Proof Confirms No Four Mutually Unbiased Bases Exist in Dimension Six, Closing 30-Year Open Problem",
-          "why_it_matters": "A landmark quantum information result — classifying all MUBs in the first non-prime-power dimension — with direct implications for quantum measurement theory and foundational quantum computing.",
-          "summary": "Using the topology of complex Hadamard matrices, researchers prove every mutually unbiased triple in dimension six belongs to a two-parameter family or is a single isolated triple from the Fourier matrix, and none extend to a fourth basis. The key new result is that all order-six complex Hadamard matrices except Tao's form a connected space; interval arithmetic certifies the classification. Dimension six is now the first non-prime-power dimension fully classified.",
+          "title": "Sparse Autoencoders Recover Interpretable Behavioral Modes from User Embeddings",
+          "why_it_matters": "The same superposition + SAE interpretability framework gaining traction in LLM internals now has a validated extension to recommendation/personalization embeddings, relevant if you work on representational analysis or behavioral modeling.",
+          "summary": "The authors argue user embeddings are sparse superpositions of interpretable behavioral modes, predicted by generative models for linear embeddings and extending approximately to deep representations via the superposition hypothesis. Sparse autoencoders recover these modes better than classical sparse baselines on synthetic data with known ground truth, including on transformer-encoded embeddings. Recovered modes are auto-named in natural language, enabling zero-shot audience retrieval without text supervision. The method is post-hoc and model-agnostic.",
           "tags": [
-            "quantum information",
-            "quantum computing",
-            "foundations",
-            "mathematics"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2611.06917v1"
-            }
-          ],
-          "published": "2026-11-04T18:59:48+00:00",
-          "score": 1.2791
-        },
-        {
-          "id": "bcdac8b71f45",
-          "tier": "worth_knowing",
-          "category": "frontier",
-          "title": "Context Enrichment Reduces But Doesn't Eliminate LLM Agent Brittleness in Social Simulations",
-          "why_it_matters": "Directly relevant if you use LLMs as agents in simulations or evaluations — identifies which prompt enrichment strategies improve robustness and which don't.",
-          "summary": "The paper introduces 'selective robustness' — insensitivity to meaning-preserving prompt variation combined with directional response to decision-relevant changes — as a validation criterion for LLM social agents. Using a Prisoner's Dilemma-like game, four context enrichment types (neutral padding, generic social background, descriptive grounding, normative grounding) produce distinct behavioral patterns that vary between the two models tested. Richer context helps but results are model-dependent.",
-          "tags": [
-            "llm agents",
-            "robustness",
-            "social simulation",
-            "evaluation"
+            "interpretability",
+            "recommendation systems",
+            "sparse autoencoders",
+            "user modeling"
           ],
           "sources": [
             {
               "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2611.06914v1"
+              "url": "https://arxiv.org/abs/2611.08487v1"
             }
           ],
-          "published": "2026-11-04T18:58:23+00:00",
-          "score": 1.2787
+          "published": "2026-11-05T18:59:42+00:00",
+          "score": 1.2806
         },
         {
-          "id": "2f288afcd4c5",
+          "id": "f8077b4ba812",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "BEAKER Benchmark Reveals MLLMs Can Follow Coarse Lab Procedures But Fail at Action-Grounded Perception for Autonomous Chemistry",
-          "why_it_matters": "Provides concrete evidence of where current frontier multimodal models fall short for embodied scientific agents — a key frontier for AI in real-world research automation.",
-          "summary": "BEAKER contains 1,000 expert-curated QA samples across 11 image/video task types covering affordance grounding, trajectory planning, equipment/state/safety recognition, and temporal procedure reasoning in self-driving chemical labs. 28 MLLMs were evaluated. Models handle coarse procedural understanding from video but consistently fail at grounding actions to operable regions, recognizing fine-grained apparatus states, and ordering mid-length procedure steps.",
+          "title": "SwarmEvolve: Latent-Space Agent Swarms Beat AlphaEvolve's Frontier-LLM Solutions Using Qwen3 8B",
+          "why_it_matters": "Latent-space multi-agent communication via shared KV caches is a novel coordination primitive for evolutionary program search — the efficiency and quality results relative to AlphaEvolve are a strong frontier signal for agents and optimization research.",
+          "summary": "SwarmEvolve runs hundreds of low-cost agents per round that reason in latent space without decoding to text, sharing information by passing KV caches. A novelty filter uses distances between hidden-state vectors; a summarizer agent performs crossover by receiving combined KV caches. On 21 mathematical discovery and scientific computing problems, SwarmEvolve achieves the highest average score and reaches best scores in a median of 3–8 minutes versus 60 minutes for competing frameworks. Qwen3 8B improves on AlphaEvolve solutions originally found with frontier LLMs on several problems.",
           "tags": [
-            "embodied ai",
-            "multimodal llms",
-            "scientific agents",
-            "benchmarks"
+            "agents",
+            "evolutionary optimization",
+            "latent space",
+            "program synthesis"
           ],
           "sources": [
             {
               "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2611.06911v1"
+              "url": "https://arxiv.org/abs/2611.08483v1"
             }
           ],
-          "published": "2026-11-04T18:57:17+00:00",
-          "score": 1.2784
+          "published": "2026-11-05T18:59:29+00:00",
+          "score": 1.2805
         },
         {
-          "id": "3143154ad6fb",
-          "tier": "skim",
+          "id": "731cb5af224f",
+          "tier": "worth_knowing",
           "category": "frontier",
-          "title": "FlowReconBench: No Single Method Dominates Across Flow Reconstruction Regimes — Classical Methods Still Competitive",
-          "why_it_matters": "Useful calibration if you work on physics-informed ML or scientific ML — reveals where data-driven methods genuinely beat classical approaches and where they don't.",
-          "summary": "FlowReconBench evaluates 10 learned and 5 classical methods on laminar cylinder wake, 2D Kolmogorov turbulence, and 3D isotropic turbulence with shared splits and sensor draws. Classical methods (linear stochastic estimation, gappy POD, inverse-distance weighting) lead in low-order and dense-sensing regimes. Data-driven methods dominate at sparse sensors or poor observability. CRPS and error metrics yield different rankings for generative models; queryable methods scale better in 3D memory.",
+          "title": "Scientist World: 1,000 Executable Research Environments Where Frontier AI Already Outperforms Human Authors 74% of the Time",
+          "why_it_matters": "A benchmark of reproducible paper environments for AI scientists is a direct infrastructure tool for evaluating and training research agents — the 74% surpass rate and +158% ideation improvement on a small model are concrete capability signals.",
+          "summary": "Scientist World converts research papers into executable environments: an automated pipeline extracts each paper's open-ended research question and reproduces the proposed method as the baseline, then evaluates an AI scientist against what the human authors achieved. The first 1,000 verified environments are released along with 6,400 hours of AI research traces. Frontier AI scientists already surpass human authors in 74% of environments. Fine-tuning a small model on this data raises research ideation performance by 158%, reaching frontier-model parity.",
           "tags": [
-            "scientific ml",
+            "ai scientists",
             "benchmarks",
-            "physics-informed ml",
-            "fluid dynamics"
+            "agents",
+            "research automation"
           ],
           "sources": [
             {
               "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2611.06912v1"
+              "url": "https://arxiv.org/abs/2611.08478v1"
             }
           ],
-          "published": "2026-11-04T18:57:47+00:00",
-          "score": 0.4262
+          "published": "2026-11-05T18:58:17+00:00",
+          "score": 1.2801
         },
         {
-          "id": "015c8ff67500",
+          "id": "5b1738b2d65a",
           "tier": "skim",
           "category": "frontier",
-          "title": "Exact Resource Characterization for Single-Qubit Dyadic Quantum Programs: Gate Depth, Alphabet, and Program-State Layers Coincide",
-          "why_it_matters": "A foundational quantum compilation result — proving that three distinct resource measures collapse to the same minimum has direct implications for exact synthesis and resource-efficient quantum circuit compilation.",
-          "summary": "For single-qubit dyadic programs, the paper proves that arithmetic depth (Adepth), Fourier depth (Fdepth), and resource depth (Rdepth) are equal: the smallest real cyclotomic field containing a channel's Bloch matrix, the shallowest dyadic gate alphabet realizing it, and the shallowest program-state layer for stabilizer-assisted implementation all coincide. The proof combines a relative intersection law for the Clifford-cyclotomic tower with an arithmetic-closure invariant. A certificate-producing compiler is outlined.",
+          "title": "XStack Benchmark: Claude Opus 5 Passes 75% of PyTorch-to-JAX Repository Migrations; All Other Agents Below 40%",
+          "why_it_matters": "Cross-framework ML code migration is a real infrastructure pain point; XStack quantifies how close current agents are to solving it and reveals a large gap between top models, relevant for anyone reasoning about agentic coding capabilities.",
+          "summary": "XStack evaluates agents on migrating full ML repositories from PyTorch on NVIDIA GPUs to JAX on TPUs. Each agent receives a PyTorch repo and a clean TPU machine and must deliver a passing JAX repo graded against published results. Claude Opus 5 passes 75% of migrations; GPT-5.6-sol passes 45%; all other evaluated agents pass at most 40%. The benchmark is released to track progress on reliable cross-ecosystem migration.",
           "tags": [
-            "quantum computing",
-            "quantum compilation",
-            "resource theory",
-            "circuit synthesis"
+            "benchmarks",
+            "coding agents",
+            "mlops",
+            "framework migration"
           ],
           "sources": [
             {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2611.06909v1"
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2611.08472v1"
             }
           ],
-          "published": "2026-11-04T18:56:04+00:00",
-          "score": 0.426
+          "published": "2026-11-05T18:55:54+00:00",
+          "score": 0.4265
         },
         {
-          "id": "5afc49da7bd4",
+          "id": "793919328434",
           "tier": "skim",
           "category": "frontier",
-          "title": "Hugging Face Releases 2B-Parameter Document Field Extractor That Beats Frontier LLMs on Structured Extraction",
-          "why_it_matters": "A concrete example of a small specialist model outperforming frontier APIs on a well-defined task at lower cost — relevant for understanding where task-specific fine-tuning beats general-purpose LLMs.",
-          "summary": "The Dharma Field Extractor is a 2B-parameter model taking document images and returning structured JSON via open or schema-directed extraction. It handles invoices, IDs, medical forms, and contracts without per-type fine-tuning, returning null for absent fields rather than hallucinating. The team claims it outperforms every frontier LLM tested on this task at substantially lower cost, building on their earlier DharmaOCR-LITE work.",
+          "title": "Finite Experiments Can Certify Lower Bounds on Integrated Information φ, But Face Hard Identifiability Limits",
+          "why_it_matters": "Mechanism-level quantities like φ are increasingly invoked in interpretability and AI consciousness discourse — this rigorous analysis of what finite interventional data can and cannot certify is essential grounding for any serious engagement with those claims.",
+          "summary": "The authors analyze identifiability and certifiability of integrated information φ from finite, partial, noisy interventions in stochastic networks of four and five units with known ground truth. Key findings: networks with identical input-output behavior can differ in φ by 0.28 bits, separable within 4–53 trials via internal recordings; partial access imposes precision floors of 0.30–1.02 bits that no sample size lowers; φ has discontinuous edges where infinitesimal mechanism changes shift it by 25–100%; one-sided lower bounds are certifiable, with φ > 1.004 bits certified across a 64-dimensional mechanism region using ~10^7 controlled transitions.",
           "tags": [
-            "document ai",
-            "structured extraction",
-            "small models",
-            "fine-tuning"
+            "interpretability",
+            "integrated information theory",
+            "causal inference",
+            "ai auditing"
           ],
           "sources": [
             {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/Dharma-AI/dharma-field-extractor"
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2611.08469v1"
             }
           ],
-          "published": "2026-11-04T17:50:10+00:00",
-          "score": 0.4196
+          "published": "2026-11-05T18:55:31+00:00",
+          "score": 0.4264
+        },
+        {
+          "id": "a22807cb7aed",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "MAEMs: RL-Trained Metamodels Invert Residual Stream Directions into Verifiable Text Exemplars",
+          "why_it_matters": "Scaling interpretability tools to arbitrary residual stream directions without labeled data is a core open problem — MAEMs offer a grounded, verifiable alternative to natural-language autoencoders with demonstrated gains across languages, SAE features, and steering vectors.",
+          "summary": "Maximally-Activating Example Metamodels (MAEMs) are language models trained via label-free RL to generate text that maximizes cosine similarity with a supplied residual stream direction. A Qwen3.6-27B MAEM outperforms corpus search (at 10M tokens) on a majority of held-out languages and domains, activates 89% of held-out SAE features, identifies steering vector concepts comparably to natural-language autoencoders (NLAs), and recovers LoRA backdoor payloads more often than corpus search. Unlike NLA explanations, MAEM exemplars are verifiable with a forward pass on the subject model.",
+          "tags": [
+            "interpretability",
+            "mechanistic interpretability",
+            "residual stream",
+            "rl"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2611.08465v1"
+            }
+          ],
+          "published": "2026-11-05T18:54:40+00:00",
+          "score": 0.4264
         }
       ]
     }

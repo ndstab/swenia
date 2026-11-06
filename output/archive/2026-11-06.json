@@ -1,0 +1,222 @@
+{
+  "date": "2026-11-06",
+  "generated_at": "2026-11-06T06:23:00.149266+00:00",
+  "summary_line": "2 must-know · 4 worth knowing",
+  "counts": {
+    "total": 9,
+    "headlines": 3,
+    "frontier": 6
+  },
+  "sections": [
+    {
+      "key": "headlines",
+      "title": "Headlines",
+      "cards": [
+        {
+          "id": "e8690f74b67f",
+          "tier": "must_know",
+          "category": "headline",
+          "title": "NVIDIA Releases Four Open-Weight Cosmos 3 Nano World Models for Robotics and Autonomous Driving",
+          "why_it_matters": "World model simulation is a core research primitive for robotics and AV policy training — these open-weight, commercially licensed checkpoints give you ready-to-adapt foundations for multi-view, multi-sensor data generation.",
+          "summary": "NVIDIA adds four 16B-parameter post-trained Cosmos 3 Nano checkpoints under OpenMDW 1.1 (commercial use permitted): Transfer-Auto (offline multi-view RGB+LiDAR generation across up to 11 cameras), Sim-Auto (causally distilled streaming variant for fast interactive rollouts), Sim-Transfer (simulator controls + text prompt → photorealistic video), and Sim-Bimanual (action-conditioned video prediction for robot manipulation). Open weights and post-training recipes are released alongside a technical report.",
+          "tags": [
+            "world models",
+            "robotics",
+            "autonomous driving",
+            "open weights"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation"
+            }
+          ],
+          "published": "2026-11-05T19:35:16+00:00",
+          "score": 2.5823
+        },
+        {
+          "id": "825a50d1c0ad",
+          "tier": "must_know",
+          "category": "headline",
+          "title": "Google DeepMind Ships Gemini Omni 1.2 Flash: 15-Second Native Video, 30% Price Cut",
+          "why_it_matters": "Video generation infrastructure is evolving rapidly; understanding the current capability frontier — multi-turn editing, reference fidelity, lip-sync — matters for evaluating what generative video can and can't do in product and research pipelines.",
+          "summary": "Gemini Omni 1.2 Flash extends native video generation to 15 seconds (up from 10 in Omni 1.1), adds multi-turn conversational editing without full regeneration, improves reference image adherence for characters and products, and improves lip-sync with multi-speaker conditioning. Price drops 30% to $0.07/second at 720p; draft-at-360p then upscale-to-4K workflows reduce cost further. Generally available via Gemini API.",
+          "tags": [
+            "video generation",
+            "multimodal",
+            "google deepmind",
+            "product launch"
+          ],
+          "sources": [
+            {
+              "name": "DeepMind",
+              "url": "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips/"
+            }
+          ],
+          "published": "2026-11-05T17:05:16+00:00",
+          "score": 2.4942
+        },
+        {
+          "id": "89209ab642b1",
+          "tier": "worth_knowing",
+          "category": "headline",
+          "title": "Phonon TTS: Sub-100MB On-Device Speech Model Tops Open TTS Leaderboard Benchmarks",
+          "why_it_matters": "A flow-matching-based TTS model at 65–75 MB that runs in-browser and on embedded hardware, with Apache 2.0 weights for one variant, is a practical reference point for on-device inference and efficient generative audio research.",
+          "summary": "Phonon ships in two sizes (~65 MB and ~75 MB), covering English (Phonon 31m, Apache 2.0) and five languages including French, German, Spanish, Portuguese (Phonon 40m, CC BY-NC). It uses flow matching rather than autoregressive or diffusion approaches. Models run on phones, laptops, single-board computers, and in-browser. Over 100 built-in voices plus voice cloning. Phonon 31m was downloaded over 200,000 times in its first two weeks and ranks on Hugging Face's Open TTS Leaderboard across intelligibility, speed, and naturalness metrics.",
+          "tags": [
+            "tts",
+            "on-device inference",
+            "speech synthesis",
+            "open weights"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/phonon-tts"
+            }
+          ],
+          "published": "2026-11-05T00:00:00+00:00",
+          "score": 0.9836
+        }
+      ]
+    },
+    {
+      "key": "frontier",
+      "title": "Frontier & Papers",
+      "cards": [
+        {
+          "id": "8b4d884faceb",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Sparse Autoencoders Recover Interpretable Behavioral Modes from User Embeddings",
+          "why_it_matters": "The same superposition + SAE interpretability framework gaining traction in LLM internals now has a validated extension to recommendation/personalization embeddings, relevant if you work on representational analysis or behavioral modeling.",
+          "summary": "The authors argue user embeddings are sparse superpositions of interpretable behavioral modes, predicted by generative models for linear embeddings and extending approximately to deep representations via the superposition hypothesis. Sparse autoencoders recover these modes better than classical sparse baselines on synthetic data with known ground truth, including on transformer-encoded embeddings. Recovered modes are auto-named in natural language, enabling zero-shot audience retrieval without text supervision. The method is post-hoc and model-agnostic.",
+          "tags": [
+            "interpretability",
+            "recommendation systems",
+            "sparse autoencoders",
+            "user modeling"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2611.08487v1"
+            }
+          ],
+          "published": "2026-11-05T18:59:42+00:00",
+          "score": 1.2806
+        },
+        {
+          "id": "f8077b4ba812",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "SwarmEvolve: Latent-Space Agent Swarms Beat AlphaEvolve's Frontier-LLM Solutions Using Qwen3 8B",
+          "why_it_matters": "Latent-space multi-agent communication via shared KV caches is a novel coordination primitive for evolutionary program search — the efficiency and quality results relative to AlphaEvolve are a strong frontier signal for agents and optimization research.",
+          "summary": "SwarmEvolve runs hundreds of low-cost agents per round that reason in latent space without decoding to text, sharing information by passing KV caches. A novelty filter uses distances between hidden-state vectors; a summarizer agent performs crossover by receiving combined KV caches. On 21 mathematical discovery and scientific computing problems, SwarmEvolve achieves the highest average score and reaches best scores in a median of 3–8 minutes versus 60 minutes for competing frameworks. Qwen3 8B improves on AlphaEvolve solutions originally found with frontier LLMs on several problems.",
+          "tags": [
+            "agents",
+            "evolutionary optimization",
+            "latent space",
+            "program synthesis"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2611.08483v1"
+            }
+          ],
+          "published": "2026-11-05T18:59:29+00:00",
+          "score": 1.2805
+        },
+        {
+          "id": "731cb5af224f",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Scientist World: 1,000 Executable Research Environments Where Frontier AI Already Outperforms Human Authors 74% of the Time",
+          "why_it_matters": "A benchmark of reproducible paper environments for AI scientists is a direct infrastructure tool for evaluating and training research agents — the 74% surpass rate and +158% ideation improvement on a small model are concrete capability signals.",
+          "summary": "Scientist World converts research papers into executable environments: an automated pipeline extracts each paper's open-ended research question and reproduces the proposed method as the baseline, then evaluates an AI scientist against what the human authors achieved. The first 1,000 verified environments are released along with 6,400 hours of AI research traces. Frontier AI scientists already surpass human authors in 74% of environments. Fine-tuning a small model on this data raises research ideation performance by 158%, reaching frontier-model parity.",
+          "tags": [
+            "ai scientists",
+            "benchmarks",
+            "agents",
+            "research automation"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2611.08478v1"
+            }
+          ],
+          "published": "2026-11-05T18:58:17+00:00",
+          "score": 1.2801
+        },
+        {
+          "id": "5b1738b2d65a",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "XStack Benchmark: Claude Opus 5 Passes 75% of PyTorch-to-JAX Repository Migrations; All Other Agents Below 40%",
+          "why_it_matters": "Cross-framework ML code migration is a real infrastructure pain point; XStack quantifies how close current agents are to solving it and reveals a large gap between top models, relevant for anyone reasoning about agentic coding capabilities.",
+          "summary": "XStack evaluates agents on migrating full ML repositories from PyTorch on NVIDIA GPUs to JAX on TPUs. Each agent receives a PyTorch repo and a clean TPU machine and must deliver a passing JAX repo graded against published results. Claude Opus 5 passes 75% of migrations; GPT-5.6-sol passes 45%; all other evaluated agents pass at most 40%. The benchmark is released to track progress on reliable cross-ecosystem migration.",
+          "tags": [
+            "benchmarks",
+            "coding agents",
+            "mlops",
+            "framework migration"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2611.08472v1"
+            }
+          ],
+          "published": "2026-11-05T18:55:54+00:00",
+          "score": 0.4265
+        },
+        {
+          "id": "793919328434",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Finite Experiments Can Certify Lower Bounds on Integrated Information φ, But Face Hard Identifiability Limits",
+          "why_it_matters": "Mechanism-level quantities like φ are increasingly invoked in interpretability and AI consciousness discourse — this rigorous analysis of what finite interventional data can and cannot certify is essential grounding for any serious engagement with those claims.",
+          "summary": "The authors analyze identifiability and certifiability of integrated information φ from finite, partial, noisy interventions in stochastic networks of four and five units with known ground truth. Key findings: networks with identical input-output behavior can differ in φ by 0.28 bits, separable within 4–53 trials via internal recordings; partial access imposes precision floors of 0.30–1.02 bits that no sample size lowers; φ has discontinuous edges where infinitesimal mechanism changes shift it by 25–100%; one-sided lower bounds are certifiable, with φ > 1.004 bits certified across a 64-dimensional mechanism region using ~10^7 controlled transitions.",
+          "tags": [
+            "interpretability",
+            "integrated information theory",
+            "causal inference",
+            "ai auditing"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2611.08469v1"
+            }
+          ],
+          "published": "2026-11-05T18:55:31+00:00",
+          "score": 0.4264
+        },
+        {
+          "id": "a22807cb7aed",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "MAEMs: RL-Trained Metamodels Invert Residual Stream Directions into Verifiable Text Exemplars",
+          "why_it_matters": "Scaling interpretability tools to arbitrary residual stream directions without labeled data is a core open problem — MAEMs offer a grounded, verifiable alternative to natural-language autoencoders with demonstrated gains across languages, SAE features, and steering vectors.",
+          "summary": "Maximally-Activating Example Metamodels (MAEMs) are language models trained via label-free RL to generate text that maximizes cosine similarity with a supplied residual stream direction. A Qwen3.6-27B MAEM outperforms corpus search (at 10M tokens) on a majority of held-out languages and domains, activates 89% of held-out SAE features, identifies steering vector concepts comparably to natural-language autoencoders (NLAs), and recovers LoRA backdoor payloads more often than corpus search. Unlike NLA explanations, MAEM exemplars are verifiable with a forward pass on the subject model.",
+          "tags": [
+            "interpretability",
+            "mechanistic interpretability",
+            "residual stream",
+            "rl"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2611.08465v1"
+            }
+          ],
+          "published": "2026-11-05T18:54:40+00:00",
+          "score": 0.4264
+        }
+      ]
+    }
+  ]
+}
