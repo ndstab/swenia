@@ -1,0 +1,89 @@
+{
+  "date": "2026-11-07",
+  "generated_at": "2026-11-07T05:46:33.471587+00:00",
+  "summary_line": "2 worth knowing",
+  "counts": {
+    "total": 3,
+    "headlines": 1,
+    "frontier": 2
+  },
+  "sections": [
+    {
+      "key": "headlines",
+      "title": "Headlines",
+      "cards": [
+        {
+          "id": "82196d4ece0a",
+          "tier": "skim",
+          "category": "headline",
+          "title": "Open ASR Leaderboard Adds Egyptian and Nigerian English Accent Benchmarks via Liva AI",
+          "why_it_matters": "For engineers building or evaluating speech recognition systems, more private held-out accent splits reduce benchmark overfitting and expose real performance gaps across underrepresented English varieties.",
+          "summary": "Hugging Face's Open ASR Leaderboard gains two new private evaluation splits — Egyptian and Nigerian English — contributed by Liva AI, which collects naturalistic multimodal data through consumer products. The leaderboard now structures accent coverage using Kachru's Three Circles framework, reporting US vs. non-US and Inner Circle vs. Outer/Expanding Circle breakdowns. Private data minimizes benchmarking-to-leaderboard gaming.",
+          "tags": [
+            "asr",
+            "speech recognition",
+            "benchmarks",
+            "accents"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/open-asr-leaderboard-liva"
+            }
+          ],
+          "published": "2026-11-06T00:00:00+00:00",
+          "score": 0.3306
+        }
+      ]
+    },
+    {
+      "key": "frontier",
+      "title": "Frontier & Papers",
+      "cards": [
+        {
+          "id": "be1ba71e55b7",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Hugging Face Launches ToyBlocks: A Controlled Simulation Framework for Studying Robot Learning",
+          "why_it_matters": "If you work on robot learning, world models, or sim-to-real transfer, ToyBlocks provides a reproducible, automatically-annotated benchmark environment designed specifically for isolating and diagnosing model behavior — exactly the kind of controlled testbed the field has lacked.",
+          "summary": "ToyBlocks is Hugging Face's first 'FoundationWorld': a tabletop block-manipulation simulator with realistic physics, automatic demonstration generation via RL and motion planning, and domain randomization. It separates high-level reasoning from low-level motor control, enables controlled data-ablation experiments, and targets sim-to-real fidelity without human teleoperation. Part of a broader FoundationWorlds framework built atop MolmoAct 2, MolmoBot, and MolmoSpaces.",
+          "tags": [
+            "robotics",
+            "simulation",
+            "robot learning",
+            "benchmarks"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/allenai/toyblocks"
+            }
+          ],
+          "published": "2026-11-06T14:00:48+00:00",
+          "score": 1.2051
+        },
+        {
+          "id": "a0e76a06d8c6",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Provably Threshold-Error-Correcting Circuits for Non-Abelian Topological Quantum Memory",
+          "why_it_matters": "For researchers tracking quantum error correction, this is a significant theoretical result: a proven circuit-level noise threshold for non-abelian topological phases, a class previously lacking such rigorous guarantees.",
+          "summary": "The paper presents an explicit scheme for quantum memory in any 2D non-chiral topological order. It constructs syndrome extraction circuits from the Turaev-Viro path integral, pairs them with an on-the-fly classical decoder, and proves the existence of a threshold under local stochastic circuit-level noise. The scheme is also designed to generalize to topological logical gate implementation.",
+          "tags": [
+            "quantum error correction",
+            "topological quantum computing",
+            "quantum memory"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2611.08488v1"
+            }
+          ],
+          "published": "2026-11-05T18:59:44+00:00",
+          "score": 0.9253
+        }
+      ]
+    }
+  ]
+}
