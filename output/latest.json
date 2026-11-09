@@ -1,87 +1,131 @@
 {
-  "date": "2026-11-07",
-  "generated_at": "2026-11-07T05:46:33.471587+00:00",
-  "summary_line": "2 worth knowing",
+  "date": "2026-11-09",
+  "generated_at": "2026-11-09T06:00:18.176228+00:00",
+  "summary_line": "3 worth knowing",
   "counts": {
-    "total": 3,
-    "headlines": 1,
-    "frontier": 2
+    "total": 5,
+    "headlines": 0,
+    "frontier": 5
   },
   "sections": [
     {
       "key": "headlines",
       "title": "Headlines",
-      "cards": [
-        {
-          "id": "82196d4ece0a",
-          "tier": "skim",
-          "category": "headline",
-          "title": "Open ASR Leaderboard Adds Egyptian and Nigerian English Accent Benchmarks via Liva AI",
-          "why_it_matters": "For engineers building or evaluating speech recognition systems, more private held-out accent splits reduce benchmark overfitting and expose real performance gaps across underrepresented English varieties.",
-          "summary": "Hugging Face's Open ASR Leaderboard gains two new private evaluation splits — Egyptian and Nigerian English — contributed by Liva AI, which collects naturalistic multimodal data through consumer products. The leaderboard now structures accent coverage using Kachru's Three Circles framework, reporting US vs. non-US and Inner Circle vs. Outer/Expanding Circle breakdowns. Private data minimizes benchmarking-to-leaderboard gaming.",
-          "tags": [
-            "asr",
-            "speech recognition",
-            "benchmarks",
-            "accents"
-          ],
-          "sources": [
-            {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/open-asr-leaderboard-liva"
-            }
-          ],
-          "published": "2026-11-06T00:00:00+00:00",
-          "score": 0.3306
-        }
-      ]
+      "cards": []
     },
     {
       "key": "frontier",
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "be1ba71e55b7",
+          "id": "c16f1fc2a5e4",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Hugging Face Launches ToyBlocks: A Controlled Simulation Framework for Studying Robot Learning",
-          "why_it_matters": "If you work on robot learning, world models, or sim-to-real transfer, ToyBlocks provides a reproducible, automatically-annotated benchmark environment designed specifically for isolating and diagnosing model behavior — exactly the kind of controlled testbed the field has lacked.",
-          "summary": "ToyBlocks is Hugging Face's first 'FoundationWorld': a tabletop block-manipulation simulator with realistic physics, automatic demonstration generation via RL and motion planning, and domain randomization. It separates high-level reasoning from low-level motor control, enables controlled data-ablation experiments, and targets sim-to-real fidelity without human teleoperation. Part of a broader FoundationWorlds framework built atop MolmoAct 2, MolmoBot, and MolmoSpaces.",
+          "title": "AMP1: Generalist AI Agent Beats Specialist VLA/WAM Policies on Robot Manipulation Benchmarks",
+          "why_it_matters": "This directly challenges the dominant VLA/world-model paradigm in robot manipulation — a result every robotics and embodied-AI researcher needs to know.",
+          "summary": "AMP1, a generalist-AI-based agentic manipulation policy, achieves 85.6% zero-shot success on RoboLab-120 vs. 49.2% for the leading VLA and 42.9% for the leading WAM. In 108 real-world trials it cuts failure rates 20x and 15x vs. those baselines. Adding a persistent memory store reduces failure on RoboDojo bimanual tasks by 4.6x over zero-shot.",
           "tags": [
             "robotics",
-            "simulation",
-            "robot learning",
-            "benchmarks"
+            "agents",
+            "embodied-ai",
+            "vlm"
           ],
           "sources": [
             {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/allenai/toyblocks"
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2611.09892v1"
             }
           ],
-          "published": "2026-11-06T14:00:48+00:00",
-          "score": 1.2051
+          "published": "2026-11-06T18:59:34+00:00",
+          "score": 0.6609
         },
         {
-          "id": "a0e76a06d8c6",
+          "id": "13c0dab5dca8",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Provably Threshold-Error-Correcting Circuits for Non-Abelian Topological Quantum Memory",
-          "why_it_matters": "For researchers tracking quantum error correction, this is a significant theoretical result: a proven circuit-level noise threshold for non-abelian topological phases, a class previously lacking such rigorous guarantees.",
-          "summary": "The paper presents an explicit scheme for quantum memory in any 2D non-chiral topological order. It constructs syndrome extraction circuits from the Turaev-Viro path integral, pairs them with an on-the-fly classical decoder, and proves the existence of a threshold under local stochastic circuit-level noise. The scheme is also designed to generalize to topological logical gate implementation.",
+          "title": "CPU-ARC: Cache LLM Reasoning Traces as CPU-Executable Programs for 16–291x Cost Reduction",
+          "why_it_matters": "Separating reasoning from execution is a compelling systems insight with direct implications for inference cost and continual learning in deployed AI agents.",
+          "summary": "CPU-ARC extracts agentic reasoning caches (ARCs) from LLM reasoning traces, compiling them into CPU-executable programs that can be reused across problem instances without re-invoking the source model. ARCs match frontier LLM performance on hard math and science tasks while being 16–291x cheaper to invoke, and are fully explainable, robust to input perturbations, and continually trainable.",
           "tags": [
-            "quantum error correction",
-            "topological quantum computing",
-            "quantum memory"
+            "inference",
+            "agents",
+            "reasoning",
+            "efficiency"
           ],
           "sources": [
             {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2611.08488v1"
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2611.09891v1"
             }
           ],
-          "published": "2026-11-05T18:59:44+00:00",
-          "score": 0.9253
+          "published": "2026-11-06T18:58:50+00:00",
+          "score": 0.6608
+        },
+        {
+          "id": "2d56eca66238",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "FlowMoP: Conditional Flow Matching for Stochastic Multi-Person 3D Motion Prediction",
+          "why_it_matters": "Replacing deterministic multi-agent motion prediction with a principled generative framework is relevant to anyone working on world models, simulation, or social robotics.",
+          "summary": "FlowMoP uses conditional flow matching to jointly generate diverse future motions for multiple agents, combining global trajectory and root-relative pose modeling. A B-spline reparameterization enforces temporal smoothness and compresses the state space; a dual-stream transformer provides interaction-aware conditioning. The method achieves state-of-the-art on CMU-Mocap (UMPM) and 3DPW on joint position, pose, and final displacement error, and establishes the first motion-prediction baseline on the WorldPose soccer dataset.",
+          "tags": [
+            "motion-prediction",
+            "generative-models",
+            "multi-agent",
+            "flow-matching"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2611.09882v1"
+            }
+          ],
+          "published": "2026-11-06T18:56:41+00:00",
+          "score": 0.6605
+        },
+        {
+          "id": "aeb1fe382715",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "ReLU Networks with One Hidden Layer Are Weakly Closed; Two Hidden Layers Are Not",
+          "why_it_matters": "Settling the topological structure of ReLU function spaces has direct consequences for the theoretical guarantees of training methods like Deep Ritz, Sobolev training, and Lipschitz learning.",
+          "summary": "The paper proves that the set of one-hidden-layer ReLU networks with at most N neurons is weakly closed in W^{1,p}, guaranteeing that coercive weakly lower-semicontinuous energies attain minima there, and that regularized minimizers converge to minimal-norm solutions as weight decay vanishes. It also disproves a conjecture by Petersen, Raslan, and Voigtlaender by showing two-hidden-layer networks of bounded width are not closed in W^{1,p} or C.",
+          "tags": [
+            "theory",
+            "neural-networks",
+            "optimization",
+            "approximation-theory"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2611.09887v1"
+            }
+          ],
+          "published": "2026-11-06T18:58:06+00:00",
+          "score": 0.2202
+        },
+        {
+          "id": "796339e1f826",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Graded Convolutional Networks: Scale-Invariant, Blur-Robust Vision Without Knowing the Scale",
+          "why_it_matters": "A principled geometric solution to blur and scale invariance — grounded in differential geometry — offers a theoretically clean alternative to ad-hoc data augmentation for robust vision models.",
+          "summary": "The paper formalizes dilation invariance via retraction onto the weighted sphere of the Gaussian jet's graded structure, showing this retraction changes only by a scale factor under unknown Gaussian blur — unlike scale-normalized jets which acquire an irremovable grading factor. On MNIST under two-pixel blur, a network using the retraction achieves 88.4% accuracy vs. 66.2% for scale-normalized derivatives; applied to Lindeberg's Gaussian derivative network, the retraction raises accuracy from 91.5% to 95.1%.",
+          "tags": [
+            "computer-vision",
+            "invariance",
+            "theory",
+            "convolutional-networks"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2611.09878v1"
+            }
+          ],
+          "published": "2026-11-06T18:54:03+00:00",
+          "score": 0.22
         }
       ]
     }
