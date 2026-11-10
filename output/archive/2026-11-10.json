@@ -1,0 +1,204 @@
+{
+  "date": "2026-11-10",
+  "generated_at": "2026-11-10T07:04:02.629261+00:00",
+  "summary_line": "3 worth knowing",
+  "counts": {
+    "total": 8,
+    "headlines": 1,
+    "frontier": 7
+  },
+  "sections": [
+    {
+      "key": "headlines",
+      "title": "Headlines",
+      "cards": [
+        {
+          "id": "5d9edf20f631",
+          "tier": "skim",
+          "category": "headline",
+          "title": "BAIR Papers at CoRL 2026: Humanoid Control, Dexterous Manipulation, and Agentic Robotics",
+          "why_it_matters": "CoRL is a top robotics-learning venue and this overview flags which BAIR papers on VLA models, RL-for-robots, and humanoid control are worth reading in the coming weeks.",
+          "summary": "Berkeley AI Research presents 20+ papers at CoRL 2026 (Austin, Nov 9–12) spanning generalist robot policies, multi-scale embodied memory for VLA models, dexterous manipulation with egocentric data (EgoScale), humanoid whole-body control via a differentiable world model (SuperMimic), flow-based policy gradients, and agentic self-improvement. An Early Career Keynote is delivered by Prof. Negar Mehr.",
+          "tags": [
+            "robotics",
+            "reinforcement learning",
+            "embodied ai",
+            "vla"
+          ],
+          "sources": [
+            {
+              "name": "BAIR (Berkeley)",
+              "url": "http://bair.berkeley.edu/blog/2026/11/09/bair-at-corl-2026/"
+            }
+          ],
+          "published": "2026-11-09T09:00:00+00:00",
+          "score": 0.368
+        }
+      ]
+    },
+    {
+      "key": "frontier",
+      "title": "Frontier & Papers",
+      "cards": [
+        {
+          "id": "b2e98a1b565c",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Chiral Waveguide Atom-Photon Scattering Linked to QEC Threshold and Algorithmic Design",
+          "why_it_matters": "Bridges microscopic photonic hardware models to quantum error correction thresholds, offering a path for co-designing photonic qubit systems with error-corrected algorithms.",
+          "summary": "A first-principles framework derives an effective polarization quantum channel for single photons scattering off two-level atoms in a chiral waveguide. Applied as the noise model for a rotated planar code, threshold behavior emerges as a function of atom number N, coupling Γ, and photon bandwidth σ, scaling as NΓ/σ. The resulting noise is strongly X-biased; a Hadamard-basis QPE implementation exploits this bias to improve algorithmic performance.",
+          "tags": [
+            "quantum error correction",
+            "photonic qubits",
+            "noise model",
+            "quantum computing"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2611.12882v1"
+            },
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2611.12876v1"
+            }
+          ],
+          "published": "2026-11-09T18:59:36+00:00",
+          "score": 1.2684
+        },
+        {
+          "id": "cd133605929a",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Patterned TiN Stressor Films Proposed to Deterministically Boost Valley Splitting in Si/SiGe Spin Qubits",
+          "why_it_matters": "Random valley splitting is a key scalability obstacle for silicon spin qubits; a fabrication-compatible deterministic solution is directly relevant to near-term quantum hardware scaling.",
+          "summary": "Compressively stressed TiN thin films patterned on Si/SiGe quantum dot devices are proposed to generate deterministic shear strain in the quantum well. Finite-element simulations show shear strains exceeding 0.1% at the well, sufficient for valley splittings of hundreds of μeV in strain-assisted Wiggle Wells. The strain extends across multiple dots and is maintained in realistic gate geometries, making it compatible with quantum dot arrays.",
+          "tags": [
+            "silicon qubits",
+            "valley splitting",
+            "quantum dots",
+            "hardware"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2611.12850v1"
+            }
+          ],
+          "published": "2026-11-09T18:42:28+00:00",
+          "score": 1.2634
+        },
+        {
+          "id": "d1e251d86cb5",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "GARI++: Two-Stage General-Purpose QEC Decoder Achieves Near-MWPM Accuracy with FPGA Latencies from 201 ns",
+          "why_it_matters": "Real-time decoding latency and cross-code generality are critical for practical QEC; GARI++'s FPGA-CPU hybrid pipeline with sub-microsecond first-stage latencies is a concrete engineering advance.",
+          "summary": "GARI++ pipelines a normalized min-sum first-stage decoder (GARI) with a configurable second-stage decoder for cases that don't converge. At physical error rate 0.001 under circuit-level depolarizing noise, the FPGA GARI stage achieves latencies of 201 ns to 11.8 μs for surface code distances 7–25. Residual decoding on a single Apple M2 core stays below one microsecond up to distance 51 using Union-Find, with accuracy on par with correlated MWPM.",
+          "tags": [
+            "quantum error correction",
+            "decoding",
+            "fpga",
+            "surface code"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2611.12833v1"
+            }
+          ],
+          "published": "2026-11-09T18:31:41+00:00",
+          "score": 1.2602
+        },
+        {
+          "id": "954b3c348e1e",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Dephasing Algebraically Suppresses Bragg Peaks in Spectral Form Factors of Open Quantum Systems",
+          "why_it_matters": "Establishes spectral form factors as a probe of spectral order in open systems, relevant for quantum error correction and quantum simulation where environmental dephasing is unavoidable.",
+          "summary": "This work analyzes how energy dephasing in open quantum systems erodes long-range spectral order visible as Bragg peaks in the spectral form factor. Peaks fade algebraically with revival order p and dephasing strength γ as K_Bragg(p) ∝ (γp)^{-1/2} within an intermediate regime, yet persist until nearest-neighbor coherences decay. Temporal correlations in spectral fluctuations are identified as a control handle.",
+          "tags": [
+            "quantum systems",
+            "spectral form factor",
+            "open quantum systems",
+            "decoherence"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2611.12888v1"
+            }
+          ],
+          "published": "2026-11-09T18:59:57+00:00",
+          "score": 0.4228
+        },
+        {
+          "id": "5aa0ab53bcf8",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Closed-Form Hidden Symmetry Operators Derived for Asymmetric Quantum Rabi Model and Variants",
+          "why_it_matters": "Provides exact analytic symmetry operators for a foundational light-matter coupling model used in superconducting and photonic qubit architectures, enabling cleaner theoretical analysis of level crossings.",
+          "summary": "The asymmetric quantum Rabi model exhibits level crossings at integer-multiple biases due to a hidden symmetry operator J, previously lacking a general formula. This work derives J in closed form for every integer bias N as the parity operator of the symmetric model times a continuant of N first-order operators. The same construction extends to asymmetric two-photon and two-mode variants via su(1,1) generators.",
+          "tags": [
+            "quantum optics",
+            "quantum rabi model",
+            "symmetry",
+            "analytical methods"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2611.12859v1"
+            }
+          ],
+          "published": "2026-11-09T18:47:24+00:00",
+          "score": 0.4216
+        },
+        {
+          "id": "057e22ab69c0",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "NVIDIA & Elith Release Nemotron-Personas-Finance-Japan: 9M Synthetic Japanese Financial Personas",
+          "why_it_matters": "Synthetic data generation pipelines using PGMs and LLMs for domain-specific finance are directly relevant to anyone building or evaluating financial AI agents without access to real customer data.",
+          "summary": "Elith and NVIDIA have released a 9M-persona (~1.5B token) synthetic dataset grounding Japan's official demographic and labor statistics with household finance and financial literacy data. Built via NeMo SDG-PGMs (probabilistic graphical models) and NeMo Data Designer using Gemma-4-31B-it for Japanese text generation, it covers 50 fields per record and 1600+ occupations. Licensed CC BY 4.0 for commercial use.",
+          "tags": [
+            "synthetic data",
+            "finance",
+            "japanese nlp",
+            "data generation"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/nvidia/nemotron-personas-finance-japan"
+            }
+          ],
+          "published": "2026-11-09T15:05:57+00:00",
+          "score": 0.4005
+        },
+        {
+          "id": "7b1451fc786c",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "HOPE: Second-Order MoE Expert Pruning Beats First-Order Methods by Up to +6.1% on Coding Tasks",
+          "why_it_matters": "MoE memory footprint is a major practical bottleneck, and HOPE's pairwise-interaction-aware pruning is a training-free, quantization-compatible technique directly applicable to models like Qwen or Mixtral.",
+          "summary": "HOPE (Higher-Order Pruning of Experts) replaces scalar per-expert importance scores with a second-order method that accounts for pairwise co-activation patterns among experts. At 50% pruning rate, HOPE achieves the best average rank across benchmarks and gains up to +6.1% over the next-best pruning method on agentic coding tasks. It requires no retraining and composes with quantization.",
+          "tags": [
+            "mixture-of-experts",
+            "model compression",
+            "pruning",
+            "llm efficiency"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/amazon/higher-order-pruning-experts"
+            }
+          ],
+          "published": "2026-11-09T12:34:29+00:00",
+          "score": 0.3867
+        }
+      ]
+    }
+  ]
+}

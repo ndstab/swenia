@@ -1,131 +1,202 @@
 {
-  "date": "2026-11-09",
-  "generated_at": "2026-11-09T06:00:18.176228+00:00",
+  "date": "2026-11-10",
+  "generated_at": "2026-11-10T07:04:02.629261+00:00",
   "summary_line": "3 worth knowing",
   "counts": {
-    "total": 5,
-    "headlines": 0,
-    "frontier": 5
+    "total": 8,
+    "headlines": 1,
+    "frontier": 7
   },
   "sections": [
     {
       "key": "headlines",
       "title": "Headlines",
-      "cards": []
+      "cards": [
+        {
+          "id": "5d9edf20f631",
+          "tier": "skim",
+          "category": "headline",
+          "title": "BAIR Papers at CoRL 2026: Humanoid Control, Dexterous Manipulation, and Agentic Robotics",
+          "why_it_matters": "CoRL is a top robotics-learning venue and this overview flags which BAIR papers on VLA models, RL-for-robots, and humanoid control are worth reading in the coming weeks.",
+          "summary": "Berkeley AI Research presents 20+ papers at CoRL 2026 (Austin, Nov 9–12) spanning generalist robot policies, multi-scale embodied memory for VLA models, dexterous manipulation with egocentric data (EgoScale), humanoid whole-body control via a differentiable world model (SuperMimic), flow-based policy gradients, and agentic self-improvement. An Early Career Keynote is delivered by Prof. Negar Mehr.",
+          "tags": [
+            "robotics",
+            "reinforcement learning",
+            "embodied ai",
+            "vla"
+          ],
+          "sources": [
+            {
+              "name": "BAIR (Berkeley)",
+              "url": "http://bair.berkeley.edu/blog/2026/11/09/bair-at-corl-2026/"
+            }
+          ],
+          "published": "2026-11-09T09:00:00+00:00",
+          "score": 0.368
+        }
+      ]
     },
     {
       "key": "frontier",
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "c16f1fc2a5e4",
+          "id": "b2e98a1b565c",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "AMP1: Generalist AI Agent Beats Specialist VLA/WAM Policies on Robot Manipulation Benchmarks",
-          "why_it_matters": "This directly challenges the dominant VLA/world-model paradigm in robot manipulation — a result every robotics and embodied-AI researcher needs to know.",
-          "summary": "AMP1, a generalist-AI-based agentic manipulation policy, achieves 85.6% zero-shot success on RoboLab-120 vs. 49.2% for the leading VLA and 42.9% for the leading WAM. In 108 real-world trials it cuts failure rates 20x and 15x vs. those baselines. Adding a persistent memory store reduces failure on RoboDojo bimanual tasks by 4.6x over zero-shot.",
+          "title": "Chiral Waveguide Atom-Photon Scattering Linked to QEC Threshold and Algorithmic Design",
+          "why_it_matters": "Bridges microscopic photonic hardware models to quantum error correction thresholds, offering a path for co-designing photonic qubit systems with error-corrected algorithms.",
+          "summary": "A first-principles framework derives an effective polarization quantum channel for single photons scattering off two-level atoms in a chiral waveguide. Applied as the noise model for a rotated planar code, threshold behavior emerges as a function of atom number N, coupling Γ, and photon bandwidth σ, scaling as NΓ/σ. The resulting noise is strongly X-biased; a Hadamard-basis QPE implementation exploits this bias to improve algorithmic performance.",
           "tags": [
-            "robotics",
-            "agents",
-            "embodied-ai",
-            "vlm"
+            "quantum error correction",
+            "photonic qubits",
+            "noise model",
+            "quantum computing"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2611.09892v1"
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2611.12882v1"
+            },
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2611.12876v1"
             }
           ],
-          "published": "2026-11-06T18:59:34+00:00",
-          "score": 0.6609
+          "published": "2026-11-09T18:59:36+00:00",
+          "score": 1.2684
         },
         {
-          "id": "13c0dab5dca8",
+          "id": "cd133605929a",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "CPU-ARC: Cache LLM Reasoning Traces as CPU-Executable Programs for 16–291x Cost Reduction",
-          "why_it_matters": "Separating reasoning from execution is a compelling systems insight with direct implications for inference cost and continual learning in deployed AI agents.",
-          "summary": "CPU-ARC extracts agentic reasoning caches (ARCs) from LLM reasoning traces, compiling them into CPU-executable programs that can be reused across problem instances without re-invoking the source model. ARCs match frontier LLM performance on hard math and science tasks while being 16–291x cheaper to invoke, and are fully explainable, robust to input perturbations, and continually trainable.",
+          "title": "Patterned TiN Stressor Films Proposed to Deterministically Boost Valley Splitting in Si/SiGe Spin Qubits",
+          "why_it_matters": "Random valley splitting is a key scalability obstacle for silicon spin qubits; a fabrication-compatible deterministic solution is directly relevant to near-term quantum hardware scaling.",
+          "summary": "Compressively stressed TiN thin films patterned on Si/SiGe quantum dot devices are proposed to generate deterministic shear strain in the quantum well. Finite-element simulations show shear strains exceeding 0.1% at the well, sufficient for valley splittings of hundreds of μeV in strain-assisted Wiggle Wells. The strain extends across multiple dots and is maintained in realistic gate geometries, making it compatible with quantum dot arrays.",
           "tags": [
-            "inference",
-            "agents",
-            "reasoning",
-            "efficiency"
+            "silicon qubits",
+            "valley splitting",
+            "quantum dots",
+            "hardware"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2611.09891v1"
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2611.12850v1"
             }
           ],
-          "published": "2026-11-06T18:58:50+00:00",
-          "score": 0.6608
+          "published": "2026-11-09T18:42:28+00:00",
+          "score": 1.2634
         },
         {
-          "id": "2d56eca66238",
+          "id": "d1e251d86cb5",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "FlowMoP: Conditional Flow Matching for Stochastic Multi-Person 3D Motion Prediction",
-          "why_it_matters": "Replacing deterministic multi-agent motion prediction with a principled generative framework is relevant to anyone working on world models, simulation, or social robotics.",
-          "summary": "FlowMoP uses conditional flow matching to jointly generate diverse future motions for multiple agents, combining global trajectory and root-relative pose modeling. A B-spline reparameterization enforces temporal smoothness and compresses the state space; a dual-stream transformer provides interaction-aware conditioning. The method achieves state-of-the-art on CMU-Mocap (UMPM) and 3DPW on joint position, pose, and final displacement error, and establishes the first motion-prediction baseline on the WorldPose soccer dataset.",
+          "title": "GARI++: Two-Stage General-Purpose QEC Decoder Achieves Near-MWPM Accuracy with FPGA Latencies from 201 ns",
+          "why_it_matters": "Real-time decoding latency and cross-code generality are critical for practical QEC; GARI++'s FPGA-CPU hybrid pipeline with sub-microsecond first-stage latencies is a concrete engineering advance.",
+          "summary": "GARI++ pipelines a normalized min-sum first-stage decoder (GARI) with a configurable second-stage decoder for cases that don't converge. At physical error rate 0.001 under circuit-level depolarizing noise, the FPGA GARI stage achieves latencies of 201 ns to 11.8 μs for surface code distances 7–25. Residual decoding on a single Apple M2 core stays below one microsecond up to distance 51 using Union-Find, with accuracy on par with correlated MWPM.",
           "tags": [
-            "motion-prediction",
-            "generative-models",
-            "multi-agent",
-            "flow-matching"
+            "quantum error correction",
+            "decoding",
+            "fpga",
+            "surface code"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2611.09882v1"
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2611.12833v1"
             }
           ],
-          "published": "2026-11-06T18:56:41+00:00",
-          "score": 0.6605
+          "published": "2026-11-09T18:31:41+00:00",
+          "score": 1.2602
         },
         {
-          "id": "aeb1fe382715",
+          "id": "954b3c348e1e",
           "tier": "skim",
           "category": "frontier",
-          "title": "ReLU Networks with One Hidden Layer Are Weakly Closed; Two Hidden Layers Are Not",
-          "why_it_matters": "Settling the topological structure of ReLU function spaces has direct consequences for the theoretical guarantees of training methods like Deep Ritz, Sobolev training, and Lipschitz learning.",
-          "summary": "The paper proves that the set of one-hidden-layer ReLU networks with at most N neurons is weakly closed in W^{1,p}, guaranteeing that coercive weakly lower-semicontinuous energies attain minima there, and that regularized minimizers converge to minimal-norm solutions as weight decay vanishes. It also disproves a conjecture by Petersen, Raslan, and Voigtlaender by showing two-hidden-layer networks of bounded width are not closed in W^{1,p} or C.",
+          "title": "Dephasing Algebraically Suppresses Bragg Peaks in Spectral Form Factors of Open Quantum Systems",
+          "why_it_matters": "Establishes spectral form factors as a probe of spectral order in open systems, relevant for quantum error correction and quantum simulation where environmental dephasing is unavoidable.",
+          "summary": "This work analyzes how energy dephasing in open quantum systems erodes long-range spectral order visible as Bragg peaks in the spectral form factor. Peaks fade algebraically with revival order p and dephasing strength γ as K_Bragg(p) ∝ (γp)^{-1/2} within an intermediate regime, yet persist until nearest-neighbor coherences decay. Temporal correlations in spectral fluctuations are identified as a control handle.",
           "tags": [
-            "theory",
-            "neural-networks",
-            "optimization",
-            "approximation-theory"
+            "quantum systems",
+            "spectral form factor",
+            "open quantum systems",
+            "decoherence"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2611.09887v1"
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2611.12888v1"
             }
           ],
-          "published": "2026-11-06T18:58:06+00:00",
-          "score": 0.2202
+          "published": "2026-11-09T18:59:57+00:00",
+          "score": 0.4228
         },
         {
-          "id": "796339e1f826",
+          "id": "5aa0ab53bcf8",
           "tier": "skim",
           "category": "frontier",
-          "title": "Graded Convolutional Networks: Scale-Invariant, Blur-Robust Vision Without Knowing the Scale",
-          "why_it_matters": "A principled geometric solution to blur and scale invariance — grounded in differential geometry — offers a theoretically clean alternative to ad-hoc data augmentation for robust vision models.",
-          "summary": "The paper formalizes dilation invariance via retraction onto the weighted sphere of the Gaussian jet's graded structure, showing this retraction changes only by a scale factor under unknown Gaussian blur — unlike scale-normalized jets which acquire an irremovable grading factor. On MNIST under two-pixel blur, a network using the retraction achieves 88.4% accuracy vs. 66.2% for scale-normalized derivatives; applied to Lindeberg's Gaussian derivative network, the retraction raises accuracy from 91.5% to 95.1%.",
+          "title": "Closed-Form Hidden Symmetry Operators Derived for Asymmetric Quantum Rabi Model and Variants",
+          "why_it_matters": "Provides exact analytic symmetry operators for a foundational light-matter coupling model used in superconducting and photonic qubit architectures, enabling cleaner theoretical analysis of level crossings.",
+          "summary": "The asymmetric quantum Rabi model exhibits level crossings at integer-multiple biases due to a hidden symmetry operator J, previously lacking a general formula. This work derives J in closed form for every integer bias N as the parity operator of the symmetric model times a continuant of N first-order operators. The same construction extends to asymmetric two-photon and two-mode variants via su(1,1) generators.",
           "tags": [
-            "computer-vision",
-            "invariance",
-            "theory",
-            "convolutional-networks"
+            "quantum optics",
+            "quantum rabi model",
+            "symmetry",
+            "analytical methods"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.LG",
-              "url": "https://arxiv.org/abs/2611.09878v1"
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2611.12859v1"
             }
           ],
-          "published": "2026-11-06T18:54:03+00:00",
-          "score": 0.22
+          "published": "2026-11-09T18:47:24+00:00",
+          "score": 0.4216
+        },
+        {
+          "id": "057e22ab69c0",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "NVIDIA & Elith Release Nemotron-Personas-Finance-Japan: 9M Synthetic Japanese Financial Personas",
+          "why_it_matters": "Synthetic data generation pipelines using PGMs and LLMs for domain-specific finance are directly relevant to anyone building or evaluating financial AI agents without access to real customer data.",
+          "summary": "Elith and NVIDIA have released a 9M-persona (~1.5B token) synthetic dataset grounding Japan's official demographic and labor statistics with household finance and financial literacy data. Built via NeMo SDG-PGMs (probabilistic graphical models) and NeMo Data Designer using Gemma-4-31B-it for Japanese text generation, it covers 50 fields per record and 1600+ occupations. Licensed CC BY 4.0 for commercial use.",
+          "tags": [
+            "synthetic data",
+            "finance",
+            "japanese nlp",
+            "data generation"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/nvidia/nemotron-personas-finance-japan"
+            }
+          ],
+          "published": "2026-11-09T15:05:57+00:00",
+          "score": 0.4005
+        },
+        {
+          "id": "7b1451fc786c",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "HOPE: Second-Order MoE Expert Pruning Beats First-Order Methods by Up to +6.1% on Coding Tasks",
+          "why_it_matters": "MoE memory footprint is a major practical bottleneck, and HOPE's pairwise-interaction-aware pruning is a training-free, quantization-compatible technique directly applicable to models like Qwen or Mixtral.",
+          "summary": "HOPE (Higher-Order Pruning of Experts) replaces scalar per-expert importance scores with a second-order method that accounts for pairwise co-activation patterns among experts. At 50% pruning rate, HOPE achieves the best average rank across benchmarks and gains up to +6.1% over the next-best pruning method on agentic coding tasks. It requires no retraining and composes with quantization.",
+          "tags": [
+            "mixture-of-experts",
+            "model compression",
+            "pruning",
+            "llm efficiency"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/amazon/higher-order-pruning-experts"
+            }
+          ],
+          "published": "2026-11-09T12:34:29+00:00",
+          "score": 0.3867
         }
       ]
     }
