@@ -1,0 +1,248 @@
+{
+  "date": "2026-11-11",
+  "generated_at": "2026-11-11T05:56:50.930620+00:00",
+  "summary_line": "3 must-know · 5 worth knowing",
+  "counts": {
+    "total": 10,
+    "headlines": 4,
+    "frontier": 6
+  },
+  "sections": [
+    {
+      "key": "headlines",
+      "title": "Headlines",
+      "cards": [
+        {
+          "id": "0b2e1c02de47",
+          "tier": "must_know",
+          "category": "headline",
+          "title": "Google DeepMind Launches Gemini 4 Carbon: Frontier Reasoning for Cybersecurity and Long-Horizon Agents",
+          "why_it_matters": "Carbon is DeepMind's most capable model to date and ranks #1 on CursorBench 4.0, WANDR, and AutomationBench — a flagship release the whole field will be discussing.",
+          "summary": "Gemini 4 Carbon targets complex multi-step coding, scientific reasoning, and cybersecurity. It ranks #1 on CursorBench 4.0, Perplexity WANDR, and Zapier AutomationBench at 2×+ lower cost per task than the next best external model, and #2 on the new Multimodal Knowledge Agent benchmark at 6×+ lower cost than the top performer. Priced at $2/$10 per million input/output tokens, same as Gemini 4 Argon. A /swarm multi-agent preview launches in Google Antigravity.",
+          "tags": [
+            "gemini",
+            "frontier models",
+            "agents",
+            "cybersecurity"
+          ],
+          "sources": [
+            {
+              "name": "DeepMind",
+              "url": "https://deepmind.google/blog/gemini-4-carbon-is-now-available/"
+            }
+          ],
+          "published": "2026-11-10T16:03:47+00:00",
+          "score": 2.4738
+        },
+        {
+          "id": "428ac4b42c0b",
+          "tier": "must_know",
+          "category": "headline",
+          "title": "AlphaProof Code Formally Verifies Signal Protocol's Cryptographic Implementation in Four Weeks",
+          "why_it_matters": "First AI-assisted formal verification of a widely deployed cryptographic protocol at implementation depth — a landmark result for AI-driven software security and formal methods.",
+          "summary": "Google DeepMind's AlphaProof Code, a multi-LLM agentic framework, formally verified key security properties of Signal's actual compiled code using Lean theorem proving. Agents powered by Gemini Carbon generated over six million lines of Lean proofs; human experts reviewed only ~1% flagged by the system. The process took four weeks versus historically years. The system also correctly identified two reintroduced real bugs as insecure.",
+          "tags": [
+            "formal verification",
+            "security",
+            "agents",
+            "gemini"
+          ],
+          "sources": [
+            {
+              "name": "DeepMind",
+              "url": "https://deepmind.google/blog/introducing-alphaproof-code/"
+            }
+          ],
+          "published": "2026-11-10T12:02:28+00:00",
+          "score": 2.3394
+        },
+        {
+          "id": "a98763b80c84",
+          "tier": "must_know",
+          "category": "headline",
+          "title": "Gemini Robotics 2.5 VLA Achieves 96% Success Rate on Mercedes-Benz Production Lines",
+          "why_it_matters": "Concrete real-world deployment data at industrial scale for a VLA model, with quantified success rates and speed improvements across 200+ tasks — a meaningful benchmark for physical AI.",
+          "summary": "Google DeepMind's Gemini Robotics 2.5 vision-language-action model was evaluated across 200+ distinct tasks, achieving 30–100% higher success rates and 20–30% faster task completion versus prior baselines depending on task type. In a proof-of-concept with Apptronik's Apollo 2 humanoid on Mercedes-Benz automotive production lines, the system achieved a 96% success rate on automotive kitting. The model supports diverse robot morphologies and introduces adversarial jailbreak safety benchmarking for robotics.",
+          "tags": [
+            "robotics",
+            "vla",
+            "physical ai",
+            "gemini"
+          ],
+          "sources": [
+            {
+              "name": "DeepMind",
+              "url": "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/"
+            }
+          ],
+          "published": "2026-11-09T19:51:47+00:00",
+          "score": 1.8687
+        },
+        {
+          "id": "3229de0d9192",
+          "tier": "skim",
+          "category": "headline",
+          "title": "Decision Models: Structured Probability-Output Architectures Added to Hugging Face Transformers",
+          "why_it_matters": "Introduces a distinct inference paradigm — direct probability assignment over predefined options rather than autoregressive generation — with a new pipeline type in transformers, relevant for classification and routing use cases.",
+          "summary": "Decision models take a state and a set of predefined answer choices and return a probability distribution over those choices without generating text token-by-token. Hugging Face has added a 'decision' pipeline to transformers, with autotrust/GEV-26B-Decide as a reference model. The approach avoids JSON schema violations and constrained-decoding overhead common with LLM-based structured output, trading generation flexibility for reliability and speed on fixed-answer tasks.",
+          "tags": [
+            "structured prediction",
+            "classification",
+            "inference",
+            "transformers"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/decision"
+            }
+          ],
+          "published": "2026-11-10T00:00:00+00:00",
+          "score": 0.3299
+        }
+      ]
+    },
+    {
+      "key": "frontier",
+      "title": "Frontier & Papers",
+      "cards": [
+        {
+          "id": "b22522d14a17",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "BotPsy: 0.8B On-Device Agent Beats Models 2.5× Its Size on Tool-Use Benchmarks",
+          "why_it_matters": "Demonstrates that sub-billion-parameter models can reach competitive agentic performance, directly relevant if you're building or evaluating on-device or privacy-preserving AI pipelines.",
+          "summary": "Tether AI's BotPsy (0.8B, built on Qwen3.5-0.8B) achieves SOTA tool-use across six benchmarks in the ≤1.2B class. It roughly doubles its base model's scores (BFCL v4: 23.4→44.0, ACEBench: 30.1→58.7, τ-bench: 23.2→51.5) and outperforms Qwen3.5-2B-Think on five of six benchmarks despite being 2.5× smaller. GGUFs available.",
+          "tags": [
+            "on-device inference",
+            "agents",
+            "function calling",
+            "small models"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/qvac/botpsy"
+            }
+          ],
+          "published": "2026-11-11T05:01:16+00:00",
+          "score": 1.4808
+        },
+        {
+          "id": "c18719c4022a",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Foundation Models vs. Task-Specific U-Nets for Medical Image Segmentation: DINOv2 Wins Out-of-Distribution",
+          "why_it_matters": "Provides concrete cross-institution generalization evidence for DINOv2-based adaptation — directly useful if you work on medical imaging or domain-shift robustness in segmentation.",
+          "summary": "DINOv2 fine-tuned with strategies from bias-only tuning to full fine-tuning was compared against U-Net and ResU-Net baselines on colonoscopy, breast ultrasound, and dermoscopy. The foundation model generalized better on every external dataset; task-specific models remained competitive within-distribution when training data were abundant and produced sharper boundaries but missed small lesions more often. Only a small fraction of DINOv2 required adaptation, with capacity needs driven by imaging domain rather than adaptation method.",
+          "tags": [
+            "medical imaging",
+            "segmentation",
+            "foundation models",
+            "generalization"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2611.14519v1"
+            },
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2611.14518v1"
+            }
+          ],
+          "published": "2026-11-10T18:59:54+00:00",
+          "score": 1.2884
+        },
+        {
+          "id": "44f12482a15a",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "AutoScaffold: AI-Generated Adaptive Hints Improve RLVR Training Across Four Domains",
+          "why_it_matters": "Addresses a core inefficiency in RLVR — that outcome rewards discard rich trajectory information — with a teacher-driven scaffold approach that generalizes across ALFWorld, QA, math, and GPU kernel generation.",
+          "summary": "AutoScaffold uses a frozen teacher LLM to periodically diagnose student failures during RLVR training and generate task-class-level strategies and instance-level hints as prompt scaffolds, removed at evaluation. Gains over RL baselines without scaffolds: +7.2 points on ALFWorld success rate, +4.0 points average QA exact match, +5.0 points on GPU kernel tasks beating PyTorch reference. On math, the student surpasses QuestA's accuracy using ~one-third the training steps.",
+          "tags": [
+            "reinforcement learning",
+            "rlvr",
+            "post-training",
+            "agents"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2611.14515v1"
+            }
+          ],
+          "published": "2026-11-10T18:58:46+00:00",
+          "score": 1.2881
+        },
+        {
+          "id": "02adbd087e82",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Contrastive Discovery: Replacing Pointwise Hypothesis Testing with Contrast Sets for Scientific AI Agents",
+          "why_it_matters": "Offers a principled fix to a systematic flaw in LLM-based discovery agents — pointwise rejection without alternative identification — with strong empirical results across six domains.",
+          "summary": "Contrastive Discovery replaces single hypothesis testing with contrast sets: mutually exclusive and collectively exhaustive competing explanations scored by belief redistribution. On collected evidence, contrast sets resolve 73% of candidates that pointwise testing rejects without identifying an alternative. When guiding new experiments, contrast sets resolve 67% more questions than pointwise surprisal under the same budget. Human experts agreed with the resolved explanation on 78% of questions in a blinded study of 38 experts.",
+          "tags": [
+            "scientific discovery",
+            "ai agents",
+            "hypothesis testing",
+            "reasoning"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2611.14514v1"
+            }
+          ],
+          "published": "2026-11-10T18:58:43+00:00",
+          "score": 1.288
+        },
+        {
+          "id": "d88c7f4e6e98",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Pyrite: LLM Agents Outperform Expert Chemists at Protein-Ligand Pose Ranking",
+          "why_it_matters": "Establishes a concrete benchmark where LLM-guided feature discovery outperforms both expert humans and direct LLM reasoning on a core drug discovery task, with GRPO enabling open-weight models to match frontier closed models.",
+          "summary": "Pyrite is a 1,500-pair pairwise pose-ranking benchmark across diverse protein-ligand complexes. Expert chemists with 3D visualization and physics scores perform near chance. PyriteReasoner (direct LLM comparison) achieves 67% accuracy; PyriteFeaturizer (LLM-generated features for logistic regression) achieves 74%. GRPO fine-tuning of open-weight models enables them to match or surpass closed-source frontier models on this benchmark.",
+          "tags": [
+            "drug discovery",
+            "llm agents",
+            "molecular biology",
+            "grpo"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2611.14511v1"
+            }
+          ],
+          "published": "2026-11-10T18:56:32+00:00",
+          "score": 1.2874
+        },
+        {
+          "id": "8a346a80b3ec",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "TorchCurves: PyTorch Library for Differentiable B-Spline and Legendre Parametric Curves",
+          "why_it_matters": "Directly usable for KAN research, continuous embeddings, and functional regression — a practical building block for researchers exploring non-standard network architectures.",
+          "summary": "TorchCurves provides learnable parametric curves (B-spline and Legendre polynomial bases) as differentiable PyTorch modules. Curve coefficients can be optimized jointly with a surrounding model or produced by a network. The library supports KAN training, continuous feature embeddings, and functional regression. Timing experiments benchmark curve evaluation against NumPy/SciPy and KAN training against EfficientKAN, showing where overhead is substantial.",
+          "tags": [
+            "pytorch",
+            "differentiable programming",
+            "kan",
+            "library"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2611.14516v1"
+            }
+          ],
+          "published": "2026-11-10T18:58:52+00:00",
+          "score": 0.4294
+        }
+      ]
+    }
+  ]
+}

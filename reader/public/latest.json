@@ -1,11 +1,11 @@
 {
-  "date": "2026-11-10",
-  "generated_at": "2026-11-10T07:04:02.629261+00:00",
-  "summary_line": "3 worth knowing",
+  "date": "2026-11-11",
+  "generated_at": "2026-11-11T05:56:50.930620+00:00",
+  "summary_line": "3 must-know · 5 worth knowing",
   "counts": {
-    "total": 8,
-    "headlines": 1,
-    "frontier": 7
+    "total": 10,
+    "headlines": 4,
+    "frontier": 6
   },
   "sections": [
     {
@@ -13,26 +13,92 @@
       "title": "Headlines",
       "cards": [
         {
-          "id": "5d9edf20f631",
-          "tier": "skim",
+          "id": "0b2e1c02de47",
+          "tier": "must_know",
           "category": "headline",
-          "title": "BAIR Papers at CoRL 2026: Humanoid Control, Dexterous Manipulation, and Agentic Robotics",
-          "why_it_matters": "CoRL is a top robotics-learning venue and this overview flags which BAIR papers on VLA models, RL-for-robots, and humanoid control are worth reading in the coming weeks.",
-          "summary": "Berkeley AI Research presents 20+ papers at CoRL 2026 (Austin, Nov 9–12) spanning generalist robot policies, multi-scale embodied memory for VLA models, dexterous manipulation with egocentric data (EgoScale), humanoid whole-body control via a differentiable world model (SuperMimic), flow-based policy gradients, and agentic self-improvement. An Early Career Keynote is delivered by Prof. Negar Mehr.",
+          "title": "Google DeepMind Launches Gemini 4 Carbon: Frontier Reasoning for Cybersecurity and Long-Horizon Agents",
+          "why_it_matters": "Carbon is DeepMind's most capable model to date and ranks #1 on CursorBench 4.0, WANDR, and AutomationBench — a flagship release the whole field will be discussing.",
+          "summary": "Gemini 4 Carbon targets complex multi-step coding, scientific reasoning, and cybersecurity. It ranks #1 on CursorBench 4.0, Perplexity WANDR, and Zapier AutomationBench at 2×+ lower cost per task than the next best external model, and #2 on the new Multimodal Knowledge Agent benchmark at 6×+ lower cost than the top performer. Priced at $2/$10 per million input/output tokens, same as Gemini 4 Argon. A /swarm multi-agent preview launches in Google Antigravity.",
           "tags": [
-            "robotics",
-            "reinforcement learning",
-            "embodied ai",
-            "vla"
+            "gemini",
+            "frontier models",
+            "agents",
+            "cybersecurity"
           ],
           "sources": [
             {
-              "name": "BAIR (Berkeley)",
-              "url": "http://bair.berkeley.edu/blog/2026/11/09/bair-at-corl-2026/"
+              "name": "DeepMind",
+              "url": "https://deepmind.google/blog/gemini-4-carbon-is-now-available/"
             }
           ],
-          "published": "2026-11-09T09:00:00+00:00",
-          "score": 0.368
+          "published": "2026-11-10T16:03:47+00:00",
+          "score": 2.4738
+        },
+        {
+          "id": "428ac4b42c0b",
+          "tier": "must_know",
+          "category": "headline",
+          "title": "AlphaProof Code Formally Verifies Signal Protocol's Cryptographic Implementation in Four Weeks",
+          "why_it_matters": "First AI-assisted formal verification of a widely deployed cryptographic protocol at implementation depth — a landmark result for AI-driven software security and formal methods.",
+          "summary": "Google DeepMind's AlphaProof Code, a multi-LLM agentic framework, formally verified key security properties of Signal's actual compiled code using Lean theorem proving. Agents powered by Gemini Carbon generated over six million lines of Lean proofs; human experts reviewed only ~1% flagged by the system. The process took four weeks versus historically years. The system also correctly identified two reintroduced real bugs as insecure.",
+          "tags": [
+            "formal verification",
+            "security",
+            "agents",
+            "gemini"
+          ],
+          "sources": [
+            {
+              "name": "DeepMind",
+              "url": "https://deepmind.google/blog/introducing-alphaproof-code/"
+            }
+          ],
+          "published": "2026-11-10T12:02:28+00:00",
+          "score": 2.3394
+        },
+        {
+          "id": "a98763b80c84",
+          "tier": "must_know",
+          "category": "headline",
+          "title": "Gemini Robotics 2.5 VLA Achieves 96% Success Rate on Mercedes-Benz Production Lines",
+          "why_it_matters": "Concrete real-world deployment data at industrial scale for a VLA model, with quantified success rates and speed improvements across 200+ tasks — a meaningful benchmark for physical AI.",
+          "summary": "Google DeepMind's Gemini Robotics 2.5 vision-language-action model was evaluated across 200+ distinct tasks, achieving 30–100% higher success rates and 20–30% faster task completion versus prior baselines depending on task type. In a proof-of-concept with Apptronik's Apollo 2 humanoid on Mercedes-Benz automotive production lines, the system achieved a 96% success rate on automotive kitting. The model supports diverse robot morphologies and introduces adversarial jailbreak safety benchmarking for robotics.",
+          "tags": [
+            "robotics",
+            "vla",
+            "physical ai",
+            "gemini"
+          ],
+          "sources": [
+            {
+              "name": "DeepMind",
+              "url": "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/"
+            }
+          ],
+          "published": "2026-11-09T19:51:47+00:00",
+          "score": 1.8687
+        },
+        {
+          "id": "3229de0d9192",
+          "tier": "skim",
+          "category": "headline",
+          "title": "Decision Models: Structured Probability-Output Architectures Added to Hugging Face Transformers",
+          "why_it_matters": "Introduces a distinct inference paradigm — direct probability assignment over predefined options rather than autoregressive generation — with a new pipeline type in transformers, relevant for classification and routing use cases.",
+          "summary": "Decision models take a state and a set of predefined answer choices and return a probability distribution over those choices without generating text token-by-token. Hugging Face has added a 'decision' pipeline to transformers, with autotrust/GEV-26B-Decide as a reference model. The approach avoids JSON schema violations and constrained-decoding overhead common with LLM-based structured output, trading generation flexibility for reliability and speed on fixed-answer tasks.",
+          "tags": [
+            "structured prediction",
+            "classification",
+            "inference",
+            "transformers"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/decision"
+            }
+          ],
+          "published": "2026-11-10T00:00:00+00:00",
+          "score": 0.3299
         }
       ]
     },
@@ -41,162 +107,140 @@
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "b2e98a1b565c",
+          "id": "b22522d14a17",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Chiral Waveguide Atom-Photon Scattering Linked to QEC Threshold and Algorithmic Design",
-          "why_it_matters": "Bridges microscopic photonic hardware models to quantum error correction thresholds, offering a path for co-designing photonic qubit systems with error-corrected algorithms.",
-          "summary": "A first-principles framework derives an effective polarization quantum channel for single photons scattering off two-level atoms in a chiral waveguide. Applied as the noise model for a rotated planar code, threshold behavior emerges as a function of atom number N, coupling Γ, and photon bandwidth σ, scaling as NΓ/σ. The resulting noise is strongly X-biased; a Hadamard-basis QPE implementation exploits this bias to improve algorithmic performance.",
+          "title": "BotPsy: 0.8B On-Device Agent Beats Models 2.5× Its Size on Tool-Use Benchmarks",
+          "why_it_matters": "Demonstrates that sub-billion-parameter models can reach competitive agentic performance, directly relevant if you're building or evaluating on-device or privacy-preserving AI pipelines.",
+          "summary": "Tether AI's BotPsy (0.8B, built on Qwen3.5-0.8B) achieves SOTA tool-use across six benchmarks in the ≤1.2B class. It roughly doubles its base model's scores (BFCL v4: 23.4→44.0, ACEBench: 30.1→58.7, τ-bench: 23.2→51.5) and outperforms Qwen3.5-2B-Think on five of six benchmarks despite being 2.5× smaller. GGUFs available.",
           "tags": [
-            "quantum error correction",
-            "photonic qubits",
-            "noise model",
-            "quantum computing"
+            "on-device inference",
+            "agents",
+            "function calling",
+            "small models"
           ],
           "sources": [
             {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2611.12882v1"
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/qvac/botpsy"
+            }
+          ],
+          "published": "2026-11-11T05:01:16+00:00",
+          "score": 1.4808
+        },
+        {
+          "id": "c18719c4022a",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Foundation Models vs. Task-Specific U-Nets for Medical Image Segmentation: DINOv2 Wins Out-of-Distribution",
+          "why_it_matters": "Provides concrete cross-institution generalization evidence for DINOv2-based adaptation — directly useful if you work on medical imaging or domain-shift robustness in segmentation.",
+          "summary": "DINOv2 fine-tuned with strategies from bias-only tuning to full fine-tuning was compared against U-Net and ResU-Net baselines on colonoscopy, breast ultrasound, and dermoscopy. The foundation model generalized better on every external dataset; task-specific models remained competitive within-distribution when training data were abundant and produced sharper boundaries but missed small lesions more often. Only a small fraction of DINOv2 required adaptation, with capacity needs driven by imaging domain rather than adaptation method.",
+          "tags": [
+            "medical imaging",
+            "segmentation",
+            "foundation models",
+            "generalization"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2611.14519v1"
             },
             {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2611.12876v1"
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2611.14518v1"
             }
           ],
-          "published": "2026-11-09T18:59:36+00:00",
-          "score": 1.2684
+          "published": "2026-11-10T18:59:54+00:00",
+          "score": 1.2884
         },
         {
-          "id": "cd133605929a",
+          "id": "44f12482a15a",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Patterned TiN Stressor Films Proposed to Deterministically Boost Valley Splitting in Si/SiGe Spin Qubits",
-          "why_it_matters": "Random valley splitting is a key scalability obstacle for silicon spin qubits; a fabrication-compatible deterministic solution is directly relevant to near-term quantum hardware scaling.",
-          "summary": "Compressively stressed TiN thin films patterned on Si/SiGe quantum dot devices are proposed to generate deterministic shear strain in the quantum well. Finite-element simulations show shear strains exceeding 0.1% at the well, sufficient for valley splittings of hundreds of μeV in strain-assisted Wiggle Wells. The strain extends across multiple dots and is maintained in realistic gate geometries, making it compatible with quantum dot arrays.",
+          "title": "AutoScaffold: AI-Generated Adaptive Hints Improve RLVR Training Across Four Domains",
+          "why_it_matters": "Addresses a core inefficiency in RLVR — that outcome rewards discard rich trajectory information — with a teacher-driven scaffold approach that generalizes across ALFWorld, QA, math, and GPU kernel generation.",
+          "summary": "AutoScaffold uses a frozen teacher LLM to periodically diagnose student failures during RLVR training and generate task-class-level strategies and instance-level hints as prompt scaffolds, removed at evaluation. Gains over RL baselines without scaffolds: +7.2 points on ALFWorld success rate, +4.0 points average QA exact match, +5.0 points on GPU kernel tasks beating PyTorch reference. On math, the student surpasses QuestA's accuracy using ~one-third the training steps.",
           "tags": [
-            "silicon qubits",
-            "valley splitting",
-            "quantum dots",
-            "hardware"
+            "reinforcement learning",
+            "rlvr",
+            "post-training",
+            "agents"
           ],
           "sources": [
             {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2611.12850v1"
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2611.14515v1"
             }
           ],
-          "published": "2026-11-09T18:42:28+00:00",
-          "score": 1.2634
+          "published": "2026-11-10T18:58:46+00:00",
+          "score": 1.2881
         },
         {
-          "id": "d1e251d86cb5",
+          "id": "02adbd087e82",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "GARI++: Two-Stage General-Purpose QEC Decoder Achieves Near-MWPM Accuracy with FPGA Latencies from 201 ns",
-          "why_it_matters": "Real-time decoding latency and cross-code generality are critical for practical QEC; GARI++'s FPGA-CPU hybrid pipeline with sub-microsecond first-stage latencies is a concrete engineering advance.",
-          "summary": "GARI++ pipelines a normalized min-sum first-stage decoder (GARI) with a configurable second-stage decoder for cases that don't converge. At physical error rate 0.001 under circuit-level depolarizing noise, the FPGA GARI stage achieves latencies of 201 ns to 11.8 μs for surface code distances 7–25. Residual decoding on a single Apple M2 core stays below one microsecond up to distance 51 using Union-Find, with accuracy on par with correlated MWPM.",
+          "title": "Contrastive Discovery: Replacing Pointwise Hypothesis Testing with Contrast Sets for Scientific AI Agents",
+          "why_it_matters": "Offers a principled fix to a systematic flaw in LLM-based discovery agents — pointwise rejection without alternative identification — with strong empirical results across six domains.",
+          "summary": "Contrastive Discovery replaces single hypothesis testing with contrast sets: mutually exclusive and collectively exhaustive competing explanations scored by belief redistribution. On collected evidence, contrast sets resolve 73% of candidates that pointwise testing rejects without identifying an alternative. When guiding new experiments, contrast sets resolve 67% more questions than pointwise surprisal under the same budget. Human experts agreed with the resolved explanation on 78% of questions in a blinded study of 38 experts.",
           "tags": [
-            "quantum error correction",
-            "decoding",
-            "fpga",
-            "surface code"
+            "scientific discovery",
+            "ai agents",
+            "hypothesis testing",
+            "reasoning"
           ],
           "sources": [
             {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2611.12833v1"
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2611.14514v1"
             }
           ],
-          "published": "2026-11-09T18:31:41+00:00",
-          "score": 1.2602
+          "published": "2026-11-10T18:58:43+00:00",
+          "score": 1.288
         },
         {
-          "id": "954b3c348e1e",
-          "tier": "skim",
+          "id": "d88c7f4e6e98",
+          "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Dephasing Algebraically Suppresses Bragg Peaks in Spectral Form Factors of Open Quantum Systems",
-          "why_it_matters": "Establishes spectral form factors as a probe of spectral order in open systems, relevant for quantum error correction and quantum simulation where environmental dephasing is unavoidable.",
-          "summary": "This work analyzes how energy dephasing in open quantum systems erodes long-range spectral order visible as Bragg peaks in the spectral form factor. Peaks fade algebraically with revival order p and dephasing strength γ as K_Bragg(p) ∝ (γp)^{-1/2} within an intermediate regime, yet persist until nearest-neighbor coherences decay. Temporal correlations in spectral fluctuations are identified as a control handle.",
+          "title": "Pyrite: LLM Agents Outperform Expert Chemists at Protein-Ligand Pose Ranking",
+          "why_it_matters": "Establishes a concrete benchmark where LLM-guided feature discovery outperforms both expert humans and direct LLM reasoning on a core drug discovery task, with GRPO enabling open-weight models to match frontier closed models.",
+          "summary": "Pyrite is a 1,500-pair pairwise pose-ranking benchmark across diverse protein-ligand complexes. Expert chemists with 3D visualization and physics scores perform near chance. PyriteReasoner (direct LLM comparison) achieves 67% accuracy; PyriteFeaturizer (LLM-generated features for logistic regression) achieves 74%. GRPO fine-tuning of open-weight models enables them to match or surpass closed-source frontier models on this benchmark.",
           "tags": [
-            "quantum systems",
-            "spectral form factor",
-            "open quantum systems",
-            "decoherence"
+            "drug discovery",
+            "llm agents",
+            "molecular biology",
+            "grpo"
           ],
           "sources": [
             {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2611.12888v1"
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2611.14511v1"
             }
           ],
-          "published": "2026-11-09T18:59:57+00:00",
-          "score": 0.4228
+          "published": "2026-11-10T18:56:32+00:00",
+          "score": 1.2874
         },
         {
-          "id": "5aa0ab53bcf8",
+          "id": "8a346a80b3ec",
           "tier": "skim",
           "category": "frontier",
-          "title": "Closed-Form Hidden Symmetry Operators Derived for Asymmetric Quantum Rabi Model and Variants",
-          "why_it_matters": "Provides exact analytic symmetry operators for a foundational light-matter coupling model used in superconducting and photonic qubit architectures, enabling cleaner theoretical analysis of level crossings.",
-          "summary": "The asymmetric quantum Rabi model exhibits level crossings at integer-multiple biases due to a hidden symmetry operator J, previously lacking a general formula. This work derives J in closed form for every integer bias N as the parity operator of the symmetric model times a continuant of N first-order operators. The same construction extends to asymmetric two-photon and two-mode variants via su(1,1) generators.",
+          "title": "TorchCurves: PyTorch Library for Differentiable B-Spline and Legendre Parametric Curves",
+          "why_it_matters": "Directly usable for KAN research, continuous embeddings, and functional regression — a practical building block for researchers exploring non-standard network architectures.",
+          "summary": "TorchCurves provides learnable parametric curves (B-spline and Legendre polynomial bases) as differentiable PyTorch modules. Curve coefficients can be optimized jointly with a surrounding model or produced by a network. The library supports KAN training, continuous feature embeddings, and functional regression. Timing experiments benchmark curve evaluation against NumPy/SciPy and KAN training against EfficientKAN, showing where overhead is substantial.",
           "tags": [
-            "quantum optics",
-            "quantum rabi model",
-            "symmetry",
-            "analytical methods"
+            "pytorch",
+            "differentiable programming",
+            "kan",
+            "library"
           ],
           "sources": [
             {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2611.12859v1"
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2611.14516v1"
             }
           ],
-          "published": "2026-11-09T18:47:24+00:00",
-          "score": 0.4216
-        },
-        {
-          "id": "057e22ab69c0",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "NVIDIA & Elith Release Nemotron-Personas-Finance-Japan: 9M Synthetic Japanese Financial Personas",
-          "why_it_matters": "Synthetic data generation pipelines using PGMs and LLMs for domain-specific finance are directly relevant to anyone building or evaluating financial AI agents without access to real customer data.",
-          "summary": "Elith and NVIDIA have released a 9M-persona (~1.5B token) synthetic dataset grounding Japan's official demographic and labor statistics with household finance and financial literacy data. Built via NeMo SDG-PGMs (probabilistic graphical models) and NeMo Data Designer using Gemma-4-31B-it for Japanese text generation, it covers 50 fields per record and 1600+ occupations. Licensed CC BY 4.0 for commercial use.",
-          "tags": [
-            "synthetic data",
-            "finance",
-            "japanese nlp",
-            "data generation"
-          ],
-          "sources": [
-            {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/nvidia/nemotron-personas-finance-japan"
-            }
-          ],
-          "published": "2026-11-09T15:05:57+00:00",
-          "score": 0.4005
-        },
-        {
-          "id": "7b1451fc786c",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "HOPE: Second-Order MoE Expert Pruning Beats First-Order Methods by Up to +6.1% on Coding Tasks",
-          "why_it_matters": "MoE memory footprint is a major practical bottleneck, and HOPE's pairwise-interaction-aware pruning is a training-free, quantization-compatible technique directly applicable to models like Qwen or Mixtral.",
-          "summary": "HOPE (Higher-Order Pruning of Experts) replaces scalar per-expert importance scores with a second-order method that accounts for pairwise co-activation patterns among experts. At 50% pruning rate, HOPE achieves the best average rank across benchmarks and gains up to +6.1% over the next-best pruning method on agentic coding tasks. It requires no retraining and composes with quantization.",
-          "tags": [
-            "mixture-of-experts",
-            "model compression",
-            "pruning",
-            "llm efficiency"
-          ],
-          "sources": [
-            {
-              "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/amazon/higher-order-pruning-experts"
-            }
-          ],
-          "published": "2026-11-09T12:34:29+00:00",
-          "score": 0.3867
+          "published": "2026-11-10T18:58:52+00:00",
+          "score": 0.4294
         }
       ]
     }
