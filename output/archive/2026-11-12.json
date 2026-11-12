@@ -1,0 +1,90 @@
+{
+  "date": "2026-11-12",
+  "generated_at": "2026-11-12T06:59:20.685263+00:00",
+  "summary_line": "1 must-know · 1 worth knowing",
+  "counts": {
+    "total": 3,
+    "headlines": 1,
+    "frontier": 2
+  },
+  "sections": [
+    {
+      "key": "headlines",
+      "title": "Headlines",
+      "cards": [
+        {
+          "id": "5b916f1bea87",
+          "tier": "must_know",
+          "category": "headline",
+          "title": "DeepMind's AlphaGenome 2 Predicts Variant Effects Across Single Cell Types, Trained on 107M+ Cell Profiles",
+          "why_it_matters": "A major DeepMind lab release with direct implications for genomics-meets-ML research — the conditional architecture redesign and cross-modality imputation are technically novel and the scale is landmark.",
+          "summary": "AlphaGenome 2 is a conditional DNA sequence model that takes a million-letter sequence plus a target cell type or state as joint input, predicting molecular outputs one condition at a time rather than in parallel. Trained on over 107 million single-cell profiles across 68 tissues, it identifies nearly twice as many expression-altering variants as its predecessor. Cross-modality imputation lets it predict unmeasured readouts from partial inputs. Available via API for non-commercial use.",
+          "tags": [
+            "genomics",
+            "deepmind",
+            "foundation-models",
+            "single-cell-biology"
+          ],
+          "sources": [
+            {
+              "name": "DeepMind",
+              "url": "https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/"
+            }
+          ],
+          "published": "2026-11-11T15:00:15+00:00",
+          "score": 2.4027
+        }
+      ]
+    },
+    {
+      "key": "frontier",
+      "title": "Frontier & Papers",
+      "cards": [
+        {
+          "id": "d2296a64c0dc",
+          "tier": "worth_knowing",
+          "category": "frontier",
+          "title": "Pooling-Aware Training Boosts ColBERT-Style Multi-Vector Retrieval from 94.6% to 97.8% NanoBEIR Retention at 4× Compression",
+          "why_it_matters": "A concrete, reproducible training technique for multi-vector retrieval systems — directly relevant if you work on embedding models, RAG pipelines, or efficient search infrastructure.",
+          "summary": "Token pooling compresses multi-vector document representations by merging similar token embeddings via Ward hierarchical clustering. Standard training with pool_factor=4 retains 94.6% of unpooled NanoBEIR nDCG@10; pooling-aware training raises that to 97.8% at the same 4× storage reduction. The method teaches the encoder to preserve information through merging, implemented in Sentence Transformers with a short reproducible example.",
+          "tags": [
+            "retrieval",
+            "embeddings",
+            "multi-vector",
+            "colbert"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/token-pooling"
+            }
+          ],
+          "published": "2026-11-11T00:00:00+00:00",
+          "score": 0.9754
+        },
+        {
+          "id": "9801e589f7ce",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "EM-DETR Foundation Model for Medical Lesion Detection Beats Prior SOTA by 1–3% Points Across CXR and Mammography",
+          "why_it_matters": "Example-based detection with heterogeneous label spaces is a real technical challenge in medical AI; the student-teacher strategy for catastrophic forgetting mitigation is a transferable technique.",
+          "summary": "The authors extend their EM-DETR example-based detection framework into a multi-domain foundation model for medical lesion detection, using a student-teacher strategy to combine datasets with heterogeneous label spaces and reduce catastrophic forgetting. The model exceeds previous SOTA by 1 percentage point in image-level AUC on four CXR findings, and surpasses single-dataset EM-DETR by 2–3 points in mAP50 on CXRs and mammography.",
+          "tags": [
+            "medical-imaging",
+            "object-detection",
+            "foundation-models",
+            "domain-generalization"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.AI",
+              "url": "https://arxiv.org/abs/2611.14518v1"
+            }
+          ],
+          "published": "2026-11-10T18:59:17+00:00",
+          "score": 0.3033
+        }
+      ]
+    }
+  ]
+}
