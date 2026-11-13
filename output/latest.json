@@ -1,11 +1,11 @@
 {
-  "date": "2026-11-12",
-  "generated_at": "2026-11-12T06:59:20.685263+00:00",
+  "date": "2026-11-13",
+  "generated_at": "2026-11-13T06:25:17.071277+00:00",
   "summary_line": "1 must-know · 1 worth knowing",
   "counts": {
-    "total": 3,
+    "total": 9,
     "headlines": 1,
-    "frontier": 2
+    "frontier": 8
   },
   "sections": [
     {
@@ -13,26 +13,26 @@
       "title": "Headlines",
       "cards": [
         {
-          "id": "5b916f1bea87",
+          "id": "4bad5afe01a1",
           "tier": "must_know",
           "category": "headline",
-          "title": "DeepMind's AlphaGenome 2 Predicts Variant Effects Across Single Cell Types, Trained on 107M+ Cell Profiles",
-          "why_it_matters": "A major DeepMind lab release with direct implications for genomics-meets-ML research — the conditional architecture redesign and cross-modality imputation are technically novel and the scale is landmark.",
-          "summary": "AlphaGenome 2 is a conditional DNA sequence model that takes a million-letter sequence plus a target cell type or state as joint input, predicting molecular outputs one condition at a time rather than in parallel. Trained on over 107 million single-cell profiles across 68 tissues, it identifies nearly twice as many expression-altering variants as its predecessor. Cross-modality imputation lets it predict unmeasured readouts from partial inputs. Available via API for non-commercial use.",
+          "title": "Google DeepMind Launches Gemini 4 Hydrogen: Fast Thinking Model for Agentic and Developer Workflows",
+          "why_it_matters": "Hydrogen is a flagship efficiency-tier release from DeepMind that engineers building agentic coding systems will benchmark against immediately — it surpasses Gemini 4 Argon on the Artificial Analysis Intelligence Index (51 vs. 50 at default high thinking, 54 at xhigh) and is priced at $1.50/$7.50 per million tokens across a 1M-token context window.",
+          "summary": "Gemini 4 Hydrogen targets rapid agentic execution, running 2.5x faster than Gemini 3.8 Flash at its default setting while more than tripling Terminal-Bench 4.1 scores (57% vs. 18.2%). It leads its class on HLE-Diamond (58.8%), ranks #1 on Vals Tax Agent Bench (52.3%), and ties #1 on Vals Legal Research Bench (55.8%). Google also introduces Orchestrator in Google Antigravity, which dynamically switches between Carbon and Hydrogen, achieving near-Carbon success rates with 24% less quota and 19% faster completion on Terminal-Bench 4.0.",
           "tags": [
-            "genomics",
-            "deepmind",
-            "foundation-models",
-            "single-cell-biology"
+            "gemini",
+            "google-deepmind",
+            "agents",
+            "model-release"
           ],
           "sources": [
             {
               "name": "DeepMind",
-              "url": "https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/"
+              "url": "https://deepmind.google/blog/introducing-gemini-4-hydrogen/"
             }
           ],
-          "published": "2026-11-11T15:00:15+00:00",
-          "score": 2.4027
+          "published": "2026-11-12T18:00:50+00:00",
+          "score": 2.5251
         }
       ]
     },
@@ -41,48 +41,180 @@
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "d2296a64c0dc",
+          "id": "a88bddb17214",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Pooling-Aware Training Boosts ColBERT-Style Multi-Vector Retrieval from 94.6% to 97.8% NanoBEIR Retention at 4× Compression",
-          "why_it_matters": "A concrete, reproducible training technique for multi-vector retrieval systems — directly relevant if you work on embedding models, RAG pipelines, or efficient search infrastructure.",
-          "summary": "Token pooling compresses multi-vector document representations by merging similar token embeddings via Ward hierarchical clustering. Standard training with pool_factor=4 retains 94.6% of unpooled NanoBEIR nDCG@10; pooling-aware training raises that to 97.8% at the same 4× storage reduction. The method teaches the encoder to preserve information through merging, implemented in Sentence Transformers with a short reproducible example.",
+          "title": "IBM Releases LLMON: An LLM-Native Markup Language with Granite 4.1 3B and 8B Preview Models",
+          "why_it_matters": "LLMON directly addresses context-structure brittleness and prompt injection — two pain points that every engineer building LLM pipelines deals with daily.",
+          "summary": "LLMON (LLM Object Notation) uses reserved special-token delimiters and XML-like tags to separate instructions, data, and requirements in LLM context windows. IBM releases granite-4.1-3b-LLMON-preview and granite-4.1-8b-LLMON-preview trained on this format. Prompt injection attack success rates drop to near zero; lossless JSON-to-LLMON converters ease migration from existing pipelines.",
           "tags": [
-            "retrieval",
-            "embeddings",
-            "multi-vector",
-            "colbert"
+            "llm",
+            "context-management",
+            "prompt-injection",
+            "granite"
           ],
           "sources": [
             {
               "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/token-pooling"
+              "url": "https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite"
             }
           ],
-          "published": "2026-11-11T00:00:00+00:00",
-          "score": 0.9754
+          "published": "2026-11-12T19:07:35+00:00",
+          "score": 1.2822
         },
         {
-          "id": "9801e589f7ce",
+          "id": "659adc7bbc16",
           "tier": "skim",
           "category": "frontier",
-          "title": "EM-DETR Foundation Model for Medical Lesion Detection Beats Prior SOTA by 1–3% Points Across CXR and Mammography",
-          "why_it_matters": "Example-based detection with heterogeneous label spaces is a real technical challenge in medical AI; the student-teacher strategy for catastrophic forgetting mitigation is a transferable technique.",
-          "summary": "The authors extend their EM-DETR example-based detection framework into a multi-domain foundation model for medical lesion detection, using a student-teacher strategy to combine datasets with heterogeneous label spaces and reduce catastrophic forgetting. The model exceeds previous SOTA by 1 percentage point in image-level AUC on four CXR findings, and surpasses single-dataset EM-DETR by 2–3 points in mAP50 on CXRs and mammography.",
+          "title": "Time-Resolved RIXS Reveals 28 ps Lifetime for Light-Driven Bimagnons in NiO — 100x Longer Than Prior Measurements",
+          "why_it_matters": "Establishes a new experimental benchmark for correlated magnon-pair coherence using time-resolved RIXS, a technique with growing relevance to quantum materials and ultrafast control.",
+          "summary": "Mid-infrared pulses resonantly pump phonon-assisted two-magnon absorption in NiO without inducing demagnetization, preserving long-range magnetic order. Time-resolved RIXS detects a bimagnon signal peaking ~4 ps post-pump with a decay time constant of 28±11 ps — over two orders of magnitude longer than previously reported two-magnon dephasing times (~200 fs). Single-magnon linewidth and energy remain unchanged, isolating correlated-pair dynamics.",
           "tags": [
-            "medical-imaging",
-            "object-detection",
-            "foundation-models",
-            "domain-generalization"
+            "quantum-materials",
+            "ultrafast-physics",
+            "magnetism",
+            "rixs"
           ],
           "sources": [
             {
-              "name": "arXiv:cs.AI",
-              "url": "https://arxiv.org/abs/2611.14518v1"
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2611.17335v1"
             }
           ],
-          "published": "2026-11-10T18:59:17+00:00",
-          "score": 0.3033
+          "published": "2026-11-12T18:59:55+00:00",
+          "score": 0.4266
+        },
+        {
+          "id": "5afe56edf7f6",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Anti-Unitary Floquet Drive Theoretically Stabilizes Discrete Time Crystals via Dynamical Freezing",
+          "why_it_matters": "Proposes a new mechanism for time-crystal stabilization using anti-unitary periodic drives — a conceptually distinct route from standard Floquet approaches with potential experimental implications for quantum simulation.",
+          "summary": "The paper shows that an anti-unitary periodic drive enables stabilization of a discrete time crystal through dynamical freezing, where magnetization emerges as a conserved operator and exact quasi-energy pairing pins the subharmonic response. The effective Hamiltonian remains quasi-local, and infinite-chain simulations show no detectable decay for generic states with finite magnetization. An experimental realization scheme is outlined.",
+          "tags": [
+            "quantum-many-body",
+            "time-crystals",
+            "floquet",
+            "quantum-simulation"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2611.17333v1"
+            }
+          ],
+          "published": "2026-11-12T18:59:53+00:00",
+          "score": 0.4266
+        },
+        {
+          "id": "b2ed79faf101",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Ensemble Phase Transitions in Hybrid Quantum Circuits Identified at Measurement-Induced Purification Threshold",
+          "why_it_matters": "Provides a new theoretical lens on measurement-induced phase transitions — a topic central to quantum error correction and many-body physics — by characterizing non-analytic changes in state-ensemble statistics rather than entanglement entropy alone.",
+          "summary": "In hybrid circuits interleaving unitary evolution with projective measurements, the trajectory ensemble (TE) and projected ensemble (PE) both undergo non-analytic transitions at the measurement-induced purification critical point, even though their first moments remain maximally mixed. For Haar-random circuits, the TE transitions from an identity ensemble to the uniform Haar ensemble; the PE transitions from Haar to a singleton pure state. Clifford circuit results are limited by absence of non-stabilizerness.",
+          "tags": [
+            "quantum-circuits",
+            "measurement-induced-transitions",
+            "many-body-physics",
+            "quantum-information"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2611.17322v1"
+            }
+          ],
+          "published": "2026-11-12T18:59:03+00:00",
+          "score": 0.4266
+        },
+        {
+          "id": "b240d161e549",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Quantum Fisher Information and Ergotropy Analyzed for Hyperfine-Coupled Electron–Proton Spin System",
+          "why_it_matters": "Niche but technically complete treatment of simultaneous multiparameter quantum metrology and quantum battery performance in a physically motivated spin model — relevant to quantum sensing hardware research.",
+          "summary": "The paper derives the quantum Fisher information matrix and Cramér–Rao bounds for simultaneous estimation of magnetic field and hyperfine coupling in a hydrogen-inspired electron–proton spin system, finding that the weak-commutativity condition holds despite non-commuting symmetric logarithmic derivatives. Separately, ergotropy, anti-ergotropy, storage capacity, and energy-basis coherence are characterized under a unitary charging protocol as functions of field, coupling, temperature, and charging time.",
+          "tags": [
+            "quantum-metrology",
+            "quantum-sensing",
+            "spin-systems",
+            "quantum-thermodynamics"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2611.17310v1"
+            }
+          ],
+          "published": "2026-11-12T18:56:57+00:00",
+          "score": 0.4264
+        },
+        {
+          "id": "f9660e1ef250",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Microscopic Theory of Fock-Space Correlation Lengths Explains Typical vs. Average Divergence in Many-Body Localization",
+          "why_it_matters": "Advances the microscopic understanding of MBL — a topic with direct relevance to quantum memory and quantum error correction timescales — by rigorously connecting rare resonances to multifractal eigenstate statistics.",
+          "summary": "Using exact diagonalization of a disordered tilted-field Ising chain, the paper shows typical Fock-space correlations decay exponentially while average correlations decay subexponentially due to rare resonant nodes. A distribution of Fock-space correlation lengths with variance scaling inversely with system size, combined with hypercubic Fock-space graph geometry, accounts for this contrast. The framework also derives the singularity spectrum of MBL eigenstates and theoretically establishes anomalous quantum multifractality symmetry violation.",
+          "tags": [
+            "many-body-localization",
+            "quantum-many-body",
+            "fock-space",
+            "exact-diagonalization"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2611.17306v1"
+            }
+          ],
+          "published": "2026-11-12T18:56:50+00:00",
+          "score": 0.4263
+        },
+        {
+          "id": "918fa57aaace",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Superconducting Transmission-Line Circuit Proposed as Analogue of Cosmological Particle Creation in Radiation-Dominated Universe",
+          "why_it_matters": "Offers a concrete, theoretically analyzed superconducting-circuit analogue experiment for an otherwise inaccessible cosmological quantum phenomenon, with squeezing as a verifiable witness — relevant to researchers in quantum simulation with superconducting hardware.",
+          "summary": "A waveguide transmission line loaded with dc-SQUIDs is shown theoretically to reproduce the mode equation of a scalar field in a radiation-dominated FRW universe in conformal time, reducing to the Weber equation with an exact parabolic-cylinder-function solution and exponentially suppressed particle spectrum. The anomalous moment of each mode serves as a Bogoliubov-mixing witness that vanishes for thermal states, survives dissipation, and certifies squeezing distinct from thermal noise.",
+          "tags": [
+            "quantum-simulation",
+            "superconducting-circuits",
+            "cosmology-analogue",
+            "squeezing"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:quant-ph",
+              "url": "https://arxiv.org/abs/2611.17295v1"
+            }
+          ],
+          "published": "2026-11-12T18:54:44+00:00",
+          "score": 0.4261
+        },
+        {
+          "id": "56dac742ff29",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Hugging Face Publishes LoRA Fine-Tuning Scripts for TRELLIS.2 3D Generation Model",
+          "why_it_matters": "Provides a reproducible, containerized LoRA fine-tuning pipeline for 3D generation — useful for ML engineers working on robotics, simulation, or digital-asset workflows needing domain-specific geometry accuracy.",
+          "summary": "Hugging Face releases fine-tuning scripts and containers for TRELLIS.2, a 3D generation model with a unified latent representation decoded into formats like GLB and 3DGS. LoRA adapters are applied selectively to pipeline components (structure, geometry, materials), tested on 188 GSO footwear objects to fix inaccurate sole geometry. Training runs via Hugging Face Jobs or local Docker; dataset must be pre-uploaded to the Hub.",
+          "tags": [
+            "3d-generation",
+            "lora",
+            "fine-tuning",
+            "hugging-face"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/3d-lora-finetuning"
+            }
+          ],
+          "published": "2026-11-12T00:00:00+00:00",
+          "score": 0.3277
         }
       ]
     }
