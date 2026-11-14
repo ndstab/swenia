@@ -1,11 +1,11 @@
 {
-  "date": "2026-11-13",
-  "generated_at": "2026-11-13T06:25:17.071277+00:00",
-  "summary_line": "1 must-know · 1 worth knowing",
+  "date": "2026-11-14",
+  "generated_at": "2026-11-14T06:05:23.315334+00:00",
+  "summary_line": "6 worth knowing",
   "counts": {
-    "total": 9,
-    "headlines": 1,
-    "frontier": 8
+    "total": 8,
+    "headlines": 2,
+    "frontier": 6
   },
   "sections": [
     {
@@ -13,26 +13,48 @@
       "title": "Headlines",
       "cards": [
         {
-          "id": "4bad5afe01a1",
-          "tier": "must_know",
+          "id": "40e78db6601d",
+          "tier": "worth_knowing",
           "category": "headline",
-          "title": "Google DeepMind Launches Gemini 4 Hydrogen: Fast Thinking Model for Agentic and Developer Workflows",
-          "why_it_matters": "Hydrogen is a flagship efficiency-tier release from DeepMind that engineers building agentic coding systems will benchmark against immediately — it surpasses Gemini 4 Argon on the Artificial Analysis Intelligence Index (51 vs. 50 at default high thinking, 54 at xhigh) and is priced at $1.50/$7.50 per million tokens across a 1M-token context window.",
-          "summary": "Gemini 4 Hydrogen targets rapid agentic execution, running 2.5x faster than Gemini 3.8 Flash at its default setting while more than tripling Terminal-Bench 4.1 scores (57% vs. 18.2%). It leads its class on HLE-Diamond (58.8%), ranks #1 on Vals Tax Agent Bench (52.3%), and ties #1 on Vals Legal Research Bench (55.8%). Google also introduces Orchestrator in Google Antigravity, which dynamically switches between Carbon and Hydrogen, achieving near-Carbon success rates with 24% less quota and 19% faster completion on Terminal-Bench 4.0.",
+          "title": "llama.cpp Releases v1.0.0 with Semantic Versioning and Stable API Commitment",
+          "why_it_matters": "If you build or depend on local inference tooling, llama.cpp hitting v1.0.0 means API/ABI stability guarantees are now formalized — a meaningful signal for production pipeline planning.",
+          "summary": "llama.cpp v1.0.0 formalizes semantic versioning for llama.cpp and ggml, with major-version bumps reserved for API/ABI breaking changes. The release supports 150+ model architecture variants, all mainstream speculative decoding methods, and hardware backends from NVIDIA, AMD, Qualcomm, Arm, IBM, and Intel loaded as dynamic libraries. CI infrastructure scales via Hugging Face Buckets and Jobs with self-hosted runners across major platforms.",
           "tags": [
-            "gemini",
-            "google-deepmind",
-            "agents",
-            "model-release"
+            "inference",
+            "local-llm",
+            "open-source",
+            "infrastructure"
+          ],
+          "sources": [
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/blog/ggml-org/llama-cpp-v1"
+            }
+          ],
+          "published": "2026-11-13T14:05:22+00:00",
+          "score": 1.2011
+        },
+        {
+          "id": "51d2fad24045",
+          "tier": "worth_knowing",
+          "category": "headline",
+          "title": "Google DeepMind Open-Sources SatWeave and PARDIG Datasets Behind WeatherNext 3 AI Weather Model",
+          "why_it_matters": "For researchers working on foundation models for physical systems or climate/Earth observation applications, these are production-quality, globally-covering datasets with live feeds — a rare open release from a leading lab.",
+          "summary": "DeepMind is releasing SatWeave, an hourly global mosaic of geostationary satellite imagery from five satellites (GOES-East/West, Meteosat 0, Meteosat Indian Ocean, Himawari), and PARDIG, a 15-minute-resolution global precipitation dataset at ~10 km resolution trained on NASA GPM sparse radar observations using SatWeave and ECMWF fields as inputs. PARDIG outperforms NASA's IMERG-Final across all analyzed rain rates, improving hourly precipitation detection skill by more than 30% on light-to-moderate precipitation. Historical archives and live feeds are both available.",
+          "tags": [
+            "weather-ai",
+            "datasets",
+            "earth-observation",
+            "deepmind"
           ],
           "sources": [
             {
               "name": "DeepMind",
-              "url": "https://deepmind.google/blog/introducing-gemini-4-hydrogen/"
+              "url": "https://deepmind.google/blog/opening-the-datasets-behind-our-ai-weather-models/"
             }
           ],
-          "published": "2026-11-12T18:00:50+00:00",
-          "score": 2.5251
+          "published": "2026-11-10T11:13:04+00:00",
+          "score": 0.4246
         }
       ]
     },
@@ -41,180 +63,136 @@
       "title": "Frontier & Papers",
       "cards": [
         {
-          "id": "a88bddb17214",
+          "id": "8400bdfe1e2a",
           "tier": "worth_knowing",
           "category": "frontier",
-          "title": "IBM Releases LLMON: An LLM-Native Markup Language with Granite 4.1 3B and 8B Preview Models",
-          "why_it_matters": "LLMON directly addresses context-structure brittleness and prompt injection — two pain points that every engineer building LLM pipelines deals with daily.",
-          "summary": "LLMON (LLM Object Notation) uses reserved special-token delimiters and XML-like tags to separate instructions, data, and requirements in LLM context windows. IBM releases granite-4.1-3b-LLMON-preview and granite-4.1-8b-LLMON-preview trained on this format. Prompt injection attack success rates drop to near zero; lossless JSON-to-LLMON converters ease migration from existing pipelines.",
+          "title": "XYBench: 8K-Question Benchmark Tests Whether LLMs Redirect Misguided User Requests",
+          "why_it_matters": "Knowing that Claude Sonnet 4.6, GPT-5, Gemini 3.1 Pro, Qwen3.5-9B, and DeepSeek-V4 Pro all systematically fail to redirect users away from mistaken approaches is directly relevant to evaluating and improving assistant-style models you may build or deploy.",
+          "summary": "XYBench (Best Resource Paper, EMNLP 2026) contains 8,115 real-world questions from Stack Overflow, Stack Exchange, WikiHow, and manual curation, each annotated with a stated request (Y) and underlying goal (X). Five evaluated frontier models — Claude Sonnet 4.6, GPT-5, Gemini 3.1 Pro, Qwen3.5-9B, DeepSeek-V4 Pro — consistently addressed Y while failing to steer users toward X, unlike human reference answers. Developed with CMU, NVIDIA, and Johns Hopkins.",
           "tags": [
-            "llm",
-            "context-management",
-            "prompt-injection",
-            "granite"
+            "benchmark",
+            "llm-evaluation",
+            "pragmatics",
+            "assistants"
           ],
           "sources": [
             {
               "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite"
+              "url": "https://huggingface.co/blog/allenai/xybench"
             }
           ],
-          "published": "2026-11-12T19:07:35+00:00",
-          "score": 1.2822
+          "published": "2026-11-13T17:02:35+00:00",
+          "score": 1.2514
         },
         {
-          "id": "659adc7bbc16",
-          "tier": "skim",
+          "id": "4f73e28532cc",
+          "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Time-Resolved RIXS Reveals 28 ps Lifetime for Light-Driven Bimagnons in NiO — 100x Longer Than Prior Measurements",
-          "why_it_matters": "Establishes a new experimental benchmark for correlated magnon-pair coherence using time-resolved RIXS, a technique with growing relevance to quantum materials and ultrafast control.",
-          "summary": "Mid-infrared pulses resonantly pump phonon-assisted two-magnon absorption in NiO without inducing demagnetization, preserving long-range magnetic order. Time-resolved RIXS detects a bimagnon signal peaking ~4 ps post-pump with a decay time constant of 28±11 ps — over two orders of magnitude longer than previously reported two-magnon dephasing times (~200 fs). Single-magnon linewidth and energy remain unchanged, isolating correlated-pair dynamics.",
+          "title": "Controlled Study Finds Dedicated Vision Capacity — Not Pretrained Encoders — Is What Multimodal LLMs Actually Need",
+          "why_it_matters": "This controlled ablation directly informs architectural decisions for anyone designing or fine-tuning multimodal models, clarifying which of three commonly conflated design choices actually drives visual understanding performance.",
+          "summary": "Pretraining all models from scratch on common data at matched compute, researchers disentangle three bundled choices in multimodal vision encoding: visual prior, dedicated vision capacity, and pre-fusion placement. Key findings: a visual prior (pretrained encoder) is not necessary — joint training from scratch matches it. Dedicated vision capacity is necessary — encoder-free models underperform even when backbone size is increased to compensate. Pre-fusion placement is not necessary — in-fusion early-layer vision modules match encoder performance and reduce time to first token.",
           "tags": [
-            "quantum-materials",
-            "ultrafast-physics",
-            "magnetism",
-            "rixs"
+            "multimodal",
+            "vision-language",
+            "architecture",
+            "ablation"
           ],
           "sources": [
             {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2611.17335v1"
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2611.17334v1"
             }
           ],
-          "published": "2026-11-12T18:59:55+00:00",
-          "score": 0.4266
+          "published": "2026-11-12T18:59:54+00:00",
+          "score": 0.9213
         },
         {
-          "id": "5afe56edf7f6",
-          "tier": "skim",
+          "id": "53a9ebad52eb",
+          "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Anti-Unitary Floquet Drive Theoretically Stabilizes Discrete Time Crystals via Dynamical Freezing",
-          "why_it_matters": "Proposes a new mechanism for time-crystal stabilization using anti-unitary periodic drives — a conceptually distinct route from standard Floquet approaches with potential experimental implications for quantum simulation.",
-          "summary": "The paper shows that an anti-unitary periodic drive enables stabilization of a discrete time crystal through dynamical freezing, where magnetization emerges as a conserved operator and exact quasi-energy pairing pins the subharmonic response. The effective Hamiltonian remains quasi-local, and infinite-chain simulations show no detectable decay for generic states with finite magnetization. An experimental realization scheme is outlined.",
+          "title": "ArchSpace: Public Platform for Recording and Peer-Reviewing LLM Architecture Research with Scaling-Law Validation",
+          "why_it_matters": "As a research engineer tracking architectural innovations from labs like DeepSeek and Qwen, ArchSpace offers a structured venue to evaluate whether small-scale architecture experiments extrapolate — before committing to expensive large-scale runs.",
+          "summary": "ArchSpace is a public platform for documenting LLM architecture proposals with their experiments and reasoning, community review, and citation tracking. It uses scaling laws to predict model loss at larger scales from small experiments, addressing the gap where industry teams rarely publish what failed and academia lacks consistent baselines. Initial references include Qwen3.5 and OLMo3 baselines with fitted scaling laws and a reusable training recipe.",
           "tags": [
-            "quantum-many-body",
-            "time-crystals",
-            "floquet",
-            "quantum-simulation"
+            "architecture",
+            "scaling-laws",
+            "research-infrastructure",
+            "llm"
           ],
           "sources": [
             {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2611.17333v1"
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2611.17332v1"
             }
           ],
-          "published": "2026-11-12T18:59:53+00:00",
-          "score": 0.4266
+          "published": "2026-11-12T18:59:52+00:00",
+          "score": 0.9213
         },
         {
-          "id": "b2ed79faf101",
-          "tier": "skim",
+          "id": "5551097f06d8",
+          "tier": "worth_knowing",
           "category": "frontier",
-          "title": "Ensemble Phase Transitions in Hybrid Quantum Circuits Identified at Measurement-Induced Purification Threshold",
-          "why_it_matters": "Provides a new theoretical lens on measurement-induced phase transitions — a topic central to quantum error correction and many-body physics — by characterizing non-analytic changes in state-ensemble statistics rather than entanglement entropy alone.",
-          "summary": "In hybrid circuits interleaving unitary evolution with projective measurements, the trajectory ensemble (TE) and projected ensemble (PE) both undergo non-analytic transitions at the measurement-induced purification critical point, even though their first moments remain maximally mixed. For Haar-random circuits, the TE transitions from an identity ensemble to the uniform Haar ensemble; the PE transitions from Haar to a singleton pure state. Clifford circuit results are limited by absence of non-stabilizerness.",
+          "title": "AgentSSL: MLE Agents Can Synthesize Semi-Supervised Learning Pipelines, Beating Human Baselines in 8 of 12 Settings",
+          "why_it_matters": "This extends the emerging MLE-agent paradigm into the semi-supervised regime — a realistic and underexplored setting — with concrete benchmark results and an identified bottleneck (program selection) that points to open research problems.",
+          "summary": "AgentSSL frames semi-supervised learning as a program search problem and evaluates MLE agents under limited labeled data. Agents exceeded the strongest human-engineered SSL baselines in 8 of 12 settings by up to +21.8%. However, program selection is a critical bottleneck: choosing programs based on the agent's own feedback metric degrades performance by up to 47%. The paper introduces ProgramSelectBench with 16,977 agent-generated and human-engineered SSL programs to study selection methods, and validates on real-world ecology detection tasks.",
           "tags": [
-            "quantum-circuits",
-            "measurement-induced-transitions",
-            "many-body-physics",
-            "quantum-information"
+            "agents",
+            "semi-supervised-learning",
+            "automl",
+            "benchmark"
           ],
           "sources": [
             {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2611.17322v1"
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2611.17323v1"
             }
           ],
-          "published": "2026-11-12T18:59:03+00:00",
-          "score": 0.4266
+          "published": "2026-11-12T18:59:06+00:00",
+          "score": 0.9212
         },
         {
-          "id": "b240d161e549",
+          "id": "2427bacb74a9",
           "tier": "skim",
           "category": "frontier",
-          "title": "Quantum Fisher Information and Ergotropy Analyzed for Hyperfine-Coupled Electron–Proton Spin System",
-          "why_it_matters": "Niche but technically complete treatment of simultaneous multiparameter quantum metrology and quantum battery performance in a physically motivated spin model — relevant to quantum sensing hardware research.",
-          "summary": "The paper derives the quantum Fisher information matrix and Cramér–Rao bounds for simultaneous estimation of magnetic field and hyperfine coupling in a hydrogen-inspired electron–proton spin system, finding that the weak-commutativity condition holds despite non-commuting symmetric logarithmic derivatives. Separately, ergotropy, anti-ergotropy, storage capacity, and energy-basis coherence are characterized under a unitary charging protocol as functions of field, coupling, temperature, and charging time.",
+          "title": "Nvidia Isaac Sim Gets 'SimReady' Open Asset Library on Hugging Face for Robot Simulation",
+          "why_it_matters": "If you work on robotics ML pipelines, SimReady Central gives you validated, plug-and-play OpenUSD assets with collision, mass, and joint metadata — cutting the painful setup that precedes any sim-to-real work.",
+          "summary": "SimReady Central, an open Hugging Face library, provides OpenUSD robot and object assets pre-validated against simulation profiles covering joints, drives, collisions, and mass. A walkthrough uses the UR17G arm, Robotiq 2F-140 gripper, and a beverage can in Isaac Sim 6.2, with agent-generated task code (demonstrated with GPT-6 Sol) to execute pick-and-place. Assets include models and simulation settings; users add scene assembly and task control logic.",
           "tags": [
-            "quantum-metrology",
-            "quantum-sensing",
-            "spin-systems",
-            "quantum-thermodynamics"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2611.17310v1"
-            }
-          ],
-          "published": "2026-11-12T18:56:57+00:00",
-          "score": 0.4264
-        },
-        {
-          "id": "f9660e1ef250",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "Microscopic Theory of Fock-Space Correlation Lengths Explains Typical vs. Average Divergence in Many-Body Localization",
-          "why_it_matters": "Advances the microscopic understanding of MBL — a topic with direct relevance to quantum memory and quantum error correction timescales — by rigorously connecting rare resonances to multifractal eigenstate statistics.",
-          "summary": "Using exact diagonalization of a disordered tilted-field Ising chain, the paper shows typical Fock-space correlations decay exponentially while average correlations decay subexponentially due to rare resonant nodes. A distribution of Fock-space correlation lengths with variance scaling inversely with system size, combined with hypercubic Fock-space graph geometry, accounts for this contrast. The framework also derives the singularity spectrum of MBL eigenstates and theoretically establishes anomalous quantum multifractality symmetry violation.",
-          "tags": [
-            "many-body-localization",
-            "quantum-many-body",
-            "fock-space",
-            "exact-diagonalization"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2611.17306v1"
-            }
-          ],
-          "published": "2026-11-12T18:56:50+00:00",
-          "score": 0.4263
-        },
-        {
-          "id": "918fa57aaace",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "Superconducting Transmission-Line Circuit Proposed as Analogue of Cosmological Particle Creation in Radiation-Dominated Universe",
-          "why_it_matters": "Offers a concrete, theoretically analyzed superconducting-circuit analogue experiment for an otherwise inaccessible cosmological quantum phenomenon, with squeezing as a verifiable witness — relevant to researchers in quantum simulation with superconducting hardware.",
-          "summary": "A waveguide transmission line loaded with dc-SQUIDs is shown theoretically to reproduce the mode equation of a scalar field in a radiation-dominated FRW universe in conformal time, reducing to the Weber equation with an exact parabolic-cylinder-function solution and exponentially suppressed particle spectrum. The anomalous moment of each mode serves as a Bogoliubov-mixing witness that vanishes for thermal states, survives dissipation, and certifies squeezing distinct from thermal noise.",
-          "tags": [
-            "quantum-simulation",
-            "superconducting-circuits",
-            "cosmology-analogue",
-            "squeezing"
-          ],
-          "sources": [
-            {
-              "name": "arXiv:quant-ph",
-              "url": "https://arxiv.org/abs/2611.17295v1"
-            }
-          ],
-          "published": "2026-11-12T18:54:44+00:00",
-          "score": 0.4261
-        },
-        {
-          "id": "56dac742ff29",
-          "tier": "skim",
-          "category": "frontier",
-          "title": "Hugging Face Publishes LoRA Fine-Tuning Scripts for TRELLIS.2 3D Generation Model",
-          "why_it_matters": "Provides a reproducible, containerized LoRA fine-tuning pipeline for 3D generation — useful for ML engineers working on robotics, simulation, or digital-asset workflows needing domain-specific geometry accuracy.",
-          "summary": "Hugging Face releases fine-tuning scripts and containers for TRELLIS.2, a 3D generation model with a unified latent representation decoded into formats like GLB and 3DGS. LoRA adapters are applied selectively to pipeline components (structure, geometry, materials), tested on 188 GSO footwear objects to fix inaccurate sole geometry. Training runs via Hugging Face Jobs or local Docker; dataset must be pre-uploaded to the Hub.",
-          "tags": [
-            "3d-generation",
-            "lora",
-            "fine-tuning",
-            "hugging-face"
+            "robotics",
+            "simulation",
+            "isaac-sim",
+            "openUSD"
           ],
           "sources": [
             {
               "name": "Hugging Face",
-              "url": "https://huggingface.co/blog/3d-lora-finetuning"
+              "url": "https://huggingface.co/blog/nvidia/simready-assets-robot-pick-and-place"
             }
           ],
-          "published": "2026-11-12T00:00:00+00:00",
-          "score": 0.3277
+          "published": "2026-11-13T18:00:39+00:00",
+          "score": 0.4228
+        },
+        {
+          "id": "e5dc97b072d7",
+          "tier": "skim",
+          "category": "frontier",
+          "title": "Neurosymbolic RL Reduces Portfolio Mandate Violations from ~97% to 4.8% in Continuous Action Space",
+          "why_it_matters": "The extension of neurosymbolic constraint satisfaction (PLPG-style) to continuous action spaces is a technically interesting RL result relevant to anyone working on constrained policy learning or safe RL beyond discrete settings.",
+          "summary": "The paper extends Probabilistic Logic Policy Gradient (PLPG) to continuous portfolio allocation, using reparameterized Monte Carlo sampling to estimate the probability that the policy's executed action satisfies a six-rule, regime-conditional investment mandate, adding this estimate to the training objective. Without post-hoc correction at inference, the method reduces mandate violations from 96–98% (unconstrained RL) and 33.4% (reward-penalty baseline) to 4.8%, demonstrating that continuous-action policies can internalize symbolic constraints.",
+          "tags": [
+            "reinforcement-learning",
+            "neurosymbolic",
+            "constrained-rl",
+            "finance"
+          ],
+          "sources": [
+            {
+              "name": "arXiv:cs.LG",
+              "url": "https://arxiv.org/abs/2611.17329v1"
+            }
+          ],
+          "published": "2026-11-12T18:59:37+00:00",
+          "score": 0.3071
         }
       ]
     }
